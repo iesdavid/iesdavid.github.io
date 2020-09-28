@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1. Conceptos básicos | Modelo Entidad - Relación </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-37"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Modelo Entidad Relación</a></li>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
+      <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
+      <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
+      <li><a href="elementos_necesarios.html" class="no-ch">Elementos necesarios</a></li>
+      <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   </ul>
+   </li>
+   <li><a href="ud_1_introduccin_a_las_bbdd_relacionales.html" class="daddy">UD 1. Introducción a las BBDD relacionales</a>
+   <ul class="other-section">
+      <li><a href="11_aplicaciones_de_los_sgbd.html" class="no-ch">1.1. Aplicaciones de los SGBD</a></li>
+      <li><a href="12_los_datos.html" class="no-ch">1.2. Los datos</a></li>
+      <li><a href="13_modelos_de_datos.html" class="no-ch">1.3. Modelos de datos</a></li>
+      <li><a href="14_lenguajes_de_bases_de_datos.html" class="no-ch">1.4. Lenguajes de bases de datos</a></li>
+      <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="ud2_bases_de_datos_relacionales.html" class="current-page-parent daddy">UD2. Bases de Datos Relacionales</a>
+   <ul>
+      <li id="active"><a href="21_conceptos_bsicos.html" class="active no-ch">2.1. Conceptos básicos</a></li>
+      <li><a href="22_dominios.html" class="no-ch">2.2. Dominios</a></li>
+      <li><a href="23_claves.html" class="no-ch">2.3. Claves</a></li>
+      <li><a href="24_el_lenguaje_de_consultas_sql.html" class="no-ch">2.4. El lenguaje de consultas: SQL</a></li>
+      <li><a href="25_componentes_del_sql.html" class="no-ch">2.5. Componentes del SQL</a></li>
+      <li><a href="26_tipos_de_datos.html" class="no-ch">2.6. Tipos de datos</a></li>
+      <li><a href="27_constantes_y_nulos.html" class="no-ch">2.7. Constantes y Nulos</a></li>
+      <li><a href="autoevaluacin0.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica0.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud3_sql_select.html" class="no-ch">UD3. SQL: SELECT</a></li>
+   <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
+   <li><a href="bloque_4_lenguaje_script_plsql.html" class="no-ch">Bloque 4. Lenguaje Script PL/SQL</a></li>
+   <li><a href="bibliografa0.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ud2_bases_de_datos_relacionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_dominios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1. Conceptos básicos</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id72">
+<div class="iDevice emphasis0" >
+<div id="ta72_124_2" class="block iDevice_content">
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id73">
+<div class="iDevice emphasis0" >
+<div id="ta73_125_2" class="block iDevice_content">
+<div class="exe-text"><p>Como se ha comentado, una <strong>tabla</strong> está formada por <strong>registros </strong>con  una serie de columnas o campos que representan los <strong>atributos</strong> de cada registro.</p>
+<p>Por ejemplo, si la tabla recoge los datos de los clientes que usan el servicio de bicicletas municipal, se necesita almacenar, al menos, los siguientes datos:</p>
+<div class="exe-layout-2-cols exe-layout-2-30-70 exe-clear">
+<div class="exe-col exe-col-1">
+<ul>
+<li>DNI</li>
+<li>Nombre y apellidos</li>
+<li>Edad</li>
+<li>Fecha y hora del servicio</li>
+<li>Número de bici</li>
+<li>Punto de salida</li>
+<li>Punto de llegada</li>
+<li>Km recorridos</li>
+<li>Importe</li>
+</ul>
+</div>
+<div class="exe-col exe-col-2">
+<table style="width: 100%; height: 70px;" border="1">
+<tbody>
+<tr style="height: 15px;">
+<td style="width: 6.25%; text-align: center; height: 15px;"><strong> </strong></td>
+<td style="width: 6.25%; text-align: center; height: 15px;"><strong>DNI</strong></td>
+<td style="width: 7.8373%; text-align: center; height: 15px;"><strong>Nombre</strong></td>
+<td style="width: 7.8373%; text-align: center;"><strong>Apellidos<br /></strong></td>
+<td style="width: 6.6829%; text-align: center; height: 15px;"><strong>Edad</strong></td>
+<td style="width: 9.136%; text-align: center; height: 15px;"><strong>Fecha y hora<br /></strong></td>
+<td style="width: 9.4697%; text-align: center; height: 15px;"><strong>N_bici</strong></td>
+<td style="width: 9.0368%; text-align: center; height: 15px;"><strong>P_salida</strong></td>
+<td style="width: 12.5%; text-align: center; height: 15px;"><strong>P_llegada</strong></td>
+<td style="width: 12.5%; text-align: center; height: 15px;"><strong>KM</strong></td>
+<td style="width: 12.5%; text-align: center; height: 15px;"><strong>Importe</strong></td>
+</tr>
+<tr style="height: 15px;">
+<td style="width: 6.25%; height: 15px;">1</td>
+<td style="width: 6.25%; height: 15px;">12345689Z</td>
+<td style="width: 7.8373%; height: 15px;">Julio</td>
+<td style="width: 7.8373%;">Pérez Galán</td>
+<td style="width: 6.6829%; height: 15px;">26</td>
+<td style="width: 9.136%; height: 15px;">09/06/2020 12:15</td>
+<td style="width: 9.4697%; height: 15px;">14</td>
+<td style="width: 9.0368%; height: 15px;">112</td>
+<td style="width: 12.5%; height: 15px;">230</td>
+<td style="width: 12.5%; height: 15px;">7</td>
+<td style="width: 12.5%; height: 15px;">3,10 €</td>
+</tr>
+<tr>
+<td style="width: 6.25%;">2</td>
+<td style="width: 6.25%;">77755523Y</td>
+<td style="width: 7.8373%;">María</td>
+<td style="width: 7.8373%;">García Rodríguez</td>
+<td style="width: 6.6829%;">28</td>
+<td style="width: 9.136%;">10/06/02020</td>
+<td style="width: 9.4697%;">8</td>
+<td style="width: 9.0368%;">110</td>
+<td style="width: 12.5%;">112</td>
+<td style="width: 12.5%;">3</td>
+<td style="width: 12.5%;">1,90 €</td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 6.25%; height: 10px;">3</td>
+<td style="width: 6.25%; height: 10px;">12378954A</td>
+<td style="width: 7.8373%; height: 10px;">Rafael</td>
+<td style="width: 7.8373%;">Morales Pi</td>
+<td style="width: 6.6829%; height: 10px;">35</td>
+<td style="width: 9.136%; height: 10px;">10/06/2020</td>
+<td style="width: 9.4697%; height: 10px;">14</td>
+<td style="width: 9.0368%; height: 10px;">230</td>
+<td style="width: 12.5%; height: 10px;">110</td>
+<td style="width: 12.5%; height: 10px;">8</td>
+<td style="width: 12.5%; height: 10px;">3,40 €</td>
+</tr>
+<tr style="height: 15px;">
+<td style="width: 6.25%; height: 15px;">4</td>
+<td style="width: 6.25%; height: 15px;">23456789B</td>
+<td style="width: 7.8373%; height: 15px;">María</td>
+<td style="width: 7.8373%;">García Rodríguez</td>
+<td style="width: 6.6829%; height: 15px;">32</td>
+<td style="width: 9.136%; height: 15px;">11/06/2020</td>
+<td style="width: 9.4697%; height: 15px;">20</td>
+<td style="width: 9.0368%; height: 15px;">112</td>
+<td style="width: 12.5%; height: 15px;">115</td>
+<td style="width: 12.5%; height: 15px;">1</td>
+<td style="width: 12.5%; height: 15px;">1,30 €</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Cada una de las columnas representa un atributo de la tabla <em>Clientes.</em> La fila 1 es el registro correspondiente al cliente <em>Julio Pérez,</em> de 26 años, y la utilización del servicio el día 9 de junio a las 12:15. En este viaje, recorrió 7 km desde el puesto de bicicletas 112 al 230 por el que abonó 2,60 € por dicho servicio.</p>
+<p></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ud2_bases_de_datos_relacionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_dominios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
+Curso 2020 - 2021</footer></div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

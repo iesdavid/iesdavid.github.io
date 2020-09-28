@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.4. Lenguajes de bases de datos | Modelo Entidad - Relación </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-35"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Modelo Entidad Relación</a></li>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
+      <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
+      <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
+      <li><a href="elementos_necesarios.html" class="no-ch">Elementos necesarios</a></li>
+      <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="ud_1_introduccin_a_las_bbdd_relacionales.html" class="current-page-parent daddy">UD 1. Introducción a las BBDD relacionales</a>
+   <ul>
+      <li><a href="11_aplicaciones_de_los_sgbd.html" class="no-ch">1.1. Aplicaciones de los SGBD</a></li>
+      <li><a href="12_los_datos.html" class="no-ch">1.2. Los datos</a></li>
+      <li><a href="13_modelos_de_datos.html" class="no-ch">1.3. Modelos de datos</a></li>
+      <li id="active"><a href="14_lenguajes_de_bases_de_datos.html" class="active no-ch">1.4. Lenguajes de bases de datos</a></li>
+      <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud2_bases_de_datos_relacionales.html" class="daddy">UD2. Bases de Datos Relacionales</a>
+   <ul class="other-section">
+      <li><a href="21_conceptos_bsicos.html" class="no-ch">2.1. Conceptos básicos</a></li>
+      <li><a href="22_dominios.html" class="no-ch">2.2. Dominios</a></li>
+      <li><a href="23_claves.html" class="no-ch">2.3. Claves</a></li>
+      <li><a href="24_el_lenguaje_de_consultas_sql.html" class="no-ch">2.4. El lenguaje de consultas: SQL</a></li>
+      <li><a href="25_componentes_del_sql.html" class="no-ch">2.5. Componentes del SQL</a></li>
+      <li><a href="26_tipos_de_datos.html" class="no-ch">2.6. Tipos de datos</a></li>
+      <li><a href="27_constantes_y_nulos.html" class="no-ch">2.7. Constantes y Nulos</a></li>
+      <li><a href="autoevaluacin0.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica0.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud3_sql_select.html" class="no-ch">UD3. SQL: SELECT</a></li>
+   <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
+   <li><a href="bloque_4_lenguaje_script_plsql.html" class="no-ch">Bloque 4. Lenguaje Script PL/SQL</a></li>
+   <li><a href="bibliografa0.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="13_modelos_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.4. Lenguajes de bases de datos</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id67">
+<div class="iDevice emphasis0" >
+<div id="ta67_119_2" class="block iDevice_content">
+<div class="exe-text"><p><img src="sql-tutorial.jpg" alt="" style="float: right; margin: 10px;" width="320" height="213" />Los sistemas de bases de datos proporcionan un <strong>lenguaje de definición de datos</strong> para especificar el esquema de la base de datos y un <strong>lenguaje de manipulación de datos</strong> para expresar las consultas y las modificaciones de la base de datos. En la práctica, los lenguajes de definición y manipulación de datos no son dos lenguajes diferentes; en cambio, simplemente forman parte de un único lenguaje de bases de datos, como puede ser el muy usado <strong>SQL</strong>.</p>
+<ul>
+<li><strong>Lenguaje de definición de datos (LDD o DDL en inglés).</strong> Mediante este lenguaje se define la estructura de almacenamiento y los métodos de acceso usados por el SGBD. Los valores de los datos almacenados en la base de datos deben satisfacer ciertas <strong><a href="#tbf23108a-e9c4-c13d-fa4d-0b4e224a5966" id="linkbf23108a-e9c4-c13d-fa4d-0b4e224a5966" class="exe-tooltip definition-tt titled-tt light-tt rounded-tt shadowed-tt" title="Restricción de integridad | ">restricciones de integridad y consistencia</a></strong>.</li>
+<li><strong>Lenguaje de manipulación de datos (LMD o DML en inglés).</strong> Este lenguaje permite al usuario tener acceso a los datos organizados mediante el modelo de datos correspondiente o manipularlos.</li>
+</ul>
+<div id="tbf23108a-e9c4-c13d-fa4d-0b4e224a5966" class="exe-tooltip-text">
+<p>Las restricciones de integridad se especifican en el esquema de la base de datos y se deben cumplir en cualquier extensión del mismo. El responsable de que esto sea así es el sistema de gestión de bases de datos que debe velar en todo momento por la integridad de la información almacenada.</p>
+<p>En el Modelo Relacional se contemplan cuatro tipos de restricciones:</p>
+<ul>
+<li>restricción de unicidad: cada campo contiene un sólo valor</li>
+<li>restricción de valor no nulo: no se permiten campos vacíos</li>
+<li>restricción de clave primaria: cada registro contiene una clave primaria única en toda la tabla</li>
+<li>restricción de integridad referencial: cada registro de una tabla A debe tener un registro asociado en la tabla B y viceversa</li>
+</ul>
+</div></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id68">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Lenguaje de definición de datos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta68_120_2" class="block iDevice_content">
+<p><img src="DDLSentencias.png" style="float: right; margin: 10px;" width="320" height="222" />La estructura de almacenamiento y los métodos de acceso usados por el sistema de bases de datos se especifican mediante un conjunto de instrucciones en un tipo especial de <strong>LDD</strong> denominado lenguaje de almacenamiento y definición de datos. Estas instrucciones definen los detalles de implementación de los esquemas de las bases de datos, que suelen ocultarse a los usuarios. Los valores de los datos almacenados en la base de datos deben satisfacer ciertas restricciones de consistencia e integridad:</p>
+<ul>
+<li><strong>Restricciones de dominio</strong>. Se debe asociar un dominio de valores posibles a cada atributo (por ejemplo, tipos enteros, tipos de carácter, tipos fecha/hora). La declaración de un atributo como parte de un dominio concreto actúa como restricción de los valores que puede adoptar. Las restricciones de dominio son la forma más elemental de restricción de integridad. El sistema las comprueba fácilmente siempre que se introduce un nuevo elemento de datos en la base de datos.</li>
+<li><strong>Integridad referencial</strong>. Hay casos en los que se desea asegurar que un valor que aparece en una relación para un conjunto de atributos dado aparece también para un determinado conjunto de atributos en otra relación (integridad referencial). Las modificaciones de la base de datos pueden causar violaciones de la integridad referencial. Cuando se viola una restricción de integridad, el procedimiento normal es rechazar la acción que ha causado esa violación.</li>
+<li><strong>Asertos.</strong> Un aserto es cualquier condición que la base de datos debe satisfacer siempre. Las restricciones de dominio y las restricciones de integridad referencial son formas especiales de asertos. No obstante, hay muchas restricciones que no pueden expresarse empleando únicamente<br />esas formas especiales. Por ejemplo: “Cada préstamo tiene como mínimo un cliente tenedor de una cuenta con un saldo mínimo de 1.000,00 e” debe expresarse en forma de aserto. Cuando se crea un aserto, el sistema comprueba su validez. Si el aserto es válido, cualquier modificación futura de la base de datos se permite únicamente si no hace que se viole ese aserto.</li>
+<li><strong>Autorización.</strong> Puede que se desee diferenciar entre los usuarios en cuanto al tipo de acceso que se les permite a diferentes valores de los datos de la base de datos. Estas diferenciaciones se expresan en términos de autorización, cuyas modalidades más frecuentes son:
+<ul>
+<li><em>autorización de lectura</em>, que permite la lectura pero no la modificación de los datos;</li>
+<li><em>autorización de inserción</em>, que permite la inserción de datos nuevos, pero no la modificación de los datos ya existentes;</li>
+<li><em>autorización de actualización</em>, que permite la modificación, pero no la eliminación, de los datos;</li>
+<li><em>autorización de eliminación</em>, que permite la eliminación de datos. A cada usuario se le pueden asignar todos, ninguno o una combinación de estos tipos de autorización.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id69">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Lenguaje de manipulación de datos o Lenguaje de consultas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta69_121_2" class="block iDevice_content">
+<p><img src="DMLSentencias.png" alt="" style="float: right; margin: 10px;" width="320" height="300" />Un <strong>lenguaje de manipulación de datos (LMD)</strong> es un lenguaje que permite a los usuarios tener acceso a los datos organizados mediante el modelo de datos correspondiente o manipularlos. Los tipos de acceso son:</p>
+<ul>
+<li>La inserción de información nueva en la base de datos (INSERT).</li>
+<li>El borrado de la información de la base de datos (DELETE).</li>
+<li>La recuperación de la información almacenada en la base de datos (SELECT).</li>
+<li>La modificación de la información almacenada en la base de datos (UPDATE).</li>
+</ul>
+<p>Hay fundamentalmente dos tipos:</p>
+<ul>
+<li>Los <strong>LMDs procedimentales</strong> necesitan que el usuario especifique qué datos se necesitan y cómo obtener esos datos.</li>
+<li>Los <strong>LMDs declarativos</strong> (también conocidos como LMDs no procedimentales) necesitan que el usuario especifique qué datos se necesitan sin que haga falta que especifique cómo obtener esos datos.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="13_modelos_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
+Curso 2020 - 2021</footer></div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>
