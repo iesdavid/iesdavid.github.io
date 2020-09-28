@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.5. Tipos de Amenazas | Módulo de Seguridad y Alta Disponibilidad </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-20"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Módulo de Seguridad y Alta Disponibilidad</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Seguridad y Alta Disponibilidad</a></li>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
+      <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
+      <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li class="current-page-parent"><a href="bloque_1_tratamiento_de_la_informacin.html" class="current-page-parent daddy">Bloque 1. Tratamiento de la Información</a>
+   <ul>
+      <li class="current-page-parent"><a href="ud1_seguridad_de_la_informacin.html" class="current-page-parent daddy">UD1. Seguridad de la Información</a>
+      <ul>
+         <li><a href="11_confidencialidad_integridad_y_disponibilidad.html" class="no-ch">1.1. Confidencialidad, integridad y disponibilidad</a></li>
+         <li><a href="12_vulnerabilidad.html" class="no-ch">1.2. Vulnerabilidad</a></li>
+         <li><a href="13_elementos_vulnerables.html" class="no-ch">1.3. Elementos vulnerables</a></li>
+         <li><a href="14_niveles_de_seguridad.html" class="no-ch">1.4. Niveles de Seguridad</a></li>
+         <li id="active"><a href="15_tipos_de_amenazas.html" class="active no-ch">1.5. Tipos de Amenazas</a></li>
+         <li><a href="16_amenazas_humanas.html" class="no-ch">1.6. Amenazas Humanas</a></li>
+         <li><a href="17_amenazas_fsicas.html" class="no-ch">1.7. Amenazas Físicas</a></li>
+         <li><a href="18_amenazas_lgicas.html" class="no-ch">1.8. Amenazas Lógicas</a></li>
+         <li><a href="19_seguridad_activa_y_pasiva.html" class="no-ch">1.9. Seguridad Activa y Pasiva</a></li>
+         <li><a href="110_contraseas.html" class="no-ch">1.10. Contraseñas</a></li>
+      </ul>
+      </li>
+      <li><a href="ud2_seguridad_fsica_y_lgica.html" class="daddy">UD2. Seguridad Física y Lógica</a>
+      <ul class="other-section">
+         <li><a href="21_ubicacin_y_proteccin_fsica.html" class="no-ch">2.1. Ubicación y protección física</a></li>
+         <li><a href="22_sistemas_de_alimentacin_ininterrumpida.html" class="no-ch">2.2. Sistemas de alimentación ininterrumpida</a></li>
+         <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+         <li><a href="23_criptografa.html" class="no-ch">2.3. Criptografía</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="bloque_2_mecanismos_de_seguridad.html" class="no-ch">Bloque 2. Mecanismos de Seguridad</a></li>
+   <li><a href="bloque_3_acceso_remoto.html" class="no-ch">Bloque 3. Acceso Remoto</a></li>
+   <li><a href="bloque_4_el_cortafuegos.html" class="no-ch">Bloque 4. El Cortafuegos</a></li>
+   <li><a href="bloque_5_el_servidor_proxy.html" class="no-ch">Bloque 5. El Servidor Proxy</a></li>
+   <li><a href="bloque_6_alta_disponibilidad.html" class="no-ch">Bloque 6. Alta Disponibilidad</a></li>
+   <li><a href="bloque_7_legislacin.html" class="no-ch">Bloque 7. Legislación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="14_niveles_de_seguridad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="16_amenazas_humanas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.5. Tipos de Amenazas</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id37">
+<div class="iDevice emphasis0" >
+<div id="ta37_112_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Una amenaza es una circunstancia que podría afectar al sistema aprovechando alguna vulnerabilidad de éste. Si un sistema no es vulnerable no existen amenazas, pero la realidad es que todos los sistemas son vulnerables en mayor o menor medida.</p>
+<p style="text-align: justify;">Un sistema informático está formado básicamente por una parte física (hardware), una parte lógica (software) y los datos. Cada una de estas partes puede tener diferentes vulnerabilidades. La existencia de estas vulnerabilidades implica que las amenazas posibles se puedan clasificar en tres grandes grupos:</p>
+<ul class="lista_verificacion">
+<li><a href="16_amenazas_humanas.html" title="Amenazas Humanas">Amenazas humanas</a></li>
+<li><a href="17_amenazas_fsicas.html" title="Amenazas Físicas">Amenazas físicas</a></li>
+<li><a href="18_amenazas_lgicas.html" title="Amenazas Lógicas">Amenazas lógicas</a></li>
+</ul>
+<p>Pero también se puede clasificar a las amenazas en función de la manera que tienen de interferir con los datos en:</p>
+<ul class="lista_verificacion">
+<li>Interrupción.</li>
+<li>Interceptación.</li>
+<li>Modificación.</li>
+<li>Fabricación.</li>
+</ul>
+<div class="exe-layout-2-cols exe-layout-2-30-70 exe-clear">
+<div class="exe-col exe-col-1">
+<p><a href="SAD01_CONT_R11_AMENAZAS.png" title="Ampliar imagen"><img src="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/SAD/SAD01/es_ASIR_SAD01_Contenidos/SAD01_CONT_R11_AMENAZAS_miniatura.png" class="imagen_ampliable" data-pagespeed-url-hash="2949503126" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" style="display: block; margin-left: auto; margin-right: auto;" /></a></p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: justify;">El gráfico de la imagen es una representación de los distintos tipos de amenazas.</p>
+<p style="text-align: justify;">Los círculos de color verde pueden representar al emisor y al receptor de una comunicación o datos antes y después de un proceso. El círculo de color rojo representa a la <b>amenaza</b> de la comunicación o del proceso.</p>
+<p style="text-align: justify;">Las flechas de <b>color azul</b> representan las transacciones o acciones <b>legítimas</b> y las flechas de <b>color rojo</b> representan las que <b>no se deberían dar</b>.</p>
+<p style="text-align: justify;">De la figura se puede deducir que las amenazas más perjudiciales son las de modificación y fabricación, en este tipo de amenazas el receptor puede recibir datos que sean totalmente diferentes a los datos originales, o los datos pueden sufrir una transformación nada deseable.</p>
+</div>
+</div>
+<p style="text-align: justify;">Según su<strong> origen,</strong> pueden ser:</p>
+<ul>
+<li style="text-align: justify;"><strong>Accidentales</strong>, Accidentes meteorológicos, incendios, inundaciones, fallos en los equipos, errores humanos, etc.</li>
+<li style="text-align: justify;"><strong>Intencionadas</strong>, siempre son debidas a la acción humana, como la introducción de software malicioso (malware), robos, etc.</li>
+</ul></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id71">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Riesgo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta71_108_2" class="block iDevice_content">
+<p>Se denomina <strong>riesgo</strong> a la posibilidad de que se materialice o no una <strong>amenaza</strong> aprovechando una <strong>vulnerabilidad</strong>.</p>
+<p>No constituye riesgo una amenaza cuando no exista vulnerabilidad ni una vulnerabilidad cuando no existe amenaza.</p>
+<p>La Agencia Española de Protección de Datos (AEPD) elaboró en 2019 esta <a href="https://www.aepd.es/sites/default/files/2019-09/guia-analisis-de-riesgos-rgpd.pdf" target="_blank" title="Guía práctica AEPD" rel="noopener"><em>Guía Práctica de Análisis de Riesgos en el Tratamiento de Datos Personales Sujetos al RGPD</em></a>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionIdevice em_iDevice" id="id40">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Recuerda</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta40_92" class="block iDevice_content">
+<p>Estas amenazas que pueden afectar la información estan ocasionadas por algunos de los siguientes tipos:</p>
+<ul style="list-style-type: circle;">
+<li><strong>Programas maliciosos</strong>: programas destinados a perjudicar o a hacer uso ilícito de los recursos del sistema, como lo son los virus.</li>
+<li><strong>Siniestros</strong>: robos, incendios, inundaciones, terremotos, etc.</li>
+<li><strong>Intrusos</strong>: personas que consigue acceder a los datos o programas sin permisos (cracker).</li>
+<li>Los <strong>usuarios</strong>: una mala manipulación de los equipos o mala intención de los usuarios también derivan la pérdida información. Así como la falta de conocimiento, imprudencias, descuidos, irresponsabilidad, etc.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper MultichoiceIdevice em_iDevice" id="id41">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-41_86" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion41_86" class="block question iDevice_content">
+<p>Un vecino, usando <a href="https://www.wifislax.com/" target="_blank" rel="noopener">WifiSlax</a> (distribución Linux de Seguridad y <a href="https://www.hiberus.com/crecemos-contigo/que-es-pentesting-para-detectar-y-prevenir-ciberataques/" target="_blank" rel="noopener">Pentesting</a>), está intentando acceder a tu Wifi. ¿De qué tipo de ataque estaríamos hablando?</p>
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Sugerencia</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint41_86" class="block iDevice_content">
+<p>El vecino sólo quiere unirse a nuestra Wifi, sin molestar, o sea, sin que lo sepas...</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i41_89" class="sr-av"><a href="#answer-41_89">Opción 1</a></label><input type="radio" name="option41_86" id="i41_89" class="exe-radio-option exe-radio-option-0-2-41_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-41_89"><div id="taans41_89" class="block iDevice_content">
+<p>Interceptación</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i41_210" class="sr-av"><a href="#answer-41_210">Opción 2</a></label><input type="radio" name="option41_86" id="i41_210" class="exe-radio-option exe-radio-option-1-2-41_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-41_210"><div id="taans41_210" class="block iDevice_content">
+<p>Interrupción</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b41_86" class="feedback js-hidden">
+<div id="taf41_89" class=" iDevice_content">
+<p><strong><span style="color: #008000;">Correcto</span></strong>, está interceptando la comunicación sin alterarla ya que sólo quiere acceder "de momento" a la wifi.</p>
+</div>
+</section>
+<section id="sa1b41_86" class="feedback js-hidden">
+<div id="taf41_210" class=" iDevice_content">
+<p><strong><span style="color: #ff0000;">Incorrecto</span></strong>, no estaríamos hablando de interrupción ya que no detiene el sistema, sino que se une a él.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-41_89">Opción correcta</a><span> (<a href="#sa0b41_86">Retroalimentación</a>)</span></li>
+<li><a href="#answer-41_210">Incorrecto</a><span> (<a href="#sa1b41_86">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-41_213" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion41_213" class="block question iDevice_content">
+<p>Tu vecino ha logrado acceder a la Wifi y, mediante la aplicación WireShark, está capturando el tráfico de tu red. ¿A qué grupo de amenazas pertenece este caso?</p>
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Sugerencia</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint41_213" class="block iDevice_content">
+<p>Si se usa una aplicación para el ataque...</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i41_216" class="sr-av"><a href="#answer-41_216">Opción 1</a></label><input type="radio" name="option41_213" id="i41_216" class="exe-radio-option exe-radio-option-0-2-41_213-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-41_216"><div id="taans41_216" class="block iDevice_content">
+<p>Amenaza física</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i41_219" class="sr-av"><a href="#answer-41_219">Opción 2</a></label><input type="radio" name="option41_213" id="i41_219" class="exe-radio-option exe-radio-option-1-2-41_213-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-41_219"><div id="taans41_219" class="block iDevice_content">
+<p>Amenaza lógica</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b41_213" class="feedback js-hidden">
+<div id="taf41_216" class=" iDevice_content">
+<p><span style="color: #ff0000;"><strong>Incorrecto</strong></span>, aunque el vecino sea muy real, el ataque realmente lo está realizando la aplicación WireShark.</p>
+</div>
+</section>
+<section id="sa1b41_213" class="feedback js-hidden">
+<div id="taf41_219" class=" iDevice_content">
+<p><span style="color: #008000;"><strong>Correcto</strong></span>, al ser una aplicación o programa, pertenece al Software lógico.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-41_216">Incorrecto</a><span> (<a href="#sa0b41_213">Retroalimentación</a>)</span></li>
+<li><a href="#answer-41_219">Opción correcta</a><span> (<a href="#sa1b41_213">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-41_222" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion41_222" class="block question iDevice_content">
+<p>Ufff, la que está liando el vecino. Ha accedido a una de tus carpetas y ha encriptado tus fotos de este verano. ¿Qué tipo de ataque es?</p>
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Sugerencia</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint41_222" class="block iDevice_content">
+<p>Al encriptar, ha cambiado el estado de los documentos, por tanto...</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i41_225" class="sr-av"><a href="#answer-41_225">Opción 1</a></label><input type="radio" name="option41_222" id="i41_225" class="exe-radio-option exe-radio-option-0-2-41_222-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-41_225"><div id="taans41_225" class="block iDevice_content">
+<p>Modificación</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i41_228" class="sr-av"><a href="#answer-41_228">Opción 2</a></label><input type="radio" name="option41_222" id="i41_228" class="exe-radio-option exe-radio-option-1-2-41_222-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-41_228"><div id="taans41_228" class="block iDevice_content">
+<p>Fabricación</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b41_222" class="feedback js-hidden">
+<div id="taf41_225" class=" iDevice_content">
+<p><span style="color: #008000;"><strong>Correcto</strong></span>, ha modificado esos documentos encriptándolos y haciéndolos inaccesibles!!!</p>
+</div>
+</section>
+<section id="sa1b41_222" class="feedback js-hidden">
+<div id="taf41_228" class=" iDevice_content">
+<p><span style="color: #ff0000;"><strong>Incorrecto</strong></span>, aunque los documentos ya no sean los originales, realmente no ha creado nada nuevo.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-41_225">Opción correcta</a><span> (<a href="#sa0b41_222">Retroalimentación</a>)</span></li>
+<li><a href="#answer-41_228">Incorrecto</a><span> (<a href="#sa1b41_222">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-41_231" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion41_231" class="block question iDevice_content">
+<p>¡Tu vecino no para! Al abrir el navegador, vemos que nuestro <a href="http://www.google.es">www.google.es</a> ahora es <a href="http://www.mivecinomolesto.es">www.mivecinomolesto.es</a>. Ya que aparece una dirección nueva en mi navegador, siendo un <em>Ataque por Fabricación.</em></p>
+<p></p>
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Sugerencia</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint41_231" class="block iDevice_content">
+<p>La dirección web es distinta a la anterior...</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i41_234" class="sr-av"><a href="#answer-41_234">Opción 1</a></label><input type="radio" name="option41_231" id="i41_234" class="exe-radio-option exe-radio-option-0-2-41_231-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-41_234"><div id="taans41_234" class="block iDevice_content">
+<p>Verdadero</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i41_237" class="sr-av"><a href="#answer-41_237">Opción 2</a></label><input type="radio" name="option41_231" id="i41_237" class="exe-radio-option exe-radio-option-1-2-41_231-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-41_237"><div id="taans41_237" class="block iDevice_content">
+<p>Falso</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b41_231" class="feedback js-hidden">
+<div id="taf41_234" class=" iDevice_content">
+<p><strong><span style="color: #ff0000;">Incorrecto</span></strong>. Se ha "modificado" el archivo donde está la configuración de la página de inicio.</p>
+</div>
+</section>
+<section id="sa1b41_231" class="feedback js-hidden">
+<div id="taf41_237" class=" iDevice_content">
+<p><span style="color: #008000;"><strong>Correcto</strong></span>. No se ha fabricado la dirección, se ha "modificado".</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-41_234">Incorrecto</a><span> (<a href="#sa0b41_231">Retroalimentación</a>)</span></li>
+<li><a href="#answer-41_237">Opción correcta</a><span> (<a href="#sa1b41_231">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-41_240" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion41_240" class="block question iDevice_content">
+<p>Al final, tu vecino sabe que te has dado cuenta y, para fastidiar, ha modificado la contraseña del Wifi dejándote sin Internet. ¿De qué tipo de ataque estamos hablando?</p>
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Sugerencia</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint41_240" class="block iDevice_content">
+<p>Acaba de inutilizar tu router...</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i41_243" class="sr-av"><a href="#answer-41_243">Opción 1</a></label><input type="radio" name="option41_240" id="i41_243" class="exe-radio-option exe-radio-option-0-2-41_240-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-41_243"><div id="taans41_243" class="block iDevice_content">
+<p>Modificación</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i41_246" class="sr-av"><a href="#answer-41_246">Opción 2</a></label><input type="radio" name="option41_240" id="i41_246" class="exe-radio-option exe-radio-option-1-2-41_240-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-41_246"><div id="taans41_246" class="block iDevice_content">
+<p>Interrupcion</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b41_240" class="feedback js-hidden">
+<div id="taf41_243" class=" iDevice_content">
+<p><span style="color: #ff0000;"><strong>Incorrecto</strong></span>. El ataque ha causado que no tengas Internet al modificar la contraseña pero la consecuencia de dicho ataque es que <strong>no puedes usar el Router</strong>.</p>
+</div>
+</section>
+<section id="sa1b41_240" class="feedback js-hidden">
+<div id="taf41_246" class=" iDevice_content">
+<p><span style="color: #008000;"><strong>Correcto</strong></span>. Se ha interrumpido el acceso a Internet y sólo podemos restablecerlo reseteando el Router perdiendo toda la configuración previa. Es hora de cambiar la contraseña...</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-41_243">Incorrecto</a><span> (<a href="#sa0b41_240">Retroalimentación</a>)</span></li>
+<li><a href="#answer-41_246">Opción correcta</a><span> (<a href="#sa1b41_240">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="14_niveles_de_seguridad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="16_amenazas_humanas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
+Curso 2020 - 2021</footer></div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

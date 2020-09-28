@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2. Vulnerabilidad | Módulo de Seguridad y Alta Disponibilidad </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Módulo de Seguridad y Alta Disponibilidad</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Seguridad y Alta Disponibilidad</a></li>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
+      <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
+      <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li class="current-page-parent"><a href="bloque_1_tratamiento_de_la_informacin.html" class="current-page-parent daddy">Bloque 1. Tratamiento de la Información</a>
+   <ul>
+      <li class="current-page-parent"><a href="ud1_seguridad_de_la_informacin.html" class="current-page-parent daddy">UD1. Seguridad de la Información</a>
+      <ul>
+         <li><a href="11_confidencialidad_integridad_y_disponibilidad.html" class="no-ch">1.1. Confidencialidad, integridad y disponibilidad</a></li>
+         <li id="active"><a href="12_vulnerabilidad.html" class="active no-ch">1.2. Vulnerabilidad</a></li>
+         <li><a href="13_elementos_vulnerables.html" class="no-ch">1.3. Elementos vulnerables</a></li>
+         <li><a href="14_niveles_de_seguridad.html" class="no-ch">1.4. Niveles de Seguridad</a></li>
+         <li><a href="15_tipos_de_amenazas.html" class="no-ch">1.5. Tipos de Amenazas</a></li>
+         <li><a href="16_amenazas_humanas.html" class="no-ch">1.6. Amenazas Humanas</a></li>
+         <li><a href="17_amenazas_fsicas.html" class="no-ch">1.7. Amenazas Físicas</a></li>
+         <li><a href="18_amenazas_lgicas.html" class="no-ch">1.8. Amenazas Lógicas</a></li>
+         <li><a href="19_seguridad_activa_y_pasiva.html" class="no-ch">1.9. Seguridad Activa y Pasiva</a></li>
+         <li><a href="110_contraseas.html" class="no-ch">1.10. Contraseñas</a></li>
+      </ul>
+      </li>
+      <li><a href="ud2_seguridad_fsica_y_lgica.html" class="daddy">UD2. Seguridad Física y Lógica</a>
+      <ul class="other-section">
+         <li><a href="21_ubicacin_y_proteccin_fsica.html" class="no-ch">2.1. Ubicación y protección física</a></li>
+         <li><a href="22_sistemas_de_alimentacin_ininterrumpida.html" class="no-ch">2.2. Sistemas de alimentación ininterrumpida</a></li>
+         <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+         <li><a href="23_criptografa.html" class="no-ch">2.3. Criptografía</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="bloque_2_mecanismos_de_seguridad.html" class="no-ch">Bloque 2. Mecanismos de Seguridad</a></li>
+   <li><a href="bloque_3_acceso_remoto.html" class="no-ch">Bloque 3. Acceso Remoto</a></li>
+   <li><a href="bloque_4_el_cortafuegos.html" class="no-ch">Bloque 4. El Cortafuegos</a></li>
+   <li><a href="bloque_5_el_servidor_proxy.html" class="no-ch">Bloque 5. El Servidor Proxy</a></li>
+   <li><a href="bloque_6_alta_disponibilidad.html" class="no-ch">Bloque 6. Alta Disponibilidad</a></li>
+   <li><a href="bloque_7_legislacin.html" class="no-ch">Bloque 7. Legislación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_confidencialidad_integridad_y_disponibilidad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_elementos_vulnerables.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.2. Vulnerabilidad</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id29">
+<div class="iDevice emphasis0" >
+<div id="ta29_132_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">La <strong>vulnerabilidad</strong> de un sistema informático es la probabilidad que existe de que una amenaza se materialice contra un elemento de dicho sistema.</p>
+<p style="text-align: justify;">No todos los elementos son vulnerables a las mismas amenazas, por ejemplo, los datos son vulnerables a los <strong>hackers</strong> y las instalaciones eléctricas a los cortocircuitos.</p>
+<p style="text-align: justify;">Cuando se habla de las vulnerabilidades de un sistema se manejan conceptos como:</p>
+<ul>
+<li>
+<figure class="exe-figure exe-image float-right" style="width: 445px;"><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/SAD/SAD01/es_ASIR_SAD01_Contenidos/SAD01_CONT_R05_VULNERABILIDADES.png" title="Vulnerabilidades y ataques" class="exe-tooltip plain-tt"><img src="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/SAD/SAD01/es_ASIR_SAD01_Contenidos/SAD01_CONT_R05_VULNERABILIDADES.png" alt="Vulnerabilidades y ataques" title="Vulnerabilidades y ataques" class="shrinkToFit" style="margin: 10px -50 10px -50;" width="445" vspace="10" hspace="-50" height="192" /></a>
+<figcaption class="figcaption"><a href="https://ikastaroak.birt.eus" target="_blank" class="author" rel="noopener">https://ikastaroak.birt.eus</a>. <a href="https://ikastaroak.birt.eus" target="_blank" class="title" rel="noopener"><em>Vulnerabilidades</em></a></figcaption>
+</figure>
+Amenazas.</li>
+<li>Riesgos.</li>
+<li>Vulnerabilidades.</li>
+<li>Ataques.</li>
+<li>Impactos.</li>
+</ul></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id33">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Vulnerabilidades según su función</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta33_108_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="color: #000000;">Las vulnerabilidades de los sistemas informáticos (SI) las podemos agrupar en función de:</span></p>
+<blockquote>
+<p><span style="color: #000000;"><strong>Diseño</strong></span></p>
+<ul>
+<li><span style="color: #000000;">Debilidad en el diseño de protocolos utilizados en las redes.</span></li>
+<li><span style="color: #000000;">Políticas de seguridad deficientes e inexistentes.</span></li>
+</ul>
+<p><span style="color: #000000;"><strong>Implementación</strong></span></p>
+<ul>
+<li><span style="color: #000000;">Errores de programación.</span></li>
+<li><span style="color: #000000;">Existencia de “puertas traseras” en los sistemas informáticos.</span></li>
+<li><span style="color: #000000;">Descuido de los fabricantes.</span></li>
+</ul>
+<p><span style="color: #000000;"><strong>Uso</strong></span></p>
+<ul>
+<li><span style="color: #000000;">Configuración inadecuada de los sistemas informáticos.</span></li>
+<li><span style="color: #000000;">Desconocimiento y falta de sensibilización de los usuarios y de los responsables de informática.</span></li>
+<li><span style="color: #000000;">Disponibilidad de herramientas que facilitan los ataques.</span></li>
+<li><span style="color: #000000;">Limitación gubernamental de tecnologías de seguridad.</span></li>
+</ul>
+<p><span style="color: #000000;"><strong>Vulnerabilidad del día cero</strong></span></p>
+<ul>
+<li><span style="color: #000000;">Cuando no exista una solución “conocida” para una vulnerabilidad, pero el atacante sí conoce como explotarla, entonces se le conoce como “vulnerabilidad 0 days”.</span></li>
+</ul>
+</blockquote></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id34">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Clasificación de vulnerabilidades</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta34_109_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="color: #000000;">Globalmente clasificamos las vulnerabilidades en:</span></p>
+<blockquote>
+<ul style="list-style-type: disc;">
+<li><span style="color: #000000;"><strong>Vulnerabilidades de desbordamiento de buffer.</strong></span></li>
+</ul>
+<p style="margin-left: 30px;"><span style="color: #000000;">Se produce cuando un programa no controla la cantidad de datos que se copian en buffer, de forma que si esa cantidad es superior a la capacidad del buffer los bytes sobrantes se almacenan en zonas de memoria adyacentes, sobrescribiendo su contenido original. Se puede aprovechar para ejecutar código que nos de privilegios de administrador.</span></p>
+<ul>
+<li><span style="color: #000000;"><strong>Vulnerabilidades de condición de carrera (race condition).</strong></span></li>
+</ul>
+<div style="margin-left: 30px;" align="justify"><span style="color: #000000;">La condición de carrera se da principalmente cuando varios procesos acceden al mismo tiempo a un recurso compartido, por ejemplo una variable, cambiando su estado y obteniendo de esta forma un valor no esperado de la misma.</span></div>
+<ul>
+<li><span style="color: #000000;"><strong>Vulnerabilidades de error de formato de cadena (format string bugs).</strong></span></li>
+</ul>
+<div style="margin-left: 30px;" align="justify"><span style="color: #000000;">La principal causa de los errores de cadena de formato es aceptar sin validar la entrada de datos proporcionada por el usuario.</span></div>
+<div style="margin-left: 30px;" align="justify"><span style="color: #000000;">Es un error de programación y el lenguaje más afectado es C/C++. Un ataque puede conducir de manera inmediata a la ejecución de código arbitrario y a revelación de información.</span></div>
+<ul>
+<li><span style="color: #000000;"><strong> Vulnerabilidades de Cross Site Scripting (XSS).</strong></span></li>
+</ul>
+<div style="margin-left: 30px;" align="justify"><span style="color: #000000;">Abarcaban cualquier ataque que permitiera ejecutar scripts como VBScript o JavaScript, en el contexto de otro sitio web. Estos errores se pueden encontrar en cualquier aplicación que tenga como objetivo final presentar la información en un navegador web.</span></div>
+<div style="margin-left: 30px;" align="justify"><span style="color: #000000;">Un uso de esta vulnerabilidad es hacer phishing. La víctima ve en la barra de direcciones un sitio, pero realmente está en otro. La víctima introduce su contraseña y se la envía al atacante.</span></div>
+<ul>
+<li><span style="color: #000000;"><strong>Vulnerabilidades de Inyección SQL.</strong></span></li>
+</ul>
+<div style="margin-left: 30px;" align="justify"><span style="color: #000000;">Una <em>inyección SQL</em> se produce cuando, de alguna manera, se inserta o "inyecta" código SQL invasor dentro del código SQL programado, a fin de alterar el funcionamiento normal del programa y lograr así que se ejecute la porción de código "invasor" incrustado, en la base de datos.</span></div>
+<ul>
+<li><span style="color: #000000;"><strong>Vulnerabilidades de denegación del servicio.</strong></span></li>
+</ul>
+<div style="margin-left: 30px;" align="justify"><span style="color: #000000;">La denegación de servicio provoca que un servicio o recurso sea inaccesible a los usuarios legítimos. Normalmente provoca la pérdida de la conectividad de la red por el consumo del ancho de banda de la red de la víctima o sobrecarga de los recursos informáticos del sistema de la víctima.</span></div>
+<ul>
+<li><span style="color: #000000;"><strong>Vulnerabilidades de ventanas engañosas (Window Spoofing).</strong></span></li>
+</ul>
+<div style="margin-left: 30px;" align="justify"><span style="color: #000000;">Las ventanas engañosas son aquellas que dicen que eres el ganador de tal o cual cosa, lo cual es mentira y lo único que quieren es que des información. Hay otro tipo de ventanas que, si las sigues, obtienen datos del ordenador para luego realizar un ataque.</span></div>
+</blockquote>
+<p><span style="color: #000000;"><strong>Información: </strong></span></p>
+<p><span style="color: #000000;">En <a href="http://www.cert.org/stats/">http://www.cert.org/stats/</a> hay disponibles unas tablas que indican el nº de vulnerabilidades detectadas por año.</span></p>
+<p><span style="color: #000000;">La web <a href="http://www.zone-h.org">http://www.zone-h.org</a> en su zona restringida muestra gran cantidad de información sobre ataques y estadísticas.</span></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionIdevice em_iDevice" id="id26">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Reflexión</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_92" class="block iDevice_content">
+<p>La <strong>educación</strong> de los usuarios es fundamental para que la tecnología de seguridad pueda funcionar. Es evidente que por mucha tecnología de seguridad que se implante en una organización, si no existe una clara disposición por parte de los directivos de la empresa y una cultura a nivel de usuarios, no se conseguirán los <strong>objetivos</strong> perseguidos con la implantación de un sistema de seguridad.</p>
+<p>¿Sueles usar una contraseñas robustas usando mayúsculas, minúsculas, números y símbolos?</p>
+<p>¿Sueles realizar copia de seguridad de tus datos más importantes?</p>
+<p>¿Tienes contraseña al inicio de sesión de tu Sistema Operativo?</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper readingIdevice em_iDevice" id="id35">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Más información</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta35_110_4" class="block iDevice_content">
+<p><span style="color: #000000;">En <a href="http://www.cert.org/stats/" onclick="browseURL(this); return false">http://www.cert.org/stats/</a> hay disponibles unas tablas que indican el nº de vulnerabilidades detectadas por año.</span></p>
+<p><span style="color: #000000;">La web <a href="http://www.zone-h.org" onclick="browseURL(this); return false">http://www.zone-h.org</a> en su zona restringida muestra gran cantidad de información sobre ataques y estadísticas.</span></p>
+</section>
+<section id="ta35_110_5" class="block iDevice_content">
+
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_confidencialidad_integridad_y_disponibilidad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_elementos_vulnerables.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
+Curso 2020 - 2021</footer></div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>
