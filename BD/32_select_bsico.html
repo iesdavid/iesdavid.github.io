@@ -15,7 +15,7 @@
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
+	</head>
 <body class="exe-web-site" id="exe-node-50"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
@@ -59,6 +59,11 @@
    <ul>
       <li><a href="31_la_clusula_select.html" class="no-ch">3.1. La cláusula SELECT</a></li>
       <li id="active"><a href="32_select_bsico.html" class="active no-ch">3.2. SELECT básico</a></li>
+      <li><a href="33_filas_duplicadas.html" class="no-ch">3.3. Filas duplicadas</a></li>
+      <li><a href="34_condiciones.html" class="no-ch">3.4. Condiciones</a></li>
+      <li><a href="35_condiciones_compuestas.html" class="no-ch">3.5. Condiciones compuestas</a></li>
+      <li><a href="36_ordenacin.html" class="no-ch">3.6. Ordenación</a></li>
+      <li><a href="37_unin.html" class="no-ch">3.7. Unión</a></li>
    </ul>
    </li>
    <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
@@ -68,7 +73,7 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="31_la_clusula_select.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="31_la_clusula_select.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_filas_duplicadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
@@ -77,12 +82,46 @@
 <article class="iDevice_wrapper textIdevice" id="id112">
 <div class="iDevice emphasis0" >
 <div id="ta112_111_2" class="block iDevice_content">
-<div class="exe-text"><p>Las consultas SQL más sencillas solicitan columnas de datos de<strong> una única tabla</strong> en la base de datos. Por ejemplo:</p>
-<p><a href="dataTable.png"><img src="dataTable.png" style="float: right; margin: 10px;" width="408" height="208" /></a> La tabla <strong>Películas,</strong> mostrada a la derecha de la pantalla, contiene los datos de una serie de películas: su nombre, sus directores, la fecha de lanzamiento, el género y la recaudación.</p>
+<div class="exe-text"><p><a href="dataTable.png"><img src="dataTable.png" style="float: right; margin: 10px;" width="408" height="208" /></a>Las consultas SQL más sencillas solicitan columnas de datos de<strong> una única tabla</strong> en la base de datos. Por ejemplo:</p>
+<p> La tabla <strong>Películas,</strong> mostrada a la derecha de la pantalla, contiene los datos de una serie de películas: su nombre, sus directores, la fecha de lanzamiento, el género y la recaudación.</p>
 <p>Si de esta tabla sólo se desea sacar el nombre de la película y su director, la cláusula necesaria con SELECT sería la siguiente:</p>
 <h3 style="text-align: center;">SELECT nombre, director FROM películas</h3>
 <p></p>
 <p></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id113">
+<div class="iDevice emphasis0" >
+<div id="ta113_119_2" class="block iDevice_content">
+<div class="exe-text"><p><a href="densidaPoblacion.png"><img src="densidaPoblacion.png" style="float: right; margin: 15px;" width="321" height="184" /></a>Además de las columnas cuyos valores provienen directamente de la base de datos, una consulta SQL puede incluir <strong>columnas calculadas</strong> cuyos valores se calculan a partir de los valores de los datos almacenados. Para solicitar una columna calculada, se especifica una expresión SQL en la lista de selección.</p>
+<p style="text-align: center;"><strong>SELECT nombre, superficie, población, (poblacion / superficie) AS densidad FROM ciudades;</strong></p>
+<p></p>
+<p>Observa que para mostrar la columna calculada se ha utilizado un <em>"alias"</em> mediante el comando <strong>AS</strong>, renombrando así la columna como <em>densidad</em>.</p>
+<p style="text-align: justify;"></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id114">
+<div class="iDevice emphasis0" >
+<div id="ta114_120_2" class="block iDevice_content">
+<div class="exe-text"><p><img src="img0.1.png" alt="Productos" style="float: left; margin: 15px;" width="320" height="144" />El siguiente ejemplo de consulta con varias columnas calculadas, utiliza una tabla <strong>Productos</strong> para obtener el <strong>nombre</strong> del producto junto a las <strong>unidades</strong>, tanto en existencia como pedidas, su <strong>precio</strong> y su incremento del 10%.</p>
+<p style="text-align: center;"><strong>SELECT nombre, (UdExis + UdPed) as Uds, Precio, </strong></p>
+<p style="text-align: center;"><strong>Precio * 1,1 as Incremento FROM Productos;</strong></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id115">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Asterisco</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta115_121_2" class="block iDevice_content">
+<p><img src="img0.png" alt="Oficinas en ciudades" style="float: right; margin: 15px;" width="415" height="105" /></p>
+<p>A veces es conveniente visualizar el contenido de todas las columnas de una tabla. Esto puede ser particularmente útil cuando uno va a utilizar por primera vez una base de datos y desea obtener una rápida comprensión de su estructura y de los datos que contiene. SQL permite utilizar un asterisco (*) en lugar de la lista de selección como abreviatura de “todas las columnas”:</p>
+<p style="text-align: center;"><strong>SELECT * FROM oficinas</strong></p>
+</div>
+</div>
 </div>
 </div>
 </article>
@@ -93,9 +132,9 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="31_la_clusula_select.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="31_la_clusula_select.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_filas_duplicadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
 Curso 2020 - 2021</footer></div>
-<script type="text/javascript" src="_style_js.js"></script></body></html>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>
