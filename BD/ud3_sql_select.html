@@ -15,7 +15,7 @@
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-	</head>
+    </head>
 <body class="exe-web-site" id="exe-node-44"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
@@ -55,7 +55,12 @@
       <li><a href="practica0.html" class="no-ch">Practica</a></li>
    </ul>
    </li>
-   <li id="active"><a href="ud3_sql_select.html" class="active no-ch">UD3. SQL: SELECT</a></li>
+   <li id="active"><a href="ud3_sql_select.html" class="active daddy">UD3. SQL: SELECT</a>
+   <ul>
+      <li><a href="31_la_clusula_select.html" class="no-ch">3.1. La cláusula SELECT</a></li>
+      <li><a href="32_select_bsico.html" class="no-ch">3.2. SELECT básico</a></li>
+   </ul>
+   </li>
    <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
    <li><a href="bloque_4_lenguaje_script_plsql.html" class="no-ch">Bloque 4. Lenguaje Script PL/SQL</a></li>
    <li><a href="bibliografa0.html" class="no-ch">Bibliografía</a></li>
@@ -63,7 +68,7 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="practica0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="practica0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="31_la_clusula_select.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
@@ -72,43 +77,43 @@
 <article class="iDevice_wrapper textIdevice" id="id93">
 <div class="iDevice emphasis0" >
 <div id="ta93_113_2" class="block iDevice_content">
-<div class="exe-text"><p>¿Para qué utilizamos los comandos SQL? El uso común es la selección de datos desde tablas ubicadas en una base de datos. Inmediatamente, vemos dos palabras claves: necesitamos <a href="#tea8cf6a7-85a5-c5da-f6db-efa3408b8616" id="linkea8cf6a7-85a5-c5da-f6db-efa3408b8616" class="exe-tooltip definition-tt"><strong>SELECT</strong></a> la información <a href="#t00acecce-85cc-91e2-0019-60e0c7cc2742" id="link00acecce-85cc-91e2-0019-60e0c7cc2742" class="exe-tooltip definition-tt"><strong>FROM</strong></a> una tabla. La tabla no es más que el contenedor que reside en la base de datos donde se almacena la información. Por lo tanto tenemos la estructura SQL más básica:</p>
-<p style="text-align: center;"><em><strong>SELECT "nombre_columna" FROM "nombre_tabla";</strong></em></p>
+<div class="exe-text"><p style="text-align: justify;">¿Para qué utilizamos los comandos SQL? El uso común es la selección de datos desde tablas ubicadas en una base de datos para obtener una nueva tabla de datos que será almacenada posteriormente o no.</p>
+<p style="text-align: justify;">Inmediatamente, vemos dos palabras claves: necesitamos seleccionar <strong>(</strong><a href="#tea8cf6a7-85a5-c5da-f6db-efa3408b8616" id="linkea8cf6a7-85a5-c5da-f6db-efa3408b8616" class="exe-tooltip definition-tt"><strong>SELECT</strong></a>) la información desde (<a href="#t00acecce-85cc-91e2-0019-60e0c7cc2742" id="link00acecce-85cc-91e2-0019-60e0c7cc2742" class="exe-tooltip definition-tt"><strong>FROM</strong></a>) una tabla. La tabla no es más que el contenedor que reside en la base de datos donde se almacena la información. Por lo tanto tenemos la estructura SQL más básica:</p>
+<h3 style="text-align: center;"><em><strong>SELECT "nombre_columna" FROM "nombre_tabla";</strong></em></h3>
 <p></p>
 <p>Para ilustrar el ejemplo anterior, suponga que tenemos la siguiente tabla <strong><em>Info_tiendas</em></strong>:</p>
-<table style="margin-left: auto; margin-right: auto; height: 81px;" cellspacing="2" cellpadding="2" border="1">
+<table style="margin-left: auto; margin-right: auto; height: 214px;" width="410" cellspacing="2" cellpadding="2" border="1">
 <tbody>
 <tr class="header" style="height: 21px;">
-<th style="text-align: center; height: 21px; width: 60.0833px;"><strong>Nombre_Tienda</strong></th>
-<th style="text-align: center; height: 21px; width: 53.9833px;"><strong>Ventas</strong></th>
-<th style="text-align: center; height: 21px; width: 72.5333px;"><strong>Fecha</strong></th>
+<th style="text-align: center; height: 21px; width: 191.35px;"><strong>Nombre_Tienda</strong></th>
+<th style="text-align: center; height: 21px; width: 84.3667px;"><strong>Ventas</strong></th>
+<th style="text-align: center; height: 21px; width: 106.283px;"><strong>Fecha</strong></th>
 </tr>
 <tr style="height: 15px;">
-<td style="text-align: center; height: 15px; width: 56.0833px;">Utrera</td>
-<td style="text-align: center; height: 15px; width: 49.9833px;" align="right">1500</td>
-<td style="text-align: center; height: 15px; width: 68.5333px;">05-Ene-1999</td>
+<td style="text-align: center; height: 15px; width: 191.35px;">Utrera</td>
+<td style="text-align: center; height: 15px; width: 84.3667px;" align="right">1500</td>
+<td style="text-align: center; height: 15px; width: 106.283px;">05-Ene-1999</td>
 </tr>
 <tr style="height: 15px;">
-<td style="text-align: center; height: 15px; width: 56.0833px;">Gines</td>
-<td style="text-align: center; height: 15px; width: 49.9833px;" align="right">250</td>
-<td style="text-align: center; height: 15px; width: 68.5333px;">07-Ene-1999</td>
+<td style="text-align: center; height: 15px; width: 191.35px;">Gines</td>
+<td style="text-align: center; height: 15px; width: 84.3667px;" align="right">250</td>
+<td style="text-align: center; height: 15px; width: 106.283px;">07-Ene-1999</td>
 </tr>
 <tr style="height: 15px;">
-<td style="text-align: center; height: 15px; width: 56.0833px;">Aznalcázar</td>
-<td style="text-align: center; height: 15px; width: 49.9833px;" align="right">300</td>
-<td style="text-align: center; height: 15px; width: 68.5333px;">08-Ene-1999</td>
+<td style="text-align: center; height: 15px; width: 191.35px;">Aznalcázar</td>
+<td style="text-align: center; height: 15px; width: 84.3667px;" align="right">300</td>
+<td style="text-align: center; height: 15px; width: 106.283px;">08-Ene-1999</td>
 </tr>
 <tr style="height: 15px;">
-<td style="text-align: center; height: 15px; width: 56.0833px;">Bormujos</td>
-<td style="text-align: center; height: 15px; width: 49.9833px;" align="right">700</td>
-<td style="text-align: center; height: 15px; width: 68.5333px;">08-Ene-1999</td>
+<td style="text-align: center; height: 15px; width: 191.35px;">Bormujos</td>
+<td style="text-align: center; height: 15px; width: 84.3667px;" align="right">700</td>
+<td style="text-align: center; height: 15px; width: 106.283px;">08-Ene-1999</td>
 </tr>
 </tbody>
 </table>
 <pre style="text-align: center;">Tabla <em>Info_tiendas</em></pre>
-<p style="text-align: justify;"></p>
 <p>Para seleccionar todos los negocios en esta tabla, ingresamos,</p>
-<p style="text-align: center;"><strong>SELECT</strong> <em>Nombre_Tienda</em> <strong>FROM</strong> <em>Info_tiendas</em>;</p>
+<h3 style="text-align: center;"><strong>SELECT</strong> <em>Nombre_Tienda</em> <strong>FROM</strong> <em>Info_tiendas</em>;</h3>
 <p>Resultado:</p>
 <table style="margin-left: auto; margin-right: auto; width: 60px;" cellspacing="2" cellpadding="2" border="1">
 <tbody>
@@ -129,50 +134,13 @@
 </tr>
 </tbody>
 </table>
-<p>Pueden seleccionarse los nombres de columnas múltiples, así como también los nombres de tablas múltiples.</p>
+<p>Como veremos posteriormente, pueden seleccionarse los nombres de columnas múltiples separadas por comas; así como también los nombres de tablas múltiples, también separadas por comas, tras la cláusula FROM.</p>
 <div id="tea8cf6a7-85a5-c5da-f6db-efa3408b8616" class="exe-tooltip-text">
 <p>Del inglés, SELECCIONA. Permite obtener de la base de datos lo indicado a continuación.</p>
 </div>
 <div id="t00acecce-85cc-91e2-0019-60e0c7cc2742" class="exe-tooltip-text">
 <p>Del inglés, DESDE. Indica de dónde obtener los datos indicados en el SELECT. Puede ser de una tabla, varias e incluso otro SELECT.</p>
 </div></div>
-</div>
-</div>
-</article>
-<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id94">
-<div class="iDevice emphasis1" >
-<header class="iDevice_header"><h1 class="iDeviceTitle">Cláusula SELECT</h1></header>
-<div class="iDevice_inner">
-<div class="iDevice_content_wrapper">
-<div id="ta94_114_2" class="block iDevice_content">
-<p><img src="select.png" title="Cláusula SELECT" style="float: right; margin: 10px;" width="451" height="543" /><strong>SELECT</strong>: (selecciona)</p>
-<ul>
-<li><strong>ALL, </strong>permite escoger todos los registros (esto es por defecto, así que no se suele usar).</li>
-<li><strong>DISTINCT</strong>, mostrará los registros sin duplicarlos.</li>
-<li><strong>item_seleccionado,</strong> columnas que se desean mostrar en la consulta separadas por coma (,) y en ocasiones acompañadas por funciones. Si se escribe * se mostrarán todas las columnas. Si existen columnas con el mismo nombre en tablas diferentes, se especificará la tabla seguida de un punto (.) y el nombre de la columna. Por ejemplo: <em>clientes.nombre, proveedores.nombre, productos.nombre, ...</em></li>
-</ul>
-<p><strong>FROM:</strong> ([extraídas] desde...)</p>
-<ul>
-<li><strong>tablas,</strong> se enumerarán, separadas por coma, las tablas que almacenan la información que deseamos sacar, las relacionadas y las intermedias si fuera necesario. Se puede declarar un alias por cada tabla: con <em>poblaciones p</em>  por ejemplo, se consigue usar <em>p </em>en el resto de elementos vez de <em>poblaciones</em>.</li>
-</ul>
-<p><strong>WHERE:</strong> (donde se cumpla...)</p>
-<ul>
-<li><strong>condición de búsqueda</strong>, se especifican condiciones que se deben cumplir mediante operadores unarios (NOT) o binarios (=, &lt;, &gt;, &lt;&gt;, AND, OR, ...). Si la condición es cierta, la fila se incluye; en caso contrario, no.</li>
-</ul>
-<p><strong>GROUP BY:</strong> (agrupado por...)</p>
-<ul>
-<li><strong>columnas</strong>, por las que se agrupará para crear subtotales en consultas con resultados numéricos.</li>
-</ul>
-<p><strong>HAVING: </strong>(teniendo...)</p>
-<ul>
-<li><strong>condición</strong>, se aplica una condición de selección en la que, de todos los resultados obtenidos, sólo muestra los que validen dicha condición.</li>
-</ul>
-<p><strong>ORDER BY:</strong> (ordenado por...)</p>
-<ul>
-<li><strong>ordenación</strong>, se listan las columnas por las que se ordenará el resultado de mayor a menor prioridad.</li>
-</ul>
-</div>
-</div>
 </div>
 </div>
 </article>
@@ -183,9 +151,9 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="practica0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="practica0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="31_la_clusula_select.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
 Curso 2020 - 2021</footer></div>
-<script type="text/javascript" src="pdv_js.js"></script></body></html>
+<script type="text/javascript" src="_style_js.js"></script></body></html>
