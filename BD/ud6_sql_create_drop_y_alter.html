@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>3.9. Consultas sumarias | Modelo Entidad - Relación </title>
+<title>UD6. SQL: CREATE, DROP Y ALTER | Modelo Entidad - Relación </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -16,7 +16,7 @@
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-59"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-65"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
@@ -55,8 +55,8 @@
       <li><a href="practica0.html" class="no-ch">Practica</a></li>
    </ul>
    </li>
-   <li class="current-page-parent"><a href="ud3_sql_select.html" class="current-page-parent daddy">UD3. SQL: SELECT</a>
-   <ul>
+   <li><a href="ud3_sql_select.html" class="daddy">UD3. SQL: SELECT</a>
+   <ul class="other-section">
       <li><a href="31_la_clusula_select.html" class="no-ch">3.1. La cláusula SELECT</a></li>
       <li><a href="32_select_bsico.html" class="no-ch">3.2. SELECT básico</a></li>
       <li><a href="33_filas_duplicadas.html" class="no-ch">3.3. Filas duplicadas</a></li>
@@ -65,14 +65,14 @@
       <li><a href="36_ordenacin.html" class="no-ch">3.6. Ordenación</a></li>
       <li><a href="37_unin.html" class="no-ch">3.7. Unión</a></li>
       <li><a href="38_multitabla.html" class="no-ch">3.8. Multitabla</a></li>
-      <li id="active"><a href="39_consultas_sumarias.html" class="active no-ch">3.9. Consultas sumarias</a></li>
+      <li><a href="39_consultas_sumarias.html" class="no-ch">3.9. Consultas sumarias</a></li>
       <li><a href="autoevaluacin1.html" class="no-ch">Autoevaluación</a></li>
       <li><a href="practica1.html" class="no-ch">Practica</a></li>
    </ul>
    </li>
    <li><a href="ud4_sql_insert_y_delete.html" class="no-ch">UD4. SQL: INSERT y DELETE</a></li>
    <li><a href="ud5_sql_update.html" class="no-ch">UD5. SQL: UPDATE</a></li>
-   <li><a href="ud6_sql_create_drop_y_alter.html" class="no-ch">UD6. SQL: CREATE, DROP Y ALTER</a></li>
+   <li id="active"><a href="ud6_sql_create_drop_y_alter.html" class="active no-ch">UD6. SQL: CREATE, DROP Y ALTER</a></li>
    <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
    <li><a href="bloque_4_lenguaje_script_plsql.html" class="no-ch">Bloque 4. Lenguaje Script PL/SQL</a></li>
    <li><a href="bibliografa0.html" class="no-ch">Bibliografía</a></li>
@@ -80,38 +80,12 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="38_multitabla.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="ud5_sql_update.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">3.9. Consultas sumarias</h1></header>
-<article class="iDevice_wrapper textIdevice" id="id129">
-<div class="iDevice emphasis0" >
-<div id="ta129_135_2" class="block iDevice_content">
-<div class="exe-text"><p>Muchas peticiones de información no requieren el nivel de detalle proporcionado por las consultas SQL. Por ejemplo, podemos solicitar de la base de datos:</p>
-<ul>
-<li>¿Cuál es la cuota total para todos los vendedores?.</li>
-<li>¿Cuáles son las cuotas mínima y máxima?.</li>
-<li>¿Cuántos vendedores han superado su cuota?.</li>
-<li>¿Cuál es el tamaño del pedido medio para cada oficina?.</li>
-</ul>
-<p>SQL soporta estas peticiones mediante un conjunto de funciones de columna. Una función de columna SQL acepta una columna entera de datos como argumento y produce un único dato que sumariza la columna. SQL ofrece seis funciones de columna diferentes:</p>
-<ul style="list-style-type: circle;">
-<li>SUM() calcula el total de una columna.</li>
-<li>AVG() calcula el valor promedio de una columna.</li>
-<li>MIN() encuentra el valor más pequeño en una columna.</li>
-<li>MAX() encuentra el valor mayor en una columna.</li>
-<li>COUNT() cuenta el número de valores en una columna.</li>
-<li>COUNT(*) cuenta las filas de resultados de la consulta.</li>
-</ul>
-<p>Ejemplo:</p>
-<p style="text-align: center;"><span style="font-family: andale mono, monospace;"><em>SELECT SUM(Cargo) FROM Pedidos;</em></span></p>
-<p style="text-align: center;"><span style="font-family: andale mono, monospace;"><em>SELECT SUM(UnidadesEnExistencia) FROM Productos;</em></span></p>
-<p></p></div>
-</div>
-</div>
-</article>
+<header id="nodeDecoration"><h1 id="nodeTitle">UD6. SQL: CREATE, DROP Y ALTER</h1></header>
 <div id="packageLicense" class="cc cc-by-sa">
 <p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
 </div>
@@ -119,7 +93,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="38_multitabla.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="ud5_sql_update.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.

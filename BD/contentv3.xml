@@ -89,7 +89,7 @@ BD - 1º CFGS Diseño de Aplicaciones Multimedia."></unicode>
   <string role="key" value="_nextIdeviceId"></string>
   <int value="130"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="60"></int>
+  <int value="66"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -18444,6 +18444,84 @@ for the other options."></unicode>
         </list>
        </dictionary>
       </instance>
+      <instance class="exe.engine.node.Node" reference="364">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="UD4. SQL: INSERT y DELETE"></unicode>
+        <string role="key" value="idevices"></string>
+        <list></list>
+        <string role="key" value="_id"></string>
+        <unicode value="63"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:Modelo%20Entidad%20Relaci%C3%B3n:UD4.%20SQL%3A%20INSERT%20y%20DELETE"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="365">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="UD5. SQL: UPDATE"></unicode>
+        <string role="key" value="idevices"></string>
+        <list></list>
+        <string role="key" value="_id"></string>
+        <unicode value="64"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:Modelo%20Entidad%20Relaci%C3%B3n:UD5.%20SQL%3A%20UPDATE"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="366">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="UD6. SQL: CREATE, DROP Y ALTER"></unicode>
+        <string role="key" value="idevices"></string>
+        <list></list>
+        <string role="key" value="_id"></string>
+        <unicode value="65"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:Modelo%20Entidad%20Relaci%C3%B3n:UD6.%20SQL%3A%20CREATE%2C%20DROP%20Y%20ALTER"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
       <instance class="exe.engine.node.Node" reference="362">
        <dictionary>
         <string role="key" value="_title"></string>
@@ -18589,7 +18667,7 @@ learning tasks."></unicode>
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="364">
+      <instance class="exe.engine.node.Node" reference="367">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="Bibliografía"></unicode>
@@ -18692,8 +18770,14 @@ learning tasks."></unicode>
    <reference key="277"></reference>
    <unicode role="key" value="59"></unicode>
    <reference key="282"></reference>
-   <unicode role="key" value="7"></unicode>
+   <unicode role="key" value="63"></unicode>
    <reference key="364"></reference>
+   <unicode role="key" value="64"></unicode>
+   <reference key="365"></reference>
+   <unicode role="key" value="65"></unicode>
+   <reference key="366"></reference>
+   <unicode role="key" value="7"></unicode>
+   <reference key="367"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -18706,7 +18790,7 @@ learning tasks."></unicode>
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="282"></reference>
+  <reference key="366"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
