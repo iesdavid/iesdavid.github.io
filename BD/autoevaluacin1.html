@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Autoevaluación | Modelo Entidad - Relación </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-57"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Modelo Entidad Relación</a></li>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
+      <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
+      <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
+      <li><a href="elementos_necesarios.html" class="no-ch">Elementos necesarios</a></li>
+      <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   </ul>
+   </li>
+   <li><a href="ud_1_introduccin_a_las_bbdd_relacionales.html" class="daddy">UD 1. Introducción a las BBDD relacionales</a>
+   <ul class="other-section">
+      <li><a href="11_aplicaciones_de_los_sgbd.html" class="no-ch">1.1. Aplicaciones de los SGBD</a></li>
+      <li><a href="12_los_datos.html" class="no-ch">1.2. Los datos</a></li>
+      <li><a href="13_modelos_de_datos.html" class="no-ch">1.3. Modelos de datos</a></li>
+      <li><a href="14_lenguajes_de_bases_de_datos.html" class="no-ch">1.4. Lenguajes de bases de datos</a></li>
+      <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud2_bases_de_datos_relacionales.html" class="daddy">UD2. Bases de Datos Relacionales</a>
+   <ul class="other-section">
+      <li><a href="21_conceptos_bsicos.html" class="no-ch">2.1. Conceptos básicos</a></li>
+      <li><a href="22_dominios.html" class="no-ch">2.2. Dominios</a></li>
+      <li><a href="23_claves.html" class="no-ch">2.3. Claves</a></li>
+      <li><a href="24_el_lenguaje_de_consultas_sql.html" class="no-ch">2.4. El lenguaje de consultas: SQL</a></li>
+      <li><a href="25_componentes_del_sql.html" class="no-ch">2.5. Componentes del SQL</a></li>
+      <li><a href="26_tipos_de_datos.html" class="no-ch">2.6. Tipos de datos</a></li>
+      <li><a href="27_constantes_y_nulos.html" class="no-ch">2.7. Constantes y Nulos</a></li>
+      <li><a href="autoevaluacin0.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica0.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="ud3_sql_select.html" class="current-page-parent daddy">UD3. SQL: SELECT</a>
+   <ul>
+      <li><a href="31_la_clusula_select.html" class="no-ch">3.1. La cláusula SELECT</a></li>
+      <li><a href="32_select_bsico.html" class="no-ch">3.2. SELECT básico</a></li>
+      <li><a href="33_filas_duplicadas.html" class="no-ch">3.3. Filas duplicadas</a></li>
+      <li><a href="34_condiciones.html" class="no-ch">3.4. Condiciones</a></li>
+      <li><a href="35_condiciones_compuestas.html" class="no-ch">3.5. Condiciones compuestas</a></li>
+      <li><a href="36_ordenacin.html" class="no-ch">3.6. Ordenación</a></li>
+      <li><a href="37_unin.html" class="no-ch">3.7. Unión</a></li>
+      <li id="active"><a href="autoevaluacin1.html" class="active no-ch">Autoevaluación</a></li>
+      <li><a href="practica1.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
+   <li><a href="bloque_4_lenguaje_script_plsql.html" class="no-ch">Bloque 4. Lenguaje Script PL/SQL</a></li>
+   <li><a href="bibliografa0.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="37_unin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="practica1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Autoevaluación</h1></header>
+<article class="iDevice_wrapper MultichoiceIdevice em_iDevice" id="id125">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Pregunta de Elección Múltiple</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-125_86" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion125_86" class="block question iDevice_content">
+<p>¿Cuál es la estructura básica de una sentencia SELECT?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_89" class="sr-av"><a href="#answer-125_89">Opción 1</a></label><input type="radio" name="option125_86" id="i125_89" class="exe-radio-option exe-radio-option-0-3-125_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_89"><div id="taans125_89" class="block iDevice_content">
+<p>SELECT - FROM - WHERE</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34879" class="sr-av"><a href="#answer-125_34879">Opción 2</a></label><input type="radio" name="option125_86" id="i125_34879" class="exe-radio-option exe-radio-option-1-3-125_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34879"><div id="taans125_34879" class="block iDevice_content">
+<p>SELECT - FROM</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34882" class="sr-av"><a href="#answer-125_34882">Opción 3</a></label><input type="radio" name="option125_86" id="i125_34882" class="exe-radio-option exe-radio-option-2-3-125_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34882"><div id="taans125_34882" class="block iDevice_content">
+<p>SELECT - WHERE</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b125_86" class="feedback js-hidden">
+<div id="taf125_89" class=" iDevice_content">
+<p>Repasa el punto 3.1</p>
+</div>
+</section>
+<section id="sa1b125_86" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+<section id="sa2b125_86" class="feedback js-hidden">
+<div id="taf125_34882" class=" iDevice_content">
+<p>Repasa el punto 3.1</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-125_89">Incorrecto</a><span> (<a href="#sa0b125_86">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34879">Opción correcta</a><span> (<a href="#sa1b125_86">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34882">Incorrecto</a><span> (<a href="#sa2b125_86">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-125_34885" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion125_34885" class="block question iDevice_content">
+<p>¿Es correcta esta sentencia?</p>
+<p>SELECT nombre, * FROM Clientes ORDER BY nombre ASC;</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34888" class="sr-av"><a href="#answer-125_34888">Opción 1</a></label><input type="radio" name="option125_34885" id="i125_34888" class="exe-radio-option exe-radio-option-0-3-125_34885-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34888"><div id="taans125_34888" class="block iDevice_content">
+<p>Sí, es correcta.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34891" class="sr-av"><a href="#answer-125_34891">Opción 2</a></label><input type="radio" name="option125_34885" id="i125_34891" class="exe-radio-option exe-radio-option-1-3-125_34885-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34891"><div id="taans125_34891" class="block iDevice_content">
+<p>No, el asterisco debe ir solo.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34894" class="sr-av"><a href="#answer-125_34894">Opción 3</a></label><input type="radio" name="option125_34885" id="i125_34894" class="exe-radio-option exe-radio-option-2-3-125_34885-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34894"><div id="taans125_34894" class="block iDevice_content">
+<p>No, falta la cláusula WHERE</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b125_34885" class="feedback js-hidden">
+<div id="taf125_34888" class=" iDevice_content">
+<p>Pero extraña, porque en los resultados repite una columna: nombre.</p>
+</div>
+</section>
+<section id="sa1b125_34885" class="feedback js-hidden">
+<div id="taf125_34891" class=" iDevice_content">
+<p>Puede ir acompañado porque añade todas las columnas de una tabla. En este caso, muestra todas más nombre de nuevo.</p>
+</div>
+</section>
+<section id="sa2b125_34885" class="feedback js-hidden">
+<div id="taf125_34894" class=" iDevice_content">
+<p>La cláusula WHERE no es obligatoria si no es necesario condicionar los resultados.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-125_34888">Opción correcta</a><span> (<a href="#sa0b125_34885">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34891">Incorrecto</a><span> (<a href="#sa1b125_34885">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34894">Incorrecto</a><span> (<a href="#sa2b125_34885">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-125_34897" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion125_34897" class="block question iDevice_content">
+<p>¿Qué hace HAVING?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34900" class="sr-av"><a href="#answer-125_34900">Opción 1</a></label><input type="radio" name="option125_34897" id="i125_34900" class="exe-radio-option exe-radio-option-0-3-125_34897-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34900"><div id="taans125_34900" class="block iDevice_content">
+<p>Especifica condiciones que se deben cumplir mediante operadores unarios.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34903" class="sr-av"><a href="#answer-125_34903">Opción 2</a></label><input type="radio" name="option125_34897" id="i125_34903" class="exe-radio-option exe-radio-option-1-3-125_34897-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34903"><div id="taans125_34903" class="block iDevice_content">
+<p>Aplica una condición de selección sobre todos los resultados obtenidos.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34906" class="sr-av"><a href="#answer-125_34906">Opción 3</a></label><input type="radio" name="option125_34897" id="i125_34906" class="exe-radio-option exe-radio-option-2-3-125_34897-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34906"><div id="taans125_34906" class="block iDevice_content">
+<p>Agrupa para crear subtotales en consultas con resultados numéricos.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b125_34897" class="feedback js-hidden">
+<div id="taf125_34900" class=" iDevice_content">
+<p>Repasa el punto 3.1.</p>
+</div>
+</section>
+<section id="sa1b125_34897" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+<section id="sa2b125_34897" class="feedback js-hidden">
+<div id="taf125_34906" class=" iDevice_content">
+<p>Repasa el punto 3.1.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-125_34900">Incorrecto</a><span> (<a href="#sa0b125_34897">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34903">Opción correcta</a><span> (<a href="#sa1b125_34897">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34906">Incorrecto</a><span> (<a href="#sa2b125_34897">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-125_34909" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion125_34909" class="block question iDevice_content">
+<p>¿Qué columnas muestra la siguiente sentencia?</p>
+<p>SELECT nombre as nom, apellidos as ape, ciudad FROM clientes;</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34912" class="sr-av"><a href="#answer-125_34912">Opción 1</a></label><input type="radio" name="option125_34909" id="i125_34912" class="exe-radio-option exe-radio-option-0-3-125_34909-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34912"><div id="taans125_34912" class="block iDevice_content">
+<p>nom, ape, ciudad</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34915" class="sr-av"><a href="#answer-125_34915">Opción 2</a></label><input type="radio" name="option125_34909" id="i125_34915" class="exe-radio-option exe-radio-option-1-3-125_34909-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34915"><div id="taans125_34915" class="block iDevice_content">
+<p>nombre, apellidos, ciudad</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34918" class="sr-av"><a href="#answer-125_34918">Opción 3</a></label><input type="radio" name="option125_34909" id="i125_34918" class="exe-radio-option exe-radio-option-2-3-125_34909-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34918"><div id="taans125_34918" class="block iDevice_content">
+<p>nom, ape, ciu</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b125_34909" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+<section id="sa1b125_34909" class="feedback js-hidden">
+<div id="taf125_34915" class=" iDevice_content">
+<p>Repasa el punto 3.2.</p>
+</div>
+</section>
+<section id="sa2b125_34909" class="feedback js-hidden">
+<div id="taf125_34918" class=" iDevice_content">
+<p>Repasa el punto 3.2.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-125_34912">Opción correcta</a><span> (<a href="#sa0b125_34909">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34915">Incorrecto</a><span> (<a href="#sa1b125_34909">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34918">Incorrecto</a><span> (<a href="#sa2b125_34909">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-125_34921" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion125_34921" class="block question iDevice_content">
+<p>¿Qué cláusula elimina los duplicados?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34924" class="sr-av"><a href="#answer-125_34924">Opción 1</a></label><input type="radio" name="option125_34921" id="i125_34924" class="exe-radio-option exe-radio-option-0-3-125_34921-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34924"><div id="taans125_34924" class="block iDevice_content">
+<p>WHERE</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34927" class="sr-av"><a href="#answer-125_34927">Opción 2</a></label><input type="radio" name="option125_34921" id="i125_34927" class="exe-radio-option exe-radio-option-1-3-125_34921-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34927"><div id="taans125_34927" class="block iDevice_content">
+<p>DISTINCT</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34930" class="sr-av"><a href="#answer-125_34930">Opción 3</a></label><input type="radio" name="option125_34921" id="i125_34930" class="exe-radio-option exe-radio-option-2-3-125_34921-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34930"><div id="taans125_34930" class="block iDevice_content">
+<p>ALL</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b125_34921" class="feedback js-hidden">
+<div id="taf125_34924" class=" iDevice_content">
+<p>Repasa el punto 3.3.</p>
+</div>
+</section>
+<section id="sa1b125_34921" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+<section id="sa2b125_34921" class="feedback js-hidden">
+<div id="taf125_34930" class=" iDevice_content">
+<p>Repasa el punto 3.3.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-125_34924">Incorrecto</a><span> (<a href="#sa0b125_34921">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34927">Opción correcta</a><span> (<a href="#sa1b125_34921">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34930">Incorrecto</a><span> (<a href="#sa2b125_34921">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-125_34933" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion125_34933" class="block question iDevice_content">
+<p>¿Cuál de estas sentencias devuelve valores?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34936" class="sr-av"><a href="#answer-125_34936">Opción 1</a></label><input type="radio" name="option125_34933" id="i125_34936" class="exe-radio-option exe-radio-option-0-3-125_34933-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34936"><div id="taans125_34936" class="block iDevice_content">
+<p>SELECT nombre FROM clientes WHERE DNI IS NOT NULL;</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34939" class="sr-av"><a href="#answer-125_34939">Opción 2</a></label><input type="radio" name="option125_34933" id="i125_34939" class="exe-radio-option exe-radio-option-1-3-125_34933-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34939"><div id="taans125_34939" class="block iDevice_content">
+<p>SELECT nombre FROM clientes WHERE DNI IS NULL;</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34942" class="sr-av"><a href="#answer-125_34942">Opción 3</a></label><input type="radio" name="option125_34933" id="i125_34942" class="exe-radio-option exe-radio-option-2-3-125_34933-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34942"><div id="taans125_34942" class="block iDevice_content">
+<p>SELECT nombre FROM clientes WHERE DNI LIKE "Manuel%";</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b125_34933" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+<section id="sa1b125_34933" class="feedback js-hidden">
+<div id="taf125_34939" class=" iDevice_content">
+<p>Repasa el punto 3.4.</p>
+</div>
+</section>
+<section id="sa2b125_34933" class="feedback js-hidden">
+<div id="taf125_34942" class=" iDevice_content">
+<p>Repasa el punto 3.4.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-125_34936">Opción correcta</a><span> (<a href="#sa0b125_34933">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34939">Incorrecto</a><span> (<a href="#sa1b125_34933">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34942">Incorrecto</a><span> (<a href="#sa2b125_34933">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-125_34945" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion125_34945" class="block question iDevice_content">
+<p>¿Cuál de estas sentencias devuelve valores?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34948" class="sr-av"><a href="#answer-125_34948">Opción 1</a></label><input type="radio" name="option125_34945" id="i125_34948" class="exe-radio-option exe-radio-option-0-3-125_34945-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34948"><div id="taans125_34948" class="block iDevice_content">
+<p>SELECT nombre FROM clientes WHERE edad IN (-3, 0, 250);</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34951" class="sr-av"><a href="#answer-125_34951">Opción 2</a></label><input type="radio" name="option125_34945" id="i125_34951" class="exe-radio-option exe-radio-option-1-3-125_34945-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34951"><div id="taans125_34951" class="block iDevice_content">
+<p>SELECT nombre FROM clientes WHERE edad BETWEEN 18 AND 20;</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34954" class="sr-av"><a href="#answer-125_34954">Opción 3</a></label><input type="radio" name="option125_34945" id="i125_34954" class="exe-radio-option exe-radio-option-2-3-125_34945-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34954"><div id="taans125_34954" class="block iDevice_content">
+<p>SELECT nombre FROM clientes WHERE edad &lt; 18 AND edad &gt; 45;</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b125_34945" class="feedback js-hidden">
+<div id="taf125_34948" class=" iDevice_content">
+<p>Repasa el punto 3.5.</p>
+</div>
+</section>
+<section id="sa1b125_34945" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+<section id="sa2b125_34945" class="feedback js-hidden">
+<div id="taf125_34954" class=" iDevice_content">
+<p>Repasa el punto 3.5.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-125_34948">Incorrecto</a><span> (<a href="#sa0b125_34945">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34951">Opción correcta</a><span> (<a href="#sa1b125_34945">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34954">Incorrecto</a><span> (<a href="#sa2b125_34945">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-125_34957" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion125_34957" class="block question iDevice_content">
+<p>Elige la sentencia SELECT que ordena por apellidos y nombre de forma ascendente.</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34960" class="sr-av"><a href="#answer-125_34960">Opción 1</a></label><input type="radio" name="option125_34957" id="i125_34960" class="exe-radio-option exe-radio-option-0-3-125_34957-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34960"><div id="taans125_34960" class="block iDevice_content">
+<p>SELECT nombre, apellidos FROM clientes ORDER BY nombre, apellidos ASC;</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34963" class="sr-av"><a href="#answer-125_34963">Opción 2</a></label><input type="radio" name="option125_34957" id="i125_34963" class="exe-radio-option exe-radio-option-1-3-125_34957-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34963"><div id="taans125_34963" class="block iDevice_content">
+<p>SELECT nombre, apellidos FROM clientes ORDER BY apellidos ASC, nombre DESC;</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i125_34966" class="sr-av"><a href="#answer-125_34966">Opción 3</a></label><input type="radio" name="option125_34957" id="i125_34966" class="exe-radio-option exe-radio-option-2-3-125_34957-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-125_34966"><div id="taans125_34966" class="block iDevice_content">
+<p>SELECT nombre, apellidos FROM clientes ORDER BY apellidos, nombre;</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b125_34957" class="feedback js-hidden">
+<div id="taf125_34960" class=" iDevice_content">
+<p>Repasa el punto 3.6.</p>
+</div>
+</section>
+<section id="sa1b125_34957" class="feedback js-hidden">
+<div id="taf125_34963" class=" iDevice_content">
+<p>Repasa el punto 3.6.</p>
+</div>
+</section>
+<section id="sa2b125_34957" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-125_34960">Incorrecto</a><span> (<a href="#sa0b125_34957">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34963">Incorrecto</a><span> (<a href="#sa1b125_34957">Retroalimentación</a>)</span></li>
+<li><a href="#answer-125_34966">Opción correcta</a><span> (<a href="#sa2b125_34957">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="37_unin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="practica1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
+Curso 2020 - 2021</footer></div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

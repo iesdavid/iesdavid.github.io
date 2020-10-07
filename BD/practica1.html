@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>UD 1. Introducción a las BBDD relacionales | Modelo Entidad - Relación </title>
+<title>Practica | Modelo Entidad - Relación </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -16,7 +16,7 @@
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-30"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-56"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
@@ -32,8 +32,8 @@
       <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
    </ul>
    </li>
-   <li id="active"><a href="ud_1_introduccin_a_las_bbdd_relacionales.html" class="active daddy">UD 1. Introducción a las BBDD relacionales</a>
-   <ul>
+   <li><a href="ud_1_introduccin_a_las_bbdd_relacionales.html" class="daddy">UD 1. Introducción a las BBDD relacionales</a>
+   <ul class="other-section">
       <li><a href="11_aplicaciones_de_los_sgbd.html" class="no-ch">1.1. Aplicaciones de los SGBD</a></li>
       <li><a href="12_los_datos.html" class="no-ch">1.2. Los datos</a></li>
       <li><a href="13_modelos_de_datos.html" class="no-ch">1.3. Modelos de datos</a></li>
@@ -55,8 +55,8 @@
       <li><a href="practica0.html" class="no-ch">Practica</a></li>
    </ul>
    </li>
-   <li><a href="ud3_sql_select.html" class="daddy">UD3. SQL: SELECT</a>
-   <ul class="other-section">
+   <li class="current-page-parent"><a href="ud3_sql_select.html" class="current-page-parent daddy">UD3. SQL: SELECT</a>
+   <ul>
       <li><a href="31_la_clusula_select.html" class="no-ch">3.1. La cláusula SELECT</a></li>
       <li><a href="32_select_bsico.html" class="no-ch">3.2. SELECT básico</a></li>
       <li><a href="33_filas_duplicadas.html" class="no-ch">3.3. Filas duplicadas</a></li>
@@ -65,7 +65,7 @@
       <li><a href="36_ordenacin.html" class="no-ch">3.6. Ordenación</a></li>
       <li><a href="37_unin.html" class="no-ch">3.7. Unión</a></li>
       <li><a href="autoevaluacin1.html" class="no-ch">Autoevaluación</a></li>
-      <li><a href="practica1.html" class="no-ch">Practica</a></li>
+      <li id="active"><a href="practica1.html" class="active no-ch">Practica</a></li>
    </ul>
    </li>
    <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
@@ -75,43 +75,16 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="bibliografa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_aplicaciones_de_los_sgbd.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="autoevaluacin1.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">UD 1. Introducción a las BBDD relacionales</h1></header>
-<article class="iDevice_wrapper textIdevice" id="id57">
+<header id="nodeDecoration"><h1 id="nodeTitle">Practica</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id126">
 <div class="iDevice emphasis0" >
-<div id="ta57_110_2" class="block iDevice_content">
-<div class="exe-text"><p style="text-align: justify;"><img src="portada.jpg" style="float: right; margin: 10px;" width="320" height="213" /></p>
-<p style="text-align: justify;">Un <strong>sistema gestor de bases de datos (SGBD)</strong> consiste en una colección de datos interrelacionados y un conjunto de programas para acceder a dichos datos. La colección de datos, normalmente denominada <strong>base de datos</strong>, contiene información relevante para una empresa. El objetivo principal de un SGBD es proporcionar una forma de almacenar y recuperar la información de una base de datos de manera que sea tanto práctica como eficiente.</p>
-<p style="text-align: justify;">Los sistemas de bases de datos se diseñan para gestionar grandes cantidades de información. La gestión de los datos implica tanto la definición de estructuras para almacenar la información como la provisión de mecanismos para la manipulación de la información. Además, los sistemas de bases de datos deben garantizar la fiabilidad de la información almacenada, a pesar de las caídas del sistema o de los intentos de acceso no autorizados. Si los datos van a ser compartidos entre diferentes usuarios, el sistema debe evitar posibles resultados anómalos.</p></div>
-</div>
-</div>
-</article>
-<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id59">
-<div class="iDevice emphasis1" >
-<header class="iDevice_header"><h1 class="iDeviceTitle">Recuerda</h1></header>
-<div class="iDevice_inner">
-<div class="iDevice_content_wrapper">
-<div id="ta59_111_2" class="block iDevice_content">
-<p><span style="font-size: 12pt;">Las bases de datos almacenan grandes cantidades de información. Tanto la recuperación de esa información como su actualización deben ser rápidas y eficientes. Para ello, la definición de la <strong>estructura de datos</strong> es crucial debido a que será el soporte lógico y físico sobre el que se trabajará.</span></p>
-</div>
-</div>
-</div>
-</div>
-</article>
-<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id77">
-<div class="iDevice emphasis1" >
-<header class="iDevice_header"><h1 class="iDeviceTitle">Resultados de Aprendizaje</h1></header>
-<div class="iDevice_inner">
-<div class="iDevice_content_wrapper">
-<div id="ta77_129_2" class="block iDevice_content">
-<p>Este bloque contribuye al Resultado de Aprendizaje 1. <em>"Reconoce los elementos de las bases de datos analizando sus funciones y valorando la utilidad de sistemas gestores"</em>.</p>
-<p>Tiempo recomendado: 1 hora.</p>
-</div>
-</div>
+<div id="ta126_132_2" class="block iDevice_content">
+<div class="exe-text"><h3>Realiza los ejercicios propuestos en la plataforma bajo la Unidad 3.</h3></div>
 </div>
 </div>
 </article>
@@ -122,7 +95,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="bibliografa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_aplicaciones_de_los_sgbd.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="autoevaluacin1.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
