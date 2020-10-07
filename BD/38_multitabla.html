@@ -2,34 +2,32 @@
 <html lang="es">
 <head>
 <link rel="stylesheet" type="text/css" href="base.css" />
-<link rel="stylesheet" type="text/css" href="exe_effects.css" />
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>Orientaciones Pedagógicas | Modelo Entidad - Relación </title>
+<title>3.8. Multitabla | Modelo Entidad - Relación </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
 <meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
-<script type="text/javascript" src="exe_effects.js"></script>
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-58"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
 <nav id="siteNav">
 <ul>
    <li><a href="index.html" class="daddy main-node">Modelo Entidad Relación</a></li>
-   <li class="current-page-parent"><a href="normativa.html" class="current-page-parent daddy">Normativa</a>
-   <ul>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
       <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
       <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
-      <li id="active"><a href="orientaciones_pedaggicas.html" class="active no-ch">Orientaciones Pedagógicas</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
       <li><a href="elementos_necesarios.html" class="no-ch">Elementos necesarios</a></li>
       <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
    </ul>
@@ -57,8 +55,8 @@
       <li><a href="practica0.html" class="no-ch">Practica</a></li>
    </ul>
    </li>
-   <li><a href="ud3_sql_select.html" class="daddy">UD3. SQL: SELECT</a>
-   <ul class="other-section">
+   <li class="current-page-parent"><a href="ud3_sql_select.html" class="current-page-parent daddy">UD3. SQL: SELECT</a>
+   <ul>
       <li><a href="31_la_clusula_select.html" class="no-ch">3.1. La cláusula SELECT</a></li>
       <li><a href="32_select_bsico.html" class="no-ch">3.2. SELECT básico</a></li>
       <li><a href="33_filas_duplicadas.html" class="no-ch">3.3. Filas duplicadas</a></li>
@@ -66,7 +64,7 @@
       <li><a href="35_condiciones_compuestas.html" class="no-ch">3.5. Condiciones compuestas</a></li>
       <li><a href="36_ordenacin.html" class="no-ch">3.6. Ordenación</a></li>
       <li><a href="37_unin.html" class="no-ch">3.7. Unión</a></li>
-      <li><a href="38_multitabla.html" class="no-ch">3.8. Multitabla</a></li>
+      <li id="active"><a href="38_multitabla.html" class="active no-ch">3.8. Multitabla</a></li>
       <li><a href="39_consultas_sumarias.html" class="no-ch">3.9. Consultas sumarias</a></li>
       <li><a href="autoevaluacin1.html" class="no-ch">Autoevaluación</a></li>
       <li><a href="practica1.html" class="no-ch">Practica</a></li>
@@ -79,51 +77,42 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="contenidos_bsicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="elementos_necesarios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="37_unin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="39_consultas_sumarias.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">Orientaciones Pedagógicas</h1></header>
-<article class="iDevice_wrapper FreeTextIdevice" id="id10">
-<div class="iDevice emphasis0">
-<div id="ta10_85" class="block iDevice_content">
-<p>Este módulo profesional contiene la formación necesaria para desempeñar la función de gestor de bases de datos.</p>
-<div class="exe-fx exe-accordion">
-<h2>Aspectos de la gestión de bases de datos</h2>
+<header id="nodeDecoration"><h1 id="nodeTitle">3.8. Multitabla</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id127">
+<div class="iDevice emphasis0" >
+<div id="ta127_133_2" class="block iDevice_content">
+<div class="exe-text"><p>Muchas consultas útiles solicitan datos procedentes de dos o más tablas en la base de datos.</p>
+<p>Por ejemplo, las siguientes consultas extraen los datos de varias tablas:</p>
 <ul>
-<li>La planificación y realización del diseño físico de una base de datos.</li>
-<li>La inserción y manipulación de datos.</li>
-<li>La planificación y realización de consultas.</li>
-<li>La planificación y ejecución de importaciones, exportaciones y migraciones de datos.</li>
-<li>La planificación y aplicación de medidas de aseguramiento de la información.</li>
+<li>Lista los productos y la categoría a la que pertenecen (tablas PRODUCTOS y CATEGORIAS).</li>
+<li>Lista los pedidos mostrando el importe del pedido, el nombre del cliente que lo ordenó y el nombre del producto solicitado (tablas PEDIDOS, CLIENTES, DETALLES DEL PEDIDO y PRODUCTOS).</li>
+<li>Muestra todas los pedidos aceptados enviados a Alemania, mostrando la descripción del producto y el vendedor (tablas PEDIDOS, DETALLES DEL PEDIDO, EMPLEADOS y PRODUCTOS).</li>
 </ul>
-<h2>Actividades profesionales asociadas</h2>
-<ul>
-<li>La implantación de bases de datos.</li>
-<li>La gestión de la información almacenada en bases de datos.</li>
-</ul>
-<h2>Objetivos Generales que se alcanzan</h2>
-<ul>
-<li>Instalar y configurar software de gestión, siguiendo especificaciones y analizando entornos de aplicación, para administrar aplicaciones. (d)</li>
-<li>Instalar y administrar software de gestión, relacionándolo con su explotación, para implantar y gestionar bases de datos.(e)</li>
-<li>Aplicar técnicas de protección contra pérdidas de in-formación, analizando planes de seguridad y necesidades de uso para asegurar los datos. (m)</li>
-</ul>
-<h2>Competencias profesionales, personales y sociales alcanzadas</h2>
-<ul>
-<li>Administrar aplicaciones instalando y configurando el software, en condiciones de calidad para responder a las necesidades de la organización.</li>
-<li>Implantar y gestionar bases de datos instalando y administrando el software de gestión en condiciones de calidad, según las características de la explotación.</li>
-<li>Diagnosticar las disfunciones del sistema y adoptar las medidas correctivas para restablecer su funcionalidad.</li>
-</ul>
-<h2>Líneas de actuación en el proceso de enseñanza-aprendizaje</h2>
-<ul>
-<li>La interpretación de diseños lógicos de bases de datos.</li>
-<li>La realización del diseño físico de una base de datos a partir de un diseño lógico.</li>
-<li>La implementación de bases de datos.</li>
-<li>La realización de operaciones con datos almacenados.</li>
-<li>La importación y exportación de datos.</li>
-<li>El aseguramiento de la información.</li>
-</ul>
+<p>SQL permite recuperar datos que responden a estas peticiones mediante consultas multitabla que componen (<strong>JOIN</strong>) datos procedentes de dos o más tablas. Por ejemplo, la consulta “lista todos los pedidos, mostrando su número, nombre del cliente, producto vendido e importe" se realiza de cualquiera de las siguientes formas:</p>
+<p style="text-align: center;"><span style="font-family: andale mono, monospace;"><em>SELECT IdPedido, NombreCompañía, Producto, Cargo FROM pedidos, clientes WHERE clie=num_clie</em></span></p>
+<p style="text-align: center;"><span style="font-family: andale mono, monospace;"><em>SELECT IdPedido, NombreCompañía, Producto, Cargo FROM pedidos INNER JOIN clientes ON clie=num_clie;</em></span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva, sans-serif;">Luego se pueden utilizar todo lo aprendido hasta ahora para filtrar los resultados que se desean obtener.<br /></span></p>
+<p></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id128">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Consultas sobre 3 o más tablas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta128_134_2" class="block iDevice_content">
+<p>SQL puede combinar datos de tres o más tablas utilizando las mismas técnicas básicas utilizadas para las consultas de dos tablas. Un "sencillo" ejemplo es el siguiente:</p>
+<p><span style="font-family: andale mono, monospace;"><em>SELECT Pedidos.IdPedido, Cargo, NombreCategoria</em></span></p>
+<p><span style="font-family: andale mono, monospace;"><em>FROM Pedidos, `Detalles de pedidos` AS Detalles, Productos, Categorias</em></span></p>
+<p><span style="font-family: andale mono, monospace;"><em>WHERE Pedidos.IdPedido = detalles.IdPedido AND detalles.IdProducto = Productos.idProducto AND Productos.IdCategoria = Categorias.IdCategoria AND Cargo &gt; 120;</em></span></p>
+<p></p>
+</div>
 </div>
 </div>
 </div>
@@ -135,7 +124,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="contenidos_bsicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="elementos_necesarios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="37_unin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="39_consultas_sumarias.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
