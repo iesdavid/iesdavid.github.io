@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>3.5. Políticas de almacenamiento | Módulo de Seguridad y Alta Disponibilidad </title>
+<title>3.7. Copias de seguridad y respaldo | Módulo de Seguridad y Alta Disponibilidad </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -16,7 +16,7 @@
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-35"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-36"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Módulo de Seguridad y Alta Disponibilidad</div></header>
@@ -61,8 +61,9 @@
          <li><a href="32_sistemas_asimtricos.html" class="no-ch">3.2. Sistemas asimétricos</a></li>
          <li><a href="33_listas_de_control_de_accesos.html" class="no-ch">3.3. Listas de control de accesos</a></li>
          <li><a href="34_polticas_de_contraseas.html" class="no-ch">3.4. Políticas de contraseñas</a></li>
-         <li id="active"><a href="35_polticas_de_almacenamiento.html" class="active no-ch">3.5. Políticas de almacenamiento</a></li>
-         <li><a href="36_copias_de_seguridad_y_respaldo.html" class="no-ch">3.6. Copias de seguridad y respaldo</a></li>
+         <li><a href="35_sistemas_biomtricos.html" class="no-ch">3.5. Sistemas biométricos</a></li>
+         <li><a href="36_polticas_de_almacenamiento.html" class="no-ch">3.6. Políticas de almacenamiento</a></li>
+         <li id="active"><a href="37_copias_de_seguridad_y_respaldo.html" class="active no-ch">3.7. Copias de seguridad y respaldo</a></li>
       </ul>
       </li>
       <li><a href="ud4_anlisis_forense.html" class="no-ch">UD4. Análisis forense</a></li>
@@ -78,38 +79,44 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="34_polticas_de_contraseas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="36_copias_de_seguridad_y_respaldo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="36_polticas_de_almacenamiento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ud4_anlisis_forense.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">3.5. Políticas de almacenamiento</h1></header>
-<article class="iDevice_wrapper textIdevice" id="id87">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.7. Copias de seguridad y respaldo</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id91">
 <div class="iDevice emphasis0" >
-<div id="ta87_137_2" class="block iDevice_content">
-<div class="exe-text"><p>El almacenamiento de la información debe estar centralizado y al tiempo tener una estructura organizativa clara para poder gestionarlo de la manera más adecuada. Las políticas de seguridad lógica implementadas en los medios de almacenamiento van dirigidas a obtener:</p>
-<ul class="lista_verificacion">
-<li>Mayor tolerancia a fallos.</li>
-<li>Mayor seguridad.</li>
-</ul></div>
+<div id="ta91_141_2" class="block iDevice_content">
+<div class="exe-text"><p>Las copias de seguridad permitirán restaurar la información en caso de pérdidas ocasionadas por fallos de distinta naturaleza que dañan nuestro sistema (incendios, variaciones de la tensión eléctrica, robos). Tanto las grandes organizaciones como los usuarios domésticos deberían hacer copias de seguridad de manera periódica. Las copias de seguridad garantizan la <strong>integridad</strong> y la <strong>disponibilidad</strong> de la información.</p>
+<p>Los soportes utilizados para realizar copias de seguridad pueden ser varios:</p>
+<ul>
+<li>Cintas magnéticas.</li>
+<li>DVD y CD.</li>
+<li>Lápices de memoria.</li>
+<li>Discos duros portátiles.</li>
+<li>Servidores externos.</li>
+</ul>
+<p>Las copias de seguridad se pueden clasificar en:</p>
+<ul>
+<li>Completas.</li>
+<li>Diferenciales.</li>
+<li>Incrementales.</li>
+</ul>
+<p><a href="SAD01_CONT_R38_COPIAS.JPG"><img src="SAD01_CONT_R38_COPIAS.JPG" alt="" style="float: right; margin: 15px;" width="320" height="225" /></a>La diferencia entre ellas es si se copian todos los archivos (completas), solamente los archivos creados o modificados desde la última copia completa (diferenciales) o los archivos que se han modificado desde la última copia completa o diferencial (incrementales).</p>
+<p>En la imagen se puede ver un ejemplo donde se aprecia la diferencia entre una copia diferencial y otra incremental.</p>
+<p>Las copias de seguridad deben hacerse sobre los archivos más importantes del sistema y si se debe elegir, se escogerán aquellos que son más difíciles de reemplazar (archivos de sistema o de configuración).</p>
+<p>Hoy en día casi todos los sistemas operativos ofrecen funcionalidades para hacer copias de seguridad pero se sigue cometiendo el error de almacenar la copia de seguridad en el mismo sitio de donde se saca, es decir, se hacen copias de seguridad de archivos y se guardan el mismo disco duro donde se trabaja. Las copias de seguridad deben almacenarse en dispositivos externos que además se puedan destruir una vez clasificadas como inservibles.</p></div>
 </div>
 </div>
 </article>
-<article class="iDevice_wrapper FreeTextIdevice" id="id89">
-<div class="iDevice emphasis0">
-<div id="ta89_85" class="block iDevice_content">
-<p>La técnica más utilizada es RAID. Con esta técnica se consigue que el sistema sea más tolerante a fallos puesto que en caso de producirse un error en alguno de los discos, al estar la información fragmentada y replicada en otros, se podrá recuperar más fácilmente.</p>
-<p>Puesto que la información está repetida, aumentaremos la disponibilidad y tendremos más garantía de integridad en los datos, con esto se consigue que haya una mayor seguridad en el sistema.</p>
-</div>
-</div>
-</article>
-<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id90">
+<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id92">
 <div class="iDevice emphasis1" >
 <header class="iDevice_header"><h1 class="iDeviceTitle">Para saber más</h1></header>
 <div class="iDevice_inner">
 <div class="iDevice_content_wrapper">
-<div id="ta90_140_2" class="block iDevice_content">
-<p>En el siguiente enlace podrás aprender más cosas sobre los distintos niveles de <a href="http://es.wikipedia.org/wiki/RAID#RAID_0_.28Data_Striping.29" title="Acceder a información sobre Niveles RAID" target="_blank" class="html" rel="noopener">RAID</a></p>
+<div id="ta92_142_2" class="block iDevice_content">
+<p><a href="http://www.ite.educacion.es/formacion/materiales/85/cd/linux/m5/copias_de_seguridad.html">Tipos de copias de seguridad (INTECO)</a></p>
 </div>
 </div>
 </div>
@@ -122,7 +129,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="34_polticas_de_contraseas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="36_copias_de_seguridad_y_respaldo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="36_polticas_de_almacenamiento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ud4_anlisis_forense.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
