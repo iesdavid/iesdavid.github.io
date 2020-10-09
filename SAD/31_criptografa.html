@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
@@ -12,6 +13,7 @@
 <meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -66,7 +68,11 @@
          <li><a href="37_copias_de_seguridad_y_respaldo.html" class="no-ch">3.7. Copias de seguridad y respaldo</a></li>
       </ul>
       </li>
-      <li><a href="ud4_anlisis_forense.html" class="no-ch">UD4. Análisis forense</a></li>
+      <li><a href="ud4_anlisis_forense.html" class="daddy">UD4. Análisis forense</a>
+      <ul class="other-section">
+         <li><a href="41_objetivos.html" class="no-ch">4.1. Objetivos</a></li>
+      </ul>
+      </li>
    </ul>
    </li>
    <li><a href="bloque_2_mecanismos_de_seguridad.html" class="no-ch">Bloque 2. Mecanismos de Seguridad</a></li>
@@ -99,6 +105,50 @@
 <li>Sistemas de cifrado con clave pública o sistemas <strong>asimétricos</strong>.</li>
 </ul>
 <p>Los sistemas simétricos son aquellos en los que el emisor y el receptor utilizan la misma clave para cifrar y descifrar los mensajes en estos sistemas.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id96">
+<div class="iDevice emphasis0" >
+<div id="ta96_146_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-tabs">
+<h2>Criptografía simétrica</h2>
+<p>Utiliza la misma clave para cifrar y descifrar el mensaje, que tienen que conocer, previamente, tanto el emisor como el receptor.</p>
+<p><img src="c9-img-blog-simetrico.png" alt="" style="display: block; margin-left: auto; margin-right: auto;" width="666" height="250" /></p>
+<h2>Criptografía asimétrica</h2>
+<p>Se basa en el uso de dos claves.</p>
+<ul style="list-style-type: disc;">
+<li>La<strong> pública,</strong> que se podrá difundir, sin ningún problema, a todas las personas que necesiten mandarte alguna información cifrada.</li>
+<li>La <strong>privada,</strong> que no debe ser revelada nunca</li>
+</ul>
+<p><img src="c9-img-blog-asimetrico.png" alt="" style="display: block; margin-left: auto; margin-right: auto;" width="684" height="279" /></p>
+<p>Veámoslo con un ejemplo, si queremos que tres compañeros/as nos manden un archivo cifrado, debemos de mandarles nuestra<strong> clave pública</strong> (que está vinculada a la privada) y nos podrán mandar, de forma confidencial, ese archivo que solo nosotros podremos descifrar con la <strong>clave privada</strong>.</p>
+<p>Aunque pueda parecer que la clave privada pudiese ser descubierta gracias a la pública, no es así. Se utilizan complejos algoritmos para generar las claves, que son muy resistentes a los <span style="text-decoration: underline;">ataques de los ciberdelincuentes</span>.</p>
+<p>Otro propósito, muy utilizado, es el de poder <strong>firmar documentos</strong>. De esta forma, se certifica al emisor, firmando con la clave privada, y verificando la identificad del receptor con la pública.</p>
+</div>
+<h3>¿Cuáles son las ventajas y desventajas de un método u otro?</h3>
+<p>Bien, ya conocemos como funcionan los dos tipos de cifrado, pero ¿hay alguno mejor que otro? ¿Cuáles son las ventajas y desventajas de cada uno? Para contestar a estas preguntas podemos verlo desde tres perspectivas:</p>
+<ul>
+<li><strong>Velocidad:</strong>
+<ul>
+<li>La principal ventaja del cifrado simétrico es que es mucho más rápido y ágil. De modo que, si quieres cifrar una gran cantidad de información, ahorrarás tiempo con este tipo.</li>
+<li>Por el contrario, el cifrado asimétrico es mucho más lento. Si el rendimiento es un factor clave a tener en cuenta, no es la mejor opción.</li>
+</ul>
+</li>
+<li><strong>Seguridad</strong>:
+<ul>
+<li>El cifrado simétrico no es tan seguro, ya que el hecho de comunicar la clave supone una gran vulnerabilidad. Es muy importante buscar medios seguros para comunicarla.</li>
+<li>La ventaja del cifrado asimétrico es el hecho de que puede comunicar, de forma segura, claves públicas a terceros. Este tipo, tiene la libertad de entregar la clave pública, mientras la clave privada permanece con el usuario.</li>
+</ul>
+</li>
+<li><strong>Número de claves</strong>:
+<ul>
+<li>La administración de claves también es un beneficio al usar el cifrado asimétrico. Solo necesitas un par de claves, por usuario, para cada uno, para poder cifrar mensajes para todos los demás usuarios.</li>
+<li>Como vimos con el cifrado simétrico, a medida que aumenta el número de usuarios, aumenta el número de claves.</li>
+</ul>
+</li>
+</ul>
+<p></p></div>
 </div>
 </div>
 </article>
