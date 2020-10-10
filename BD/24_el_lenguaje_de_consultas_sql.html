@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.4. El lenguaje de consultas: SQL | Modelo Entidad - Relación </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-42"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Modelo Entidad Relación</a></li>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
+      <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
+      <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
+      <li><a href="elementos_necesarios.html" class="no-ch">Elementos necesarios</a></li>
+      <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   </ul>
+   </li>
+   <li><a href="ud_1_introduccin_a_las_bbdd_relacionales.html" class="daddy">UD 1. Introducción a las BBDD relacionales</a>
+   <ul class="other-section">
+      <li><a href="11_aplicaciones_de_los_sgbd.html" class="no-ch">1.1. Aplicaciones de los SGBD</a></li>
+      <li><a href="12_los_datos.html" class="no-ch">1.2. Los datos</a></li>
+      <li><a href="13_modelos_de_datos.html" class="no-ch">1.3. Modelos de datos</a></li>
+      <li><a href="14_lenguajes_de_bases_de_datos.html" class="no-ch">1.4. Lenguajes de bases de datos</a></li>
+      <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="ud2_bases_de_datos_relacionales.html" class="current-page-parent daddy">UD2. Bases de Datos Relacionales</a>
+   <ul>
+      <li><a href="21_conceptos_bsicos.html" class="no-ch">2.1. Conceptos básicos</a></li>
+      <li><a href="22_dominios.html" class="no-ch">2.2. Dominios</a></li>
+      <li><a href="23_claves.html" class="no-ch">2.3. Claves</a></li>
+      <li id="active"><a href="24_el_lenguaje_de_consultas_sql.html" class="active no-ch">2.4. El lenguaje de consultas: SQL</a></li>
+      <li><a href="25_componentes_del_sql.html" class="no-ch">2.5. Componentes del SQL</a></li>
+      <li><a href="26_tipos_de_datos.html" class="no-ch">2.6. Tipos de datos</a></li>
+      <li><a href="27_constantes_y_nulos.html" class="no-ch">2.7. Constantes y Nulos</a></li>
+      <li><a href="autoevaluacin0.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica0.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud3_sql_select.html" class="daddy">UD3. SQL: SELECT</a>
+   <ul class="other-section">
+      <li><a href="31_la_clusula_select.html" class="no-ch">3.1. La cláusula SELECT</a></li>
+      <li><a href="32_select_bsico.html" class="no-ch">3.2. SELECT básico</a></li>
+      <li><a href="33_filas_duplicadas.html" class="no-ch">3.3. Filas duplicadas</a></li>
+      <li><a href="34_condiciones.html" class="no-ch">3.4. Condiciones</a></li>
+      <li><a href="35_condiciones_compuestas.html" class="no-ch">3.5. Condiciones compuestas</a></li>
+      <li><a href="36_ordenacin.html" class="no-ch">3.6. Ordenación</a></li>
+      <li><a href="37_unin.html" class="no-ch">3.7. Unión</a></li>
+      <li><a href="38_multitabla.html" class="no-ch">3.8. Multitabla</a></li>
+      <li><a href="39_consultas_sumarias.html" class="no-ch">3.9. Consultas sumarias</a></li>
+      <li><a href="autoevaluacin1.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica1.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud4_sql_insert_y_delete.html" class="no-ch">UD4. SQL: INSERT y DELETE</a></li>
+   <li><a href="ud5_sql_update.html" class="no-ch">UD5. SQL: UPDATE</a></li>
+   <li><a href="ud6_sql_create_drop_y_alter.html" class="no-ch">UD6. SQL: CREATE, DROP Y ALTER</a></li>
+   <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
+   <li><a href="bloque_4_lenguaje_script_plsql.html" class="no-ch">Bloque 4. Lenguaje Script PL/SQL</a></li>
+   <li><a href="bibliografa0.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="23_claves.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="25_componentes_del_sql.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.4. El lenguaje de consultas: SQL</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id88">
+<div class="iDevice emphasis0" >
+<div id="ta88_108_2" class="block iDevice_content">
+<div class="exe-text"><p>Un <strong>lenguaje de consultas</strong> es un lenguaje en el que los usuarios solicitan información de la base de datos. Estos lenguajes suelen ser de un nivel superior que el de los lenguajes de programación habituales. Los lenguajes de consultas pueden clasificarse como:</p>
+<ul>
+<li><strong>Lenguajes procedimentales,</strong> el usuario indica al sistema que lleve a cabo una serie de operaciones en la base de datos para calcular el resultado deseado.</li>
+<li><strong>Lenguajes no procedimentales,</strong> el usuario describe la información deseada sin dar un procedimiento concreto para obtener esa información.</li>
+</ul>
+<p></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id89">
+<div class="iDevice emphasis0" >
+<div id="ta89_109_2" class="block iDevice_content">
+<div class="exe-text"><p>El lenguaje de consulta estructurado (<strong>SQL</strong>) es un lenguaje procedimental normalizado que se ha convertido en estándar para bases de datos relacionales. Este lenguaje incluye características del <a href="https://es.wikipedia.org/wiki/%C3%81lgebra_relacional" target="_blank" title="El Álgebra Relacional" rel="noopener"><strong>álgebra relacional</strong></a> que veremos en bloques posteriores.</p>
+<p>El lenguaje SQL proporciona una interfaz de lenguaje declarativo del más alto nivel, por lo que el usuario sólo especifica lo que debe ser el resultado, dejando para el DBMS la optimización y las decisiones de cómo ejecutar la consulta.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id90">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">El lenguaje SQL</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta90_110_2" class="block iDevice_content">
+<p><a href="sql-history.png" title="Historia del lenguaje SQL"><img src="sql-history.png" style="float: right; margin: 10px;" width="245" height="280" /></a>La historia de SQL (que se pronuncia deletreando en inglés las letras que lo componen, es decir «ese-cu-ele») empieza en 1974 con la definición, por parte de <a href="#t61e2a94c-7818-e874-020e-fa435c9f9d5d" id="link61e2a94c-7818-e874-020e-fa435c9f9d5d" class="exe-tooltip definition-tt" title="Donald Chamberlin">Donald Chamberlin</a> y de otras personas que trabajaban en los laboratorios de investigación de IBM, de un lenguaje para la especificación de las características de las bases de datos que adoptaban el modelo relacional. Este lenguaje se llamaba <strong>SEQUEL</strong> (Structured English Query Language) y se implementó en un prototipo llamado SEQUEL-XRM entre 1974 y 1975. Las experimentaciones con ese prototipo condujeron, entre 1976 y 1977, a una revisión del lenguaje (SEQUEL/2), que a partir de ese momento cambió de nombre por motivos legales, convirtiéndose en <strong>SQL</strong>. El prototipo (System R), basado en este lenguaje, se adoptó y utilizó internamente en IBM y lo adoptaron algunos de sus clientes elegidos. Gracias al éxito de este sistema, que no estaba todavía comercializado, también otras compañías empezaron a desarrollar sus productos relacionales basados en SQL. A partir de 1981, IBM comenzó a entregar sus productos relacionales y en 1983 empezó a vender DB2. En el curso de los años ochenta, numerosas compañías (por ejemplo Oracle y Sybase, sólo por citar algunos) comercializaron productos basados en SQL, que se convierte en el <strong>estándar</strong> industrial de hecho por lo que respecta a las bases de datos relacionales.</p>
+<p>En 1986, el ANSI adoptó SQL (sustancialmente adoptó el dialecto <strong>SQL de IBM</strong>) como estándar para los lenguajes relacionales y en 1987 se transfomó en estándar <strong>ISO</strong>. Esta versión del estándar va con el nombre de SQL/86. En los años siguientes, éste ha sufrido diversas revisiones que han conducido primero a la versión SQL/89 y, posteriormente, a la más importante SQL/92 y sus sucesivas versiones.</p>
+<table style="width: 60%; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<th>Año</th>
+<th>Nombre</th>
+<th>Alias</th>
+<th>Comentarios</th>
+</tr>
+<tr valign="top">
+<td>1986</td>
+<td>SQL-86</td>
+<td>SQL-87</td>
+<td>Primera publicación hecha por ANSI. Confirmada por la Organización Internacional de Normalización en 1987.</td>
+</tr>
+<tr valign="top">
+<td>1989</td>
+<td>SQL-89</td>
+<td></td>
+<td>Revisión menor.</td>
+</tr>
+<tr valign="top">
+<td>1992</td>
+<td>SQL-92</td>
+<td>SQL2</td>
+<td>Revisión mayor.</td>
+</tr>
+<tr valign="top">
+<td>1999</td>
+<td>SQL:1999</td>
+<td>SQL2000</td>
+<td>Se agregaron expresiones regulares, consultas recursivas (para relaciones jerárquicas), triggers y algunas características orientadas a objetos.</td>
+</tr>
+<tr valign="top">
+<td>2003</td>
+<td>SQL:2003</td>
+<td> </td>
+<td>Introduce algunas características de <a href="https://es.wikipedia.org/wiki/Extensible_Markup_Language" title="Extensible Markup Language">XML</a>, cambios en las funciones, estandarización del objeto sequence y de las columnas autonuméricas.<sup id="cite_ref-4" class="reference separada"><a href="https://es.wikipedia.org/wiki/SQL#cite_note-4">4</a></sup>​</td>
+</tr>
+<tr valign="top">
+<td>2005</td>
+<td>SQL:2005</td>
+<td> </td>
+<td>ISO/IEC 9075-14:2005 Define las maneras en las cuales SQL se puede utilizar conjuntamente con XML. Define maneras de importar y guardar datos XML en una base de datos SQL, manipulándolos dentro de la base de datos y publicando el XML y los datos SQL convencionales en forma XML. Además, proporciona facilidades que permiten a las aplicaciones integrar dentro de su código SQL el uso de XQuery, lenguaje de consulta XML publicado por el W3C (World Wide Web Consortium) para acceso concurrente a datos ordinarios SQL y documentos XML.</td>
+</tr>
+<tr valign="top">
+<td>2008</td>
+<td>SQL:2008</td>
+<td> </td>
+<td>Permite el uso de la cláusula ORDER BY fuera de las definiciones de los cursores. Incluye los disparadores del tipo INSTEAD OF. Añade la sentencia TRUNCATE.<sup id="cite_ref-5" class="reference separada"><a href="https://es.wikipedia.org/wiki/SQL#cite_note-5">5</a></sup>​</td>
+</tr>
+<tr>
+<td>2011</td>
+<td>SQL:2011</td>
+<td></td>
+<td>Datos temporales (PERIOD FOR). Mejoras en las funciones de ventana y de la cláusula FETCH.</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>SQL:2016</td>
+<td></td>
+<td>Permite búsqueda de patrones, funciones de tabla polimórficas y compatibilidad con los ficheros JSON.</td>
+</tr>
+</tbody>
+</table>
+<p>El hecho de tener un estándar definido por un lenguaje para bases de datos relacionales abre potencialmente el camino a la intercomunicabilidad entre todos los productos que se basan en él. Desde el punto de vista práctico, por desgracia las cosas fueron de otro modo. Efectivamente, en general cada productor adopta e implementa en la propia base de datos sólo el corazón del lenguaje SQL (el así llamado Entry level o al máximo el Intermediate level), extendiéndolo de manera individual según la propia visión que cada cual tenga del mundo de las bases de datos.</p>
+<div id="t61e2a94c-7818-e874-020e-fa435c9f9d5d" class="exe-tooltip-text">
+<p>Donald D. Chamberlin es un científico informático estadounidense mejor conocido como uno de los principales diseñadores de la especificación del lenguaje SQL original con Raymond Boyce. También hizo contribuciones significativas al desarrollo de XQuery.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="23_claves.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="25_componentes_del_sql.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
+Curso 2020 - 2021</footer></div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>
