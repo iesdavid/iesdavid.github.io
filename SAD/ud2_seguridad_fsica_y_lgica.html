@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>2.3. Sistemas de alimentación ininterrumpida | Módulo de Seguridad y Alta Disponibilidad </title>
+<title>UD2. Seguridad Física y Lógica | Módulo de Seguridad y Alta Disponibilidad </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -18,7 +18,7 @@
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-25"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Módulo de Seguridad y Alta Disponibilidad</div></header>
@@ -49,11 +49,11 @@
          <li><a href="110_contraseas.html" class="no-ch">1.10. Contraseñas</a></li>
       </ul>
       </li>
-      <li class="current-page-parent"><a href="ud2_seguridad_fsica_y_lgica.html" class="current-page-parent daddy">UD2. Seguridad Física y Lógica</a>
+      <li id="active"><a href="ud2_seguridad_fsica_y_lgica.html" class="active daddy">UD2. Seguridad Física y Lógica</a>
       <ul>
          <li><a href="21_tipos_de_desastres.html" class="no-ch">2.1. Tipos de desastres</a></li>
          <li><a href="22_ubicacin_y_proteccin_fsica.html" class="no-ch">2.2. Ubicación y protección física</a></li>
-         <li id="active"><a href="23_sistemas_de_alimentacin_ininterrumpida.html" class="active no-ch">2.3. Sistemas de alimentación ininterrumpida</a></li>
+         <li><a href="23_sistemas_de_alimentacin_ininterrumpida.html" class="no-ch">2.3. Sistemas de alimentación ininterrumpida</a></li>
          <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
          <li><a href="24_criptografa.html" class="no-ch">2.4. Criptografía</a></li>
          <li><a href="25_sistemas_asimtricos.html" class="no-ch">2.5. Sistemas asimétricos</a></li>
@@ -104,58 +104,53 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="22_ubicacin_y_proteccin_fsica.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="110_contraseas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_tipos_de_desastres.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">2.3. Sistemas de alimentación ininterrumpida</h1></header>
-<article class="iDevice_wrapper textIdevice" id="id58">
+<header id="nodeDecoration"><h1 id="nodeTitle">UD2. Seguridad Física y Lógica</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id77">
 <div class="iDevice emphasis0" >
-<div id="ta58_112_2" class="block iDevice_content">
-<div class="exe-text"><p></p>
-<p>Los sistemas de alimentación ininterrumpida (<strong>SAI</strong>) o <em>Uninterruptible Power Supply</em> (<strong>UPS</strong>), son aquellos capaces de proporcionar corriente eléctrica a partir de un acumulador (baterías) o de otra forma de energía (mecánica o de combustión).</p>
-<p><img src="saiCircuito.jpg" style="float: right; margin: 10px;" width="480" height="171" />La forma más sencilla de SAI es la de un dispositivo que se alimenta de corriente eléctrica incorporando un acumulador, que es el encargado de suministrar la energía cuando falla el flujo de la red eléctrica. De esta forma, durante un tiempo limitado, se permite realizar un apagado seguro del equipamiento antes del corte de suministro eléctrico.</p>
-<p>Los distintos dispositivos hardware no irán enchufados a las tomas de corriente directamente, se enchufarán al SAI que será el que estará conectado a las tomas de corriente, haciendo de este modo de intermediario entre la red eléctrica y los dispositivos hardware.</p>
-<p>Las partes más importantes de las que consta un SAI son:</p>
+<div id="ta77_113_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"></p>
+<div class="exe-fx exe-tabs">
+<h2>Seguridad Física</h2>
+<p style="text-align: justify;"><img src="Seguridad-fisica-800x400-640w.webp" alt="" style="float: right; margin: 10px;" width="320" height="160" />La seguridad física es uno de los aspectos más olvidados a la hora del diseño de un sistema informático. Si bien algunos de los aspectos tratados a continuación se prevén, otros, como la detección de un atacante interno a la empresa que intenta a acceder físicamente a una sala de operaciones de la misma, no. De nada sirve un gran sistema de seguridad donde no se ha previsto cómo <strong>evitar y combatir</strong> un incendio.</p>
+<div align="justify">Este tipo de seguridad está enfocado a cubrir las amenazas ocasionadas tanto por el hombre como por la naturaleza del medio físico en que se encuentra ubicado el sistema. Las <b>principales amenazas</b> que se prevén son:</div>
 <ul>
-<li>Rectificador: Convierte la corriente alterna en tensión continua para cargar la batería.</li>
-<li>Baterías: Almacenan la energía que se utiliza para seguir alimentando los dispositivos cuando hay un corte de flujo eléctrico.</li>
-<li>Convertidor: Convierte la tensión continua de la batería en tensión alterna.</li>
+<li>Desastres naturales, incendios accidentales y cualquier variación producida por las condiciones ambientales.</li>
+<li>Amenazas ocasionadas por el hombre como robos o sabotajes.</li>
+<li>Disturbios internos y externos deliberados.</li>
 </ul>
-<p>En la imagen se puede ver una representación esquemática de las partes de un SAI. En condiciones de flujo eléctrico normal el ordenador se alimenta a través del circuito de <span style="background-color: #00ff00;">color verde</span>. Si ocurriese un fallo de alimentación, entraría en funcionamiento el <span style="background-color: #ff0000;">circuito rojo</span> que obtiene la energía de la batería.</p>
-<p>Los SAI se pueden clasificar en:</p>
-<ul style="list-style-type: circle;">
-<li>OFF-LINE o STAND BY.</li>
-<li>ON-LINE.</li>
-<li>INLINE, SAI INTERACTIVO o de LINEA INTERACTIVA.</li>
+<ol></ol>
+<p>Evaluar y controlar permanentemente la seguridad física del sistema es la base para comenzar a integrar la seguridad como función primordial del mismo. Tener controlado el ambiente y acceso físico permite disminuir siniestros y tener los medios para luchar contra accidentes.</p>
+<h2>Seguridad Logica</h2>
+<p>La <strong>seguridad lógica</strong> se refiere a la seguridad en el uso de software y los sistemas, la protección de los datos, procesos y programas, así como la del acceso ordenado y autorizado de los usuarios a la información.</p>
+<p style="text-align: justify;">Por lo tanto, la <strong>seguridad lógica</strong>, en términos de <strong>cyberseguridad</strong>, engloba todas las medidas de administración necesarias con el objetivo de reducir al máximo los riesgos asociados a las actividades cotidianas realizadas usando <strong>tecnología de la información</strong>.</p>
+<p>La <strong>seguridad lógica</strong> persigue, fundamentalmente, dos objetivos:</p>
+<ul>
+<li>
+<p>Impedir un acceso fácil a programas, archivos o datos para evitar <strong>robos o pérdidas</strong> de información.</p>
+</li>
+<li>
+<p>Conseguir que la <strong>información transmitida</strong> sea recibida sólo por el destinatario al cual ha sido enviada.</p>
+</li>
+<li>
+<p>Verificar que la <strong>información recibida</strong> sea la misma que la transmitida.</p>
+</li>
+<li>
+<p>Habilitar <strong>sistemas alternativos</strong> para la transmisión o almacenamiento de datos.</p>
+</li>
+<li>
+<p>Establecer medidas de <strong>análisis</strong> que permitan mejorar el funcionamiento de todo el sistema.<strong></strong></p>
+</li>
 </ul>
-<div class="exe-fx exe-accordion">
-<h2>OFFLINE o STAND BY</h2>
-<p><img src="SAIoFFLINE.jpg" style="float: right; margin: 10px;" width="320" height="272" />El SAI de tipo OFFLINE es el más extendido y económico. Tiene como función proteger a equipos domésticos como los PC.<br />Cuando el flujo de corriente eléctrica falla, los SAI entran en funcionamiento, el intervalo de tiempo que transcurre en ausencia de corriente eléctrica es apreciable. Son equipos que debido a su bajo coste no proporcionan un flujo de corriente de gran calidad. No protegen totalmente a la carga de las perturbaciones en la red normal, puesto que no la aíslan.</p>
-<p><a href="Esquema_SAI_Off-Line.jpg" target="_blank" rel="noopener"><img src="Esquema_SAI_Off-Line.jpg" title="Esquema SAI Offline" style="float: left; margin: 10px;" width="480" height="144" /></a></p>
-<h2>ONLINE o de DOBLE CONVERSIÓN</h2>
-<p><img src="saionline.jpg" style="float: right; margin: 10px;" width="320" height="320" />El SAI ONLINE se caracteriza porque a diferencia del OFFLINE, se intercala entre el suministro de red normal y la carga que se quiere alimentar. Se utilizan en el entorno industrial más que a nivel usuario.<br />Proporcionan una salida de corriente alterna independiente de la red normal, esta corriente se genera a partir de la corriente continua almacenada en las baterías. Además proporcionan aislamiento entre la carga y la red normal, protegiendo a la carga frente a cualquier anomalía del flujo en la corriente eléctrica.</p>
-<p><a href="Esquema_SAI_Online.jpg"><img src="Esquema_SAI_Online.jpg" alt="" style="float: left; margin: 10px;" width="481" height="191" /></a></p>
-<h2>INLINE, SAI INTERACTIVO o de LINEA INTERACTIVA.</h2>
-<p><img src="saiInline.jpg" alt="" style="float: right; margin: 10px;" width="320" height="320" />Una solución intermedia entre los dos anteriores la constituyen los SAI de tipo INTERACTIVO. Estos dispositivos se intercalan entre la red y la carga a la que protegen.</p>
-<p>No aíslan completamente de la red normal, aunque sí ofrecen una protección frente a fluctuaciones dentro de unos márgenes. El tiempo que transcurre entre el fallo en la red y la entrada en funcionamiento del SAI, del orden de milisegundos, es inapreciable.</p>
-<p>Son adecuados para ordenadores, centralitas telefónicas y equipos servidores de pequeñas y medianas empresas (Pymes).</p>
-<p><a href="Esquema_SAi_Interactivo.jpg"><img src="Esquema_SAi_Interactivo.jpg" alt="" title="Esquema SAI Inline" style="float: left; margin: 10px;" width="479" height="154" /></a></p>
+<p><strong></strong></p>
+<p style="text-align: center;"><iframe width="320" height="200" src="https://www.youtube.com/embed/3nZ4gedCZfI" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></p>
 </div>
+<p style="text-align: justify;"><br /><br /></p>
 <p></p></div>
-</div>
-</div>
-</article>
-<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id81">
-<div class="iDevice emphasis1" >
-<header class="iDevice_header"><h1 class="iDeviceTitle">Ejemplo de Presupuesto instalación de SAI</h1></header>
-<div class="iDevice_inner">
-<div class="iDevice_content_wrapper">
-<div id="ta81_114_2" class="block iDevice_content">
-<p><a href="http://seguridadinformatica4all.blogspot.com/2014/11/presupuesto-de-instalacion-de-sais-en.html">http://seguridadinformatica4all.blogspot.com/2014/11/presupuesto-de-instalacion-de-sais-en.html</a></p>
-</div>
-</div>
 </div>
 </div>
 </article>
@@ -166,7 +161,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="22_ubicacin_y_proteccin_fsica.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="110_contraseas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_tipos_de_desastres.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
