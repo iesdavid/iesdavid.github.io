@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
@@ -12,6 +13,7 @@
 <meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -67,7 +69,11 @@
    </li>
    <li class="current-page-parent"><a href="bloque_2_mecanismos_de_seguridad.html" class="current-page-parent daddy">Bloque 2. Mecanismos de Seguridad</a>
    <ul>
-      <li id="active"><a href="ud3_ataques_y_contramedidas.html" class="active no-ch">UD3. Ataques y contramedidas</a></li>
+      <li id="active"><a href="ud3_ataques_y_contramedidas.html" class="active daddy">UD3. Ataques y contramedidas</a>
+      <ul>
+         <li><a href="31_anatoma_de_ataques.html" class="no-ch">3.1. Anatomía de ataques</a></li>
+      </ul>
+      </li>
       <li><a href="ud4_seguridad_en_la_red.html" class="no-ch">UD4. Seguridad en la Red</a></li>
    </ul>
    </li>
@@ -102,12 +108,56 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="bloque_2_mecanismos_de_seguridad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ud4_seguridad_en_la_red.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="bloque_2_mecanismos_de_seguridad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="31_anatoma_de_ataques.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
 <header id="nodeDecoration"><h1 id="nodeTitle">UD3. Ataques y contramedidas</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id107">
+<div class="iDevice emphasis0">
+<div id="ta107_85" class="block iDevice_content">
+<p>Cualquier equipo conectado a una red informática puede ser vulnerable a un ataque.<br />Un "<strong>ataque</strong>" consiste en aprovechar una vulnerabilidad de un sistema informático (sistema operativo, programa de software o sistema del usuario) con propósitos desconocidos por el operador del sistema y que, por lo general, causan un daño.</p>
+<p>Como se ha comentado en anteriores puntos (<a href="15_tipos_de_amenazas.html">1.5. Tipos de amenazas</a>), Un ataque no es más que la realización de una amenaza. Las cuatro categorías generales de amenazas o ataques son las siguientes:</p>
+<ul style="list-style-type: square;">
+<li><strong>Interrupción:</strong> un recurso del sistema es destruido o se vuelve no disponible. Este es un ataque contra la disponibilidad. Ejemplos de este ataque son la destrucción de un elemento hardware, como un disco duro, cortar una línea de comunicación o deshabilitar el sistema de gestión de ficheros.</li>
+<li><strong>Intercepción:</strong> una entidad no autorizada consigue acceso a un recurso. Este es un ataque contra la confidencialidad. La entidad no autorizada podría ser una persona, un programa o un ordenador. Ejemplos de este ataque son pinchar una línea para hacerse con datos que circulen por la red y la copia ilícita de ficheros o programas (intercepción de datos), o bien la lectura de las cabeceras de paquetes para desvelar la identidad de uno o más de los usuarios implicados en la comunicación observada ilegalmente (intercepción de identidad).</li>
+<li><strong>Modificación:</strong> una entidad no autorizada no sólo consigue acceder a un recurso, sino que es capaz de manipularlo. Este es un ataque contra la integridad. Ejemplos de este ataque son el cambio de valores en un archivo de datos, alterar un programa para que funcione de forma diferente y modificar el contenido de mensajes que están siendo transferidos por la red.</li>
+<li><strong>Fabricación:</strong> una entidad no autorizada inserta objetos falsificados en el sistema. Este es un ataque contra la autenticidad. Ejemplos de este ataque son la inserción de mensajes espurios en una red o añadir registros a un archivo. Estos ataques se pueden asimismo clasificar de forma útil en términos de ataques pasivos y ataques activos.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id108">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Tipos de ataques</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta108_116_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-accordion">
+<h2>Ataques pasivos</h2>
+<p>En los ataques pasivos el atacante no altera la comunicación, sino que únicamente la escucha o monitoriza, para obtener información que está siendo transmitida. Sus objetivos son la intercepción de datos y el análisis de tráfico, una técnica más sutil para obtener información de la comunicación, que puede consistir en:</p>
+<ul>
+<li>Obtención del origen y destinatario de la comunicación, leyendo las cabeceras de los paquetes monitorizados.</li>
+<li>Control del volumen de tráfico intercambiado entre las entidades monitorizadas, obteniendo así información acerca de actividad o inactividad inusuales.</li>
+<li>Control de las horas habituales de intercambio de datos entre las entidades de la comunicación, para extraer información acerca de los períodos de actividad.</li>
+</ul>
+<p>Los ataques pasivos son muy difíciles de detectar, ya que no provocan ninguna alteración de los datos. Un ejemplo de este tipo de ataque es el uso de un sniffer, que es un software especializado en el análisis del tráfico en una red y de este modo poder detectar y conocer qué vulnerabilidades se<br />tienen en la red para recabar la información de mayor interes.</p>
+<h2>Ataques activos</h2>
+<p>Estos ataques implican algún tipo de modificación del flujo de datos transmitido o la creación de un falso flujo de datos, podemos dividirlos en:</p>
+<ol style="list-style-type: lower-alpha;">
+<li><strong>Suplantación de identidad:</strong> el intruso se hace pasar por una entidad diferente. Normalmente incluye alguna de las otras formas de ataque activo. Por ejemplo, secuencias de autenticación pueden ser capturadas y repetidas, permitiendo a una entidad no autorizada acceder a una serie de recursos privilegiados suplantando a la entidad que posee esos privilegios, como al robar la contraseña de acceso a una cuenta.</li>
+<li><strong>Repetición:</strong> uno o varios mensajes legítimos son capturados repetidos para producir un efecto no deseado, como por ejemplo ingresar dinero repetidas veces en una cuenta dada.</li>
+<li><strong>Modificación de mensajes:</strong> una porción del mensaje legítimo alterada, o los mensajes son retardados o reordenados, para producir un efecto no autorizado. Por ejemplo, el mensaje "Ingresa un millón de euros en la cuenta A" podría ser modificado para decir "Ingresa un millón de eruos en la cuenta B".</li>
+<li><strong>Interrupción o degradación fraudulenta del servicio:</strong> impide o inhibe el uso normal o la gestión de recursos informáticos y de comunicaciones. Por ejemplo, el intruso podría suprimir todos los mensajes dirigidos a una determinada entidad o se podría interrumpir el servicio de una red inundándola con mensajes espurios. Entre estos ataques se encuentran los de denegación de servicio, consistentes en paralizar temporalmente el servicio de un servidor de correo, Web, FTP, etc.</li>
+</ol>
+</div>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
 <div id="packageLicense" class="cc cc-by-sa">
 <p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
 </div>
@@ -115,7 +165,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="bloque_2_mecanismos_de_seguridad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ud4_seguridad_en_la_red.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="bloque_2_mecanismos_de_seguridad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="31_anatoma_de_ataques.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.

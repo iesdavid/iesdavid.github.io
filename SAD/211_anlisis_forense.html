@@ -67,7 +67,11 @@
    </li>
    <li><a href="bloque_2_mecanismos_de_seguridad.html" class="daddy">Bloque 2. Mecanismos de Seguridad</a>
    <ul class="other-section">
-      <li><a href="ud3_ataques_y_contramedidas.html" class="no-ch">UD3. Ataques y contramedidas</a></li>
+      <li><a href="ud3_ataques_y_contramedidas.html" class="daddy">UD3. Ataques y contramedidas</a>
+      <ul class="other-section">
+         <li><a href="31_anatoma_de_ataques.html" class="no-ch">3.1. Anatomía de ataques</a></li>
+      </ul>
+      </li>
       <li><a href="ud4_seguridad_en_la_red.html" class="no-ch">UD4. Seguridad en la Red</a></li>
    </ul>
    </li>
@@ -143,6 +147,110 @@
 <p><img src="fuerzas-cuerpos-seguridad-ciberseguridad-delitos-informaticos.jpg" alt="" style="float: left; margin: 15px;" width="320" height="111" />En todos los países las fuerzas de seguridad poseen unidades dedicadas al análisis forense informático, tanto para delitos informáticos, como para delitos donde se ha utilizado el equipo informático para cometerlos. En España:</p>
 <p><a href="https://www.policia.es/org_central/judicial/udef/bit_quienes_somos.html">Brigada de Investigación Tecnológica del Cuerpo Nacional de Policía.</a></p>
 <p><a href="https://www.gdt.guardiacivil.es/webgdt/home_alerta.php">Grupo de Delitos Telemáticos de la Guardia Civil.</a></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id101">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Objetivos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta101_109_2" class="block iDevice_content">
+<p>Los objetivos principales de todo análisis forense son:</p>
+<ul style="list-style-type: circle;">
+<li>Recrear lo que ha ocurrido en un dispositivo digital durante el incidente de seguridad.</li>
+<li>Analizar las incidencias para impedir que se repitan en el futuro.</li>
+</ul>
+<p>Los objetivos se deben conseguir sin dañar la información que se investiga, en la medida de lo posible. Si la investigación obliga a duplicar la información, se debe asegurar una destrucción de la información duplicada al final del proceso.</p>
+<p>Los objetivos se han cumplido cuando:</p>
+<ol>
+<li>Se sabe cómo se produjo el incidente de seguridad.</li>
+<li>Se conocen las circunstancias bajo las que ocurrió.</li>
+<li>Se conoce la identidad de los atacantes.</li>
+<li>Se sabe cuando ocurrió el incidente.</li>
+<li>Se conocen los objetivos de los atacantes.</li>
+<li>Se tienen las evidencias que lo demuestran.</li>
+<li>Se ha destruido totalmente cualquier información duplicada para realizar la investigación.</li>
+</ol>
+<p>La metodología empleada para alcanzar estos objetivos de estar compuesta al menos de los siguientes pasos:</p>
+<ol>
+<li>Analizar el funcionamiento del sistema para extraer toda la información posible sobre el mismo.</li>
+<li>Respetar rigurosamente el marco legal establecido.</li>
+<li>Recopilar todas las evidencias posibles.</li>
+<li>Autenticar las evidencias recogidas.</li>
+<li>Proteger las evidencias para que no se alteren, si es posible, realizar copias para poder trabajar con ellas y así preservar las originales.</li>
+<li>Analizar las evidencias.</li>
+<li>Presentar el informe final lo más detallado posible.</li>
+<li>Destruir la información duplicada si es necesario.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id102">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Recogida de Evidencias</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta102_110_2" class="block iDevice_content">
+<div class="exe-text"><p>Las evidencias digitales respecto a las evidencias físicas tienen tres ventajas muy importantes:</p>
+<ul>
+<li>Pueden ser duplicadas con total exactitud.</li>
+<li>Existen herramientas para verificar si la evidencia ha sido modificada.</li>
+<li>Se pueden recuperar, en la mayoría de los casos, después de un borrado.</li>
+</ul>
+<p>La recogida de evidencias debe seguir un orden de acuerdo al grado de volatilidad.</p>
+<p>Los datos volátiles son aquellos que se pierden cuando se pierde la alimentación eléctrica del sistema (memoria RAM, procesos en ejecución, usuarios conectados). La evidencia volátil es la primera que debe ser recogida.<br />Una secuencia posible de recogida de información volátil sería:</p>
+<ul style="list-style-type: square;">
+<li>Registros caché.</li>
+<li>Tabla de enrutamiento.</li>
+<li>Caché ARP.</li>
+<li>Archivos temporales del sistema.</li>
+</ul>
+<p>La captura de la evidencia no debe alterar la prueba ni el entorno, al proceso de recogida y análisis de evidencia se le denomina: <strong>Cadena de custodia.</strong></p>
+<p>En la cadena de custodia, se debe dejar muy claro:</p>
+<ul style="list-style-type: disc;">
+<li>¿Dónde, cuándo y por quién ha sido descubierta y recogida la evidencia?</li>
+<li>¿Dónde, cuándo y por quién ha sido examinada y verificada la evidencia?</li>
+<li>¿Quién custodia o ha estado custodiando la evidencia?</li>
+<li>¿Cuándo y cómo ha cambiado de custodia?</li>
+</ul>
+<p>Lo que se busca son evidencias digitales, que se pueden clasificar en:</p>
+<ul>
+<li>Físicas.
+<ul>
+<li>Soportes de almacenamiento (HD, CD, DVD).</li>
+<li>Dispositivos electrónicos (teléfonos, tabletas, portátiles).</li>
+<li>Dispositivos de comunicaciones (routers, conmutadores, concentradores).</li>
+</ul>
+</li>
+<li>Lógicas.
+<ul>
+<li>Registros generados por el sistema (archivos log).</li>
+<li>Registros almacenados en el sistema (texto, imágenes, vídeos).</li>
+<li>Registros de servidor (generados por servidores como Apache).</li>
+</ul>
+</li>
+</ul>
+<p>La recogida de evidencias debe hacerse en la medida de lo posible sin utilizar programas del propio sistema, por ejemplo, ejecutando algún software desde una unidad de CD o memoria flash.</p>
+<p>Entre las acciones que se pueden emplear para esta recogida están las siguientes:</p>
+<ol>
+<li>Obtener la fecha y la hora del sistema.</li>
+<li>Realizar una instantánea del estado actual del sistema.</li>
+<li>Utilizar comandos de consola.</li>
+<li>Ver los puertos TCP y UDP abiertos y las aplicaciones que los están utilizando.</li>
+<li>Listar los usuarios conectados.</li>
+<li>Enumerar los procesos activos.</li>
+<li>Ver la configuración de direcciones IP.</li>
+<li>Ver la tabla de correspondencias de las direcciones MAC.</li>
+<li>Buscar ficheros ocultos o borrados.</li>
+<li>Ver registros log del sistema.</li>
+<li>Analizar el tráfico de red.</li>
+<li>Hacer copias bit a bit de los discos duros.</li>
+</ol></div>
+</div>
+</div>
 </div>
 </div>
 </article>
