@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Autoevaluación | Modelo Entidad - Relación </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-34"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Modelo Entidad Relación</a></li>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
+      <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
+      <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
+      <li><a href="elementos_necesarios.html" class="no-ch">Elementos necesarios</a></li>
+      <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="ud_1_introduccin_a_las_bbdd_relacionales.html" class="current-page-parent daddy">UD 1. Introducción a las BBDD relacionales</a>
+   <ul>
+      <li><a href="11_aplicaciones_de_los_sgbd.html" class="no-ch">1.1. Aplicaciones de los SGBD</a></li>
+      <li><a href="12_los_datos.html" class="no-ch">1.2. Los datos</a></li>
+      <li><a href="13_modelos_de_datos.html" class="no-ch">1.3. Modelos de datos</a></li>
+      <li><a href="14_lenguajes_de_bases_de_datos.html" class="no-ch">1.4. Lenguajes de bases de datos</a></li>
+      <li id="active"><a href="autoevaluacin.html" class="active no-ch">Autoevaluación</a></li>
+      <li><a href="practica.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud2_bases_de_datos_relacionales.html" class="daddy">UD2. Bases de Datos Relacionales</a>
+   <ul class="other-section">
+      <li><a href="21_conceptos_bsicos.html" class="no-ch">2.1. Conceptos básicos</a></li>
+      <li><a href="22_dominios.html" class="no-ch">2.2. Dominios</a></li>
+      <li><a href="23_claves.html" class="no-ch">2.3. Claves</a></li>
+      <li><a href="24_el_lenguaje_de_consultas_sql.html" class="no-ch">2.4. El lenguaje de consultas: SQL</a></li>
+      <li><a href="25_componentes_del_sql.html" class="no-ch">2.5. Componentes del SQL</a></li>
+      <li><a href="26_tipos_de_datos.html" class="no-ch">2.6. Tipos de datos</a></li>
+      <li><a href="27_constantes_y_nulos.html" class="no-ch">2.7. Constantes y Nulos</a></li>
+      <li><a href="autoevaluacin0.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica0.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud3_sql_select.html" class="daddy">UD3. SQL: SELECT</a>
+   <ul class="other-section">
+      <li><a href="31_la_clusula_select.html" class="no-ch">3.1. La cláusula SELECT</a></li>
+      <li><a href="32_select_bsico.html" class="no-ch">3.2. SELECT básico</a></li>
+      <li><a href="33_filas_duplicadas.html" class="no-ch">3.3. Filas duplicadas</a></li>
+      <li><a href="34_condiciones.html" class="no-ch">3.4. Condiciones</a></li>
+      <li><a href="35_condiciones_compuestas.html" class="no-ch">3.5. Condiciones compuestas</a></li>
+      <li><a href="36_ordenacin.html" class="no-ch">3.6. Ordenación</a></li>
+      <li><a href="37_unin.html" class="no-ch">3.7. Unión</a></li>
+      <li><a href="38_multitabla.html" class="no-ch">3.8. Multitabla</a></li>
+      <li><a href="39_consultas_sumarias.html" class="no-ch">3.9. Consultas sumarias</a></li>
+      <li><a href="autoevaluacin1.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica1.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud4_sql_insert_y_delete.html" class="no-ch">UD4. SQL: INSERT y DELETE</a></li>
+   <li><a href="ud5_sql_update.html" class="no-ch">UD5. SQL: UPDATE</a></li>
+   <li><a href="ud6_sql_create_drop_y_alter.html" class="no-ch">UD6. SQL: CREATE, DROP Y ALTER</a></li>
+   <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
+   <li><a href="bloque_4_lenguaje_script_plsql.html" class="no-ch">Bloque 4. Lenguaje Script PL/SQL</a></li>
+   <li><a href="bibliografa0.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="14_lenguajes_de_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="practica.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Autoevaluación</h1></header>
+<article class="iDevice_wrapper QuizTestIdevice em_iDevice" id="id66">
+<script type="text/javascript">/*<![CDATA[*/
+var numQuestions = 10;
+var rawScore = 0;
+var actualScore = 0;
+var question0;
+var question1;
+var question2;
+var question3;
+var question4;
+var question5;
+var question6;
+var question7;
+var question8;
+var question9;
+var key0 = 1;
+var key1 = 0;
+var key2 = 1;
+var key3 = 2;
+var key4 = 2;
+var key5 = 1;
+var key6 = 0;
+var key7 = 0;
+var key8 = 1;
+var key9 = 0;
+function getAnswer()
+        {
+            for (var i=0; i < 3; i++)
+            {
+               if (document.getElementById("quizForm66").key0b66[i].checked)
+               {
+                  question0 = document.getElementById("quizForm66").key0b66[i].value;
+                  break;
+               }
+            }
+            
+            for (var i=0; i < 3; i++)
+            {
+               if (document.getElementById("quizForm66").key1b66[i].checked)
+               {
+                  question1 = document.getElementById("quizForm66").key1b66[i].value;
+                  break;
+               }
+            }
+            
+            for (var i=0; i < 3; i++)
+            {
+               if (document.getElementById("quizForm66").key2b66[i].checked)
+               {
+                  question2 = document.getElementById("quizForm66").key2b66[i].value;
+                  break;
+               }
+            }
+            
+            for (var i=0; i < 3; i++)
+            {
+               if (document.getElementById("quizForm66").key3b66[i].checked)
+               {
+                  question3 = document.getElementById("quizForm66").key3b66[i].value;
+                  break;
+               }
+            }
+            
+            for (var i=0; i < 3; i++)
+            {
+               if (document.getElementById("quizForm66").key4b66[i].checked)
+               {
+                  question4 = document.getElementById("quizForm66").key4b66[i].value;
+                  break;
+               }
+            }
+            
+            for (var i=0; i < 3; i++)
+            {
+               if (document.getElementById("quizForm66").key5b66[i].checked)
+               {
+                  question5 = document.getElementById("quizForm66").key5b66[i].value;
+                  break;
+               }
+            }
+            
+            for (var i=0; i < 3; i++)
+            {
+               if (document.getElementById("quizForm66").key6b66[i].checked)
+               {
+                  question6 = document.getElementById("quizForm66").key6b66[i].value;
+                  break;
+               }
+            }
+            
+            for (var i=0; i < 3; i++)
+            {
+               if (document.getElementById("quizForm66").key7b66[i].checked)
+               {
+                  question7 = document.getElementById("quizForm66").key7b66[i].value;
+                  break;
+               }
+            }
+            
+            for (var i=0; i < 3; i++)
+            {
+               if (document.getElementById("quizForm66").key8b66[i].checked)
+               {
+                  question8 = document.getElementById("quizForm66").key8b66[i].value;
+                  break;
+               }
+            }
+            
+            for (var i=0; i < 3; i++)
+            {
+               if (document.getElementById("quizForm66").key9b66[i].checked)
+               {
+                  question9 = document.getElementById("quizForm66").key9b66[i].value;
+                  break;
+               }
+            }
+            }
+        function calcRawScore(){
+
+            if (question0 == key0)
+            {
+               rawScore++;
+            }
+            if (question1 == key1)
+            {
+               rawScore++;
+            }
+            if (question2 == key2)
+            {
+               rawScore++;
+            }
+            if (question3 == key3)
+            {
+               rawScore++;
+            }
+            if (question4 == key4)
+            {
+               rawScore++;
+            }
+            if (question5 == key5)
+            {
+               rawScore++;
+            }
+            if (question6 == key6)
+            {
+               rawScore++;
+            }
+            if (question7 == key7)
+            {
+               rawScore++;
+            }
+            if (question8 == key8)
+            {
+               rawScore++;
+            }
+            if (question9 == key9)
+            {
+               rawScore++;
+            }
+        
+        }
+        
+        function calcScore2()
+        {
+            getAnswer();
+     
+            calcRawScore();
+            actualScore =  Math.round(rawScore / numQuestions * 100);
+            var id = "66";
+            document.getElementById("quizForm"+id).submitB.disabled = true;
+            var s = document.getElementById("quizFormScore"+id);
+                        var msg_str ="Su puntuación es %d%%";            msg_str = msg_str.replace("%d",actualScore).replace("%%","%");            if (s) { s.innerHTML = "<div class='feedback'><p>"+msg_str+"</p></div>"; } else { alert(msg_str); }
+           
+        }
+    /*]]>*/</script>
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Cuestionario</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<form name="quizForm66" id="quizForm66" action="#" class="quiz-test-form">
+<input type="hidden" name="passrate" id="passrate-66" value="50" />
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion0b66" class="block iDevice_content">
+<p>Las siglas SGBD significan</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key0b661" class="sr-av"><a href="#answer-key0b661">Opción 1</a></label><input type="radio" name="key0b66" id="key0b661" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key0b661">
+<div id="taoptionAnswer0q0b66" class="block iDevice_content">
+<p>Sistema Generador de Bases de Datos</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key0b662" class="sr-av"><a href="#answer-key0b662">Opción 2</a></label><input type="radio" name="key0b66" id="key0b662" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key0b662">
+<div id="taoptionAnswer1q0b66" class="block iDevice_content">
+<p>Sistema Gestor de Bases de Datos</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key0b663" class="sr-av"><a href="#answer-key0b663">Opción 3</a></label><input type="radio" name="key0b66" id="key0b663" value="2" />
+</p>
+<div class="iDevice_answer-content" id="answer-key0b663">
+<div id="taoptionAnswer2q0b66" class="block iDevice_content">
+<p>System Gestor of Base of Dates</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion1b66" class="block iDevice_content">
+<p>Los SGBD se diseñan para ...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key1b661" class="sr-av"><a href="#answer-key1b661">Opción 1</a></label><input type="radio" name="key1b66" id="key1b661" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key1b661">
+<div id="taoptionAnswer0q1b66" class="block iDevice_content">
+<p>Gestionar grandes cantidades de datos</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key1b662" class="sr-av"><a href="#answer-key1b662">Opción 2</a></label><input type="radio" name="key1b66" id="key1b662" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key1b662">
+<div id="taoptionAnswer1q1b66" class="block iDevice_content">
+<p>Organizar y ordenar los datos para mostrarlos</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key1b663" class="sr-av"><a href="#answer-key1b663">Opción 3</a></label><input type="radio" name="key1b66" id="key1b663" value="2" />
+</p>
+<div class="iDevice_answer-content" id="answer-key1b663">
+<div id="taoptionAnswer2q1b66" class="block iDevice_content">
+<p>Optimizar el rendimiento del servidor</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion2b66" class="block iDevice_content">
+<p>Para actualizar la información de una manera rápida y eficiente, se debe...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key2b661" class="sr-av"><a href="#answer-key2b661">Opción 1</a></label><input type="radio" name="key2b66" id="key2b661" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key2b661">
+<div id="taoptionAnswer0q2b66" class="block iDevice_content">
+<p>Disponer de un equipamiento rápido y de última generación</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key2b662" class="sr-av"><a href="#answer-key2b662">Opción 2</a></label><input type="radio" name="key2b66" id="key2b662" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key2b662">
+<div id="taoptionAnswer1q2b66" class="block iDevice_content">
+<p>Definir una adecuada estructura de datos</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key2b663" class="sr-av"><a href="#answer-key2b663">Opción 3</a></label><input type="radio" name="key2b66" id="key2b663" value="2" />
+</p>
+<div class="iDevice_answer-content" id="answer-key2b663">
+<div id="taoptionAnswer2q2b66" class="block iDevice_content">
+<p>Usar un SGBD</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion3b66" class="block iDevice_content">
+<p>Una de las principales finalidades de los sistemas de bases de datos es...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key3b661" class="sr-av"><a href="#answer-key3b661">Opción 1</a></label><input type="radio" name="key3b66" id="key3b661" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key3b661">
+<div id="taoptionAnswer0q3b66" class="block iDevice_content">
+<p>... almacenar y mantener los datos.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key3b662" class="sr-av"><a href="#answer-key3b662">Opción 2</a></label><input type="radio" name="key3b66" id="key3b662" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key3b662">
+<div id="taoptionAnswer1q3b66" class="block iDevice_content">
+<p>... ocultar la complejidad al usuario.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key3b663" class="sr-av"><a href="#answer-key3b663">Opción 3</a></label><input type="radio" name="key3b66" id="key3b663" value="2" />
+</p>
+<div class="iDevice_answer-content" id="answer-key3b663">
+<div id="taoptionAnswer2q3b66" class="block iDevice_content">
+<p>... ofrecer a los usuarios una visión <em>abstracta</em> de los datos.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion4b66" class="block iDevice_content">
+<p>El nivel de abstracción orientado al usuario es...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key4b661" class="sr-av"><a href="#answer-key4b661">Opción 1</a></label><input type="radio" name="key4b66" id="key4b661" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key4b661">
+<div id="taoptionAnswer0q4b66" class="block iDevice_content">
+<p>El nivel físico</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key4b662" class="sr-av"><a href="#answer-key4b662">Opción 2</a></label><input type="radio" name="key4b66" id="key4b662" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key4b662">
+<div id="taoptionAnswer1q4b66" class="block iDevice_content">
+<p>El nivel lógico</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key4b663" class="sr-av"><a href="#answer-key4b663">Opción 3</a></label><input type="radio" name="key4b66" id="key4b663" value="2" />
+</p>
+<div class="iDevice_answer-content" id="answer-key4b663">
+<div id="taoptionAnswer2q4b66" class="block iDevice_content">
+<p>El nivel de vistas</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion5b66" class="block iDevice_content">
+<p>El nivel orientado a los administradores es...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key5b661" class="sr-av"><a href="#answer-key5b661">Opción 1</a></label><input type="radio" name="key5b66" id="key5b661" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key5b661">
+<div id="taoptionAnswer0q5b66" class="block iDevice_content">
+<p>El nivel físico</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key5b662" class="sr-av"><a href="#answer-key5b662">Opción 2</a></label><input type="radio" name="key5b66" id="key5b662" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key5b662">
+<div id="taoptionAnswer1q5b66" class="block iDevice_content">
+<p>El nivel lógico</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key5b663" class="sr-av"><a href="#answer-key5b663">Opción 3</a></label><input type="radio" name="key5b66" id="key5b663" value="2" />
+</p>
+<div class="iDevice_answer-content" id="answer-key5b663">
+<div id="taoptionAnswer2q5b66" class="block iDevice_content">
+<p>El nivel de vistas</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion6b66" class="block iDevice_content">
+<p>El nivel de abstracción que define cómo se almacenan los datos es...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key6b661" class="sr-av"><a href="#answer-key6b661">Opción 1</a></label><input type="radio" name="key6b66" id="key6b661" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key6b661">
+<div id="taoptionAnswer0q6b66" class="block iDevice_content">
+<p>El nivel físico</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key6b662" class="sr-av"><a href="#answer-key6b662">Opción 2</a></label><input type="radio" name="key6b66" id="key6b662" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key6b662">
+<div id="taoptionAnswer1q6b66" class="block iDevice_content">
+<p>El nivel lógico</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key6b663" class="sr-av"><a href="#answer-key6b663">Opción 3</a></label><input type="radio" name="key6b66" id="key6b663" value="2" />
+</p>
+<div class="iDevice_answer-content" id="answer-key6b663">
+<div id="taoptionAnswer2q6b66" class="block iDevice_content">
+<p>El nivel de vistas</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion7b66" class="block iDevice_content">
+<p>El modelo de datos es una colección de herramientas conceptuales para describir los datos, sus relaciones, su semántica y las ...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key7b661" class="sr-av"><a href="#answer-key7b661">Opción 1</a></label><input type="radio" name="key7b66" id="key7b661" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key7b661">
+<div id="taoptionAnswer0q7b66" class="block iDevice_content">
+<p>restricciones de consistencia</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key7b662" class="sr-av"><a href="#answer-key7b662">Opción 2</a></label><input type="radio" name="key7b66" id="key7b662" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key7b662">
+<div id="taoptionAnswer1q7b66" class="block iDevice_content">
+<p>entidades definidas</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key7b663" class="sr-av"><a href="#answer-key7b663">Opción 3</a></label><input type="radio" name="key7b66" id="key7b663" value="2" />
+</p>
+<div class="iDevice_answer-content" id="answer-key7b663">
+<div id="taoptionAnswer2q7b66" class="block iDevice_content">
+<p>estructuras creadas</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion8b66" class="block iDevice_content">
+<p>Los datos de un registro en una tabla son...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key8b661" class="sr-av"><a href="#answer-key8b661">Opción 1</a></label><input type="radio" name="key8b66" id="key8b661" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key8b661">
+<div id="taoptionAnswer0q8b66" class="block iDevice_content">
+<p>las columnas</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key8b662" class="sr-av"><a href="#answer-key8b662">Opción 2</a></label><input type="radio" name="key8b66" id="key8b662" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key8b662">
+<div id="taoptionAnswer1q8b66" class="block iDevice_content">
+<p>las celdas</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key8b663" class="sr-av"><a href="#answer-key8b663">Opción 3</a></label><input type="radio" name="key8b66" id="key8b663" value="2" />
+</p>
+<div class="iDevice_answer-content" id="answer-key8b663">
+<div id="taoptionAnswer2q8b66" class="block iDevice_content">
+<p>las filas</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="question">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion9b66" class="block iDevice_content">
+<p>El modelo más utilizado es el ...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key9b661" class="sr-av"><a href="#answer-key9b661">Opción 1</a></label><input type="radio" name="key9b66" id="key9b661" value="0" />
+</p>
+<div class="iDevice_answer-content" id="answer-key9b661">
+<div id="taoptionAnswer0q9b66" class="block iDevice_content">
+<p>Modelo Relacional</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key9b662" class="sr-av"><a href="#answer-key9b662">Opción 2</a></label><input type="radio" name="key9b66" id="key9b662" value="1" />
+</p>
+<div class="iDevice_answer-content" id="answer-key9b662">
+<div id="taoptionAnswer1q9b66" class="block iDevice_content">
+<p>Entidad Relación</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="key9b663" class="sr-av"><a href="#answer-key9b663">Opción 3</a></label><input type="radio" name="key9b66" id="key9b663" value="2" />
+</p>
+<div class="iDevice_answer-content" id="answer-key9b663">
+<div id="taoptionAnswer2q9b66" class="block iDevice_content">
+<p>Modelo Orientado a Objetos</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<div class="block iDevice_buttons">
+<p><input type="submit" name="submitB" value="ENVIAR RESPUESTAS" /> <span class="js-hidden js-warning">Habilitar JavaScript</span></p>
+</div>
+<div id="quizFormScore66"></div>
+</form>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="14_lenguajes_de_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="practica.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
+Curso 2020 - 2021</footer></div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

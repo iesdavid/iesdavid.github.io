@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1. Anatomía de un ataque | Módulo de Seguridad y Alta Disponibilidad </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-51"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Módulo de Seguridad y Alta Disponibilidad</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Seguridad y Alta Disponibilidad</a></li>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
+      <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
+      <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li><a href="bloque_1_tratamiento_de_la_informacin.html" class="daddy">Bloque 1. Tratamiento de la Información</a>
+   <ul class="other-section">
+      <li><a href="ud1_seguridad_de_la_informacin.html" class="daddy">UD1. Seguridad de la Información</a>
+      <ul class="other-section">
+         <li><a href="11_confidencialidad_integridad_y_disponibilidad.html" class="no-ch">1.1. Confidencialidad, integridad y disponibilidad</a></li>
+         <li><a href="12_vulnerabilidad.html" class="no-ch">1.2. Vulnerabilidad</a></li>
+         <li><a href="13_elementos_vulnerables.html" class="no-ch">1.3. Elementos vulnerables</a></li>
+         <li><a href="14_niveles_de_seguridad.html" class="no-ch">1.4. Niveles de Seguridad</a></li>
+         <li><a href="15_tipos_de_amenazas.html" class="no-ch">1.5. Tipos de Amenazas</a></li>
+         <li><a href="16_amenazas_humanas.html" class="no-ch">1.6. Amenazas Humanas</a></li>
+         <li><a href="17_amenazas_fsicas.html" class="no-ch">1.7. Amenazas Físicas</a></li>
+         <li><a href="18_amenazas_lgicas.html" class="no-ch">1.8. Amenazas Lógicas</a></li>
+         <li><a href="19_seguridad_activa_y_pasiva.html" class="no-ch">1.9. Seguridad Activa y Pasiva</a></li>
+         <li><a href="110_contraseas.html" class="no-ch">1.10. Contraseñas</a></li>
+      </ul>
+      </li>
+      <li><a href="ud2_seguridad_fsica_y_lgica.html" class="daddy">UD2. Seguridad Física y Lógica</a>
+      <ul class="other-section">
+         <li><a href="21_tipos_de_desastres.html" class="no-ch">2.1. Tipos de desastres</a></li>
+         <li><a href="22_ubicacin_y_proteccin_fsica.html" class="no-ch">2.2. Ubicación y protección física</a></li>
+         <li><a href="23_sistemas_de_alimentacin_ininterrumpida.html" class="no-ch">2.3. Sistemas de alimentación ininterrumpida</a></li>
+         <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+         <li><a href="24_criptografa.html" class="no-ch">2.4. Criptografía</a></li>
+         <li><a href="25_sistemas_asimtricos.html" class="no-ch">2.5. Sistemas asimétricos</a></li>
+         <li><a href="26_listas_de_control_de_accesos.html" class="no-ch">2.6. Listas de control de accesos</a></li>
+         <li><a href="27_polticas_de_contraseas.html" class="no-ch">2.7. Políticas de contraseñas</a></li>
+         <li><a href="28_sistemas_biomtricos.html" class="no-ch">2.8. Sistemas biométricos</a></li>
+         <li><a href="29_polticas_de_almacenamiento.html" class="no-ch">2.9. Políticas de almacenamiento</a></li>
+         <li><a href="210_copias_de_seguridad_y_respaldo.html" class="no-ch">2.10. Copias de seguridad y respaldo</a></li>
+         <li><a href="211_anlisis_forense.html" class="no-ch">2.11. Análisis forense</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="bloque_2_mecanismos_de_seguridad.html" class="current-page-parent daddy">Bloque 2. Mecanismos de Seguridad</a>
+   <ul>
+      <li class="current-page-parent"><a href="ud3_ataques_y_contramedidas.html" class="current-page-parent daddy">UD3. Ataques y contramedidas</a>
+      <ul>
+         <li id="active"><a href="31_anatoma_de_un_ataque.html" class="active no-ch">3.1. Anatomía de un ataque</a></li>
+         <li><a href="32_software_malicioso.html" class="no-ch">3.2. Software malicioso</a></li>
+      </ul>
+      </li>
+      <li><a href="ud4_seguridad_en_la_red.html" class="no-ch">UD4. Seguridad en la Red</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_3_acceso_remoto.html" class="daddy">Bloque 3. Acceso Remoto</a>
+   <ul class="other-section">
+      <li><a href="ud5_seguridad_perimetral.html" class="no-ch">UD5. Seguridad perimetral</a></li>
+      <li><a href="ud6_vpn_y_acceso_remoto.html" class="no-ch">UD6. VPN y acceso remoto</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_4_el_cortafuegos.html" class="daddy">Bloque 4. El Cortafuegos</a>
+   <ul class="other-section">
+      <li><a href="ud7_firewall.html" class="no-ch">UD7. Firewall</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_5_el_servidor_proxy.html" class="daddy">Bloque 5. El Servidor Proxy</a>
+   <ul class="other-section">
+      <li><a href="ud8_uso_de_proxy.html" class="no-ch">UD8. Uso de Proxy</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_6_alta_disponibilidad.html" class="daddy">Bloque 6. Alta Disponibilidad</a>
+   <ul class="other-section">
+      <li><a href="ud9_configuracin_de_alta_disponibilidad.html" class="no-ch">UD9. Configuración de alta disponibilidad</a></li>
+      <li><a href="ud10_virtualizacin.html" class="no-ch">UD10. Virtualización</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_7_legislacin.html" class="daddy">Bloque 7. Legislación</a>
+   <ul class="other-section">
+      <li><a href="ud11_legislacin_sobre_seguridad_y_proteccin_de_datos.html" class="no-ch">UD11. Legislación sobre seguridad y protección de datos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ud3_ataques_y_contramedidas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_software_malicioso.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1. Anatomía de un ataque</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id110">
+<div class="iDevice emphasis0">
+<div id="ta110_85" class="block iDevice_content">
+<p>Conocer las diferentes etapas que conforman un ataque informático brinda la ventaja de aprender a pensar como los atacantes y a jamás subestimar su mentalidad. Desde la perspectiva del profesional de seguridad, se debe aprovechar esas habilidades para comprender y analizar la forma en que los atacantes llevan a cabo un ataque.</p>
+<p>Un ataque podemos dividirlo en las siguientes fases:</p>
+<div class="exe-fx exe-paginated">
+<h2>Fase 1</h2>
+<h3>Reconocimiento</h3>
+<p>Esta etapa involucra la obtención de información (Information Gathering) con respecto a una potencial víctima que puede ser una persona u organización, utilizando diferentes recursos. Generalmente se recurre a diferentes recursos de Internet como búsquedas avanzadas a través de Google y otros buscadores para recolectar datos del objetivo. Algunas de las técnicas utilizadas en este primer paso son: diferentes estrategias de Ingeniería social como el Dumpster diving (buscar información del objetivo en la basura), el sniffing (interceptar información).</p>
+<p>Toda información que se recopile, sea importante o insignificante, servirá a la hora del ataque, obteniéndose de una forma <strong>activa</strong> cuando tenemos una interacción directa con el objetivo o de una manera <strong>pasiva</strong> cuando no se tiene interacción directa con el objetivo.</p>
+<p>En esta fase se sabe si el ataque será o no exitoso.</p>
+<h2>Fase 2</h2>
+<h3>Exploración (Scanning)</h3>
+<p><a href="zenmap-multi-1220x700.png"><img src="zenmap-multi-1220x700.png" alt="" style="float: right; margin: 15px;" width="321" height="184" /></a></p>
+<p>En esta segunda etapa se utiliza la información obtenida en la fase 1 para sondear el blanco y tratar de obtener datos relevantes sobre el sistema víctima; como por ejemplo, direcciones IP, nombres de hosts, credenciales de autenticación, entre otros. Entre las herramientas que un atacante puede emplear durante esta fase se encuentran:</p>
+<ul>
+<li>Network mappers</li>
+<li>Port mappers</li>
+<li>Network scanners</li>
+<li>Port scanners</li>
+<li>Vulnerability scanners</li>
+</ul>
+<h2>Fase 3</h2>
+<h3>Obtener acceso (Gaining access)</h3>
+<p>En esta instancia comienza a concretarse el ataque a través de la explotación de las vulnerabilidades y defectos del sistema (Flaw exploitation)<br />descubiertos durante las fases de reconocimiento y exploración. Algunas de las técnicas que el atacante puede utilizar son:</p>
+<ul>
+<li>Buffer Overflow</li>
+<li>Denial of Service (DoS)</li>
+<li>Distributed Denial of Service (DDos)</li>
+<li>Password filtering (<a href="https://pentestlab.blog/2020/02/10/credential-access-password-filter-dll/">ver este enlace</a>)</li>
+<li>Session hijacking</li>
+</ul>
+<h2>Fase 4</h2>
+<h3>Mantener el acceso (Maintaining access)</h3>
+<p>Una vez que el atacante ha conseguido acceder al sistema, buscará implantar herramientas que le permitan volver a acceder en el futuro desde cualquier lugar donde tenga acceso a Internet. Para ello, suelen recurrir a recursos como:</p>
+<ul>
+<li>Backdoors</li>
+<li>Rootkits</li>
+<li>Troyanos</li>
+</ul>
+<h2>Fase 5</h2>
+<h3>Borrar huellas (Clearing tracks)</h3>
+<p>Una vez que el atacante logró obtener y mantener el acceso al sistema, intentará borrar todas las huellas que fue dejando durante la intrusión para evitar ser detectado por el profesional de seguridad o los administradores de la red. Buscará eliminar los archivos de registro (logs) o alarmas del Sistema de Detección de Intrusos (IDS), entre otros.</p>
+</div>
+<p style="text-align: center;"><img src="Anatomia_de_un_ataque_informatico.jpg" style="margin: 15px;" width="480" height="398" /></p>
+<p><strong></strong></p>
+<p></p>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ud3_ataques_y_contramedidas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_software_malicioso.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
+Curso 2020 - 2021</footer></div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>
