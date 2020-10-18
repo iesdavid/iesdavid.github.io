@@ -73,9 +73,18 @@
       <ul>
          <li><a href="31_anatoma_de_un_ataque.html" class="no-ch">3.1. Anatomía de un ataque</a></li>
          <li id="active"><a href="32_software_malicioso.html" class="active no-ch">3.2. Software malicioso</a></li>
+         <li><a href="33_herramientas_preventivas.html" class="no-ch">3.3. Herramientas preventivas</a></li>
+         <li><a href="34_herramientas_paliativas.html" class="no-ch">3.4. Herramientas paliativas</a></li>
       </ul>
       </li>
-      <li><a href="ud4_seguridad_en_la_red.html" class="no-ch">UD4. Seguridad en la Red</a></li>
+      <li><a href="ud4_seguridad_en_la_red.html" class="daddy">UD4. Seguridad en la Red</a>
+      <ul class="other-section">
+         <li><a href="41_monitorizacin_del_trfico_en_redes.html" class="no-ch">4.1. Monitorización del tráfico en redes</a></li>
+         <li><a href="42_seguridad_en_los_protocolos_para_comunicaciones_inalmbricas.html" class="no-ch">4.2. Seguridad en los protocolos para comunicaciones inalámbricas</a></li>
+         <li><a href="43_riesgos_potenciales_de_los_servicios_de_red.html" class="no-ch">4.3. Riesgos potenciales de los servicios de red</a></li>
+         <li><a href="44_intentos_de_penetracin.html" class="no-ch">4.4. Intentos de penetración</a></li>
+      </ul>
+      </li>
    </ul>
    </li>
    <li><a href="bloque_3_acceso_remoto.html" class="daddy">Bloque 3. Acceso Remoto</a>
@@ -109,7 +118,7 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="31_anatoma_de_un_ataque.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ud4_seguridad_en_la_red.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="31_anatoma_de_un_ataque.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_herramientas_preventivas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
@@ -118,7 +127,7 @@
 <article class="iDevice_wrapper FreeTextIdevice" id="id114">
 <div class="iDevice emphasis0">
 <div id="ta114_85" class="block iDevice_content">
-<p>El universo del malware es infinito y está constantemente en evolución. Sistemas antivirus implantados en servidores de correo o corporativos ofrecen unos resultados bastante aceptables pero siempre van un paso por detrás de las nuevas muestras y, por tanto, no son efectivos al 100% por lo que siempre se pueden dar casos de programas maliciosos que eluden estos sistemas y alcanzan el equipo del usuariofinal, consiguiendo ejecutarse.<br />Una vez que un equipo está infectado, resulta vital actuar con rapidez para minimizar el impacto que pueda tener en el propio sistema o en el resto de la organización por lo que es crucial identificar de qué espécimen se trata y eliminarlo.</p>
+<p>El universo del malware es infinito y está constantemente en evolución. Sistemas antivirus implantados en servidores de correo o corporativos ofrecen unos resultados bastante aceptables pero siempre van un paso por detrás de las nuevas muestras y, por tanto, no son efectivos al 100% por lo que siempre se pueden dar casos de programas maliciosos que eluden estos sistemas y alcanzan el equipo del usuario final, consiguiendo ejecutarse.<br />Una vez que un equipo está infectado, resulta vital actuar con rapidez para minimizar el impacto que pueda tener en el propio sistema o en el resto de la organización por lo que es crucial identificar de qué espécimen se trata y eliminarlo.</p>
 </div>
 </div>
 </article>
@@ -129,8 +138,8 @@
 <div class="iDevice_content_wrapper">
 <div id="ta115_115_2" class="block iDevice_content">
 <div class="exe-text"><div class="exe-fx exe-timeline">
-<h2>1949</h2>
-<h3>Programas almacenados</h3>
+<h2>Años 40</h2>
+<h3>1949. Programas almacenados</h3>
 <p><a href="JohnvonNeumann-LosAlamos.gif"><img src="JohnvonNeumann-LosAlamos.gif" style="float: right; margin: 15px;" width="111" height="145" /></a>Año en que Von Neumann estableció la idea de <strong>programa almacenado</strong> y expuso <em>La Teoría y Organización de Autómatas Complejos</em>, donde presentaba por primera vez la posibilidad de desarrollar pequeños programas replicantes y capaces de tomar el control de otros programas de similar estructura. Si bien el concepto tiene miles de aplicaciones en la ciencia, es fácil apreciar una aplicación negativa de la teoría expuesta por Von Neumann: los virus informáticos, programas que se reproducen a sí mismos el mayor número de veces posible y aumentan su población de forma exponencial.</p>
 <p></p>
 <p></p>
@@ -147,13 +156,65 @@
 <h3>1984. CoreWar</h3>
 <p><a href="Core_War_PMars_Screenshot.png"><img src="Core_War_PMars_Screenshot.png" alt="" style="float: left; margin: 15px;" width="150" height="104" /></a>En 1959, en los laboratorios de Bell Computer, tres jóvenes programadores: Robert Thomas Morris, Douglas Mcllroy y Victor Vysottsky, crean un programa denominado Darwin. En 1984, se retomaría la idea como <strong>CoreWar</strong> basado en la teoría de Von Neumann y en el que el objetivo es que programas combatan entre sí tratando de ocupar toda la memoria de la máquina eliminando así a los oponentes. Este juego es considerado el precursor de los <strong>virus</strong> informáticos.</p>
 <p>Este mismo año, Frederick B. Cohen acuña por primera vez el término virus informático en uno de sus estudios definiéndolo como “Programa que puede infectar a otros programas incluyendo una copia posiblemente evolucionada de sí mismo”.</p>
-<h3>1987. Jerusalem</h3>
-<p>En <strong>1987</strong> hace su aparición el virus <strong>Jerusalem</strong> o <strong>Viernes 13</strong>, que era capaz de infectar archivos .EXE y .COM. Su primera aparición fue reportada desde la Universidad Hebrea de Jerusalem y ha llegado a ser uno de los virus más famosos de la historia.</p>
+<p></p>
+<p></p>
+<h3>1988. Jerusalem</h3>
+<p><a href="Viernes13.jpg"><img src="Viernes13.jpg" alt="" style="float: right; margin: 15px;" width="127" height="100" /></a>En <strong>1988 </strong>hace su aparición el virus <strong>Jerusalem</strong> o <strong>Viernes 13</strong>, que era capaz de infectar archivos .EXE y .COM. Su primera aparición fue reportada desde la Universidad Hebrea de Jerusalem y ha llegado a ser uno de los virus más famosos de la historia.</p>
+<p><a href="https://www.pandasecurity.com/spain/mediacenter/malware/virus-viernes-13/">Panda Security - Virus Viernes 13</a></p>
+<p></p>
 <p></p>
 <h2>Años 90</h2>
 <h3>1999. Happy</h3>
-<p>En 1999 surge el gusano Happy desarrollado por el francés Spanska que crea una nueva corriente en cuanto al desarrollo de malware que persiste hasta el día de hoy: el envío de gusanos por correo electrónico. Este gusano estaba encaminado y programado para propagarse a través del correo electrónico.</p>
-</div></div>
+<p><a href="stupid-viruses-happy99.jpg"><img src="stupid-viruses-happy99.jpg" alt="" style="float: left; margin: 15px;" width="128" height="100" /></a>En 1999 surge el gusano Happy desarrollado por el francés Spanska que crea una nueva corriente en cuanto al desarrollo de malware que persiste hasta el día de hoy: el envío de gusanos por correo electrónico. Este gusano estaba encaminado y programado para propagarse a través del correo electrónico.</p>
+<p><a href="http://reicaz.org/miscelan/virus/informes/iwormhap/iwormhap.htm">Informe sobre el gusano Happy</a></p>
+<p></p>
+<p></p>
+<h2>Siglo XXI</h2>
+<h3>2000. Autorun</h3>
+<p><a href="memoria-flash-usb-con-autorun.inf.jpeg"><img src="memoria-flash-usb-con-autorun.inf.jpeg" alt="" style="float: right; margin-left: 15px;" width="100" height="120" /></a>El objetivo principal de este virus es propagarse y afectar a otros ordenadores. Tiene distintos métodos de propagación:</p>
+<ul>
+<li>A través de unidades mapeadas: El virus comprueba si el ordenador infectado se encuentra conectado a una red y en caso afirmativo, realiza un inventario de todos los equipos de la red y crea una copia de sí mismo en cada uno de los ordenadores.</li>
+<li>Propagación a través de recursos compartidos de red: En caso de que el ordenador se encuentre conectado a una red, el virus intenta acceder a las unidades compartidas, utilizando contraseñas que son típicas o fáciles de adivinar</li>
+<li>Distribución de archivos infectados: Este virus no se propaga automáticamente, para ello necesita copiarse en archivos del siguiente modo: Los archivos infectados pueden entrar al ordenador a través de las vía actuales: disquetes, mensajes de correo electrónico con archivos adjuntos, descargas de Internet, redes de intercambio de archivos, etc.</li>
+</ul>
+<p><a href="http://www.zonavirus.com/articulos/fin-del-autoruninf-en-los-pendrives-2-articulos-de-hispasec-al-respecto.asp">El Fin del Autorun.inf</a></p>
+<h3>2003. I Love You</h3>
+<p>En el año 2000 hubo una infección que tuvo muchísima repercusión mediática debido a los daños ocasionados por la infección tan masiva que produjo (más de 50 millones de ordenadores infectados). Fuel el gusano I Love You o LoveLetter, que, basándose en técnicas de ingeniería social infectaba a los usuarios a través del correo electrónico.</p>
+<p><a href="https://elpais.com/diario/2003/05/26/portada/1053900127_850215.html">Noticia en El Pais: "El virus 'I love you' paraliza millones de ordenadores en todo el mundo"</a></p>
+<h3>2004. El año de los gusanos</h3>
+<p><a href="netksy.webp"><img src="netksy.webp" alt="" style="float: left; margin-right: 15px;" width="124" height="101" /></a>Se convirtió en el gusano de correo electrónico que más rápido se propagó (a partir de enero de 2004), superando los registros anteriores establecidos por el gusano Sobig y ILoveYou, un récord que a partir de 2016 aún no se ha superado.</p>
+<p><a href="https://es.wikipedia.org/wiki/MyDoom">Wikipedia: MyDoom</a></p>
+<p><a href="https://elpais.com/diario/2004/02/01/sociedad/1075590004_850215.html">Noticia en El Pais: "El virus 'Mydoom' causa pérdidas de 21.000 millones, según los expertos"</a></p>
+<p><a href="https://malware.wikia.org/es/wiki/Netsky"><strong>Netsky</strong></a>, <a href="https://es.wikipedia.org/wiki/Gusano_Sasser"><strong>Sasser</strong></a> y <strong>Bagle</strong>, alarmaron a toda la sociedad infectando una gran cantidad de ordenadores con Sistema Operativo Windows. Creados por Sven Jaschan, de Alemania, de tan sólo 18 años.</p>
+<p>Este fue el año más duro de este tipo epidemias y curiosamente el último. Los creadores de malware se dieron cuenta de que sus conocimientos servirían para algo más que para tener repercusión mediática... para ganar dinero.</p>
+<p></p>
+<h3>2005. Troyanos bancarios</h3>
+<p>Fue en 2005 cuando, tras 5 años de tendencia sostenida en la que los virus tal y como los conocíamos fueron dejando su lugar a gusanos y troyanos encargados de formar <strong>redes de bots</strong> para obtener dinero, cuando vieron que el entretenimiento que podía suponer la creación de malware se podía convertir en un negocio muy rentable. Quizá la mejor prueba de ello sean los denominados <strong>Troyanos Bancarios</strong> de los que existen miles de variantes dado que los creadores, para dificultar su detección modificaban permanente el código de los mismos.<br />Este tipo de malware actualmente se distribuye mediante <strong>exploits</strong>, <strong>spam</strong> o a través de otro malware que descarga el troyano bancario. Este último tipo de troyano es el encargado de robar información relacionada con las transacciones comerciales y/o datos bancarios del usuario infectado.</p>
+<p><a href="https://www.redeszone.net/tutoriales/seguridad/troyano-bancario-evitar-ataque/">Cómo funciona un troyano bancario y qué hacer para protegernos</a></p>
+<h3>2010. Arma cibernética</h3>
+<p><a href="12.jpg"><img src="12.jpg" style="float: left; margin-right: 15px; margin-left: 15px;" width="146" height="104" /></a>Una empresa de seguridad bielorrusa descubre <strong>Stuxnet</strong>, un inusual gusano informático. Su gran tamaño y complejidad lo convertían en una sofisticada arma cibernética que logró inutilizar un millar de centrifugadoras de uranio en Irán. Fue la primera vez que un virus informático causó daños en infraestructuras. Se sospecha que fue creada por un gobierno enemigo de Irán.</p>
+<p><a href="https://cronicaseguridad.com/2018/05/16/stuxnet-primera-ciberarma-historia/">Stuxnet: Primera ciberarma de la historia</a></p>
+<p></p>
+<h3>2013. CryptoLocker</h3>
+<p>El troyano <strong>CryptoLocker</strong> causa la primera infección masiva con ransomware, código malicioso que encripta archivos del usuario, obligándole a pagar un rescate para recuperarlos. Se calcula que sus autores extorsionaron a sus víctimas un total de unos 3 millones de dólares.</p>
+<h3>2017. Wannacry</h3>
+<p><a href="1920px-Countries_initially_affected_in_WannaCry_ransomware_attack.svg.png"><img src="1920px-Countries_initially_affected_in_WannaCry_ransomware_attack.svg.png" alt="" style="margin-right: 15px; margin-left: 15px; float: left;" width="234" height="120" /></a>Los ataques ransomware de la variedad <strong>WannaCry</strong> (en inglés WannaCry ransomware attack o Wanna Cry Doble Pulsar Attack), son ataques informáticos que usan el criptogusano conocido como WannaCry (también denominado WannaCrypt, WanaCrypt0r 2.0, Wanna Decryptor) dirigidos al sistema operativo Windows de Microsoft. Durante el ataque, los datos de la víctima son encriptados, y se solicita un rescate económico pagado con la criptomoneda <strong>Bitcoin</strong>, para permitir el acceso a los datos.</p>
+<p>El ataque empezó el viernes, 12 de mayo de 2017 y ha sido descrito como sin precedentes en tamaño, infectando más de 230.000 computadoras en más de 150 países. Los países más afectados que han sido reportados fueron Rusia, Ucrania, India y Taiwán, pero partes del servicio nacional de salud de Gran Bretaña (NHS), Telefónica de España, FedEx, Deutsche Bahn, y las aerolíneas LATAM también fueron afectadas; junto con muchos otros blancos a nivel mundial.</p>
+<p><a href="https://www.kaspersky.es/resource-center/threats/ransomware-wannacry">Kaspersky: Todo sobre WannaCry</a></p>
+</div>
+<p><a href="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1JfKWeELhNNTXFDyGQs8UC6KjnWWjkd7S2zomBVtkynM&amp;font=Default&amp;lang=es&amp;initial_zoom=2&amp;height=650">Otra cronología</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id116">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Clasificación del malware</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta116_116_2" class="block iDevice_content">
+<p><a href="https://www.xataka.com/basics/cual-es-la-diferencia-malware-virus-gusanos-spyware-troyanos-ransomware-etcetera">Diferencias entre virus, gusanos, spyware, ...</a></p>
 </div>
 </div>
 </div>
@@ -166,7 +227,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="31_anatoma_de_un_ataque.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ud4_seguridad_en_la_red.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="31_anatoma_de_un_ataque.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_herramientas_preventivas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.

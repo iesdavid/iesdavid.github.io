@@ -71,9 +71,18 @@
       <ul class="other-section">
          <li><a href="31_anatoma_de_un_ataque.html" class="no-ch">3.1. Anatomía de un ataque</a></li>
          <li><a href="32_software_malicioso.html" class="no-ch">3.2. Software malicioso</a></li>
+         <li><a href="33_herramientas_preventivas.html" class="no-ch">3.3. Herramientas preventivas</a></li>
+         <li><a href="34_herramientas_paliativas.html" class="no-ch">3.4. Herramientas paliativas</a></li>
       </ul>
       </li>
-      <li id="active"><a href="ud4_seguridad_en_la_red.html" class="active no-ch">UD4. Seguridad en la Red</a></li>
+      <li id="active"><a href="ud4_seguridad_en_la_red.html" class="active daddy">UD4. Seguridad en la Red</a>
+      <ul>
+         <li><a href="41_monitorizacin_del_trfico_en_redes.html" class="no-ch">4.1. Monitorización del tráfico en redes</a></li>
+         <li><a href="42_seguridad_en_los_protocolos_para_comunicaciones_inalmbricas.html" class="no-ch">4.2. Seguridad en los protocolos para comunicaciones inalámbricas</a></li>
+         <li><a href="43_riesgos_potenciales_de_los_servicios_de_red.html" class="no-ch">4.3. Riesgos potenciales de los servicios de red</a></li>
+         <li><a href="44_intentos_de_penetracin.html" class="no-ch">4.4. Intentos de penetración</a></li>
+      </ul>
+      </li>
    </ul>
    </li>
    <li><a href="bloque_3_acceso_remoto.html" class="daddy">Bloque 3. Acceso Remoto</a>
@@ -107,12 +116,61 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="32_software_malicioso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_acceso_remoto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="34_herramientas_paliativas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="41_monitorizacin_del_trfico_en_redes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
 <header id="nodeDecoration"><h1 id="nodeTitle">UD4. Seguridad en la Red</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id121">
+<div class="iDevice emphasis0">
+<div id="ta121_85" class="block iDevice_content">
+<p><img src="SAD02_CONT_R34_RED-CORPORATIVA.JPG" style="float: left; margin-right: 15px; margin-left: 15px;" width="160" height="160" />Una red corporativa es una red que comunica lugares geográficamente distantes y que facilita el acceso remoto de usuarios, siendo todos los elementos comunicados propiedad de una organización o persona. Se podría decir que es una interconexión de redes LAN. En este tipo de redes conviven diferentes tecnologías, tanto inalámbricas como de cable.</p>
+<p>Para la comunicación distante se deben emplear líneas públicas por lo que las comunicaciones deberán utilizar mecanismos seguros como las VPN.</p>
+<p>En la imagen se puede ver un ejemplo de red corporativa. En este caso la red pertenece a un ayuntamiento de una ciudad y muestra un esquema de como se conectarían los sitios más representativos de la misma como la universidad, el ayuntamiento, el polígono industrial y el parque de bomberos.</p>
+<p>Las tecnologías empleadas pueden ser diversas y se deben combinar para cubrir toda el área municipal. Esto implica que para mantener la red segura se tendrá que hacer uso de varias estrategias y de diferentes herramientas.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id128">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Amenazas y ataques</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta128_126_2" class="block iDevice_content">
+<p>Sin importar si están conectadas por cable o de manera inalámbrica, las redes de ordenadores cada vez son más esenciales para las actividades diarias. Los ataques e intrusiones de personas no autorizadas a través de las redes públicas y privadas cada vez son más frecuentes, y pueden causar interrupciones costosas de servicios críticos y pérdidas de trabajo, información y dinero.</p>
+<p>Tal y como se vio en el punto <a href="15_tipos_de_amenazas.html">1.5. Tipos de Amenazas</a>, de forma genérica las amenazas en comunicaciones podemos dividirlas en cuatro grandes grupos:</p>
+<ul>
+<li><strong>Interrupción</strong>: un objeto, servicio del sistema o datos en una comunicación se pierden, quedan inutilizables o no disponibles.</li>
+<li><strong>Interceptación</strong>: un elemento no autorizado consigue un acceso a un determinado objeto.</li>
+<li><strong>Modificación</strong>: además de conseguir el acceso consigue modificar el objeto, es posible incluso la destrucción una modificación que inutiliza al objeto afectado.</li>
+<li><strong>Fabricación</strong>: modificación destinada a conseguir un objeto similar al atacado de forma que sea difícil distinguir entre el objeto original y el “fabricado”.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id129">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Técnicas de ataques en redes</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta129_127_2" class="block iDevice_content">
+<p><img src="Ataque-a-Redes-820x547.jpg" alt="" style="float: right; margin: 15px;" width="319" height="213" />Como ejemplos prácticas de dichas amenazas, encontramos diversas técnicas de ataques informáticos en redes. Algunos son:</p>
+<ul>
+<li><strong>Ataque de denegación de servicio:</strong> también llamado ataque <em><strong>DoS</strong> (Deny of Service),</em> es un caso específico de <strong>interrupción</strong> de servicio. Causa que un servicio o recurso sea inaccesible a los usuarios legítimos, normalmente provocando la pérdida de la conectividad de la red por ei consumo del ancho de banda de la red de la víctima o sobrecarga de los recursos computacionales del sistema de la víctima. Mediante <em>botnet</em> o <em>redes zombi</em> se pueden llegar a controlar cientos o miles de máquinas para realizar ataques distribuidos de saturación de servidores o DDoS.</li>
+<li><strong>Sniffing, </strong>una técnica de<strong> interceptación:</strong> consiste en rastrear monitorizando el tráfico de una red.</li>
+<li><strong>Man in the middle:</strong> a veces abreviado <strong>MitM,</strong> es un caso específico de <strong>interceptación</strong> y modificación de identidad. Un atacante supervisa una comunicación entre dos partes, falsificando las identidades de los extremos, y por tanto recibiendo el tráfico en los dos sentidos.</li>
+<li><strong>Spoofing:</strong> es una técnica de <strong>fabricación</strong>, suplantando la identidad o realizando una copia o falsificación, por ejemplo encontramos falsificaciones de IP, MAC, web o mail.</li>
+<li><strong>Pharming:</strong> es una técnica de <strong>modificación</strong>. Mediante la explotación de una vulnerabilidad en el software de los servidores DNS o en el de tos equipos de los propios usuarios, permite modificar las tablas DNS red¡rigiendo un nombre de dominio (domain name) conocido, a otra máquina (IP) distinta, falsificada y probablemente fraudulenta.</li>
+</ul>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
 <div id="packageLicense" class="cc cc-by-sa">
 <p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
 </div>
@@ -120,7 +178,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="32_software_malicioso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_acceso_remoto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="34_herramientas_paliativas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="41_monitorizacin_del_trfico_en_redes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
