@@ -122,6 +122,72 @@
 <div id="main-wrapper">
 <section id="main">
 <header id="nodeDecoration"><h1 id="nodeTitle">4.4. Intentos de penetración</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id138">
+<div class="iDevice emphasis0">
+<div id="ta138_85" class="block iDevice_content">
+<p>Un intento de Penetración es un análisis que permite detectar vulnerabilidades en un entorno informatizado mediante la búsqueda, la identificación y explotación de vulnerabilidades. Su alcance se extiende a:</p>
+<ul>
+<li>Equipos de comunicaciones</li>
+<li>Servidores</li>
+<li>Estaciones de trabajo</li>
+<li>Aplicaciones</li>
+<li>Bases de Datos</li>
+<li>Servicios Informáticos</li>
+<li>Casillas de Correo Electrónico</li>
+<li>Portales de Internet</li>
+<li>Intranet corporativa</li>
+<li>Acceso físico a recursos y documentación</li>
+<li>Ingeniería social (La ingeniería social es la técnica por la cual se obtiene información convenciendo al usuario que otorgue información confidencial, haciéndose pasar por usuarios con altos privilegios como administradores y técnicos).</li>
+</ul>
+<p>Para realizar un Intento de Penetración es necesario realizar las siguientes tareas:</p>
+<ol>
+<li>Reconocimiento de los recursos disponibles mediante el empleo de herramientas automáticas.</li>
+<li>Identificación de las vulnerabilidades existentes mediante herramientas automáticas.</li>
+<li>Explotación manual y automática de las vulnerabilidades para determinar su alcance.</li>
+<li>Análisis de los resultados.</li>
+</ol>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id139">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Sistemas de Detección de Intrusos (IDS)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta139_137_2" class="block iDevice_content">
+<p>Un sistema de detección de intrusos (o IDS de sus siglas en inglés Intrusion Detection System) es un programa usado para detectar accesos no autorizados a un computador o a una red. Estos accesos pueden ser ataques de habilidosos hackers, o de Script Kiddies que usan herramientas automáticas.</p>
+<p>El término IDS (Sistema de detección de intrusiones) hace referencia a un mecanismo que, sigilosamente, escucha el tráfico en la red para detectar actividades anormales o sospechosas, y de este modo, reducir el riesgo de intrusión.</p>
+<p>Existen dos claras familias importantes de IDS:</p>
+<ul>
+<li>El grupo <strong>Network-IDS</strong> o <strong>NIDS</strong> (Sistema de detección de intrusiones de red), que garantiza la seguridad dentro de la red.</li>
+<li>El grupo <strong>Host-IDS</strong> o <strong>HIDS</strong> (Sistema de detección de intrusiones en el host), que garantiza la seguridad en el host.</li>
+</ul>
+<p><img src="red_IDS.png" alt="" style="float: right; margin: 15px;" width="305" height="179" />Un NIDS necesita un hardware exclusivo. Éste forma un sistema que puede verificar paquetes de información que viajan por una o más líneas de la red para descubrir si se ha producido alguna actividad maliciosa o anormal. El NIDS pone uno o más de los adaptadores de red exclusivos del sistema en <strong>modo promiscuo</strong>. Éste es una especie de modo "invisible" en el que no tienen dirección IP. Tampoco tienen una serie de protocolos asignados. Es común encontrar diversos IDS en diferentes partes de la red. Por lo general, se colocan sondas fuera de la red para estudiar los posibles ataques, así como también se colocan sondas internas para analizar solicitudes que hayan pasado a través del firewall o que se han realizado desde dentro.</p>
+<p>El HIDS actúa como un <strong>daemon</strong> o servicio estándar en el sistema de un host (Windows, Solaris, Linux, etc). Tradicionalmente, el HIDS analiza la información particular almacenada en registros (como registros de sistema, mensajes, lastlogs y wtmp) y también captura paquetes de la red que se introducen/salen del host para poder verificar las señales de intrusión (como ataques por denegación de servicio, puertas traseras, troyanos, intentos de acceso no autorizado, ejecución de códigos malignos o ataques de desbordamiento de búfer).</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id140">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Técnicas de detección de intrusos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta140_138_2" class="block iDevice_content">
+<p>El tráfico en la red (en todo caso, en Internet) generalmente está compuesto por datagramas de IP. Un N-IDS puede capturar paquetes mientras estos viajan a través de las conexiones físicas a las que está sujeto. Un N-IDS contiene una lista TCP/IP que se asemeja a los datagramas de IP y a las conexiones TCP. Puede aplicar las siguientes técnicas para detectar intrusiones:</p>
+<ul>
+<li><strong>Verificación de la lista de protocolos</strong>: Algunas formas de intrusión, como "<a href="https://www.ionos.es/digitalguide/servidores/seguridad/ping-de-la-muerte/">Ping de la muerte</a>" y "<a href="https://hackeruna.com/2016/10/25/tipos-de-escaneo/">escaneo silencioso TCP</a>" utilizan violaciones de los protocolos IP, TCP, UDP e ICMP para atacar un equipo. Una simple verificación del protocolo puede revelar paquetes no válidos e indicar esta táctica comúnmente utilizada.</li>
+<li><strong>Verificación de los protocolos de la capa de aplicación</strong>: Algunas formas de intrusión emplean comportamientos de protocolos no válidos, como "<a href="https://es.wikipedia.org/wiki/WinNuke">WinNuke</a>", que utiliza datos NetBIOS no válidos (al agregar datos fuera de la banda). Para detectar eficazmente estas intrusiones, un NIDS debe haber implementado una amplia variedad de protocolos de la capa de aplicación, como NetBIOS, TCP/IP, etc.</li>
+<li><strong>Reconocimiento de ataques de "comparación de patrones"</strong>: Esta técnica de reconocimiento de intrusión es el método más antiguo de análisis NIDS y todavía es de uso frecuente. Esta táctica está difundida por los grupos NIDS "Network Grep", que se basan en la captura de paquetes originales dentro de una conexión supervisada y en su posterior comparación al utilizar un analizador de "expresiones regulares". Éste intentará hacer coincidir las secuencias en la base de firmas byte por byte con el contenido del paquete capturado.</li>
+</ul>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
 <div id="packageLicense" class="cc cc-by-sa">
 <p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
 </div>

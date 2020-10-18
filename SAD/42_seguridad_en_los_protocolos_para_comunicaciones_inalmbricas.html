@@ -144,8 +144,58 @@
 <li>Portal cautivo</li>
 </ul>
 <p>El <strong>filtrado de direcciones MAC</strong> no es una buena solución si la red es muy grande, porque hay que editar las direcciones de cada tarjeta, además de que el formato de las direcciones no es demasiado fácil de manejar. Si en la red cambian los equipos que forman parte de ella o se añaden nuevos, también implica la modificación manual de la tabla de direcciones. Además de todo lo anterior, las direcciones MAC viajan sin encriptar por la red, por lo que un atacante con conocimientos suficientes tendría la posibilidad de clonar dicha dirección.</p>
-<p>El <strong>algoritmo WEP</strong> encripta las conexiones inalámbricas y hace que no sea posible la conexión a la red sin la utilización de una clave. Hoy en día se considera un método no seguro porque existen muchas técnicas para romper su protección. El principal problema, reside en que la clave secreta utilizada se graba en el dispositivo de interconexión y permanece estática hasta que considere cambiarla. Un intruso puede utilizar aplicaciones diseñadas para realizar ataques de fuerza bruta y conseguir descifrarla.</p>
-<p>El estándar 802.1x emplea un mecanismo más robusto que WEP, para ello utiliza el protocolo EAP (o cualquiera de sus variantes) junto con un servidor RADIUS para obligar a los usuarios a autenticarse antes de conectarse a la red.</p>
+<p>Los sistemas de cifrado empleados para autenticación como encriptación en redes inalámbricas son:</p>
+<ul>
+<li><strong>Sistema abierto</strong> u OpenSystem : es decir sin autenticación en el control de acceso a la red, normalmente realizado por el punto de acceso, ni cifrado en las comunicaciones.</li>
+<li><strong>WEP</strong> o Wired Equivalent Privacy o Privacidad Equivalente a Cableado: sistema estándar diseñado en la norma básica de redes inalámbricas 802.11. Emplea para la encriptación de los mensajes claves de 13 (104 bits) o 5 (40 bits) caracteres, también denominadas WEP 128 o WEP 64 respectivamente. Existen también dispositivos que permiten configuraciones de 152 y 256 bits. En cuanto a la autenticación existen 2 métodos:
+<ul>
+<li><strong>Sistema abierto u Opensystem</strong>, el cliente no se tiene que identificar en el Punto de Acceso durante la autenticación. Después de la autenticación y la asociación a la red, el cliente tendrá que tener la clave WEP correcta.</li>
+<li><strong>Claves precompartidas, Pre-Shared Keys o PSK.</strong> En la autenticación mediante clave precompartida, se envía la mism a clave de cifrado WEP para la autenticación, verificando y controlando el acceso de este modo el punto de acceso.</li>
+</ul>
+</li>
+<li><strong>WPA o Wi-Fi Protected Access o Acceso Protegido Wi-Fi</strong>: creado para corregir las deficiencias del sistema previo WEP. Se han realizado 2 publicaciones del están dar WPA como solución intermedia, y el definitivo WPA2 bajo el estándar 802.11i. Se proponen 2 soluciones según el ámbito de aplicación:
+<ul>
+<li>WPA Empresarial o WPA-Enterprise (grandes empresas): la autenticación es mediante el uso de un <strong>servidor RADIUS</strong>, donde se almacenan las credenciales y contraseñas de los usuarios de la red.</li>
+<li>WPA Personal (pequeñas empresas y hogar): la autenticación se realiza mediante clave precompartida, de un modo similar al WEP.</li>
+</ul>
+</li>
+</ul>
+<p>Una de las mejoras de WPA sobre WEP, es la implementación del protocolo de integridad de clave tem poral (<strong>TKIP</strong> - Temporal Key Integrity Protocol), que cambia claves dinámicamente a medida que el sistema es utilizado.</p>
+<p>Aportando un mayor nivel de seguridad en el cifrado, es posible emplear el algoritmo de cifrado simétrico <strong>AES</strong>, más robusto y complejo que <strong>TKIP</strong>, aunque su implementación requiere de hardware más potente por lo que no se encuentra disponible en todos los dispositivos.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id137">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">WPA3</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta137_135_2" class="block iDevice_content">
+<p><a href="images.png"><img src="images.png" alt="" style="float: right; margin: 15px;" width="273" height="184" /></a>Antes de seguir, recomiendo la lectura del siguiente artículo: <a href="https://www.xataka.com/seguridad/caos-en-la-seguridad-wifi-un-repaso-a-las-vulnerabilidades-de-wep-wap-y-wap2">Caos en la seguridad WiFi</a> donde se muestra los problemas existentes en los diferentes métodos de encriptación WEP, WPA y WPA2.</p>
+<p>Es por ello que, en 2017, aparece la tecnología de seguridad WPA3 que, aunque se <a href="https://www.ngi.es/fallos-graves-en-wpa3/">encontraron algunos fallos de diseño</a>, su implantación es casi imparable.</p>
+<p>El estándar WPA3 añade cuatro características que no se encuentran en el WPA2.</p>
+<ul>
+<li><strong>Privacidad en las redes públicas de Wi-Fi.</strong> WPA3 cuenta con el uso de “encriptación de datos individualizados”. Cuando te conectas a una red Wi-Fi abierta, el tráfico entre el dispositivo y el punto de acceso Wi-Fi se encripta, aunque no hayas introducido una frase de contraseña en el momento de la conexión. Esto hará que las redes Wi-Fi públicas y abiertas sean mucho más privadas. Será imposible para la gente fisgonear sin romper la encriptación.</li>
+<li><strong>Protección contra los ataques de fuerza bruta.</strong> Cuando un dispositivo se conecta a un punto de acceso Wi-Fi, los dispositivos realizan un emparejamiento (conocido como handshake o apretón de manos) que garantiza que se ha utilizado la contraseña correcta para conectarse y negocia el cifrado que se utilizará para asegurar la conexión. WPA3 define un nuevo “apretón de manos” que ofrece protección más avanzada incluso cuando los usuarios eligen contraseñas poco seguras.</li>
+<li><strong>Conexión más fácil para los dispositivos sin pantallas.</strong> Hoy en día, es común ver dispositivos con Wi-Fi sin pantalla (impresoras, robot aspiradores, Amazon Echo, Google Home, enchufes inteligentes, bombillas, etc.). Y conectar esos dispositivos a la red Wi-Fi suele ser muy incómodo ya que no tienen pantallas ni teclados para escribir la contraseña. WPA3 incluye una función para simplificar el proceso de configuración de los dispositivos que tienen una interfaz de visualización limitada o inexistente.</li>
+<li><strong>Mayor seguridad.</strong> WPA3 utiliza algoritmos de cifrado o encriptación (de los que hemos hablado antes) de 192 bits en lugar de los 128 bits del WPA2. Esto significa que el cifrado es mucho más robusto y seguro (a niveles de cifrado de agencias gubernamentales).</li>
+</ul>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id136">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Para saber más...</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta136_134_2" class="block iDevice_content">
+<p>El siguiente enlace es la Guía de Seguridad en Redes WiFi elaborada por<strong> el Instituto Nacional de Ciberseguridad (INCIBE)</strong>.</p>
+<p><a href="https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia-de-seguridad-en-redes-wifi.pdf">Guía de Seguridad en Redes WiFi</a></p>
+</div>
+</div>
 </div>
 </div>
 </article>
