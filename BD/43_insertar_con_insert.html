@@ -5,27 +5,24 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>Modelo Entidad - Relación </title>
+<title>4.3. Insertar con INSERT | Modelo Entidad - Relación </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
 <meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
-<meta name="description" content="Perteneciente a los Módulos:
-GBD - de 1º CFGS Administración de Sistemas Informáticos en Red
-BD - 1º CFGS Diseño de Aplicaciones Multimedia." />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-68"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
 <nav id="siteNav">
 <ul>
-   <li id="active"><a href="index.html" class="active daddy main-node">Modelo Entidad Relación</a></li>
+   <li><a href="index.html" class="daddy main-node">Modelo Entidad Relación</a></li>
    <li><a href="normativa.html" class="daddy">Normativa</a>
    <ul class="other-section">
       <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
@@ -73,11 +70,11 @@ BD - 1º CFGS Diseño de Aplicaciones Multimedia." />
       <li><a href="practica1.html" class="no-ch">Practica</a></li>
    </ul>
    </li>
-   <li><a href="ud4_sql_insert_y_delete.html" class="daddy">UD4. SQL: INSERT y DELETE</a>
-   <ul class="other-section">
+   <li class="current-page-parent"><a href="ud4_sql_insert_y_delete.html" class="current-page-parent daddy">UD4. SQL: INSERT y DELETE</a>
+   <ul>
       <li><a href="41_la_clusula_insert.html" class="no-ch">4.1. La cláusula INSERT</a></li>
       <li><a href="42_insert_bsico.html" class="no-ch">4.2. INSERT básico</a></li>
-      <li><a href="43_insertar_con_insert.html" class="no-ch">4.3. Insertar con INSERT</a></li>
+      <li id="active"><a href="43_insertar_con_insert.html" class="active no-ch">4.3. Insertar con INSERT</a></li>
       <li><a href="44_la_clusula_delete.html" class="no-ch">4.4. La cláusula DELETE</a></li>
       <li><a href="45_delete_ejemplos.html" class="no-ch">4.5. DELETE ejemplos</a></li>
    </ul>
@@ -91,16 +88,39 @@ BD - 1º CFGS Diseño de Aplicaciones Multimedia." />
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="normativa.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="42_insert_bsico.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="44_la_clusula_delete.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">Modelo Entidad Relación</h1></header>
-<article class="iDevice_wrapper FreeTextIdevice" id="id12">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3. Insertar con INSERT</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id137">
 <div class="iDevice emphasis0">
-<div id="ta12_85" class="block iDevice_content">
-
+<div id="ta137_85" class="block iDevice_content">
+<p style="text-align: center;"><strong>INSERT INTO Categorias VALUES (9, "Legumbres", "Guisantes, garbanzos, lentejas y habas", NULL);</strong></p>
+<p>La línea anterior también podría escribirse de las siguientes maneras:</p>
+<p style="text-align: center;"><em>INSERT INTO Categorias(IdCategoria, NombreCategoria, Descripcion, Imagen) VALUES (9, "Legumbres", "Guisantes, garbanzos, lentejas y habas", NULL);</em></p>
+<p style="text-align: center;"><em>INSERT INTO Categorias(IdCategoria, NombreCategoria, Descripcion) VALUES (9, "Legumbres", "Guisantes, garbanzos, lentejas y habas");</em></p>
+<p style="text-align: center;"><em>INSERT INTO Categorias(NombreCategoria, Descripcion, IdCategoria) VALUES ("Legumbres", "Guisantes, garbanzos, lentejas y habas", 9);</em></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id139">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Pero también...</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta139_146_2" class="block iDevice_content">
+<p style="text-align: justify;">En la última línea se han variado el orden. Esto no tiene importancia siempre que se pongan los <strong>valores en el mismo orden que las columnas</strong> declaradas.</p>
+<p>El utilizar la opción de poner una lista de columnas tiene <strong>ventajas</strong> sobre todo cuando la sentencia la vamos a almacenar y reutilizar:</p>
+<ul>
+<li>la sentencia queda más fácil de interpretar viendo qué valor asignamos a qué columna,</li>
+<li>nos aseguramos que el valor lo asignamos a la columna que queremos,</li>
+<li>si cambia el orden de las columnas en el diseño de la tabla, no afecta a la sentencia. En caso contrario, estaría intentando asignar valores a otra columna, produciendo errores de 'tipo no corresponde' y lo que es peor podría asignar valores erróneos,</li>
+<li>si se añade una nueva columna a la tabla en el diseño, la primera sentencia <strong>INSERT</strong> daría error ya que el número de valores no corresponde con el número de columnas de la tabla, mientras que la última INSERT no daría error y en la nueva columna se insertaría el valor predeterminado.</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </article>
@@ -111,7 +131,7 @@ BD - 1º CFGS Diseño de Aplicaciones Multimedia." />
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="normativa.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="42_insert_bsico.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="44_la_clusula_delete.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
