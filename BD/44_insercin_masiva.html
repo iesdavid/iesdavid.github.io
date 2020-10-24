@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>2.2. Dominios | Modelo Entidad - Relación </title>
+<title>4.4. Inserción masiva | Modelo Entidad - Relación </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -16,7 +16,7 @@
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-40"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-72"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
@@ -42,10 +42,10 @@
       <li><a href="practica.html" class="no-ch">Practica</a></li>
    </ul>
    </li>
-   <li class="current-page-parent"><a href="ud2_bases_de_datos_relacionales.html" class="current-page-parent daddy">UD2. Bases de Datos Relacionales</a>
-   <ul>
+   <li><a href="ud2_bases_de_datos_relacionales.html" class="daddy">UD2. Bases de Datos Relacionales</a>
+   <ul class="other-section">
       <li><a href="21_conceptos_bsicos.html" class="no-ch">2.1. Conceptos básicos</a></li>
-      <li id="active"><a href="22_dominios.html" class="active no-ch">2.2. Dominios</a></li>
+      <li><a href="22_dominios.html" class="no-ch">2.2. Dominios</a></li>
       <li><a href="23_claves.html" class="no-ch">2.3. Claves</a></li>
       <li><a href="24_el_lenguaje_de_consultas_sql.html" class="no-ch">2.4. El lenguaje de consultas: SQL</a></li>
       <li><a href="25_componentes_del_sql.html" class="no-ch">2.5. Componentes del SQL</a></li>
@@ -70,12 +70,12 @@
       <li><a href="practica1.html" class="no-ch">Practica</a></li>
    </ul>
    </li>
-   <li><a href="ud4_sql_insert_y_delete.html" class="daddy">UD4. SQL: INSERT y DELETE</a>
-   <ul class="other-section">
+   <li class="current-page-parent"><a href="ud4_sql_insert_y_delete.html" class="current-page-parent daddy">UD4. SQL: INSERT y DELETE</a>
+   <ul>
       <li><a href="41_la_clusula_insert.html" class="no-ch">4.1. La cláusula INSERT</a></li>
       <li><a href="42_insert_bsico.html" class="no-ch">4.2. INSERT básico</a></li>
       <li><a href="43_insertar_con_insert.html" class="no-ch">4.3. Insertar con INSERT</a></li>
-      <li><a href="44_insercin_masiva.html" class="no-ch">4.4. Inserción masiva</a></li>
+      <li id="active"><a href="44_insercin_masiva.html" class="active no-ch">4.4. Inserción masiva</a></li>
       <li><a href="45_la_clusula_delete.html" class="no-ch">4.5. La cláusula DELETE</a></li>
       <li><a href="46_borrado_con_subconsultas.html" class="no-ch">4.6. Borrado con subconsultas</a></li>
    </ul>
@@ -103,24 +103,39 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="21_conceptos_bsicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="43_insertar_con_insert.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="45_la_clusula_delete.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">2.2. Dominios</h1></header>
-<article class="iDevice_wrapper textIdevice" id="id74">
-<div class="iDevice emphasis0" >
-<div id="ta74_126_2" class="block iDevice_content">
-<div class="exe-text"><p>Un <strong>dominio</strong> describe un conjunto de posibles valores para cierto atributo. Como un dominio restringe los valores del atributo, puede ser considerado como una <em>restricción</em>. Matemáticamente, atribuir un dominio a un atributo significa "cualquier valor de este atributo debe ser elemento del conjunto especificado".</p>
-<p>Distintos tipos de dominios son:</p>
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4. Inserción masiva</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id142">
+<div class="iDevice emphasis0">
+<div id="ta142_85" class="block iDevice_content">
+<p><a href="insertmultifila.png"><img src="insertmultifila.png" alt="" style="float: right; margin-right: 15px; margin-left: 15px;" width="322" height="53" /></a>Otra forma de insertar a través de la sentencia <strong>INSERT</strong> permite añadir múltiples filas de datos a una tabla destino. Su diagrama sintáctico puede verse en la figura. En esta forma de la sentencia INSERT, los valores de datos para las nuevas filas no son especificados explícitamente dentro del texto de la sentencia. En su lugar, la fuente de las nuevas filas es una consulta de base de datos, especificada en la sentencia.</p>
+<p><a href="antpedidos.png"><img src="antpedidos.png" alt="" style="float: left; margin-right: 15px;" width="180" /></a>La adición de filas cuyos valores provienen de la propia base de datos puede parecer un poco extraña, pero es muy útil en ocasiones especiales. Por ejemplo, supongamos que se desea copiar el número de pedido, la fecha y el importe de todos los pedidos remitidos con anterioridad al 1 de Enero de 1999, a partir de la tabla PEDIDOS en otra tabla, ya creada, llamada ANTPEDIDOS. La sentencia INSERT multifila proporciona un modo de copiar los datos.</p>
+<p style="text-align: center;"><em>INSERT INTO antpedidos(IdPedido, FechaPedido, Cargo) SELECT IdPedido,FechaPedido, Cargo FROM Pedidos WHERE FechaPedido&lt;"1999/01/01";</em></p>
+<p style="text-align: justify;">Los resultados de la consulta<strong> deben contener el mismo número de columnas</strong> que la lista de columnas de la sentencia INSERT (o de la tabla destino entera, si se ha omitido la lista de columnas), <strong>y los tipos de datos deben ser compatibles</strong>, columna a columna.</p>
+<p style="text-align: justify;">Además, el estándar SQL especifica varias restricciones sobre la consulta que aparece dentro de la sentencia INSERT multifila:</p>
 <ul>
-<li>numéricos: enteros, decimales, binarios, ...</li>
-<li>texto: cadenas de texto de tamaño variable o fijo</li>
-<li>Tiempo: fecha, hora o ambas</li>
-<li>etc.</li>
+<li style="text-align: justify;">La consulta no puede contener una cláusula ORDER BY.</li>
+<li style="text-align: justify;">La consulta no puede ser la UNION de varias sentencias SELECT diferentes.</li>
+<li style="text-align: justify;">La tabla destino de la sentencia INSERT no puede aparecer en la cláusula FROM de la consulta o de ninguna subconsulta que ésta contenga.</li>
 </ul>
-<p>Este tipo de restricción básica impide que se introduzcan valores erróneos o inadecuados en los atributos, por ejemplo, si especificamos que el atributo <em>Edad </em> es de tipo numérico entero, estaremos evitando introducir texto o números decimales.</p></div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id143">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Utilidad de la carga masiva de datos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta143_143_2" class="block iDevice_content">
+<div class="exe-text"><p>Los datos a insertar en una base de datos son con frecuencia extraídos de otro sistema informático o recolectados de otros lugares y almacenados en un archivo secuencial. Para cargar los datos en una tabla, se podría escribir un programa con un bucle que leyera cada registro del archivo y utilizara la sentencia INSERT de una fila para añadir la fila a la tabla. Sin embargo, el ejecutar repetidamente la sentencia INSERT de una fila produce un costo de computación, y por tanto un tiempo de ejecución, bastante elevado.</p>
+<p></p></div>
+</div>
+</div>
 </div>
 </div>
 </article>
@@ -131,7 +146,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="21_conceptos_bsicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="43_insertar_con_insert.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="45_la_clusula_delete.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.

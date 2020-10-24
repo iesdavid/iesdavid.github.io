@@ -75,12 +75,27 @@
       <li><a href="41_la_clusula_insert.html" class="no-ch">4.1. La cláusula INSERT</a></li>
       <li><a href="42_insert_bsico.html" class="no-ch">4.2. INSERT básico</a></li>
       <li><a href="43_insertar_con_insert.html" class="no-ch">4.3. Insertar con INSERT</a></li>
-      <li><a href="44_la_clusula_delete.html" class="no-ch">4.4. La cláusula DELETE</a></li>
-      <li><a href="45_delete_ejemplos.html" class="no-ch">4.5. DELETE ejemplos</a></li>
+      <li><a href="44_insercin_masiva.html" class="no-ch">4.4. Inserción masiva</a></li>
+      <li><a href="45_la_clusula_delete.html" class="no-ch">4.5. La cláusula DELETE</a></li>
+      <li><a href="46_borrado_con_subconsultas.html" class="no-ch">4.6. Borrado con subconsultas</a></li>
    </ul>
    </li>
-   <li><a href="ud5_sql_update.html" class="no-ch">UD5. SQL: UPDATE</a></li>
-   <li id="active"><a href="ud6_sql_create_drop_y_alter.html" class="active no-ch">UD6. SQL: CREATE, DROP Y ALTER</a></li>
+   <li><a href="ud5_sql_update.html" class="daddy">UD5. SQL: UPDATE</a>
+   <ul class="other-section">
+      <li><a href="51_la_clusula_update.html" class="no-ch">5.1. La cláusula UPDATE</a></li>
+      <li><a href="52_actualizacin_de_todas_las_filas.html" class="no-ch">5.2. Actualización de todas las filas</a></li>
+      <li><a href="53_actualizar_con_subconsultas.html" class="no-ch">5.3. Actualizar con subconsultas</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="ud6_sql_create_drop_y_alter.html" class="active daddy">UD6. SQL: CREATE, DROP Y ALTER</a>
+   <ul>
+      <li><a href="61_creacin_de_tablas.html" class="no-ch">6.1. Creación de tablas</a></li>
+      <li><a href="62_definicin_de_columnas.html" class="no-ch">6.2. Definición de columnas</a></li>
+      <li><a href="63_definicin_de_claves.html" class="no-ch">6.3. Definición de claves</a></li>
+      <li><a href="seccin.html" class="no-ch">Sección</a></li>
+      <li><a href="seccin0.html" class="no-ch">Sección</a></li>
+   </ul>
+   </li>
    <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
    <li><a href="bloque_4_lenguaje_script_plsql.html" class="no-ch">Bloque 4. Lenguaje Script PL/SQL</a></li>
    <li><a href="bibliografa0.html" class="no-ch">Bibliografía</a></li>
@@ -88,12 +103,47 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="ud5_sql_update.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="53_actualizar_con_subconsultas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_creacin_de_tablas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
 <header id="nodeDecoration"><h1 id="nodeTitle">UD6. SQL: CREATE, DROP Y ALTER</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id153">
+<div class="iDevice emphasis0" >
+<div id="ta153_152_2" class="block iDevice_content">
+<div class="exe-text"><p>Hasta el momento hemos visto sentencias SQL (SELECT, INSERT, DELETE y UPDATE), que permiten manipular los datos de SQL. Estas sentencias permiten modificar los datos almacenados en una base de datos, pero no pueden cambiar su estructura. Ninguna de estas sentencias crea o suprime tablas o columnas de una base de datos.</p>
+<p>Los cambios en la estructura de la base de datos son manejados por un conjunto de sentencias SQL denominadas como <strong>lenguaje de definición de datos.</strong> Estas sentencias permiten:</p>
+<ul>
+<li>Definir y crear una nueva tabla.</li>
+<li>Suprimir una tabla que ya no se necesita.</li>
+<li>Cambiar la definición de una tabla existente.</li>
+<li>Definir una tabla virtual (o vista) de datos.</li>
+<li>Establecer controles de seguridad para una base de datos.</li>
+</ul>
+<p>Desarrollaremos los apartados anteriores en tres apartados distintos, centrándonos en el primero en la creación y modificación de la base de datos, para exponer en el segundo apartado la creación de tablas virtuales (vistas) y en un tercero la seguridad en la base de datos.</p>
+<p></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id154">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Objetivo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta154_153_2" class="block iDevice_content">
+<p>Existen tres sentencias que se emplean en SQL para crear o modificar una base de datos. Estas sentencias son:</p>
+<ul>
+<li><strong>CREATE</strong>, que define y crea un objeto en la base de datos.</li>
+<li><strong>DROP</strong>, que elimina un objeto existente en la base de datos.</li>
+<li><strong>ALTER</strong>, que modifica la definición de un objeto de la base de datos.</li>
+</ul>
+<p>La estructura más importante de una base de datos relacional es la tabla. En una base de datos multiusuario, las tablas principales son creadas por el administrador de la base de datos y utilizadas con posterioridad por los usuarios. Sin embargo, estos pueden encontrar conveniente definir tablas propias para almacenar datos personales o extraídos de otras tablas. En una base de datos sobre un computador personal, la estructura de las tablas puede ser alterarse sin preocuparse del resto de usuarios, pues un mismo usuario es a la vez usuario y administrador de la base de datos.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
 <div id="packageLicense" class="cc cc-by-sa">
 <p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
 </div>
@@ -101,7 +151,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="ud5_sql_update.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="53_actualizar_con_subconsultas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_creacin_de_tablas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.

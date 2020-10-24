@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>2.2. Dominios | Modelo Entidad - Relación </title>
+<title>6.2. Definición de columnas | Modelo Entidad - Relación </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -16,7 +16,7 @@
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-40"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-77"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
@@ -42,10 +42,10 @@
       <li><a href="practica.html" class="no-ch">Practica</a></li>
    </ul>
    </li>
-   <li class="current-page-parent"><a href="ud2_bases_de_datos_relacionales.html" class="current-page-parent daddy">UD2. Bases de Datos Relacionales</a>
-   <ul>
+   <li><a href="ud2_bases_de_datos_relacionales.html" class="daddy">UD2. Bases de Datos Relacionales</a>
+   <ul class="other-section">
       <li><a href="21_conceptos_bsicos.html" class="no-ch">2.1. Conceptos básicos</a></li>
-      <li id="active"><a href="22_dominios.html" class="active no-ch">2.2. Dominios</a></li>
+      <li><a href="22_dominios.html" class="no-ch">2.2. Dominios</a></li>
       <li><a href="23_claves.html" class="no-ch">2.3. Claves</a></li>
       <li><a href="24_el_lenguaje_de_consultas_sql.html" class="no-ch">2.4. El lenguaje de consultas: SQL</a></li>
       <li><a href="25_componentes_del_sql.html" class="no-ch">2.5. Componentes del SQL</a></li>
@@ -87,10 +87,10 @@
       <li><a href="53_actualizar_con_subconsultas.html" class="no-ch">5.3. Actualizar con subconsultas</a></li>
    </ul>
    </li>
-   <li><a href="ud6_sql_create_drop_y_alter.html" class="daddy">UD6. SQL: CREATE, DROP Y ALTER</a>
-   <ul class="other-section">
+   <li class="current-page-parent"><a href="ud6_sql_create_drop_y_alter.html" class="current-page-parent daddy">UD6. SQL: CREATE, DROP Y ALTER</a>
+   <ul>
       <li><a href="61_creacin_de_tablas.html" class="no-ch">6.1. Creación de tablas</a></li>
-      <li><a href="62_definicin_de_columnas.html" class="no-ch">6.2. Definición de columnas</a></li>
+      <li id="active"><a href="62_definicin_de_columnas.html" class="active no-ch">6.2. Definición de columnas</a></li>
       <li><a href="63_definicin_de_claves.html" class="no-ch">6.3. Definición de claves</a></li>
       <li><a href="seccin.html" class="no-ch">Sección</a></li>
       <li><a href="seccin0.html" class="no-ch">Sección</a></li>
@@ -103,24 +103,41 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="21_conceptos_bsicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="61_creacin_de_tablas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="63_definicin_de_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">2.2. Dominios</h1></header>
-<article class="iDevice_wrapper textIdevice" id="id74">
-<div class="iDevice emphasis0" >
-<div id="ta74_126_2" class="block iDevice_content">
-<div class="exe-text"><p>Un <strong>dominio</strong> describe un conjunto de posibles valores para cierto atributo. Como un dominio restringe los valores del atributo, puede ser considerado como una <em>restricción</em>. Matemáticamente, atribuir un dominio a un atributo significa "cualquier valor de este atributo debe ser elemento del conjunto especificado".</p>
-<p>Distintos tipos de dominios son:</p>
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2. Definición de columnas</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id156">
+<div class="iDevice emphasis0">
+<div id="ta156_85" class="block iDevice_content">
+<p><a href="CTdefinicioncolumnas.png"><img src="CTdefinicioncolumnas.png" alt="" style="float: right; margin: 10px;" width="410" /></a>Las columnas de la tabla recién creada se definen en el cuerpo de la sentencia <strong>CREATE TABLE</strong>. Las columnas aparecen en una lista separada por comas e insertada entre paréntesis. El orden de las definiciones de las columnas determina el orden de izquierda a derecha de las columnas en la tabla. Cada definición especifica:</p>
 <ul>
-<li>numéricos: enteros, decimales, binarios, ...</li>
-<li>texto: cadenas de texto de tamaño variable o fijo</li>
-<li>Tiempo: fecha, hora o ambas</li>
-<li>etc.</li>
+<li>El <strong>nombre de la columna</strong>, que se utiliza para referirse a la columna en las sentencias SQL. Cada columna de la tabla debe tener un nombre <strong>único</strong>, pero los nombres pueden ser iguales a los de las columnas de otras tablas.</li>
+<li>El <strong>tipo de datos</strong> de la columna, que identifica la clase de datos que la columna almacena.</li>
+<li>Si la columna no puede contener datos nulos, la cláusula <strong>NOT NULL</strong> impide que aparezcan valores NULL en la columna, en caso contrario se permiten los valores nulos en la columna.</li>
+<li>Un <strong>valor por omisión</strong> es opcional para la columna. Se utiliza este valor cuando una sentencia INSERT aplicada a la tabla no especifica un valor para la columna.</li>
 </ul>
-<p>Este tipo de restricción básica impide que se introduzcan valores erróneos o inadecuados en los atributos, por ejemplo, si especificamos que el atributo <em>Edad </em> es de tipo numérico entero, estaremos evitando introducir texto o números decimales.</p></div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id157">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta157_156_2" class="block iDevice_content">
+<div class="exe-text"><p><em>CREATE TABLE oficinas (</em></p>
+<p style="padding-left: 30px;"><em>oficina INTEGER NOT NULL,</em></p>
+<p style="padding-left: 30px;"><em>ciudad VARCHAR(15) NOT NULL,</em></p>
+<p style="padding-left: 30px;"><em>region VARCHAR(10) NOT NULL DEFAULT 'Este',</em></p>
+<p style="padding-left: 30px;"><em>objetivo INTEGER DEFAULT NULL,</em></p>
+<p style="padding-left: 30px;"><em>ventas INTEGER NOT NULL DEFAULT 0<br /></em></p>
+<p><em>);</em></p></div>
+</div>
+</div>
 </div>
 </div>
 </article>
@@ -131,7 +148,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="21_conceptos_bsicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="61_creacin_de_tablas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="63_definicin_de_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
