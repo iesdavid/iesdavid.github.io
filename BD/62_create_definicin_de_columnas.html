@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2. CREATE: Definición de columnas | Modelo Entidad - Relación </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-77"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Modelo Entidad Relación</a></li>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
+      <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
+      <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
+      <li><a href="elementos_necesarios.html" class="no-ch">Elementos necesarios</a></li>
+      <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   </ul>
+   </li>
+   <li><a href="ud_1_introduccin_a_las_bbdd_relacionales.html" class="daddy">UD 1. Introducción a las BBDD relacionales</a>
+   <ul class="other-section">
+      <li><a href="11_aplicaciones_de_los_sgbd.html" class="no-ch">1.1. Aplicaciones de los SGBD</a></li>
+      <li><a href="12_los_datos.html" class="no-ch">1.2. Los datos</a></li>
+      <li><a href="13_modelos_de_datos.html" class="no-ch">1.3. Modelos de datos</a></li>
+      <li><a href="14_lenguajes_de_bases_de_datos.html" class="no-ch">1.4. Lenguajes de bases de datos</a></li>
+      <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud2_bases_de_datos_relacionales.html" class="daddy">UD2. Bases de Datos Relacionales</a>
+   <ul class="other-section">
+      <li><a href="21_conceptos_bsicos.html" class="no-ch">2.1. Conceptos básicos</a></li>
+      <li><a href="22_dominios.html" class="no-ch">2.2. Dominios</a></li>
+      <li><a href="23_claves.html" class="no-ch">2.3. Claves</a></li>
+      <li><a href="24_el_lenguaje_de_consultas_sql.html" class="no-ch">2.4. El lenguaje de consultas: SQL</a></li>
+      <li><a href="25_componentes_del_sql.html" class="no-ch">2.5. Componentes del SQL</a></li>
+      <li><a href="26_tipos_de_datos.html" class="no-ch">2.6. Tipos de datos</a></li>
+      <li><a href="27_constantes_y_nulos.html" class="no-ch">2.7. Constantes y Nulos</a></li>
+      <li><a href="autoevaluacin0.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica0.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud3_sql_select.html" class="daddy">UD3. SQL: SELECT</a>
+   <ul class="other-section">
+      <li><a href="31_la_clusula_select.html" class="no-ch">3.1. La cláusula SELECT</a></li>
+      <li><a href="32_select_bsico.html" class="no-ch">3.2. SELECT básico</a></li>
+      <li><a href="33_filas_duplicadas.html" class="no-ch">3.3. Filas duplicadas</a></li>
+      <li><a href="34_condiciones.html" class="no-ch">3.4. Condiciones</a></li>
+      <li><a href="35_condiciones_compuestas.html" class="no-ch">3.5. Condiciones compuestas</a></li>
+      <li><a href="36_ordenacin.html" class="no-ch">3.6. Ordenación</a></li>
+      <li><a href="37_unin.html" class="no-ch">3.7. Unión</a></li>
+      <li><a href="38_multitabla.html" class="no-ch">3.8. Multitabla</a></li>
+      <li><a href="39_consultas_sumarias.html" class="no-ch">3.9. Consultas sumarias</a></li>
+      <li><a href="autoevaluacin1.html" class="no-ch">Autoevaluación</a></li>
+      <li><a href="practica1.html" class="no-ch">Practica</a></li>
+   </ul>
+   </li>
+   <li><a href="ud4_sql_insert_y_delete.html" class="daddy">UD4. SQL: INSERT y DELETE</a>
+   <ul class="other-section">
+      <li><a href="41_la_clusula_insert.html" class="no-ch">4.1. La cláusula INSERT</a></li>
+      <li><a href="42_insert_bsico.html" class="no-ch">4.2. INSERT básico</a></li>
+      <li><a href="43_insertar_con_insert.html" class="no-ch">4.3. Insertar con INSERT</a></li>
+      <li><a href="44_insercin_masiva.html" class="no-ch">4.4. Inserción masiva</a></li>
+      <li><a href="45_la_clusula_delete.html" class="no-ch">4.5. La cláusula DELETE</a></li>
+      <li><a href="46_borrado_con_subconsultas.html" class="no-ch">4.6. Borrado con subconsultas</a></li>
+   </ul>
+   </li>
+   <li><a href="ud5_sql_update.html" class="daddy">UD5. SQL: UPDATE</a>
+   <ul class="other-section">
+      <li><a href="51_la_clusula_update.html" class="no-ch">5.1. La cláusula UPDATE</a></li>
+      <li><a href="52_actualizacin_de_todas_las_filas.html" class="no-ch">5.2. Actualización de todas las filas</a></li>
+      <li><a href="53_actualizar_con_subconsultas.html" class="no-ch">5.3. Actualizar con subconsultas</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="ud6_sql_create_drop_y_alter.html" class="current-page-parent daddy">UD6. SQL: CREATE, DROP Y ALTER</a>
+   <ul>
+      <li><a href="61_create_creacin_de_tablas.html" class="no-ch">6.1. CREATE: Creación de tablas</a></li>
+      <li id="active"><a href="62_create_definicin_de_columnas.html" class="active no-ch">6.2. CREATE: Definición de columnas</a></li>
+      <li><a href="63_create_definicin_de_claves.html" class="no-ch">6.3. CREATE: Definición de claves</a></li>
+      <li><a href="64_create_restricciones_de_unicidad.html" class="no-ch">6.4. CREATE: Restricciones de unicidad</a></li>
+      <li><a href="65_drop_eliminacin_de_tablas.html" class="no-ch">6.5. DROP: Eliminación de tablas</a></li>
+      <li><a href="66_alter_modificacin_de_tablas.html" class="no-ch">6.6. ALTER: Modificación de tablas</a></li>
+      <li><a href="67_alter_aadir_columnas.html" class="no-ch">6.7. ALTER: Añadir columnas</a></li>
+      <li><a href="68_alter_eliminar_columnas.html" class="no-ch">6.8. ALTER: Eliminar columnas</a></li>
+      <li><a href="69_alter_modificacin_de_claves.html" class="no-ch">6.9. ALTER: Modificación de claves</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
+   <li><a href="bloque_4_lenguaje_script_plsql.html" class="no-ch">Bloque 4. Lenguaje Script PL/SQL</a></li>
+   <li><a href="bibliografa0.html" class="no-ch">Bibliografía</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="61_create_creacin_de_tablas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="63_create_definicin_de_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2. CREATE: Definición de columnas</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id156">
+<div class="iDevice emphasis0">
+<div id="ta156_85" class="block iDevice_content">
+<p><a href="CTdefinicioncolumnas.png"><img src="CTdefinicioncolumnas.png" alt="" style="float: right; margin: 10px;" width="410" /></a>Las columnas de la tabla recién creada se definen en el cuerpo de la sentencia <strong>CREATE TABLE</strong>. Las columnas aparecen en una lista separada por comas e insertada entre paréntesis. El orden de las definiciones de las columnas determina el orden de izquierda a derecha de las columnas en la tabla. Cada definición especifica:</p>
+<ul>
+<li>El <strong>nombre de la columna</strong>, que se utiliza para referirse a la columna en las sentencias SQL. Cada columna de la tabla debe tener un nombre <strong>único</strong>, pero los nombres pueden ser iguales a los de las columnas de otras tablas.</li>
+<li>El <strong>tipo de datos</strong> de la columna, que identifica la clase de datos que la columna almacena.</li>
+<li>Si la columna no puede contener datos nulos, la cláusula <strong>NOT NULL</strong> impide que aparezcan valores NULL en la columna, en caso contrario se permiten los valores nulos en la columna.</li>
+<li>Un <strong>valor por omisión</strong> es opcional para la columna. Se utiliza este valor cuando una sentencia INSERT aplicada a la tabla no especifica un valor para la columna.</li>
+</ul>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id157">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta157_156_2" class="block iDevice_content">
+<div class="exe-text"><p><em>CREATE TABLE oficinas (</em></p>
+<p style="padding-left: 30px;"><em>oficina INTEGER NOT NULL,</em></p>
+<p style="padding-left: 30px;"><em>ciudad VARCHAR(15) NOT NULL,</em></p>
+<p style="padding-left: 30px;"><em>region VARCHAR(10) NOT NULL DEFAULT 'Este',</em></p>
+<p style="padding-left: 30px;"><em>objetivo INTEGER DEFAULT NULL,</em></p>
+<p style="padding-left: 30px;"><em>ventas INTEGER NOT NULL DEFAULT 0<br /></em></p>
+<p><em>);</em></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id163">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Tipos de datos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta163_163_2" class="block iDevice_content">
+<table class="padding-sin" width="100%" border="1">
+<tbody>
+<tr>
+<th class="padding-sin" width="13%"><u> Tipo de dato </u></th>
+<th class="padding-sin" width="22%"><u> Sinónimos </u></th>
+<th class="padding-sin" width="13%"><u> Tamaño </u></th>
+<th class="padding-sin" width="52%" align="center"><u> Descripción </u></th>
+</tr>
+<tr valign="top">
+<td width="13%"><span> BINARY </span></td>
+<td width="22%"><span> VARBINARY <br />BINARY VARYING <br />BIT VARYING </span></td>
+<td width="13%"><span> 1 byte por carácter </span></td>
+<td width="52%"><span> Se puede almacenar cualquier tipo de datos en un campo de este tipo. Los datos no se traducen (por ejemplo, a texto). La forma en que se introducen los datos en un campo binario indica cómo aparecerán al mostrarlos. <br /></span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> BIT </span></td>
+<td width="22%"><span> BOOLEAN <br />LOGICAL <br />LOGICAL1 <br />YESNO <br /><br /></span></td>
+<td width="13%"><span> 1 byte </span></td>
+<td width="52%"><span> Valores Sí y No, y campos que contienen solamente uno de dos valores. </span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> TINYINT </span></td>
+<td width="22%"><span> INTEGER1 <br />BYTE <br /><br /></span></td>
+<td width="13%"><span> 1 byte </span></td>
+<td width="52%"><span> Un número entero entre 0 y 255. </span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> COUNTER </span></td>
+<td width="22%"><span> AUTOINCREMENT <br /><br /></span></td>
+<td width="13%"><span> </span></td>
+<td width="52%"><span> Se utiliza para campos contadores cuyo valor se incrementa automáticamente al crear un nuevo registro. <br /></span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> MONEY </span></td>
+<td width="22%"><span> CURRENCY </span></td>
+<td width="13%"><span> 8 bytes </span></td>
+<td width="52%"><span> Un número entero comprendido entre <br />– 922.337.203.685.477,5808 y 922.337.203.685.477,5807. <br /></span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> DATETIME </span></td>
+<td width="22%"><span> DATE <br />TIME <br /><br /></span></td>
+<td width="13%"><span> 8 bytes </span></td>
+<td width="52%"><span> Una valor de fecha u hora entre los años 100 y 9999 </span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> UNIQUEIDENTIFIER </span></td>
+<td width="22%"><span> GUID </span></td>
+<td width="13%"><span> 128 bits </span></td>
+<td width="52%"><span> Un número de identificación único utilizado con llamadas a procedimientos remotos. <br /></span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> DECIMAL </span></td>
+<td width="22%"><span> NUMERIC <br />DEC </span></td>
+<td width="13%"><span> 17 bytes </span></td>
+<td width="52%"><span> Un tipo de datos numérico exacto con valores comprendidos entre 1028 - 1 y - 1028 - 1. Puede definir la precisión (1 - 28) y la escala (0 - precisión definida). La precisión y la escala predeterminadas son 18 y 0, respectivamente. <br /></span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> REAL </span></td>
+<td width="22%"><span> SINGLE <br />FLOAT4 <br />IEEESINGLE </span></td>
+<td width="13%"><span> 4 bytes </span></td>
+<td width="52%"><span> Un valor de coma flotante de precisión simple con un intervalo comprendido entre – 3,402823E38 y – 1,401298E-45 para valores negativos, y desde 1,401298E-45 a 3,402823E38 para valores positivos, y 0. <br /></span></td>
+</tr>
+<tr valign="top">
+<td width="13%">
+<p><span> FLOAT </span></p>
+</td>
+<td width="22%"><span> DOUBLE <br />FLOAT8 <br />IEEEDOUBLE <br />NUMBER <br /><br /></span></td>
+<td width="13%"><span> 8 bytes </span></td>
+<td width="52%"><span> Un valor de coma flotante de precisión doble con un intervalo comprendido entre – 1,79769313486232E308 y – 4,94065645841247E-324 para valores negativos, y desde 4,94065645841247E-324 a 1,79769313486232E308 para valores positivos, y 0. </span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> SMALLINT </span></td>
+<td width="22%"><span> SHORT <br />INTEGER2 <br /><br /></span></td>
+<td width="13%"><span> 2 bytes </span></td>
+<td width="52%"><span> Un entero corto entre – 32.768 y 32.767. </span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> INTEGER </span></td>
+<td width="22%"><span> LONG <br />INT <br />INTEGER4 <br /><br /></span></td>
+<td width="13%"><span> 4 bytes </span></td>
+<td width="52%"><span> Un entero largo entre – 2.147.483.648 y 2.147.483.647. </span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> IMAGE </span></td>
+<td width="22%"><span> LONGBINARY <br />GENERAL <br />OLEOBJECT <br /><br /></span></td>
+<td width="13%"><span> Lo que se requiera </span></td>
+<td width="52%"><span> Desde cero hasta un máximo de 2.14 gigabytes. <br />Se utiliza para objetos OLE. </span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> TEXT </span></td>
+<td width="22%"><span> LONGTEXT <br />LONGCHAR <br />MEMO <br />NOTE <br />NTEXT <br /><br /></span></td>
+<td width="13%"><span> 2 bytes por carácter. (Consulte las notas). </span></td>
+<td width="52%"><span> Desde cero hasta un máximo de 2.14 gigabytes. </span></td>
+</tr>
+<tr valign="top">
+<td width="13%"><span> CHAR </span></td>
+<td width="22%"><span> TEXT(n) <br />ALPHANUMERIC <br />CHARACTER <br />STRING <br />VARCHAR <br />CHARACTER VARYING <br />NCHAR <br />NATIONAL CHARACTER <br />NATIONAL CHAR <br />NATIONAL CHARACTER VARYING <br />NATIONAL CHAR VARYING <br /><br /></span></td>
+<td width="13%"><span> 2 bytes por carácter. (Consulte las notas). </span></td>
+<td width="52%"><span> Desde cero a 255 caracteres. </span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="61_create_creacin_de_tablas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="63_create_definicin_de_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
+Curso 2020 - 2021</footer></div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

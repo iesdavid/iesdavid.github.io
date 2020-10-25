@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>6.2. Definición de columnas | Modelo Entidad - Relación </title>
+<title>6.7. ALTER: Añadir columnas | Modelo Entidad - Relación </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -16,7 +16,7 @@
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-77"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-82"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
@@ -89,11 +89,15 @@
    </li>
    <li class="current-page-parent"><a href="ud6_sql_create_drop_y_alter.html" class="current-page-parent daddy">UD6. SQL: CREATE, DROP Y ALTER</a>
    <ul>
-      <li><a href="61_creacin_de_tablas.html" class="no-ch">6.1. Creación de tablas</a></li>
-      <li id="active"><a href="62_definicin_de_columnas.html" class="active no-ch">6.2. Definición de columnas</a></li>
-      <li><a href="63_definicin_de_claves.html" class="no-ch">6.3. Definición de claves</a></li>
-      <li><a href="seccin.html" class="no-ch">Sección</a></li>
-      <li><a href="seccin0.html" class="no-ch">Sección</a></li>
+      <li><a href="61_create_creacin_de_tablas.html" class="no-ch">6.1. CREATE: Creación de tablas</a></li>
+      <li><a href="62_create_definicin_de_columnas.html" class="no-ch">6.2. CREATE: Definición de columnas</a></li>
+      <li><a href="63_create_definicin_de_claves.html" class="no-ch">6.3. CREATE: Definición de claves</a></li>
+      <li><a href="64_create_restricciones_de_unicidad.html" class="no-ch">6.4. CREATE: Restricciones de unicidad</a></li>
+      <li><a href="65_drop_eliminacin_de_tablas.html" class="no-ch">6.5. DROP: Eliminación de tablas</a></li>
+      <li><a href="66_alter_modificacin_de_tablas.html" class="no-ch">6.6. ALTER: Modificación de tablas</a></li>
+      <li id="active"><a href="67_alter_aadir_columnas.html" class="active no-ch">6.7. ALTER: Añadir columnas</a></li>
+      <li><a href="68_alter_eliminar_columnas.html" class="no-ch">6.8. ALTER: Eliminar columnas</a></li>
+      <li><a href="69_alter_modificacin_de_claves.html" class="no-ch">6.9. ALTER: Modificación de claves</a></li>
    </ul>
    </li>
    <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
@@ -103,39 +107,29 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="61_creacin_de_tablas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="63_definicin_de_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="66_alter_modificacin_de_tablas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="68_alter_eliminar_columnas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">6.2. Definición de columnas</h1></header>
-<article class="iDevice_wrapper FreeTextIdevice" id="id156">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.7. ALTER: Añadir columnas</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id165">
 <div class="iDevice emphasis0">
-<div id="ta156_85" class="block iDevice_content">
-<p><a href="CTdefinicioncolumnas.png"><img src="CTdefinicioncolumnas.png" alt="" style="float: right; margin: 10px;" width="410" /></a>Las columnas de la tabla recién creada se definen en el cuerpo de la sentencia <strong>CREATE TABLE</strong>. Las columnas aparecen en una lista separada por comas e insertada entre paréntesis. El orden de las definiciones de las columnas determina el orden de izquierda a derecha de las columnas en la tabla. Cada definición especifica:</p>
-<ul>
-<li>El <strong>nombre de la columna</strong>, que se utiliza para referirse a la columna en las sentencias SQL. Cada columna de la tabla debe tener un nombre <strong>único</strong>, pero los nombres pueden ser iguales a los de las columnas de otras tablas.</li>
-<li>El <strong>tipo de datos</strong> de la columna, que identifica la clase de datos que la columna almacena.</li>
-<li>Si la columna no puede contener datos nulos, la cláusula <strong>NOT NULL</strong> impide que aparezcan valores NULL en la columna, en caso contrario se permiten los valores nulos en la columna.</li>
-<li>Un <strong>valor por omisión</strong> es opcional para la columna. Se utiliza este valor cuando una sentencia INSERT aplicada a la tabla no especifica un valor para la columna.</li>
-</ul>
-<p></p>
+<div id="ta165_85" class="block iDevice_content">
+<p>El uso más común de la sentencia <strong>ALTER TABLE</strong> es añadir una columna a una tabla existente. La cláusula de definición de la columna en la sentencia ALTER TABLE es virtualmente idéntica a la de la sentencia CREATE TABLE y funciona del mismo modo.</p>
+<p>La nueva columna se añade al final de las definiciones de columna de la tabla y aparece como la columna más a la derecha en consultas posteriores. Esto puede cambiarse añadiendo <strong>FIRST</strong> (añadiéndola al comienzo de la tabla) o <strong>AFTER</strong> <em>columna_existente</em> (insertándola después de <em>columna_existente</em>).</p>
+<p>Por defecto, el gestor de la base de datos supone un valor NULL para la columna recién añadida en todas las filas existentes en la tabla. Si la columna se declara NOT NULL DEFAULT, el gestor supone que el valor por omisión es el del tipo de datos dela columna. Observa que no es posible declarar simplemente la columna como NOT NULL, pues en tal caso el gestor de la base de datos asumiría por defecto valores NULL a la columna, violando la restricción impuesta.</p>
 </div>
 </div>
 </article>
-<article class="iDevice_wrapper textIdevice em_iDevice" id="id157">
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id166">
 <div class="iDevice emphasis1" >
-<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejemplos</h1></header>
 <div class="iDevice_inner">
 <div class="iDevice_content_wrapper">
-<div id="ta157_156_2" class="block iDevice_content">
-<div class="exe-text"><p><em>CREATE TABLE oficinas (</em></p>
-<p style="padding-left: 30px;"><em>oficina INTEGER NOT NULL,</em></p>
-<p style="padding-left: 30px;"><em>ciudad VARCHAR(15) NOT NULL,</em></p>
-<p style="padding-left: 30px;"><em>region VARCHAR(10) NOT NULL DEFAULT 'Este',</em></p>
-<p style="padding-left: 30px;"><em>objetivo INTEGER DEFAULT NULL,</em></p>
-<p style="padding-left: 30px;"><em>ventas INTEGER NOT NULL DEFAULT 0<br /></em></p>
-<p><em>);</em></p></div>
+<div id="ta166_166_2" class="block iDevice_content">
+<div class="exe-text"><p><em>ALTER TABLE `Compañias de envios` ADD Pais varchar(50);</em></p>
+<p><em>ALTER TABLE `Compañias de envios` ADD Direccion varchar(75) AFTER NombreCompañia;</em></p></div>
 </div>
 </div>
 </div>
@@ -148,7 +142,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="61_creacin_de_tablas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="63_definicin_de_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="66_alter_modificacin_de_tablas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="68_alter_eliminar_columnas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.

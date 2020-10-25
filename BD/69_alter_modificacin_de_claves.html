@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>4.2. INSERT básico | Modelo Entidad - Relación </title>
+<title>6.9. ALTER: Modificación de claves | Modelo Entidad - Relación </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -16,7 +16,7 @@
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-67"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-84"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
@@ -70,10 +70,10 @@
       <li><a href="practica1.html" class="no-ch">Practica</a></li>
    </ul>
    </li>
-   <li class="current-page-parent"><a href="ud4_sql_insert_y_delete.html" class="current-page-parent daddy">UD4. SQL: INSERT y DELETE</a>
-   <ul>
+   <li><a href="ud4_sql_insert_y_delete.html" class="daddy">UD4. SQL: INSERT y DELETE</a>
+   <ul class="other-section">
       <li><a href="41_la_clusula_insert.html" class="no-ch">4.1. La cláusula INSERT</a></li>
-      <li id="active"><a href="42_insert_bsico.html" class="active no-ch">4.2. INSERT básico</a></li>
+      <li><a href="42_insert_bsico.html" class="no-ch">4.2. INSERT básico</a></li>
       <li><a href="43_insertar_con_insert.html" class="no-ch">4.3. Insertar con INSERT</a></li>
       <li><a href="44_insercin_masiva.html" class="no-ch">4.4. Inserción masiva</a></li>
       <li><a href="45_la_clusula_delete.html" class="no-ch">4.5. La cláusula DELETE</a></li>
@@ -87,8 +87,8 @@
       <li><a href="53_actualizar_con_subconsultas.html" class="no-ch">5.3. Actualizar con subconsultas</a></li>
    </ul>
    </li>
-   <li><a href="ud6_sql_create_drop_y_alter.html" class="daddy">UD6. SQL: CREATE, DROP Y ALTER</a>
-   <ul class="other-section">
+   <li class="current-page-parent"><a href="ud6_sql_create_drop_y_alter.html" class="current-page-parent daddy">UD6. SQL: CREATE, DROP Y ALTER</a>
+   <ul>
       <li><a href="61_create_creacin_de_tablas.html" class="no-ch">6.1. CREATE: Creación de tablas</a></li>
       <li><a href="62_create_definicin_de_columnas.html" class="no-ch">6.2. CREATE: Definición de columnas</a></li>
       <li><a href="63_create_definicin_de_claves.html" class="no-ch">6.3. CREATE: Definición de claves</a></li>
@@ -97,7 +97,7 @@
       <li><a href="66_alter_modificacin_de_tablas.html" class="no-ch">6.6. ALTER: Modificación de tablas</a></li>
       <li><a href="67_alter_aadir_columnas.html" class="no-ch">6.7. ALTER: Añadir columnas</a></li>
       <li><a href="68_alter_eliminar_columnas.html" class="no-ch">6.8. ALTER: Eliminar columnas</a></li>
-      <li><a href="69_alter_modificacin_de_claves.html" class="no-ch">6.9. ALTER: Modificación de claves</a></li>
+      <li id="active"><a href="69_alter_modificacin_de_claves.html" class="active no-ch">6.9. ALTER: Modificación de claves</a></li>
    </ul>
    </li>
    <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
@@ -107,52 +107,20 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="41_la_clusula_insert.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_insertar_con_insert.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="68_alter_eliminar_columnas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">4.2. INSERT básico</h1></header>
-<article class="iDevice_wrapper FreeTextIdevice" id="id134">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.9. ALTER: Modificación de claves</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id170">
 <div class="iDevice emphasis0">
-<div id="ta134_85" class="block iDevice_content">
-<p>La sentencia básica INSERT omite las columnas en las que se insertan los datos ya que espera que introduzcamos correctamente los nuevos valores en el orden en el están dichas columnas.</p>
-<p style="text-align: center;"><strong>INSERT INTO Categorias VALUES (9, "Legumbres", "Guisantes, garbanzos, lentejas y habas", NULL);</strong></p>
-<p></p>
-</div>
-</div>
-</article>
-<article class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id135">
-<div class="iDevice emphasis1" >
-<header class="iDevice_header"><h1 class="iDeviceTitle">Ejemplos</h1></header>
-<div class="iDevice_inner">
-<div class="iDevice_content_wrapper">
-<div id="ta135_143_2" class="block iDevice_content">
-<ol>
-<li>Crea una categoría nueva denominada "Legumbres" con la descripción que desees.</li>
-<li>Inserta tus datos (ficticios si quieres) en la tabla Empleados.</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</article>
-<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id136">
-<div class="iDevice emphasis1" >
-<header class="iDevice_header"><h1 class="iDeviceTitle">A tener en cuenta</h1></header>
-<div class="iDevice_inner">
-<div class="iDevice_content_wrapper">
-<div id="ta136_144_2" class="block iDevice_content">
-<ul>
-<li>Los registros se agregan siempre al <strong>final</strong> de la tabla.</li>
-<li>Cuando indicamos nombres de columnas, estos corresponden a nombres de columna de la tabla, pero no tienen por qué estar en el orden en que aparecen en la ventana diseño de la tabla, también se pueden omitir algunas columnas, la columnas que no se nombran tendrán por defecto el valor <strong>NULL</strong> o el <strong>valor</strong> <strong>predeterminado</strong> indicado en la ventana de diseño de tabla.</li>
-<li>Cuando no se indica ninguna lista de columnas después del destino, se asume por defecto <strong>todas</strong> las columnas de la tabla, en este caso, los valores se tienen que especificar en el mismo orden en que aparecen las columnas en la ventana de diseño de dicha tabla, y se tiene que utilizar el valor <strong>NULL</strong> para rellenar las columnas de las cuales no tenemos valores.</li>
-<li>La palabra reservada <strong>VALUES</strong> se puede sustituir por la palabra <strong>SELECT</strong> (en otros SQLs se emplea únicamente VALUES) para insertar el resultado de una consulta siempre que coincidan los campos y sus tipos.</li>
-<li>A continuación de la palabra VALUES, entre paréntesis se escriben los valores que queremos añadir. Estos valores se tienen que escribir de acuerdo al tipo de dato de la columna donde se van a insertar (encerrados entre comillas simples ' ' para valores de tipo texto, entre # # o " " para valores de fecha...) la asignación de valores se realiza por posición, el primer valor lo asigna a la primera columna, el segundo valor a la segunda columna, así sucesivamente...</li>
-<li>Cuando la tabla tiene una columna de tipo contador (<strong>AutoNumber</strong>), lo normal es no asignar valor a esa columna para que el sistema le asigne el valor que le toque según el contador, si por el contrario queremos que la columna tenga un valor concreto, lo indicamos en la lista de valores (puede ocasionar error si el número existe).</li>
-</ul>
-</div>
-</div>
+<div id="ta170_85" class="block iDevice_content">
+<p>Otro uso habitual de <strong>ALTER TABLE</strong> es cambiar o añadir definiciones de clave primaria y clave foránea a una tabla. Las sentencias que añaden definiciones de claves primarias o foráneas a una tabla son exactamente iguales que las de la sentencia <strong>CREATE TABLE</strong> y funcionan del mismo modo.</p>
+<p>Las cláusulas que crean o suprimen una clave primaria o una clave foránea son sencillas, tal y como puede verse en los siguientes ejemplos:</p>
+<p style="text-align: center;"><em>ALTER TABLE oficinas FOREIGN KEY enregion(region) REFERENCES regiones</em></p>
+<p style="text-align: center;"><em>ALTER TABLE repventas DROP FOREIGN KEY operaen<br />ALTER TABLE oficinas DROP PRIMARY KEY</em></p>
+<p>En el segundo ejemplo se puede observar como para poder eliminar la claveprimaria de la tabla OFICINAS hemos de eliminar la clave foránea de la tabla REPVENTAS. Además, es conveniente resaltar que <strong>la clave foránea sólo puede ser eliminada si la relación tiene nombre</strong>, en caso contrario la tabla deberá ser tratada como en el caso anterior de supresión de una columna.</p>
 </div>
 </div>
 </article>
@@ -163,7 +131,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="41_la_clusula_insert.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_insertar_con_insert.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="68_alter_eliminar_columnas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.

@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>Sección | Modelo Entidad - Relación </title>
+<title>6.4. CREATE: Restricciones de unicidad | Modelo Entidad - Relación </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -89,11 +89,15 @@
    </li>
    <li class="current-page-parent"><a href="ud6_sql_create_drop_y_alter.html" class="current-page-parent daddy">UD6. SQL: CREATE, DROP Y ALTER</a>
    <ul>
-      <li><a href="61_creacin_de_tablas.html" class="no-ch">6.1. Creación de tablas</a></li>
-      <li><a href="62_definicin_de_columnas.html" class="no-ch">6.2. Definición de columnas</a></li>
-      <li><a href="63_definicin_de_claves.html" class="no-ch">6.3. Definición de claves</a></li>
-      <li id="active"><a href="seccin.html" class="active no-ch">Sección</a></li>
-      <li><a href="seccin0.html" class="no-ch">Sección</a></li>
+      <li><a href="61_create_creacin_de_tablas.html" class="no-ch">6.1. CREATE: Creación de tablas</a></li>
+      <li><a href="62_create_definicin_de_columnas.html" class="no-ch">6.2. CREATE: Definición de columnas</a></li>
+      <li><a href="63_create_definicin_de_claves.html" class="no-ch">6.3. CREATE: Definición de claves</a></li>
+      <li id="active"><a href="64_create_restricciones_de_unicidad.html" class="active no-ch">6.4. CREATE: Restricciones de unicidad</a></li>
+      <li><a href="65_drop_eliminacin_de_tablas.html" class="no-ch">6.5. DROP: Eliminación de tablas</a></li>
+      <li><a href="66_alter_modificacin_de_tablas.html" class="no-ch">6.6. ALTER: Modificación de tablas</a></li>
+      <li><a href="67_alter_aadir_columnas.html" class="no-ch">6.7. ALTER: Añadir columnas</a></li>
+      <li><a href="68_alter_eliminar_columnas.html" class="no-ch">6.8. ALTER: Eliminar columnas</a></li>
+      <li><a href="69_alter_modificacin_de_claves.html" class="no-ch">6.9. ALTER: Modificación de claves</a></li>
    </ul>
    </li>
    <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
@@ -103,12 +107,29 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="63_definicin_de_claves.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="seccin0.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="63_create_definicin_de_claves.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="65_drop_eliminacin_de_tablas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">Sección</h1></header>
+<header id="nodeDecoration"><h1 id="nodeTitle">6.4. CREATE: Restricciones de unicidad</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id161">
+<div class="iDevice emphasis0">
+<div id="ta161_85" class="block iDevice_content">
+<p>Mediante este tipo de restricción, permite el hecho de que un valor sin ser clave deba ser único, también se definen en la sentencia CREATE TABLE, utilizando para ello la cláusula <strong>UNIQUE</strong>.</p>
+<p>Por ejemplo, la siguiente sentencia CREATE TABLE exige que los valores de <strong>ciudad</strong> sean únicos:</p>
+<p><em>CREATE TABLE oficinas (</em></p>
+<p style="padding-left: 30px;"><em>oficina INTEGER NOT NULL,</em></p>
+<p style="padding-left: 30px;"><em>ciudad VARCHAR(15) NOT NULL,</em></p>
+<p style="padding-left: 30px;"><em>region VARCHAR(10) NOT NULL,</em></p>
+<p style="padding-left: 30px;"><em>objetivo INTEGER,</em></p>
+<p style="padding-left: 30px;"><em>ventas INTEGER NOT NULL,</em></p>
+<p style="padding-left: 30px;"><em>PRIMARY KEY (oficina),</em></p>
+<p style="padding-left: 30px;"><em>UNIQUE (ciudad)</em></p>
+<p><em>);</em></p>
+</div>
+</div>
+</article>
 <div id="packageLicense" class="cc cc-by-sa">
 <p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
 </div>
@@ -116,7 +137,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="63_definicin_de_claves.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="seccin0.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="63_create_definicin_de_claves.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="65_drop_eliminacin_de_tablas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.

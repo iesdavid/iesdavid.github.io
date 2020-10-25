@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>Sección | Modelo Entidad - Relación </title>
+<title>6.8. ALTER: Eliminar columnas | Modelo Entidad - Relación </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez Alcántara" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -16,7 +16,7 @@
 <script type="text/javascript" src="common.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-80"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-83"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">Modelo Entidad - Relación</div></header>
@@ -89,11 +89,15 @@
    </li>
    <li class="current-page-parent"><a href="ud6_sql_create_drop_y_alter.html" class="current-page-parent daddy">UD6. SQL: CREATE, DROP Y ALTER</a>
    <ul>
-      <li><a href="61_creacin_de_tablas.html" class="no-ch">6.1. Creación de tablas</a></li>
-      <li><a href="62_definicin_de_columnas.html" class="no-ch">6.2. Definición de columnas</a></li>
-      <li><a href="63_definicin_de_claves.html" class="no-ch">6.3. Definición de claves</a></li>
-      <li><a href="seccin.html" class="no-ch">Sección</a></li>
-      <li id="active"><a href="seccin0.html" class="active no-ch">Sección</a></li>
+      <li><a href="61_create_creacin_de_tablas.html" class="no-ch">6.1. CREATE: Creación de tablas</a></li>
+      <li><a href="62_create_definicin_de_columnas.html" class="no-ch">6.2. CREATE: Definición de columnas</a></li>
+      <li><a href="63_create_definicin_de_claves.html" class="no-ch">6.3. CREATE: Definición de claves</a></li>
+      <li><a href="64_create_restricciones_de_unicidad.html" class="no-ch">6.4. CREATE: Restricciones de unicidad</a></li>
+      <li><a href="65_drop_eliminacin_de_tablas.html" class="no-ch">6.5. DROP: Eliminación de tablas</a></li>
+      <li><a href="66_alter_modificacin_de_tablas.html" class="no-ch">6.6. ALTER: Modificación de tablas</a></li>
+      <li><a href="67_alter_aadir_columnas.html" class="no-ch">6.7. ALTER: Añadir columnas</a></li>
+      <li id="active"><a href="68_alter_eliminar_columnas.html" class="active no-ch">6.8. ALTER: Eliminar columnas</a></li>
+      <li><a href="69_alter_modificacin_de_claves.html" class="no-ch">6.9. ALTER: Modificación de claves</a></li>
    </ul>
    </li>
    <li><a href="bloque_3_modelo_entidad__relacin.html" class="no-ch">Bloque 3. Modelo Entidad - Relación</a></li>
@@ -103,12 +107,34 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="seccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="67_alter_aadir_columnas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="69_alter_modificacin_de_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">Sección</h1></header>
+<header id="nodeDecoration"><h1 id="nodeTitle">6.8. ALTER: Eliminar columnas</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id168">
+<div class="iDevice emphasis0">
+<div id="ta168_85" class="block iDevice_content">
+<p>Para eliminar una columna mediante ALTER TABLE usaremos <strong>DROP COLUMN</strong> de la siguiente manera:</p>
+<p style="text-align: center;"><em>ALTER TABLE nombre_tabla DROP COLUMN nombre_columna;</em></p>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id169">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta169_168_2" class="block iDevice_content">
+<div class="exe-text"><p>Se desea eliminar la columna <em>Fax</em> de la tabla Clientes:</p>
+<p style="text-align: center;"><em>ALTER TABLE Clientes DROP COLUMN Fax;</em></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
 <div id="packageLicense" class="cc cc-by-sa">
 <p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
 </div>
@@ -116,7 +142,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="seccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bloque_3_modelo_entidad__relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="67_alter_aadir_columnas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="69_alter_modificacin_de_claves.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <footer id="siteFooter">Departamento de Informática del IES Punta del Verde.
