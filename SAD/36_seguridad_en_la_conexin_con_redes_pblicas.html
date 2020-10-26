@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.6. Seguridad en la conexión con redes públicas | Módulo de Seguridad y Alta Disponibilidad </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-61"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Módulo de Seguridad y Alta Disponibilidad</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Seguridad y Alta Disponibilidad</a></li>
+   <li><a href="normativa.html" class="daddy">Normativa</a>
+   <ul class="other-section">
+      <li><a href="resultados_de_aprendizaje_y_criterios_de_evaluacin.html" class="no-ch">Resultados de Aprendizaje y Criterios de Evaluación</a></li>
+      <li><a href="contenidos_bsicos.html" class="no-ch">Contenidos Básicos</a></li>
+      <li><a href="orientaciones_pedaggicas.html" class="no-ch">Orientaciones Pedagógicas</a></li>
+   </ul>
+   </li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li><a href="bloque_1_tratamiento_de_la_informacin.html" class="daddy">Bloque 1. Tratamiento de la Información</a>
+   <ul class="other-section">
+      <li><a href="ud1_seguridad_de_la_informacin.html" class="daddy">UD1. Seguridad de la Información</a>
+      <ul class="other-section">
+         <li><a href="11_confidencialidad_integridad_y_disponibilidad.html" class="no-ch">1.1. Confidencialidad, integridad y disponibilidad</a></li>
+         <li><a href="12_vulnerabilidad.html" class="no-ch">1.2. Vulnerabilidad</a></li>
+         <li><a href="13_elementos_vulnerables.html" class="no-ch">1.3. Elementos vulnerables</a></li>
+         <li><a href="14_niveles_de_seguridad.html" class="no-ch">1.4. Niveles de Seguridad</a></li>
+         <li><a href="15_tipos_de_amenazas.html" class="no-ch">1.5. Tipos de Amenazas</a></li>
+         <li><a href="16_amenazas_humanas.html" class="no-ch">1.6. Amenazas Humanas</a></li>
+         <li><a href="17_amenazas_fsicas.html" class="no-ch">1.7. Amenazas Físicas</a></li>
+         <li><a href="18_amenazas_lgicas.html" class="no-ch">1.8. Amenazas Lógicas</a></li>
+         <li><a href="19_seguridad_activa_y_pasiva.html" class="no-ch">1.9. Seguridad Activa y Pasiva</a></li>
+         <li><a href="110_contraseas.html" class="no-ch">1.10. Contraseñas</a></li>
+      </ul>
+      </li>
+      <li><a href="ud2_seguridad_fsica_y_lgica.html" class="daddy">UD2. Seguridad Física y Lógica</a>
+      <ul class="other-section">
+         <li><a href="21_tipos_de_desastres.html" class="no-ch">2.1. Tipos de desastres</a></li>
+         <li><a href="22_ubicacin_y_proteccin_fsica.html" class="no-ch">2.2. Ubicación y protección física</a></li>
+         <li><a href="23_sistemas_de_alimentacin_ininterrumpida.html" class="no-ch">2.3. Sistemas de alimentación ininterrumpida</a></li>
+         <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+         <li><a href="24_criptografa.html" class="no-ch">2.4. Criptografía</a></li>
+         <li><a href="25_sistemas_asimtricos.html" class="no-ch">2.5. Sistemas asimétricos</a></li>
+         <li><a href="26_listas_de_control_de_accesos.html" class="no-ch">2.6. Listas de control de accesos</a></li>
+         <li><a href="27_polticas_de_contraseas.html" class="no-ch">2.7. Políticas de contraseñas</a></li>
+         <li><a href="28_sistemas_biomtricos.html" class="no-ch">2.8. Sistemas biométricos</a></li>
+         <li><a href="29_polticas_de_almacenamiento.html" class="no-ch">2.9. Políticas de almacenamiento</a></li>
+         <li><a href="210_copias_de_seguridad_y_respaldo.html" class="no-ch">2.10. Copias de seguridad y respaldo</a></li>
+         <li><a href="211_anlisis_forense.html" class="no-ch">2.11. Análisis forense</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="bloque_2_mecanismos_de_seguridad.html" class="current-page-parent daddy">Bloque 2. Mecanismos de Seguridad</a>
+   <ul>
+      <li class="current-page-parent"><a href="ud3_ataques_y_contramedidas.html" class="current-page-parent daddy">UD3. Ataques y contramedidas</a>
+      <ul>
+         <li><a href="31_anatoma_de_un_ataque.html" class="no-ch">3.1. Anatomía de un ataque</a></li>
+         <li><a href="32_software_malicioso.html" class="no-ch">3.2. Software malicioso</a></li>
+         <li><a href="33_herramientas_preventivas.html" class="no-ch">3.3. Herramientas preventivas</a></li>
+         <li><a href="34_herramientas_paliativas.html" class="no-ch">3.4. Herramientas paliativas</a></li>
+         <li><a href="35_actualizacin_de_sistemas_y_aplicaciones.html" class="no-ch">3.5. Actualización de sistemas y aplicaciones</a></li>
+         <li id="active"><a href="36_seguridad_en_la_conexin_con_redes_pblicas.html" class="active no-ch">3.6. Seguridad en la conexión con redes públicas</a></li>
+         <li><a href="37_pautas_y_prcticas_seguras.html" class="no-ch">3.7. Pautas y prácticas seguras</a></li>
+      </ul>
+      </li>
+      <li><a href="ud4_seguridad_en_la_red.html" class="daddy">UD4. Seguridad en la Red</a>
+      <ul class="other-section">
+         <li><a href="41_monitorizacin_del_trfico_en_redes.html" class="no-ch">4.1. Monitorización del tráfico en redes</a></li>
+         <li><a href="42_seguridad_en_los_protocolos_para_comunicaciones_inalmbricas.html" class="no-ch">4.2. Seguridad en los protocolos para comunicaciones inalámbricas</a></li>
+         <li><a href="43_riesgos_potenciales_de_los_servicios_de_red.html" class="no-ch">4.3. Riesgos potenciales de los servicios de red</a></li>
+         <li><a href="44_intentos_de_penetracin.html" class="no-ch">4.4. Intentos de penetración</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="bloque_3_acceso_remoto.html" class="daddy">Bloque 3. Acceso Remoto</a>
+   <ul class="other-section">
+      <li><a href="ud5_seguridad_perimetral.html" class="no-ch">UD5. Seguridad perimetral</a></li>
+      <li><a href="ud6_vpn_y_acceso_remoto.html" class="no-ch">UD6. VPN y acceso remoto</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_4_el_cortafuegos.html" class="daddy">Bloque 4. El Cortafuegos</a>
+   <ul class="other-section">
+      <li><a href="ud7_firewall.html" class="no-ch">UD7. Firewall</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_5_el_servidor_proxy.html" class="daddy">Bloque 5. El Servidor Proxy</a>
+   <ul class="other-section">
+      <li><a href="ud8_uso_de_proxy.html" class="no-ch">UD8. Uso de Proxy</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_6_alta_disponibilidad.html" class="daddy">Bloque 6. Alta Disponibilidad</a>
+   <ul class="other-section">
+      <li><a href="ud9_configuracin_de_alta_disponibilidad.html" class="no-ch">UD9. Configuración de alta disponibilidad</a></li>
+      <li><a href="ud10_virtualizacin.html" class="no-ch">UD10. Virtualización</a></li>
+   </ul>
+   </li>
+   <li><a href="bloque_7_legislacin.html" class="daddy">Bloque 7. Legislación</a>
+   <ul class="other-section">
+      <li><a href="ud11_legislacin_sobre_seguridad_y_proteccin_de_datos.html" class="no-ch">UD11. Legislación sobre seguridad y protección de datos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="35_actualizacin_de_sistemas_y_aplicaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="37_pautas_y_prcticas_seguras.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.6. Seguridad en la conexión con redes públicas</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id141">
+<div class="iDevice emphasis0">
+<div id="ta141_85" class="block iDevice_content">
+<p><img src="wifi.jpg" alt="" style="float: right; margin: 15px;" width="320" height="213" />Las <strong>conexiones wifi gratuitas</strong> que puedes encontrar en lugares públicos nos ofrecen una forma práctica de conectarnos a la red sin tener que consumir datos de nuestro plan de datos del operador. En ocasiones, es la única alternativa para tu portátil o tablet. Sin embargo, estas conexiones wifi públicas <strong>no son nada seguras</strong>.</p>
+<p>Muchas cafeterías parecen haberse convertido en las oficinas abiertas del siglo XXI. Hasta antes de que se produjera la crisis por el coronavirus COVID-19, era fácil visitar cualquier establecimiento de Starbucks y toparse con un mar de usuarios con portátiles o iPads. Ahora bien, aunque muchos traten de buscar cierta privacidad en el trabajo que están llevando a cabo, la verdad es que la conexión wifi de un lugar público como la que están utilizando no es nada segura y estará exponiéndolos a otro tipo de peligros.</p>
+<p>La conexión wifi gratuita tiene un coste oculto y se llama<strong> seguridad</strong>. Si bien nos gusta la idea de poder deambular por una ciudad conectándose a varios puntos de acceso público wifi sin coste alguno, esto es ciertamente peligroso, puesto que la mayoría de estas redes no están cifradas.</p>
+<p>Con el fin de facilitar las conexiones y evitar una administración o supervisión, estos puntos de acceso generalmente no requieren de contraseña para conectarse. Al conectarse, aparece una página web que te pide que ingreses una dirección de correo electrónico (hotspot).</p>
+<p>El problema con esto es que la conexión entre tu dispositivo y el punto de acceso <strong>no está encriptada</strong>. Por lo tanto, algunos datos se enviarán en forma de texto plano, lo que significa que cualquier persona podría espiar tus acciones.</p>
+<p>Peor aún, podrían configurar su propio punto de acceso y llamarlo algo así como "Starbucks wifi". Luego, las personas se conectarán a él sin dudar, dando al delincuente un fácil acceso a todos los datos no cifrados o información tuya relevante. Estas redes falsas parecen reales y te permiten acceder a Internet como lo harías normalmente, pero todo lo que hacen es espiarte. Tarde o temprano, te solicitarán que descargues algo de aspecto inocente que contendrá malware para tomar el control.</p>
+<p><br />Otro peligro es que el proveedor de la wifi a la que te conectas <strong>no almacene de forma segura</strong> tus datos que utilizaste al registrarte. En ocasiones estos servidores almacenan la información en un servidor de Amazon sin contraseña, exponiendo todo a cualquiera.</p>
+<p>Hay que tener en cuenta que cuando se inicia una sesión en cualquier red, el dispositivo almacenará esos detalles para que puedas conectarte automáticamente nuevamente cuando estés dentro del alcance de la red o vuelvas otro día. Para redes de confianza como las de tu casa u oficina, esto está bien. Pero cuando lo haces desde cualquier lugar, esto puede convertirse en tu contra. La red falsa puede <strong>suplantar a otra red</strong> para conseguir la información relevante de tu teléfono o dispositivo.</p>
+<figure class="exe-figure exe-media position-center" style="width: 320px;"><iframe width="320" height="240" src="https://www.youtube.com/embed/5ia7fas_f6c" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe>
+<figcaption class="figcaption"><span class="title"><em>Demostración del peligro de las Redes Wifis abiertas</em></span></figcaption>
+</figure>
+<p><br /><br /></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id142">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Riesgos de las Wifi públicas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta142_142_2" class="block iDevice_content">
+<div class="exe-text"><p>Cuando nos conectamos a una red wifi pública desconocemos quién es el administrador o qué medidas de seguridad utiliza para impedir acciones malintencionadas de otros usuarios conectados y por tanto, podemos exponernos sin necesidad a una serie de riesgos que se describen a continuación.</p>
+<table style="width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 24.6632%;">
+<p><strong>Robo de datos transmitidos.</strong></p>
+</td>
+<td style="width: 75.3368%;">
+<p>Si la conexión la realizamos sin contraseña, lo que conocemos como <strong>red “abierta”,</strong> los datos que transmitimos pueden ser leídos por cualquiera, tanto el administrador como otros usuarios conectados a la red. La información está expuesta a cualquiera que sepa cómo leerla, y para ello no es necesario tener unos conocimientos técnicos muy elevados.</p>
+<p>Si el sistema nos pide una contraseña y aparece un candado, como “<strong>red protegida</strong>”, la información se transmite de forma cifrada. No obstante, esto está condicionado por el sistema de seguridad utilizado y la contraseña escogida. De menor a mayor seguridad, los sistemas son <strong>WEP, WPA y WPA2</strong>.</p>
+<p>Nunca debemos conectarnos a una red WEP ya que se ha demostrado que es vulnerable y que su seguridad equivale a una red abierta (sin contraseña).</p>
+</td>
+</tr>
+<tr>
+<td style="width: 24.6632%;"><strong>Robo de datos almacenados en nuestro equipo</strong></td>
+<td style="width: 75.3368%;">
+<p>Al formar parte de una red pública en la que existen otros usuarios conectados, nuestro dispositivo está expuesto y visible a los demás usuarios presentes en la misma.</p>
+<p>Por tanto somos susceptibles de recibir cualquier tipo de ataque desde uno de estos equipos conectados.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 24.6632%;"><strong>Infección de los dispositivos.</strong></td>
+<td style="width: 75.3368%;">
+<p>Al conectarnos a una wifi ajena, un usuario malintencionado conectado a la misma red podría tratar de infectar nuestro equipo con algún tipo de virus. Es importante mantener siempre nuestro equipo actualizado con las últimas actualizaciones de seguridad para el sistema operativo y para las aplicaciones que tengamos instaladas.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 24.6632%;"><strong>Equipos intermediarios malintencionados</strong></td>
+<td style="width: 75.3368%;">
+<p>Un usuario malintencionado conectado a la red podría configurar su equipo para hacer de intermediario de la comunicación entre nosotros y el servicio (por ejemplo, Facebook) modificando o eliminando la información intercambiada, que pasaría a través del ciberdelincuente.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 24.6632%;"><strong>El hacker “inocente”</strong></td>
+<td style="width: 75.3368%;">
+<p>En un momento dado,podemos sentir la tentación de conectarnos a una red ajena abierta o protegida utilizando herramientas de hacking wifi. Sin embargo, esta práctica constituye un uso ilícito de servicios de terceros que puede tener consecuencias legales. Además, puede darse el caso de que esa red wifi no presente contraseña o sea especialmente fácil de hackear precisamente para atraer víctimas a ella y así robar los datos al pícaro usuario.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper objectivesIdevice em_iDevice" id="id143">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Recomendaciones de seguridad</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta143_143_2" class="block iDevice_content">
+<p>Nunca debemos utilizar redes wifi no confiables para acceder a servicios donde se intercambie información sensible: información bancaria, recursos corporativos, correo electrónico o acceso a las redes sociales.</p>
+<p>Debemos evitar el uso de cualquier servicio en el que la información transferida tenga un componente importante de privacidad.</p>
+<p><strong>Nunca intercambiar información privada en redes no confiables.</strong></p>
+<p>Aunque podemos utilizar las redes públicas para otras acciones, como leer noticias en periódicos online o mirar la previsión del tiempo, no olvidemos que la mayor parte de los dispositivos mantienen un proceso de sincronización continua, por lo que el riesgo continúa existiendo.</p>
+<p>Para protegernos de estos riesgos en redes donde los demás usuarios son desconocidos, contamos con una serie de medidas de seguridad que debemos aplicar:</p>
+<table style="width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 24.3425%;">
+<p><strong>Cortafuegos</strong></p>
+</td>
+<td style="width: 75.6575%;">Es muy importante tener instalado y habilitado un cortafuegos que no permita las conexiones entrantes a nuestro equipo por parte de otros usuarios de la red. Muchos sistemas operativos actuales permiten escoger el modo de funcionamiento del cortafuegos cada vez que nos conectamos a una nueva red wifi.</td>
+</tr>
+<tr>
+<td style="width: 24.3425%;">
+<p><strong>Configuraciones</strong></p>
+</td>
+<td style="width: 75.6575%;">En Windows, en “Centro de redes y recursos compartidos” encontramos dos configuraciones. ‘Pública’ es la que debemos seleccionar en las redes ajenas, y ‘Privada’ aquella a utilizar en redes de total confianza, como la de nuestra casa o la del trabajo.</td>
+</tr>
+<tr>
+<td style="width: 24.3425%;">
+<p><strong>Sistema antivirus</strong></p>
+</td>
+<td style="width: 75.6575%;">
+<p>Algunas aplicaciones antivirus pueden no solo identificar y detener software malintencionado destinado a nuestro equipo, sino también detectar y bloquear intentos de ataque a nuestro terminal.</p>
+<p>Como siempre, es fundamental que lo mantengamos <strong>permanentemente actualizado.</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 24.3425%;">
+<p><strong>Parches de seguridad</strong></p>
+</td>
+<td style="width: 75.6575%;">
+<p>Las aplicaciones y los servicios de nuestros dispositivos pueden contener fallos de seguridad que un atacante utilizará para ganar acceso a nuestro equipo.</p>
+<p>Las actualizaciones facilitadas periódicamente por los fabricantes de software deben ser instaladas en cuanto estén disponibles, preferiblemente de manera automática.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 24.3425%;">
+<p><strong>Desactivar la sincronización</strong></p>
+</td>
+<td style="width: 75.6575%;">
+<p>Muchos de nuestros dispositivos realizan tareas en segundo plano sin la participación directa del usuario: sincronizaciones de agendas, calendario, descarga de correo electrónico, realización automática de copias de seguridad. Se recomienda deshabilitar estos servicios cuando nos encontremos conectados a una red no segura.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 24.3425%;">
+<p><strong>Desactivar el sistema wifi en los dispositivos</strong></p>
+</td>
+<td style="width: 75.6575%;">
+<p>Cuando nos encontremos fuera del alcance de nuestras redes wifi de confianza debemos deshabilitar la opción de conectarse a este tipo de redes. Se aconseja porque un atacante puede suplantar una red wifi de nuestra lista de favoritos, forzándonos a que nos conectemos a ella de forma automática y transparente para nosotros.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 24.3425%;">
+<p><strong>Limpiar la lista de puntos de acceso memorizados</strong></p>
+</td>
+<td style="width: 75.6575%;">
+<p>Conviene revisar la lista de puntos de acceso memorizados para eliminar aquellos esporádicos y dejar únicamente los realmente confiables.</p>
+<p>La mayoría de nuestros dispositivos almacenan un listado de las redes a las cuales nos hemos conectado previamente, almacenando incluso las credenciales de acceso. Cada cierto intervalo de tiempo nuestra wifi intenta conectarse de forma automática a cada una de las redes almacenadas, y es posible que nos encontremos formando parte de una red inalámbrica involuntariamente.</p>
+<p>Esto es debido a que para realizar su asociación con el punto de acceso tan solo se comprueba el nombre de la red (SSID) y el sistema de seguridad. Por ejemplo, si en el aeropuerto de Bilbao nos conectamos a una red wifi abierta llamada “Aeropuerto” y en el terminal de pasajeros de Valencia existe una red abierta con el mismo nombre, nos veremos formando parte de esa red de forma automática sin desearlo.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="35_actualizacin_de_sistemas_y_aplicaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="37_pautas_y_prcticas_seguras.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">David Bermúdez Alcántara - Departamento de Informática del IES Punta del Verde.
+Curso 2020 - 2021</footer></div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>
