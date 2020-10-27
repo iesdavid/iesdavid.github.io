@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TIC 4º ESO - En construcción</title>
-	<style>
-		body{
-			text-align:center;
-		}
-	</style>
+  <style>
+	body{
+		    text-align: center;
+}
+  div {
+    animation-duration: 6s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    width: 400px;
+    height: 200px;
+    margin: 100px;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px;
+  }
+  @keyframes slide {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  </style>
 </head>
 <body>
-	<img src="../images/cargando.gif">
-	Construyendo...
-	</body>
+  <div>Construyendo...</div>
+</body>
 </html>
