@@ -118,9 +118,13 @@
 <div id="ta170_85" class="block iDevice_content">
 <p>Otro uso habitual de <strong>ALTER TABLE</strong> es cambiar o añadir definiciones de clave primaria y clave foránea a una tabla. Las sentencias que añaden definiciones de claves primarias o foráneas a una tabla son exactamente iguales que las de la sentencia <strong>CREATE TABLE</strong> y funcionan del mismo modo.</p>
 <p>Las cláusulas que crean o suprimen una clave primaria o una clave foránea son sencillas, tal y como puede verse en los siguientes ejemplos:</p>
-<p style="text-align: center;"><em>ALTER TABLE oficinas FOREIGN KEY enregion(region) REFERENCES regiones</em></p>
+<p style="text-align: center;"><em>ALTER TABLE oficinas ADD FOREIGN KEY enregion(region) REFERENCES regiones</em></p>
 <p style="text-align: center;"><em>ALTER TABLE repventas DROP FOREIGN KEY operaen<br />ALTER TABLE oficinas DROP PRIMARY KEY</em></p>
 <p>En el segundo ejemplo se puede observar como para poder eliminar la claveprimaria de la tabla OFICINAS hemos de eliminar la clave foránea de la tabla REPVENTAS. Además, es conveniente resaltar que <strong>la clave foránea sólo puede ser eliminada si la relación tiene nombre</strong>, en caso contrario la tabla deberá ser tratada como en el caso anterior de supresión de una columna.</p>
+<p>Para añadir un nombre a la relación de <strong>clave foránea</strong> sólo hay que añadir la palabra <strong>CONSTRAINT</strong> y el nombre de la relación después de <strong>ADD</strong>. Por ejemplo:</p>
+<p style="text-align: center;"><em>ALTER TABLE oficinas ADD CONSTRAINT fk_regiones FOREIGN KEY enregion(region) REFERENCES regiones;</em></p>
+<p style="text-align: justify;">De esta forma se habría creado la relación foránea <strong>fk_regiones</strong> que luego puede eliminarse así:</p>
+<p style="text-align: center;"><em>ALTER TABLE oficinas DROP FOREIGN KEY fk_regiones;</em></p>
 </div>
 </div>
 </article>
