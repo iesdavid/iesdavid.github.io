@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.6. Transferencia de ficheros en modo seguro | 6.2. Protocolo SSH </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-59"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.2. Protocolo SSH</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.2. Control remoto en modo seguro con SSH</a></li>
+   <li><a href="621_configuracin_bsica_de_ssh.html" class="no-ch">6.2.1. Configuración básica de SSH</a></li>
+   <li><a href="622_autenticacin_del_servidor_ssh.html" class="no-ch">6.2.2. Autenticación del servidor SSH</a></li>
+   <li><a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="no-ch">6.2.3. Ejecución remota de comandos en modo desatendido</a></li>
+   <li><a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="no-ch">6.2.4. Ejecución remota de comandos en modo desatendido con frase de paso</a></li>
+   <li><a href="625_ficheros_authorizedkeys_y_known_host.html" class="no-ch">6.2.5. Ficheros authorized-keys y known_host</a></li>
+   <li id="active"><a href="626_transferencia_de_ficheros_en_modo_seguro.html" class="active no-ch">6.2.6. Transferencia de ficheros en modo seguro</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="625_ficheros_authorizedkeys_y_known_host.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.6. Transferencia de ficheros en modo seguro</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id410">
+<div class="iDevice emphasis0">
+<div id="ta410_154" class="block iDevice_content">
+<p>Además de la ejecución remota de comandos, el servicio <span lang="en"><abbr title="Secure SHell">SSH</abbr></span> ofrece la posibilidad de transferir archivos entre el cliente y el servidor. Para ello se hará uso del comando <code><strong>scp</strong></code> (<span lang="en">Secure CoPy</span>).</p>
+<p>Si se quiere transferir un archivo desde el cliente a un servidor remoto se ejecutaría el comando:</p>
+<div class="highlighted-code code-style-2 language-python">
+<div>
+<pre><code>scp ruta_origen ruta_destino</code></pre>
+</div>
+</div>
+<p>Por ejemplo, si se quiere transferir el fichero <code><strong>prueba.pdf</strong></code> que se encuentra en el directorio <code><strong>~/Documentos</strong></code>, y se quiere transferir al <strong></strong><span lang="en"><strong><span lang="en">home</span></strong> </span>del usuario <strong>arubio</strong> en el equipo <strong>192.168.1.90</strong>, se debe ejecutar el siguiente comando:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>scp ~/Documentos/prueba.pdf arubio@192.158.1.90:/home/arubio</code></pre>
+</div>
+</div>
+<p>También es posible realizar la transferencia al revés, es decir, pasar un archivo que se localiza en el servidor SSH al equipo cliente:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>scp arubio@192.158.1.90:/home/arubio/prueba.pdf ~/prueba.pdf</code></pre>
+</div>
+</div>
+<p>La sintaxis completa de <code>scp</code> es la mostrada a continuación:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>scp [-1246Cpqrv] [-F ssh_config] [-i identity file] [-l limit] [-P port] [[user@]host1:]file1... [[user@]host1:]file2</code></pre>
+</div>
+</div>
+<p>El significado de cada uno de sus parámetros es el siguiente:</p>
+<table border="1" style="width: 882px; height: 266px; border: 1px solid #000000;" class="tabla" summary="Tabla que muestra el significado de los parámetros del comando scp"><caption><span style="color: #3366ff;">Significado de los parámetros del comando scp</span></caption>
+<tbody>
+<tr>
+<th><strong>Parámetro</strong></th>
+<th><strong>Significado</strong></th>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-1</strong></td>
+<td>Obliga a <span lang="en"><abbr title="Secure Copy Protocol">SCP</abbr></span> a utilizar SSH v1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-2</strong></td>
+<td>Obliga a SCP a utilizar SSH v2</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-4</strong></td>
+<td>Obliga a SCP a emplear exclusivamente direcciones <span lang="en"><abbr title="Internet Protocol">IP</abbr></span> v4.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-6</strong></td>
+<td>Obliga a SCP a emplear exclusivamente direcciones IP v6.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-C</strong></td>
+<td>Habilita la compresión de los ficheros transferidos.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-p</strong></td>
+<td>Mantiene la fecha de modificación y de acceso, así como los permisos del archivo original transferido.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-q</strong></td>
+<td>Deshabilita el contador de progreso de la transferencia.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-r</strong></td>
+<td>Copia recursivamente los archivos de un directorio.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-v</strong></td>
+<td>Muestra información más detallada acerca del proceso de conexión y de transferencia.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-F</strong></td>
+<td>Indica la ubicación del fichero de configuración de <span lang="en">OpenSSH Client</span>. Por defecto se utiliza <code>/etc/ssh/ssh_config</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-i</strong></td>
+<td>Indica la ubicación de la clave privada empleada para una conexión autenticada mediante claves.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-l</strong></td>
+<td>Especifica el ancho de banda a emplear en el canal de comunicación (expresado en <span><abbr title="Kilobits por segundo">Kb/s</abbr></span>).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>-P</strong></td>
+<td>Establece el puerto al que conectarse en el servidor remoto.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id412">
+<div class="iDevice emphasis0">
+<div id="ta412_77" class="block iDevice_content">
+<h6 style="text-align: center;" class=" resaltado_inline">Montaje de sistemas de archivos remotos seguros</h6>
+<p><span lang="en"><abbr title="Secure SHell">SSH</abbr></span> puede proporcionar un sistema de archivos en red que realice las mismas funciones que <a href="#t462a046b-2b5f-6415-ba6b-6559064d05c3" id="link462a046b-2b5f-6415-ba6b-6559064d05c3" class="exe-tooltip definition-tt titled-tt blue-tt rounded-tt shadowed-tt" title="NFS | ">NFS</a> de manera segura. Para poder utilizar este sistema de archivos es necesario:</p>
+<div id="t462a046b-2b5f-6415-ba6b-6559064d05c3" class="exe-tooltip-text">
+<p>Software que hace posible que se compartan ficheros entre servidores y clientes. Inicialmente creado para sistemas Unix y hoy en día compatible con múltiples plataformas.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id413">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta413_73" class="block iDevice_content">
+<ul class="lista_verificacion">
+<li>Servidor SSH en el equipo que actúa como servidor.</li>
+<li>Cliente <a href="#t7d4f54cd-106b-3f57-907b-4e789b6f444e" id="link7d4f54cd-106b-3f57-907b-4e789b6f444e" class="exe-tooltip definition-tt titled-tt blue-tt rounded-tt shadowed-tt" title="SSHFS | ">SSHFS</a> en el equipo cliente.</li>
+</ul>
+<div id="t7d4f54cd-106b-3f57-907b-4e789b6f444e" class="exe-tooltip-text">
+<p>Sistema de archivos seguro para poder utilizar archivos de un sistema remoto</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id414">
+<div class="iDevice emphasis0">
+<div id="ta414_77" class="block iDevice_content">
+<p>SSHFS permite montar en el equipo local un directorio que esté situado en un equipo remoto usando SSH. Para montar ficheros remotos en el equipo local se utiliza una sintaxis similar a:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id415">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta415_73" class="block iDevice_content">
+<div class="highlighted-code language-python">
+<div>
+<pre><code>sshfs arubio@iesalandalus.org:/examenes/sad /home/cidead/micarpeta/examenes/sad</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id416">
+<div class="iDevice emphasis0">
+<div id="ta416_77" class="block iDevice_content">
+<p>Con la orden anterior, el usuario <strong>arubio</strong> se conecta al servidor <strong>iesalandalus.org</strong> y monta el directorio <strong><span class=" resaltado_inline">sad</span> </strong>que está en el directorio <strong><span class=" resaltado_inline">exámenes</span></strong>, en el directorio <strong><span class=" resaltado_inline">sad</span> </strong>que está en el directorio <code></code><span class=" resaltado_inline"><code>/micarpeta/examenes</code></span> del equipo local.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id417">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.gif)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta417_50" class="block iDevice_content">
+<p>En los siguientes enlace podrás aprender más cosas sobre <span lang="en"><abbr title="Secure SHell FileSystem">SSHFS</abbr></span>:</p>
+<div class="exe-layout-3-cols exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;"><a href="https://geekland.eu/montar-sistema-archivos-remoto-con-sshfs/" target="_blank" title="Acceder a geekland.eu para ver cómo montar un sistema archivos remoto con sshfs (Se abre en una nueva ventana)." rel="noopener">Montar Sistema Archivos Remoto Con SSHFS</a></p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><a href="https://wiki.archlinux.org/index.php/SSHFS_(Espa%C3%B1ol)" target="_blank" title="Acceder a archlinux para ver una wiki sobre SSHFS (Se abre en una nueva ventana)." rel="noopener">Wiki sobre SSHFS</a></p>
+</div>
+<div class="exe-col exe-col-3">
+<p style="text-align: center;"><a href="https://www.youtube.com/watch?v=gUA1ys0Y8VY" target="_blank" title="Acceder a youtube para ver un vídeo sobre el uso de SSHFS (Se abre en una nueva ventana)." rel="noopener">Trabajo con ficheros remotos sobre SSH</a></p>
+</div>
+</div>
+<p><span lang="en"> </span></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="625_ficheros_authorizedkeys_y_known_host.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

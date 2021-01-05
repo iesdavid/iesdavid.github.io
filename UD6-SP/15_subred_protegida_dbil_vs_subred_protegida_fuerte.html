@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.5.- Subred protegida débil Vs subred protegida fuerte. | Implantación de Técnicas de Acceso Remoto </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Ministerio de Educación y Formación Profesional" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Implantación de Técnicas de Acceso Remoto</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Implantación de técnicas de acceso remoto.</a></li>
+   <li class="current-page-parent"><a href="1_elementos_bsicos_de_la_seguridad_perimetral.html" class="current-page-parent daddy">1.- Elementos básicos de la seguridad perimetral.</a>
+   <ul>
+      <li><a href="11_router_frontera.html" class="no-ch">1.1.- Router frontera.</a></li>
+      <li><a href="12_cortafuegos.html" class="no-ch">1.2.- Cortafuegos.</a></li>
+      <li><a href="13_redes_privadas_virtuales.html" class="no-ch">1.3.- Redes privadas virtuales.</a></li>
+      <li><a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="no-ch">1.4.- Perímetros de red. Zonas desmilitarizadas.</a></li>
+      <li id="active"><a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="active no-ch">1.5.- Subred protegida débil Vs subred protegida fuerte.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_polticas_de_defensa_en_profundidad.html" class="daddy">2.- Políticas de defensa en profundidad.</a>
+   <ul class="other-section">
+      <li><a href="21_defensa_perimetral.html" class="no-ch">2.1.- Defensa perimetral.</a></li>
+      <li><a href="22_defensa_interna.html" class="no-ch">2.2.- Defensa interna.</a></li>
+      <li><a href="23_factor_humano.html" class="no-ch">2.3.- Factor humano.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_polticas_de_defensa_en_profundidad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.5.- Subred protegida débil Vs subred protegida fuerte.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id27">
+<div class="iDevice emphasis0">
+<div id="ta27_77" class="block iDevice_content">
+<p>Muchos <span lang="en">routers</span> que proporcionan los proveedores de Internet, cuentan en su configuración, con una opción para habilitar una <span lang="en"><abbr title="DeMilitarized Zone">DMZ</abbr></span> mediante la cual un equipo de la DMZ se hace accesible desde Internet. Activar esta opción, no es muy recomendable, ya que se estaría provocando que la protección de red dependiera exclusivamente del <span lang="en">router</span>. Hay que tener en cuenta que un <span class=" resaltado_inline"><span lang="en">router</span> no es un dispositivo que se haya diseñado específicamente para cumplir las funciones de cortafuegos</span>, sus características de seguridad son más reducidas.</p>
+<p>Además, puesto que una DMZ es muy propensa a recibir ataques, es recomendable utilizar herramientas adicionales de monitorización, y de detección y prevención de intrusos (<span lang="en"><abbr title="Intrusion Detection System">IDS</abbr></span> e <span lang="en"><abbr title="Intrusion Prevention System">IPS</abbr></span>). </p>
+<p></p>
+<p>Por otro lado, como se ha expuesto anteriormente, siempre se asume un riesgo de sufrir un incidente de seguridad cuando se publica cualquier servicio en Internet desde la red de la empresa, aunque sea desde una DMZ. Sin embargo, hay arquitecturas o configuraciones que hacen que la subred protegida sea débil o fuerte.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<h6 style="text-align: center;"><span class=" resaltado_inline">Subred protegida débil</span></h6>
+<p>Una subred protegida débil es aquella que establece la protección de la red interna empleando una zona DMZ por detrás de un <span lang="en">firewall</span> de perímetro.</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 450px;"><a href="SAD03_CONT_R77_DMZTipica.png" rel="lightbox" title="Imagen ampliada que muestra una subred protegida débil al constar un único firewall detrás del cual se sitúan, por una pata del firewall la  DMZ y por otra una LAN"><img src="SAD03_CONT_R77_DMZTipica.png" alt="Ilustración que muestra una subred protegida débil al constar un único firewall detrás del cual se sitúan, por una pata del firewall la  DMZ y por otra una LAN" title="Subred protegida débil" width="450" height="261" /></a>
+<figcaption class="figcaption"><span class="author">Andrés Rubio - Elaboración propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>En esta disposición, el equipo que actúa como <span lang="en">firewall</span> debe tener al menos tres interfaces para poder conectar con la DMZ, el exterior y la red interna. </p>
+<p><span class=" resaltado_inline">En una arquitectura de este tipo es peligrosa: un fallo en el cortafuegos puede desproteger a la red interna.</span></p>
+</div>
+<div class="exe-col exe-col-2">
+<h6 style="text-align: center;"><span class=" resaltado_inline">Subred protegida fuerte</span></h6>
+<p>La subred protegida fuerte establece la protección de la red interna con una zona DMZ situada entre dos <span lang="en">firewall</span>.</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 451px;"><a href="SAD03_CONT_R14_DMZDobleFw.png" rel="lightbox" title="Imagen ampliada que muestra una subred protegida fuerte al situarse la DMZ entre dos firewalls y situando la LAN detrás del segundo firewall"><img src="SAD03_CONT_R14_DMZDobleFw.png" alt="Ilustración que muestra una subred protegida fuerte al situarse la DMZ entre dos firewalls y situando la LAN detrás del segundo firewall" title="Subred protegida fuerte" width="451" height="263" /></a>
+<figcaption class="figcaption"><span class="author">Andrés Rubio - Elaboración propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>En esta disposición el cortafuegos externo (<span class=" resaltado_inline">de acceso</span>) bloquea y controla el tráfico no deseado desde la red externa a la DMZ. El cortafuegos interno (<span class=" resaltado_inline">de contención</span>) bloquea y controla el tráfico no deseado de la DMZ a  la red interna.</p>
+<p>Una de las medidas recomendables es tener dos proveedores diferentes para cada uno de los dos servidores que funcionan como <span lang="en">firewall</span>. Cada proveedor puede tener una política de seguridad diferente por lo que si un intruso es capaz de saltar las medidas de seguridad de uno de ellos, en el mejor de los casos, tendrá que emplear un método diferente para atravesar el otro.</p>
+<p><span class=" resaltado_inline">A diferencia del la arquitectura anterior, un fallo en el cortafuegos externo solo desprotege a la DMZ.</span></p>
+En una organización de este tipo, una de las medidas recomendables es tener dos proveedores diferentes para cada uno de los dos servidores que funcionan como <span lang="en">firewall</span>. Cada proveedor puede tener una política de seguridad diferente por lo que si un intruso es capaz de saltar las medidas de seguridad de uno de ellos, en el mejor de los casos, tendrá que emplear un método diferente para atravesar el otro.</div>
+</div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id33">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-33_63" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion33_63" class="block question iDevice_content">
+<b>Un perímetro de red:</b>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i33_66" class="sr-av"><a href="#answer-33_66">Opción 1</a></label><input type="radio" name="option33_63" id="i33_66" class="exe-radio-option exe-radio-option-0-4-33_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-33_66"><div id="taans33_66" class="block iDevice_content">
+Incluye solamente a la DMZ.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i33_126" class="sr-av"><a href="#answer-33_126">Opción 2</a></label><input type="radio" name="option33_63" id="i33_126" class="exe-radio-option exe-radio-option-1-4-33_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-33_126"><div id="taans33_126" class="block iDevice_content">
+Incluye, entre otros, dispositivos VPN.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i33_129" class="sr-av"><a href="#answer-33_129">Opción 3</a></label><input type="radio" name="option33_63" id="i33_129" class="exe-radio-option exe-radio-option-2-4-33_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-33_129"><div id="taans33_129" class="block iDevice_content">
+No incluye firewall.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i33_132" class="sr-av"><a href="#answer-33_132">Opción 4</a></label><input type="radio" name="option33_63" id="i33_132" class="exe-radio-option exe-radio-option-3-4-33_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-33_132"><div id="taans33_132" class="block iDevice_content">
+No incluye subredes protegidas.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b33_63" class="feedback js-hidden">
+<div id="taf33_66" class=" iDevice_content">
+No, deberías volver a leer el apartado anterior.
+
+</div>
+</section>
+<section id="sa1b33_63" class="feedback js-hidden">
+<div id="taf33_126" class=" iDevice_content">
+Muy bien, es la correcta. Es la zona donde se implantan medidas de seguridad entre las que se encuentra la implantación de VPN.
+
+</div>
+</section>
+<section id="sa2b33_63" class="feedback js-hidden">
+<div id="taf33_129" class=" iDevice_content">
+No es correcto. En el perímetro de seguridad, uno de los elementos principales es el firewall.
+
+</div>
+</section>
+<section id="sa3b33_63" class="feedback js-hidden">
+<div id="taf33_132" class=" iDevice_content">
+Respuesta incorrecta. El término subred protegida es análogo a DMZ.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-33_66">Incorrecto</a><span> (<a href="#sa0b33_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-33_126">Opción correcta</a><span> (<a href="#sa1b33_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-33_129">Incorrecto</a><span> (<a href="#sa2b33_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-33_132">Incorrecto</a><span> (<a href="#sa3b33_63">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_polticas_de_defensa_en_profundidad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

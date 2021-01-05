@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.4.- Perímetros de red. Zonas desmilitarizadas. | Implantación de Técnicas de Acceso Remoto </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Ministerio de Educación y Formación Profesional" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Implantación de Técnicas de Acceso Remoto</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Implantación de técnicas de acceso remoto.</a></li>
+   <li class="current-page-parent"><a href="1_elementos_bsicos_de_la_seguridad_perimetral.html" class="current-page-parent daddy">1.- Elementos básicos de la seguridad perimetral.</a>
+   <ul>
+      <li><a href="11_router_frontera.html" class="no-ch">1.1.- Router frontera.</a></li>
+      <li><a href="12_cortafuegos.html" class="no-ch">1.2.- Cortafuegos.</a></li>
+      <li><a href="13_redes_privadas_virtuales.html" class="no-ch">1.3.- Redes privadas virtuales.</a></li>
+      <li id="active"><a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="active no-ch">1.4.- Perímetros de red. Zonas desmilitarizadas.</a></li>
+      <li><a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="no-ch">1.5.- Subred protegida débil Vs subred protegida fuerte.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_polticas_de_defensa_en_profundidad.html" class="daddy">2.- Políticas de defensa en profundidad.</a>
+   <ul class="other-section">
+      <li><a href="21_defensa_perimetral.html" class="no-ch">2.1.- Defensa perimetral.</a></li>
+      <li><a href="22_defensa_interna.html" class="no-ch">2.2.- Defensa interna.</a></li>
+      <li><a href="23_factor_humano.html" class="no-ch">2.3.- Factor humano.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="13_redes_privadas_virtuales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.4.- Perímetros de red. Zonas desmilitarizadas.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_77" class="block iDevice_content">
+<p>Como se ha comentado con anterioridad, el perímetro de red se implanta para separar el tráfico entre las redes internas y externas. Por tanto, en el perímetro de red, entre otras cosas, se debe:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id24">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta24_73" class="block iDevice_content">
+<ul class="lista_verificacion">
+	<li>Controlar el tráfico.</li>
+	<li>Clasificar el tráfico.</li>
+	<li>Poner en cuarentena.</li>
+	<li>Denegar conexiones.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id168">
+<div class="iDevice emphasis0">
+<div id="ta168_154" class="block iDevice_content">
+<p>Por otra parte, con lo visto hasta ahora, la arquitectura de cortafuegos no está pensada para ofrecer servicios a Internet. Si se revisa, se observará que solo hay máquinas en el interior de la red privada, por lo que si se desea instalar un servidor web (por ejemplo), <strong>habría que colocarlo dentro de la red privada y permitir el acceso al mismo desde el exterior</strong>.</p>
+<p>Pero <strong>esto es muy peligroso</strong>, ya que si alguien consigue vulnerar la seguridad de dicho servidor web, a través de él podría acceder a otros equipos de la red privada, quedando totalmente comprometida dicha red, incluidos aquellos equipos que no son accesibles desde Internet. Esto lleva a confirmar que sería errónea una configuración de red en la que una organización cuente con algún servicio accesible desde el exterior (servidor de correo, servidor web,...) integrado en la red <span lang="en"><abbr title="Local Area Network">LAN</abbr></span>, tal y como se muestra en la imagen.</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 599px;"><a href="SAD03_CONT_R11_LANConServerWeb_2.png" rel="lightbox" title="Imagen ampliada que muestra un servidor web integrado en una LAN junto con otros dos equipos"><img src="SAD03_CONT_R11_LANConServerWeb_2.png" alt="Ilustración que muestra un servidor web integrado en una LAN junto con otros dos equipos" title="LAN con servidor web integrado" width="599" height="362" /></a>
+<figcaption class="figcaption"><span class="author">Andrés Rubio - Elaboración propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Por lo tanto, es evidente que se hace aconsejable seguir la siguiente norma: </p>
+<p><strong><span class=" resaltado_inline">Aquellas máquinas que vayan a dar servicio a Internet deben estar en una red distinta a la red privada. Además, el tráfico entre la red privada y la red de servicios debe estar controlado.</span></strong></p>
+<p>Para cumplir con esta norma se utilizan las arquitecturas <span lang="en"><abbr title="DeMilitarized Zone">DMZ</abbr></span>. Pueden implementarse de diversas maneras, pero todas se basan en cumplir la norma anterior, dividiendo la red privada en dos zonas:</p>
+<ol style="list-style-type: decimal;" class=" auto-numbered">
+<li><span class=" resaltado_inline">Zona Protegida</span>: Es la parte privada de la red interna. Debe ser inaccesible desde el exterior.<br /><br /></li>
+<li><span class=" resaltado_inline">Zona Desmilitarizada</span> o DMZ: Es una subred que agrupa a todos los ordenadores de la red que ofrecen algún servicio al exterior.</li>
+</ol>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id169">
+<div class="iDevice emphasis0">
+<div id="ta169_154" class="block iDevice_content">
+<p>Pero, ¿qué se entiende por DMZ? <span class=" resaltado_inline">Una zona desmilitarizada es una red aislada que se encuentra dentro de la red interna de la organización</span>. En ella se encuentran ubicados exclusivamente todos los recursos de la empresa que deben ser accesibles desde Internet, como un servidor web o de correo. Así, un ejemplo de una red local con una DMZ formado por un servidor web, uno de correos y otro de <span lang="en"><abbr title="Domain Name Server">DNS</abbr></span> podría ser:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 699px;"><a href="SAD03_CONT_R77_DMZTipica.png" rel="lightbox" title="Imagen ampliada que muestra una DMZ formada por un servidor Web, uno de correos y uno de DNS y una LAN independiente con otros dos equipos"><img src="SAD03_CONT_R77_DMZTipica.png" alt="Ilustración que muestra una DMZ formada por un servidor Web, uno de correos y uno de DNS y una LAN independiente con otros dos equipos" title="DMZ Típica" width="699" height="406" /></a>
+<figcaption class="figcaption"><span class="author">Andrés Rubio - Elaboración propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p><br />Por lo general, una DMZ permite conexiones procedentes tanto de Internet, como de la LAN donde están los equipos de los empleados. Sin embargo, las conexiones que van desde la DMZ a la red local, no están permitidas. Esto se debe a que los servidores que son accesibles desde Internet son más susceptibles a sufrir un ataque que pueda comprometer su seguridad. De este modo, si un atacante comprometiera un servidor de la DMZ, tendría mucho más complicado acceder a la red local de la organización, ya que las conexiones procedentes de la DMZ se encuentran bloqueadas.</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 600px;"><a href="SAD03_CONT_R13_DMZHacking.png" rel="lightbox" title="Imagen ampliada que muestra un intento de acceso a la red interna desde la DMZ por parte de un atacante "><img src="SAD03_CONT_R13_DMZHacking.png" alt="Ilustración que muestra un intento de acceso a la red interna desde la DMZ por parte de un atacante " title="Prohibido acceder desde DMZ hacia LAN" width="600" height="348" /></a>
+<figcaption class="figcaption"><span class="author">Andrés Rubio - Elaboración propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>En definitiva, para configurar una zona desmilitarizada en la red de una organización, se necesita contar con un cortafuegos o <span lang="en">firewall</span>, que será el encargado de segmentar la red y permitir o denegar las conexiones. En la siguiente tabla, a groso modo, se muestra el tipo de conexiones recomendables que permitiría o denegaría el <span lang="en">firewall</span> dependiendo su origen y destino:</p>
+<table border="1" style="width: 50%;" class="tabla">
+<tbody>
+<tr>
+<th style="width: 213px;" scope="row">Origen</th>
+<th style="width: 212px;" scope="row">Destino</th>
+<th style="width: 213px;" scope="row">Comunicación</th>
+</tr>
+<tr>
+<td style="width: 213px;">Internet</td>
+<td style="width: 212px;">DMZ</td>
+<td style="width: 213px;">Permitida</td>
+</tr>
+<tr>
+<td style="width: 213px;">Internet</td>
+<td style="width: 212px;">LAN</td>
+<td style="width: 213px;">Denegada</td>
+</tr>
+<tr>
+<td style="width: 213px;">DMZ</td>
+<td style="width: 212px;">Internet</td>
+<td style="width: 213px;">Permitida</td>
+</tr>
+<tr>
+<td style="width: 213px;">DMZ</td>
+<td style="width: 212px;">LAN</td>
+<td style="width: 213px;">Denegada</td>
+</tr>
+<tr>
+<td style="width: 213px;">LAN</td>
+<td style="width: 212px;">DMZ</td>
+<td style="width: 213px;">Permitida</td>
+</tr>
+<tr>
+<td style="width: 213px;">LAN</td>
+<td style="width: 212px;">Internet</td>
+<td style="width: 213px;">Permitida</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Puede chocar que en la tabla se indique que está denegada la comunicación que tiene por origen Internet y por destino la LAN. El motivo es que <strong>solo se aceptarán paquetes</strong> en dicha dirección, si<br /><strong>responden a una petición originada en el interior de la red</strong>.</p>
+<p>Por último, <strong><span class=" resaltado_inline">será una tarea crítica mantener siempre los sistemas que se encuentren en la zona desmilitarizada actualizados a la última versión disponible</span></strong>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id26">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-26_63" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion26_63" class="block question iDevice_content">
+<b>Una DMZ:</b>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i26_66" class="sr-av"><a href="#answer-26_66">Opción 1</a></label><input type="radio" name="option26_63" id="i26_66" class="exe-radio-option exe-radio-option-0-4-26_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-26_66"><div id="taans26_66" class="block iDevice_content">
+Está formada por aquellos elementos de la red corporativa que se quieren exponer a Internet.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i26_111" class="sr-av"><a href="#answer-26_111">Opción 2</a></label><input type="radio" name="option26_63" id="i26_111" class="exe-radio-option exe-radio-option-1-4-26_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-26_111"><div id="taans26_111" class="block iDevice_content">
+Está formada por varios router frontera.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i26_114" class="sr-av"><a href="#answer-26_114">Opción 3</a></label><input type="radio" name="option26_63" id="i26_114" class="exe-radio-option exe-radio-option-2-4-26_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-26_114"><div id="taans26_114" class="block iDevice_content">
+Puede comunicarse con la red interna pero no viceversa.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i26_117" class="sr-av"><a href="#answer-26_117">Opción 4</a></label><input type="radio" name="option26_63" id="i26_117" class="exe-radio-option exe-radio-option-3-4-26_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-26_117"><div id="taans26_117" class="block iDevice_content">
+Actúa junto con el perímetro de red. 
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b26_63" class="feedback js-hidden">
+<div id="taf26_66" class=" iDevice_content">
+Si. Es la zona en la que se pueden poner servidores web o de correo.
+
+</div>
+</section>
+<section id="sa1b26_63" class="feedback js-hidden">
+<div id="taf26_111" class=" iDevice_content">
+Falso. El router frontera se sitúa entre la DMZ e Internet.
+
+</div>
+</section>
+<section id="sa2b26_63" class="feedback js-hidden">
+<div id="taf26_114" class=" iDevice_content">
+No es correcto. Desde la DMZ se puede acceder a Internet pero no a la red interna.
+
+</div>
+</section>
+<section id="sa3b26_63" class="feedback js-hidden">
+<div id="taf26_117" class=" iDevice_content">
+No es correcto. Lo correcto sería decir que está en el perímetro de red.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-26_66">Opción correcta</a><span> (<a href="#sa0b26_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-26_111">Incorrecto</a><span> (<a href="#sa1b26_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-26_114">Incorrecto</a><span> (<a href="#sa2b26_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-26_117">Incorrecto</a><span> (<a href="#sa3b26_63">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="13_redes_privadas_virtuales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

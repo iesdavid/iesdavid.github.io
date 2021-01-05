@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.1.1. Características | 3.- Protocolo SSH. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-51"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">3.- Protocolo SSH.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.1. Protocolo SSH</a></li>
+   <li id="active"><a href="611_caractersticas.html" class="active no-ch">6.1.1. Características</a></li>
+   <li><a href="612_fases.html" class="daddy">6.1.2. Fases</a>
+   <ul class="other-section">
+      <li><a href="6121_negociacin.html" class="no-ch">6.1.2.1. Negociación</a></li>
+      <li><a href="6122_autenticacin.html" class="no-ch">6.1.2.2. Autenticación</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="612_fases.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.1.1. Características</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id363">
+<div class="iDevice emphasis0">
+<div id="ta363_154" class="block iDevice_content">
+<p>Actualmente, existen dos versiones de <strong><span lang="en"><abbr title="Secure SHell">SSH: </abbr></span></strong>SSH1 (antigua) y SSH2 (nueva). Esta unidad se centra únicamente en SSH2 que es incompatible con SSH1 y que incluye numerosas mejoras entre las que destacan tres:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id364">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta364_151" class="block iDevice_content">
+<ol class="auto-numbered">
+<li>Intercambio de claves mediante <strong><span lang="en">Diffie-Hellman</span></strong>.</li>
+<li>Verificación de integridad.</li>
+<li>Múltiples sesiones en un sola conexión, aumentando la eficiencia.</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id365">
+<div class="iDevice emphasis0">
+<div id="ta365_154" class="block iDevice_content">
+<p><span>Por otra parte, existen dos protocolos basados en SSH diseñados para la transferencia segura de ficheros: <strong><span lang="en"><abbr title="Secure Copy Protocol">SCP</abbr></span></strong> (Protocolo de Copia Segura) y <strong><span lang="en"><abbr title="Secure File Transfer Protocol">SFTP</abbr></span></strong> (Protocolo de Transferencia Segura de Ficheros).</span></p>
+<p>Además de ello, <span>SSH</span> pone a disposición algunas herramientas específicas entre las que se pueden destacar las siguientes:</p>
+<ul>
+<li class="lista_verificacion"><strong><span lang="en">ssh-keygen</span></strong><span>: Herramienta para la gestión de claves.</span></li>
+<li class="lista_verificacion"><span></span><strong><span lang="en">ssh-agent</span></strong>: Herramienta para almacenar claves privadas de una sesión siendo muy útil cuando se usan claves privadas con frase de paso.</li>
+<li class="lista_verificacion"><strong><span lang="en">sshd</span></strong>: Es el servicio ssh propiamente dicho.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id366">
+<div class="iDevice emphasis0">
+<div id="ta366_154" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-CC-BY" style="width: 183px;"><img src="SAD03_CONT_R20_SSH.jpg" alt="Ilustración de las letras ssh sobre un monitor imitando una terminal de comandos" title="SSH" width="183" height="183" />
+<figcaption class="figcaption"><a href="https://www.flickr.com/photos/xmodulo/11901062294/" target="_blank" class="author" title="Acceder a la galería flickr de Linux Screenshots para la descarga de la imagen de SSH (Se abre en una nueva ventana)." rel="noopener">Linux Screenshots</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de licencia CC BY de la imagen de SSH (Se abre en una nueva ventana)." rel="noopener">CC BY</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p><br />Por último,gracias al uso de <span>SSH</span> se puede garantizar:</p>
+<ol class="auto-numbered">
+<li>La <strong><span class=" resaltado_inline">confidencialidad</span> </strong>ya que todos los datos intercambiados se transmiten cifrados.<br /><br /></li>
+<li>La <strong><span class=" resaltado_inline">autenticación</span> </strong>ya que <span>SSH</span> proporciona mecanismos que permiten autenticar tanto al servidor como al usuario que se conecta.<br /><br /></li>
+<li>La <strong><span class=" resaltado_inline">eficiencia</span></strong> ya que <span>SSH</span> contempla la compresión de los datos intercambiados para reducir la longitud de los paquetes.<br /><br /></li>
+<li>La <span class=" resaltado_inline">no reutilización de claves</span> de sesiones anteriores. En cada nueva conexión se vuelven a calcular las claves. Esto es así porque <span>SSH</span> está pensado para conexiones que tienen una duración más o menos larga, como suelen ser las sesiones de trabajo interactivas con un ordenador remoto.</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id367">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.gif)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta367_128" class="block iDevice_content">
+<p>En el siguiente enlace podrás aprender más cosas sobre el algoritmo de intercambio de claves empleado por ssh:</p>
+<div class="exe-layout-3-cols exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;"><a href="https://www.youtube.com/watch?v=TWhax2wQOrU" target="_blank" title="Acceder a youtube para ver un vídeo explicativo sobre Diffie Hellman (Se abre en una nueva ventana)." rel="noopener">¿Qué es el intercambio de clave de Diffie y Hellman?</a></p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><a href="https://www.youtube.com/watch?v=b4mPdbeBSlg" target="_blank" title="Acceder a youtube para ver un vídeo sobre la generación de claves con Diffie Hellman (Se abre en una nueva ventana)." rel="noopener">Algoritmo de cifrado Diffie-Hellman</a></p>
+</div>
+<div class="exe-col exe-col-3">
+<p style="text-align: center;"><a href="https://www.watchguard.com/help/docs/fireware/12/es-419/Content/es-419/bovpn/manual/diffie_hellman_c.html" target="_blank" title="Acceder a watchguard para saber qué son los grupos Diffie Hellman (Se abre en una nueva ventana)." rel="noopener">Grupos Diffie Hellman</a></p>
+</div>
+</div>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="612_fases.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

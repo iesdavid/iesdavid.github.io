@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Defensa interna. | Implantación de Técnicas de Acceso Remoto </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Ministerio de Educación y Formación Profesional" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Implantación de Técnicas de Acceso Remoto</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Implantación de técnicas de acceso remoto.</a></li>
+   <li><a href="1_elementos_bsicos_de_la_seguridad_perimetral.html" class="daddy">1.- Elementos básicos de la seguridad perimetral.</a>
+   <ul class="other-section">
+      <li><a href="11_router_frontera.html" class="no-ch">1.1.- Router frontera.</a></li>
+      <li><a href="12_cortafuegos.html" class="no-ch">1.2.- Cortafuegos.</a></li>
+      <li><a href="13_redes_privadas_virtuales.html" class="no-ch">1.3.- Redes privadas virtuales.</a></li>
+      <li><a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="no-ch">1.4.- Perímetros de red. Zonas desmilitarizadas.</a></li>
+      <li><a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="no-ch">1.5.- Subred protegida débil Vs subred protegida fuerte.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_polticas_de_defensa_en_profundidad.html" class="current-page-parent daddy">2.- Políticas de defensa en profundidad.</a>
+   <ul>
+      <li><a href="21_defensa_perimetral.html" class="no-ch">2.1.- Defensa perimetral.</a></li>
+      <li id="active"><a href="22_defensa_interna.html" class="active no-ch">2.2.- Defensa interna.</a></li>
+      <li><a href="23_factor_humano.html" class="no-ch">2.3.- Factor humano.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_defensa_perimetral.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_factor_humano.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.- Defensa interna.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id51">
+<div class="iDevice emphasis0">
+<div id="ta51_77" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-pd" style="width: 400px;"><a href="SAD03_CONT_R73_LineasDefensivas.png" rel="lightbox" title="Imagen ampliada que muestra para cada línea defensiva las herramientas y mecanismos que deben aplicarse"><img src="SAD03_CONT_R73_LineasDefensivas.png" alt="Ilustración que muestra para cada línea defensiva las herramientas y mecanismos que deben aplicarse" title="Líneas de defensa" width="400" height="280" /></a>
+<figcaption class="figcaption"><span class="author">Andrés Rubio - Elaboración propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p><br />La defensa en profundidad debe realizar el proceso de seguridad de manera segmentada, creando <b>varias líneas de defensa</b>. La primera es la que se ha visto en el apartado anterior, la defensa perimetral. Pero con ella no es suficiente, es necesario una segunda línea de defensa creada en la red interna. </p>
+<p>En la imagen se pueden observar las distintas <b>líneas de defensa</b> y en los recuadros, las herramientas utilizadas en cada una de ellas.</p>
+<p>La política de defensa en la <b>red interna</b> tiene como objetivo principal, establecer los parámetros de funcionamiento interno para que la red funcione con seguridad, puesto que con la defensa perimetral ya ha habido un filtro del tráfico entrante a la red.</p>
+<p>Desde el punto de vista de la seguridad, la red interna es muy valiosa para un atacante ya que, si se tiene acceso a ella se tendrá acceso a los datos, que es lo que se está protegiendo.</p>
+<p>Por todo ello, en la red interna hay que hacer cumplir una serie de normas en los servidores y dispositivos de interconexión:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id52">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta52_73" class="block iDevice_content">
+<ul class="lista_verificacion">
+<li>Listas de control de acceso (<span lang="en"><abbr title="Access Control List">ACL</abbr></span>).</li>
+<li>Conexiones <span lang="en"><abbr title="Secure SHell">SSH</abbr></span>.</li>
+<li>Auditorías de seguridad.</li>
+<li><span lang="en"><abbr title="Virtual Local Area Network">VLAN</abbr></span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id53">
+<div class="iDevice emphasis0">
+<div id="ta53_77" class="block iDevice_content">
+<p>Además, hay que establecer más líneas de defensa en cada uno de los <span lang="en">hosts</span> de la red interna y en cada una de las aplicaciones de los <span lang="en">hosts</span>:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id54">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta54_73" class="block iDevice_content">
+<ul class="lista_verificacion">
+<li>Cumplimiento estricto de las políticas de contraseñas.</li>
+<li>Instalación de Anti-<span lang="en">malware</span>.</li>
+<li>Utilización de mecanismos de programación segura.</li>
+<li>Detección de intrusiones.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id175">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.gif)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta175_128" class="block iDevice_content">
+<p>En el siguiente enlace puedes valorar la importancia de la segmentación para evitar el descontrol:</p>
+<p style="text-align: center;"><a href="https://www.incibe-cert.es/blog/divide-venceras-segmentacion-rescate" target="_blank" title="Acceder a incibe para valorar la importancia de realizar una buena segmentación (Se abre en una nueva ventana)." rel="noopener">Divide y Vencerás: Segmentación al rescate</a></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_defensa_perimetral.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_factor_humano.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.- Defensa perimetral. | Implantación de Técnicas de Acceso Remoto </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Ministerio de Educación y Formación Profesional" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Implantación de Técnicas de Acceso Remoto</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Implantación de técnicas de acceso remoto.</a></li>
+   <li><a href="1_elementos_bsicos_de_la_seguridad_perimetral.html" class="daddy">1.- Elementos básicos de la seguridad perimetral.</a>
+   <ul class="other-section">
+      <li><a href="11_router_frontera.html" class="no-ch">1.1.- Router frontera.</a></li>
+      <li><a href="12_cortafuegos.html" class="no-ch">1.2.- Cortafuegos.</a></li>
+      <li><a href="13_redes_privadas_virtuales.html" class="no-ch">1.3.- Redes privadas virtuales.</a></li>
+      <li><a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="no-ch">1.4.- Perímetros de red. Zonas desmilitarizadas.</a></li>
+      <li><a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="no-ch">1.5.- Subred protegida débil Vs subred protegida fuerte.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_polticas_de_defensa_en_profundidad.html" class="current-page-parent daddy">2.- Políticas de defensa en profundidad.</a>
+   <ul>
+      <li id="active"><a href="21_defensa_perimetral.html" class="active no-ch">2.1.- Defensa perimetral.</a></li>
+      <li><a href="22_defensa_interna.html" class="no-ch">2.2.- Defensa interna.</a></li>
+      <li><a href="23_factor_humano.html" class="no-ch">2.3.- Factor humano.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_polticas_de_defensa_en_profundidad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_defensa_interna.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.- Defensa perimetral.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id43">
+<div class="iDevice emphasis0">
+<div id="ta43_77" class="block iDevice_content">
+<div class="exe-layout-2-cols exe-layout-2-30-70 exe-clear">
+<div class="exe-col exe-col-1">
+<figure class="exe-figure exe-image position-center license-CC-BY" style="width: 301px;"><img src="SAD03_CONT_R16_DefensaFw.jpg" alt="Ilustración que muestra un muro que protege a un ordenador pero que presenta un agujero" title="Defensa perimetral" width="301" height="187" hspace="auto" style="display: block; margin-right: auto; margin-left: auto;" />
+<figcaption class="figcaption"><a href="https://www.flickr.com/photos/xmodulo/14023519657/" target="_blank" class="author" title="Acceder a la galería flickr de Linux Screenshots para la descarga de la imagen de la defensa perimetral (Se abre en una nueva ventana)." rel="noopener">Linux Screenshots</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de licencia CC BY de la imagen de la defensa perimetral (Se abre en una nueva ventana)." rel="noopener">CC BY</a><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+<div class="exe-col exe-col-2">
+<p>Con todo lo expuesto hasta ahora se puede concluir que, la seguridad perimetral es la formada por todos los elementos y sistemas destinados a proteger de intrusos el perímetro externo de una red, permitiendo el acceso de determinados usuarios (internos o externos) a determinados servicios, y denegando cualquier otro tipo de acceso al resto de usuarios.</p>
+<p>Por tanto, la defensa perimetral es la primera línea en la que se establece:</p>
+<ul class="lista_verificacion">
+<li>Una política de seguridad entre una red segura y otra insegura (Internet).</li>
+<li>Qué servicios serán accesibles desde el exterior.</li>
+<li>A qué servicios se puede acceder desde el interior.</li>
+</ul>
+</div>
+</div>
+<p>Una buena política de defensa perimetral se centra en conseguir:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id44">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta44_73" class="block iDevice_content">
+<ul class="lista_verificacion">
+<li>Filtrar y bloquear el tráfico de la red, permitiendo únicamente aquel que sea absolutamente necesario.</li>
+<li>Redirigir el tráfico hacia máquinas seguras.</li>
+<li>Aislar y segmentar los distintos servicios y sistemas en función de su exposición a ataques.</li>
+<li>Resistir a los ataques externos.</li>
+<li>Identificar los ataques sufridos y alertar de ellos.</li>
+<li>Administrar el contenido del tráfico.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id45">
+<div class="iDevice emphasis0">
+<div id="ta45_77" class="block iDevice_content">
+<p>Para lograr todo esto se debe valorar que:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id46">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta46_73" class="block iDevice_content">
+<ul class="lista_verificacion">
+	  
+	<li>Las amenazas  pueden venir del interior, no siempre desde el exterior.</li>
+	<li>Extremar las medidas de seguridad puede provocar limitaciones en el  funcionamiento.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id49">
+<div class="iDevice emphasis0">
+<div id="ta49_77" class="block iDevice_content">
+<p>Para llevar a cabo este tipo de defensa en el perímetro se utilizan:</p>
+<ul class="lista_verificacion">
+<li>
+<figure class="exe-figure exe-image float-right license-CC-BY" style="width: 300px;"><img src="SAD03_CONT_R17_Ciberdelincuente.jpg" alt="Ilustración que muestra a un ciberdelincuente tratando de realizar un ataque" title="Ciberdelincuente" width="300" height="189" />
+<figcaption class="figcaption"><a href="https://www.flickr.com/photos/136770128@N07/23128616532/" target="_blank" class="author" title="Acceder a la galería flickr de Richard Patterson para la descarga de la imagen del ciberdelincuente (Se abre en una nueva ventana)." rel="noopener">Richard Patterson</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de licencia CC BY de la imagen del ciberdelincuente (Se abre en una nueva ventana)." rel="noopener">CC BY</a><span class="sep">)</span></span></figcaption>
+</figure>
+<strong><span class=" resaltado_inline" lang="en">Firewall</span></strong><br /><br />Mediante una política de accesos deberán:<br /><br />
+<ul class="lista_verificacion">
+<li><strong>Aceptar</strong>. Se permite el tráfico.</li>
+<li><strong>Denegar</strong>. Se prohíbe el tráfico y no hay mensaje de error.</li>
+<li><strong>Rechazar</strong>. Se prohíbe el tráfico y se envía un mensaje de error al emisor.</li>
+</ul>
+<br />Es recomendable el uso de la opción <b>denegar</b> frente a <b>rechazar </b>puesto que de esa manera se disminuye el tráfico. Además el atacante tiene menos información del sistema defensivo empleado.<br /><br /></li>
+<li><span lang="en"><abbr title="Intrusion Detection System"></abbr></span><strong><span class=" resaltado_inline"><span lang="en"><abbr title="Intrusion Detection System">IDS</abbr></span> e <span lang="en"><abbr title="Intrusion Prevention System">IPS</abbr></span></span></strong><span lang="en"><abbr title="Intrusion Prevention System"></abbr></span><br /><br />Monitorizan y generan alarmas cuando se produzca alguna alerta de seguridad. Su línea de actuación suele ser:<br /><br />
+<ul>
+<li>Identificar el posible ataque.</li>
+<li>Registrar los eventos.</li>
+<li>Tratar de bloquear un posible ataque.</li>
+<li>Generar reportes.<br /><br /></li>
+</ul>
+</li>
+<li><strong><span class=" resaltado_inline" lang="en">Honeypots</span></strong><br /><br />Sistemas trampas preparados para atraer y analizar el comportamientos de atacantes y de botnets. Con estos sistemas se puede recoger información muy útil para evitar futuros ataques. Lógicamente deben estar muy controlados y desconectados de cualquier red propia.<br /><br />Las herramientas diseñadas y creadas para tal fin, imitan y escuchan servicios vulnerables. Cuando un atacante se conecta a estos servicios es engañado, haciéndole creer que está atacando a un servidor real. El <span lang="en">honeypot</span> capta todas las comunicaciones con el atacante y registra los resultados para el análisis futuro. En caso de que un atacante intentara explotar o subir un <span lang="en">rootkit</span>, o un troyano en el servidor, las herramientas pueden almacenar estos archivos en su equipo para analizarlos.<br /><br /></li>
+<li><span lang="en"><abbr title="Virtual Private Network"></abbr></span><strong><span class=" resaltado_inline"><span lang="en"><abbr title="Virtual Private Network">VPN</abbr></span> y <span lang="en"><abbr title="Secure SHell">SSH</abbr></span></span></strong><span lang="en"><abbr title="Secure SHell"></abbr></span><br /><br />Utilización de conexiones seguras para el acceso remoto.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id174">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.gif)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta174_128" class="block iDevice_content">
+<p>En los siguientes enlaces puedes obtener más información sobre los honeypots:</p>
+<div class="exe-layout-3-cols exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;"><a href="https://www.pandasecurity.com/spain/mediacenter/seguridad/diferencias-sandboxing-honeypot/" target="_blank" title="Acceder a pandasecurity para lograr diferenciar entre honeypots y sandboxing (Se abre en una nueva ventana)." rel="noopener">Diferencia entre honeypots y sandboxing</a></p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><a href="https://www.incibe-cert.es/blog/honeypot-herramienta-conocer-al-enemigo" target="_blank" title="Acceder a incibe para aprender más sobre los honeypots (Se abre en una nueva ventana)." rel="noopener">¿Cómo conocer a tu enemigo?</a></p>
+</div>
+<div class="exe-col exe-col-3">
+<p style="text-align: center;"><a href="https://www.incibe-cert.es/blog/guia-implantacion-honeypot-industrial" target="_blank" title="Acceder a incibe para ver una guía sobre como implantar un honeypot industrial (Se abre en una nueva ventana)." rel="noopener">Guía de implantación de un honeypot industrial</a>.</p>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id241">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(icon_debesconocerfpd.gif)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta241_129" class="block iDevice_content">
+<p>En los siguientes enlaces puedes ver algunos vídeos relacionados con el concepto de detección de intrusiones usando <span lang="en">honeypot</span>:</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;"><a href="https://www.youtube.com/watch?v=qouJ7sxu0Dc&amp;t=8s" target="_blank" title="Acceder a youtube para aprender los conceptos básicos relativos a las honeypot (Se abre en una nueva ventana)." rel="noopener">Prevención y detección de intrusos con honeypot</a></p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><a href="https://www.youtube.com/watch?v=FihkG72z7MQ" target="_blank" title="Acceder a youtube para ver un vídeo sobre el concepto de las honeynet (Se abre en una nueva ventana)." rel="noopener">Honeynet y DMZ</a>.</p>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_polticas_de_defensa_en_profundidad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_defensa_interna.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.1. Configuración básica de SSH | 6.2. Protocolo SSH </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-54"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.2. Protocolo SSH</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.2. Control remoto en modo seguro con SSH</a></li>
+   <li id="active"><a href="621_configuracin_bsica_de_ssh.html" class="active no-ch">6.2.1. Configuración básica de SSH</a></li>
+   <li><a href="622_autenticacin_del_servidor_ssh.html" class="no-ch">6.2.2. Autenticación del servidor SSH</a></li>
+   <li><a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="no-ch">6.2.3. Ejecución remota de comandos en modo desatendido</a></li>
+   <li><a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="no-ch">6.2.4. Ejecución remota de comandos en modo desatendido con frase de paso</a></li>
+   <li><a href="625_ficheros_authorizedkeys_y_known_host.html" class="no-ch">6.2.5. Ficheros authorized-keys y known_host</a></li>
+   <li><a href="626_transferencia_de_ficheros_en_modo_seguro.html" class="no-ch">6.2.6. Transferencia de ficheros en modo seguro</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="622_autenticacin_del_servidor_ssh.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.1. Configuración básica de SSH</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id378">
+<div class="iDevice emphasis0">
+<div id="ta378_154" class="block iDevice_content">
+<p>En distribuciones Linux, para poder controlar un equipo remotamente vía <span lang="en"><abbr title="Secure SHell">SSH</abbr></span>, tan solo se necesita instalar el <span lang="en">software</span> servidor "<strong><span class=" resaltado_inline" lang="en">openssh-server</span></strong>". Para ello se ejecuta el comando:</p>
+<div class="highlighted-code code-style-2 language-python">
+<div>
+<pre><code>apt-get install openssh-server.</code></pre>
+</div>
+</div>
+<p><a href="openssh.png" rel="lightbox"><img src="openssh.png" alt="openssh" style="float: right; margin: 10px;" width="451" height="170" /></a>Una vez instalado, el servicio SSH queda a la espera de solicitudes de conexión en modo seguro por parte de equipos remotos. En muchas ocasiones es necesaria la modificación de la configuración que SSH establece por defecto en su servicio. Para ello, una vez instalado el servicio, dentro del directorio <code><strong>/etc/ssh</strong></code>, se pueden encontrar dos ficheros que no deben ser confundidos puesto que tienen nombres muy parecidos pero con una finalidad totalmente diferente:</p>
+<ol class="auto-numbered">
+<li><strong><span class=" resaltado_inline" lang="en">ssh_config</span></strong> Fichero de configuración que establece el comportamiento de la aplicación cliente SSH.<br /><br /></li>
+<li><strong><span class=" resaltado_inline" lang="en">sshd_config</span></strong> Fichero de configuración que establece el comportamiento del servicio SSH.</li>
+</ol>
+<p>Cabe destacar que no solo son configurables los parámetros que aparecen en el fichero <strong><span lang="en">sshd_config</span></strong>. Existen otros parámetros que no están en dicho fichero y que toman unos valores concretos. Para ver la lista de todos los parámetros modificables, incluidos los del fichero, se usa el comando:</p>
+<div class="highlighted-code code-style-2 language-python">
+<div>
+<pre><code>sshd -T | less</code></pre>
+</div>
+</div>
+<p>Por tanto, se puede usar este comando para ver las opciones de configuración que actualmente se están aplicando en el servicio SSH.</p>
+<p>A continuación se muestra una tabla con algunas de las entradas más interesantes que permiten personalizar el servicio SSH:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id379">
+<div class="iDevice emphasis0">
+<div id="ta379_154" class="block iDevice_content">
+<table border="1" style="width: 100%; border: 1px solid #000000;" class="tabla" summary="Tabla que muestra el significado de los parámetros más significativos del fichero de configuración del servidor."><caption><span style="color: #3366ff;">Parámetros más significativos del fichero de configuración del servidor</span></caption>
+<tbody>
+<tr>
+<th><strong>Directiva de configuración</strong></th>
+<th><strong>Significado</strong></th>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span lang="en">Port</span></strong></td>
+<td style="text-align: justify;">Establece el puerto por el que escucha el servicio SSH. Por defecto es el <strong><span lang="en"><abbr title="Transport Control Protocol">TCP</abbr></span>/22</strong>, pero se puede modificar.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span lang="en">ListenAddress</span></strong></td>
+<td style="text-align: justify;">Establece las direcciones <span lang="en"><abbr title="Internet Protocol">IP</abbr></span> de la máquina a través de las cuales se escucharan solicitudes de conexión al servicio SSH. Por defecto es cualquier dirección IP.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span lang="en">LogLevel</span></strong></td>
+<td style="text-align: justify;">Establece el nivel de verbosidad, es decir, la cantidad de información que va a quedar registrada sobre cada conexión SSH. Su valor puede ser "<span style="text-align: justify;" lang="en">quiet</span>, <span style="text-align: justify;" lang="en">fatal</span>, <span style="text-align: justify;" lang="en">error</span>, <span style="text-align: justify;" lang="en">info</span>, <span style="text-align: justify;" lang="en">verbose</span>, <span style="text-align: justify;" lang="en">debug</span>, <span style="text-align: justify;" lang="en">debug1</span>, <span style="text-align: justify;" lang="en">debug2</span>, y <span style="text-align: justify;" lang="en">debug3</span>", siendo <strong><span style="text-align: justify;" lang="en">verbose</span></strong> el valor por defecto.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span lang="en">PermitRootLogin</span></strong></td>
+<td style="text-align: justify;">A través de este parámetro se establece si queremos que usando una cuenta de <span style="text-align: justify;" lang="en"></span><strong><span style="text-align: justify;" lang="en"><span style="text-align: justify;" lang="en">root</span> </span></strong>se puede o no establecer una conexión remota vía SSH.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span lang="en">LoginGraceTime</span></strong></td>
+<td style="text-align: justify;">Establece el tiempo que tiene el usuario para llevar a cabo una autenticación correcta. Con un valor 0, el tiempo será indefinido.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span lang="en">PasswordAuthentication</span></strong></td>
+<td style="text-align: justify;">Este parámetro permite indicar si se quiere o no que un usuario se conecte al servicio SSH usando autenticación por <span style="text-align: justify;" lang="en">password</span>. Para que así sea, es necesario establecer su valor a <strong><span style="text-align: justify;" lang="en">yes</span></strong>. Si se quiere que solo se puedan establecer conexiones usando criptografía asimétrica (clave pública), es necesario establecer su valor a <strong>no</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span lang="en">ClientAliveInterval</span></strong></td>
+<td style="text-align: justify;">Mediante este parámetro se indica al servicio SSH la frecuencia con la que el cliente SSH tiene que dar "señales de vida" para considerar que la conexión está activa.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span lang="en">ClientAliveCountMax</span></strong></td>
+<td style="text-align: justify;">Este parámetro permite establecer el número de intentos de conexión que hará el servidor SSH si ha s<span>uperado el periodo de tiempo establecido por el parámetro </span><span><strong><span lang="en">ClientAliveInterval</span></strong> sin recibir ninguna "señal de  vida" del equipo cliente.</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+<p><strong><span lang="en">AllowUsers</span>, <span lang="en">DenyUsers</span>, <span lang="en">AllowGroups</span>, <span lang="en">DenyGroups</span></strong></p>
+</td>
+<td style="text-align: justify;">A través de estos parámetros se permite decidir qué usuarios o grupos de usuarios podrán establecer una conexión remota SSH.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id381">
+<div class="iDevice emphasis0">
+<div id="ta381_154" class="block iDevice_content">
+<p>Una vez personalizado el servicio SSH, para que surtan efecto las modificaciones llevadas a cabo, es necesario reiniciar el servicio a través del comando:</p>
+<div class="highlighted-code code-style-2 language-python">
+<div>
+<pre><code>/etc/init.d/ssh restart.</code></pre>
+</div>
+</div>
+<p>Una vez reiniciado, desde un equipo cliente se podrá directamente ejecutar un comando o se podrá iniciar una sesión remota. En ambos casos es necesario la autenticación, o bien mediante la introducción de la <span lang="en">password</span> del usuario remoto bajo el cual queremos ejecutar los comandos, o bien de manera desatendida mediante el uso de claves públicas. Para el primer caso, se muestra a continuación la sintaxis del comando que debe usarse:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>ssh usuarioRemoto@IPServidorSSH Comando</code></pre>
+</div>
+</div>
+<p>En este caso, el comando a ejecutar debe estar encerrado entre comillas simples. Esta opción es muy útil cuando solo se quiere ejecutar un comando en el equipo remoto. Sin embargo, si se quiere llevar a cabo la ejecución de múltiples comandos, es necesario la conexión al equipo remoto e interactuar con él. Esto último se puede realizar a través del comando:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>ssh usuarioRemoto@IPServidorSSH</code></pre>
+</div>
+</div>
+<p>Otra forma de llevar a cabo la conexión es mediante el comando:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>ssh -l usuarioRemoto IPServidorSSH</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id382">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta382_151" class="block iDevice_content">
+<p><strong>Hay distribuciones Linux, como por ejemplo Ubuntu, en la que la cuenta de usuario <span lang="en">root</span> no tiene habilitada la <span lang="en">password</span>, y por tanto, no sería posible la conexión al servicio SSH por <span lang="en">root</span>, salvo que se habilite su <span lang="en">password</span>.</strong></p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice" id="id383">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta383_121" class="block iDevice_content">
+<p>¿Crees que sería recomendable tener habilitado el acceso al servicio ssh a través de la cuenta de usuario <span lang="en">root</span>?</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice" id="id384">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.gif)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta384_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b384" class="block iDevice_content">
+<p>Establece los parámetros de configuración adecuados para usar el servicio SSH mediante autenticación por <span lang="en">password</span>, para que no sea posible acceder desde la cuenta del <strong>usuario <span lang="en">root</span></strong>, que el nivel de <strong>verbosidad</strong> para el registro de información en los log sea <strong><span lang="en">debug</span></strong> y el <strong>puerto</strong> de escucha sea el <strong>22</strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback0b384" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b384text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b384" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b384" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><span lang="en">Port </span>22</p>
+<p><span lang="en">LogLevel debug</span></p>
+<p><span lang="en">PermitRootLogin</span> no</p>
+<p><span lang="en">PasswordAuthenticacion yes</span></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="622_autenticacin_del_servidor_ssh.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.3.- Redes privadas virtuales. | Implantación de Técnicas de Acceso Remoto </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Ministerio de Educación y Formación Profesional" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Implantación de Técnicas de Acceso Remoto</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Implantación de técnicas de acceso remoto.</a></li>
+   <li class="current-page-parent"><a href="1_elementos_bsicos_de_la_seguridad_perimetral.html" class="current-page-parent daddy">1.- Elementos básicos de la seguridad perimetral.</a>
+   <ul>
+      <li><a href="11_router_frontera.html" class="no-ch">1.1.- Router frontera.</a></li>
+      <li><a href="12_cortafuegos.html" class="no-ch">1.2.- Cortafuegos.</a></li>
+      <li id="active"><a href="13_redes_privadas_virtuales.html" class="active no-ch">1.3.- Redes privadas virtuales.</a></li>
+      <li><a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="no-ch">1.4.- Perímetros de red. Zonas desmilitarizadas.</a></li>
+      <li><a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="no-ch">1.5.- Subred protegida débil Vs subred protegida fuerte.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_polticas_de_defensa_en_profundidad.html" class="daddy">2.- Políticas de defensa en profundidad.</a>
+   <ul class="other-section">
+      <li><a href="21_defensa_perimetral.html" class="no-ch">2.1.- Defensa perimetral.</a></li>
+      <li><a href="22_defensa_interna.html" class="no-ch">2.2.- Defensa interna.</a></li>
+      <li><a href="23_factor_humano.html" class="no-ch">2.3.- Factor humano.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="12_cortafuegos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.3.- Redes privadas virtuales.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id21">
+<div class="iDevice emphasis0">
+<div id="ta21_77" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-pd" style="width: 299px;"><a href="SAD03_CONT_R09_VPNRemote.jpg" rel="lightbox" title="Imagen ampliada que muestra a un equipo cliente conectándose de forma remota con un servidor VPN a través de un túnel sobre Internet"><img src="SAD03_CONT_R09_VPNRemote.jpg" alt="Ilustración que muestra a un equipo cliente conectándose de forma remota con un servidor VPN a través de un túnel sobre Internet" title="VPN cliente servidor" width="299" height="48" /></a>
+<figcaption class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:VPN_remote.jpg" target="_blank" class="author" title="Acceder a wikimedia para la descarga de la imagen de del tunel vpn (Se abre en una nueva ventana)." rel="noopener">Philippe Belet</a> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p><br />Una Red Privada Virtual (<span lang="en"><abbr title="Virtual Private Network">VPN</abbr></span>) es una tecnología que permite establecer una conexión similar a la de una red <span lang="en"><abbr title="Local Area Network">LAN</abbr></span> sobre una red pública como Internet. Para conseguir esto utiliza mecanismos de encapsulación o tunelización.</p>
+<p>En la imagen se puede ver una representación de una conexión VPN, en la cual deben existir un servidor VPN (que acepta las conexiones) y un cliente VPN (el que se conecta).  El túnel representa como la información viaja ajena al tránsito restante de Internet.</p>
+<p><br />Tal y como se muestra en la imagen anterior, en la seguridad perimetral las VPN encuentran como primer obstáculo al <b><span lang="en">router</span> frontera</b>. Para que este tipo de conexión pueda atravesarlo es necesario especificar en la configuración del <span lang="en">router</span> una regla <span lang="en">firewall</span> permitiendo dicha conexión.</p>
+<p></p>
+<figure class="exe-figure exe-image float-right license-custom" style="width: 299px;"><a href="SAD03_CONT_R10_ConexionOpenVPN.png" rel="lightbox" title="Imagen ampliada que muestra a un cliente OpenVPN que se ha conectado de forma exitosa con un servidor VPN."><img src="SAD03_CONT_R10_ConexionOpenVPN.png" alt="Ilustración que muestra a un cliente OpenVPN que se ha conectado de forma exitosa con un servidor VPN." title="Conexión OpenVPN" width="299" height="194" /></a>
+<figcaption class="figcaption"><span class="author">Windows</span> <span class="license"><span class="sep">(</span><span class="custom-license">Elaboración propia</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Hoy día los sistemas operativos incorporan asistentes para generar conexiones de este tipo, y una vez generada, al conectarse al servidor VPN se puede observar en el sistema una situación como la que refleja la siguiente figura.</p>
+<p>En la imagen se muestra como se ha establecido una conexión VPN:</p>
+<ul class="lista_verificacion">
+<li>Con el servidor VPN 192.168.1.91</li>
+<li>A través del puerto 1194, puerto asociado a OpenVPN.</li>
+<li>La autenticación del cliente en el servidor se llevado a cabo utilizando un certificado cuya clave pública ha sido verificada por el servidor VPN.</li>
+<li>La <span lang="en"><abbr title="Internet Protocol">IP</abbr></span> del extremo local del túnel, es decir, la IP del lado del túnel asociado al cliente VPN, es 10.0.0.2.</li>
+<li>Otra información mostrada y que se comprenderá en los apartados posteriores son:
+<ul class="lista_verificacion">
+<li>El método de cifrado empleado.</li>
+<li>La función hash empleada.</li>
+<li>El Grupo Diffie-Helman empleado para la creación de claves.</li>
+<li>El algoritmo de cifrado que que se está empleando y el tipo de clave</li>
+</ul>
+</li>
+</ul>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id22">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-22_63" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion22_63" class="block question iDevice_content">
+<b>Una red privada virtual VPN:</b>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i22_66" class="sr-av"><a href="#answer-22_66">Opción 1</a></label><input type="radio" name="option22_63" id="i22_66" class="exe-radio-option exe-radio-option-0-4-22_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-22_66"><div id="taans22_66" class="block iDevice_content">
+Encapsula la información.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i22_100" class="sr-av"><a href="#answer-22_100">Opción 2</a></label><input type="radio" name="option22_63" id="i22_100" class="exe-radio-option exe-radio-option-1-4-22_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-22_100"><div id="taans22_100" class="block iDevice_content">
+Se da en las LAN. 
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i22_103" class="sr-av"><a href="#answer-22_103">Opción 3</a></label><input type="radio" name="option22_63" id="i22_103" class="exe-radio-option exe-radio-option-2-4-22_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-22_103"><div id="taans22_103" class="block iDevice_content">
+Atraviesa los routers sin dificultad.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i22_106" class="sr-av"><a href="#answer-22_106">Opción 4</a></label><input type="radio" name="option22_63" id="i22_106" class="exe-radio-option exe-radio-option-3-4-22_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-22_106"><div id="taans22_106" class="block iDevice_content">
+Utiliza el protocolo PTP.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b22_63" class="feedback js-hidden">
+<div id="taf22_66" class=" iDevice_content">
+Si. Encapsula la información que quiere transmitir para que solamente el destinatario pueda extraerla.
+
+</div>
+</section>
+<section id="sa1b22_63" class="feedback js-hidden">
+<div id="taf22_100" class=" iDevice_content">
+Falso. Permite la conexión segura con una red LAN desde una red que puede no ser de tipo LAN.
+
+</div>
+</section>
+<section id="sa2b22_63" class="feedback js-hidden">
+<div id="taf22_103" class=" iDevice_content">
+No es correcto. Para que pueda pasar a través de un router es necesario permitir dicha conexión en la configuración del router.
+
+</div>
+</section>
+<section id="sa3b22_63" class="feedback js-hidden">
+<div id="taf22_106" class=" iDevice_content">
+No. Uno de los protocolos utilizados es el PPTP.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-22_66">Opción correcta</a><span> (<a href="#sa0b22_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-22_100">Incorrecto</a><span> (<a href="#sa1b22_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-22_103">Incorrecto</a><span> (<a href="#sa2b22_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-22_106">Incorrecto</a><span> (<a href="#sa3b22_63">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="12_cortafuegos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

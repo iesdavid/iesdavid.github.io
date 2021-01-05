@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.1. Protocolo SSH | 6.1.- Protocolo SSH </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-50"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.1.- Protocolo SSH</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">6.1. Protocolo SSH</a></li>
+   <li><a href="611_caractersticas.html" class="no-ch">6.1.1. Características</a></li>
+   <li><a href="612_fases.html" class="daddy">6.1.2. Fases</a>
+   <ul class="other-section">
+      <li><a href="6121_negociacin.html" class="no-ch">6.1.2.1. Negociación</a></li>
+      <li><a href="6122_autenticacin.html" class="no-ch">6.1.2.2. Autenticación</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="611_caractersticas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.1. Protocolo SSH</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id419">
+<div class="iDevice emphasis0">
+<div id="ta419_154" class="block iDevice_content">
+<p><img src="img0.jpeg" alt="Protocolo SSH - Wikimedia.org" title="Protocolo SSH" style="float: right; margin: 10px;" height="150" />Hoy en día es casi impensable que una empresa no ofrezca a sus trabajadores la posibilidad de trabajar de forma remota. Por tal motivo, es fundamental el uso aplicaciones que emplean <strong>técnicas de seguridad en las comunicaciones</strong> para proteger los datos intercambiados. Dos de las herramientas más usadas para lograr todo esto son <strong><span lang="en"><abbr title="Secure SHell">SSH</abbr></span></strong> y <strong><span lang="en"><abbr title="Virtual Private Network">VPN</abbr></span></strong>.</p>
+<p lang="en"><strong><span lang="en"><abbr title="Secure SHell">SSH</abbr></span></strong> es una aplicación diseñada para sustituir determinadas herramientas de acceso remoto usadas tradicionalmente en los sistemas Linux, como <strong>telnet, <span lang="en"><abbr title="Remote Shell">rsh</abbr></span>, <span lang="en"><abbr title="Remote Login">rlogin</abbr></span></strong> o <strong><span lang="en"><abbr title="Remote Copy">rcp</abbr></span></strong>, ya que estas herramientas presentaban dos graves inconvenientes desde el punto de vista de la seguridad:</p>
+<ol class="auto-numbered">
+<li>Conexión no cifrada.</li>
+<li>Autenticación no cifrada.</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id421">
+<div class="iDevice emphasis0">
+<div id="ta421_154" class="block iDevice_content">
+<p><span style="font-size: 1em;">La aplicación define un protocolo propio para la transmisión segura de los datos, el <strong>protocolo SSH</strong></span><span style="font-size: 1em;">. Mediante SSH</span><span style="font-size: 1em;"> podremos conectarnos remotamente al equipo que deseemos y enviarle órdenes o comandos en modo seguro, ya que mediante el uso de la criptografía los paquetes <span lang="en"><abbr title="Transmission Control Protocol / Internet Protocol">TCP/IP</abbr></span></span><span style="font-size: 1em;" lang="en"> que formen parte de la comunicación viajarán de manera cifrada sin que ningún <strong>sniffer</strong> intermedio pueda adivinar ni quién está accediendo, ni qué password ha utilizado, ni qué ordenes está enviando. Por tanto, <span style="font-size: 1em;">SSH</span></span><span style="font-size: 1em;"> lleva a cabo un cifrado completo, <strong>cifrando</strong> todo el proceso: <strong>tanto la autenticación como la comunicación.</strong></span></p>
+<p>En concreto, <strong><span style="font-size: 1em;">SSH</span></strong> utiliza <a href="#t5aebd1bf-9134-f9f8-c8d9-9fd37333e2d5" id="link5aebd1bf-9134-f9f8-c8d9-9fd37333e2d5" class="exe-tooltip definition-tt titled-tt blue-tt rounded-tt shadowed-tt" title="Criptografía Híbrida | Ver Definición">criptografía híbrida</a> ya que hace uso de claves asimétricas (es necesario que el equipo cliente tenga la clave pública del servidor dentro de su anillo de confianza) durante el establecimiento de la comunicación con la finalidad de que los equipos emisor y receptor puedan intercambiarse la clave simétrica que usarán durante el resto de la comunicación. El motivo por el cual se usa una estrategia híbrida en lugar de usar claves asimétricas durante toda la comunicación, es porque evita el gran consumo computacional que ello conllevaría.</p>
+<div id="t5aebd1bf-9134-f9f8-c8d9-9fd37333e2d5" class="exe-tooltip-text">
+<p>Método criptográfico que combina la <strong>criptografía asimétrica y simétrica</strong> aprovechando las ventajas tanto de uno como del otro. Para ello se genera una clave de sesión que será enviada cifrada usando la clave pública del receptor (<strong>criptografía asimétrica</strong>). Posteriormente, se utilizará la clave de sesión para cifrar los datos que se quieren enviar al receptor (<strong>criptografía simétrica</strong>). Esta clave de sesión será regenerada cada cierto tiempo incrementando la seguridad del canal.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id0">
+<div class="iDevice emphasis0">
+<div id="ta0_85" class="block iDevice_content">
+<figure class="exe-figure exe-media position-center" style="width: 560px;"><iframe width="560" height="314" src="https://www.youtube.com/embed/QgnzJ3nQylI" allowfullscreen="allowfullscreen"></iframe>
+<figcaption class="figcaption"><span class="title"><em>¿Qué es SSH?</em></span></figcaption>
+</figure>
+<p></p>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="611_caractersticas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

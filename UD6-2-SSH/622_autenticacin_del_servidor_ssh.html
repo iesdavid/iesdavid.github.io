@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.2. Autenticación del servidor SSH | 6.2. Protocolo SSH </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-55"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.2. Protocolo SSH</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.2. Control remoto en modo seguro con SSH</a></li>
+   <li><a href="621_configuracin_bsica_de_ssh.html" class="no-ch">6.2.1. Configuración básica de SSH</a></li>
+   <li id="active"><a href="622_autenticacin_del_servidor_ssh.html" class="active no-ch">6.2.2. Autenticación del servidor SSH</a></li>
+   <li><a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="no-ch">6.2.3. Ejecución remota de comandos en modo desatendido</a></li>
+   <li><a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="no-ch">6.2.4. Ejecución remota de comandos en modo desatendido con frase de paso</a></li>
+   <li><a href="625_ficheros_authorizedkeys_y_known_host.html" class="no-ch">6.2.5. Ficheros authorized-keys y known_host</a></li>
+   <li><a href="626_transferencia_de_ficheros_en_modo_seguro.html" class="no-ch">6.2.6. Transferencia de ficheros en modo seguro</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="621_configuracin_bsica_de_ssh.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.2. Autenticación del servidor SSH</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id385">
+<div class="iDevice emphasis0">
+<div id="ta385_154" class="block iDevice_content">
+<p>En el caso de autenticación por <span lang="en">password</span>, siempre que un equipo cliente va a conectarse por primera vez de forma remota al equipo servidor, recibe un aviso indicando que la clave pública del servidor remoto no está en su anillo de confianza. Esto es un indicativo de que no se puede garantizar la autenticidad del servidor. Por ejemplo, si la <span lang="en"><abbr title="Internet Protocol">IP</abbr></span> del servidor <span lang="en"><abbr title="Secure SHell">SSH</abbr></span> al que el equipo cliente desea conectarse es <strong>192.168.1.90</strong>, el mensaje mostrado sería el siguiente:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id386">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta386_151" class="block iDevice_content">
+<div class="highlighted-code language-python">
+<div>
+<pre><code>The authenticity of host '192.168.1.90 (192.168.1.90)' can't be established
+
+Are you sure you want to continue connecting (yes/no)?</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id387">
+<div class="iDevice emphasis0">
+<div id="ta387_154" class="block iDevice_content">
+<p>Ante esta cuestión existen dos opciones:</p>
+<ul>
+<li class="lista_verificacion"><span style="font-size: 1em;">Si se responde </span><strong style="font-size: 1em;"><span lang="en">yes</span></strong><span style="font-size: 1em;" lang="en">, se añadirá la IP del host remoto a nuestra lista de host de confianza. Al añadirse, las siguientes veces que se intente establecer una conexión con el equipo remoto, este mensaje no saldrá porque la clave pública del host remoto ha sido añadida al anillo de confianza del equipo cliente. <br /><br /></span></li>
+<li class="lista_verificacion"><span style="font-size: 1em;"></span>Si se contesta <strong>no</strong>, simplemente se cancela el intento de conexión.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id388">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta388_151" class="block iDevice_content">
+<p>Si la respuesta es <strong><span lang="en">yes</span></strong>, automáticamente se añade el host remoto al anillo de confianza y se muestra el siguiente mensaje:</p>
+<div class="highlighted-code language-python">
+<div>
+<pre><code>Warning: Permanently added '192.168.1.90' to the list of knwon hosts.</code></pre>
+</div>
+</div>
+<p>A continuación se solicitará la password del usuario remoto con el cual se quiere realizar la conexión al servidor SSH, teniendo por defecto, tres intentos para introducir correctamente dicha <span lang="en">password</span>.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id389">
+<div class="iDevice emphasis0">
+<div id="ta389_154" class="block iDevice_content">
+<p>La realización o no de dicha pregunta es configurable a través del parámetro <strong><span lang="en">StrictHostKeyChecking</span></strong> del fichero de configuración del cliente SSH (<code><strong>/etc/ssh/ssh_config</strong></code>). Este parámetro acepta tres posibles valores:</p>
+<ol class="auto-numbered">
+<li><strong><span lang="en">yes</span></strong><br /><br />Cierra el intento de conexión si la clave pública del equipo remoto al que se intenta conectar no está en el anillo de confianza, es decir, no está entre los <span lang="en">host</span> conocidos (<span lang="en" class=" resaltado_inline">known_host</span>).<br /><br /></li>
+<li><strong>no</strong><br /><br />Establece la conexión esté o no la clave pública del equipo remoto en el fichero de <span lang="en">host</span> conocidos.<br /><br /></li>
+<li><strong><span lang="en">ask</span></strong><br /><br />Pregunta si se quiere o no aceptar el intento de conexión sino está la clave pública del equipo remoto entre los <span lang="en">host</span> conocidos. Esta es la opción por defecto.</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id390">
+<div class="iDevice emphasis0">
+<div id="ta390_154" class="block iDevice_content">
+<p>Un ejemplo de todo lo que se acaba de describir se puede ver en la siguiente imagen:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 601px;"><a href="SAD03_CONT_R22_PrimeraConexionSSH.png" title="Imagen ampliada que muestra la primera conexión desde un cliente por ssh a la máquina 192.168.1.90 con el usuario root. En la imagen se responde yes al intento de conexión, con lo que el host 192.168.1.90 queda añadido al anillo de confianza" rel="lightbox"><img src="SAD03_CONT_R22_PrimeraConexionSSH.png" alt="Ilustración que muestra la primera conexión desde un cliente por ssh a la máquina 192.168.1.90 con el usuario root. En la imagen se responde yes al intento de conexión, con lo que el host 192.168.1.90 queda añadido al anillo de confianza" title="Conexión por ssh" width="601" height="160" /></a>
+<figcaption class="figcaption"><span class="author">Andrés Rubio - Elaboración propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id391">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta391_151" class="block iDevice_content">
+<p>Relacionado con la autenticidad de los equipos remotos, SSH ofrece una herramienta muy interesante. Se trata de <code><strong>ssh-keygen</strong></code> que permite verificar que la clave pública del otro extremo de la conexión es de quien dice ser. Para ello se usa el siguiente comando:</p>
+<div class="highlighted-code language-processing">
+<div>
+<pre><code>ssh-keygen -l -E funciónHash -f ficheroClavePública</code></pre>
+</div>
+</div>
+<p>siendo:</p>
+<ol class="auto-numbered">
+<li><strong>fuciónHash</strong> <br /><br />Función <span lang="en">hash</span> empleada en el <span lang="en">fingerprint</span> de la clave pública.<br /><br /></li>
+<li><strong>ficheroClavePública</strong>: <br /><br />Ruta donde ha sido importada la clave pública del equipo remoto.</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdIdevice em_iDevice" id="id392">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta392_119" class="block iDevice_content">
+<p>Cuando un usuario lanza un comando remotamente sobre un servidor SSH, éste nos solicita la contraseña del usuario bajo el cual se ejecuta el comando. Este uso que a simple vista es idóneo para evitar que alguien pueda ejecutar comandos sin permiso, <strong>¿sería apropiado si se quiere programar un <span lang="en">script</span> para que sea ejecutado de manera automática empleando, por ejemplo, el servicio <span lang="en">cron</span>?</strong></p>
+</div>
+<form name="feedback-form-392" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback392text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-392" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-392" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div id="ta392_120" class="block iDevice_content">
+<p>No sería adecuado, ya que el <span lang="en">script</span> se quedaría esperando a que se introduzcan las credenciales de acceso.</p>
+</div>
+</section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="621_configuracin_bsica_de_ssh.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

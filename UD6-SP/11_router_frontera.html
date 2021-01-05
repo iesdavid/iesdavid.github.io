@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1.- Router frontera. | Implantación de Técnicas de Acceso Remoto </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Ministerio de Educación y Formación Profesional" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Implantación de Técnicas de Acceso Remoto</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Implantación de técnicas de acceso remoto.</a></li>
+   <li class="current-page-parent"><a href="1_elementos_bsicos_de_la_seguridad_perimetral.html" class="current-page-parent daddy">1.- Elementos básicos de la seguridad perimetral.</a>
+   <ul>
+      <li id="active"><a href="11_router_frontera.html" class="active no-ch">1.1.- Router frontera.</a></li>
+      <li><a href="12_cortafuegos.html" class="no-ch">1.2.- Cortafuegos.</a></li>
+      <li><a href="13_redes_privadas_virtuales.html" class="no-ch">1.3.- Redes privadas virtuales.</a></li>
+      <li><a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="no-ch">1.4.- Perímetros de red. Zonas desmilitarizadas.</a></li>
+      <li><a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="no-ch">1.5.- Subred protegida débil Vs subred protegida fuerte.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_polticas_de_defensa_en_profundidad.html" class="daddy">2.- Políticas de defensa en profundidad.</a>
+   <ul class="other-section">
+      <li><a href="21_defensa_perimetral.html" class="no-ch">2.1.- Defensa perimetral.</a></li>
+      <li><a href="22_defensa_interna.html" class="no-ch">2.2.- Defensa interna.</a></li>
+      <li><a href="23_factor_humano.html" class="no-ch">2.3.- Factor humano.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_elementos_bsicos_de_la_seguridad_perimetral.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_cortafuegos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.1.- Router frontera.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id12">
+<div class="iDevice emphasis0">
+<div id="ta12_77" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-pd" style="width: 250px;"><img src="SAD03_CONT_R05_RouterFrontera.jpg" alt="Ilustración de un muñeco moviendo las antenas sobre un router" title="Router" width="250" height="250" />
+<figcaption class="figcaption"><a href="https://pixabay.com/es/photos/var%C3%B3n-blanco-modelo-3d-aislado-3d-1834131/" target="_blank" class="author" title="Acceder a pixabay para la descarga de la imagen del muñeco sobre el router (Se abre en una nueva ventana)." rel="noopener">Pixabay</a> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<figure class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 300px;"><a href="SAD03_CONT_R06_RedRouterFrontera.png" rel="lightbox" title="Imagen ampliada que muestra una red que presenta una topología de varios sistemas autónomos con conexiones IBGP y EBGP entre sus routers"><img src="SAD03_CONT_R06_RedRouterFrontera.png" alt="Ilustración que muestra una red que presenta una topología de varios sistemas autónomos con conexiones IBGP y EBGP entre sus routers" title="Topología con conexiones IBGP y EBGP" width="300" height="270" /></a>
+<figcaption class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:Red2.png" target="_blank" class="author" title="Acceder a wikimedia para la descarga de la imagen de la topología de red (Se abre en una nueva ventana)." rel="noopener">Akiana</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de licencia CC BY-SA de la imagen de la topología de red (Se abre en una nueva ventana)." rel="noopener">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p>El <b><span lang="en">router</span> frontera </b>es el elemento que se instala en la parte más externa de la red corporativa. Se encarga de comprobaciones de seguridad en el tráfico de entrada y salida de la red, convirtiéndose en una especie de policía de tráfico entrante y saliente.</p>
+<p>Estos <span lang="en">routers</span> están diseñados para soportar muchas conexiones en las grandes organizaciones u operadores. En una instalación doméstica este papel lo hace un <span lang="en">router</span> convencional, que es el que se encarga de proporcionar también acceso a Internet.</p>
+<p>Internet es una red de redes formada de <a href="#t9afda372-56b5-1b50-d014-6ccc2ee1e0e7" id="link9afda372-56b5-1b50-d014-6ccc2ee1e0e7" class="exe-tooltip definition-tt titled-tt blue-tt" title="Sistema autónomo | ">sistemas autónomos</a> que pueden estar compuestos por varias <a href="#t44976984-675c-11a7-874c-5487930daba5" id="link44976984-675c-11a7-874c-5487930daba5" class="exe-tooltip definition-tt titled-tt blue-tt" title="Áreas | ">áreas</a> conectadas entre sí por los <span lang="en">routers</span> frontera.</p>
+<p>Los protocolos con los que trabajan los <span lang="en">router</span> frontera son los <a href="#t23e27761-7513-b207-f367-e2e84c776647" id="link23e27761-7513-b207-f367-e2e84c776647" class="exe-tooltip definition-tt titled-tt blue-tt" title="EGP | ">EGP</a>, siendo el más extendido el <span lang="en"><abbr title="Border Gateway Protocol.">BGP</abbr></span> (tipo de protocolo <span lang="en"><abbr title="Exterior Gateway Protocol">EGP</abbr></span>). Estos protocolos son necesarios para poder encaminar la información en Internet. La ruta óptima escogida por BGP viene determinada por el número de sistemas autónomos atravesados para llegar al destino. Aunque BGP se utiliza entre sistemas autónomos, también se puede utilizar en su interior. En este caso se denomina (IBGP). Para distinguirlos del exterior, a éstos se les denomina EBGP.</p>
+<p>En la imagen se puede ver la función que realiza BGP en el entramado de Internet, presentándose una topología de varios sistemas autónomos con conexiones IBGP y EBGP entre sus <span lang="en">routers</span>.</p>
+<div id="t9afda372-56b5-1b50-d014-6ccc2ee1e0e7" class="exe-tooltip-text">
+<p>Conjunto de redes y equipos administrados por una sola entidad.</p>
+</div>
+<div id="t44976984-675c-11a7-874c-5487930daba5" class="exe-tooltip-text">
+<p>Redes dentro de los sistemas autónomos que a su vez están dentro de Internet.</p>
+</div>
+<div id="t23e27761-7513-b207-f367-e2e84c776647" class="exe-tooltip-text">
+<p>Protocolo para intercambiar información entre sistemas autónomos.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id13">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.gif)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_50" class="block iDevice_content">
+<p>En los siguientes enlaces podrás aprender más cosas sobre el protocolo BGP.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;"><a href="https://www.youtube.com/watch?v=_163IhQlCIc" target="_blank" title="Acceder a youtube para ver un vídeo sobre el protocolo BGP (Se abre en una nueva ventana)." rel="noopener">Protocolo BGP usando Packet Tracert</a></p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><a href="https://www.youtube.com/watch?v=XGhJ0R-9Csw" target="_blank" title="Acceder a youtube para ver un vídeo sobre el protocolo BGP en un caso práctico (Se abre en una nueva ventana)." rel="noopener">El camino más corto para entender BGP</a></p>
+</div>
+</div>
+<p class="enlace_centrado"></p>
+<p class="enlace_centrado"></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id15">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-15_63" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion15_63" class="block question iDevice_content">
+<b>¿Qué protocolo de enrutamiento se utiliza para efectuar la comunicación entre sistemas autónomos?</b>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i15_66" class="sr-av"><a href="#answer-15_66">Opción 1</a></label><input type="radio" name="option15_63" id="i15_66" class="exe-radio-option exe-radio-option-0-4-15_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-15_66"><div id="taans15_66" class="block iDevice_content">
+RIP. 
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i15_83" class="sr-av"><a href="#answer-15_83">Opción 2</a></label><input type="radio" name="option15_63" id="i15_83" class="exe-radio-option exe-radio-option-1-4-15_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-15_83"><div id="taans15_83" class="block iDevice_content">
+Ethernet.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i15_86" class="sr-av"><a href="#answer-15_86">Opción 3</a></label><input type="radio" name="option15_63" id="i15_86" class="exe-radio-option exe-radio-option-2-4-15_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-15_86"><div id="taans15_86" class="block iDevice_content">
+IGP.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i15_89" class="sr-av"><a href="#answer-15_89">Opción 4</a></label><input type="radio" name="option15_63" id="i15_89" class="exe-radio-option exe-radio-option-3-4-15_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-15_89"><div id="taans15_89" class="block iDevice_content">
+BGP. 
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b15_63" class="feedback js-hidden">
+<div id="taf15_66" class=" iDevice_content">
+No. Este es un protocolo tipo IGP.
+
+</div>
+</section>
+<section id="sa1b15_63" class="feedback js-hidden">
+<div id="taf15_83" class=" iDevice_content">
+Falso. Este es un protocolo de redes LAN.
+
+</div>
+</section>
+<section id="sa2b15_63" class="feedback js-hidden">
+<div id="taf15_86" class=" iDevice_content">
+No es correcto. Este protocolo se utiliza dentro de los sistemas autónomos.
+
+</div>
+</section>
+<section id="sa3b15_63" class="feedback js-hidden">
+<div id="taf15_89" class=" iDevice_content">
+Si, este protocolo se utiliza para encontrar la ruta óptima entre sistemas autónomos.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-15_66">Incorrecto</a><span> (<a href="#sa0b15_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-15_83">Incorrecto</a><span> (<a href="#sa1b15_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-15_86">Incorrecto</a><span> (<a href="#sa2b15_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-15_89">Opción correcta</a><span> (<a href="#sa3b15_63">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_elementos_bsicos_de_la_seguridad_perimetral.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_cortafuegos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

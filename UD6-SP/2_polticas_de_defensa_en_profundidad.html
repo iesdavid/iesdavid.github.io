@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.- Políticas de defensa en profundidad. | Implantación de Técnicas de Acceso Remoto </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Ministerio de Educación y Formación Profesional" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Implantación de Técnicas de Acceso Remoto</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Implantación de técnicas de acceso remoto.</a></li>
+   <li><a href="1_elementos_bsicos_de_la_seguridad_perimetral.html" class="daddy">1.- Elementos básicos de la seguridad perimetral.</a>
+   <ul class="other-section">
+      <li><a href="11_router_frontera.html" class="no-ch">1.1.- Router frontera.</a></li>
+      <li><a href="12_cortafuegos.html" class="no-ch">1.2.- Cortafuegos.</a></li>
+      <li><a href="13_redes_privadas_virtuales.html" class="no-ch">1.3.- Redes privadas virtuales.</a></li>
+      <li><a href="14_permetros_de_red_zonas_desmilitarizadas.html" class="no-ch">1.4.- Perímetros de red. Zonas desmilitarizadas.</a></li>
+      <li><a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="no-ch">1.5.- Subred protegida débil Vs subred protegida fuerte.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="2_polticas_de_defensa_en_profundidad.html" class="active daddy">2.- Políticas de defensa en profundidad.</a>
+   <ul>
+      <li><a href="21_defensa_perimetral.html" class="no-ch">2.1.- Defensa perimetral.</a></li>
+      <li><a href="22_defensa_interna.html" class="no-ch">2.2.- Defensa interna.</a></li>
+      <li><a href="23_factor_humano.html" class="no-ch">2.3.- Factor humano.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_defensa_perimetral.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.- Políticas de defensa en profundidad.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id34">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.gif)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta34_69" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-CC0" style="width: 148px;"><img src="MariaMiniatura.jpg" alt="Ilustración de María, que junto con Félix son los propietarios de la empresa." title="María" width="148" height="200" />
+<figcaption class="figcaption"><a href="https://www.flickr.com/photos/nate/2703328849/" target="_blank" class="author" title="Acceder a la página de descarga de la imagen de María en la galería Filckr de Nate Steiner (Se abre en una nueva ventana)" rel="noopener">Nate Steiner</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/publicdomain/zero/1.0/deed.es" target="_blank" title="Acceder a la página con los términos de licencia CC0 para la imagen de María (Se abre en una nueva ventana)" rel="noopener">CC0</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p><br />—Bueno <strong>Juan</strong>, puesto que ya tenéis todos los elementos instalados, ya podemos trabajar más tranquilos.</p>
+<p>—En absoluto <strong>María</strong>. Primero por que la seguridad 100% no existe y segundo por que todavía quedan por establecer los permisos de acceso sobre los recursos de nuestros sistemas.</p>
+<p>—Uff, y yo que pensaba que ya estaba todo listo. Y esto último que indicas, ¿para qué sirve?.</p>
+<p>—Para que no sea un caos y todo el mundo pueda cambiar cosas donde no debe. Es conveniente que en cada zona tengamos distintos permisos. Además, es fundamental llevar a la práctica distintas  políticas de seguridad en las distintas zonas de acceso a la red.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id35">
+<div class="iDevice emphasis0">
+<div id="ta35_77" class="block iDevice_content">
+<p>
+La <b>defensa  en profundidad</b> se refiere a una estrategia militar, que tiene como  finalidad hacer que el atacante se desanime al interponerle varios obstáculos  en su camino hacia el objetivo.
+</p>
+<p>
+La seguridad total no existe como tal,  es imposible afirmar que un sistema es totalmente seguro. Lo único que puede  asegurarse es que se pueden establecer una serie de políticas de seguridad para  conseguir:
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id36">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta36_73" class="block iDevice_content">
+<ul class="lista_verificacion">
+	  
+	<li>Reducir las posibilidades de que el  sistema sea atacado.</li>
+	<li>Minimizar los daños causados por un incidente.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id37">
+<div class="iDevice emphasis0">
+<div id="ta37_77" class="block iDevice_content">
+<p>Existen muchas ideas y protocolos de actuación para establecer una defensa de un sistema. Sin embargo, todas se podrían resumir en dos maneras de actuar:</p>
+<ul class="lista_verificacion">
+<li>
+<figure class="exe-figure exe-image float-right license-CC-BY" style="width: 299px;"><img src="SAD03_CONT_R15_PinguinoDefensa.jpg" alt="Ilustración que muestra a un pingüino con una armadura, un casco y una espada simulando una defensa" title="Defensa" width="299" height="146" />
+<figcaption class="figcaption"><a href="https://www.flickr.com/photos/136770128@N07/41397203725/" target="_blank" class="author" title="Acceder a la galería flickr de Richard Patterson para la descarga de la imagen del pingüino defensor (Se abre en una nueva ventana)." rel="noopener">Richard Patterson</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de licencia CC BY de la imagen del pingüino defensor (Se abre en una nueva ventana)." rel="noopener">CC BY</a><span class="sep">)</span></span></figcaption>
+</figure>
+Permitir todo lo que no esté específicamente prohibido.<br /><br />También llamada <b>permiso establecido</b>. Se trata de aplicar, por defecto, una <strong>política permisiva en la que solo hay que especificar lo que está prohibido</strong>.<br /><br /></li>
+<li>Prohibir todo lo que no esté explícitamente permitido.<br /><br />También llamada <b>negociación preestablecida</b>. Se trata de aplicar, por defecto, una <strong>política restrictiva en la que solo hay que especificar lo que está permitido</strong>.</li>
+</ul>
+<p></p>
+<p>La segunda de las opciones es la más segura y restrictiva, aunque no siempre la más adecuada. </p>
+<p>Para tener una idea clara de estas dos posturas, basta imaginar que en un parque se pueda leer uno de los siguientes mensajes:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id40">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta40_73" class="block iDevice_content">
+<ul class="lista_verificacion">
+	<li>No se permite jugar al fútbol.</li>
+	<li>Solamente se permite jugar al tenis.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id41">
+<div class="iDevice emphasis0">
+<div id="ta41_77" class="block iDevice_content">
+<p>
+Está claro que es mucho más restrictivo  el segundo mensaje (se prohíbe todo lo que no está explícitamente permitido),  ya que el primer mensaje no dice que no se pueda jugar al tenis, voleibol,  baloncesto o cualquier otro deporte.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id42">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-42_63" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion42_63" class="block question iDevice_content">
+<b>Si el router frontera solamente deja pasar las conexiones que utilicen el puerto 80:</b>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i42_66" class="sr-av"><a href="#answer-42_66">Opción 1</a></label><input type="radio" name="option42_63" id="i42_66" class="exe-radio-option exe-radio-option-0-4-42_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-42_66"><div id="taans42_66" class="block iDevice_content">
+Se está prohibiendo lo que no esté específicamente prohibido.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i42_137" class="sr-av"><a href="#answer-42_137">Opción 2</a></label><input type="radio" name="option42_63" id="i42_137" class="exe-radio-option exe-radio-option-1-4-42_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-42_137"><div id="taans42_137" class="block iDevice_content">
+Se prohíbe todo lo que no está permitido.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i42_140" class="sr-av"><a href="#answer-42_140">Opción 3</a></label><input type="radio" name="option42_63" id="i42_140" class="exe-radio-option exe-radio-option-2-4-42_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-42_140"><div id="taans42_140" class="block iDevice_content">
+Se permite todo lo que no esté específicamente prohibido.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i42_143" class="sr-av"><a href="#answer-42_143">Opción 4</a></label><input type="radio" name="option42_63" id="i42_143" class="exe-radio-option exe-radio-option-3-4-42_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-42_143"><div id="taans42_143" class="block iDevice_content">
+Es lo mismo que decir que se prohíben las conexiones por el puerto 25. 
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b42_63" class="feedback js-hidden">
+<div id="taf42_66" class=" iDevice_content">
+No, deberías leer de nuevo el apartado.
+
+</div>
+</section>
+<section id="sa1b42_63" class="feedback js-hidden">
+<div id="taf42_137" class=" iDevice_content">
+Muy bien, es la correcta. Se especifica solamente lo que está permitido.
+
+</div>
+</section>
+<section id="sa2b42_63" class="feedback js-hidden">
+<div id="taf42_140" class=" iDevice_content">
+No es correcto. No se especifica ninguna prohibición.
+
+</div>
+</section>
+<section id="sa3b42_63" class="feedback js-hidden">
+<div id="taf42_143" class=" iDevice_content">
+Respuesta incorrecta. Permitir solamente el puerto 80 implica que se prohíben todas las demás, el 25 es solamente una de las opciones posibles.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-42_66">Incorrecto</a><span> (<a href="#sa0b42_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-42_137">Opción correcta</a><span> (<a href="#sa1b42_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-42_140">Incorrecto</a><span> (<a href="#sa2b42_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-42_143">Incorrecto</a><span> (<a href="#sa3b42_63">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="15_subred_protegida_dbil_vs_subred_protegida_fuerte.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_defensa_perimetral.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.5. Ficheros authorized-keys y known_host | 6.2. Protocolo SSH </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-58"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.2. Protocolo SSH</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.2. Control remoto en modo seguro con SSH</a></li>
+   <li><a href="621_configuracin_bsica_de_ssh.html" class="no-ch">6.2.1. Configuración básica de SSH</a></li>
+   <li><a href="622_autenticacin_del_servidor_ssh.html" class="no-ch">6.2.2. Autenticación del servidor SSH</a></li>
+   <li><a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="no-ch">6.2.3. Ejecución remota de comandos en modo desatendido</a></li>
+   <li><a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="no-ch">6.2.4. Ejecución remota de comandos en modo desatendido con frase de paso</a></li>
+   <li id="active"><a href="625_ficheros_authorizedkeys_y_known_host.html" class="active no-ch">6.2.5. Ficheros authorized-keys y known_host</a></li>
+   <li><a href="626_transferencia_de_ficheros_en_modo_seguro.html" class="no-ch">6.2.6. Transferencia de ficheros en modo seguro</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="626_transferencia_de_ficheros_en_modo_seguro.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.5. Ficheros authorized-keys y known_host</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id402">
+<div class="iDevice emphasis0">
+<div id="ta402_154" class="block iDevice_content">
+<h6 style="text-align: center;" class=" resaltado_inline">Fichero <span lang="en">authorized-keys</span></h6>
+<p>Este fichero se encuentra en <code><strong>~/.ssh</strong></code>, y contiene las claves públicas de aquellos usuarios que tienen permiso para autenticarse desde equipos remotos, siempre y cuando estos equipos remotos tengan la correspondiente clave privada.</p>
+<p>Este fichero tiene una entrada por cada clave pública con el siguiente formato:</p>
+<div class="highlighted-code language-python">
+<div>
+<pre><code>algoritmo clave_publica comentario</code></pre>
+</div>
+</div>
+<p>En la siguiente imagen se puede apreciar un ejemplo de un fichero <span class=" resaltado_inline" lang="en">authorized-keys</span> con las entradas de los equipos clientes que pueden conectarse:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 602px;"><a href="SAD03_CONT_R25_SSHAuthorizedKeys.png" title="Imagen ampliada que muestra las entradas de un fichero authorized-keys" rel="lightbox"><img src="SAD03_CONT_R25_SSHAuthorizedKeys.png" alt="Ilustración que muestra las entradas de un fichero authorized-keys" title="Ejemplo de fichero authorized-keys" width="602" height="96" /></a>
+<figcaption class="figcaption"><span class="author">Andrés Rubio - Elaboración propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id403">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta403_151" class="block iDevice_content">
+<p><strong>En el caso de que una clave pública deje de ser válida para tener acceso de forma remota, simplemente se edita el fichero y se elimina su entrada.</strong></p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id404">
+<div class="iDevice emphasis0">
+<div id="ta404_154" class="block iDevice_content">
+<h6 style="text-align: center;" class=" resaltado_inline">Fichero <span lang="en">known_host</span></h6>
+<p>También se encuentra en en <code><strong>~/.ssh</strong></code>. Existe uno por cada usuario. Contiene las claves públicas de los equipos desde los que se ha conectado dicho usuario de forma remota.</p>
+<p>El formato de cada entrada es:</p>
+<div class="highlighted-code language-python">
+<div>
+<pre><code>nombre_o_IP_equipo algoritmo clave_pública</code></pre>
+</div>
+</div>
+<p>Donde en el campo <strong>nombre_o_IP_equipo</strong> aparece el <span lang="en">hash</span> correspondiente al nombre o la <span lang="en"><abbr title="Internet Protocol">IP</abbr></span> del equipo remoto.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id405">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta405_151" class="block iDevice_content">
+<p>Se pone el <span lang="en">hash</span> para que no se pueda saber cuáles son las IP o los nombres de los equipos desde los que es posible conectarse de forma remota. Esto se puede cambiar estableciendo a valor <strong>no</strong> el parámetro <strong><span lang="en">HashKnownHosts</span></strong> del fichero de configuración del cliente SSH.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice" id="id406">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.gif)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta406_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b406" class="block iDevice_content">
+<p>Realiza una conexión por SHH al servidor cuya IP es <strong>192.168.1.53</strong>. Finaliza la conexión y analiza el fichero <strong><span lang="en" class=" resaltado_inline">known_host</span></strong> del equipo cliente para determinar la identificación del equipo al que se ha conectado, el algoritmo de cifrado empleado y la clave pública del servidor usada en la conexión.</p>
+</section>
+<form name="feedback-form-quesFeedback0b406" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b406text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b406" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b406" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<figure class="exe-figure exe-media position-center license-pd" style="width: 700px;">
+<div class="figcaption header"><strong>Conexión SSH</strong></div>
+<video width="700" height="525" controls="controls" class="mediaelement">
+<source src="SAD03_CONT_R76_ConexionSSH.mp4" type="video/mp4" /></video>
+<figcaption class="figcaption"><span class="author">Andrés Rubio - Elaboración propia</span>. <a href="SAD03_CONT_R78_DescripcionTextualAlternativaConexionSSH.html" target="_blank" class="title" title="Acceder a la descripción textual alternativa del vídeo Conexión SSH (Se abre en una nueva ventana)." rel="noopener"><em>Resumen textual del vídeo</em></a> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="626_transferencia_de_ficheros_en_modo_seguro.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.1.2.1. Negociación | 3.- Protocolo SSH. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-76"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">3.- Protocolo SSH.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.1. Protocolo SSH</a></li>
+   <li><a href="611_caractersticas.html" class="no-ch">6.1.1. Características</a></li>
+   <li class="current-page-parent"><a href="612_fases.html" class="current-page-parent daddy">6.1.2. Fases</a>
+   <ul>
+      <li id="active"><a href="6121_negociacin.html" class="active no-ch">6.1.2.1. Negociación</a></li>
+      <li><a href="6122_autenticacin.html" class="no-ch">6.1.2.2. Autenticación</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="612_fases.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6122_autenticacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.1.2.1. Negociación</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id4">
+<div class="iDevice emphasis0">
+<div id="ta4_85" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 380px;"><a href="SAD03_CONT_R21_SSHDiagram.png" title="Imagen ampliada que muestra el proceso de establecimiento de una comunicación ssh" rel="lightbox"><img src="SAD03_CONT_R21_SSHDiagram.png" alt="Ilustración que muestra el proceso de establecimiento de una comunicación ssh" title="Fases SSH" width="380" height="114" /></a>
+<figcaption class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:SSH_diagram.png" target="_blank" class="author" rel="noopener">Unknown author</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Para el establecimiento de la conexión es necesario que el servidor esté escuchando peticiones de conexión en el puerto asignado al servicio SSH, que es el <strong>22</strong>. El cliente se conecta a dicho puerto mediante el protocolo TCP.</p>
+<ol>
+<li>El primer paso es negociar la versión del protocolo SSH a utilizar. Tanto el cliente como el servidor envían una línea que contiene el texto “<strong><span class="resaltado_inline">SSH-x.y-implementación</span></strong>”, donde<strong> <span class="destacado_inline">x.y</span></strong> es el número de versión del protocolo (por ejemplo, 2.0) e <strong><span class=" resaltado_inline">implementación</span></strong> es una cadena identificativa del <span lang="en">software</span> del cliente o servidor. Si los números de versión no concuerdan, el servidor decide si puede continuar o no: si no puede, simplemente cierra la conexión. Destacar que todo este intercambio de mensajes se lleva a cabo sin cifrar.</li>
+<li>A continuación, comienza la fase de negociación entre el cliente y el servidor. Para ello el servidor envía al cliente su clave pública para que éste, a partir de ahora, envíe toda la información cifrada con dicha clave pública. En esta fase de negociación se procede al intercambio de claves y las listas de algoritmos soportados por orden de preferencia:</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id369">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta369_151" class="block iDevice_content">
+<ol class="auto-numbered">
+<li>Algoritmos de intercambio de claves.</li>
+<li>Para cada sentido de la comunicación, algoritmos de cifrado simétrico y de compresión.</li>
+<li>También se incluye una lista de idiomas soportados por los mensajes informativos.</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id370">
+<div class="iDevice emphasis0">
+<div id="ta370_154" class="block iDevice_content">
+<p>Para cada tipo de algoritmo, se escoge el primero de la lista del cliente que esté también en la lista del servidor. Los algoritmos criptográficos que contempla <acronym title="Secure SHell 2" lang="en">SSH2</acronym> son los siguientes:</p>
+<ul>
+<li class="lista_verificacion">Para el intercambio de claves: <span class=" resaltado_inline" lang="en">Diffie-Hellman</span>.<br /><br /></li>
+<li class="lista_verificacion">Para el cifrado:<span class=" resaltado_inline"> RC4, 3<span lang="en"><abbr title="Data Encryption Standard">DES</abbr></span>, <span lang="en">Blowfish</span>, <span lang="en">Twofish</span>, <span lang="en"><abbr title="International Data Encryption Algorithm">IDEA</abbr></span> y CAST-128.</span></li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id371">
+<div class="iDevice emphasis0">
+<div id="ta371_154" class="block iDevice_content">
+<p>Sea cual sea el algoritmo criptográfico, como resultado final se obtiene un secreto compartido (clave de sesión) y un identificador de sesión. Esta información será enviada de forma cifrada por parte del cliente, usando la clave pública del servidor. Todo este proceso se puede repetir cuando sea necesario la regeneración de las claves.</p>
+<p>Si todo es correcto, ya se tendrá establecida la conexión, a expensas de la autenticación del cliente, la cual es necesaria antes de poder hacer nada en el equipo remoto (servidor). Esta parte de autenticación tendrá lugar durante la segunda fase.</p>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id372">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(icon_debesconocerfpd.gif)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta372_129" class="block iDevice_content">
+<p>En los siguientes enlaces podrás aprender más asuntos relacionados sobre las técnicas de cifrado empleadas por ssh:</p>
+<p></p>
+<div style="width: 33%; float: left;">
+<p style="text-align: center;"><a href="https://www.redeszone.net/2010/11/04/criptografia-algoritmos-de-cifrado-de-clave-simetrica/" target="_blank" title="Acceder a redeszone con información sobre el algoritmo de cifrado IDEA, 3DES  (Se abre en una nueva ventana)" rel="noopener">IDEA</a> </p>
+</div>
+<div style="width: 33%; float: left;">
+<p style="text-align: center;"><a href="https://es.wikipedia.org/wiki/Triple_DES" target="_blank" title="Acceder a la wikipedia con información sobre el algoritmo de cifrado 3DES (Se abre en una nueva ventana)" rel="noopener">3DES</a></p>
+</div>
+<div style="width: 33%; float: left;">
+<p style="text-align: center;"><a href="https://es.wikipedia.org/wiki/RC4" target="_blank" title="Acceder a la wikipedia con información sobre el algoritmo de cifrado RC4 (Se abre en una nueva ventana)" rel="noopener">RC4</a> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="612_fases.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6122_autenticacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

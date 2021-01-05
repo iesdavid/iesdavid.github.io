@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.4. Ejecución remota de comandos en modo desatendido con frase de paso | 6.2. Protocolo SSH </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-57"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.2. Protocolo SSH</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.2. Control remoto en modo seguro con SSH</a></li>
+   <li><a href="621_configuracin_bsica_de_ssh.html" class="no-ch">6.2.1. Configuración básica de SSH</a></li>
+   <li><a href="622_autenticacin_del_servidor_ssh.html" class="no-ch">6.2.2. Autenticación del servidor SSH</a></li>
+   <li><a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="no-ch">6.2.3. Ejecución remota de comandos en modo desatendido</a></li>
+   <li id="active"><a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="active no-ch">6.2.4. Ejecución remota de comandos en modo desatendido con frase de paso</a></li>
+   <li><a href="625_ficheros_authorizedkeys_y_known_host.html" class="no-ch">6.2.5. Ficheros authorized-keys y known_host</a></li>
+   <li><a href="626_transferencia_de_ficheros_en_modo_seguro.html" class="no-ch">6.2.6. Transferencia de ficheros en modo seguro</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="625_ficheros_authorizedkeys_y_known_host.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.4. Ejecución remota de comandos en modo desatendido con frase de paso</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id398">
+<div class="iDevice emphasis0">
+<div id="ta398_154" class="block iDevice_content">
+<p>Para hacer posible la ejecución remota de comandos de manera desatentida con frase de paso, hay que usar la herramienta <strong><span class=" resaltado_inline" lang="en">ssh-agent</span> </strong>que almacena temporalmente (normalmente durante una sesión de conexión a un equipo remoto) las claves privadas con frase de paso, con la particularidad de que solo se introduce la frase de paso la primera vez que se realiza la conexión, permitiendo usar <span lang="en"><abbr title="Secure SHell">SSH</abbr></span> de forma desatendida todo el tiempo que dura la sesión del usuario (esto último es configurable, pudiendo establecerse un tiempo inferior o superior). El único cuidado que se debe tener es controlar el uso de la sesión, debiendo bloquearla cuando no se esté usando.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id399">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta399_151" class="block iDevice_content">
+<p><strong><span lang="en">ssh-agent</span></strong> es un proceso que se ejecuta en segundo plano y que está presente en todas las distribuciones Linux con entorno gráfico. Para comprobar que <strong><span lang="en">ssh-agent</span></strong> se está ejecutando tenemos dos opciones:</p>
+<div class="highlighted-code language-python">
+<div>
+<pre><code>env | grep SSH
+
+ps aux | grep ssh-agent</code></pre>
+</div>
+</div>
+<p>En el caso de no tener entorno gráfico, si se quiere usar <strong><span lang="en">ssh-agent</span></strong>, se debe añadir a través del siguiente comando:</p>
+<div class="highlighted-code language-processing">
+<div>
+<pre><code>ssh-agent /bin/bash</code></pre>
+</div>
+</div>
+<p style="margin-left: 30px;"></p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id400">
+<div class="iDevice emphasis0">
+<div id="ta400_154" class="block iDevice_content">
+<p>Para usar una clave con frase de paso de forma desatendida, hay que añadirla al <strong><span lang="en">ssh-agent</span></strong> a través del siguiente comando:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>ssh-add ~/.ssh/ficheroClavePrivada</code></pre>
+</div>
+</div>
+<p>Si la clave privada está protegida con una frase de paso, automáticamente se nos pedirá y quedará añadida al agente SSH.</p>
+<p>Es posible conocer cuáles son las claves que tienen añadida su frase de paso al agente SSH a través de los comandos:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>ssh-add -L
+
+ssh-add -l</code></pre>
+</div>
+</div>
+<p>Del mismo modo que se pueden añadir frases de paso al agente SSH, también se pueden eliminar mediante el comando:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>ssh-add -d ~/.ssh/ficheroClavePrivada</code></pre>
+</div>
+</div>
+<p>O si se quieren eliminar del agente SSH todas las frases de paso de todas las claves privadas, se emplea el comando:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>ssh-add -D</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="625_ficheros_authorizedkeys_y_known_host.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

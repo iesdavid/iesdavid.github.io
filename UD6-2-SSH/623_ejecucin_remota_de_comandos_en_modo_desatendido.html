@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.3. Ejecución remota de comandos en modo desatendido | 6.2. Protocolo SSH </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-56"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.2. Protocolo SSH</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.2. Control remoto en modo seguro con SSH</a></li>
+   <li><a href="621_configuracin_bsica_de_ssh.html" class="no-ch">6.2.1. Configuración básica de SSH</a></li>
+   <li><a href="622_autenticacin_del_servidor_ssh.html" class="no-ch">6.2.2. Autenticación del servidor SSH</a></li>
+   <li id="active"><a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="active no-ch">6.2.3. Ejecución remota de comandos en modo desatendido</a></li>
+   <li><a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="no-ch">6.2.4. Ejecución remota de comandos en modo desatendido con frase de paso</a></li>
+   <li><a href="625_ficheros_authorizedkeys_y_known_host.html" class="no-ch">6.2.5. Ficheros authorized-keys y known_host</a></li>
+   <li><a href="626_transferencia_de_ficheros_en_modo_seguro.html" class="no-ch">6.2.6. Transferencia de ficheros en modo seguro</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="622_autenticacin_del_servidor_ssh.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.3. Ejecución remota de comandos en modo desatendido</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id393">
+<div class="iDevice emphasis0">
+<div id="ta393_154" class="block iDevice_content">
+<p>El modo desatendido es una de las opciones que ofrece el servicio <span lang="en"><abbr title="Secure SHell">SSH</abbr></span> mediante la cual es posible configurar una conexión procedente de un equipo retomo siempre como confiable. Se basa en el uso de claves asimétricas y de firma digital, tal como se describe a continuación.</p>
+<p>En primer lugar, el usuario que quiere establecer una conexión confiable con el servidor remoto generará un par de claves asimétricas usando la herramienta <code><strong>ssh-keygen</strong></code> cuya sintaxis es: </p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>ssh-keygen -t dsa | ecdsa | ed25519 | rsa | rsa1</code></pre>
+</div>
+</div>
+<p>usando la opción <strong>-t</strong> para establecer el algoritmo que se desea emplear en el proceso de generación de la clave asimétrica.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id394">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.gif)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta394_128" class="block iDevice_content">
+<p>En los siguientes enlaces podrás aprender más cosas sobre los algoritmos de generación de claves de SSH:</p>
+<div style="width: 33%; float: left;">
+<p style="text-align: center;"><a href="https://es.wikipedia.org/wiki/DSA" target="_blank" title="Acceder a la wikipedia con información sobre el algoritmo de generación de claves dsa (Se abre en una nueva ventana)." rel="noopener">DSA</a> </p>
+</div>
+<div style="width: 33%; float: left;">
+<p style="text-align: center;"><a href="https://es.wikipedia.org/wiki/ECDSA" target="_blank" title="Acceder a la wikipedia con información sobre el algoritmo de generación de claves ecdsa (Se abre en una nueva ventana)." rel="noopener">ECDSA</a></p>
+</div>
+<div style="width: 33%; float: left;">
+<p style="text-align: center;"><a href="https://es.wikipedia.org/wiki/RSA" target="_blank" title="Acceder a la wikipedia con información sobre el algoritmo de generación de claves rsa (Se abre en una nueva ventana)." rel="noopener">RSA</a> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id395">
+<div class="iDevice emphasis0">
+<div id="ta395_154" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-CC-BY-NC-SA" style="width: 300px;"><a href="SAD03_CONT_R24_SSH-CLAVES.png" rel="lightbox" title="Imagen ampliada que muestra un esquema de la identificación mediante clave en SSH"><img src="SAD03_CONT_R24_SSH-CLAVES.png" alt="Ilustración que muestra un esquema de la identificación mediante clave en SSH" title="Identificación por clave en SSH" width="300" height="140" /></a>
+<figcaption class="figcaption"><a href="http://www.ehu.eus/ehusfera/ghym/2010/10/15/identificacion-automatica-en-ssh-usando-claves-rsa/" target="_blank" class="author" title="Acceder a la web www.ehu.eus para la descarga de la imagen con el esquema de conexión ssh mediante clave (Se abre en una nueva ventana)." rel="noopener">ehusfera</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de licencia CC BY-NC-SA de la imagen con el esquema de conexión ssh mediante clave (Se abre en una nueva ventana)." rel="noopener">CC BY-NC-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p>En segundo lugar, hay que hacer llegar la parte pública de la clave asimétrica creada en el paso anterior, a la cuenta de usuario del equipo servidor SSH en nombre de la cual se ejecutarán los comandos remotamente. Dicha clave pública será utilizada por el servidor SSH para comprobar la firma digital del usuario que lanza el comando remoto, es decir, para comprobar la autenticación del usuario emisor.</p>
+<p>Para esto último, el cliente SSH ya dispone de una aplicación que se encarga de ello: <strong><span class=" resaltado_inline" lang="en">ssh-copy-id -i</span></strong>. Al ejecutar dicho comando se solicitará la contraseña del usuario remoto, y se modificará en el servidor SSH el contenido de su archivo <strong><span lang="en" class=" resaltado_inline">authorized_keys</span></strong>. Este archivo es donde se almacenarán las claves públicas de los usuarios de confianza.</p>
+<p>Por ejemplo, si el usuario <strong>arubio</strong> ha generado un par de claves asimétricas usando <strong>rsa</strong>, y el contenido de la clave pública está almacenado en el fichero <code><strong>~/.ssh/id_rsa.pub</strong></code>, se puede hacer llegar dicha clave al servidor SSH usando el siguiente comando:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>ssh-copy-id -i ~/.ssh/id_rsa.pub arubio@192.168.1.90</code></pre>
+</div>
+</div>
+<p>En el caso de que no exista el subdirectorio <code><strong>.ssh</strong></code> dentro del <strong><span lang="en">home</span></strong> del usuario <strong>arubio</strong> en la máquina remota, ni el archivo <strong><span lang="en">authorized_keys</span></strong>, el comando <code><strong>ssh-copy-id -i</strong></code> los creará automáticamente.</p>
+<p>De esta manera se garantiza que el usuario que ha exportado su clave pública pase a ser un usuario de confianza por el usuario del equipo servidor SSH que la ha importado. Es decir, a partir de ese momento, cuando el usuario remoto trate de conectarse vía SSH, en la solicitud de conexión adjunto viajará un extracto firmado por él. Por tanto, el servidor SSH comprobará a través de la clave pública que quien trata de acceder es quien dice ser, y le dejará entrar sin necesidad de introducir <span lang="en">login</span> y <span lang="en">password</span>.</p>
+<p>En el caso de ser propietarios de varias claves públicas en el servidor y se quiere indicar cual de ellas usar, hay que hacer uso de la opción <strong>-i</strong> del comando SSH del siguiente modo:</p>
+<div class="highlighted-code code-style-2 language-processing">
+<div>
+<pre><code>ssh -i rutaClave usuarioRemoto@IPServidorSSH</code></pre>
+</div>
+</div>
+<p style="margin-left: 30px;"></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice" id="id396">
+<div class="iDevice emphasis_recomendacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_recomendacionfpd.gif)"><h1 class="iDeviceTitle">Recomendación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta396_131" class="block iDevice_content">
+<p>Como has podido ver en este apartado, SSH permite generar claves asimétricas empleando diferentes algoritmos (<acronym title="Digital Signature Algorithm" lang="en">dsa</acronym>, <acronym title="Elliptic Curve Digital Signature Algorithm" lang="en">ecdsa</acronym>, ...). Te animo a que practiques el comando de generación de claves empleando diferentes algoritmos.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="622_autenticacin_del_servidor_ssh.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

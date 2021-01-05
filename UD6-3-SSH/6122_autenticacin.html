@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.1.2.2. Autenticación | 6.1.- Protocolo SSH </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-77"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.1.- Protocolo SSH</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.1. Protocolo SSH</a></li>
+   <li><a href="611_caractersticas.html" class="no-ch">6.1.1. Características</a></li>
+   <li class="current-page-parent"><a href="612_fases.html" class="current-page-parent daddy">6.1.2. Fases</a>
+   <ul>
+      <li><a href="6121_negociacin.html" class="no-ch">6.1.2.1. Negociación</a></li>
+      <li id="active"><a href="6122_autenticacin.html" class="active no-ch">6.1.2.2. Autenticación</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="6121_negociacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.1.2.2. Autenticación</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id374">
+<div class="iDevice emphasis0">
+<div id="ta374_154" class="block iDevice_content">
+<p></p>
+<p><br />Una vez establecida la clave de sesión en la fase de negociación, comienza la segunda fase en la que tiene lugar la autenticación del cliente.</p>
+<p>En SSH se contemplan diversos métodos de autenticación entre los que se pueden destacar tres:</p>
+<div class="exe-fx exe-accordion">
+<h2>Autenticación nula</h2>
+<p>El servidor permite que el usuario acceda directamente, sin ninguna comprobación, al servicio solicitado.</p>
+<p>Lógicamente, este tipo de autenticación <strong>nunca</strong> debe ser establecido.</p>
+<h2>Autenticación basada en contraseña</h2>
+<p>El servidor permite el acceso si el usuario introduce un <strong>nombre de usuario</strong> y una <strong>contraseña</strong> correcta.</p>
+<p>Para ello, el cliente envía la contraseña de un usuario del servidor, cifrada con la clave de sesión generada en el establecimiento de la conexión.</p>
+<p>El servidor, si es un equipo <strong><span lang="en">Windows</span></strong>, verificará la contraseña usando el fichero <span lang="en"><abbr title="Security Account Manager">SAM</abbr></span>, mientras que si es un equipo <strong>Linux</strong>, la verificará usando el fichero <code>/etc/shadow</code>.</p>
+<h2>Autenticación basada en clave pública con o sin frase de paso</h2>
+<p>En lugar de dar una contraseña, el usuario se autentica demostrando que posee la <strong>clave privada</strong> correspondiente a una clave pública reconocida por el servidor.</p>
+<p>Por tanto, la clave pública del usuario debe estar en el <strong>anillo de confianza</strong> del servidor. En este caso se utiliza un mecanismo conocido como autenticación por desafío.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id376">
+<div class="iDevice emphasis0">
+<div id="ta376_154" class="block iDevice_content">
+<p>Para determinar el método de autenticación a emplear, el servidor envía al cliente los métodos disponibles ordenados. El cliente los va rechazando hasta encontrar uno a utilizar. Una vez encontrado, el usuario se autentica, y si la autenticación es correcta, se crea la sesión en el equipo remoto.</p>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="6121_negociacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>

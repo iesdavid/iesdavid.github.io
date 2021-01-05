@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2. Control remoto en modo seguro con SSH | 6.2. Protocolo SSH </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-50"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.2. Protocolo SSH</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">6.2. Control remoto en modo seguro con SSH</a></li>
+   <li><a href="621_configuracin_bsica_de_ssh.html" class="no-ch">6.2.1. Configuración básica de SSH</a></li>
+   <li><a href="622_autenticacin_del_servidor_ssh.html" class="no-ch">6.2.2. Autenticación del servidor SSH</a></li>
+   <li><a href="623_ejecucin_remota_de_comandos_en_modo_desatendido.html" class="no-ch">6.2.3. Ejecución remota de comandos en modo desatendido</a></li>
+   <li><a href="624_ejecucin_remota_de_comandos_en_modo_desatendido_con_frase_de_paso.html" class="no-ch">6.2.4. Ejecución remota de comandos en modo desatendido con frase de paso</a></li>
+   <li><a href="625_ficheros_authorizedkeys_y_known_host.html" class="no-ch">6.2.5. Ficheros authorized-keys y known_host</a></li>
+   <li><a href="626_transferencia_de_ficheros_en_modo_seguro.html" class="no-ch">6.2.6. Transferencia de ficheros en modo seguro</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="621_configuracin_bsica_de_ssh.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2. Control remoto en modo seguro con SSH</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id407">
+<div class="iDevice emphasis0">
+<div id="ta407_154" class="block iDevice_content">
+<p><br />El único requisito para poder llevar a cabo el control remoto de un sistema en modo seguro con <span lang="en"><abbr title="Secure SHell">SSH</abbr></span>, es que el equipo emisor (cliente) disponga de una aplicación SSH cliente (en GNU/Linux está preinstalado, y en <span lang="en">Windows</span> es aconsejable usar el <span class=" resaltado_inline" lang="en"><strong>software putty</strong></span>), y que el equipo servidor remoto a controlar tenga instalada la aplicación servidora SSH (por ejemplo, <strong><span class=" resaltado_inline" lang="en">openssh-server</span></strong>).</p>
+<p></p>
+<table class="auto" style="height: 294px; width: 788px; margin-left: auto; margin-right: auto;" width="788" height="294">
+<tbody>
+<tr>
+<td style="background-color: #ffffff; width: 436.433px;">
+<figure class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 320px;"><a href="800px-OpenSSH_CLI.png" rel="lightbox"><img src="800px-OpenSSH_CLI.png" alt="Openssh CLI" title="Openssh CLI" style="vertical-align: middle; margin: 15px;" width="320" vspace="15" hspace="15" height="222" /></a>
+<figcaption class="figcaption"><span class="author">Anthony5429</span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+</td>
+<td style="background-color: #ffffff; width: 3.53333px;"></td>
+<td style="background-color: #ffffff; width: 316.033px;">
+<figure class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 231px;"><a href="Putty_appworkDEV.png" rel="lightbox"><img src="Putty_appworkDEV.png" alt="Software Putty" title="Putty Appwork" style="vertical-align: middle; margin: 15px;" width="231" vspace="15" hspace="15" height="222" /></a>
+<figcaption class="figcaption"><span class="author">Davidshonjr</span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id408">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(icon_debesconocerfpd.gif)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta408_129" class="block iDevice_content">
+<p>Como se acaba de indicar, para llevar a cabo una conexión remota con SSH es necesario disponer de una aplicación SSH cliente y otra servidor. Dado que en los siguientes apartados vamos a ver en profundidad la instalación y configuración de SSH en entornos Linux, debes aprender este mismo proceso pero en entornos <span lang="en">Windows</span>. Para tal fin, se proporcionan sendos enlaces donde se explica dicho proceso.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;"><a href="https://docs.microsoft.com/es-es/windows-server/administration/openssh/openssh_overview" target="_blank" style="font-size: 1em;" title="Acceder a la página web de Microsoft en la que se explica el uso de OpenSSH en Windows (Se abre en una nueva ventana)." rel="noopener">Openssh en entornos Windows</a></p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><a href="https://geekland.eu/instalar-cliente-servidor-ssh-en-windows/" target="_blank" title="Acceder a la página web geekland en la que se explica el proceso de instalación y configuración de un cliente y un servidor ssh en Windows (Se abre en una nueva ventana)." rel="noopener">Cómo instalar y configurar un cliente y un servidor en entornos Windows</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="621_configuracin_bsica_de_ssh.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="pdv_js.js"></script></body></html>
