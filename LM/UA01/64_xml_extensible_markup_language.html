@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.4. XML (eXtensible Markup Language) | UA1. Los lenguajes de marcas </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA1. Los lenguajes de marcas</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA1. Los lenguajes de marcas</a></li>
+   <li><a href="1_qu_son.html" class="no-ch">1. ¿Qué son?</a></li>
+   <li><a href="2_el_lenguaje_de_marcas.html" class="no-ch">2. El lenguaje de marcas</a></li>
+   <li><a href="3_etiquetas_o_marcas.html" class="no-ch">3. Etiquetas o marcas</a></li>
+   <li><a href="4_caractersticas.html" class="no-ch">4. Características</a></li>
+   <li><a href="5_herramientas_bsicas.html" class="no-ch">5. Herramientas básicas</a></li>
+   <li class="current-page-parent"><a href="6_evolucin.html" class="current-page-parent daddy">6. Evolución</a>
+   <ul>
+      <li><a href="61_gml_generalized_markup_language.html" class="no-ch">6.1. GML (Generalized Markup Language)</a></li>
+      <li><a href="62_sgml_standard_generalized_markup_language.html" class="no-ch">6.2. SGML (Standard Generalized Markup Language)</a></li>
+      <li><a href="63_html_hypertext_markup_language.html" class="no-ch">6.3. HTML (HyperText Markup Language)</a></li>
+      <li id="active"><a href="64_xml_extensible_markup_language.html" class="active no-ch">6.4. XML (eXtensible Markup Language)</a></li>
+      <li><a href="65_comparacin_de_xml_con_html.html" class="no-ch">6.5. Comparación de XML con HTML</a></li>
+   </ul>
+   </li>
+   <li><a href="7_actividades.html" class="no-ch">7. Actividades</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="63_html_hypertext_markup_language.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="65_comparacin_de_xml_con_html.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.4. XML (eXtensible Markup Language)</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id22">
+<div class="iDevice emphasis0" >
+<div id="ta22_124_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>XML</strong> es un metalenguaje de etiquetas desarrollado por el World Wide Web Consortium. El World Wide Web Consortium, el <strong>W3C</strong> es un consorcio internacional que crea recomendaciones para la World Wide Web.</p>
+<p>XML no es un lenguaje en el sentido de que no define un conjunto de etiquetas. <strong>XML es un metalenguaje</strong> porque permite crear lenguajes.</p>
+<p><img src="sgml_derivados.jpg" alt="Lenguajes derivados del SGML" style="float: right; margin-right: 10px; margin-left: 10px;" width="228" height="221">Así, XML proporciona una serie de <strong>reglas</strong> para que cualquiera pueda definir su propio conjunto de <strong>etiquetas</strong> y <strong>atributos</strong> y pueda definir las relaciones que existen entre esas etiquetas. Al conjunto de reglas de un lenguaje se llama <strong>gramática del lenguaje</strong>.</p>
+<p>Por lo tanto,&nbsp; tanto GML como SGML y XML, son metalenguajes. Los tres permiten crear lenguajes. Como hemos visto, SGML está inspirado por GML y a su vez, XML está inspirado por SGML.</p>
+<p>Por otro lado, HTML, XHTML, MathML, RSS, SVG y otros más, sí que son lenguajes. HTML está basado en las reglas de SGML, mientras que los otros lenguajes que he nombrado están basados en XML.&nbsp;<br>Así, XML es un lenguaje de marcas puramente <strong>estructural</strong> que no incluye ninguna información relativa al diseño. A diferencia de HTML, las etiquetas indican el significado de los datos en lugar del formato con el que se van a visualizar los datos. <strong>XML es un lenguaje simple de descripción de información</strong>.</p>
+<p>XML es un metalenguaje caracterizado por:</p>
+<ul>
+<li>Permitir definir etiquetas propias.</li>
+<li>Permitir asignar atributos a las etiquetas.</li>
+<li>Utilizar un esquema para definir de forma exacta las etiquetas y los atributos.</li>
+<li>La estructura y el diseño son independientes.</li>
+</ul>
+<p>Un documento XML puede ser correcto a dos niveles:</p>
+<ul>
+<li><strong>Bien formado.</strong> las características que debe cumplir un documento XML para que se considere bien formado son:
+<ul>
+<li>Aunque no es obligatorio, debe comenzar con la declaración XML que indica la versión utiliza y el conjunto de caracteres utilizado.</li>
+<li>A continuación viene el cuerpo del documento que se compone de elementos donde un elemento se compone de una etiqueta inicial y otra final que tienen el mismo nombre. La etiqueta inicial puede llevar atributos, cosa que no puede suceder con la etiqueta final. Los atributos pueden tener un valor. Por último, las etiquetas pueden llevar contenido que pueden ser otras etiquetas o texto.</li>
+<li>elemento raíz único</li>
+<li>estructura jerárquica</li>
+<li>no se admite solapamiento</li>
+<li>se distinguen las mayúsculas y las minúsculas</li>
+<li>se permiten elementos vacíos</li>
+<li>los valores de los <strong>atributos</strong> se deben escribir entre comillas dobles o simples. Existen atributos reservados que se emplean en la especificación de XML, que comienzan con xml:.</li>
+<li>los comentarios se deben escribir entre <!-- y -->.</li>
+<li>espacios en blanco: tabulador, avance de línea, retorno de carro y espacio en blanco son equivalentes.</li>
+<li>caracteres especiales: si se quieren escribir los caracteres&nbsp; &lt;,&gt;,&amp;,",' hay que hacerlo por medio de &lt;, &gt;,&amp;, ", '.</li>
+<li>secciones CDATA. Permiten que el analizador ignore ciertas secciones del documento. Sintaxis: <!--[CDATA[ ......]]--></li>
+</ul>
+</li>
+<li><strong>Válido.</strong> En primer lugar debe estar bien formado y, después, cumplir la definición del lenguaje que se está empleando por medio de DTD, XML Schema,...</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_info" id="id23">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">XML bien formado</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta23_125_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para saber si un documento XML está bien formado, se utiliza un <strong>analizador&nbsp;</strong>(que puede ser un navegador). El analizador es un módulo de software que lee un documento XML y proporciona acceso a su contenido y estructura. Como resultado de su funcionamiento, a su salida genera un <strong>árbol de análisis</strong> en el que muestra los objetos que forman el documento y las relaciones entre ellos. Donde:</p>
+<ul>
+<li>A los componentes de un documento se les llama <strong>objetos</strong> (elementos, comentarios y cadenas de texto). El propio documento es un objeto.</li>
+<li>A cada objeto del árbol se le denomina <strong>nodo</strong>.</li>
+<li>Al nodo principal que contiene a los demás se le llama<strong> nodo raíz</strong>.</li>
+<li>Cuando un nodo contiene a otro, se le denomina <strong>rama</strong>.</li>
+<li>Los nodos finales, que no contienen otros nodos, se llaman <strong>hojas</strong>.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_think" id="id24">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_think.png)"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta24_126_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Documento XML:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>
+&lt;div class="highlighted-code language-markup"&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&lt;!--?xml version="1.0" encoding="iso-8859-1"?--&gt;
+
+&lt;biblioteca&gt;
+
+    &lt;ejemplar tipo_ejem="libro" titulo="XML practico" editorial="Ediciones Eni"&gt;
+
+        &lt;tipo&gt; &lt;libro isbn="978-2-7460-4958-1" edicion="1" paginas="347"&gt;&lt;/libro&gt; &lt;/tipo&gt;
+
+        &lt;autor nombre="Sebastien Lecomte"&gt;&lt;/autor&gt;
+
+        &lt;autor nombre="Thierry Boulanger"&gt;&lt;/autor&gt;
+
+        &lt;autor nombre="Ángel Belinchon Calleja" funcion="traductor"&gt;&lt;/autor&gt;
+
+        &lt;prestado lector="Pepito Grillo"&gt;
+
+            &lt;fecha_pres dia="13" mes="mar" a="" o="2009"&gt;&lt;/fecha_pres&gt;
+
+            &lt;fecha_devol dia="21" mes="jun" a="" o="2009"&gt;&lt;/fecha_devol&gt;
+
+        &lt;/prestado&gt;
+
+    &lt;/ejemplar&gt;
+
+    &lt;ejemplar tipo_ejem="revista" titulo="Todo Linux 101. Virtualización en GNU/Linux" editorial="Studio Press"&gt;
+
+        &lt;tipo&gt;
+
+            &lt;revista&gt;
+
+                &lt;fecha_publicacion mes="abr" a="" o="2009"&gt;&lt;/fecha_publicacion&gt;
+
+            &lt;/revista&gt;
+
+        &lt;/tipo&gt;
+
+        &lt;autor nombre="Varios"&gt;&lt;/autor&gt;
+
+        &lt;prestado lector="Pedro Picapiedra"&gt;
+
+            &lt;fecha_pres dia="12" mes="ene" a="" o="2010"&gt;&lt;/fecha_pres&gt;
+
+        &lt;/prestado&gt; 
+
+    &lt;/ejemplar&gt;
+
+&lt;/biblioteca&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+</div>
+<p>Para ver el resultado de este ejemplo en un navegador web, seguir los siguientes pasos:</p>
+<ul>
+<li>Copiar el código xml en un editor de texto (por ejemplo el bloc de notas de Windows)</li>
+<li>Guardar y nombrar el fichero con extensión .xml. Por ejemplo: LMSGI01_Ejemplo02.xml</li>
+<li>Abrir el fichero xml creado desde un navegador web.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id25">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Espacio de nombres XML</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta25_127_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Un espacio de nombres XML es una <a href="https://www.w3.org/Press/1999/XML-Namespaces-REC" target="_blank" rel="noopener">recomendación del W3C</a> para proporcionar elementos y atributos con <strong>nombre único</strong> en un archivo XML.</p>
+<p>Un archivo XML puede contener nombres de elementos o atributos procedentes de más de un vocabulario XML. Si a cada uno de estos vocabularios se le da un espacio de nombres, un ámbito semántico propio, referenciado a una URI donde se listen los términos que incluye, se <strong>resuelve la ambigüedad</strong> existente entre elementos o atributos que se llamen igual. Los nombres de elementos dentro de cada espacio de nombres deben ser únicos.</p>
+<p>Un ejemplo sería una instancia XML que contuviera referencias a un cliente y a un producto solicitado por éste. Tanto el elemento que representa el cliente como el que representa el producto pueden tener un elemento hijo llamado <strong>"codigo"</strong>. Las referencias al elemento "codigo" podrían ser ambiguas, salvo que los elementos, con igual nombre pero significado distinto, se llevaran a espacios de nombres distintos que los diferenciaran.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Cuando dos documentos diferentes utilizan el mismo nombre del elemento, se producirá un <strong>conflicto de nombres</strong>.</p>
+<p>Este XML lleva la información de tabla HTML:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Apples&lt;/td&gt;
+&lt;td&gt;Bananas&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+</div>
+</div>
+<p>Este otro XML lleva información sobre una mesa en inglés <em>(table):</em></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;table&gt;
+&lt;name&gt;African Coffee Table&lt;/name&gt;
+&lt;width&gt;80&lt;/width&gt;
+&lt;length&gt;120&lt;/length&gt;
+&lt;/table&gt;
+</code></pre>
+</div>
+</div>
+<p>Si estos dos documentos XML se utilizan juntos, ya que los dos documentos se incluyen con diferentes contenidos y definición del elemento <strong>&lt;table&gt;</strong>, se producen conflictos de nombres.</p>
+<p>El analizador XML no puede determinar cómo hacer frente a este tipo de conflictos.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Los conflictos de nombres en XML se pueden evitar fácilmente mediante el uso de prefijos en el nombre.</p>
+<p>El siguiente XML lleva ambos <strong>&lt;<em>table&gt;</em></strong> en el mismo documento pero con distinto nombre:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;h:table&gt;
+&lt;h:tr&gt;
+&lt;h:td&gt;Apples&lt;/h:td&gt;
+&lt;h:td&gt;Bananas&lt;/h:td&gt;
+&lt;/h:tr&gt;
+&lt;/h:table&gt;
+
+&lt;f:table&gt;
+&lt;f:name&gt;African Coffee Table&lt;/f:name&gt;
+&lt;f:width&gt;80&lt;/f:width&gt;
+&lt;f:length&gt;120&lt;/f:length&gt;
+&lt;/f:table&gt; </code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Un espacio de nombres se declara usando el atributo XML reservado xmlns, cuyo valor debe ser un identificador uniforme de recurso. Por ejemplo: xmlns="http://www.w3.org/1999/xhtml" Sin embargo, hay que destacar que el URI no se lee realmente como una dirección; se trata como una cadena de texto por el Parser XML. Por ejemplo, el propio http://www.w3.org/1999/xhtml no contiene código alguno, simplemente describe el espacio de nombres XHTML a lectores humanos. El hecho de usar una URL (tal como "http://www.w3.org/1999/xhtml") para identificar un espacio de nombres, en lugar de una simple cadena (como "xhtml"), reduce la posibilidad de que diferentes espacios de nombres usen identificadores iguales.</p>
+<p>Es decir, los URI especificados en un documento XML no tienen porqué contener nada, su función es ser únicos. No obstante, en un URI se puede mostrar información si se considera oportuno. Por ejemplo:</p>
+<p>http://www.w3.org/1999/xhtml/<br>http://www.w3.org/1999/XSL/Transform<br>http://www.w3.org/2000/svg<br>Los identificadores de los espacios de nombres no necesitan seguir las convenciones de las direcciones de internet, aunque a menudo lo hagan. La declaración puede incluir también un prefijo corto con el que los elementos y atributos pueden identificarse, por ejemplo:</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_info" id="id26">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Espacio de nombre por defecto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_128_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Cuando se define en la etiqueta de inicio de un elemento XML, <strong>se aplica a todos elementos</strong> sin prefijo del ámbito del elemento, pero no a los atributos.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="63_html_hypertext_markup_language.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="65_comparacin_de_xml_con_html.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
