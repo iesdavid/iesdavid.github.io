@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<meta name="description" content="UA01-Acceso a datos" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li><a href="3_clases_asociadas.html" class="daddy">3. Clases asociadas</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
+   <ul class="other-section">
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_mtodos_de_acceso_a_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">UA01. Iniciación al acceso de datos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id2">
+<div class="iDevice emphasis0" >
+<div id="ta2_117_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><figure class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 320px;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Postgres_Query.jpg" alt="An example of data being returned after a successful query in Postgres SQL." width="320" height="935">
+<figcaption class="figcaption"><a href="Wikimedia Commons" target="_blank" class="author" rel="noopener">Chiffre01</a>. <a href="https://commons.wikimedia.org/wiki/File:Postgres_Query.jpg" target="_blank" class="title" rel="noopener"><em>Retorno de datos de PostgreSQL</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Iniciamos esta primera unidad del módulo <strong>Acceso a datos</strong>, en el que veremos la gran variedad de métodos de acceso a datos que tenemos en el panorama actual.</p>
+<p>Comprobarás que los contenidos del módulo son muy prácticos, y los ejemplos estarán basados, principalmente, en <strong>Java</strong>.</p>
+<p>Pero, ¿a qué nos referimos cuando hablamos de acceso a datos en una aplicación informática?</p>
+<p>Podemos afirmar que en la inmensa mayoría de aplicaciones informáticas se pueden diferenciar, a grandes rasgos, en dos partes:</p>
+<ul>
+<li>Por un lado, <strong>el programa</strong> propiamente dicho, que realiza las operaciones deseadas con los datos necesarios.</li>
+<li>Por otro lado, <strong>los datos</strong> con los que opera le programa. Esos datos pueden ser obtenidos por el programa mediante diversos métodos: leídos mediante teclado, escaneados, leídos de algún soporte de almacenamiento secundario, generados en el programa, etc.</li>
+</ul>
+<p>En la mayoría de los casos, cuando programamos, nos interesa que el programa guarde los datos que le hemos introducido, o los resultados que dicho programa haya obtenido, de manera que si el programa termina su ejecución, los datos no se pierdan y puedan ser recuperados posteriormente, es decir, <strong>persistan</strong>. Una forma tradicional de hacer esto es mediante la utilización de ficheros o de bases de datos que se guardarán en un dispositivo de memoria no volátil (normalmente un disco).</p>
+<p>Te habrás dado cuenta de que el almacenamiento en memoria RAM, mediante variables o vectores, es <strong>temporal</strong> o <strong>transitorio</strong>, los datos se pierden cuando el programa termina. Quizás te habrá pasado alguna vez que, debido a un apagón eléctrico, has perdido el trabajo que estabas haciendo, que todavía no habías grabado. Los datos que se guardan en almacenamiento secundario, como ficheros o bases de datos, se denominan datos <strong>persistentes</strong>, porque existen, o persisten más allá de la ejecución de la aplicación.</p>
+<p>Ese almacenamiento secundario de datos que acabamos de mencionar, habitualmente suele consistir en <strong>una base de datos relacional</strong>, si bien, a veces, hay otros métodos de almacenamiento, y por tanto, <strong>métodos de acceso a esos datos</strong>. De conocer esos tipos de almacenamiento y cómo acceder a ellos es de lo que trata este módulo.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_mtodos_de_acceso_a_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

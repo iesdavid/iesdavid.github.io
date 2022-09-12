@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Clases asociadas | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="3_clases_asociadas.html" class="active daddy">3. Clases asociadas</a>
+   <ul>
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
+   <ul class="other-section">
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="24_encoding.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="31_ejemplos_con_file.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3. Clases asociadas</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id15">
+<div class="iDevice emphasis0" >
+<div id="ta15_121_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En este apartado, nos centraremos en la gestión de ficheros y directorios. Cuando se programa con <strong>Java</strong>, podemos realizar tareas básicas de gestión de ficheros que nos serán útiles para realizar todo tipo de acciones con ese fichero, desde <strong>crear</strong> hasta <strong>leer</strong>, <strong>borrar</strong>, <strong>copiar</strong> o <strong>mover</strong> de sitio carpetas o archivos.</p>
+<p>Para tratar los diferentes archivos, Java tiene diferentes paquetes que nos pueden ayudar a realizar las operaciones básicas con cualquier tipo de fichero. Algunos de estos paquetes son propios de Java, pero también hay otros que son necesaria una <strong>importación</strong>. Pero antes de complicarnos, mostraremos los más básicos e importantes.</p>
+<p>El paquete más utilizado en el lenguaje Java es el paquete <strong><a href="https://misapuntesdeprogramacion.wordpress.com/2013/02/14/paquete-java-io/" target="_blank" rel="noopener">java.io</a></strong>. Dentro, podremos encontrar diferentes opciones que nos permitirán diferentes acciones con ficheros: creación, borrado, lectura, escritura, movimiento y copia, entre otras. Este paquete nos permitirá tanto la creación de ficheros como de carpetas.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Vamos a ver la clase <strong>File</strong> que nos permite hacer unas cuantas operaciones con ficheros, también veremos cómo filtrar ficheros, o sea, obtener aquellos con una característica determinada, como puede ser que tengan la extensión <strong>.odt</strong>, o la que nos interese, y por último, en este apartado también veremos como crear y eliminar ficheros y directorios.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_interactive" id="id18">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_interactive.png)"><h1 class="iDeviceTitle">La clase File</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_839_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>¿Para qué sirve esta clase y qué nos permite?</strong></p>
+<p>La clase <strong>File</strong> proporciona una representación abstracta de ficheros y directorios.</p>
+<p>Esta clase, permite examinar y manipular archivos y directorios, independientemente de la plataforma en la que se esté trabajando: Linux, Windows, etc.</p>
+<p>Las instancias de la clase <strong>File</strong> representan nombres de archivo, no los archivos en sí mismos.</p>
+<p>El archivo correspondiente a un nombre puede ser que no exista, por esta razón habrá que controlar las posibles <strong>excepciones</strong>.</p>
+<p>Un objeto de clase <strong>File</strong> permite examinar el nombre del archivo, descomponerlo en su rama de directorios o crear el archivo si no existe mediante el método <strong>createNewFile()</strong>;</p>
+<p>Para archivos que existen, a través del objeto <strong>File</strong>, un programa puede examinar los atributos del archivo, cambiar su nombre, borrarlo o cambiar sus permisos. Dado un objeto <strong>File</strong>, podemos hacer las siguientes operaciones con él:</p>
+<ul>
+<li><strong>Renombrar</strong> el archivo, con el método <strong>renameTo()</strong>. El objeto File dejará de referirse al archivo renombrado, ya que el String con el nombre del archivo en el objeto File no cambia.</li>
+<li><strong>Borrar</strong> el archivo, con el método <strong>delete()</strong>. También, con <strong>deleteOnExit()</strong> se borra cuando finaliza la ejecución de la máquina virtual Java.</li>
+<li><strong>Crear</strong> un nuevo fichero con un nombre único. El método estático <strong>createTempFile()</strong> crea un fichero temporal y devuelve un objeto File que apunta a él. Es útil para crear archivos temporales, que luego se borran, asegurándonos tener un nombre de archivo no repetido.</li>
+<li><strong>Establecer</strong> la fecha y la hora de modificación del archivo con <strong>setLastModified()</strong>. Por ejemplo, se podría hacer: <code>new File("prueba.txt").setLastModified(new Date().getTime());</code> para establecerle la fecha actual al fichero que se le pasa como parámetro, en este caso <strong>prueba.txt</strong>.</li>
+<li><strong>Crear un directorio</strong>, mediante el método <strong>mkdir()</strong>. También existe <strong>mkdirs()</strong>, que crea los directorios superiores si no existen.</li>
+<li><strong>Listar</strong> el <strong>contenido</strong> de un directorio. Los métodos <strong>list()</strong> y <strong>listFiles()</strong> listan el contenido de un directorio. <strong>list()</strong> devuelve un vector de String con los nombres de los archivos, <strong>listFiles()</strong> devuelve un vector de objetos File.</li>
+<li><strong>Listar</strong> los <strong>nombres</strong> de archivo de la raíz del sistema de archivos, mediante el método estático <strong>listRoots()</strong>.</li>
+</ul></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para más información, <a href="https://www.discoduroderoer.es/clase-file-y-sus-metodos/" target="_blank" rel="noopener"><strong>consultar aquí</strong></a>.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="24_encoding.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="31_ejemplos_con_file.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

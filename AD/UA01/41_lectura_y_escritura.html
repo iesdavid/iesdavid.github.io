@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1. Lectura y escritura | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li><a href="3_clases_asociadas.html" class="daddy">3. Clases asociadas</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_flujos.html" class="current-page-parent daddy">4. Flujos</a>
+   <ul>
+      <li id="active"><a href="41_lectura_y_escritura.html" class="active no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4_flujos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_flujo_basado_en_bytes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.1. Lectura y escritura</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id29">
+<div class="iDevice emphasis0" >
+<div id="ta29_844_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>El mecanismo de acceso a un fichero está basado en un puntero y en una zona de memoria que se suele llamar <strong>buffer</strong>. El puntero siempre apunta a un lugar del fichero, o bien a una posición especial de fin de fichero que, a veces, se denomina <strong>EOF</strong> (del inglés <em>End Of File</em>). Esta se puede entender que está situada inmediatamente a continuación del último byte del fichero.</p>
+<p>Todas las clases para operar con ficheros disponen de las siguientes operaciones básicas:</p>
+<ol>
+<li><strong>Apertura</strong>. Antes de hacer nada con un fichero, hay que abrirlo. Esto se hace al crear una instancia de una clase que se utilizará para operar en él.</li>
+<li><strong>Lectura.</strong> Mediante el método <strong>read()</strong>. Consiste en leer contenidos del fichero para volcarlos a memoria y poder trabajar con ellos. El puntero se sitúa justo después del último carácter leído.</li>
+<li><strong>Salto</strong>. Mediante el método <strong>skip()</strong>. Consiste en hacer avanzar el puntero un número determinado de bytes o caracteres hacia adelante.</li>
+<li><strong>Escritura</strong>. Mediante el método <strong>write()</strong>. Consiste en escribir contenidos de memoria en un lugar determinado del fichero. El puntero se sitúa justo después del último carácter escrito.</li>
+<li><strong>Cierre</strong>. Mediante el método <strong>close()</strong>. Para terminar, hay que cerrar el fichero.</li>
+</ol>
+<p>Si el acceso es secuencial, el puntero se puede situar en cualquier lugar del fichero. Si el acceso es secuencial, sólo se mueve el cursor tras realizar operaciones de lectura, escritura o salto. Lo veremos en el punto <a href="5_formas_de_acceso_a_un_fichero.html">5. Formas de acceso a un fichero</a>.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="JavaNIOBuffer.png" alt="Flujo write y read" style="display: block; margin-left: auto; margin-right: auto;" width="500" height="310"></p>
+<div class="exe-fx exe-accordion">
+<h2>Operaciones de lectura</h2>
+<p>Cuando se lee desde el fichero, hay que indicar el buffer que recibirá los datos que se lean. Si no se indica el número de bytes o de caracteres, se leeará hasta llenar el buffer (peligro de <a href="https://es.wikipedia.org/wiki/Desbordamiento_de_b%C3%BAfer" target="_blank" rel="noopener">desbordamiento de búffer</a>).</p>
+<p>Si el puntero apunta a la posición EOF, no se leerá nada.</p>
+<h2>Operaciones de escritura</h2>
+<p>Cuando se escribe en el fichero, hay que indicar el buffer y el número de bytes para leer. Desde el buffer se transfieren los datos a la posición a la que apunta el puntero.</p>
+<p>Si el puntero apunta al final del fichero, se añaden los datos al final de este.</p>
+<p>No hay ningún método directo para insertar datos en medio de un fichero.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4_flujos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_flujo_basado_en_bytes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

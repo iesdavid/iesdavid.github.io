@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.1. XML con DOM | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-18"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li><a href="3_clases_asociadas.html" class="daddy">3. Clases asociadas</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
+   <ul class="other-section">
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li class="current-page-parent"><a href="6_ficheros_xml.html" class="current-page-parent daddy">6. Ficheros XML</a>
+   <ul>
+      <li id="active"><a href="61_xml_con_dom.html" class="active no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="6_ficheros_xml.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.1. XML con DOM</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id34">
+<div class="iDevice emphasis0" >
+<div id="ta34_849_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para poder trabajar con DOM en Java necesitamos las clases e interfaces que componen el paquete <em>org.w3c.dom</em> (contenido en el JSDK) y el paquete<em> javax.xml.parsers</em> del API estándar de Java que proporciona un par de clases abstractas que toda implementación DOM para Java debe extender.</p>
+<p>Los programas Java que utilicen DOM necesitan estas interfaces:</p>
+<ul>
+<li><strong>Document.</strong> Es un objeto que equivale a un ejemplar de un documento XML, Permite crear&nbsp;nuevos nodos en el documento.</li>
+<li><strong>Element.</strong> Cada elemento del documento XML tiene un equivalente en un objeto de este tipo.</li>
+<li><strong>Node.</strong> Representa a cualquier nodo del documento.</li>
+<li><strong>NodeList.</strong> Contiene una lista con los nodos hijos de un nodo.</li>
+<li><strong>Attr.</strong> Permite acceder a los atributos de un nodo.</li>
+<li><strong>Text.</strong> Son los datos carácter de un elemento.</li>
+<li><strong>CharacterData.</strong> Representa a los datos carácter presentes en el documento.</li>
+<li><strong>DocumentType.</strong> Proporciona información contenida en la etiqueta .</li>
+</ul></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Creación de un fichero XML (parte 1)</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>A continuación vamos a crear un fichero XML, a partir del fichero aleatorio de empleados creado en el epígrafe anterior. Lo primero que hemos de hacer es importar los paquetes necesarios:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import org.w3c.dom.*;
+import javax.xml.parsers.*;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.*;
+import javax.xml.transíorm.stream.*;
+import java.io.*;</code></pre>
+</div>
+</div>
+<p>A continuación creamos una instancia de DocumentBuilderFactory para construir el parser (se debe encerrar entre try-cath porque se puede producir la excepción ParserConfigurationException:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>DocumentBuilderFactory factory = DocumentBuilderFactory.newlnstance();
+Try{
+DocumentBuilder builder = factory.newDocumentBuilder();</code></pre>
+</div>
+</div>
+<p>Creamos un documento vacío de nombre document con el nodo raíz de nombre Empleados y asignamos la versión del XML:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>DOMImplementation implementation = builder.getDOMImplementation();
+Document document = implementation.createDocument(nuil, "Empleados", nuil);
+document.setXmlVersion("1.0") ; // asignamos la versión de nuestro XML</code></pre>
+</div>
+</div>
+<p>El siguiente paso sería recorrer el fichero con los datos de los empleados y por cada registro crear un nodo empleado con 4 hijos (id, apellido, dep y salario). Cada nodo hijo tendrá su valor (por ejemplo: 1, FERNANDEZ, 10, 1000.45). Para crear un elemento usamos el método createElement(String) llevando como parámetro el nombre que se pone entre las etiquetas menor que y mayor que. El siguiente código crea y añade el nodo <empleado> al documento:</empleado></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Element raiz = document.createElement("empleado"); // creamos el nodo empleado
+document.getDocumentElement().appendChild(raiz); //lo pegamos a la raiz del doc</code></pre>
+</div>
+</div>
+<p>A continuación se añaden los hijos de ese nodo (raiz), estos se añaden en la función CrearElemento():</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>CrearElemento("id",Integer.toStríng(id), raiz, document); //añadir ID
+CrearElemento("apellido",apellidos,trím(), raíz, document); //añadir APELLIDO
+CrearEIemento("dep",Integer.toStríng(dep), raíz, document); //añadir DEP
+CrearElemento("salario",Double.toString(salario), raiz, document); //Añadir SALARIO</code></pre>
+</div>
+</div>
+<p>Como se puede ver la función recibe el nombre del nodo hijo (id, apellido, dep o salario) y sus textos o valores que tienen que estar en formato String (1, FERNANDEZ, 10,1000.45), el nodo al que se va a añadir (raiz) y el documento (document). Para crear el nodo hijo (<id> o <apellido> o <dep> o <salario>) se escribe:</salario></dep></apellido></id></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Element elem = document.createElement(datoEmple); //creamos un hijo</code></pre>
+</div>
+</div>
+<p>Para añadir su valor o su texto se usa el método createTextNode(String):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Text text = document.createTextNode(valor); //damos valor</code></pre>
+</div>
+</div>
+<p>A continuación se añade el nodo hijo a la raíz (empleado) y su texto o valor al nodo hijo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>raiz.appendChild(elem); //pegamos el elemento hijo a la raiz
+elem.appendChild(text); //pegamos el valor</code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Creación de un fichero XML (parte 2)</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La función es la siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>static void CrearElemento(String datoEmple, String valor,
+Element raiz, Document document ) {
+Element elem = document.createElement(datoEmple); //creamos hijo
+Text text = document.createTextNode(valor); //damos valor
+raiz.appendChild(elem); //pegamos el elemento hijo a la raiz
+elem.appendChild(text); //pegamos el valor
+}
+</code></pre>
+</div>
+</div>
+<p>En los últimos pasos se crea la fuente XML a partir del documento:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Source source = new DOMSource(document);</code></pre>
+</div>
+</div>
+<p>Se crea el resultado en el fichero Empleados.xml:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Result result = new StreamResult(new java.io.File("Empleados.xml")); //fíchero XML</code></pre>
+</div>
+</div>
+<p>Se obtiene un TransfomerFactory:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Transformer transformer = TransformerFactory.newlnstance().newTransformer();</code></pre>
+</div>
+</div>
+<p>Se realiza la transformación del documento a fichero.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>transformer.transform(source, result);</code></pre>
+</div>
+</div>
+<p>Para mostrar el documento por pantalla, podemos especificar como resultado el canal de salida System.out:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Result console = new StreamResult(System.out) ; transformer.transform(source, console);</code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>El código completo es el siguiente:</p>
+<p style="text-align: center;"><a href="CrearEmpleadoXml.java" target="_blank" rel="noopener">CrearEmpleadoXml.java</a></p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Lectura de documento XML</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para leer un documento XML, creamos una instancia de DocumentBuilderFactory para construir el parser y cargamos el documento con el método parse():</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Document document = builder.parse(new File("Empleados.xml"));</code></pre>
+</div>
+</div>
+<p>Obtenemos la lista de nodos con nombre empleado de todo el documento:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>NodeList empleados = document.getElementsByTagName("empleado");</code></pre>
+</div>
+</div>
+<p>Se realiza un bucle para recorrer esta lista de nodos. Por cada nodo se obtienen sus etiquetas y sus valores llamando a la función getNodo().</p>
+<p>El código es el siguiente:</p>
+<p style="text-align: center;"><a href="LecturaEmpleadoXml.java" target="_blank" rel="noopener">LecturaEmpleadoXml.java</a></p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="6_ficheros_xml.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

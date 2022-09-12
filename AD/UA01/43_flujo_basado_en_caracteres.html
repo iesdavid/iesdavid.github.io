@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3. Flujo basado en caracteres | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li><a href="3_clases_asociadas.html" class="daddy">3. Clases asociadas</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_flujos.html" class="current-page-parent daddy">4. Flujos</a>
+   <ul>
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li id="active"><a href="43_flujo_basado_en_caracteres.html" class="active no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="42_flujo_basado_en_bytes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_formas_de_acceso_a_un_fichero.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3. Flujo basado en caracteres</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id27">
+<div class="iDevice emphasis0" >
+<div id="ta27_842_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para los flujos de caracteres, Java dispone de dos clases abstractas: <strong>Reader</strong> y <strong>Writer</strong>.</p>
+<p>Si se usan sólo <strong>FileInputStream</strong>, <strong>FileOuputStream</strong>, <strong>FileReader</strong> o <strong>FileWriter</strong>, cada vez que se efectúa una lectura o escritura, se hace físicamente en el disco duro. Si se leen o escriben pocos caracteres cada vez, el proceso se hace costoso y lento por los muchos accesos a disco duro.</p>
+<p>Los <strong>BufferedReader</strong>, <strong>BufferedInputStream</strong>, <strong>BufferedWriter</strong> y <strong>BufferedOutputStream</strong> añaden un <strong>buffer</strong> intermedio. Cuando se lee o escribe, esta clase controla los accesos a disco. Así, si vamos escribiendo, se guardarán los datos hasta que haya bastantes datos como para hacer una escritura eficiente.</p>
+<p>Al leer, la clase leerá más datos de los que se hayan pedido. En las siguientes lecturas nos dará lo que tiene almacenado, hasta que necesite leer otra vez físicamente. Esta forma de trabajar hace los accesos a disco más eficientes y el programa se ejecuta más rápido.</p>
+<p>En un programa Java para crear o abrir un fichero se invoca a la clase File y a continuación, se crea el flujo de entrada hacia el fichero con la clase <strong>FileReader</strong>. Después se realizan las operaciones de lectura o escritura y cuando terminemos de usarlo lo cerraremos mediante el método <strong>close().</strong><strong></strong><strong></strong></p>
+<div class="exe-fx exe-accordion">
+<h2>Ejemplo 1</h2>
+<p>El siguiente ejemplo lee cada uno de los caracteres del fichero de texto de nombre <strong><a href="LeerFichTexto.java" target="_blank" rel="noopener">LeerFichTexto.java</a></strong> y los muestra en pantalla, los métodos <strong>read()</strong> pueden lanzar la excepción <strong>IOException</strong>, por ello en <strong>main()</strong> se ha añadido <strong>throws IOException</strong> ya que no se incluye el manejador <strong>try-catch</strong>.</p>
+<p>Observa que la expresión<strong> ((char) i)</strong> convierte el valor entero recuperado por el método <strong>read()</strong> a carácter, es decir, hacemos un cast a <strong>char</strong>. Se llega al final del fichero cuando el método <strong>read()</strong> devuelve <strong>-1</strong>.</p>
+<h2>Ejemplo 2</h2>
+<p>El siguiente ejemplo escribe caracteres en un fichero de nombre <strong>FichTexto.txt</strong> (si no existe lo crea). Los caracteres se escriben uno a uno y se obtienen de un <strong>String</strong>:</p>
+<p style="text-align: center;"><strong><a href="LeerFichTexto.java" target="_blank" rel="noopener">EscribirFichTexto.java</a></strong></p>
+<p style="text-align: left;">En vez de escribir los caracteres uno a uno, también podemos escribir todo el array: <strong>fic.write(cad);</strong></p>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="42_flujo_basado_en_bytes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_formas_de_acceso_a_un_fichero.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

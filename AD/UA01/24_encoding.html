@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.4. Encoding | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li class="current-page-parent"><a href="2_gestin_de_ficheros.html" class="current-page-parent daddy">2. Gestión de ficheros</a>
+   <ul>
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li id="active"><a href="24_encoding.html" class="active no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li><a href="3_clases_asociadas.html" class="daddy">3. Clases asociadas</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
+   <ul class="other-section">
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="23_extensiones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_clases_asociadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.4. Encoding</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div id="ta10_118_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Los archivos que trataremos, en muchas ocasiones, contendrán información de texto o caracteres. Cada lengua utiliza un tipo de carácter distinto de otra, por ejemplo, el alemán utiliza un abecedario diferente que el español, por lo que usará caracteres distintos. Los caracteres se almacenan en nuestro ordenador como uno o más bytes (<a href="https://codigoascii.org/" target="_blank" rel="noopener">ver tabla ASCII y atajos para usar sus caracteres</a>).</p>
+<p>Básicamente, podemos asumir que todos los caracteres están almacenados en ordenadores usando un código especial, es decir, una <a href="https://es.wikipedia.org/wiki/Codificaci%C3%B3n_de_caracteres" target="_blank" rel="noopener">codificación de caracteres</a> proporciona una clave para descifrar el código. Será, por tanto, un conjunto de asignaciones entre los bytes de los ordenadores y los caracteres en el conjunto de caracteres. Sin la clave, cuando el ordenador descifre los caracteres de ese fichero, aparecerán sin descifrar y se verán raros.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Se denomina <strong>encoding</strong> al sistema utilizado para transformar los caracteres que usa cada lenguaje en un símbolo que un ordenador pueda interpretar.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_info" id="id14">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Codificación de caracteres</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta14_120_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La codificación de caracteres asigna los caracteres escogidos a bytes específicos en la memoria del ordenador, y luego, para mostrar el texto, lee los bytes nuevamente en caracteres. Principalmente, se basa en crear tablas de equivalencias entre caracteres de lenguaje entendible por las personas con su correspondencia al lenguaje que usa un sistema informático.</p>
+<p>Los más importantes son:</p>
+<ul>
+<li><a href="https://codigoascii.org/" target="_blank" rel="noopener">ASCII</a></li>
+<li><a href="https://www.atc.uniovi.es/tablas.php" target="_blank" rel="noopener">ISO-8859</a> y sus variantes.</li>
+<li>UNICODE y sus bloques más usados: <a href="https://es.wikipedia.org/wiki/UTF-8" target="_blank" rel="noopener">UTF-8</a> y <a href="https://es.wikipedia.org/wiki/UTF-16" target="_blank" rel="noopener">UTF-16</a>.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_technology" id="id11">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_technology.png)"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_119_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Abre un editor de textos y copia y pega el siguiente texto:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;title&gt;Ejemplo de codificación&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;Esto es un texto español en UTF-8. ¿Se podrá leer con otra codificación?&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<p>Guarda el archivo como <strong>ejemplo.html</strong> en cualquier carpeta.</p>
+<p>Pulsa dos veces sobre él y se abrirá con el navegador de Internet predeterminado.</p>
+<p>Observa que el texto es legible y sin errores de codificación.</p>
+<p>Modifica ahora el texto <strong>UTF-8</strong> por cualquier otra codificación, por ejemplo <strong>ISO-8859-1</strong>, y vuelve a abrirlo (o refresca el navegador). ¿Existe diferencia?</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="23_extensiones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_clases_asociadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

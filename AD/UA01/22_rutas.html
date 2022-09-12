@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2. Rutas | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li class="current-page-parent"><a href="2_gestin_de_ficheros.html" class="current-page-parent daddy">2. Gestión de ficheros</a>
+   <ul>
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li id="active"><a href="22_rutas.html" class="active no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li><a href="3_clases_asociadas.html" class="daddy">3. Clases asociadas</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
+   <ul class="other-section">
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_qu_es_un_fichero.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_extensiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2. Rutas</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div id="ta7_116_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="GUID-787809E8-335F-458A-A776-5079B2847765-web.gif" rel="lightbox"><img src="GUID-787809E8-335F-458A-A776-5079B2847765-web.gif" alt="Imagen con ruta de ejemplo" style="float: right; margin-right: 10px; margin-left: 10px;" width="321" height="246"></a>Un fichero se caracteriza por estar formado por la <strong>ruta</strong> en la que está almacenado, el <strong>nombre</strong> y una <strong>extensión</strong>, siguiendo este orden. Además, tenemos que tener en cuenta que <strong>no podrán existir ficheros con el mismo nombre, ruta y extensión</strong>. Para que sean únicos, el nombre o la extensión en la misma ruta deben ser distintos.</p>
+<p>Para tener acceso a un fichero determinado, se utiliza una ruta (o también la podemos nombrar <strong>path</strong>) que indica la ubicación de ese fichero en nuestro sistema. La ruta está compuesta por diferentes niveles jerárquicos (<strong>carpetas</strong>) separado por un símbolo barra <strong>/</strong>, Aunque en Windows, para separar los niveles jerárquicos, se utiliza la contrabarra o <strong>\</strong>. En cambio, en Unix el separador será <strong>/</strong>.</p>
+<p>Si queremos definir la ruta independientemente del sistema operativo, podemos realizarlo de este modo:</p>
+<p><code><span style="color: #999999;">//Ejemplo con la ruta directa al string</span><br>File archivoNoseguro = <strong><span style="color: #800080;">new</span> </strong>File(<span style="color: #0000ff;">"carpeta/ejemplo.txt"</span>);<br><span style="color: #999999;">//Ruta que asegura el separador correcto segun plataforma</span><br>File archivo = <strong><span style="color: #800080;">new</span> </strong>File(<span style="color: #0000ff;">"carpeta"</span>+File.separator+<span style="color: #0000ff;">"ejemplo.txt"</span>);</code></p>
+<p>La carpeta principal que contiene el resto de carpetas se denomina <strong>carpeta raíz</strong>.<code></code></p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Existen dos tipos importantes de rutas que nos serán muy útiles en la gestión de ficheros:</p>
+<ul>
+<li><strong>Ruta absoluta</strong>: se conoce como la ruta desde la carpeta padre.</li>
+<li><strong>Ruta relativa</strong>: es aquella que coge como referencia el directorio actual para dar la ruta.</li>
+</ul>
+<p>La diferencia entre la ruta absoluta y la relativa es que no se indica la carpeta padre u origen sino un punto, una barra y el nombre de los diferentes directorios separados por barras.</p>
+<p>Usando la imagen anterior, para acceder a la carpeta <em><strong>Posters</strong></em> se podría hacer de las siguientes maneras:</p>
+<ul>
+<li>Ruta absoluta: <em>D:\Maps\Posters</em><em></em></li>
+<li>Ruta relativa desde otra carpeta, por ejemplo:
+<ul>
+<li>Maps: <code>.\Posters</code></li>
+<li>Raíz: <code>.\Maps\Posters</code></li>
+<li>Data: <code>..\Maps\Posters</code></li>
+</ul>
+</li>
+</ul>
+<p>Observa que si nos encontramos en la carpeta DATA, para acceder a Maps desde allí, debemos retroceder un nivel (dos puntos seguidos ..) para situarnos en el raíz y continuar desde allí.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="rutaLinux.png" rel="lightbox"><img src="rutaLinux.png" alt="Ruta en sistema Linux" style="margin-right: 10px; margin-left: 10px; float: right;" width="319" height="172"></a>Estos ejemplos se pueden realizar en Linux teniendo en cuenta que:</p>
+<ul>
+<li>el directorio raíz no es una unidad marcada con una letra, sino <strong>/</strong>.</li>
+<li>los ficheros no tienen extensiones.</li>
+</ul>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_qu_es_un_fichero.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_extensiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

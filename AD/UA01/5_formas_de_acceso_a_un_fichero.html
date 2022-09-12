@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5. Formas de acceso a un fichero | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li><a href="3_clases_asociadas.html" class="daddy">3. Clases asociadas</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
+   <ul class="other-section">
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="5_formas_de_acceso_a_un_fichero.html" class="active no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="43_flujo_basado_en_caracteres.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_ficheros_xml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5. Formas de acceso a un fichero</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id31">
+<div class="iDevice emphasis0" >
+<div id="ta31_846_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Hemos visto que en Java puedes utilizar dos tipos de ficheros (de texto o binarios). Veremos a continuación que existen dos tipos de acceso a ellos: <strong>secuencial</strong> o <strong>aleatorio</strong>.</p>
+<ul>
+<li><strong><img src="Accesso_Sequenziale_VS_Accesso_Casuale-es.svg.png" alt="Acceso secuencial y aleatorio" style="float: right; margin-right: 10px; margin-left: 10px;" width="320" height="192">Acceso aleatorio:</strong> los archivos de acceso aleatorio, al igual que lo que sucede usualmente con la memoria (RAM = Random Access Memory), permiten acceder a los datos en forma no secuencial, desordenada. Esto implica que el archivo debe estar disponible en su totalidad al momento de ser accedido, algo que no siempre es posible.</li>
+<li><strong>Acceso secuencial:</strong> En este caso los datos se leen de manera secuencial, desde el comienzo del archivo hasta el final (el cual muchas veces no se conoce a priori). Este es el caso de la lectura del teclado o la escritura en una consola de texto, no se sabe cuándo el operador terminará de escribir.</li>
+</ul></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="exe-fx exe-accordion">
+<h2>Operaciones básicas sobre ficheros de acceso secuencial</h2>
+<p>Como operaciones más comunes en ficheros de acceso secuencial, tenemos el acceso para:</p>
+<ul>
+<li>Crear un fichero o abrirlo para grabar datos.</li>
+<li>Leer datos del fichero.</li>
+<li>Borrar información de un fichero.</li>
+<li>Copiar datos de un fichero a otro.</li>
+<li>Búsqueda de información en un fichero.</li>
+<li>Cerrar un fichero.</li>
+</ul>
+<h2>Operaciones básicas sobre ficheros de acceso aleatorio</h2>
+<p>A menudo, no necesitas leer un fichero de principio a fin, sino simplemente acceder al fichero como si fuera una base de datos, donde se salta de un registro a otro; cada uno en diferentes partes del fichero. Java proporciona una clase <strong>RandomAccessFile</strong> para este tipo de entrada/salida.</p>
+<p>Esta clase:</p>
+<ul>
+<li>Permite leer y escribir sobre el fichero, no es necesario dos clases diferentes.</li>
+<li>Necesita que le especifiquemos el modo de acceso al construir un objeto de esta clase: sólo lectura o bien lectura y escritura.</li>
+<li>Posee métodos específicos de desplazamiento como seek(long posicion) o skipBytes(int desplazamiento) para poder movernos de un registro a otro del fichero, o posicionarnos directamente en una posición concreta del fichero.</li>
+</ul>
+<p>Por esas características que presenta la clase, un archivo de acceso directo tiene sus registros de un tamaño fijo o predeterminado de antemano.</p>
+<p>La clase posee dos constructores:</p>
+<ul>
+<li><span style="font-size: 12pt;"><code>RandomAccessFile(File file, String mode).</code></span></li>
+<li><span style="font-size: 12pt;"><code>RandomAccessFile(String name, String mode).</code></span></li>
+</ul>
+<p>En el primer caso se pasa un objeto File como primer parámetro, mientras que en el segundo caso es un <strong>String</strong>. El modo es: "<strong>r</strong>" si se abre en modo <strong>lectura</strong> o "<strong>rw</strong>" si se abre en modo <strong>lectura y escritura.</strong></p>
+<p>El ejemplo que se muestra a continuación inserta datos de empleados en un fichero aleatorio. Por cada empleado también se insertará un identificador que coincidirá con el índice +1 con el que se recorren los arrays. La longitud del registro de cada empleado es la misma (36 bytes) y los tipos que se insertan y su tamaño en bytes es el siguiente:</p>
+<ul>
+<li>Se inserta en primer lugar un entero, que es el identificador, ocupa 4 bytes.</li>
+<li>A continuación una cadena de 10 caracteres, es el apellido, cada carácter Unicode ocupa 2 bytes, por tanto el apellido ocupa 20 bytes.</li>
+<li>Un tipo entero que es el departamento, ocupa 4 bytes.</li>
+<li>Un tipo Double que es el salario, ocupa 8 bytes.</li>
+</ul>
+<p><a href="HEXA.png" rel="lightbox"><img src="HEXA.png" alt="Hexadecimal a texto" style="display: block; margin-left: auto; margin-right: auto;" width="557" height="66"></a></p>
+<p>Tamaño de otros tipos: short (2 bytes), byte (1 byte), long (8 bytes), boolean (1bit), float (4 bytes), etc.<br>El fichero se abre en modo "rw" para lectura y escritura:</p>
+<p style="text-align: center;"><a href="EscribirFichAleatorio.java" target="_blank" rel="noopener">EscribirFichAleatorio.java</a></p>
+<p style="text-align: left;">El siguiente ejemplo toma el fichero anterior y visualiza todos los registros. El posicionamiento para empezar a recorrer los registros empieza en 0, para recuperar los siguientes registros hay que sumar 36 (tamaño del registro) a la variable utilizada para el posicionamiento:</p>
+<p style="text-align: center;"><a href="LeerFichAleatorio.java" target="_blank" rel="noopener">LeerFichAleatorio.java</a></p>
+<p style="text-align: left;">Para consultar un empleado determinado no es necesario recorrer todos los registros del fichero, conociendo su identificador podemos acceder a la posición que ocupa dentro del mismo y obtener sus datos&nbsp;</p>
+</div>
+<p>Para comprobar estos ejemplos:</p>
+<p><a href="https://gregstoll.com/~gregstoll/floattohex/" target="_blank" rel="noopener">Conversor de punto flotante</a></p>
+<p><a href="https://codebeautify.org/byte-to-string" target="_blank" rel="noopener">Conversor de Byte a String</a></p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="43_flujo_basado_en_caracteres.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_ficheros_xml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

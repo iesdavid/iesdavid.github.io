@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2. Creación y eliminación con File | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_clases_asociadas.html" class="current-page-parent daddy">3. Clases asociadas</a>
+   <ul>
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li id="active"><a href="32_creacin_y_eliminacin_con_file.html" class="active no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
+   <ul class="other-section">
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="31_ejemplos_con_file.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_flujos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2. Creación y eliminación con File</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id21">
+<div class="iDevice emphasis0" >
+<div id="ta21_116_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="exe-fx exe-accordion">
+<h2>Crear un fichero</h2>
+<p>Cuando queramos crear un fichero, debemos usar la estructura <strong>try ... catch... </strong>:</p>
+<div class="highlighted-code language-java">
+<pre><code>try {
+   // Creamos el objeto que encapsula el fichero
+   File fichero = new File("C:\\pruebas\\miFichero.txt");
+   // A partir del objeto File creamos el fichero físicamente
+   if (fichero.createNewFile()) 
+      System.out.println("El fichero se ha creado correctamente");
+   else
+      System.out.println("No se ha podido crear el fichero");
+} catch (Exception e){
+   e.getMessage();
+}
+</code></pre>
+</div>
+<h2>Borrar un fichero</h2>
+<p>Para borrar un fichero podemos usar la clase File, comprobando previamente si existe el fichero, del siguiente modo:</p>
+<div class="highlighted-code language-java">
+<pre><code>   File fichero = new File("C:\\pruebas","miFichero.txt");
+   if (fichero.exists()) 
+      fichero.delete();
+</code></pre>
+</div>
+<h2>Crear directorios</h2>
+<p>Para crear directorios, podríamos hacer:</p>
+<div class="highlighted-code language-java">
+<pre><code>try {
+
+// Declaración de variables
+
+       String directorio = "C:\\prueba";
+
+       String varios = "carpeta1/carpeta2/carpeta3";
+
+
+// Crear un directorio
+
+       boolean exito = (new File(directorio)).mkdir();
+
+       if (exito)
+
+    	  System.out.println("Directorio: " + directorio + " creado");
+
+// Crear varios directorios
+
+      exito = (new File(varios)).mkdirs();
+
+      if (exito)
+
+          System.out.println("Directorios: " + varios + " creados");
+
+}catch (Exception e){
+
+      System.err.println("Error: " + e.getMessage());
+
+}
+</code></pre>
+</div>
+<h2>Borrar directorios</h2>
+<p>Para borrar un directorio con Java, tendremos que <strong>borrar cada uno de los ficheros</strong> y directorios que éste contenga. Al poder almacenar otros directorios, se podría recorrer <strong>recursivamente</strong> el directorio para ir borrando todos los ficheros.</p>
+<p>Se puede listar el contenido del directorio e ir borrando con:</p>
+<div class="highlighted-code language-java">
+<pre><code> File[] ficheros = directorio.listFiles();</code></pre>
+</div>
+<p>Si el elemento es un directorio, lo sabemos mediante el método <strong>isDirectory()</strong>.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="31_ejemplos_con_file.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_flujos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. Gestión de ficheros | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li id="active"><a href="2_gestin_de_ficheros.html" class="active daddy">2. Gestión de ficheros</a>
+   <ul>
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li><a href="3_clases_asociadas.html" class="daddy">3. Clases asociadas</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
+   <ul class="other-section">
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_mtodos_de_acceso_a_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_qu_es_un_fichero.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2. Gestión de ficheros</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id22">
+<div class="iDevice emphasis0" >
+<div id="ta22_837_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Los ficheros son el método de almacenamiento de información más elemental. De hecho, en última instancia, todos los métodos de almacenamiento, por sofisticados que sean, almacenan los datos en ficheros.</p>
+<p>Hasta que fueron relegados en los años ochenta por las bases de datos relacionales, los ficheros fueron el principal medio de almacenamiento de datos. El nombre fichero se utilizó por analogía con los antiguos ficheros que contenían fichas de papel, todas con la misma estructura, consistente en un conjunto fijo de campos. En el caso de los libros de una biblioteca, por ejemplo, los campos podían ser el título, nombre del autor, tema, etc. Los ficheros que contenían fichas de papel fueron reemplazados por ficheros de ordenador que contenían registros, equivalentes a las antiguas fichas de papel. Un registro contiene un conjunto de campos de longitud fija. Para acelerar las búsquedas se empezaron a utilizar ficheros auxiliares de índice que permitían acceder a los registros según un orden determinado. IBM desarrolló un avanzado sistema de gestión de ficheros llamado <a href="https://www.wikiwand.com/es/ISAM" target="_blank" rel="noopener">ISAM (indexed sequential access method).</a></p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_info" id="id5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Los inicios</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_120_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En las antiguas aplicaciones informáticas, antes de que surgieran las bases de datos, la información se guardaba en <strong>ficheros</strong>.</p>
+<p>Así, por ejemplo, una aplicación que guardaba los datos de personas, almacenaba dichos datos en un fichero convencional cuyo contenido bien podía ser este:</p>
+<p><em>Juan Pérez García 30 C/ Aire nº 11 Sevilla Sevilla<br></em></p>
+<p><em>Alberto Borrero Arias 46 C/ Flores nº 34 Hinojos Huelva<br></em></p>
+<p><em>María Gómez López 25 C/ Andalucía nº 12 Alcalá Sevilla</em></p>
+<p>&nbsp;...</p>
+<p>Esto tenía como efecto, que el programador de las aplicaciones que usaran ese fichero, tuviera que construir el programa conociendo detalladamente las posiciones de los datos, para saber desde qué posición hasta qué otra posición, se guardaba el nombre y apellidos, etc. Una forma más efectiva era colocar cada dato en una línea pero era necesario saber el número de campos que contenía cada registro y crear líneas vacías en los campos opcionales. También se podía indicar marcas, como por ejemplo, la de <strong>fin de registro</strong>.</p>
+<p>Otro inconveniente era tener que controlar si se guardan filas de datos duplicadas, etc...</p>
+<p>Por eso, cuando surgieron las <strong>bases de datos</strong>, se empezó a dejar de usar los ficheros convencionales.</p>
+<p>Pero bien es cierto, que aún en las más modernas aplicaciones, a veces necesitamos un simple archivo para guardar información, como por ejemplo un<strong> fichero de configuración</strong>, o un fichero <strong>log</strong>. Es decir, no siempre nos hace falta una base de datos para almacenar la información.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id17">
+<div class="iDevice emphasis0" >
+<div id="ta17_838_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Hay que tener en cuenta, que los ficheros en sí, para grabar la información del modo que poníamos como ejemplo anteriormente, ya no se usan. En cambio, sí que se usan ficheros que guardan datos siguiendo un patrón o estructura bien definida, en otros métodos de almacenamiento, como por ejemplo en <strong>ficheros</strong> y en bases de datos <strong>XML</strong> o <strong>NoSQL.</strong></p>
+<p>De especial interés y uso cada vez más extendido, son los ficheros <a href="https://developer.mozilla.org/es/docs/Web/XML/XML_introduction" title="XML | " class="exe-tooltip ajax-tt titled-tt"><strong>XML</strong></a> o <a href="https://es.wikipedia.org/wiki/JSON" title="JSON | " class="exe-tooltip ajax-tt titled-tt"><strong>JSON</strong></a>. Éstos son archivos de texto que por consiguiente no necesitan un software propietario para ser interpretados, como ocurre con la mayoría de los archivos binarios.</p>
+<p>También debemos tener en cuenta, que las bases de datos relativamente modernas, como son las bases de datos XML o <a href="https://es.wikipedia.org/wiki/NoSQL" title="NoSQL | " class="exe-tooltip ajax-tt titled-tt"><strong>NoSQL</strong></a>, que guardan sus datos empleando ficheros xml o json.</p>
+<p>Por eso, en muchas ocasiones se recurre a utilizar este tipo de soluciones, el uso de ficheros en vez de bases de datos, y en particular de ficheros XML cuando se necesita intercambiar información a través de varias plataformas de hardware o de software, o de varias aplicaciones. A veces se exporta de una base de datos a ficheros XML para trasladar la información a otra base de datos que leerá esos ficheros XML.</p>
+<p>La fácil estructuración de la información en los ficheros XML y JSON ha permitido que surjan muchas librerías de conversión de la información almacenada a otros formatos como a PDF, texto, hojas de cálculo, etc. Hay muchos productos propietarios y de código abierto.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_mtodos_de_acceso_a_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_qu_es_un_fichero.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

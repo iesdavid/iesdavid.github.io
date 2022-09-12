@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1. Ejemplos con File | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_clases_asociadas.html" class="current-page-parent daddy">3. Clases asociadas</a>
+   <ul>
+      <li id="active"><a href="31_ejemplos_con_file.html" class="active no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
+   <ul class="other-section">
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="3_clases_asociadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_creacin_y_eliminacin_con_file.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1. Ejemplos con File</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id19">
+<div class="iDevice emphasis0" >
+<div id="ta19_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para crear un objeto File, se puede utilizar cualquiera de los tres constructores siguientes:</p>
+<table class="exe-table" style="height: 112px;">
+<tbody>
+<tr style="height: 28px;">
+<td rowspan="2" style="height: 56px; width: 389.3px;"><span style="font-size: 12pt;">File(String directorioyfichero)</span></td>
+<td style="text-align: center; height: 28px; width: 78.5833px;"><span style="font-size: 12pt;">Linux</span></td>
+<td style="height: 28px; width: 395.983px;"><span style="font-size: 12pt;"><code>new File(“/directorio/fichero.txt”)</code></span></td>
+</tr>
+<tr style="height: 28px;">
+<td style="text-align: center; height: 28px; width: 78.5833px;"><span style="font-size: 12pt;">Windows</span></td>
+<td style="height: 28px; width: 395.983px;"><span style="font-size: 12pt;"><code>new File("C:\\directorio\\fichero.txt")</code></span></td>
+</tr>
+<tr style="height: 28px;">
+<td style="height: 28px; width: 389.3px;"><span style="font-size: 12pt;">File(String directorio, String nombrefichero)</span></td>
+<td style="text-align: center; height: 28px; width: 78.5833px;"><span style="font-size: 12pt;">-</span></td>
+<td style="height: 28px; width: 395.983px;"><span style="font-size: 12pt;"><code>new File(“directorio", "fichero.txt")</code></span></td>
+</tr>
+<tr style="height: 28px;">
+<td style="height: 28px; width: 389.3px;"><span style="font-size: 12pt;">File(File directorio, String fichero)</span></td>
+<td style="text-align: center; height: 28px; width: 78.5833px;"><span style="font-size: 12pt;">-</span></td>
+<td style="height: 28px; width: 395.983px;"><span style="font-size: 12pt;"><code>new File(new File(“directorio"), "fichero.txt")</code></span></td>
+</tr>
+</tbody>
+</table>
+<p>En Linux se utiliza como prefijo de una ruta absoluta “/". En Microsoft Windows, el prefijo de un nombre de ruta consiste en la letra de la unidad seguida de “:” y, posiblemente, seguida por "\\" si la ruta es absoluta.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_play" id="id20">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_play.png)"><h1 class="iDeviceTitle">Ejemplos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta20_115_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>El siguiente ejemplo muestra la lista de ficheros en el directorio actual. Se utiliza el método list() que devuelve un array de Strings con los nombres de los ficheros y directorios contenidos en el directorio asociado al objeto File. Para indicar que estamos en el directorio actual creamos un objeto File y le pasamos el parámetro “.”:</p>
+<p style="text-align: center;"><a href="VerDir.java" target="_blank" title="VerDir" rel="noopener">VerDir.java</a></p>
+<p>El siguiente ejemplo muestra información del fichero&nbsp; seleccionado;</p>
+<p style="text-align: center;"><a href="VerInf.java" target="_blank" title="VerInf.java" rel="noopener">VerInf.java</a></p>
+<p>Por último, este ejemplo crea un directorio (de nombre NUEVODIR) en el directorio actual, a continuación crea dos ficheros vacíos en dicho directorio y uno de ellos lo renombra. En este caso para crear los ficheros se definen 2 parámetros en el objeto File: File(File directorio, String nombrefich), en el primero indicamos el directorio donde se creará el fichero y en el segundo indicamos el nombre del fichero:</p>
+<p style="text-align: center;"><a href="CrearDir.java" target="_blank" title="CrearDir.java" rel="noopener">CrearDir.java</a></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="3_clases_asociadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_creacin_y_eliminacin_con_file.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

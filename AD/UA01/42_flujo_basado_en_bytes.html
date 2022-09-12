@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.2. Flujo basado en bytes | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li><a href="3_clases_asociadas.html" class="daddy">3. Clases asociadas</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_flujos.html" class="current-page-parent daddy">4. Flujos</a>
+   <ul>
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li id="active"><a href="42_flujo_basado_en_bytes.html" class="active no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="41_lectura_y_escritura.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_flujo_basado_en_caracteres.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.2. Flujo basado en bytes</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id25">
+<div class="iDevice emphasis0" >
+<div id="ta25_840_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para el tratamiento de los flujos de bytes, hemos dicho que Java tiene dos clases abstractas que son <strong>InputStream</strong> y <strong>OutputStream</strong>.</p>
+<p>Los archivos binarios guardan una representación de los datos en el archivo, es decir, cuando guardamos texto no guardan el texto en si, sino que guardan su representación en un código llamado <strong>UTF-8</strong>.</p>
+<p>Las clases principales que heredan de <strong>OutputStream</strong>, para la escritura de ficheros binarios son:</p>
+<ul>
+<li><strong>FileOutputStream</strong>: escribe bytes en un fichero. Si el archivo existe, cuando vayamos a escribir sobre él, se borrará. Por tanto, si queremos añadir los datos al final de éste, habrá que usar el constructor <code>FileOutputStream(String filePath, boolean append)</code>, poniendo append a <strong>true</strong>.</li>
+<li><strong>ObjectOutputStream</strong>: convierte objetos y variables en vectores de bytes que pueden ser escritos en un <strong>OutputStream</strong>.</li>
+<li><strong>DataOutputStream</strong>, que da formato a los tipos primitivos y objetos <strong>String</strong>, convirtiéndolos en un flujo de forma que cualquier <strong>DataInputStream</strong>, de cualquier máquina, los pueda leer. Todos los métodos empiezan por "<strong>write</strong>", como <strong>writeByte()</strong>, <strong>writefloat()</strong>, etc.</li>
+</ul>
+<p>De <strong>InputStream</strong>, para lectura de ficheros binarios, destacamos:</p>
+<ul>
+<li><strong>FileInputStream</strong>: lee bytes de un fichero.</li>
+<li><strong>ObjectInputStream</strong>: convierte en objetos y variables los vectores de bytes leídos de un <strong>InputStream</strong>.</li>
+</ul>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_play" id="id26">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_play.png)"><h1 class="iDeviceTitle">Ejemplos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_841_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En el siguiente ejemplo puedes ver cómo se crea un flujo de salida y otro de entrada a un archivo binario mediante las clase&nbsp;FileInputStream y FileOutputStream:</p>
+<p style="text-align: center;"><a href="EscribirFichBytes.java" target="_blank" rel="noopener">EscribirFichBytes.java</a></p>
+<p>En los siguientes ejemplos se puede ver cómo se escribe y se lee un archivo binario con DataOutputStream y DataInputStream</p>
+<p style="text-align: center;"><a href="LeerFichData.java" target="_blank" rel="noopener">EscribirFichData.java</a></p>
+<p style="text-align: center;"><a href="LeerFichData.java" target="_blank" rel="noopener">LeerFichData.java</a></p>
+</div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id30">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Importante</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta30_845_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Java codifica el texto en memoria en UTF-16, en variables de tipo <strong>String</strong> o <strong>char[]</strong>. Sin embargo, la mayoría de los ficheros de texto están codificados en UTF-8 y Java lo respeta leyendo y escribiendo en esta codificación.</p>
+<p>Por tanto, hay que tener en cuenta que, las operaciones de lectura y escritura de texto con ficheros de texto, generalmente llevan un <strong>proceso de recodificación</strong>.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="41_lectura_y_escritura.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_flujo_basado_en_caracteres.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

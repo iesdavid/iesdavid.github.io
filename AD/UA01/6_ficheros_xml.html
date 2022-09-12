@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6. Ficheros XML | UA01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-17"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA01. Iniciación al acceso de datos</a></li>
+   <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
+      <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
+      <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
+      <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
+   </ul>
+   </li>
+   <li><a href="3_clases_asociadas.html" class="daddy">3. Clases asociadas</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplos_con_file.html" class="no-ch">3.1. Ejemplos con File</a></li>
+      <li><a href="32_creacin_y_eliminacin_con_file.html" class="no-ch">3.2. Creación y eliminación con File</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
+   <ul class="other-section">
+      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
+      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
+      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="no-ch">5. Formas de acceso a un fichero</a></li>
+   <li id="active"><a href="6_ficheros_xml.html" class="active daddy">6. Ficheros XML</a>
+   <ul>
+      <li><a href="61_xml_con_dom.html" class="no-ch">6.1. XML con DOM</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="5_formas_de_acceso_a_un_fichero.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_xml_con_dom.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6. Ficheros XML</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id32">
+<div class="iDevice emphasis0" >
+<div id="ta32_847_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Probablemente hayas estudiado ya <strong>XML</strong>, bien porque hayas cursado el módulo <strong>Lenguajes de marcas y sistemas de gestión de información</strong>, o bien porque lo conozcas por tu cuenta. Si no conoces XML, te recomendamos que te familiarices con él, hay múltiples tutoriales y cursos en Internet.</p>
+<p>El <strong>metalenguaje XML</strong> se crea para evitar problemas de interoperabilidad entre plataformas y redes. Con él se consigue un soporte estándar para el intercambio de datos: no sólo los datos están en un formato estándar sino también la forma de acceder a ellos. Y entre las ventajas de su uso destacamos:</p>
+<ul>
+<li>Facilita el <strong>intercambio de información</strong> entre distintas aplicaciones ya que se basa en estándares aceptados.</li>
+<li>Proporciona una <strong>visión estructurada</strong> de la información, lo que permite su posterior tratamiento de forma local.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id33">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Conceptos previos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta33_848_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>¿Cómo se trabaja con datos XML desde el punto de vista del desarrollador de aplicaciones?</p>
+<p>Una aplicación que consume información XML debe:</p>
+<ul>
+<li>Leer un fichero de texto codificado según dicho estándar.</li>
+<li>Cargar la información en memoria y, desde allí...</li>
+<li>Procesar esos datos para obtener unos resultados (que posiblemente también almacenará de forma persistente en otro fichero XML).</li>
+</ul>
+<p>El proceso anterior se enmarca dentro de lo que se conoce en informática como "<strong>parsing</strong>" o <a href="https://es.wikipedia.org/wiki/Analizador_sint%C3%A1ctico" target="_blank" rel="noopener"><strong>análisis léxico-sintáctico</strong></a>, y los programas que lo llevan a cabo se denominan "<strong>parsers</strong>" o analizadores (léxico-sintácticos). Más específicamente podemos decir que el "<strong>parsing XML</strong>" es el proceso mediante el cual se lee y se analiza un documento XML para comprobar que está bien formado para, posteriormente, pasar el contenido de ese documento a una aplicación cliente que necesite consumir dicha información.</p>
+<p><img src="parsing-XML.gif" alt="Parser XML" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="249"></p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="Parse-XML.png" alt="Parse XML" style="float: left; margin-right: 25px; margin-left: 25px;" width="320" height="180">Algunos de los procesadores más empleados son:</p>
+<ul>
+<li><strong>DOM (Modelo de Objetos de Documento)</strong>: un procesador XML que utilice este planteamiento almacena toda la estructura del documento en memoria en forma de árbol con nodos padre, nodos hijo y nodos finales (que son aquellos que no tienen descendientes)</li>
+<li><strong>SAX (API Simple para XML)</strong>: un procesador que utilice este planteamiento lee un fichero XML de forma secuencial y produce una secuencia de eventos (comienzo/fin del documento, comienzo/fin de una etiqueta, etcétera) en función de los resultados de la lectura. Cada evento invoca a un método definido por el programador.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_play" id="id35">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_play.png)"><h1 class="iDeviceTitle">Ejemplos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta35_850_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="https://javiergarciaescobedo.es/programacion-en-java/53-xml/247-ejemplo-de-lectura-de-fichero-xml-usando-dom" target="_blank" rel="noopener">Ejemplo de lectura de fichero XML usando DOM</a></p>
+<p><a href="https://decodigo.com/java-leer-xml-con-sax-parser" target="_blank" rel="noopener">Ejemplo de lectura de fichero XML usando SAX</a></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="5_formas_de_acceso_a_un_fichero.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_xml_con_dom.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
