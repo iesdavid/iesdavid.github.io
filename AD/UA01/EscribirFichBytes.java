@@ -3,7 +3,7 @@ package streamsBinarios;
 import java.io.*;
 public class EscribirFichBytes {
   public static void main(String[] args) throws IOException {   
-   File fichero = new File("C:\\ULHI\\DAM\\AD\\AD\\UD2\\src\\streamsBinarios\\fichBytes.dat");//declara fichero
+   File fichero = new File("fichBytes.dat");//declara fichero
    //crea flujo de salida hacia el fichero  
    FileOutputStream fileout = new FileOutputStream(fichero,true);   
    //crea flujo de entrada

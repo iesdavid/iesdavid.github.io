@@ -4,7 +4,7 @@ import java.io.*;
 
 public class LeerFichTexto {
   public static void main(String[] args) throws IOException {
-    File fichero = new File("C:\\ULHI\\DAM\\AD\\AD\\UD2\\src\\streamsTexto\\fichero1.txt"); //declarar fichero
+    File fichero = new File("fichero1.txt"); //declarar fichero
     FileReader fic = new FileReader(fichero); //crear el flujo de entrada  
         
     int i;

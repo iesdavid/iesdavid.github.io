@@ -3,7 +3,7 @@ package streamsBinarios;
 import java.io.*;
 public class LeerFichData {
   public static void main(String[] args) throws IOException {    
-	File fichero = new File("C:\\ULHI\\DAM\\AD\\AD\\UD2\\src\\streamsBinarios\\fichData.dat");
+	File fichero = new File("fichData.dat");
 	DataInputStream dataIS = new DataInputStream(new FileInputStream(fichero));
 
 	String n;

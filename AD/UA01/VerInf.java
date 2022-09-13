@@ -4,7 +4,7 @@ import java.io.*;
 public class VerInf {
 public static void main(String[] args) {
   System.out.println("INFORMACIÓN SOBRE EL FICHERO:");
-  File f = new File("C:\\ULHI\\DAM\\AD\\AD\\UD2\\src\\File\\VerInf.java");
+  File f = new File("ejemplos\\VerInf.java");
    if(f.exists()){
         System.out.println("Nombre del fichero  : "+f.getName());
         System.out.println("Ruta                : "+f.getPath());

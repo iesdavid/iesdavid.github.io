@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>2.3. Extensiones | UA01 </title>
+<title>5.1. Ventajas e inconvenientes | UA01 </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -18,7 +18,7 @@
 <script type="text/javascript" src="udl-content.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-19"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">UA01</div></header>
@@ -26,11 +26,11 @@
 <ul>
    <li><a href="index.html" class="daddy main-node">UA01. Acceso a ficheros</a></li>
    <li><a href="1_mtodos_de_acceso_a_datos.html" class="no-ch">1. Métodos de acceso a datos</a></li>
-   <li class="current-page-parent"><a href="2_gestin_de_ficheros.html" class="current-page-parent daddy">2. Gestión de ficheros</a>
-   <ul>
+   <li><a href="2_gestin_de_ficheros.html" class="daddy">2. Gestión de ficheros</a>
+   <ul class="other-section">
       <li><a href="21_qu_es_un_fichero.html" class="no-ch">2.1. ¿Qué es un fichero?</a></li>
       <li><a href="22_rutas.html" class="no-ch">2.2. Rutas</a></li>
-      <li id="active"><a href="23_extensiones.html" class="active no-ch">2.3. Extensiones</a></li>
+      <li><a href="23_extensiones.html" class="no-ch">2.3. Extensiones</a></li>
       <li><a href="24_encoding.html" class="no-ch">2.4. Encoding</a></li>
    </ul>
    </li>
@@ -48,9 +48,9 @@
       <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
    </ul>
    </li>
-   <li><a href="5_formas_de_acceso_a_un_fichero.html" class="daddy">5. Formas de acceso a un fichero</a>
-   <ul class="other-section">
-      <li><a href="51_ventajas_e_inconvenientes.html" class="no-ch">5.1. Ventajas e inconvenientes</a></li>
+   <li class="current-page-parent"><a href="5_formas_de_acceso_a_un_fichero.html" class="current-page-parent daddy">5. Formas de acceso a un fichero</a>
+   <ul>
+      <li id="active"><a href="51_ventajas_e_inconvenientes.html" class="active no-ch">5.1. Ventajas e inconvenientes</a></li>
    </ul>
    </li>
    <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
@@ -62,20 +62,18 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="22_rutas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_encoding.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="5_formas_de_acceso_a_un_fichero.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_ficheros_xml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">2.3. Extensiones</h1></header>
-<article class="iDevice_wrapper UDLcontentIdevice" id="id9">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.1. Ventajas e inconvenientes</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id36">
 <div class="iDevice emphasis0" >
-<div id="ta9_117_2" class="block iDevice_content">
-<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La <strong>extensión</strong> del archivo nos permitirá diferenciar qué <strong>programa</strong> puede utilizar ese fichero. Se considera extensión todo lo que podemos encontrar después del punto que ponemos al final de nombre. Veamos el ejemplo:</p>
-<ul>
-<li><strong>ejercicio.txt</strong> -&gt; la extensión será el <strong>.txt</strong> y se puede abrir con el Bloc de Notas o un simple editor de textos.</li>
-<li><strong>ejercicio.doc</strong> -&gt; la extensión será el <strong>.doc</strong> y buscará un editor de textos como Wordpad, Word o Writer.</li>
-</ul></div></div></section></div>
+<div id="ta36_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Las <strong>ventajas</strong> del <strong>acceso de datos secuencial</strong> frente al aleatorio es que este tipo de estructura se puede usar para persistir datos de manera más simple.</p>
+<p>Por otro lado, las <strong>desventajas</strong> son evidentes: no es una manera de acceder a los datos de manera eficiente. Nos obliga a acceder a los datos en orden, aunque el resto de datos<br>no nos interesen.</p>
+<p>En cambio, el <strong>acceso de datos aleatorio</strong> proporciona mucho más control y eficiencia a la hora de tratar la información. Por un lado, podemos elegir el punto exacto de lectura de datos, permitiendo ser mucho más rápido y ahorrar consumo de recursos en la aplicación. Como <strong>desventaja</strong> podemos destacar que puede ser un método de acceso un poco más lento en comparación con el secuencial.</p></div></div></section></div>
 </div>
 </div>
 </article>
@@ -86,7 +84,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="22_rutas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_encoding.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="5_formas_de_acceso_a_un_fichero.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_ficheros_xml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 </div>
