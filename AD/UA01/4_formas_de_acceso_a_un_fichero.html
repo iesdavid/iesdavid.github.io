@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>5. Formas de acceso a un fichero | UA01 </title>
+<title>4. Formas de acceso a un fichero | UA01 </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -45,16 +45,16 @@
       <li><a href="33_ejercicios.html" class="no-ch">3.3. Ejercicios</a></li>
    </ul>
    </li>
-   <li><a href="4_flujos.html" class="daddy">4. Flujos</a>
-   <ul class="other-section">
-      <li><a href="41_lectura_y_escritura.html" class="no-ch">4.1. Lectura y escritura</a></li>
-      <li><a href="42_flujo_basado_en_bytes.html" class="no-ch">4.2. Flujo basado en bytes</a></li>
-      <li><a href="43_flujo_basado_en_caracteres.html" class="no-ch">4.3. Flujo basado en caracteres</a></li>
+   <li id="active"><a href="4_formas_de_acceso_a_un_fichero.html" class="active daddy">4. Formas de acceso a un fichero</a>
+   <ul>
+      <li><a href="41_ventajas_e_inconvenientes.html" class="no-ch">4.1. Ventajas e inconvenientes</a></li>
    </ul>
    </li>
-   <li id="active"><a href="5_formas_de_acceso_a_un_fichero.html" class="active daddy">5. Formas de acceso a un fichero</a>
-   <ul>
-      <li><a href="51_ventajas_e_inconvenientes.html" class="no-ch">5.1. Ventajas e inconvenientes</a></li>
+   <li><a href="5_flujos.html" class="daddy">5. Flujos</a>
+   <ul class="other-section">
+      <li><a href="51_lectura_y_escritura.html" class="no-ch">5.1. Lectura y escritura</a></li>
+      <li><a href="52_flujo_basado_en_bytes.html" class="no-ch">5.2. Flujo basado en bytes</a></li>
+      <li><a href="53_flujo_basado_en_caracteres.html" class="no-ch">5.3. Flujo basado en caracteres</a></li>
    </ul>
    </li>
    <li><a href="6_ficheros_xml.html" class="daddy">6. Ficheros XML</a>
@@ -66,12 +66,12 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="43_flujo_basado_en_caracteres.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_ventajas_e_inconvenientes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="33_ejercicios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="41_ventajas_e_inconvenientes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">5. Formas de acceso a un fichero</h1></header>
+<header id="nodeDecoration"><h1 id="nodeTitle">4. Formas de acceso a un fichero</h1></header>
 <article class="iDevice_wrapper UDLcontentIdevice" id="id31">
 <div class="iDevice emphasis0" >
 <div id="ta31_846_2" class="block iDevice_content">
@@ -90,6 +90,9 @@
 <li>Búsqueda de información en un fichero.</li>
 <li>Cerrar un fichero.</li>
 </ul>
+<p>Ejemplo de lectura secuencial:</p>
+<p style="text-align: center;"><a href="LeerFichSecuencial.java" target="_blank" rel="noopener">LeerFichSecuencial.java</a></p>
+<p style="text-align: left;">Este ejemplo lee un texto de dos en dos caracteres, de forma secuencial, y los almacena en un array que muestra, finalmente, en líneas diferentes.</p>
 <h2>Operaciones básicas sobre ficheros de acceso aleatorio</h2>
 <p>A menudo, no necesitas leer un fichero de principio a fin, sino simplemente acceder al fichero como si fuera una base de datos, donde se salta de un registro a otro; cada uno en diferentes partes del fichero. Java proporciona una clase <strong>RandomAccessFile</strong> para este tipo de entrada/salida.</p>
 <p>Esta clase:</p>
@@ -132,7 +135,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="43_flujo_basado_en_caracteres.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_ventajas_e_inconvenientes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="33_ejercicios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="41_ventajas_e_inconvenientes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 </div>
