@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.2. Sunflower | Programación Multimedia y Dispositivos Móviles </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Beral" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-22"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Programación Multimedia y Dispositivos Móviles</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD01. Los dispositivos móviles</a></li>
+   <li><a href="1_los_dispositivos_mviles.html" class="daddy">1. Los dispositivos móviles</a>
+   <ul class="other-section">
+      <li><a href="11_caractersticas.html" class="no-ch">1.1. Características</a></li>
+      <li><a href="12_clasificacin_de_los_dispositivos_mviles.html" class="no-ch">1.2. Clasificación de los dispositivos móviles</a></li>
+      <li><a href="13_limitaciones_de_las_tecnologas_mviles.html" class="no-ch">1.3. Limitaciones de las tecnologías móviles</a></li>
+   </ul>
+   </li>
+   <li><a href="2_tecnologas_disponibles.html" class="daddy">2. Tecnologías disponibles</a>
+   <ul class="other-section">
+      <li><a href="21_tipos_de_tecnologa.html" class="no-ch">2.1. Tipos de tecnología</a></li>
+      <li><a href="22_datos_a_los_que_accede_un_dispositivo.html" class="no-ch">2.2. Datos a los que accede un dispositivo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_configuraciones_tipos_y_caractersticas_dispositivos_soportados.html" class="no-ch">3. Configuraciones. Tipos y características. Dispositivos soportados.</a></li>
+   <li><a href="4_perfiles_caractersticas_arquitectura_y_requerimientos_dispositivos_soportados.html" class="no-ch">4. Perfiles. Características. Arquitectura y requerimientos. Dispositivos soportados.</a></li>
+   <li><a href="5_entornos_de_desarrollo_integrado_ide.html" class="daddy">5. Entornos de desarrollo integrado (IDE)</a>
+   <ul class="other-section">
+      <li><a href="51_registros_de_la_aplicacin.html" class="no-ch">5.1. Registros de la aplicación</a></li>
+      <li><a href="52_instalacin_del_ide.html" class="no-ch">5.2. Instalación del IDE</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mdulos_para_el_desarrollo_de_aplicaciones.html" class="daddy">6. Módulos para el desarrollo de aplicaciones</a>
+   <ul class="other-section">
+      <li><a href="61_tipos_de_vista.html" class="no-ch">6.1. Tipos de vista</a></li>
+      <li><a href="62_estructura_de_mdulos.html" class="no-ch">6.2. Estructura de módulos</a></li>
+      <li><a href="63_mi_primer_proyecto.html" class="no-ch">6.3. Mi primer proyecto</a></li>
+   </ul>
+   </li>
+   <li><a href="7_emuladores.html" class="no-ch">7. Emuladores</a></li>
+   <li><a href="8_integracin_en_el_ide.html" class="daddy">8. Integración en el IDE</a>
+   <ul class="other-section">
+      <li><a href="61_creacin_de_un_dispositivo_virtual.html" class="no-ch">6.1. Creación de un dispositivo virtual</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="9_analizamos_una_app.html" class="current-page-parent daddy">9. Analizamos una App</a>
+   <ul>
+      <li><a href="91_inspector_layout.html" class="no-ch">9.1. Inspector Layout</a></li>
+      <li id="active"><a href="92_sunflower.html" class="active no-ch">9.2. Sunflower</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="91_inspector_layout.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">9.2. Sunflower</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id31">
+<div class="iDevice emphasis0" >
+<div id="ta31_113_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Veamos a continuación cómo podemos utilizar la herramienta Layout Inspector. Hagamos la prueba en una aplicación completa con una interfaz compleja, como, por<br>ejemplo, <strong>Sunflower</strong>, de Google, que podemos encontrar en GitHub.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Sunflower en GitHub</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="https://github.com/android/sunflower" target="_blank" rel="noopener">https://github.com/android/sunflower</a></p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><ol>
+<li><a href="https://gist.github.com/Nando98/2cd5fc89cb7cfbe9b5fba56220d05307" target="_blank" rel="noopener">Descargamos el proyecto</a> o lo <a href="https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository" target="_blank" rel="noopener">clonamos desde el repositorio</a>, y lo abrimos en Android Studio.</li>
+<li>Compilamos y lanzamos la aplicación a un emulador o dispositivo.</li>
+<li>Navega por la aplicación para tener una idea de cómo funciona.</li>
+<li>Vuelve a Android Studio, y haz clic en la opción de menú <strong>Tools &gt; Layout Inspector</strong>. Puede que aparezca el diálogo <strong>Choose Process</strong>; si es así, selecciona el proceso de la app que desees inspeccionar y haz clic en <strong>OK</strong>.</li>
+<li>Es posible que no se muestre el diálogo si Sunflower es la única aplicación depurable arrancada en ese momento en el emulador o terminal.</li>
+<li>Verás una pantalla como la que mostramos a continuación:</li>
+</ol>
+<p><a href="inspectorLayout.png" rel="lightbox"><img src="inspectorLayout.png" alt="Inspector Layout" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="301"></a></p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Podemos observar los diferentes paneles del <strong>Layout Inspector</strong>:</p>
+<ol>
+<li><strong>Component Tree o árbol de vistas</strong>: muestra la lista jerárquica de vistas y componentes gráficos que componen el <em>layout</em>.</li>
+<li><strong>Layout Display o visor de pantalla</strong>: renderiza el <em>layout</em> tal como se ve en la pantalla del terminal o emulador, señalando además los límites de cada componente. Es una especie de captura de pantalla de lo que muestra el dispositivo en un momento dado.</li>
+<li><strong>Layout Inspector toolbar o barra de herramientas del inspector</strong>: presenta algunas herramientas disponibles para analizar el <em>layout</em>.</li>
+<li><strong>Attributes o tabla de propiedades</strong>: muestra las propiedades gráficas del componente seleccionado actualmente.</li>
+</ol></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Puedes seleccionar cualquier componente gráfico haciendo clic sobre él, tanto en el árbol de vistas como en el visor de pantalla. En ese momento se mostrarán los atributos de la vista en la tabla de propiedades. Si quisieras seleccionar una vista que esté bajo otro componente, podrías hacer clic sobre ella en el árbol de vistas, o rotando el layout en el visor de pantalla y haciendo luego clic sobre la vista. La rotación permite una visión 3D de la superposición de las vistas una encima de otra, lo que puede resultar muy útil para depurar y diseñar la interfaz gráfica:</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="91_inspector_layout.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

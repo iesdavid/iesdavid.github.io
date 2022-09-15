@@ -10,7 +10,7 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Beral" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
-<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
 <script type="text/javascript" src="exe_effects.js"></script>
@@ -34,8 +34,39 @@
       <li id="active"><a href="13_limitaciones_de_las_tecnologas_mviles.html" class="active no-ch">1.3. Limitaciones de las tecnologías móviles</a></li>
    </ul>
    </li>
-   <li><a href="2_tecnologas_disponibles.html" class="no-ch">2. Tecnologías disponibles</a></li>
-   <li><a href="3_entornos_de_desarrollo_integrado_ide.html" class="no-ch">3. Entornos de desarrollo integrado (IDE)</a></li>
+   <li><a href="2_tecnologas_disponibles.html" class="daddy">2. Tecnologías disponibles</a>
+   <ul class="other-section">
+      <li><a href="21_tipos_de_tecnologa.html" class="no-ch">2.1. Tipos de tecnología</a></li>
+      <li><a href="22_datos_a_los_que_accede_un_dispositivo.html" class="no-ch">2.2. Datos a los que accede un dispositivo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_configuraciones_tipos_y_caractersticas_dispositivos_soportados.html" class="no-ch">3. Configuraciones. Tipos y características. Dispositivos soportados.</a></li>
+   <li><a href="4_perfiles_caractersticas_arquitectura_y_requerimientos_dispositivos_soportados.html" class="no-ch">4. Perfiles. Características. Arquitectura y requerimientos. Dispositivos soportados.</a></li>
+   <li><a href="5_entornos_de_desarrollo_integrado_ide.html" class="daddy">5. Entornos de desarrollo integrado (IDE)</a>
+   <ul class="other-section">
+      <li><a href="51_registros_de_la_aplicacin.html" class="no-ch">5.1. Registros de la aplicación</a></li>
+      <li><a href="52_instalacin_del_ide.html" class="no-ch">5.2. Instalación del IDE</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mdulos_para_el_desarrollo_de_aplicaciones.html" class="daddy">6. Módulos para el desarrollo de aplicaciones</a>
+   <ul class="other-section">
+      <li><a href="61_tipos_de_vista.html" class="no-ch">6.1. Tipos de vista</a></li>
+      <li><a href="62_estructura_de_mdulos.html" class="no-ch">6.2. Estructura de módulos</a></li>
+      <li><a href="63_mi_primer_proyecto.html" class="no-ch">6.3. Mi primer proyecto</a></li>
+   </ul>
+   </li>
+   <li><a href="7_emuladores.html" class="no-ch">7. Emuladores</a></li>
+   <li><a href="8_integracin_en_el_ide.html" class="daddy">8. Integración en el IDE</a>
+   <ul class="other-section">
+      <li><a href="61_creacin_de_un_dispositivo_virtual.html" class="no-ch">6.1. Creación de un dispositivo virtual</a></li>
+   </ul>
+   </li>
+   <li><a href="9_analizamos_una_app.html" class="daddy">9. Analizamos una App</a>
+   <ul class="other-section">
+      <li><a href="91_inspector_layout.html" class="no-ch">9.1. Inspector Layout</a></li>
+      <li><a href="92_sunflower.html" class="no-ch">9.2. Sunflower</a></li>
+   </ul>
+   </li>
 </ul>
 </nav>
 <div id='topPagination'>
@@ -52,29 +83,41 @@
 <div class="iDevice_inner">
 <div class="iDevice_content_wrapper">
 <div id="ta5_115_2" class="block iDevice_content">
-<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Los dispositivos móviles plantean serias limitaciones a la hora de ejecutar aplicaciones que debemos tener en consideración durante el desarrollo de la aplicación para tener un producto de calidad y robusto.&nbsp;</p>
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><figure class="exe-figure exe-image float-right license-CC0" style="width: 360px;"><img src="2-pin-2-pin-plug-access-accessories-accessory-adapter-1437963-pxhere.com.jpg" alt="Móvil con cargador" style="float: right; margin-right: 10px; margin-left: 10px;" width="320" height="213">
+<figcaption class="figcaption"><a href="https://pxhere.com/en/photographer/1039607" target="_blank" class="author" rel="noopener">https://pxhere.com</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/publicdomain/zero/1.0/deed.es" rel="license nofollow noopener" target="_blank" title="Creative Commons (CC0)">CC0</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Los dispositivos móviles plantean serias limitaciones a la hora de ejecutar aplicaciones que debemos tener en consideración durante el desarrollo de la aplicación para tener un producto de calidad y robusto.&nbsp;</p>
 <p>Por tanto, antes de comenzar a desarrollar software para alguno de estos dispositivos, es necesario ser conscientes de las limitaciones con las que nos podemos encontrar en estos aparatos. ¿Cuáles son las restricciones a las que nos vamos a tener que enfrentar?</p>
 <p>Algunas de estas restricciones son:</p>
 <ul>
-<li>Suministro de energía limitado (normalmente dependiente de baterías).</li>
-<li>Procesadores con capacidad de cómputo reducida en dispositivos de gama baja. Suelen tener una baja frecuencia de reloj por la necesidad de ahorrar energía. En dispositivos de gama media alta, la capacidad de cómputo es alta.</li>
-<li>Poca memoria principal (RAM) en dispositivos de gama baja. En dispositivos de gama media la memoria no es una limitación.</li>
-<li>Almacenamiento de datos limitado. A pesar de contar con altas capacidades las aplicaciones y archivos son cada vez más pesados.</li>
-<li>Conexión a red. Aunque el ancho de banda puede ser reducido en función de tarifas.</li>
+<li>Suministro de <strong>energía limitado</strong> (normalmente dependiente de baterías).</li>
+<li>Procesadores con <strong>capacidad de cómputo reducida</strong> en dispositivos de gama baja. Suelen tener una baja frecuencia de reloj por la necesidad de ahorrar energía. En dispositivos de gama media alta, la capacidad de cómputo es alta.</li>
+<li>Poca <strong>memoria principal (RAM)</strong> en dispositivos de gama baja. En dispositivos de gama media la memoria no es una limitación.</li>
+<li><strong>Almacenamiento de datos limitado</strong>. A pesar de contar con altas capacidades las aplicaciones y archivos son cada vez más pesados.</li>
+<li><strong>Conexión a red</strong>. Aunque el ancho de banda puede ser reducido en función de tarifas.</li>
 </ul>
 <p>Este tipo de restricciones, y algunas otras que dependerán de cada dispositivo en concreto, habrán de ser tenidas muy en cuenta a la hora del análisis y diseño de una aplicación "móvil", pues no podemos pretender, que esa aplicación pueda contener la misma funcionalidad, que la que podemos encontrar habitualmente en un programa que es ejecutado en un ordenador de sobremesa o un portátil.</p>
 <p>Estas limitaciones hoy en día no vienen dadas tanto por la capacidad de procesamiento o memoria como por el entorno en el que se utilizan estos dispositivos. Entre ellas, definimos las más relevantes:</p>
 <div class="exe-fx exe-accordion">
 <h2>Desconexión</h2>
-<p>Al tratarse de dispositivos que podemos llevar con nosotros en cualquier momento, lugar y permanentemente conectados, estos pueden sufrir desconexiones tanto de forma total como parcial, lo que, en el caso de las aplicaciones que utilicen datos de un servidor, provocará que se vean afectadas por la variabilidad de la conexión. La aplicación que desarrollemos debe controlar esta situación y poder ofrecer un mecanismo que asegure, en la medida de lo posible, la disponibilidad de los datos.</p>
+<p>Al tratarse de dispositivos que podemos llevar con nosotros en cualquier momento, lugar y permanentemente conectados, estos pueden sufrir <strong>desconexiones</strong> tanto de forma total como parcial, lo que, en el caso de las aplicaciones que utilicen datos de un servidor, provocará que se vean afectadas por la variabilidad de la conexión. La aplicación que desarrollemos debe controlar esta situación y poder ofrecer un mecanismo que asegure, en la medida de lo posible, la disponibilidad de los datos.</p>
 <h2>Seguridad</h2>
-<p>En lo que se refiere seguridad física, la limitación viene dada por la propia virtud del dispositivo: al ser ligeros y fáciles de llevar, son a la vez susceptibles de ser más fácilmente sustraídos.<br>En el ámbito de la seguridad de la información, este tipo de dispositivos son más vulnerables, al permitir conectarse a redes poco seguras o la posibilidad de instalar aplicaciones de dudosa procedencia, unido a la gran cantidad de sensores, como cámaras, GPS o micrófonos, de que disponen. En el desarrollo de aplicaciones debemos considerar usar los permisos mínimos<br>necesarios para el funcionamiento de la aplicación. En el caso de que desarrollemos una aplicación con uso de datos, siempre deben viajar bajo una conexión segura o cifrada para evitar que los datos sean expuestos.</p>
+<p>En lo que se refiere seguridad física, la limitación viene dada por la propia virtud del dispositivo: al ser ligeros y fáciles de llevar, son a la vez susceptibles de ser más fácilmente <strong>sustraídos</strong>.<br>En el ámbito de la seguridad de la información, este tipo de dispositivos son más vulnerables, al permitir conectarse a <strong>redes poco seguras</strong> o la posibilidad de instalar <strong>aplicaciones de dudosa procedencia</strong>, unido a la gran cantidad de sensores, como cámaras, GPS o micrófonos, de que disponen. En el desarrollo de aplicaciones debemos considerar usar los permisos mínimos necesarios para el funcionamiento de la aplicación. En el caso de que desarrollemos una aplicación con uso de datos, siempre deben viajar bajo una <strong>conexión segura o cifrada</strong> (VPN) para evitar que los datos sean expuestos.</p>
 <h2>Consumo de batería</h2>
-<p>Por su propia naturaleza de ser lo más ligeros posible, la batería suele ser uno de los elementos más comprometidos, y el diseño de las aplicaciones debe tener en consideración qué recursos utiliza en cada momento, liberando aquellos que no sean necesarios para ahorrar los tan preciados miliamperios de la batería.</p>
+<p>Por su propia naturaleza de ser lo más ligeros posible, la batería suele ser uno de los elementos más comprometidos, y el diseño de las aplicaciones debe tener en consideración qué recursos utiliza en cada momento, <strong>liberando</strong> aquellos que no sean necesarios para ahorrar los tan preciados miliamperios de la batería.</p>
 <h2>Memoria y almacenamiento</h2>
-<p>A día de hoy, los dispositivos móviles cada vez incorporan más memoria y capacidad de almacenamiento, aunque no por ello debemos desaprovecharla, ya que es un recurso limitado que no podemos ampliar sin adquirir un nuevo dispositivo. Por ello, las aplicaciones móviles deben optimizar el uso de los recursos, ya que también debe compartirlos con otras aplicaciones.</p>
+<p>A día de hoy, los dispositivos móviles cada vez incorporan más memoria y capacidad de almacenamiento, aunque no por ello debemos desaprovecharla, ya que es un recurso limitado que no podemos ampliar sin adquirir un nuevo dispositivo. Por ello, las aplicaciones móviles deben <strong>optimizar el uso de los recursos</strong>, ya que también debe compartirlos con otras aplicaciones.</p>
 </div>
-<p>Por otro lado, no todo va a ser restricciones. También habrá que tener en consideración que esta tecnología va a aportar una serie de ventajas muy importantes: movilidad, poco peso, pequeño tamaño, facilidad para el transporte, conectividad a diversos tipos de redes de comunicaciones (mensajería SMS y MMS; voz; Internet; Bluetooth; infrarrojos; radiofrecuencia, etc.) o, incluso, acceso a datos obtenidos a partir de sensores. Ésas serán las ventajas que podrás explotar en tus aplicaciones.</p></div></div></section></div>
+<p>Por otro lado, no todo va a ser restricciones. También habrá que tener en consideración que esta tecnología va a aportar una serie de ventajas muy importantes:</p>
+<ul>
+<li><strong>movilidad</strong>,</li>
+<li><strong>poco peso</strong>,</li>
+<li><strong>pequeño tamaño</strong>,</li>
+<li>facilidad para el <strong>transporte</strong>,</li>
+<li>conectividad a diversos tipos de <strong>redes de comunicaciones</strong> (mensajería SMS y MMS; voz; Internet; Bluetooth; infrarrojos; radiofrecuencia, etc.)</li>
+<li>acceso a datos obtenidos a partir de <strong>sensores</strong>.</li>
+</ul>
+<p>Ésas serán las ventajas que podrás explotar en tus aplicaciones.</p></div></div></section></div>
 </div>
 </div>
 </div>

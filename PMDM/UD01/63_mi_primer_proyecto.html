@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.3. Mi primer proyecto | Programación Multimedia y Dispositivos Móviles </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Beral" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Programación Multimedia y Dispositivos Móviles</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD01. Los dispositivos móviles</a></li>
+   <li><a href="1_los_dispositivos_mviles.html" class="daddy">1. Los dispositivos móviles</a>
+   <ul class="other-section">
+      <li><a href="11_caractersticas.html" class="no-ch">1.1. Características</a></li>
+      <li><a href="12_clasificacin_de_los_dispositivos_mviles.html" class="no-ch">1.2. Clasificación de los dispositivos móviles</a></li>
+      <li><a href="13_limitaciones_de_las_tecnologas_mviles.html" class="no-ch">1.3. Limitaciones de las tecnologías móviles</a></li>
+   </ul>
+   </li>
+   <li><a href="2_tecnologas_disponibles.html" class="daddy">2. Tecnologías disponibles</a>
+   <ul class="other-section">
+      <li><a href="21_tipos_de_tecnologa.html" class="no-ch">2.1. Tipos de tecnología</a></li>
+      <li><a href="22_datos_a_los_que_accede_un_dispositivo.html" class="no-ch">2.2. Datos a los que accede un dispositivo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_configuraciones_tipos_y_caractersticas_dispositivos_soportados.html" class="no-ch">3. Configuraciones. Tipos y características. Dispositivos soportados.</a></li>
+   <li><a href="4_perfiles_caractersticas_arquitectura_y_requerimientos_dispositivos_soportados.html" class="no-ch">4. Perfiles. Características. Arquitectura y requerimientos. Dispositivos soportados.</a></li>
+   <li><a href="5_entornos_de_desarrollo_integrado_ide.html" class="daddy">5. Entornos de desarrollo integrado (IDE)</a>
+   <ul class="other-section">
+      <li><a href="51_registros_de_la_aplicacin.html" class="no-ch">5.1. Registros de la aplicación</a></li>
+      <li><a href="52_instalacin_del_ide.html" class="no-ch">5.2. Instalación del IDE</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_mdulos_para_el_desarrollo_de_aplicaciones.html" class="current-page-parent daddy">6. Módulos para el desarrollo de aplicaciones</a>
+   <ul>
+      <li><a href="61_tipos_de_vista.html" class="no-ch">6.1. Tipos de vista</a></li>
+      <li><a href="62_estructura_de_mdulos.html" class="no-ch">6.2. Estructura de módulos</a></li>
+      <li id="active"><a href="63_mi_primer_proyecto.html" class="active no-ch">6.3. Mi primer proyecto</a></li>
+   </ul>
+   </li>
+   <li><a href="7_emuladores.html" class="no-ch">7. Emuladores</a></li>
+   <li><a href="8_integracin_en_el_ide.html" class="daddy">8. Integración en el IDE</a>
+   <ul class="other-section">
+      <li><a href="61_creacin_de_un_dispositivo_virtual.html" class="no-ch">6.1. Creación de un dispositivo virtual</a></li>
+   </ul>
+   </li>
+   <li><a href="9_analizamos_una_app.html" class="daddy">9. Analizamos una App</a>
+   <ul class="other-section">
+      <li><a href="91_inspector_layout.html" class="no-ch">9.1. Inspector Layout</a></li>
+      <li><a href="92_sunflower.html" class="no-ch">9.2. Sunflower</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="62_estructura_de_mdulos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_emuladores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.3. Mi primer proyecto</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id21">
+<div class="iDevice emphasis0" >
+<div id="ta21_123_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para comenzar el desarrollo de cualquier aplicación, deberemos crear un proyecto para familiarizarnos con el entorno y la estructura. Comenzamos por crear un proyecto llamado IlernaTodo al que, a lo largo de los siguientes capítulos, le añadiremos funcionalidad hasta crear una aplicación real y funcional.</p>
+<p>Al arrancar Android Studio, en la página de bienvenida seleccionamos la opción <strong>New Project.</strong></p>
+<p><strong><img src="newProject.png" alt="Nuevo proyecto" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="427"></strong></p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En el siguiente paso nos muestra una serie de plantillas predefinidas, según el tipo de aplicación que vamos a desarrollar. Para este proyecto seleccionaremos Empty Activity, esto creará un proyecto con una única pantalla en blanco.</p>
+<p><img src="projectBlank.png" alt="Proyecto blanco" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="525"></p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En este paso indicaremos el nombre de la aplicación y el <strong>package</strong>, así como el directorio donde se guardarán los archivos. En este punto también seleccionaremos el lenguaje que utilizaremos para el desarrollo: en este caso, será <strong>Kotlin</strong>.</p>
+<p>Por último, indicaremos el <strong>API Level</strong> mínimo con que será compatible la aplicación. Veremos este concepto en los siguientes temas con más detalle y la importancia de su selección.</p>
+<p><img src="emptyActivity.png" alt="Actividad vacía" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="504"></p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Tras un tiempo de preparación y ejecución de varias tareas que realiza Android Studio, tendremos el proyecto preparado para comenzar a desarrollar.</p>
+<p><a href="proyectoListo.png" rel="lightbox"><img src="proyectoListo.png" alt="Proyecto listo" style="display: block; margin-left: auto; margin-right: auto;" width="559" height="297"></a></p>
+<p>Llegados a este punto, os invitamos a navegar por la estructura del proyecto que ha generado Android Studio, localizar los ficheros más relevantes y dónde se guarda el código de la aplicación y el diseño de las pantallas.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_reflection" id="id22">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_reflection.png)"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_124_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Una vez familiarizados con esta estructura, para mantener el código organizado debéis crear un módulo de tipo biblioteca y responder a las siguientes preguntas:</p>
+<ul>
+<li>¿Qué diferencias hay entre la estructura del módulo aplicación y del módulo que hemos creado?</li>
+<li>¿En qué carpeta y módulo debemos colocar el código que queremos compartir con otros módulos?</li>
+<li>¿Cuántos archivos build.gradle tenemos después de crear el módulo y por qué?</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="62_estructura_de_mdulos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_emuladores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
