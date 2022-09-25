@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.3. Componentes básicos | Programación Multimedia y Dispositivos Móviles </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Beral" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-26"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Programación Multimedia y Dispositivos Móviles</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD01. Los dispositivos móviles</a></li>
+   <li><a href="1_los_dispositivos_mviles.html" class="daddy">1. Los dispositivos móviles</a>
+   <ul class="other-section">
+      <li><a href="11_caractersticas.html" class="no-ch">1.1. Características</a></li>
+      <li><a href="12_clasificacin_de_los_dispositivos_mviles.html" class="no-ch">1.2. Clasificación de los dispositivos móviles</a></li>
+      <li><a href="13_limitaciones_de_las_tecnologas_mviles.html" class="no-ch">1.3. Limitaciones de las tecnologías móviles</a></li>
+   </ul>
+   </li>
+   <li><a href="2_tecnologas_disponibles.html" class="daddy">2. Tecnologías disponibles</a>
+   <ul class="other-section">
+      <li><a href="21_tipos_de_tecnologa.html" class="no-ch">2.1. Tipos de tecnología</a></li>
+      <li><a href="22_datos_a_los_que_accede_un_dispositivo.html" class="no-ch">2.2. Datos a los que accede un dispositivo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_configuraciones_tipos_y_caractersticas_dispositivos_soportados.html" class="no-ch">3. Configuraciones. Tipos y características. Dispositivos soportados.</a></li>
+   <li><a href="4_perfiles_arquitectura_y_requerimientos_dispositivos_soportados.html" class="no-ch">4. Perfiles. Arquitectura y requerimientos. Dispositivos soportados.</a></li>
+   <li><a href="5_entornos_de_desarrollo_integrado_ide.html" class="daddy">5. Entornos de desarrollo integrado (IDE)</a>
+   <ul class="other-section">
+      <li><a href="51_registros_de_la_aplicacin.html" class="no-ch">5.1. Registros de la aplicación</a></li>
+      <li><a href="52_instalacin_del_ide.html" class="no-ch">5.2. Instalación del IDE</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mdulos_para_el_desarrollo_de_aplicaciones.html" class="daddy">6. Módulos para el desarrollo de aplicaciones</a>
+   <ul class="other-section">
+      <li><a href="61_tipos_de_vista.html" class="no-ch">6.1. Tipos de vista</a></li>
+      <li><a href="62_estructura_de_mdulos.html" class="no-ch">6.2. Estructura de módulos</a></li>
+      <li><a href="63_mi_primer_proyecto.html" class="no-ch">6.3. Mi primer proyecto</a></li>
+   </ul>
+   </li>
+   <li><a href="7_emuladores.html" class="no-ch">7. Emuladores</a></li>
+   <li><a href="8_integracin_en_el_ide.html" class="daddy">8. Integración en el IDE</a>
+   <ul class="other-section">
+      <li><a href="61_creacin_de_un_dispositivo_virtual.html" class="no-ch">6.1. Creación de un dispositivo virtual</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="9_analizamos_una_app.html" class="current-page-parent daddy">9. Analizamos una App</a>
+   <ul>
+      <li><a href="91_activity__layout.html" class="no-ch">9.1. Activity &amp; Layout</a></li>
+      <li><a href="92_layout_inspector.html" class="no-ch">9.2. Layout Inspector</a></li>
+      <li id="active"><a href="93_componentes_bsicos.html" class="active no-ch">9.3. Componentes básicos</a></li>
+      <li><a href="92_sunflower.html" class="no-ch">9.2. Sunflower</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="92_layout_inspector.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="92_sunflower.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">9.3. Componentes básicos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id44">
+<div class="iDevice emphasis0" >
+<div id="ta44_118_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Ahora que ya hemos iniciado, vamos a añadir 2 componentes más:</p>
+<ul>
+<li>un <strong>TextView</strong>. A modo de etiqueta para que muestre un texto, por ejemplo: ¿Cuál es tu nombre?</li>
+<li>un <strong>EditText</strong>. Es un cuadro de texto donde poder escribir. En el ejemplo anterior, la respuesta a la pregunta.</li>
+</ul>
+<p>Simplemente se debe arrastar los dos componentes al centro de la pantalla (uno debajo de otro) y le asignaremos un <strong>ID</strong>. Los componentes se llaman «<strong>TextView</strong>» y «<strong>Plain Text</strong>» en la columna izquierda.</p>
+<p>Cuando se inserten en la pantalla, debemos referenciarlos. Para este ejemplo, cada elemento se ha referenciado con el posterior: la etiqueta con el cuadro de texto y, este, con el botón.</p>
+<p>Se obtiene algo como esta imagen:</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<figure class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 476px;"><img src="ejemplo9_3a.png" alt="Código XML del ejemplo 9.3" title="Código XML del ejemplo" width="476" height="700">
+<figcaption class="figcaption"><a href="Elaboración propia" target="_blank" class="author" rel="noopener">Elaboración propia</a>. <span class="title"><em>Código XML del ejemplo</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+<div class="exe-col exe-col-2">
+<figure class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 402px;"><img src="ejemplo9_3b.png" alt="Pantalla del ejemplo 9.3" title="Pantalla del ejemplo" width="402" height="700">
+<figcaption class="figcaption"><a href="Elaboración propia" target="_blank" class="author" rel="noopener">Elaboración propia</a>. <span class="title"><em>Pantalla del ejemplo</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_piece" id="id45">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_piece.png)"><h1 class="iDeviceTitle">Ajustando el código</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta45_119_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para mejorar el aspecto, arreglaremos el XML asignando algunos atributos.</p>
+<p>Modificando los atributos desde el código, empezaremos por el TextView añadiendo la siguiente línea:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>android:id="@+id/tvNombre"</code></pre>
+</div>
+</div>
+<p>Lo primero que hacemos es llamar a Android, accediendo a la propiedad <strong>ID</strong>. Acto seguido, con <strong>@+id</strong> estamos creando una referencia del componente en el archivo <strong>R.java</strong> de android y, para acabar, se le da el nombre que se quiera, en este caso, <strong>tvNombre</strong>. Aunque se puede añadir en cualquier parte del XML, la línea del ID como norma general en las prácticas del buen uso, suele ir la primera.</p>
+<p>Lo siguiente será cambiar el texto que trae por defecto por el que queremos. Así que localizamos la línea “android:text=»TextView” y cambiamos el texto a “¿Cuál es tu nombre?”.</p>
+<p>Ahora ya lo tendríamos listo, pero en comparación con el EditText, se ve bastante pequeño, así que accederemos a un atributo más.</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>android:textAppearance="@style/TextAppearance.AppCompat.Title"</code></pre>
+</div>
+</div>
+<p>Es muy parecida a las anteriores, <strong>textAppearance</strong> lo único que hace es decirle al componente que su apariencia será controlada a través de un estilo. Un style o estilo es simplemente una serie de atributos reutilizables. Imaginemos que tenemos una App que tiene varios textos iguales (fondo de un color, un tamaño de texto predefinido, etc), podemos añadir los mismos atributos a cada uno de ellos, con los riesgos que conlleva (si luego hay que cambiar el color del texto, habría que ir a todas las pantallas que llevasen textos y cambiarlos uno a uno) o podemos asignarles un mismo estilo al que todos accederán, así si se cambia algo, automáticamente todos los textos lo harían. Piensa en el <strong>CSS</strong>.</p>
+<p>Nos habrá quedado algo así:</p>
+<figure class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 560px;"><a href="ejemplo9_3c.png" rel="lightbox"><img src="ejemplo9_3c.png" alt="Pantalla con estilo ejemplo 9.3" title="Pantalla con estilo" width="560" height="476"></a>
+<figcaption class="figcaption"><a href="Elaboración propia" target="_blank" class="author" rel="noopener">Elaboración propia</a>. <span class="title"><em>Pantalla con estilo</em></span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></figcaption>
+</figure></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Ahora nos toca el <strong>EditText</strong> que sería hacer básicamente lo mismo, añadir un <strong>ID</strong> y listo. Este se llamará <strong>etNombre</strong>. Habrás observado que también se han generado algunas líneas automáticamente:</p>
+<ul>
+<li><strong>android:layout_below</strong>: Este atributo es solo para los <strong>RelativeLayout</strong> y los que hereden de él. Además del <strong>below</strong> tenemos algunos muy parecidos como <strong>layout_above</strong>, que haría lo mismo pero en vez de ponerse debajo, se pondría encima.</li>
+<li><strong>android:layout_centerHorizontal="true"</strong>: Nos pondrá siempre el componente en el centro de la vista en el eje horizontal. Así aunque el móvil sea muy grande o muy pequeño siempre se mantendrá centrado.</li>
+<li><strong>android:ems="10"</strong>: Añade una anchura al EditText suficiente para que se vean X caracteres en la pantalla. Por ejemplo ahora tenemos puesto 10, si se añaden más, irán desapareciendo de la vista, probad a cambiar el número para que no os quede duda alguna.</li>
+<li><strong>android:inputType="textPersonName"</strong>: El atributo inputType nos permite que una vez hagamos click en el editText, el teclado que se muestre, esté adecuado al tipo de información que veremos. Prueba a cambiar "textPersonName" por "textWebEmailAddress". ¿Notas alguna diferencia?</li>
+</ul>
+<p>Por último tenemos un text en el EditText. El problema de dicho atributo en este tipo de componentes es que cuando hagamos click en él, ese texto tendremos que borrarlo para añadir el nuestro. Para evitar esto, con <strong>android:hint="Nombre"</strong>, cuando el usuario escriba, el texto desaparecerá y no habrá que borrarlo previamente.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="92_layout_inspector.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="92_sunflower.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

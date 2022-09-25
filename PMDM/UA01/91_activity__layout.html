@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.1. Activity &amp; Layout | Programación Multimedia y Dispositivos Móviles </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Beral" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-25"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Programación Multimedia y Dispositivos Móviles</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD01. Los dispositivos móviles</a></li>
+   <li><a href="1_los_dispositivos_mviles.html" class="daddy">1. Los dispositivos móviles</a>
+   <ul class="other-section">
+      <li><a href="11_caractersticas.html" class="no-ch">1.1. Características</a></li>
+      <li><a href="12_clasificacin_de_los_dispositivos_mviles.html" class="no-ch">1.2. Clasificación de los dispositivos móviles</a></li>
+      <li><a href="13_limitaciones_de_las_tecnologas_mviles.html" class="no-ch">1.3. Limitaciones de las tecnologías móviles</a></li>
+   </ul>
+   </li>
+   <li><a href="2_tecnologas_disponibles.html" class="daddy">2. Tecnologías disponibles</a>
+   <ul class="other-section">
+      <li><a href="21_tipos_de_tecnologa.html" class="no-ch">2.1. Tipos de tecnología</a></li>
+      <li><a href="22_datos_a_los_que_accede_un_dispositivo.html" class="no-ch">2.2. Datos a los que accede un dispositivo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_configuraciones_tipos_y_caractersticas_dispositivos_soportados.html" class="no-ch">3. Configuraciones. Tipos y características. Dispositivos soportados.</a></li>
+   <li><a href="4_perfiles_arquitectura_y_requerimientos_dispositivos_soportados.html" class="no-ch">4. Perfiles. Arquitectura y requerimientos. Dispositivos soportados.</a></li>
+   <li><a href="5_entornos_de_desarrollo_integrado_ide.html" class="daddy">5. Entornos de desarrollo integrado (IDE)</a>
+   <ul class="other-section">
+      <li><a href="51_registros_de_la_aplicacin.html" class="no-ch">5.1. Registros de la aplicación</a></li>
+      <li><a href="52_instalacin_del_ide.html" class="no-ch">5.2. Instalación del IDE</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mdulos_para_el_desarrollo_de_aplicaciones.html" class="daddy">6. Módulos para el desarrollo de aplicaciones</a>
+   <ul class="other-section">
+      <li><a href="61_tipos_de_vista.html" class="no-ch">6.1. Tipos de vista</a></li>
+      <li><a href="62_estructura_de_mdulos.html" class="no-ch">6.2. Estructura de módulos</a></li>
+      <li><a href="63_mi_primer_proyecto.html" class="no-ch">6.3. Mi primer proyecto</a></li>
+   </ul>
+   </li>
+   <li><a href="7_emuladores.html" class="no-ch">7. Emuladores</a></li>
+   <li><a href="8_integracin_en_el_ide.html" class="daddy">8. Integración en el IDE</a>
+   <ul class="other-section">
+      <li><a href="61_creacin_de_un_dispositivo_virtual.html" class="no-ch">6.1. Creación de un dispositivo virtual</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="9_analizamos_una_app.html" class="current-page-parent daddy">9. Analizamos una App</a>
+   <ul>
+      <li id="active"><a href="91_activity__layout.html" class="active no-ch">9.1. Activity &amp; Layout</a></li>
+      <li><a href="92_layout_inspector.html" class="no-ch">9.2. Layout Inspector</a></li>
+      <li><a href="93_componentes_bsicos.html" class="no-ch">9.3. Componentes básicos</a></li>
+      <li><a href="92_sunflower.html" class="no-ch">9.2. Sunflower</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="9_analizamos_una_app.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="92_layout_inspector.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">9.1. Activity &amp; Layout</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_pieces" id="id40">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_pieces.png)"><h1 class="iDeviceTitle">Los ficheros Activity</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta40_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Cuando se genera un proyecto, estaremos delante de nuestra primera activity, llamada <strong>MainActivity</strong>. Una Activity es cada una de las pantallas que ve el usuario, en ellas se declaran los métodos (funciones) que se pueden hacer. Por ejemplo, imaginemos que la aplicación es de cocina, pues una activity sería cortar las verduras, hervir, freír, etc. Las activities tienen dos partes, la lógica y la visual (los layouts que veremos a continuación).</p>
+<p>En la parte lógica, que la desarrollaremos en Kotlin, daremos respuesta a cada unas de las interacciones del usuario. Si seguimos con el ejemplo anterior, imaginemos que el usuario pulsa el botón de freír, este evento llegaría a nuestra clase y ahí ejecutamos la acción. No quiero entrar más en detalle, porque lo veremos más tarde.</p>
+<p>La activity es básicamente una clase <strong>kotlin (.kt)</strong> que extiende de <strong>AppCompatActivity</strong>, que tiene los métodos necesarios para poder comunicarnos con Android. Así que, por defecto, siempre tendremos la función “<strong>OnCreate</strong>” que será el encargado de crear nuestra actividad y asignarle un layout:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package com.example.appejemplo
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_arts" id="id41">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_arts.png)"><h1 class="iDeviceTitle">Layout</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta41_115_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>El layout es la segunda parte de la actividad, la interfaz. En ella se agregarán los componentes como los botones, imágenes y demás. Estos archivos son muy simples y se pueden completar arrastrando los componentes o picándolos en <strong>XML</strong>.</p>
+<p>Para acceder a él, debemos ir a la estructura del proyecto, que está en el lado izquierdo en la ruta <strong>app/res/layout</strong>.</p>
+<p>Con hacer doble click sobre el archivo se nos abrirá y veremos algo así:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;relativelayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    tools:context=".MainActivity"&gt;
+&lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" /&gt;
+&lt;/relativelayout&gt;
+</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id42">
+<div class="iDevice emphasis0" >
+<div id="ta42_116_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>El código anterior, generado por defecto, está en formato XML anidado. Se observa un elemento padre “<strong>RelativeLayout</strong>” y dentro un “<strong>TextView</strong>” que es un componente muy básico para mostrar texto no editable en la pantalla. Lo que se conoce como <strong>"Etiqueta"</strong>.</p>
+<p>Si se pulsa en el icono superior de la derecha, con la etiqueta <strong>Split</strong>, podremos ver el diseño de la vista a tiempo real.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_arts" id="id43">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_arts.png)"><h1 class="iDeviceTitle">Trabajando con los Layouts</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta43_117_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Ahora vamos a ver la parte más visual del layout, para ello, en la parte superior derecha, se muestran tres botones: "<strong>Code</strong>", "<strong>Split</strong>" y "<strong>Design</strong>". Desde aquí podemos cambiar la forma de trabajar con las vistas. Si nos vamos a <strong>Design</strong>, veremos que el código cambia por la vista (a la derecha) y han aparecido nuevas columnas (a la izquierda).</p>
+<p>Desde aquí, si podemos manipular los componentes que están dentro de la vista, e incluso añadir nuevos.</p>
+<div class="exe-fx exe-tabs">
+<h2>Paso 1</h2>
+<p>Vamos a coger un botón de la caja de componentes que está en la esquina superior izquierda.</p>
+<h2>Paso 2</h2>
+<figure class="exe-figure exe-image float-right license-CC-BY-NC-SA" style="width: 200px;"><a href="botonUbicado.png" rel="lightbox"><img src="botonUbicado.png" alt="Botón ubicado" title="Botón ubicado" style="margin-right: 10px; margin-left: 10px;" width="200" hspace="10" height="336"></a>
+<figcaption class="figcaption"><span class="author">Elaboración propia</span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p><br>Pulsamos en el botón y lo arrastramos a la parte de la vista que queramos. Comprobarás que esto último es imposible. ¿Por qué?</p>
+<p>El botón debe tomar <strong>referencias</strong> de algún otro elemento. Lo normal es que se fije en una posición relativa a los bordes pero, como veremos más adelante, por eficiencia no es lo más recomendable.</p>
+<p>Para este ejemplo, usaremos los bordes:</p>
+<ol>
+<li>Pulsa en cada círculo ubicado en los laterales del botón y arrástralos a cada borde.</li>
+<li>Con dos círculos que posiciones, será suficiente.</li>
+<li>Ya puedes colocar el botón donde desees.</li>
+</ol>
+<h2>Paso 3</h2>
+<p>Con el botón aún seleccionado, nos aparecerán una serie de campos en el lateral derecho, estos, son los <strong>atributos</strong> del botón.</p>
+<p>Los podemos editar desde aquí o desde el <strong>XML</strong>. Por facilidad, lo haremos desde aquí, pero para mayor rapidez se hace desde el código, pues es la forma más óptima para dejar nuestras vistas impolutas.</p>
+<p>Los tres atributos básicos que debemos añadir:</p>
+<ul>
+<li><strong>ID</strong>: Es el identificador único del componente, con él, podremos definir en nuestra activity dicho componente para poder trabajar con él. Como es un botón que nos hará cambiar de activity, lo llamaré “<strong>btnChangeActivity</strong>”.</li>
+<li><strong>layout_width</strong>: Este campo hace referencia a la <strong>anchura</strong> del componente. Este campo es obligatorio y se puede fijar la anchura a través de dos opciones:
+<ul>
+<li>“<strong>Wrap_content</strong>” que añadirá una anchura lo suficientemente grande para incluir todo el contenido (en este caso el texto “BUTTON”)</li>
+<li>“<strong>Match_parent</strong>” que cogerá todo el espacio que su padre (en este caso el RelativeLayout) le permita.</li>
+</ul>
+</li>
+<li><strong>layout_height</strong>: Permite asignarle la altura a cada componente. Sigue el mismo comportamiento que el “layout_width”.</li>
+</ul>
+<p>Para este ejercicio se dejarán la anchura y altura en “<strong>wrap_content</strong>” pero se puede cambiar por “<strong>match_parent</strong>” para comprobar y entender el comportamiento.</p>
+<h2>Paso 4</h2>
+<p>Finalmente, obtenemos algo como esto:</p>
+<figure class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 561px;"><a href="botonUbicado2.png" rel="lightbox"><img src="botonUbicado2.png" alt="Botón en modo wrap_content" title="Botón en modo wrap_content" width="561" height="469"></a>
+<figcaption class="figcaption"><span class="author">Elaboración propia</span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="9_analizamos_una_app.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="92_layout_inspector.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
