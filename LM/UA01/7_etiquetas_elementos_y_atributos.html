@@ -2,23 +2,27 @@
 <html lang="es">
 <head>
 <link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>Referencias | UA1. Los lenguajes de marcas </title>
+<title>7. Etiquetas, elementos y atributos | UA1. Los lenguajes de marcas </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
 <meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <link rel="stylesheet" type="text/css" href="udl-content.css" />
 <script type="text/javascript" src="udl-content.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">UA1. Los lenguajes de marcas</div></header>
@@ -39,32 +43,47 @@
       <li><a href="65_comparacin_de_xml_con_html.html" class="no-ch">6.5. Comparación de XML con HTML</a></li>
    </ul>
    </li>
-   <li><a href="7_etiquetas_elementos_y_atributos.html" class="no-ch">7. Etiquetas, elementos y atributos</a></li>
+   <li id="active"><a href="7_etiquetas_elementos_y_atributos.html" class="active no-ch">7. Etiquetas, elementos y atributos</a></li>
    <li><a href="7_actividades.html" class="no-ch">7. Actividades</a></li>
-   <li id="active"><a href="referencias.html" class="active no-ch">Referencias</a></li>
+   <li><a href="referencias.html" class="no-ch">Referencias</a></li>
 </ul>
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="7_actividades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="65_comparacin_de_xml_con_html.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_actividades.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">Referencias</h1></header>
-<article class="iDevice_wrapper UDLcontentIdevice" id="id13">
+<header id="nodeDecoration"><h1 id="nodeTitle">7. Etiquetas, elementos y atributos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id33">
 <div class="iDevice emphasis0" >
-<div id="ta13_115_2" class="block iDevice_content">
-<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><ul>
-<li><a href="fasciculo-2.pdf" target="_blank" rel="noopener">Orden 16 de junio de 2011, por la que se desarrolla el currículo del título de Desarrollo de Aplicaciones Multiplataforma.</a></li>
-<li><a href="https://www.abrirllave.com/lmsgi/">https://www.abrirllave.com/lmsgi/</a></li>
-<li><a href="https://aapri.es/wp/?page_id=521">https://aapri.es/wp/?page_id=521</a></li>
-<li>Libro de LMSGI de “Abrirllave.com”</li>
-<li><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIRDAMDAW/LMSGI/LMSGI01/es_ASIRDAMDAW_LMSGI01_Contenidos/website_index.html#" target="_blank" rel="noopener">1.- Lenguajes de marcas. | LMSGI01.- Reconocimiento de las características de lenguajes de marcas. </a></li>
-<li><a href="https://www.ediciones-eni.com/open/mediabook.aspx?idR=eb36759e064113b84514c82abd03b47d">https://www.ediciones-eni.com/open/mediabook.aspx?idR=eb36759e064113b84514c82abd03b47d</a></li>
-<li><a href="https://lenguajecss.com/css/introduccion/que-es-css/">https://lenguajecss.com/css/introduccion/que-es-css/</a></li>
-<li><a href="https://www.mclibre.org/consultar/xml/lecciones/xml-dtd.html">https://www.mclibre.org/consultar/xml/lecciones/xml-dtd.html</a></li>
-</ul></div></div></section></div>
+<div id="ta33_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Existen tres términos comúnmente usados para describir las partes de un documento XML: etiquetas, elementos y atributos. Aquí está un documento de ejemplo que ilustra estos términos:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;direccion&gt;
+    &lt;nombre&gt;
+        &lt;titulo&gt;Sra.&lt;/titulo&gt;
+        &lt;nombre&gt;Maria&lt;/nombre&gt;
+        &lt;apellidos&gt;Rodriguez&lt;/apellidos&gt;
+    &lt;/nombre&gt;
+    &lt;calle&gt;Estrada 2345&lt;/calle&gt;
+    &lt;ciudad Provincia="Santa Fe"&gt;Santa Fe&lt;/ciudad&gt;
+    &lt;codigo-postal&gt;30000&lt;/codigo-postal&gt;
+&lt;/direccion&gt;</code></pre>
+</div>
+</div>
+<div class="exe-fx exe-accordion">
+<h2>Etiqueta</h2>
+<p>Una etiqueta es un texto entre el símbolo menor que (&lt;) y el símbolo mayor que (&gt;).</p>
+<p>Existen etiquetas de inicio (como &lt;nombre&gt;) y etiquetas de fin (como &lt;/nombre&gt;).</p>
+<h2>Elemento</h2>
+<p>Un elemento consta de la etiqueta de inicio, la etiqueta de fin y de todo aquello que este entre ambas. En el ejemplo anterior, el elemento &lt;nombre&gt; contiene tres elementos hijos: &lt;titulo&gt;, &lt;nombre&gt;, y &lt;apellidos&gt;.</p>
+<h2>Atributo</h2>
+<p>Un atributo es un par nombre-valor dentro de la etiqueta de inicio de un elemento. En este ejemplo, provincia es un atributo del elemento &lt;ciudad&gt;.</p>
+</div>
+</div></div></section></div>
 </div>
 </div>
 </article>
@@ -75,7 +94,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="7_actividades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="65_comparacin_de_xml_con_html.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_actividades.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 </div>
