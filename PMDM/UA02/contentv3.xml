@@ -85,7 +85,7 @@
   <string role="key" value="_name"></string>
   <unicode value="UA02"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="5"></int>
+  <int value="6"></int>
   <string role="key" value="_nextNodeId"></string>
   <int value="9"></int>
   <string role="key" value="_nodeIdDict"></string>
@@ -931,6 +931,152 @@ super.onDestroy();
            <int value="0"></int>
           </dictionary>
          </instance>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="16">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Ejercicio práctico"></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="1"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="17">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="840_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="16"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Para comprender mejor el ciclo de vida, vamos a ponerlo en práctica en el proyecto que hemos creado previamente. Vamos al archivo &lt;strong&gt;MainActivity.kt&lt;/strong&gt;; si no puedes localizarlo, repasa el punto 5 de la Unidad anterior, en el que habla sobre la estructura del IDE.&lt;/p&gt;
+&lt;p&gt;Una vez localizado, sobrescribe los métodos &lt;strong&gt;onCreate()&lt;/strong&gt;, &lt;strong&gt;onRestart()&lt;/strong&gt;, &lt;strong&gt;onStart()&lt;/strong&gt;, &lt;strong&gt;onResume()&lt;/strong&gt;, &lt;strong&gt;onPause()&lt;/strong&gt;, &lt;strong&gt;onStop()&lt;/strong&gt; y &lt;strong&gt;onDestroy()&lt;/strong&gt;, en cada uno de los métodos utiliza la función &lt;strong&gt;Log.d()&lt;/strong&gt; con un texto descriptivo del método.&lt;/p&gt;
+&lt;p&gt;La clase &lt;strong&gt;android.util.Log&lt;/strong&gt; dispone de diferentes funciones para escribir en un log, es decir, un archivo en el que aparecen mensajes relevantes sobre la ejecución de la aplicación.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Log.d()&lt;/strong&gt; sirve para mensajes de depuración, que tienen menos prioridad que los mensajes &lt;strong&gt;Log.e()&lt;/strong&gt;, que son errores y se muestran en rojo en las salida de mensajes Logcat. Entonces, veamos un ejemplo cómo sobrescribimos la función &lt;strong&gt;onCreate()&lt;/strong&gt; para mostrar un mensaje:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    Log.d(TAG, &quot;Ciclo de vida - onCreate&quot;)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Observamos cómo utilizamos &lt;strong&gt;override&lt;/strong&gt; para informar al compilador de que no estamos creando un método nuevo, sino sobrescribiendo el de la clase padre, que tiene igual nombre y parámetros.&lt;/p&gt;
+&lt;p&gt;Al sobrescribir funciones de las clases del sistema Android, recuerda que en la mayoría de los casos será conveniente llamar primero al método original. Lo haremos al principio del método, mediante el objeto &lt;strong&gt;super&lt;/strong&gt;, que es la palabra clave para identificar al objeto padre.&lt;/p&gt;
+&lt;p&gt;Luego hemos añadido la llamada &lt;strong&gt;Log&lt;/strong&gt;. La constante &lt;strong&gt;TAG&lt;/strong&gt; sirve ver en el log desde qué clase imprimimos el mensaje. Podríamos definirla de la siguiente manera:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;companion object {
+    private const val TAG = &quot;MainActivity&quot;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Ejecuta la aplicación en el emulador y comprueba qué resultados obtienes en el Logcat.&lt;/p&gt;
+&lt;p&gt;Luego cambia a otra aplicación y comprueba qué métodos del ciclo de vida se han ejecutado. Cierra la aplicación. ¿Qué métodos se ejecutan?&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="17"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <none></none>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value="technology"></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="5"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="7"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
         </list>
         <string role="key" value="_id"></string>
         <unicode value="1"></unicode>
@@ -950,7 +1096,7 @@ super.onDestroy();
         <list></list>
         <string role="key" value="children"></string>
         <list>
-         <instance class="exe.engine.node.Node" reference="16">
+         <instance class="exe.engine.node.Node" reference="18">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="2.1.1. Descubrimiento"></unicode>
@@ -976,7 +1122,7 @@ super.onDestroy();
            <list></list>
           </dictionary>
          </instance>
-         <instance class="exe.engine.node.Node" reference="17">
+         <instance class="exe.engine.node.Node" reference="19">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="2.1.2. Instalación"></unicode>
@@ -1002,7 +1148,7 @@ super.onDestroy();
            <list></list>
           </dictionary>
          </instance>
-         <instance class="exe.engine.node.Node" reference="18">
+         <instance class="exe.engine.node.Node" reference="20">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="2.1.3. Ejecución"></unicode>
@@ -1028,7 +1174,7 @@ super.onDestroy();
            <list></list>
           </dictionary>
          </instance>
-         <instance class="exe.engine.node.Node" reference="19">
+         <instance class="exe.engine.node.Node" reference="21">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="2.1.4. Actualización"></unicode>
@@ -1054,7 +1200,7 @@ super.onDestroy();
            <list></list>
           </dictionary>
          </instance>
-         <instance class="exe.engine.node.Node" reference="20">
+         <instance class="exe.engine.node.Node" reference="22">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="2.1.5. Borrado"></unicode>
@@ -1083,7 +1229,7 @@ super.onDestroy();
         </list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="21">
+      <instance class="exe.engine.node.Node" reference="23">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="2.2. Modificación de aplicaciones existentes"></unicode>
@@ -1109,7 +1255,7 @@ super.onDestroy();
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="22">
+      <instance class="exe.engine.node.Node" reference="24">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="2.3. Utilización del entorno de ejecución del administrador de aplicaciones"></unicode>
@@ -1141,19 +1287,19 @@ super.onDestroy();
    <unicode role="key" value="1"></unicode>
    <reference key="7"></reference>
    <unicode role="key" value="2"></unicode>
-   <reference key="16"></reference>
-   <unicode role="key" value="3"></unicode>
-   <reference key="17"></reference>
-   <unicode role="key" value="4"></unicode>
    <reference key="18"></reference>
-   <unicode role="key" value="5"></unicode>
+   <unicode role="key" value="3"></unicode>
    <reference key="19"></reference>
-   <unicode role="key" value="6"></unicode>
+   <unicode role="key" value="4"></unicode>
    <reference key="20"></reference>
-   <unicode role="key" value="7"></unicode>
+   <unicode role="key" value="5"></unicode>
    <reference key="21"></reference>
-   <unicode role="key" value="8"></unicode>
+   <unicode role="key" value="6"></unicode>
    <reference key="22"></reference>
+   <unicode role="key" value="7"></unicode>
+   <reference key="23"></reference>
+   <unicode role="key" value="8"></unicode>
+   <reference key="24"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>

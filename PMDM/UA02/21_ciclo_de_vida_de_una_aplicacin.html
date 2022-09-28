@@ -158,6 +158,41 @@ super.onDestroy();
 </div>
 </div>
 </article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_technology" id="id5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_technology.png)"><h1 class="iDeviceTitle">Ejercicio práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_840_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para comprender mejor el ciclo de vida, vamos a ponerlo en práctica en el proyecto que hemos creado previamente. Vamos al archivo <strong>MainActivity.kt</strong>; si no puedes localizarlo, repasa el punto 5 de la Unidad anterior, en el que habla sobre la estructura del IDE.</p>
+<p>Una vez localizado, sobrescribe los métodos <strong>onCreate()</strong>, <strong>onRestart()</strong>, <strong>onStart()</strong>, <strong>onResume()</strong>, <strong>onPause()</strong>, <strong>onStop()</strong> y <strong>onDestroy()</strong>, en cada uno de los métodos utiliza la función <strong>Log.d()</strong> con un texto descriptivo del método.</p>
+<p>La clase <strong>android.util.Log</strong> dispone de diferentes funciones para escribir en un log, es decir, un archivo en el que aparecen mensajes relevantes sobre la ejecución de la aplicación.</p>
+<p><strong>Log.d()</strong> sirve para mensajes de depuración, que tienen menos prioridad que los mensajes <strong>Log.e()</strong>, que son errores y se muestran en rojo en las salida de mensajes Logcat. Entonces, veamos un ejemplo cómo sobrescribimos la función <strong>onCreate()</strong> para mostrar un mensaje:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    Log.d(TAG, "Ciclo de vida - onCreate")
+}</code></pre>
+</div>
+</div>
+<p>Observamos cómo utilizamos <strong>override</strong> para informar al compilador de que no estamos creando un método nuevo, sino sobrescribiendo el de la clase padre, que tiene igual nombre y parámetros.</p>
+<p>Al sobrescribir funciones de las clases del sistema Android, recuerda que en la mayoría de los casos será conveniente llamar primero al método original. Lo haremos al principio del método, mediante el objeto <strong>super</strong>, que es la palabra clave para identificar al objeto padre.</p>
+<p>Luego hemos añadido la llamada <strong>Log</strong>. La constante <strong>TAG</strong> sirve ver en el log desde qué clase imprimimos el mensaje. Podríamos definirla de la siguiente manera:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>companion object {
+    private const val TAG = "MainActivity"
+}</code></pre>
+</div>
+</div>
+<p>Ejecuta la aplicación en el emulador y comprueba qué resultados obtienes en el Logcat.</p>
+<p>Luego cambia a otra aplicación y comprueba qué métodos del ciclo de vida se han ejecutado. Cierra la aplicación. ¿Qué métodos se ejecutan?</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
 <div id="packageLicense" class="cc cc-by-sa">
 <p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
 </div>
