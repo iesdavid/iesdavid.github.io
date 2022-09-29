@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2. Excepciones no controladas | UA02. Primer acceso a datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA02. Primer acceso a datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA02. Primer acceso a datos</a></li>
+   <li><a href="1_ficheros_xml.html" class="daddy">1. Ficheros XML</a>
+   <ul class="other-section">
+      <li><a href="11_xml_con_dom.html" class="no-ch">1.1. XML con DOM</a></li>
+      <li><a href="12_xml_con_sax.html" class="no-ch">1.2. XML con SAX</a></li>
+      <li><a href="13_conversiones.html" class="no-ch">1.3. Conversiones</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_excepciones.html" class="current-page-parent daddy">2. Excepciones</a>
+   <ul>
+      <li><a href="21_excepciones_controladas.html" class="no-ch">2.1. Excepciones controladas</a></li>
+      <li id="active"><a href="22_excepciones_no_controladas.html" class="active no-ch">2.2. Excepciones no controladas</a></li>
+   </ul>
+   </li>
+   <li><a href="3_pruebas_y_documentacin.html" class="no-ch">3. Pruebas y documentación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_excepciones_controladas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_pruebas_y_documentacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2. Excepciones no controladas</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div id="ta10_842_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>Las excepciones no controladas</strong> son aquellas que reflejan un error dentro de la lógica del programa que estamos desarrollando.</p>
+<p>Este tipo de excepciones <strong>no se comprueban en tiempo de compilación</strong>, por tanto, no es necesario englobar este tipo de excepción en un <strong>throws</strong> o un <strong>try-catch</strong>.</p>
+<p>En la gestión de ficheros, este tipo de excepción no será la más usual, pero sí que se tiene que tener en cuenta, porque puede que se reproduzca en algún momento si alguno de los parámetros que usemos esta <strong>vacío</strong> o <strong>null</strong>.</p>
+<p>Los más usuales serán:</p>
+<ul>
+<li><strong>RuntimeException</strong>: se lanza cuando se produce un error con la máquina virtual de Java.</li>
+<li><strong>NullPointerException</strong>: se lanzará siempre que uno de los campos que se le pasen al programa esté vacío.</li>
+<li><strong>IllegalArgumentException</strong>: se lanzará esta excepción cuando uno de los argumentos que se le pasen a un método no sea válido.</li>
+<li><strong>SecurityException</strong>: cuando se produce algún problema de seguridad.</li>
+<li><strong>UncheckedIOException</strong>: cuando se produce una excepción no controlada.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_excepciones_controladas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_pruebas_y_documentacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

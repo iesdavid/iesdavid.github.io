@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2. XML con SAX | UA02. Primer acceso a datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA02. Primer acceso a datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA02. Primer acceso a datos</a></li>
+   <li class="current-page-parent"><a href="1_ficheros_xml.html" class="current-page-parent daddy">1. Ficheros XML</a>
+   <ul>
+      <li><a href="11_xml_con_dom.html" class="no-ch">1.1. XML con DOM</a></li>
+      <li id="active"><a href="12_xml_con_sax.html" class="active no-ch">1.2. XML con SAX</a></li>
+      <li><a href="13_conversiones.html" class="no-ch">1.3. Conversiones</a></li>
+   </ul>
+   </li>
+   <li><a href="2_excepciones.html" class="daddy">2. Excepciones</a>
+   <ul class="other-section">
+      <li><a href="21_excepciones_controladas.html" class="no-ch">2.1. Excepciones controladas</a></li>
+      <li><a href="22_excepciones_no_controladas.html" class="no-ch">2.2. Excepciones no controladas</a></li>
+   </ul>
+   </li>
+   <li><a href="3_pruebas_y_documentacin.html" class="no-ch">3. Pruebas y documentación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_xml_con_dom.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_conversiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.2. XML con SAX</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_839_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>SAX</strong> (<strong>S</strong>imple <strong>A</strong>PI for <strong>X</strong>ML) es un conjunto de clases e interfaces que ofrecen una herramienta muy útil para el procesamiento de documentos XML.</p>
+<p>Permite analizarlos de forma secuencial (es decir, no carga todo el fichero en memoria como hace <strong>DOM</strong>), esto implica poco consumo de memoria aunque los documentos sean de gran tamaño.</p>
+<p>En contraposición, impide tenes una visión global del documento que se va a analizar.</p>
+<p>SAX es más complejo de programar que DOM, es un API totalmente escrita en Java e incluida dentro del JRE que nos permite crear nuesto propio <em>parser</em> de XML.</p>
+<p>Para la implementación de SAX, primero necesitaremos tener un fichero XML. Usaremos este XML que contiene información sobre coches. Tendremos que tener en nuestro proyecto o en nuestro ordenador el fichero XML.</p>
+<figure class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 560px;"><img src="codigo01.png" alt="Código de ejemplo" width="560" height="241">
+<figcaption class="figcaption"><a href="Elaboración propia" target="_blank" class="author" rel="noopener">Elaboración propia</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow noopener" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Para poder explicar mejor cómo estructurar una implementación de un ejemplo con SAX, vamos a desglosar el ejemplo por partes para poder explicarlo mejor.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En primer lugar, necesitamos definir la clase <strong>SAXParserFactory</strong> y crear una nueva instancia.</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>SAXParserFactory factory = SAXParserFactory.newInstance();
+SAXParser saxParser = factory.newSAXParser();</code></pre>
+</div>
+</div>
+<p>Esta clase es la API encargada de proporcionar un SAX <em>parser</em>. Seguidamente, se deberá crear un SAX parser que se obtendrá gracias a la llamada del método <strong>newSaxParser()</strong>.</p>
+<p>Como vemos en el siguiente ejemplo, para poder parsear el XML deberemos llamar al método <strong>parse()</strong>, al que se necesita pasarle por parámetro la ruta del fichero XML y un handler. Lo que hará es llamar a una clase auxiliar de apoyo que veremos cómo se crea a continuación.</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>SAXParserFactory factory = SAXParserFactory.newInstance();
+SAXParser saxParser = factory.newSAXParser();
+SaxHelper handler = new SaxHelper();
+saxParser.parse("src/main/resources/xml/coches.xml", handler);</code></pre>
+</div>
+</div>
+<p>Un <strong>handler</strong> es una clase auxiliar que servirá para realizar los diferentes pasos de extracción de datos del XML. Deberemos crear una clase auxiliar llamada <strong>SaxHelper</strong> que extenderá de <strong>DefaultHandler</strong> y que nos proporcionará la implementación por defecto de los métodos necesarios para realizar el parser.</p>
+<p>Para entender mejor en qué consiste, vamos a ver su implementación:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class SaxHelper extends DefaultHandler{
+   ...
+}</code></pre>
+</div>
+</div>
+<p>La clase se llamará en este caso "SaxHelper", pero podemos asignarle el nombre que más nos convenga. Este método se llamará cuando se encuentre el principio de un elemento, este deberá extender siempre de la clase DefaultHandler. De este modo, nos podremos beneficiar de los métodos por defecto. Si no se implementa así, no nos funcionará el parser con SAX.</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class SaxHelper extends DefaultHandler{
+   boolean esMarca = false;
+   boolean esModelo = false;
+   boolean esColor = false;
+   boolean esMatriculacion = false;
+}</code></pre>
+</div>
+</div>
+<p>A continuación, debemos crear tantas variables como atributos tiene nuestro XML. En nuestro caso, tenemos cuatro y hemos creado cuatro booleanos con sus nombres asociados. Estas variables nos servirán para saber si el elemento que estamos comprobando corresponde a cada atributo que queremos encontrar. Por tanto, tendremos uno para marca, modelo, color y matriculación.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Nuestra clase auxiliar, para funcionar correctamente, tendrá que implementar un método startElement, el cual se encargará de buscar los diferentes elementos y atributos de nuestro XML. Este método se llamará cuando se encuentre el principio de un elemento.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public void startElement(String uri, String localName, String elementos, Attributes atributos) throws SAXException {
+   System.out.println("Inicio del elemento :" + elementos);
+   switch (elementos) {
+      case "marca":
+         esMarca = true;
+         break;
+      case "modelo":
+         esModelo = true;
+         break;
+      case "color":
+         esColor = true;
+         break;
+      case "matriculacion":
+         esMatriculacion = true;
+         break;
+      default:
+         break;
+   }
+}</code></pre>
+</div>
+</div>
+<p>Si nos fijamos, el método recibe cuatro parámetros:</p>
+<ul>
+<li><strong>URI</strong>: contendrá el namespace del XML si lo tiene. En este caso estará vacío.</li>
+<li><strong>localName</strong>: puede ir vacío.</li>
+<li><strong>Elementos</strong>: contendrá el nombre del elemento que se acaba de encontrar.</li>
+<li><strong>Atributos</strong>: contendrá los atributos de cada elemento.</li>
+</ul></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>El método <strong>startElement</strong> se encarga de ir comprobando que el string "elementos" contenga uno de nuestros elementos del XML. Cuando encuentre uno de ellos, establecerá el valor <strong>true</strong> a la variable que corresponda según la etiqueta. A continuación, deberemos implementar el método <strong>characters()</strong>. Este método será llamado cuando se encuentra texto en el XML. Es un método que recibe por parámetro:</p>
+<ul>
+<li>Un array de tipo char que contendrá todos los caracteres de nuestro XML.</li>
+<li>Un int inicio que contendrá un int que indicará la posición en la que tiene que empezar a leer el array char anterior.</li>
+<li>Un int lenght que indicará el número de caracteres que tenemos que usar del array de caracteres.</li>
+</ul>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public void characters(char ch[], int inicio, int length) throws SAXException {
+	if (esMarca) {
+		System.out.println("Marca: " + new String(ch, inicio, length));
+		esMarca = false;
+		return;
+	}
+	if (esModelo) {
+		System.out.println("Modelo: " + new String(ch, inicio,length));
+		esModelo = false;
+		return;
+	}
+	if (esColor) {
+		System.out.println("Color: " + new String(ch, inicio, length));
+		esColor = false;
+		return;
+	}
+	if (esMatriculacion) {
+		System.out.println("Matriculacion: " + new String(ch, inicio, length));
+		esMatriculacion = false;
+	return;
+	}
+}</code></pre>
+</div>
+</div>
+<p>El método se encargará de comprobar qué elemento debe imprimir por consola, ya que en el método anterior hemos verificado qué elemento estábamos comprobando. Si la propiedad booleana correspondiente a ese elemento del XML es true, imprimirá por consola el elemento y el valor correspondiente, y volverá a setear a false. Esto se hace para indicar que ya no está en uso ese elemento.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para finalizar con este helper, necesitaremos implementar el método endElement(). El método se llama cuando encuentra el final de un elemento. En este ejemplo, solo se imprimirá por consola el valor del elemento e indicará que hemos terminado con este bloque del XML.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public void endElement(String uri, String localName, String elementos) throws SAXException {
+	System.out.println("Fin del elemento: " + elementos);
+}</code></pre>
+</div>
+</div>
+<p>Este método recibe por parámetro un string con la URI, otro con localName y otro con el elemento XML finalizado. En este caso, solo tendrá valor el string "elementos" porque nuestro XML es más sencillo y estos campos están vacíos. Cabe decir que solo se rellenarán cuando el XML contenga esa información. Como vemos en el ejemplo, los objetos para acceder a los datos de un fichero son con SaxParserFactory y SaxParser.</p>
+<p>Este es un ejemplo muy simplificado para observar el funcionamiento básico y los objetos. Es recomendable consultar GitLab para ver el ejemplo implementado, ya que la implementación de SAX es bastante complicada.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_xml_con_dom.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_conversiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

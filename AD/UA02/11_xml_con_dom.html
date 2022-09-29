@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1. XML con DOM | UA02. Primer acceso a datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA02. Primer acceso a datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA02. Primer acceso a datos</a></li>
+   <li class="current-page-parent"><a href="1_ficheros_xml.html" class="current-page-parent daddy">1. Ficheros XML</a>
+   <ul>
+      <li id="active"><a href="11_xml_con_dom.html" class="active no-ch">1.1. XML con DOM</a></li>
+      <li><a href="12_xml_con_sax.html" class="no-ch">1.2. XML con SAX</a></li>
+      <li><a href="13_conversiones.html" class="no-ch">1.3. Conversiones</a></li>
+   </ul>
+   </li>
+   <li><a href="2_excepciones.html" class="daddy">2. Excepciones</a>
+   <ul class="other-section">
+      <li><a href="21_excepciones_controladas.html" class="no-ch">2.1. Excepciones controladas</a></li>
+      <li><a href="22_excepciones_no_controladas.html" class="no-ch">2.2. Excepciones no controladas</a></li>
+   </ul>
+   </li>
+   <li><a href="3_pruebas_y_documentacin.html" class="no-ch">3. Pruebas y documentación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_ficheros_xml.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_xml_con_sax.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.1. XML con DOM</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id5">
+<div class="iDevice emphasis0" >
+<div id="ta5_841_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La API <a href="#t5345afd3-2138-2b12-c88b-db58768a8e7f" id="link5345afd3-2138-2b12-c88b-db58768a8e7f" class="exe-tooltip definition-tt titled-tt" title="DOM | DOM">DOM</a> se caracteriza por ser un analizador basado en modelos de carga de documentos con estructuras en árbol, el cual guarda en memoria la información del XML.</p>
+<p>Entre las características principales de este analizador podemos destacar que nos permitirá tener los datos en orden, navegar por ellos en ambas direcciones y disponer de una API de lectura y escritura de datos, así como también la manipulación del fichero XML.</p>
+<p>Lo único negativo que cabe destacar es que el parser DOM tiene un procesado de información bastante lento, lo que provoca que consuma y ocupe mucho espacio en memoria del programa al cargar o tratar el fichero XML.</p>
+<p>Si observamos el ejemplo, podemos ver que, para empezar, declaramos un fichero XML. Tendremos que indicarle la ruta del fichero. El fichero tendrá esta estructura con estos datos:</p>
+<p><img src="codigo01.png" alt="Código ejemplo" title="Código ejemplo" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="241"></p>
+<p>Si nos fijamos, en esta ocasión le pasamos la ruta relativa del fichero. Este fichero estará en una carpeta creada dentro de nuestro proyecto, dentro de la carpeta <strong>main/resources/xml</strong>, aunque puede usarse la ruta absoluta, solo tendréis que cambiar esa ruta por la de vuestro fichero. A continuación, es necesario crear una nueva instancia del objeto DOM que cargará el archivo XML en la memoria.</p>
+<div id="t5345afd3-2138-2b12-c88b-db58768a8e7f" class="exe-tooltip-text">
+<p>DOM es una plataforma e interfaz de lenguaje estándar que permite a los programas y a los scripts acceder y actualizar dinámicamente el contenido, la estructura y el estilo de un documento. Se caracteriza por tener una estructura en forma de árbol.</p>
+</div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java line-numbers">
+<div>
+
+<pre><code>try {
+		//Indicaremos la ruta del fichero xml
+		//Src es el nombre raiz de nuestro proyecto, main es la primera carpeta, resources la siguiente, dentro de xml encontraremos el fichero
+		//Esta es la ruta relativa.
+		File arxXml = new File("src/main/resources/xml/coches.xml");
+		//Creamos los objetos que nos permitiran leer el fichero
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		//Le pasamos el XML
+		Document doc = db.parse(arxXml);
+		doc.getDocumentElement().normalize();
+		System.out.println("Elemento raiz:" + doc.getDocumentElement().getNodeName());
+		NodeList nodeList = doc.getElementsByTagName("coche");
+		//Creamos un bucle para leer los datos del xml y los mostramos en la consola
+		for (int itr = 0; itr &lt; nodeList.getLength(); itr++) {
+			Node node = nodeList.item(itr);
+			if (node.getNodeType() == Node.ELEMENT_NODE){
+				Element eElement = (Element) node;
+				System.out.println("Marca: "+ eElement.getElementsByTagName("marca").item(0).getTextContent());
+				System.out.println("Modelo: "+ eElement.getElementsByTagName("modelo").item(0).getTextContent());
+				System.out.println("Color: "+ eElement.getElementsByTagName("color").item(0).getTextContent());
+				System.out.println("Matriculacion: "+ eElement.getElementsByTagName("matriculacion").item(0).getTextContent());
+			}
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}</code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En primer lugar, vamos a utilizar una nueva instancia de <strong>DocumentBuilderFactory</strong> (línea 7), esta clase nos va a permitir obtener un analizador sintáctico que produce la jerarquía de objetos DOM a partir de documentos XML.</p>
+<p>Una vez creada la instancia de esta clase, necesitaremos definir una clase <strong>DocumentBuilder</strong> (línea 8). Esta es necesaria para posteriormente definir el documento que nos permitirá parsear el XML.</p>
+<p>Después crearemos una nueva instancia de la clase <strong>Document</strong>, que nos permitirá almacenar nuestro documento XML (línea 10). La clase Document representa un documento XML y nos proporcionará el acceso al contenido del documento XML.</p>
+<p>Seguidamente, necesitaremos obtener el nodo raíz a través del método <strong>getDocumentElement()</strong>, así obtendremos los datos de esa etiqueta (línea 11).</p>
+<p>A continuación, tenemos que detectar cuántos elementos contiene el XML, es decir, cuántos nodos hay definidos. Para ello, utilizamos el método <strong>getElementByTagName()</strong> al cual le pasaremos el nombre del nodo que queremos sustraer, en este caso, "coche".</p>
+<p>Para almacenar los datos obtenidos, definiremos el NodeList, que almacenará todos los datos encontrados haciendo la llamada al método <strong>getElementByTagName()</strong> (línea 13). Si necesitamos acceder a todos los nodos desde el inicio del fichero, podemos llamar recursivamente a este método: <strong>getChildElement()</strong>.</p>
+<p>En el ejemplo vemos también que definimos la clase <strong>Node</strong>, esta nos servirá para asignar todos los datos de cada elemento "coche" encontrado en el XML (línea 16).</p>
+<p>Para obtener el valor del texto, podemos usar el método <strong>getElementByTextValue()</strong> para buscar un nodo por su valor, y para acceder a los datos de los atributos, <strong>getElementByTagName()</strong> junto con el método <strong>getAttribute()</strong>.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_ficheros_xml.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_xml_con_sax.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
