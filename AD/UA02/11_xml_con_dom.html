@@ -64,12 +64,11 @@
 <p>DOM es una plataforma e interfaz de lenguaje estándar que permite a los programas y a los scripts acceder y actualizar dinámicamente el contenido, la estructura y el estilo de un documento. Se caracteriza por tener una estructura en forma de árbol.</p>
 </div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java line-numbers">
 <div>
-
 <pre><code>try {
 		//Indicaremos la ruta del fichero xml
 		//Src es el nombre raiz de nuestro proyecto, main es la primera carpeta, resources la siguiente, dentro de xml encontraremos el fichero
 		//Esta es la ruta relativa.
-		File arxXml = new File("src/main/resources/xml/coches.xml");
+		File arxXml = new File("coches.xml");
 		//Creamos los objetos que nos permitiran leer el fichero
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
@@ -101,6 +100,40 @@
 <p>Para almacenar los datos obtenidos, definiremos el NodeList, que almacenará todos los datos encontrados haciendo la llamada al método <strong>getElementByTagName()</strong> (línea 13). Si necesitamos acceder a todos los nodos desde el inicio del fichero, podemos llamar recursivamente a este método: <strong>getChildElement()</strong>.</p>
 <p>En el ejemplo vemos también que definimos la clase <strong>Node</strong>, esta nos servirá para asignar todos los datos de cada elemento "coche" encontrado en el XML (línea 16).</p>
 <p>Para obtener el valor del texto, podemos usar el método <strong>getElementByTextValue()</strong> para buscar un nodo por su valor, y para acceder a los datos de los atributos, <strong>getElementByTagName()</strong> junto con el método <strong>getAttribute()</strong>.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_ask" id="id15">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_ask.png)"><h1 class="iDeviceTitle">Ejemplo sin conocer estructura</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta15_839_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java">
+<div>
+<pre><code>NodeList nList = doc.getElementsByTagName("coche");
+
+for (int i = 0; i &lt; nList.getLength(); i++) {
+  Node node = nList.item(i);
+
+  if (node.getNodeType() == Node.ELEMENT_NODE) {
+    Element eElement = (Element) node;
+
+    if(eElement.hasChildNodes()) {
+      NodeList nl = node.getChildNodes();
+      for(int j=0; j&lt;nl.getLength(); j++) {
+        Node nd = nl.item(j);
+        System.out.println(nd.getTextContent());
+      }
+    }
+  }
+}
+</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
 </div>
 </div>
 </article>

@@ -64,7 +64,8 @@
 <div class="iDevice_inner">
 <div class="iDevice_content_wrapper">
 <div id="ta3_839_2" class="block iDevice_content">
-<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>JSON</strong>: siglas para <strong>Javascript Object Notation</strong>. Es un tipo de archivo de formato de texto derivado de Javascript, bastante ligero y que almacena información estructurada. Es fácil de interpretar y generar, y se utiliza para transferir información entre un cliente y un servidor.</p></div></div></section></div>
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>JSON</strong>: siglas para <strong>Javascript Object Notation</strong>. Es un tipo de archivo de formato de texto derivado de Javascript, bastante ligero y que almacena información estructurada. Es fácil de interpretar y generar, y se utiliza para transferir información entre un cliente y un servidor.</p>
+<p style="text-align: center;"><a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank" rel="noopener">Más información</a></p></div></div></section></div>
 </div>
 </div>
 </div>
@@ -92,9 +93,9 @@
     }
 }</code></pre>
 </div>
-</div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para definir el JSON, se abren y cierran corchetes. Los objetos se declaran entre comillas y los diferentes objetos se separan con una coma. El nombre y el valor de cada pareja van separados entre dos puntos. Cada objeto se considera un <strong>string</strong>; en cambio, los valores de los atributos pueden ser de cada tipo permitido nombrado en el parágrafo anterior.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>XML a JSON</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java line-numbers">
+</div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para definir el JSON, se abren y cierran corchetes. Los objetos se declaran entre comillas y los diferentes objetos se separan con una coma. El nombre y el valor de cada pareja van separados entre dos puntos. Cada objeto se considera un <strong>string</strong>; en cambio, los valores de los atributos pueden ser de cada tipo permitido nombrado en el parágrafo anterior.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Convertir XML a JSON</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java line-numbers">
 <div>
-<pre><code>public static String XML_PRUEBA ="<coche><id>1</id><modelo>Ibiza</modelo><marca>seat</marca></coche>";
+<pre><code>public static String XML_PRUEBA ="&lt;coche&gt;&lt;id&gt;1&lt;/id&gt;&lt;modelo&gt;Ibiza&lt;/modelo&gt;&lt;marca&gt;seat&lt;/marca&gt;&lt;/coche&gt;";
 try {
     //Creamos el objeto que nos ayudara a convertir el XML en JSON
     JSONObject json = XML.toJSONObject(XML_PRUEBA);
