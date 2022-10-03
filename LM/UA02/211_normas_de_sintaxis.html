@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.1. Normas de sintaxis | UA02 - XML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA02 - XML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA02. El lenguaje XML</a></li>
+   <li class="current-page-parent"><a href="21_qu_es_xml.html" class="current-page-parent daddy">2.1. Qué es XML</a>
+   <ul>
+      <li id="active"><a href="211_normas_de_sintaxis.html" class="active no-ch">2.1.1. Normas de sintaxis</a></li>
+   </ul>
+   </li>
+   <li><a href="22_atributos.html" class="daddy">2.2. Atributos</a>
+   <ul class="other-section">
+      <li><a href="221_normas_de_sintaxis.html" class="no-ch">2.2.1. Normas de sintaxis</a></li>
+   </ul>
+   </li>
+   <li><a href="23_declaracin_xml.html" class="no-ch">2.3. Declaración XML</a></li>
+   <li><a href="24_creacin_de_un_documento_xml.html" class="daddy">2.4. Creación de un documento XML</a>
+   <ul class="other-section">
+      <li><a href="241_asociacin_de_css.html" class="no-ch">2.4.1. Asociación de CSS</a></li>
+      <li><a href="242_caracteres_problemticos.html" class="no-ch">2.4.2. Caracteres problemáticos</a></li>
+      <li><a href="243_comentarios.html" class="no-ch">2.4.3. Comentarios</a></li>
+      <li><a href="243_secciones_cdata.html" class="no-ch">2.4.3. Secciones CDATA</a></li>
+      <li><a href="244_namespaces.html" class="no-ch">2.4.4. Namespaces</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_qu_es_xml.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.1. Normas de sintaxis</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id5">
+<div class="iDevice emphasis0" >
+<div id="ta5_842_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En un documento XML, todos los nombres de los elementos son case sensitive, es decir, sensibles a letras minúsculas y mayúsculas, teniendo que cumplir las siguientes normas:</p>
+<ul>
+<li>Pueden contener letras minúsculas, letras mayúsculas, números, puntos “.”, guiones medios “-” y guiones bajos “_”.</li>
+<li>Asimismo, pueden contener el carácter dos puntos “:”. No obstante, su uso se reserva para cuando se definan espacios de nombres.</li>
+<li>El primer carácter tiene que ser una letra o un guion bajo “_”.</li>
+</ul>
+<p>Por otra parte, hay que tener en cuenta que, detrás del nombre de una etiqueta se permite escribir un espacio en blanco o un salto de línea pero NO antes del nombre de una eqtiqueta. Por ejemplo, la declaración de la etiqueta ciudad es incorrecta pero el final del cierre es correcto:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt; ciudad &gt;Pamplona&lt;/ciudad
+&gt;</code></pre>
+</div>
+</div>
+<p>Los siguientes elementos no están escritos correctamente por incumplir alguna regla de sintaxis:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;Ciudad&gt;Pamplona&lt;/ciudad&gt;
+&lt;día&gt;18&lt;/dia&gt;
+&lt;mes&gt;6&lt;mes/&gt;
+&lt;ciudad&gt;Pamplona&lt;/finciudad&gt;
+&lt;_rojo&gt;
+&lt;2colores&gt;Rojo y Naranja&lt;/2colores&gt;
+&lt; Aficiones &gt;Cine, Bailar, Nadar&lt;/ Aficiones &gt;
+&lt;persona&gt;&lt;nombre&gt;Elsa&lt;/persona&gt;&lt;/nombre&gt;
+&lt;color favorito&gt;azul&lt;/color favorito&gt;</code></pre>
+</div>
+</div>
+<p><br><br></p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id6">
+<div class="iDevice emphasis0" >
+<div id="ta6_843_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>Las letras no inglesas (á, Á, ñ, Ñ...) están permitidas</strong>. Sin embargo, es recomendable no utilizarlas para reducir posibles incompatibilidades con programas que puedan no reconocerlas.</p>
+<p>En cuanto al carácter guion medio <strong>“-”</strong> y al punto <strong>“.”</strong>, aunque también están permitidos para nombrar etiquetas, igualmente se aconseja evitar su uso; el guion medio porque podría confundirse&nbsp; con el signo menos, y el punto porque, por ejemplo al escribir <strong>color.favorito</strong>, podría interpretarse que <strong>favorito</strong> es una propiedad del objeto <strong>color</strong>.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_qu_es_xml.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
