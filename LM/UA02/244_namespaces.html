@@ -47,11 +47,12 @@
       <li id="active"><a href="244_namespaces.html" class="active no-ch">2.4.4. Namespaces</a></li>
    </ul>
    </li>
+   <li><a href="25_xml_bien_formados.html" class="no-ch">2.5. XML bien formados</a></li>
 </ul>
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="243_secciones_cdata.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="243_secciones_cdata.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="25_xml_bien_formados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
@@ -80,12 +81,12 @@
 <div>
 <pre><code>&lt;carta&gt;
     &lt;carnes&gt;
-        &lt;filete_de_ternera precio="12.95"/&gt;
-        &lt;solomillo_a_la_pimienta precio="13.60"/&gt;
+        &lt;filete_de_ternera precio="12.95"&gt;&lt;/filete_de_ternera&gt;
+        &lt;solomillo_a_la_pimienta precio="13.60"&gt;&lt;/solomillo_a_la_pimienta&gt;
     &lt;/carnes&gt;
     &lt;pescados&gt;
-        &lt;lenguado_al_horno precio="16.20"/&gt;
-        &lt;merluza_en_salsa_verde precio="15.85"/&gt;
+        &lt;lenguado_al_horno precio="16.20"&gt;&lt;/lenguado_al_horno&gt;
+        &lt;merluza_en_salsa_verde precio="15.85"&gt;&lt;/merluza_en_salsa_verde&gt;
     &lt;/pescados&gt;
 &lt;/carta&gt;</code></pre>
 </div>
@@ -94,30 +95,60 @@
 </tr>
 </tbody>
 </table>
-<p>De forma que, si se incluyen ambos elementos &lt;carta&gt; en un documento XML, se origina un conflicto de nombres. Para resolverlo, se pueden utilizar espacios de nombres (XML Namespaces). Por ejemplo, escribiendo:</p>
+<p>De forma que, si se incluyen ambos elementos <carta> en un documento XML, se origina un conflicto de nombres. Para resolverlo, se pueden utilizar espacios de nombres (XML Namespaces). Por ejemplo, escribiendo:</carta></p>
 <div class="highlighted-code language-markup line-numbers">
 <div>
 <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;e1:ejemplo xmlns:e1="http://www.abrirllave.com/ejemplo1"
-	xmlns:e2="http://www.abrirllave.com/ejemplo2"&gt;
+&lt;e1:ejemplo xmlns:e1="http://www.mimagnificaweb.com/ejemplo1" xmlns:e2="http://www.mimagnificaweb.com/ejemplo2"&gt;
 	&lt;e1:carta&gt;
 		&lt;e1:palo&gt;Corazones&lt;/e1:palo&gt;
 		&lt;e1:numero&gt;7&lt;/e1:numero&gt;
 	&lt;/e1:carta&gt;
 	&lt;e2:carta&gt;
 		&lt;e2:carnes&gt;
-			&lt;e2:filete_de_ternera precio="12.95"/&gt;
-			&lt;e2:solomillo_a_la_pimienta precio="13.60"/&gt;
+			&lt;e2:filete_de_ternera precio="12.95"&gt;&lt;/e2:filete_de_ternera&gt;
+			&lt;e2:solomillo_a_la_pimienta precio="13.60"&gt;&lt;/e2:solomillo_a_la_pimienta&gt;
 		&lt;/e2:carnes&gt;
 		&lt;e2:pescados&gt;
-			&lt;e2:lenguado_al_horno precio="16.20"/&gt;
-			&lt;e2:merluza_en_salsa_verde precio="15.85"/&gt;
+			&lt;e2:lenguado_al_horno precio="16.20"&gt;&lt;/e2:lenguado_al_horno&gt;
+			&lt;e2:merluza_en_salsa_verde precio="15.85"&gt;&lt;/e2:merluza_en_salsa_verde&gt;
 		&lt;/e2:pescados&gt;
 	&lt;/e2:carta&gt;
 &lt;/e1:ejemplo&gt;</code></pre>
 </div>
 </div>
-<p><br><br></p>
+<p><br><br></p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id22">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Sintaxis</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_115_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para definir un espacio de nombres se utiliza la siguiente sintaxis:</p>
+<p><strong>xmlns:prefijo="URI"</strong></p>
+<p>En el ejemplo, obsérvese que, xmlns es un atributo que se ha utilizado en la etiqueta de inicio del elemento <ejemplo> y, en este caso, se han definido dos espacios de nombres que hacen referencia a los siguientes URI (Uniform Resource Identifier, Identificador Uniforme de Recurso):</ejemplo></p>
+<ul>
+<li>http://www.mimagnificaweb.com/ejemplo1</li>
+<li>http://www.mimagnificaweb.com/ejemplo2</li>
+</ul>
+<p>Los prefijos definidos son <strong>e1</strong> y <strong>e2</strong>, respectivamente. Véase que, se han añadido dichos prefijos a las etiquetas que aparecen en el documento: <strong>&lt;e1:carta&gt;&lt;/e1:carta&gt;, &lt;e2:carta&gt;&lt;/e2:carta&gt;, &lt;e1:palo&gt;&lt;/e1:palo&gt;</strong>, etc.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id23">
+<div class="iDevice emphasis0" >
+<div id="ta23_116_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Los URI especificados en un documento XML no tienen porqué contener nada, su función es ser únicos. No obstante, en un URI se puede mostrar información si se considera oportuno. Véase, por ejemplo:</p>
+<ul>
+<li>http://www.w3.org/1999/xhtml/</li>
+<li>http://www.w3.org/1999/XSL/Transform</li>
+<li><a href="http://www.w3.org/2000/svg">http://www.w3.org/2000/svg</a> </li>
+</ul>
 </div></div></section></div>
 </div>
 </div>
@@ -129,7 +160,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="243_secciones_cdata.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="243_secciones_cdata.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="25_xml_bien_formados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 </div>
