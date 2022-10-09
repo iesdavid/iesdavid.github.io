@@ -86,9 +86,9 @@ Módulo Acceso a datos."></unicode>
   <string role="key" value="_name"></string>
   <unicode value="UA02"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="16"></int>
+  <int value="20"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="9"></int>
+  <int value="10"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -313,6 +313,8 @@ Módulo Acceso a datos."></unicode>
            <string value=""></string>
            <string role="key" value="anchor_names"></string>
            <list></list>
+           <string role="key" value="anchors_linked_from_fields"></string>
+           <dictionary></dictionary>
            <string role="key" value="content_w_resourcePaths"></string>
            <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
 &lt;div&gt;
@@ -355,7 +357,7 @@ Módulo Acceso a datos."></unicode>
            <string role="key" value="nextImageId"></string>
            <int value="0"></int>
            <string role="key" value="parentNode"></string>
-           <none></none>
+           <reference key="3"></reference>
           </dictionary>
          </instance>
         </list>
@@ -645,7 +647,7 @@ Módulo Acceso a datos."></unicode>
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="123404"></int>
+                     <int value="128612"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -659,7 +661,7 @@ Módulo Acceso a datos."></unicode>
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="836_848_2.22"></unicode>
+                   <unicode value="836_848_2.24"></unicode>
                    <string role="key" value="_imageResource"></string>
                    <instance class="exe.engine.resource.Resource" reference="12">
                     <dictionary>
@@ -670,7 +672,7 @@ Módulo Acceso a datos."></unicode>
                      <string role="key" value="_storageName"></string>
                      <string value="Parse-XML.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpgrlvxb\\Parse-XML.png"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpbukdtx\\Parse-XML.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="25972d2c8f12ca7808382ea1eb0bfade"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -697,7 +699,7 @@ Módulo Acceso a datos."></unicode>
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="123405"></int>
+                     <int value="128613"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -711,7 +713,7 @@ Módulo Acceso a datos."></unicode>
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="836_848_2.23"></unicode>
+                   <unicode value="836_848_2.25"></unicode>
                    <string role="key" value="_imageResource"></string>
                    <instance class="exe.engine.resource.Resource" reference="13">
                     <dictionary>
@@ -722,7 +724,7 @@ Módulo Acceso a datos."></unicode>
                      <string role="key" value="_storageName"></string>
                      <string value="parsing-XML.gif"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpgrlvxb\\parsing-XML.gif"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpbukdtx\\parsing-XML.gif"></string>
                      <string role="key" value="checksum"></string>
                      <string value="0eed656481b4953db0ddbad7b9556c63"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -751,7 +753,7 @@ Módulo Acceso a datos."></unicode>
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="24"></int>
+              <int value="26"></int>
               <string role="key" value="parentNode"></string>
               <reference key="9"></reference>
              </dictionary>
@@ -1009,12 +1011,18 @@ Módulo Acceso a datos."></unicode>
                  <string role="key" value="anchors_linked_from_fields"></string>
                  <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
-                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La API &lt;a href=&quot;#t5345afd3-2138-2b12-c88b-db58768a8e7f&quot; id=&quot;link5345afd3-2138-2b12-c88b-db58768a8e7f&quot; class=&quot;exe-tooltip definition-tt titled-tt&quot; title=&quot;DOM | DOM&quot;&gt;DOM&lt;/a&gt; se caracteriza por ser un analizador basado en modelos de carga de documentos con estructuras en árbol, el cual guarda en memoria la información del XML.&lt;/p&gt;
-&lt;p&gt;Entre las características principales de este analizador podemos destacar que nos permitirá tener los datos en orden, navegar por ellos en ambas direcciones y disponer de una API de lectura y escritura de datos, así como también la manipulación del fichero XML.&lt;/p&gt;
-&lt;p&gt;Lo único negativo que cabe destacar es que el parser DOM tiene un procesado de información bastante lento, lo que provoca que consuma y ocupe mucho espacio en memoria del programa al cargar o tratar el fichero XML.&lt;/p&gt;
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La API &lt;a href=&quot;#t5345afd3-2138-2b12-c88b-db58768a8e7f&quot; id=&quot;link5345afd3-2138-2b12-c88b-db58768a8e7f&quot; class=&quot;exe-tooltip definition-tt titled-tt&quot; title=&quot;DOM | DOM&quot;&gt;DOM&lt;/a&gt; se caracteriza por ser un &lt;strong&gt;analizador basado en modelos de carga de documentos con estructuras en árbol&lt;/strong&gt;, el cual guarda en memoria la información del XML.&lt;/p&gt;
+&lt;p&gt;Entre las características principales de este analizador podemos destacar que nos permitirá:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tener los &lt;strong&gt;datos en orden&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;navegar&lt;/strong&gt; por ellos en ambas direcciones,&lt;/li&gt;
+&lt;li&gt;disponer de una &lt;strong&gt;API de lectura y escritura&lt;/strong&gt; de datos,&lt;/li&gt;
+&lt;li&gt;la &lt;strong&gt;manipulación&lt;/strong&gt; del fichero XML.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lo único negativo que cabe destacar es que el parser DOM tiene un &lt;strong&gt;procesado de información bastante lento&lt;/strong&gt;, lo que provoca que consuma y ocupe mucho espacio en memoria del programa al cargar o tratar el fichero XML.&lt;/p&gt;
 &lt;p&gt;Si observamos el ejemplo, podemos ver que, para empezar, declaramos un fichero XML. Tendremos que indicarle la ruta del fichero. El fichero tendrá esta estructura con estos datos:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;resources/codigo01.png&quot; alt=&quot;Código ejemplo&quot; title=&quot;Código ejemplo&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;560&quot; height=&quot;241&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Si nos fijamos, en esta ocasión le pasamos la ruta relativa del fichero. Este fichero estará en una carpeta creada dentro de nuestro proyecto, dentro de la carpeta &lt;strong&gt;main/resources/xml&lt;/strong&gt;, aunque puede usarse la ruta absoluta, solo tendréis que cambiar esa ruta por la de vuestro fichero. A continuación, es necesario crear una nueva instancia del objeto DOM que cargará el archivo XML en la memoria.&lt;/p&gt;
+&lt;p&gt;A continuación, es necesario crear una &lt;strong&gt;nueva instancia&lt;/strong&gt; del objeto DOM que cargará el archivo XML en la memoria.&lt;/p&gt;
 &lt;div id=&quot;t5345afd3-2138-2b12-c88b-db58768a8e7f&quot; class=&quot;exe-tooltip-text&quot;&gt;
 &lt;p&gt;DOM es una plataforma e interfaz de lenguaje estándar que permite a los programas y a los scripts acceder y actualizar dinámicamente el contenido, la estructura y el estilo de un documento. Se caracteriza por tener una estructura en forma de árbol.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
@@ -1023,7 +1031,7 @@ Módulo Acceso a datos."></unicode>
 		//Indicaremos la ruta del fichero xml
 		//Src es el nombre raiz de nuestro proyecto, main es la primera carpeta, resources la siguiente, dentro de xml encontraremos el fichero
 		//Esta es la ruta relativa.
-		File arxXml = new File(&quot;coches.xml&quot;);
+		File arxXml = new File(&quot;src/coches.xml&quot;);
 		//Creamos los objetos que nos permitiran leer el fichero
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
@@ -1048,13 +1056,21 @@ Módulo Acceso a datos."></unicode>
 	}&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;En primer lugar, vamos a utilizar una nueva instancia de &lt;strong&gt;DocumentBuilderFactory&lt;/strong&gt; (línea 7), esta clase nos va a permitir obtener un analizador sintáctico que produce la jerarquía de objetos DOM a partir de documentos XML.&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 14pt;&quot;&gt;&lt;code&gt;		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Una vez creada la instancia de esta clase, necesitaremos definir una clase &lt;strong&gt;DocumentBuilder&lt;/strong&gt; (línea 8). Esta es necesaria para posteriormente definir el documento que nos permitirá parsear el XML.&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 14pt;&quot;&gt;&lt;code&gt;
+		DocumentBuilder db = dbf.newDocumentBuilder();&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Después crearemos una nueva instancia de la clase &lt;strong&gt;Document&lt;/strong&gt;, que nos permitirá almacenar nuestro documento XML (línea 10). La clase Document representa un documento XML y nos proporcionará el acceso al contenido del documento XML.&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 14pt;&quot;&gt;&lt;code&gt;		Document doc = db.parse(arxXml);&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Seguidamente, necesitaremos obtener el nodo raíz a través del método &lt;strong&gt;getDocumentElement()&lt;/strong&gt;, así obtendremos los datos de esa etiqueta (línea 11).&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 14pt;&quot;&gt;&lt;code&gt;		System.out.println(&quot;Elemento raiz:&quot; + doc.getDocumentElement().getNodeName());&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;A continuación, tenemos que detectar cuántos elementos contiene el XML, es decir, cuántos nodos hay definidos. Para ello, utilizamos el método &lt;strong&gt;getElementByTagName()&lt;/strong&gt; al cual le pasaremos el nombre del nodo que queremos sustraer, en este caso, &quot;coche&quot;.&lt;/p&gt;
-&lt;p&gt;Para almacenar los datos obtenidos, definiremos el NodeList, que almacenará todos los datos encontrados haciendo la llamada al método &lt;strong&gt;getElementByTagName()&lt;/strong&gt; (línea 13). Si necesitamos acceder a todos los nodos desde el inicio del fichero, podemos llamar recursivamente a este método: &lt;strong&gt;getChildElement()&lt;/strong&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 14pt;&quot;&gt;&lt;code&gt;		NodeList nodeList = doc.getElementsByTagName(&quot;coche&quot;);&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Para almacenar los datos obtenidos, definiremos el &lt;strong&gt;NodeList&lt;/strong&gt;, que almacenará todos los datos encontrados haciendo la llamada al método &lt;strong&gt;getElementByTagName()&lt;/strong&gt; (línea 13). Si necesitamos acceder a todos los nodos desde el inicio del fichero, podemos llamar recursivamente a este método: &lt;strong&gt;getChildElement()&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;En el ejemplo vemos también que definimos la clase &lt;strong&gt;Node&lt;/strong&gt;, esta nos servirá para asignar todos los datos de cada elemento &quot;coche&quot; encontrado en el XML (línea 16).&lt;/p&gt;
-&lt;p&gt;Para obtener el valor del texto, podemos usar el método &lt;strong&gt;getElementByTextValue()&lt;/strong&gt; para buscar un nodo por su valor, y para acceder a los datos de los atributos, &lt;strong&gt;getElementByTagName()&lt;/strong&gt; junto con el método &lt;strong&gt;getAttribute()&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 14pt;&quot;&gt;&lt;code&gt;			Node node = nodeList.item(itr);&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Para obtener el valor del texto, usaremos el método &lt;strong&gt;getElementByTagName()&lt;/strong&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 14pt;&quot;&gt;&lt;code&gt;				System.out.println(&quot;Marca: &quot;+ eElement.getElementsByTagName(&quot;marca&quot;).item(0).getTextContent());&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
                  <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
                  <int value="4"></int>
                  <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -1074,7 +1090,7 @@ Módulo Acceso a datos."></unicode>
                       <instance class="exe.engine.field.TextField">
                        <dictionary>
                         <string role="key" value="_id"></string>
-                        <int value="123402"></int>
+                        <int value="128610"></int>
                         <string role="key" value="_idevice"></string>
                         <none></none>
                         <string role="key" value="_instruc"></string>
@@ -1088,7 +1104,7 @@ Módulo Acceso a datos."></unicode>
                        </dictionary>
                       </instance>
                       <string role="key" value="_id"></string>
-                      <unicode value="5_841_2.2"></unicode>
+                      <unicode value="5_841_2.3"></unicode>
                       <string role="key" value="_imageResource"></string>
                       <instance class="exe.engine.resource.Resource" reference="19">
                        <dictionary>
@@ -1099,7 +1115,7 @@ Módulo Acceso a datos."></unicode>
                         <string role="key" value="_storageName"></string>
                         <string value="codigo01.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpgrlvxb\\codigo01.png"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpbukdtx\\codigo01.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="c38ba29e3cc68aaa7e328ae6142b867a"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1128,7 +1144,7 @@ Módulo Acceso a datos."></unicode>
                  <string role="key" value="intlinks_to_anchors"></string>
                  <dictionary></dictionary>
                  <string role="key" value="nextImageId"></string>
-                 <int value="3"></int>
+                 <int value="4"></int>
                  <string role="key" value="parentNode"></string>
                  <reference key="18"></reference>
                 </dictionary>
@@ -1231,27 +1247,24 @@ Módulo Acceso a datos."></unicode>
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
-                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;NodeList nList = doc.getElementsByTagName(&quot;coche&quot;);
-
-for (int i = 0; i &amp;lt; nList.getLength(); i++) {
-  Node node = nList.item(i);
-
-  if (node.getNodeType() == Node.ELEMENT_NODE) {
-    Element eElement = (Element) node;
-
-    if(eElement.hasChildNodes()) {
-      NodeList nl = node.getChildNodes();
-      for(int j=0; j&amp;lt;nl.getLength(); j++) {
-        Node nd = nl.item(j);
-        System.out.println(nd.getTextContent());
-      }
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;for (int i = 0; i &amp;lt; nList.getLength(); i++) {			// Recorre la lista de nodos
+	Node node = nList.item(i);							// Obtiene nodo i
+	if (node.getNodeType() == Node.ELEMENT_NODE) {		// Si es Elemento...
+		Element eElement = (Element) node;				// ... se hace casting a Elemento
+		if(node.hasChildNodes()) {						// Si el nodo tiene nodos-hijos...
+			NodeList nl = node.getChildNodes();			// ... se obtiene la lista ...
+			for(int j=0; j&amp;lt;nl.getLength(); j++) {		// ... y se recorre.
+				Node nd = nl.item(j);					// Se declara cada nodo...							
+				System.out.print(nd.getTextContent());	// ... y se muestra su contenido
+			}
+		}
+	}
+}&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
@@ -1277,7 +1290,7 @@ for (int i = 0; i &amp;lt; nList.getLength(); i++) {
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="18"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -1329,7 +1342,7 @@ for (int i = 0; i &amp;lt; nList.getLength(); i++) {
          <instance class="exe.engine.node.Node" reference="24">
           <dictionary>
            <string role="key" value="_title"></string>
-           <unicode value="1.2. XML con SAX"></unicode>
+           <unicode value="1.2. Creación de documentos con DOM"></unicode>
            <string role="key" value="idevices"></string>
            <list>
             <instance class="exe.engine.jsidevice.JsIdevice" reference="22">
@@ -1394,9 +1407,355 @@ for (int i = 0; i &amp;lt; nList.getLength(); i++) {
                <instance class="exe.engine.field.TextAreaField" reference="23">
                 <dictionary>
                  <string role="key" value="_id"></string>
-                 <unicode value="839_2"></unicode>
+                 <unicode value="838_2"></unicode>
                  <string role="key" value="_idevice"></string>
                  <reference key="22"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Para la creación de un documento DOM y paso a un fichero XML, usaremos nodos de distintos tipos con algunos métodos de la interfaz &lt;strong&gt;Document&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Se usarán estos para crear los nodos y métodos de la interfaz &lt;strong&gt;Node&lt;/strong&gt; para añadirlos al documento.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;Element createElement(String nombreEtiqueta) // Crea nuevo elemento con el nombre dado
+
+Text createTextNode(String texto) // Crea nuevo nodo de tipo texto&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Los atributos se añaden con métodos de la interfaz &lt;strong&gt;Element&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;void setAttribute(String name, String value) // Añade atributo con el valor dado&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Los siguiente métodos de la interfaz &lt;strong&gt;Node&lt;/strong&gt;, permiten añadir elementos a un documento DOM. Si ocurre algún error, lanzará una excepción de tipo &lt;strong&gt;DOMException&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;Node appendChild(Node nuevohijo) // Añade nodo como último nodo hijo y devuelve el nodo añadido
+Node insertBefore(Node nuevohijo, Node refHijo) // Añade nuevo hijo antes del indicado&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="23"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="16"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="24"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="25">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Serializar un documento DOM"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="26">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="839_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="25"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La clase &lt;strong&gt;Transformer&lt;/strong&gt; permite serializar documentos DOM, es decir, generar un documento de texto XML a partir de ellos.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;import java.io.StringWriter;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.DOMImplementation;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+public class CrearDocumentoDOM {
+  public static void main(String[] argv) throws Exception {
+    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+    DocumentBuilder db = dbf.newDocumentBuilder();
+    DOMImplementation impl = db.getDOMImplementation();
+    Document doc = impl.createDocument(null, null, null);
+
+    Element e1base = doc.createElement(&quot;clientes&quot;);
+    doc.appendChild(e1base);
+    
+    Element e1 = doc.createElement(&quot;cliente&quot;);
+    e1.setAttribute(&quot;DNI&quot;, &quot;12345678Z&quot;);
+    Element e1Apel = doc.createElement(&quot;apellidos&quot;);
+    e1Apel.appendChild(doc.createTextNode(&quot;ROJAS&quot;));
+    e1.appendChild(e1Apel);
+    Element e1Validez = doc.createElement(&quot;validez&quot;);
+    e1Validez.setAttribute(&quot;estado&quot;,&quot;borrado&quot;);
+    e1Validez.setAttribute(&quot;timeStamp&quot;, &quot;1528286082&quot;);
+    e1.appendChild(e1Validez);
+    e1base.appendChild(e1);
+
+    DOMSource domSource = new DOMSource(doc);
+    Transformer transformer = TransformerFactory.newInstance().newTransformer();
+    //transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, &quot;yes&quot;);	// Omite la cabecera del XML
+    transformer.setOutputProperty(OutputKeys.METHOD, &quot;xml&quot;);
+    transformer.setOutputProperty(OutputKeys.ENCODING, &quot;UTF-8&quot;);
+    transformer.setOutputProperty(&quot;{http://xml.apache.org/xslt}indent-amount&quot;, &quot;4&quot;);
+    transformer.setOutputProperty(OutputKeys.INDENT, &quot;yes&quot;);
+    StringWriter sw = new StringWriter();
+    StreamResult sr = new StreamResult(sw);
+    transformer.transform(domSource, sr);
+    System.out.println(sw.toString());
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="26"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="diary"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="17"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="24"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="9"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="6"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA02.%20Primer%20acceso%20a%20datos:1.%20Ficheros%20XML:1.2.%20Creaci%C3%B3n%20de%20documentos%20con%20DOM"></string>
+           <string role="key" value="parent"></string>
+           <reference key="9"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="29">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="1.2. XML con SAX"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="27">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="28">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="839_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="27"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -1542,7 +1901,7 @@ saxParser.parse(&quot;src/main/resources/xml/coches.xml&quot;, handler);&lt;/cod
                       <instance class="exe.engine.field.TextField">
                        <dictionary>
                         <string role="key" value="_id"></string>
-                        <int value="123403"></int>
+                        <int value="128611"></int>
                         <string role="key" value="_idevice"></string>
                         <none></none>
                         <string role="key" value="_instruc"></string>
@@ -1556,18 +1915,18 @@ saxParser.parse(&quot;src/main/resources/xml/coches.xml&quot;, handler);&lt;/cod
                        </dictionary>
                       </instance>
                       <string role="key" value="_id"></string>
-                      <unicode value="1_839_2.2"></unicode>
+                      <unicode value="1_839_2.3"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="25">
+                      <instance class="exe.engine.resource.Resource" reference="30">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="22"></reference>
+                        <reference key="27"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="6"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="codigo01.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpgrlvxb\\codigo01.png"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpbukdtx\\codigo01.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="c38ba29e3cc68aaa7e328ae6142b867a"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1579,7 +1938,7 @@ saxParser.parse(&quot;src/main/resources/xml/coches.xml&quot;, handler);&lt;/cod
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="23"></reference>
+                      <reference key="28"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -1590,15 +1949,15 @@ saxParser.parse(&quot;src/main/resources/xml/coches.xml&quot;, handler);&lt;/cod
                     </instance>
                    </list>
                    <string role="key" value="idevice"></string>
-                   <reference key="23"></reference>
+                   <reference key="28"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
                  <dictionary></dictionary>
                  <string role="key" value="nextImageId"></string>
-                 <int value="3"></int>
+                 <int value="4"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="24"></reference>
+                 <reference key="29"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -1615,14 +1974,14 @@ saxParser.parse(&quot;src/main/resources/xml/coches.xml&quot;, handler);&lt;/cod
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="24"></reference>
+              <reference key="29"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
               <bool value="1"></bool>
               <string role="key" value="userResources"></string>
               <list>
-               <reference key="25"></reference>
+               <reference key="30"></reference>
               </list>
               <string role="key" value="version"></string>
               <int value="0"></int>
@@ -1649,263 +2008,12 @@ saxParser.parse(&quot;src/main/resources/xml/coches.xml&quot;, handler);&lt;/cod
            <list></list>
           </dictionary>
          </instance>
-         <instance class="exe.engine.node.Node" reference="28">
+         <instance class="exe.engine.node.Node" reference="33">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="1.3. Conversiones"></unicode>
            <string role="key" value="idevices"></string>
            <list>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="26">
-             <dictionary>
-              <string role="key" value="_title"></string>
-              <unicode value=""></unicode>
-              <string role="key" value="_attributes"></string>
-              <list>
-               <tuple>
-                <string value="title"></string>
-                <list>
-                 <string value="Title"></string>
-                 <int value="0"></int>
-                 <int value="0"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="category"></string>
-                <list>
-                 <string value="Category"></string>
-                 <int value="0"></int>
-                 <int value="1"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="css-class"></string>
-                <list>
-                 <string value="CSS class"></string>
-                 <int value="0"></int>
-                 <int value="2"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="icon"></string>
-                <list>
-                 <string value="Icon"></string>
-                 <int value="0"></int>
-                 <int value="3"></int>
-                </list>
-               </tuple>
-              </list>
-              <string role="key" value="_author"></string>
-              <string value=""></string>
-              <string role="key" value="_iDeviceDir"></string>
-              <string value="udl-content"></string>
-              <string role="key" value="_purpose"></string>
-              <string value=""></string>
-              <string role="key" value="_tip"></string>
-              <string value=""></string>
-              <string role="key" value="_valid"></string>
-              <bool value="1"></bool>
-              <string role="key" value="class_"></string>
-              <unicode value="UDLcontent"></unicode>
-              <string role="key" value="edit"></string>
-              <bool value="0"></bool>
-              <string role="key" value="emphasis"></string>
-              <int value="0"></int>
-              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
-              <int value="1"></int>
-              <string role="key" value="fields"></string>
-              <list>
-               <instance class="exe.engine.field.TextAreaField" reference="27">
-                <dictionary>
-                 <string role="key" value="_id"></string>
-                 <unicode value="838_2"></unicode>
-                 <string role="key" value="_idevice"></string>
-                 <reference key="26"></reference>
-                 <string role="key" value="_instruc"></string>
-                 <string value=""></string>
-                 <string role="key" value="_name"></string>
-                 <string value=""></string>
-                 <string role="key" value="anchor_names"></string>
-                 <list></list>
-                 <string role="key" value="anchors_linked_from_fields"></string>
-                 <dictionary></dictionary>
-                 <string role="key" value="content_w_resourcePaths"></string>
-                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;En Java existen una infinidad de librerías que podemos añadir a nuestro proyecto para poder transformar nuestros XML a cualquier otro formato. En este apartado, explicaremos cómo transformar nuestros ficheros XML a un formato JSON.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
-                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-                 <int value="4"></int>
-                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-                 <int value="2"></int>
-                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-                 <int value="3"></int>
-                 <string role="key" value="htmlTag"></string>
-                 <string value="div"></string>
-                 <string role="key" value="images"></string>
-                 <instance class="exe.engine.galleryidevice.GalleryImages">
-                  <dictionary>
-                   <string role="key" value=".listitems"></string>
-                   <list></list>
-                   <string role="key" value="idevice"></string>
-                   <reference key="27"></reference>
-                  </dictionary>
-                 </instance>
-                 <string role="key" value="intlinks_to_anchors"></string>
-                 <dictionary></dictionary>
-                 <string role="key" value="nextImageId"></string>
-                 <int value="0"></int>
-                 <string role="key" value="parentNode"></string>
-                 <reference key="28"></reference>
-                </dictionary>
-               </instance>
-              </list>
-              <string role="key" value="icon"></string>
-              <unicode value=""></unicode>
-              <string role="key" value="id"></string>
-              <unicode value="2"></unicode>
-              <string role="key" value="ideviceCategory"></string>
-              <unicode value="Text and Tasks"></unicode>
-              <string role="key" value="lastIdevice"></string>
-              <bool value="0"></bool>
-              <string role="key" value="nextFieldId"></string>
-              <int value="3"></int>
-              <string role="key" value="originalicon"></string>
-              <string value=""></string>
-              <string role="key" value="parentNode"></string>
-              <reference key="28"></reference>
-              <string role="key" value="systemResources"></string>
-              <list></list>
-              <string role="key" value="undo"></string>
-              <bool value="1"></bool>
-              <string role="key" value="userResources"></string>
-              <list></list>
-              <string role="key" value="version"></string>
-              <int value="0"></int>
-             </dictionary>
-            </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="29">
-             <dictionary>
-              <string role="key" value="_title"></string>
-              <unicode value="El formato JSON"></unicode>
-              <string role="key" value="_attributes"></string>
-              <list>
-               <tuple>
-                <string value="title"></string>
-                <list>
-                 <string value="Title"></string>
-                 <int value="0"></int>
-                 <int value="0"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="category"></string>
-                <list>
-                 <string value="Category"></string>
-                 <int value="0"></int>
-                 <int value="1"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="css-class"></string>
-                <list>
-                 <string value="CSS class"></string>
-                 <int value="0"></int>
-                 <int value="2"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="icon"></string>
-                <list>
-                 <string value="Icon"></string>
-                 <int value="0"></int>
-                 <int value="3"></int>
-                </list>
-               </tuple>
-              </list>
-              <string role="key" value="_author"></string>
-              <string value=""></string>
-              <string role="key" value="_iDeviceDir"></string>
-              <string value="udl-content"></string>
-              <string role="key" value="_purpose"></string>
-              <string value=""></string>
-              <string role="key" value="_tip"></string>
-              <string value=""></string>
-              <string role="key" value="_valid"></string>
-              <bool value="1"></bool>
-              <string role="key" value="class_"></string>
-              <unicode value="UDLcontent"></unicode>
-              <string role="key" value="edit"></string>
-              <bool value="0"></bool>
-              <string role="key" value="emphasis"></string>
-              <int value="1"></int>
-              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
-              <int value="1"></int>
-              <string role="key" value="fields"></string>
-              <list>
-               <instance class="exe.engine.field.TextAreaField" reference="30">
-                <dictionary>
-                 <string role="key" value="_id"></string>
-                 <unicode value="839_2"></unicode>
-                 <string role="key" value="_idevice"></string>
-                 <reference key="29"></reference>
-                 <string role="key" value="_instruc"></string>
-                 <string value=""></string>
-                 <string role="key" value="_name"></string>
-                 <string value=""></string>
-                 <string role="key" value="anchor_names"></string>
-                 <list></list>
-                 <string role="key" value="anchors_linked_from_fields"></string>
-                 <dictionary></dictionary>
-                 <string role="key" value="content_w_resourcePaths"></string>
-                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;strong&gt;JSON&lt;/strong&gt;: siglas para &lt;strong&gt;Javascript Object Notation&lt;/strong&gt;. Es un tipo de archivo de formato de texto derivado de Javascript, bastante ligero y que almacena información estructurada. Es fácil de interpretar y generar, y se utiliza para transferir información entre un cliente y un servidor.&lt;/p&gt;
-&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://www.w3schools.com/js/js_json_intro.asp&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Más información&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
-                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-                 <int value="4"></int>
-                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-                 <int value="2"></int>
-                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-                 <int value="3"></int>
-                 <string role="key" value="htmlTag"></string>
-                 <string value="div"></string>
-                 <string role="key" value="images"></string>
-                 <instance class="exe.engine.galleryidevice.GalleryImages">
-                  <dictionary>
-                   <string role="key" value=".listitems"></string>
-                   <list></list>
-                   <string role="key" value="idevice"></string>
-                   <reference key="30"></reference>
-                  </dictionary>
-                 </instance>
-                 <string role="key" value="intlinks_to_anchors"></string>
-                 <dictionary></dictionary>
-                 <string role="key" value="nextImageId"></string>
-                 <int value="0"></int>
-                 <string role="key" value="parentNode"></string>
-                 <reference key="28"></reference>
-                </dictionary>
-               </instance>
-              </list>
-              <string role="key" value="icon"></string>
-              <unicode value="info"></unicode>
-              <string role="key" value="id"></string>
-              <unicode value="3"></unicode>
-              <string role="key" value="ideviceCategory"></string>
-              <unicode value="Text and Tasks"></unicode>
-              <string role="key" value="lastIdevice"></string>
-              <bool value="0"></bool>
-              <string role="key" value="nextFieldId"></string>
-              <int value="3"></int>
-              <string role="key" value="originalicon"></string>
-              <string value=""></string>
-              <string role="key" value="parentNode"></string>
-              <reference key="28"></reference>
-              <string role="key" value="systemResources"></string>
-              <list></list>
-              <string role="key" value="undo"></string>
-              <bool value="1"></bool>
-              <string role="key" value="userResources"></string>
-              <list></list>
-              <string role="key" value="version"></string>
-              <int value="0"></int>
-             </dictionary>
-            </instance>
             <instance class="exe.engine.jsidevice.JsIdevice" reference="31">
              <dictionary>
               <string role="key" value="_title"></string>
@@ -1968,9 +2076,260 @@ saxParser.parse(&quot;src/main/resources/xml/coches.xml&quot;, handler);&lt;/cod
                <instance class="exe.engine.field.TextAreaField" reference="32">
                 <dictionary>
                  <string role="key" value="_id"></string>
-                 <unicode value="840_2"></unicode>
+                 <unicode value="838_2"></unicode>
                  <string role="key" value="_idevice"></string>
                  <reference key="31"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;En Java existen una infinidad de librerías que podemos añadir a nuestro proyecto para poder transformar nuestros XML a cualquier otro formato. En este apartado, explicaremos cómo transformar nuestros ficheros XML a un formato JSON.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="32"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="33"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="2"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="33"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="34">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="El formato JSON"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="35">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="839_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="34"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;strong&gt;JSON&lt;/strong&gt;: siglas para &lt;strong&gt;Javascript Object Notation&lt;/strong&gt;. Es un tipo de archivo de formato de texto derivado de Javascript, bastante ligero y que almacena información estructurada. Es fácil de interpretar y generar, y se utiliza para transferir información entre un cliente y un servidor.&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://www.w3schools.com/js/js_json_intro.asp&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Más información&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="35"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="33"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="info"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="3"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="33"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="36">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="37">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="840_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="36"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -2035,7 +2394,7 @@ try {
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="32"></reference>
+                   <reference key="37"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -2043,7 +2402,7 @@ try {
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="28"></reference>
+                 <reference key="33"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -2060,7 +2419,7 @@ try {
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="28"></reference>
+              <reference key="33"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -2071,390 +2430,181 @@ try {
               <int value="0"></int>
              </dictionary>
             </instance>
-           </list>
-           <string role="key" value="_id"></string>
-           <unicode value="4"></unicode>
-           <string role="key" value="_package"></string>
-           <reference key="6"></reference>
-           <string role="key" value="anchor_fields"></string>
-           <list></list>
-           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
-           <int value="2"></int>
-           <string role="key" value="exportType"></string>
-           <string value="website"></string>
-           <string role="key" value="last_full_node_path"></string>
-           <string value="exe-node:UA02.%20Primer%20acceso%20a%20datos:1.%20Ficheros%20XML:1.3.%20Conversiones"></string>
-           <string role="key" value="parent"></string>
-           <reference key="9"></reference>
-           <string role="key" value="top_anchors_linked_from_fields"></string>
-           <list></list>
-           <string role="key" value="children"></string>
-           <list></list>
-          </dictionary>
-         </instance>
-        </list>
-       </dictionary>
-      </instance>
-      <instance class="exe.engine.node.Node" reference="35">
-       <dictionary>
-        <string role="key" value="_title"></string>
-        <unicode value="2. Excepciones"></unicode>
-        <string role="key" value="idevices"></string>
-        <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="33">
-          <dictionary>
-           <string role="key" value="_title"></string>
-           <unicode value=""></unicode>
-           <string role="key" value="_attributes"></string>
-           <list>
-            <tuple>
-             <string value="title"></string>
-             <list>
-              <string value="Title"></string>
-              <int value="0"></int>
-              <int value="0"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="category"></string>
-             <list>
-              <string value="Category"></string>
-              <int value="0"></int>
-              <int value="1"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="css-class"></string>
-             <list>
-              <string value="CSS class"></string>
-              <int value="0"></int>
-              <int value="2"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="icon"></string>
-             <list>
-              <string value="Icon"></string>
-              <int value="0"></int>
-              <int value="3"></int>
-             </list>
-            </tuple>
-           </list>
-           <string role="key" value="_author"></string>
-           <string value=""></string>
-           <string role="key" value="_iDeviceDir"></string>
-           <string value="udl-content"></string>
-           <string role="key" value="_purpose"></string>
-           <string value=""></string>
-           <string role="key" value="_tip"></string>
-           <string value=""></string>
-           <string role="key" value="_valid"></string>
-           <bool value="1"></bool>
-           <string role="key" value="class_"></string>
-           <unicode value="UDLcontent"></unicode>
-           <string role="key" value="edit"></string>
-           <bool value="0"></bool>
-           <string role="key" value="emphasis"></string>
-           <int value="0"></int>
-           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
-           <int value="1"></int>
-           <string role="key" value="fields"></string>
-           <list>
-            <instance class="exe.engine.field.TextAreaField" reference="34">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="38">
              <dictionary>
-              <string role="key" value="_id"></string>
-              <unicode value="839_2"></unicode>
-              <string role="key" value="_idevice"></string>
-              <reference key="33"></reference>
-              <string role="key" value="_instruc"></string>
-              <string value=""></string>
-              <string role="key" value="_name"></string>
-              <string value=""></string>
-              <string role="key" value="anchor_names"></string>
-              <list></list>
-              <string role="key" value="anchors_linked_from_fields"></string>
-              <dictionary></dictionary>
-              <string role="key" value="content_w_resourcePaths"></string>
-              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;El tratamiento de las excepciones es un proceso muy importante en la creación de un programa. Es el mecanismo que nos permite controlar un proceso anómalo dentro de nuestro programa y gestionar qué ocurre cuando se produce un error.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Una excepción es un evento que se produce durante la ejecución de un programa que interrumpe el flujo normal de ejecución del código a causa de un error, ya sea controlado o inesperado.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;resources/try-catch-flow.svg&quot; alt=&quot;Try-catch&quot; style=&quot;margin-right: 10px; margin-left: 10px; float: right;&quot; width=&quot;320&quot; height=&quot;256&quot;&gt;Para poder gestionar los errores, en Java utilizamos lo que se llama un &lt;strong&gt;try-catch&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Un try-catch es un bloque de código que se añadirá a nuestro programa siempre que queramos controlar una parte del código que vayamos a desarrollar. El código se ejecutará en orden e irá siguiendo hasta que se produzca un error, en ese momento entrará al catch.&lt;/p&gt;
-&lt;p&gt;Podemos definir más de un catch en un mismo try. Cuando se produzca el error, entrará en el primer bloque catch que coincida con el tipo de excepción y solo podrá entrar en uno de los bloques catch.&lt;/p&gt;
-&lt;p&gt;Los tipos de excepción más específicos deben aparecer primero en la estructura, seguidos de los tipos de excepción más generales.&lt;/p&gt;
-&lt;p&gt;El &lt;strong&gt;try&lt;/strong&gt; es lo que primero se ejecuta: se prueba la acción que se intenta realizar y, si se produce un error, el &lt;strong&gt;catch&lt;/strong&gt; recoge la excepción y, según lo que indiquemos, lanza un mensaje con la descripción de lo que ha ocurrido. Al lanzar una excepción, el proceso normal del programa se interrumpirá.&lt;/p&gt;
-&lt;p&gt;Lo mejor para controlar los errores es tener en cuenta todas las posibilidades de error y controlarlas. Se debe utilizar un try-catch siempre que sea necesario.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
-              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-              <int value="4"></int>
-              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-              <int value="2"></int>
-              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-              <int value="3"></int>
-              <string role="key" value="htmlTag"></string>
-              <string value="div"></string>
-              <string role="key" value="images"></string>
-              <instance class="exe.engine.galleryidevice.GalleryImages">
-               <dictionary>
-                <string role="key" value=".listitems"></string>
+              <string role="key" value="_title"></string>
+              <unicode value="Conversión a Web"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
                 <list>
-                 <instance class="exe.engine.galleryidevice.GalleryImage">
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="39">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="840_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="38"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;strong&gt;XSL (Extensible Stylesheet Language)&lt;/strong&gt; es toda una familia de recomendaciones del World Wide Web Consortium para expresar hojas de estilo en lenguaje XML. Una hoja de estilo &lt;strong&gt;XSL&lt;/strong&gt; describe el proceso de presentación a través de un pequeño conjunto de elementos &lt;strong&gt;XML&lt;/strong&gt;. Esta hoja, puede contener elementos de reglas que representan a as reglas de construcción y elementos de reglas de estilo que representan a las reglas de mezcla de estilos. Comprobaremos como a partir de un fichero XML que contiene datos y otro XSL que contiene la presentación de esos datos se puede generar un fichero &lt;strong&gt;HTML&lt;/strong&gt; usando el lenguaje &lt;strong&gt;Java&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;exe-layout-2-cols exe-layout-2-50-50 exe-clear&quot;&gt;
+&lt;div class=&quot;exe-col exe-col-1&quot;&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;
+&amp;lt;listadealumnos&amp;gt;
+&amp;lt;alumno&amp;gt;
+&amp;lt;nombre&amp;gt;Juan&amp;lt;/nombre&amp;gt;
+&amp;lt;edad&amp;gt;19&amp;lt;/edad&amp;gt;
+&amp;lt;/alumno&amp;gt;
+&amp;lt;alumno&amp;gt;
+&amp;lt;nombre&amp;gt;María&amp;lt;/nombre&amp;gt;
+&amp;lt;edad&amp;gt;20&amp;lt;/edad&amp;gt;
+&amp;lt;/alumno&amp;gt;
+&amp;lt;/listadealumnos&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;exe-col exe-col-2&quot;&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding='UTF-8'?&amp;gt;
+&amp;lt;xsl:stylesheet version=&quot;1.0&quot; 
+    xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&amp;gt;
+&amp;lt;xsl:template match='/'&amp;gt;
+    &amp;lt;html&amp;gt;&amp;lt;xsl:apply-templates /&amp;gt;&amp;lt;/html&amp;gt;
+&amp;lt;/xsl:template&amp;gt;
+&amp;lt;xsl:template match='listadodealumnos'&amp;gt;
+    &amp;lt;head&amp;gt;&amp;lt;title&amp;gt;LISTADO DE ALUMNOS&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;LISTA DE ALUMNOS&amp;lt;/h1&amp;gt;
+    &amp;lt;table border='1'&amp;gt;
+    &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;Nombre&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Edad&amp;lt;/th&amp;gt;&amp;lt;/tr&amp;gt;
+    &amp;lt;xsl:apply-templates select='alumno' /&amp;gt;
+    &amp;lt;/table&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/xsl:template&amp;gt;
+&amp;lt;xsl:template match='alumno'&amp;gt;
+    &amp;lt;tr&amp;gt;&amp;lt;xsl:apply-templates /&amp;gt;&amp;lt;/tr&amp;gt;
+&amp;lt;/xsl:template&amp;gt;
+&amp;lt;xsl:template match='nombre|edad'&amp;gt;
+    &amp;lt;td&amp;gt;&amp;lt;xsl:apply-templates /&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/xsl:template&amp;gt;
+&amp;lt;/xsl:stylesheet&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
                   <dictionary>
-                   <string role="key" value="_caption"></string>
-                   <instance class="exe.engine.field.TextField">
-                    <dictionary>
-                     <string role="key" value="_id"></string>
-                     <int value="123406"></int>
-                     <string role="key" value="_idevice"></string>
-                     <none></none>
-                     <string role="key" value="_instruc"></string>
-                     <string value=""></string>
-                     <string role="key" value="_name"></string>
-                     <string value=""></string>
-                     <string role="key" value="content"></string>
-                     <string value=""></string>
-                     <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-                     <int value="4"></int>
-                    </dictionary>
-                   </instance>
-                   <string role="key" value="_id"></string>
-                   <unicode value="7_839_2.1"></unicode>
-                   <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="36">
-                    <dictionary>
-                     <string role="key" value="_idevice"></string>
-                     <reference key="33"></reference>
-                     <string role="key" value="_package"></string>
-                     <reference key="6"></reference>
-                     <string role="key" value="_storageName"></string>
-                     <string value="try-catch-flow.svg"></string>
-                     <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpgrlvxb\\try-catch-flow.svg"></string>
-                     <string role="key" value="checksum"></string>
-                     <string value="11b8bfd66bcf47651405da7ffc4924e8"></string>
-                     <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
-                     <int value="2"></int>
-                     <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
-                     <int value="2"></int>
-                     <string role="key" value="warningMsg"></string>
-                     <string value=""></string>
-                    </dictionary>
-                   </instance>
-                   <string role="key" value="_parent"></string>
-                   <reference key="34"></reference>
-                   <string role="key" value="_thumbnailResource"></string>
-                   <none></none>
-                   <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
-                   <int value="3"></int>
-                   <string role="key" value="makeThumbnail"></string>
-                   <bool value="0"></bool>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="39"></reference>
                   </dictionary>
                  </instance>
-                </list>
-                <string role="key" value="idevice"></string>
-                <reference key="34"></reference>
-               </dictionary>
-              </instance>
-              <string role="key" value="intlinks_to_anchors"></string>
-              <dictionary></dictionary>
-              <string role="key" value="nextImageId"></string>
-              <int value="2"></int>
-              <string role="key" value="parentNode"></string>
-              <reference key="35"></reference>
-             </dictionary>
-            </instance>
-           </list>
-           <string role="key" value="icon"></string>
-           <unicode value=""></unicode>
-           <string role="key" value="id"></string>
-           <unicode value="7"></unicode>
-           <string role="key" value="ideviceCategory"></string>
-           <unicode value="Text and Tasks"></unicode>
-           <string role="key" value="lastIdevice"></string>
-           <bool value="0"></bool>
-           <string role="key" value="nextFieldId"></string>
-           <int value="3"></int>
-           <string role="key" value="originalicon"></string>
-           <string value=""></string>
-           <string role="key" value="parentNode"></string>
-           <reference key="35"></reference>
-           <string role="key" value="systemResources"></string>
-           <list></list>
-           <string role="key" value="undo"></string>
-           <bool value="1"></bool>
-           <string role="key" value="userResources"></string>
-           <list>
-            <reference key="36"></reference>
-           </list>
-           <string role="key" value="version"></string>
-           <int value="0"></int>
-          </dictionary>
-         </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="37">
-          <dictionary>
-           <string role="key" value="_title"></string>
-           <unicode value="Ejemplo"></unicode>
-           <string role="key" value="_attributes"></string>
-           <list>
-            <tuple>
-             <string value="title"></string>
-             <list>
-              <string value="Title"></string>
-              <int value="0"></int>
-              <int value="0"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="category"></string>
-             <list>
-              <string value="Category"></string>
-              <int value="0"></int>
-              <int value="1"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="css-class"></string>
-             <list>
-              <string value="CSS class"></string>
-              <int value="0"></int>
-              <int value="2"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="icon"></string>
-             <list>
-              <string value="Icon"></string>
-              <int value="0"></int>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="diary"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="18"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
               <int value="3"></int>
-             </list>
-            </tuple>
-           </list>
-           <string role="key" value="_author"></string>
-           <string value=""></string>
-           <string role="key" value="_iDeviceDir"></string>
-           <string value="udl-content"></string>
-           <string role="key" value="_purpose"></string>
-           <string value=""></string>
-           <string role="key" value="_tip"></string>
-           <string value=""></string>
-           <string role="key" value="_valid"></string>
-           <bool value="1"></bool>
-           <string role="key" value="class_"></string>
-           <unicode value="UDLcontent"></unicode>
-           <string role="key" value="edit"></string>
-           <bool value="0"></bool>
-           <string role="key" value="emphasis"></string>
-           <int value="1"></int>
-           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
-           <int value="1"></int>
-           <string role="key" value="fields"></string>
-           <list>
-            <instance class="exe.engine.field.TextAreaField" reference="38">
-             <dictionary>
-              <string role="key" value="_id"></string>
-              <unicode value="840_2"></unicode>
-              <string role="key" value="_idevice"></string>
-              <reference key="37"></reference>
-              <string role="key" value="_instruc"></string>
+              <string role="key" value="originalicon"></string>
               <string value=""></string>
-              <string role="key" value="_name"></string>
-              <string value=""></string>
-              <string role="key" value="anchor_names"></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="33"></reference>
+              <string role="key" value="systemResources"></string>
               <list></list>
-              <string role="key" value="anchors_linked_from_fields"></string>
-              <dictionary></dictionary>
-              <string role="key" value="content_w_resourcePaths"></string>
-              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
-&lt;div&gt;
-&lt;pre&gt;&lt;code&gt;try{
-    //Parte donde se ejecuta el código que puede dar excecion
-    File prueba = new File(&quot;c\\:prueba.txt&quot;);
-} catch( NoSuchFileException e){
-    System.out.println(“No se ha encontrado el archivo” +e);
-} catch(IOExcepction ex){
-    //Parte donde se gestiona la excepción
-    throw ex;
-} finally {
-    //Bloque de código que se ejecutará siempre, aunque se lanze una //excepcion
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Como vemos en el ejemplo, antes de realizar la acción debemos envolverla con un &lt;strong&gt;try-catch&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Dentro del bloque del &lt;strong&gt;try&lt;/strong&gt;, añadiremos la parte del código que queremos controlar si se produce un error. Si no se produce el error, el programa continuará la ejecución y entrará dentro del bloque &lt;strong&gt;finally&lt;/strong&gt;. Este bloque se ejecutará siempre, aunque no se produzca un error, y es especialmente útil para cerrar el proceso o ejecutar algún tipo de acción necesaria. En el caso de que se produzca un error, entrará en el &lt;strong&gt;catch&lt;/strong&gt; y realizará las acciones dentro de ese apartado y lanzará un error.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
-              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-              <int value="4"></int>
-              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-              <int value="2"></int>
-              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-              <int value="3"></int>
-              <string role="key" value="htmlTag"></string>
-              <string value="div"></string>
-              <string role="key" value="images"></string>
-              <instance class="exe.engine.galleryidevice.GalleryImages">
-               <dictionary>
-                <string role="key" value=".listitems"></string>
-                <list></list>
-                <string role="key" value="idevice"></string>
-                <reference key="38"></reference>
-               </dictionary>
-              </instance>
-              <string role="key" value="intlinks_to_anchors"></string>
-              <dictionary></dictionary>
-              <string role="key" value="nextImageId"></string>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
               <int value="0"></int>
-              <string role="key" value="parentNode"></string>
-              <reference key="35"></reference>
              </dictionary>
             </instance>
-           </list>
-           <string role="key" value="icon"></string>
-           <unicode value="observe"></unicode>
-           <string role="key" value="id"></string>
-           <unicode value="8"></unicode>
-           <string role="key" value="ideviceCategory"></string>
-           <unicode value="Text and Tasks"></unicode>
-           <string role="key" value="lastIdevice"></string>
-           <bool value="0"></bool>
-           <string role="key" value="nextFieldId"></string>
-           <int value="3"></int>
-           <string role="key" value="originalicon"></string>
-           <string value=""></string>
-           <string role="key" value="parentNode"></string>
-           <reference key="35"></reference>
-           <string role="key" value="systemResources"></string>
-           <list></list>
-           <string role="key" value="undo"></string>
-           <bool value="1"></bool>
-           <string role="key" value="userResources"></string>
-           <list></list>
-           <string role="key" value="version"></string>
-           <int value="0"></int>
-          </dictionary>
-         </instance>
-        </list>
-        <string role="key" value="_id"></string>
-        <unicode value="5"></unicode>
-        <string role="key" value="_package"></string>
-        <reference key="6"></reference>
-        <string role="key" value="anchor_fields"></string>
-        <list></list>
-        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
-        <int value="2"></int>
-        <string role="key" value="exportType"></string>
-        <string value="website"></string>
-        <string role="key" value="last_full_node_path"></string>
-        <string value="exe-node:UA02.%20Primer%20acceso%20a%20datos:2.%20Excepciones"></string>
-        <string role="key" value="parent"></string>
-        <reference key="3"></reference>
-        <string role="key" value="top_anchors_linked_from_fields"></string>
-        <list></list>
-        <string role="key" value="children"></string>
-        <list>
-         <instance class="exe.engine.node.Node" reference="41">
-          <dictionary>
-           <string role="key" value="_title"></string>
-           <unicode value="2.1. Excepciones controladas"></unicode>
-           <string role="key" value="idevices"></string>
-           <list>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="39">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="40">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value=""></unicode>
@@ -2513,12 +2663,530 @@ try {
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="40">
+               <instance class="exe.engine.field.TextAreaField" reference="41">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="841_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="39"></reference>
+                 <reference key="40"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Para realizar la transformación, se necesita un objeto &lt;strong&gt;Transformer&lt;/strong&gt; que se obtiene creando una instancia de &lt;strong&gt;TransformerFactory&lt;/strong&gt; y aplicando el método &lt;strong&gt;newTransformer&lt;/strong&gt; a la fuente XSL.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;Transformer transformer = TransformerFactory.newInstance().newTransformer(estilos);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;La transformación se consigue llamando al método &lt;strong&gt;transform()&lt;/strong&gt;, pasándole los datos (XML) y el stream de salida (el fichero HTML):&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;transformer.transform(datos, result);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="41"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="19"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="33"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="4"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="6"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA02.%20Primer%20acceso%20a%20datos:1.%20Ficheros%20XML:1.3.%20Conversiones"></string>
+           <string role="key" value="parent"></string>
+           <reference key="9"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+        </list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="44">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="2. Excepciones"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="42">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="43">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="839_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="42"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;El tratamiento de las excepciones es un proceso muy importante en la creación de un programa. Es el mecanismo que nos permite controlar un proceso anómalo dentro de nuestro programa y gestionar qué ocurre cuando se produce un error.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Una excepción es un evento que se produce durante la ejecución de un programa que interrumpe el flujo normal de ejecución del código a causa de un error, ya sea controlado o inesperado.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;resources/try-catch-flow.svg&quot; alt=&quot;Try-catch&quot; style=&quot;margin-right: 10px; margin-left: 10px; float: right;&quot; width=&quot;320&quot; height=&quot;256&quot;&gt;Para poder gestionar los errores, en Java utilizamos lo que se llama un &lt;strong&gt;try-catch&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Un try-catch es un bloque de código que se añadirá a nuestro programa siempre que queramos controlar una parte del código que vayamos a desarrollar. El código se ejecutará en orden e irá siguiendo hasta que se produzca un error, en ese momento entrará al catch.&lt;/p&gt;
+&lt;p&gt;Podemos definir más de un catch en un mismo try. Cuando se produzca el error, entrará en el primer bloque catch que coincida con el tipo de excepción y solo podrá entrar en uno de los bloques catch.&lt;/p&gt;
+&lt;p&gt;Los tipos de excepción más específicos deben aparecer primero en la estructura, seguidos de los tipos de excepción más generales.&lt;/p&gt;
+&lt;p&gt;El &lt;strong&gt;try&lt;/strong&gt; es lo que primero se ejecuta: se prueba la acción que se intenta realizar y, si se produce un error, el &lt;strong&gt;catch&lt;/strong&gt; recoge la excepción y, según lo que indiquemos, lanza un mensaje con la descripción de lo que ha ocurrido. Al lanzar una excepción, el proceso normal del programa se interrumpirá.&lt;/p&gt;
+&lt;p&gt;Lo mejor para controlar los errores es tener en cuenta todas las posibilidades de error y controlarlas. Se debe utilizar un try-catch siempre que sea necesario.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list>
+                 <instance class="exe.engine.galleryidevice.GalleryImage">
+                  <dictionary>
+                   <string role="key" value="_caption"></string>
+                   <instance class="exe.engine.field.TextField">
+                    <dictionary>
+                     <string role="key" value="_id"></string>
+                     <int value="128614"></int>
+                     <string role="key" value="_idevice"></string>
+                     <none></none>
+                     <string role="key" value="_instruc"></string>
+                     <string value=""></string>
+                     <string role="key" value="_name"></string>
+                     <string value=""></string>
+                     <string role="key" value="content"></string>
+                     <string value=""></string>
+                     <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                     <int value="4"></int>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_id"></string>
+                   <unicode value="7_839_2.2"></unicode>
+                   <string role="key" value="_imageResource"></string>
+                   <instance class="exe.engine.resource.Resource" reference="45">
+                    <dictionary>
+                     <string role="key" value="_idevice"></string>
+                     <reference key="42"></reference>
+                     <string role="key" value="_package"></string>
+                     <reference key="6"></reference>
+                     <string role="key" value="_storageName"></string>
+                     <string value="try-catch-flow.svg"></string>
+                     <string role="key" value="_userName"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpbukdtx\\try-catch-flow.svg"></string>
+                     <string role="key" value="checksum"></string>
+                     <string value="11b8bfd66bcf47651405da7ffc4924e8"></string>
+                     <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="warningMsg"></string>
+                     <string value=""></string>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_parent"></string>
+                   <reference key="43"></reference>
+                   <string role="key" value="_thumbnailResource"></string>
+                   <none></none>
+                   <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                   <int value="3"></int>
+                   <string role="key" value="makeThumbnail"></string>
+                   <bool value="0"></bool>
+                  </dictionary>
+                 </instance>
+                </list>
+                <string role="key" value="idevice"></string>
+                <reference key="43"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="3"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="44"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="7"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="44"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list>
+            <reference key="45"></reference>
+           </list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="46">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Ejemplo"></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="1"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="47">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="840_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="46"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;try{
+    //Parte donde se ejecuta el código que puede dar excecion
+    File prueba = new File(&quot;c\\:prueba.txt&quot;);
+} catch( NoSuchFileException e){
+    System.out.println(“No se ha encontrado el archivo” +e);
+} catch(IOExcepction ex){
+    //Parte donde se gestiona la excepción
+    throw ex;
+} finally {
+    //Bloque de código que se ejecutará siempre, aunque se lanze una //excepcion
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Como vemos en el ejemplo, antes de realizar la acción debemos envolverla con un &lt;strong&gt;try-catch&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Dentro del bloque del &lt;strong&gt;try&lt;/strong&gt;, añadiremos la parte del código que queremos controlar si se produce un error. Si no se produce el error, el programa continuará la ejecución y entrará dentro del bloque &lt;strong&gt;finally&lt;/strong&gt;. Este bloque se ejecutará siempre, aunque no se produzca un error, y es especialmente útil para cerrar el proceso o ejecutar algún tipo de acción necesaria. En el caso de que se produzca un error, entrará en el &lt;strong&gt;catch&lt;/strong&gt; y realizará las acciones dentro de ese apartado y lanzará un error.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="47"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="44"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value="observe"></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="8"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="44"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="5"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="6"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:UA02.%20Primer%20acceso%20a%20datos:2.%20Excepciones"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list>
+         <instance class="exe.engine.node.Node" reference="50">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="2.1. Excepciones controladas"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="48">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="49">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="841_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="48"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -2587,7 +3255,7 @@ private static void metodoConTryCatch() {
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="40"></reference>
+                   <reference key="49"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -2595,7 +3263,7 @@ private static void metodoConTryCatch() {
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="41"></reference>
+                 <reference key="50"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -2612,7 +3280,7 @@ private static void metodoConTryCatch() {
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="41"></reference>
+              <reference key="50"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -2637,20 +3305,20 @@ private static void metodoConTryCatch() {
            <string role="key" value="last_full_node_path"></string>
            <string value="exe-node:UA02.%20Primer%20acceso%20a%20datos:2.%20Excepciones:2.1.%20Excepciones%20controladas"></string>
            <string role="key" value="parent"></string>
-           <reference key="35"></reference>
+           <reference key="44"></reference>
            <string role="key" value="top_anchors_linked_from_fields"></string>
            <list></list>
            <string role="key" value="children"></string>
            <list></list>
           </dictionary>
          </instance>
-         <instance class="exe.engine.node.Node" reference="44">
+         <instance class="exe.engine.node.Node" reference="53">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="2.2. Excepciones no controladas"></unicode>
            <string role="key" value="idevices"></string>
            <list>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="42">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="51">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value=""></unicode>
@@ -2709,12 +3377,12 @@ private static void metodoConTryCatch() {
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="43">
+               <instance class="exe.engine.field.TextAreaField" reference="52">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="842_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="42"></reference>
+                 <reference key="51"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -2749,7 +3417,7 @@ private static void metodoConTryCatch() {
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="43"></reference>
+                   <reference key="52"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -2757,7 +3425,7 @@ private static void metodoConTryCatch() {
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="44"></reference>
+                 <reference key="53"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -2774,7 +3442,7 @@ private static void metodoConTryCatch() {
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="44"></reference>
+              <reference key="53"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -2799,7 +3467,7 @@ private static void metodoConTryCatch() {
            <string role="key" value="last_full_node_path"></string>
            <string value="exe-node:UA02.%20Primer%20acceso%20a%20datos:2.%20Excepciones:2.2.%20Excepciones%20no%20controladas"></string>
            <string role="key" value="parent"></string>
-           <reference key="35"></reference>
+           <reference key="44"></reference>
            <string role="key" value="top_anchors_linked_from_fields"></string>
            <list></list>
            <string role="key" value="children"></string>
@@ -2809,13 +3477,13 @@ private static void metodoConTryCatch() {
         </list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="47">
+      <instance class="exe.engine.node.Node" reference="56">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="3. Pruebas y documentación"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="45">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="54">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -2874,12 +3542,12 @@ private static void metodoConTryCatch() {
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="46">
+            <instance class="exe.engine.field.TextAreaField" reference="55">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="843_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="45"></reference>
+              <reference key="54"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2951,7 +3619,7 @@ public class JavaDoc {
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="46"></reference>
+                <reference key="55"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2959,7 +3627,7 @@ public class JavaDoc {
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="47"></reference>
+              <reference key="56"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2976,7 +3644,7 @@ public class JavaDoc {
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="47"></reference>
+           <reference key="56"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -2987,7 +3655,7 @@ public class JavaDoc {
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="48">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="57">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Tags más importantes"></unicode>
@@ -3046,12 +3714,12 @@ public class JavaDoc {
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="49">
+            <instance class="exe.engine.field.TextAreaField" reference="58">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="844_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="48"></reference>
+              <reference key="57"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -3107,7 +3775,7 @@ public class JavaDoc {
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="49"></reference>
+                <reference key="58"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -3115,7 +3783,7 @@ public class JavaDoc {
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="47"></reference>
+              <reference key="56"></reference>
              </dictionary>
             </instance>
            </list>
@@ -3132,7 +3800,7 @@ public class JavaDoc {
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="47"></reference>
+           <reference key="56"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -3143,7 +3811,7 @@ public class JavaDoc {
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="50">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="59">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -3202,12 +3870,12 @@ public class JavaDoc {
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="51">
+            <instance class="exe.engine.field.TextAreaField" reference="60">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="845_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="50"></reference>
+              <reference key="59"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -3232,7 +3900,7 @@ public class JavaDoc {
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="51"></reference>
+                <reference key="60"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -3240,7 +3908,7 @@ public class JavaDoc {
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="47"></reference>
+              <reference key="56"></reference>
              </dictionary>
             </instance>
            </list>
@@ -3257,7 +3925,7 @@ public class JavaDoc {
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="47"></reference>
+           <reference key="56"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -3297,17 +3965,19 @@ public class JavaDoc {
    <unicode role="key" value="2"></unicode>
    <reference key="18"></reference>
    <unicode role="key" value="3"></unicode>
-   <reference key="24"></reference>
+   <reference key="29"></reference>
    <unicode role="key" value="4"></unicode>
-   <reference key="28"></reference>
+   <reference key="33"></reference>
    <unicode role="key" value="5"></unicode>
-   <reference key="35"></reference>
-   <unicode role="key" value="6"></unicode>
-   <reference key="41"></reference>
-   <unicode role="key" value="7"></unicode>
    <reference key="44"></reference>
+   <unicode role="key" value="6"></unicode>
+   <reference key="50"></reference>
+   <unicode role="key" value="7"></unicode>
+   <reference key="53"></reference>
    <unicode role="key" value="8"></unicode>
-   <reference key="47"></reference>
+   <reference key="56"></reference>
+   <unicode role="key" value="9"></unicode>
+   <reference key="24"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -3320,7 +3990,7 @@ public class JavaDoc {
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="18"></reference>
+  <reference key="44"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -4361,7 +5031,7 @@ Módulo Acceso a datos."></unicode>
    </list>
    <string role="key" value="11b8bfd66bcf47651405da7ffc4924e8"></string>
    <list>
-    <reference key="36"></reference>
+    <reference key="45"></reference>
    </list>
    <string role="key" value="25972d2c8f12ca7808382ea1eb0bfade"></string>
    <list>
@@ -4370,7 +5040,7 @@ Módulo Acceso a datos."></unicode>
    <string role="key" value="c38ba29e3cc68aaa7e328ae6142b867a"></string>
    <list>
     <reference key="19"></reference>
-    <reference key="25"></reference>
+    <reference key="30"></reference>
    </list>
   </dictionary>
   <string role="key" value="root"></string>

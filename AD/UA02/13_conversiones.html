@@ -30,6 +30,7 @@
    <li class="current-page-parent"><a href="1_ficheros_xml.html" class="current-page-parent daddy">1. Ficheros XML</a>
    <ul>
       <li><a href="11_xml_con_dom.html" class="no-ch">1.1. XML con DOM</a></li>
+      <li><a href="12_creacin_de_documentos_con_dom.html" class="no-ch">1.2. Creación de documentos con DOM</a></li>
       <li><a href="12_xml_con_sax.html" class="no-ch">1.2. XML con SAX</a></li>
       <li id="active"><a href="13_conversiones.html" class="active no-ch">1.3. Conversiones</a></li>
    </ul>
@@ -115,6 +116,88 @@ try {
 <li>Una vez transformado a objeto JSON, podemos pasarlo a string usando el método <strong>toString()</strong> y ya tendríamos la transformación realizada.</li>
 <li>Tenemos que tener en cuenta que nuestro XML debe estar bien estructurado y tiene que estar validado y sin ningún error. Si hay algún error, no se hará la transformación correctamente y saltará un error que lo controlaremos en el <strong>catch</strong>.</li>
 </ol></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id18">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Conversión a Web</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_840_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>XSL (Extensible Stylesheet Language)</strong> es toda una familia de recomendaciones del World Wide Web Consortium para expresar hojas de estilo en lenguaje XML. Una hoja de estilo <strong>XSL</strong> describe el proceso de presentación a través de un pequeño conjunto de elementos <strong>XML</strong>. Esta hoja, puede contener elementos de reglas que representan a as reglas de construcción y elementos de reglas de estilo que representan a las reglas de mezcla de estilos. Comprobaremos como a partir de un fichero XML que contiene datos y otro XSL que contiene la presentación de esos datos se puede generar un fichero <strong>HTML</strong> usando el lenguaje <strong>Java</strong>.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0"?&gt;
+&lt;listadealumnos&gt;
+&lt;alumno&gt;
+&lt;nombre&gt;Juan&lt;/nombre&gt;
+&lt;edad&gt;19&lt;/edad&gt;
+&lt;/alumno&gt;
+&lt;alumno&gt;
+&lt;nombre&gt;María&lt;/nombre&gt;
+&lt;edad&gt;20&lt;/edad&gt;
+&lt;/alumno&gt;
+&lt;/listadealumnos&gt;</code></pre>
+</div>
+</div>
+<p><br><br></p>
+</div>
+<div class="exe-col exe-col-2">
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding='UTF-8'?&gt;
+&lt;xsl:stylesheet version="1.0" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+&lt;xsl:template match='/'&gt;
+    &lt;html&gt;&lt;xsl:apply-templates /&gt;&lt;/html&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match='listadodealumnos'&gt;
+    &lt;head&gt;&lt;title&gt;LISTADO DE ALUMNOS&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;LISTA DE ALUMNOS&lt;/h1&gt;
+    &lt;table border='1'&gt;
+    &lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Edad&lt;/th&gt;&lt;/tr&gt;
+    &lt;xsl:apply-templates select='alumno' /&gt;
+    &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match='alumno'&gt;
+    &lt;tr&gt;&lt;xsl:apply-templates /&gt;&lt;/tr&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match='nombre|edad'&gt;
+    &lt;td&gt;&lt;xsl:apply-templates /&gt;&lt;/td&gt;
+&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+</div>
+</div>
+<p><br><br></p>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id19">
+<div class="iDevice emphasis0" >
+<div id="ta19_841_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para realizar la transformación, se necesita un objeto <strong>Transformer</strong> que se obtiene creando una instancia de <strong>TransformerFactory</strong> y aplicando el método <strong>newTransformer</strong> a la fuente XSL.</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>Transformer transformer = TransformerFactory.newInstance().newTransformer(estilos);</code></pre>
+</div>
+</div>
+<p>La transformación se consigue llamando al método <strong>transform()</strong>, pasándole los datos (XML) y el stream de salida (el fichero HTML):</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>transformer.transform(datos, result);</code></pre>
+</div>
+</div>
+</div></div></section></div>
 </div>
 </div>
 </article>
