@@ -85,9 +85,9 @@
   <string role="key" value="_name"></string>
   <unicode value="UA03"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="6"></int>
+  <int value="18"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="5"></int>
+  <int value="8"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -195,7 +195,7 @@
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="128637"></int>
+                  <int value="134076"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -209,7 +209,7 @@
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_114_2.6"></unicode>
+                <unicode value="0_114_2.12"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="5">
                  <dictionary>
@@ -220,7 +220,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="evolucion-tecnologia-5g.jpg"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmpfbizer\\evolucion-tecnologia-5g.jpg"></string>
+                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmprdvws4\\evolucion-tecnologia-5g.jpg"></string>
                   <string role="key" value="checksum"></string>
                   <string value="e1deaad57565811b4dd8fab7ff7d24a7"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -247,7 +247,7 @@
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="128638"></int>
+                  <int value="134077"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -261,7 +261,7 @@
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_114_2.7"></unicode>
+                <unicode value="0_114_2.13"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="6">
                  <dictionary>
@@ -272,7 +272,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="evolucion-tecnologia-5g.jpg"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmpfbizer\\evolucion-tecnologia-5g.jpg"></string>
+                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmprdvws4\\evolucion-tecnologia-5g.jpg"></string>
                   <string role="key" value="checksum"></string>
                   <string value="e1deaad57565811b4dd8fab7ff7d24a7"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -301,7 +301,7 @@
            <string role="key" value="intlinks_to_anchors"></string>
            <dictionary></dictionary>
            <string role="key" value="nextImageId"></string>
-           <int value="8"></int>
+           <int value="14"></int>
            <string role="key" value="parentNode"></string>
            <reference key="4"></reference>
           </dictionary>
@@ -837,7 +837,7 @@
          <instance class="exe.engine.node.Node" reference="18">
           <dictionary>
            <string role="key" value="_title"></string>
-           <unicode value="3.3.1. Actividad"></unicode>
+           <unicode value="3.3.1. Activity y Layout"></unicode>
            <string role="key" value="idevices"></string>
            <list>
             <instance class="exe.engine.jsidevice.JsIdevice" reference="16">
@@ -915,15 +915,63 @@
                  <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La actividad (&lt;strong&gt;Activity&lt;/strong&gt;) es la más común de las clases del SDK de Android para crear una pantalla en nuestra app. Dentro de cada actividad, colocaremos los diferentes componentes de la interfaz gráfica, como campos de introducción de texto, botones, etcétera. Toda actividad debe declararse en el manifiesto de nuestra app (&lt;strong&gt;AndroidManifest.xml&lt;/strong&gt;), pues, de otro modo, obtendremos un error de compilación. Normalmente, además, crearemos un recurso &lt;strong&gt;layout&lt;/strong&gt; que defina los elementos que componen la pantalla, así como su posición dentro de ella. De lo contrario, tendríamos que &lt;strong&gt;crear&lt;/strong&gt; los componentes en&lt;strong&gt; tiempo de ejecución&lt;/strong&gt;, lo que resulta más difícil y tendrá sentido solo en algunos casos particulares.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;resources/new-project-wizard-choose_2x.png&quot; rel=&quot;lightbox&quot;&gt;&lt;img src=&quot;resources/new-project-wizard-choose_2x.png&quot; alt=&quot;Tipos de Actividades&quot; title=&quot;Tipos de actividades&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;560&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Como hemos mencionado, el archivo de layout definirá, mediante código &lt;strong&gt;XML&lt;/strong&gt;, el aspecto y los componentes de la interfaz gráfica de la actividad. Existen diferentes tipos de layouts predefinidos, que nos ayudarán a&amp;nbsp; ordenar los componentes de diferentes formas según nuestras necesidades. Además, estos contenedores pueden agruparse jerárquicamente unos sobre otros, con la intención de crear interfaces gráficas más complejas.&lt;/p&gt;
 &lt;p&gt;Es conveniente, no obstante, utilizar lo menos posible este mecanismo, pues la &lt;strong&gt;eficiencia&lt;/strong&gt; de la interfaz gráfica puede verse reducida. Veamos algunos de los layouts más conocidos:&lt;/p&gt;
 &lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
 &lt;h2&gt;LinearLayout&lt;/h2&gt;
 &lt;p&gt;Uno de los más sencillos y, a la vez, más usados. Este contenedor agrupa las vistas en su interior de forma lineal, en dirección horizontal o vertical, dependiendo del parámetro orientation. Veamos un ejemplo:&lt;/p&gt;
-&lt;h2&gt;Encabezado 2&lt;/h2&gt;
-&lt;p&gt;Escriba su contenido...&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
+&amp;lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+android:layout_width=&quot;match_parent&quot;
+android:layout_height=&quot;match_parent&quot;
+android:paddingLeft=&quot;16dp&quot;
+android:paddingRight=&quot;16dp&quot;
+android:orientation=&quot;vertical&quot; &amp;gt;
+&amp;lt;EditText
+android:layout_width=&quot;match_parent&quot;
+android:layout_height=&quot;wrap_content&quot;
+android:hint=&quot;EditText 1&quot; /&amp;gt;
+&amp;lt;EditText
+android:layout_width=&quot;match_parent&quot;
+android:layout_height=&quot;wrap_content&quot;
+android:hint=&quot;EditText 2&quot; /&amp;gt;
+&amp;lt;EditText
+android:layout_width=&quot;match_parent&quot;
+android:layout_height=&quot;0dp&quot;
+android:layout_weight=&quot;1&quot;
+android:gravity=&quot;top&quot;
+android:hint=&quot;EditText 3&quot; /&amp;gt;
+&amp;lt;Button
+android:layout_width=&quot;100dp&quot;
+android:layout_height=&quot;wrap_content&quot;
+android:layout_gravity=&quot;right&quot;
+android:text=&quot;Button 1&quot; /&amp;gt;
+&amp;lt;/LinearLayout&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;resources/new-project-wizard-choose_2x.png&quot; rel=&quot;lightbox&quot;&gt;&lt;img src=&quot;resources/new-project-wizard-choose_2x.png&quot; alt=&quot;Tipos de Actividades&quot; title=&quot;Tipos de actividades&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;560&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+&lt;/div&gt;
+&lt;p&gt;El elemento raíz es un LinearLayout, y la etiqueta orientation indica que los elementos se ordenarán verticalmente.&lt;/p&gt;
+&lt;p&gt;Observa cómo todos los elementos presentan los atributos &lt;strong&gt;layout_width&lt;/strong&gt; y &lt;strong&gt;layout_height&lt;/strong&gt;. Estos atributos son obligatorios en todos los tipos de layout, e indican el ancho y el alto de cada componente, es decir, cuánto espacio ocupa cada ventana dentro del contenedor. Estos valores pueden ser valores fijos, como &lt;strong&gt;16px&lt;/strong&gt; (para píxeles), &lt;strong&gt;16dp&lt;/strong&gt; (siendo dp una medida estándar, un píxel virtual que se adaptará a cada densidad de pantalla), etcétera. Estos valores pueden ser también valores clave, como &lt;strong&gt;match_parent&lt;/strong&gt; (utiliza todo el espacio que ofrece el contenedor padre) o &lt;strong&gt;wrap_content&lt;/strong&gt; (utiliza solo el espacio que necesite el contenido de la ventana, por ejemplo, un botón ocupará lo que ocupe su título, y no más).&lt;/p&gt;
+&lt;p&gt;Observa que en el último &lt;strong&gt;EditText&lt;/strong&gt; se ha utilizado &lt;strong&gt;layout_height=0dp;&lt;/strong&gt; esto no significa que tenga altura cero, sino que pretendemos que la vista se extienda todo el espacio sobrante que han dejado el resto de componentes. En la pestaña &lt;strong&gt;Design&lt;/strong&gt; se puede ver el resultado del layout que se acaba de codificar:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;resources/layoutActivity.png&quot; rel=&quot;lightbox&quot;&gt;&lt;img src=&quot;resources/layoutActivity.png&quot; alt=&quot;Imagen resultado Layout&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;560&quot; height=&quot;317&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;RelativeLayout&lt;/h2&gt;
+&lt;p&gt;Este contenedor agrupa a las vistas en una posición relativa al layout contenedor o entre las distintas vistas que agrupa.&lt;/p&gt;
+&lt;h2&gt;TableLayout&lt;/h2&gt;
+&lt;p&gt;Contenedor tipo tabla que utiliza filas y columnas para alinear los elementos en la vista. Las columnas y filas pueden tener un tamaño particular o ampliarse, y las celdas pueden extenderse más allá de sus límites.&lt;/p&gt;
+&lt;h2&gt;GridLayout&lt;/h2&gt;
+&lt;p&gt;Muy parecido al TableLayout, en el que el diseño se basa en una rejilla de celdas de diferentes tamaños.&lt;/p&gt;
+&lt;h2&gt;ConstraintLayout&lt;/h2&gt;
+&lt;p&gt;El layout más utilizado actualmente. Antes de la aparición del &lt;strong&gt;ConstraintLayout&lt;/strong&gt;, construir una interfaz gráfica compleja requería de la composición jerárquica de varios, a veces demasiados, layouts unos dentro de otros para obtener el orden y la colocación precisos de las ventanas en su interior. El problema de ese tipo de anidamiento es que llega un punto en el que la eficiencia del layout comienza a degradarse, la presentación de la interfaz gráfica se ralentiza y el consumo de memoria se dispara. Por ello, los desarrolladores de Android crearon el ConstraintLayout. Gracias a la versatilidad de este contenedor, raramente será necesario encadenarlo a otro contenedor, pues permite ordenar los componentes de forma eficiente y elástica. Tras su aparición, los demás layouts han quedado obsoletos. Además, este layout permite el diseño de forma gráfica mediante cajitas con enlaces laterales que pueden asociarse con el contenedor padre o entre las vistas. Ese diseño se traduce en código con los atributos de control de posición:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;layout_constraintLeft_toLeftOf&lt;/strong&gt; o &lt;strong&gt;toRightOf&lt;/strong&gt;: la vista se alineará a la izquierda de la parte izquierda o derecha del componente que se indique. El elemento al que hace referencia se indicará mediante el id o con la palabra claveparent, que indica que la posición es relativa al contenedor padre.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;layout_constraintRight_toLeftOf&lt;/strong&gt; o &lt;strong&gt;toRightOf&lt;/strong&gt;: la vista se alineará a la derecha de la parte izquierda o derecha del componente que se indique.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;layout_constraintTop_toTopOf&lt;/strong&gt; o &lt;strong&gt;toBottomOf&lt;/strong&gt;: la vista se alineará en lo alto de la parte superior o inferior del componente que se indique.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;layout_constraintBottom_toTopOf&lt;/strong&gt; o &lt;strong&gt;toBottomOf&lt;/strong&gt;: la vista se alineará debajo de la parte superior o inferior del componente que se indique.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tiene otras opciones para establecer márgenes, centrado, offsets, etcétera. Lo mejor para comprobar todas las posibilidades de este layout es jugar con la herramienta &lt;strong&gt;Design&lt;/strong&gt;, cambiando las configuraciones de las vistas y observando cómo cada parámetro afecta al diseño final de la interfaz gráfica.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
                  <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
                  <int value="4"></int>
                  <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -943,7 +991,7 @@
                       <instance class="exe.engine.field.TextField">
                        <dictionary>
                         <string role="key" value="_id"></string>
-                        <int value="128639"></int>
+                        <int value="134078"></int>
                         <string role="key" value="_idevice"></string>
                         <none></none>
                         <string role="key" value="_instruc"></string>
@@ -957,7 +1005,7 @@
                        </dictionary>
                       </instance>
                       <string role="key" value="_id"></string>
-                      <unicode value="5_836_2.2"></unicode>
+                      <unicode value="5_836_2.12"></unicode>
                       <string role="key" value="_imageResource"></string>
                       <instance class="exe.engine.resource.Resource" reference="19">
                        <dictionary>
@@ -966,9 +1014,113 @@
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
+                        <string value="layoutActivity.png"></string>
+                        <string role="key" value="_userName"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmprdvws4\\layoutActivity.png"></string>
+                        <string role="key" value="checksum"></string>
+                        <string value="e161d15f197cc73275c8c986e7c16d81"></string>
+                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="warningMsg"></string>
+                        <string value=""></string>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_parent"></string>
+                      <reference key="17"></reference>
+                      <string role="key" value="_thumbnailResource"></string>
+                      <none></none>
+                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                      <int value="3"></int>
+                      <string role="key" value="makeThumbnail"></string>
+                      <bool value="0"></bool>
+                     </dictionary>
+                    </instance>
+                    <instance class="exe.engine.galleryidevice.GalleryImage">
+                     <dictionary>
+                      <string role="key" value="_caption"></string>
+                      <instance class="exe.engine.field.TextField">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <int value="134079"></int>
+                        <string role="key" value="_idevice"></string>
+                        <none></none>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="content"></string>
+                        <string value=""></string>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_id"></string>
+                      <unicode value="5_836_2.13"></unicode>
+                      <string role="key" value="_imageResource"></string>
+                      <instance class="exe.engine.resource.Resource" reference="20">
+                       <dictionary>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="16"></reference>
+                        <string role="key" value="_package"></string>
+                        <reference key="2"></reference>
+                        <string role="key" value="_storageName"></string>
+                        <string value="layoutActivity.png"></string>
+                        <string role="key" value="_userName"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmprdvws4\\layoutActivity.png"></string>
+                        <string role="key" value="checksum"></string>
+                        <string value="e161d15f197cc73275c8c986e7c16d81"></string>
+                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="warningMsg"></string>
+                        <string value=""></string>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_parent"></string>
+                      <reference key="17"></reference>
+                      <string role="key" value="_thumbnailResource"></string>
+                      <none></none>
+                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                      <int value="3"></int>
+                      <string role="key" value="makeThumbnail"></string>
+                      <bool value="0"></bool>
+                     </dictionary>
+                    </instance>
+                    <instance class="exe.engine.galleryidevice.GalleryImage">
+                     <dictionary>
+                      <string role="key" value="_caption"></string>
+                      <instance class="exe.engine.field.TextField">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <int value="134083"></int>
+                        <string role="key" value="_idevice"></string>
+                        <none></none>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="content"></string>
+                        <string value=""></string>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_id"></string>
+                      <unicode value="5_836_2.14"></unicode>
+                      <string role="key" value="_imageResource"></string>
+                      <instance class="exe.engine.resource.Resource" reference="21">
+                       <dictionary>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="16"></reference>
+                        <string role="key" value="_package"></string>
+                        <reference key="2"></reference>
+                        <string role="key" value="_storageName"></string>
                         <string value="new-project-wizard-choose_2x.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpfbizer\\new-project-wizard-choose_2x.png"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmprdvws4\\new-project-wizard-choose_2x.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="1947795d5f67bdfd6eb70fc0190f3a28"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -995,7 +1147,7 @@
                       <instance class="exe.engine.field.TextField">
                        <dictionary>
                         <string role="key" value="_id"></string>
-                        <int value="128640"></int>
+                        <int value="134084"></int>
                         <string role="key" value="_idevice"></string>
                         <none></none>
                         <string role="key" value="_instruc"></string>
@@ -1009,9 +1161,9 @@
                        </dictionary>
                       </instance>
                       <string role="key" value="_id"></string>
-                      <unicode value="5_836_2.3"></unicode>
+                      <unicode value="5_836_2.15"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="20">
+                      <instance class="exe.engine.resource.Resource" reference="22">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
                         <reference key="16"></reference>
@@ -1020,7 +1172,7 @@
                         <string role="key" value="_storageName"></string>
                         <string value="new-project-wizard-choose_2x.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpfbizer\\new-project-wizard-choose_2x.png"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmprdvws4\\new-project-wizard-choose_2x.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="1947795d5f67bdfd6eb70fc0190f3a28"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1049,7 +1201,7 @@
                  <string role="key" value="intlinks_to_anchors"></string>
                  <dictionary></dictionary>
                  <string role="key" value="nextImageId"></string>
-                 <int value="4"></int>
+                 <int value="16"></int>
                  <string role="key" value="parentNode"></string>
                  <reference key="18"></reference>
                 </dictionary>
@@ -1077,7 +1229,469 @@
               <list>
                <reference key="19"></reference>
                <reference key="20"></reference>
+               <reference key="21"></reference>
+               <reference key="22"></reference>
               </list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="23">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="24">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="114_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="23"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Dentro de cada contenedor layout podremos colocar nuestras vistas, que son los componentes visuales que el usuario puede ver y con los que puede interactuar. Ya hemos visto algunos, pero hagamos una lista de los más usados:&lt;/p&gt;
+&lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
+&lt;h2&gt;TextView&lt;/h2&gt;
+&lt;p&gt;Representa un texto estático para el usuario, aunque podemos cambiar su texto desde código. Puede servirnos para presentar información al usuario, como mensajes o etiquetas de otros componentes.&lt;/p&gt;
+&lt;h2&gt;EditText&lt;/h2&gt;
+&lt;p&gt;Representa un campo de texto que el usuario puede rellenar. Gracias a sus atributos, podemos crear un filtro de entrada, de modo que si, por ejemplo, solo queremos números, el campo solo acepte números, etcétera.&lt;/p&gt;
+&lt;h2&gt;Button&lt;/h2&gt;
+&lt;p&gt;Un componente que el usuario puede presionar para obtener alguna función. Estableceremos un listener o el atributo onClick para definir las acciones que efectuar cuando sea pulsado.&lt;/p&gt;
+&lt;h2&gt;ImageButton&lt;/h2&gt;
+&lt;p&gt;Un botón exactamente igual al anterior, con la diferencia de que podemos añadirle un icono para un mejor aspecto visual de su función.&lt;/p&gt;
+&lt;h2&gt;ImageView&lt;/h2&gt;
+&lt;p&gt;Representa una imagen estática, aunque podemos cambiarla dinámicamente mediante el código. Puede servirnos para mejorar el aspecto de la interfaz gráfica o para presentar una imagen real relacionada con datos.&lt;/p&gt;
+&lt;h2&gt;RecyclerView&lt;/h2&gt;
+&lt;p&gt;Una lista de objetos cuya presentación podemos adaptar a nuestras necesidades mediante un adapter. Este tipo de listas son muy eficientes, pues solo retienen en memoria los objetos que serán mostrados.&lt;/p&gt;
+&lt;h2&gt;Switch&lt;/h2&gt;
+&lt;p&gt;Representa un interruptor, puede estar en on o en off. Puede servirnos para presentar al usuario dos opciones posibles de las que debe escoger una.&lt;/p&gt;
+&lt;h2&gt;Checkbox&lt;/h2&gt;
+&lt;p&gt;Representa una opción seleccionable. Sería parecido al anterior, mostrando si una opción está activa o no.&lt;/p&gt;
+&lt;h2&gt;RadioButton + RadioGroup&lt;/h2&gt;
+&lt;p&gt;Similar al anterior, con la diferencia de que estas opciones son excluyentes: si eliges una opción, las demás se desactivarán.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;a href=&quot;resources/layoutBasico.png&quot; rel=&quot;lightbox&quot;&gt;&lt;img src=&quot;resources/layoutBasico.png&quot; alt=&quot;Layout por defecto&quot; style=&quot;float: right; margin: 10px;&quot; width=&quot;320&quot; height=&quot;231&quot;&gt;&lt;/a&gt;Como observamos en el código autogenerado, nuestra actividad &lt;strong&gt;MainActivity&lt;/strong&gt; hereda de &lt;strong&gt;AppCompatActivity&lt;/strong&gt; de modo que podamos aprovechar las funcionalidades básicas sin&lt;br&gt;más código. La función &lt;strong&gt;onCreate&lt;/strong&gt; debe ser sobreescrita para especificar el layout que deseamos para nuestra ventana. Pulsar la tecla &lt;strong&gt;Ctrl&lt;/strong&gt; mientras hacemos clic sobre &lt;strong&gt;activity_main&lt;/strong&gt;, navegaremos al editor de &lt;strong&gt;layouts&lt;/strong&gt;, que nos mostrará el diseños de la ventana MainActivity (ver imagen).&lt;/p&gt;
+&lt;p&gt;Los layouts se definen con código XML, pero no debemos alarmarnos antes de tiempo, pues no tendremos que recordar todos y cada uno de los parámetros. Para facilitarnos el trabajo, el &lt;strong&gt;editor de layouts&lt;/strong&gt; dispone de capacidades gráficas con las que podremos añadir, eliminar y distribuir los componentes de nuestra interfaz gráfica sin necesidad de escribir código XML. Sí es cierto que, en ocasiones, nos será más sencillo modificar directamente el código, por eso es conveniente ir comprendiendo cada etiqueta XML.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, la segunda línea de la imagen indica que el layout será un &lt;strong&gt;ConstraintLayout&lt;/strong&gt;, que es uno de los más utilizados actualmente. Dentro del layout encontramos un &lt;strong&gt;TextView&lt;/strong&gt;, que no es más que un texto que el usuario verá pero no podrá editar.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Ejemplo&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Haz clic tras &lt;strong&gt;TextView&lt;/strong&gt;, pulsa &lt;strong&gt;Intro&lt;/strong&gt; y añade la línea: &lt;strong&gt;android:id=&quot;@+id/tvSaludo&quot;&lt;/strong&gt;. Se ha establecido un indicador para el componente de modo que se pueda acceder a él desde el código. Ahora observa que en la esquina superior derecha del editor existen tres opciones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code&lt;/strong&gt;, muestra el código XML del layout;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Split,&lt;/strong&gt;&amp;nbsp;muestra tanto el código como el diseño visual;&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Design, &lt;/strong&gt;muestra únicamente el diseño gráfico de la ventana.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Selecciona &lt;strong&gt;Design&lt;/strong&gt;. Aparecerá un mockup de cómo se verá la actividad. En el lateral izquierdo aparece un listado de componentes gráficos, que se puede arrastrar hasta la ventana de diseño, para añadirlos al layout.&lt;/p&gt;
+&lt;p&gt;En el lateral derecho se encuentran los atributos del componente actualmente seleccionado.&lt;/p&gt;
+&lt;p&gt;Añade un componente &lt;strong&gt;Button&lt;/strong&gt; al layout: para disponerlo en un &lt;strong&gt;ConstraintLayout&lt;/strong&gt;, tendremos que hacer clic en cada uno de los &lt;strong&gt;circulitos&lt;/strong&gt; y arrastrar hasta los bordes de la ventana para dejarlo anclado. La bolita superior podemos anclarla a la parte baja del &lt;strong&gt;TextView&lt;/strong&gt; que ya teníamos:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;resources/layoutEjemplo.png&quot; alt=&quot;Ejemplo Layout&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;560&quot; height=&quot;505&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Es importante establecer un &lt;strong&gt;id&lt;/strong&gt; en el botón para poder acceder a él desde el código:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;android:id=&quot;@+id/tvSaludo&quot;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;El acceso al elemento del layout se haría indicando el id anterior en el &lt;strong&gt;MainActivity&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        &lt;strong&gt;val btnCambiarSaludo: Button? = findViewById(R.id.btnCambiarSaludo)
+        val tvSaludo: TextView? = findViewById(R.id.tvSaludo)
+        btnCambiarSaludo?.setOnClickListener {
+            tvSaludo?.text=&quot;Hola a tod@s&quot;
+        }&lt;/strong&gt;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list>
+                    <instance class="exe.engine.galleryidevice.GalleryImage">
+                     <dictionary>
+                      <string role="key" value="_caption"></string>
+                      <instance class="exe.engine.field.TextField">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <int value="134080"></int>
+                        <string role="key" value="_idevice"></string>
+                        <none></none>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="content"></string>
+                        <string value=""></string>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_id"></string>
+                      <unicode value="6_114_2.5"></unicode>
+                      <string role="key" value="_imageResource"></string>
+                      <instance class="exe.engine.resource.Resource" reference="25">
+                       <dictionary>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="23"></reference>
+                        <string role="key" value="_package"></string>
+                        <reference key="2"></reference>
+                        <string role="key" value="_storageName"></string>
+                        <string value="layoutBasico.png"></string>
+                        <string role="key" value="_userName"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmprdvws4\\layoutBasico.png"></string>
+                        <string role="key" value="checksum"></string>
+                        <string value="5327f15b80d4cda3bf5e333acb33d4bd"></string>
+                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="warningMsg"></string>
+                        <string value=""></string>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_parent"></string>
+                      <reference key="24"></reference>
+                      <string role="key" value="_thumbnailResource"></string>
+                      <none></none>
+                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                      <int value="3"></int>
+                      <string role="key" value="makeThumbnail"></string>
+                      <bool value="0"></bool>
+                     </dictionary>
+                    </instance>
+                    <instance class="exe.engine.galleryidevice.GalleryImage">
+                     <dictionary>
+                      <string role="key" value="_caption"></string>
+                      <instance class="exe.engine.field.TextField">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <int value="134081"></int>
+                        <string role="key" value="_idevice"></string>
+                        <none></none>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="content"></string>
+                        <string value=""></string>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_id"></string>
+                      <unicode value="6_114_2.6"></unicode>
+                      <string role="key" value="_imageResource"></string>
+                      <instance class="exe.engine.resource.Resource" reference="26">
+                       <dictionary>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="23"></reference>
+                        <string role="key" value="_package"></string>
+                        <reference key="2"></reference>
+                        <string role="key" value="_storageName"></string>
+                        <string value="layoutBasico.png"></string>
+                        <string role="key" value="_userName"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmprdvws4\\layoutBasico.png"></string>
+                        <string role="key" value="checksum"></string>
+                        <string value="5327f15b80d4cda3bf5e333acb33d4bd"></string>
+                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="warningMsg"></string>
+                        <string value=""></string>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_parent"></string>
+                      <reference key="24"></reference>
+                      <string role="key" value="_thumbnailResource"></string>
+                      <none></none>
+                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                      <int value="3"></int>
+                      <string role="key" value="makeThumbnail"></string>
+                      <bool value="0"></bool>
+                     </dictionary>
+                    </instance>
+                    <instance class="exe.engine.galleryidevice.GalleryImage">
+                     <dictionary>
+                      <string role="key" value="_caption"></string>
+                      <instance class="exe.engine.field.TextField">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <int value="134082"></int>
+                        <string role="key" value="_idevice"></string>
+                        <none></none>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="content"></string>
+                        <string value=""></string>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_id"></string>
+                      <unicode value="6_114_2.7"></unicode>
+                      <string role="key" value="_imageResource"></string>
+                      <instance class="exe.engine.resource.Resource" reference="27">
+                       <dictionary>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="23"></reference>
+                        <string role="key" value="_package"></string>
+                        <reference key="2"></reference>
+                        <string role="key" value="_storageName"></string>
+                        <string value="layoutEjemplo.png"></string>
+                        <string role="key" value="_userName"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmprdvws4\\layoutEjemplo.png"></string>
+                        <string role="key" value="checksum"></string>
+                        <string value="abe92c3664b1380a02b84995ab657081"></string>
+                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="warningMsg"></string>
+                        <string value=""></string>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_parent"></string>
+                      <reference key="24"></reference>
+                      <string role="key" value="_thumbnailResource"></string>
+                      <none></none>
+                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                      <int value="3"></int>
+                      <string role="key" value="makeThumbnail"></string>
+                      <bool value="0"></bool>
+                     </dictionary>
+                    </instance>
+                   </list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="24"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="8"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="18"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="6"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="18"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list>
+               <reference key="25"></reference>
+               <reference key="26"></reference>
+               <reference key="27"></reference>
+              </list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="28">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Enlaces"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="29">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="837_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="28"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/components/activities/intro-activities?hl=es-419&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Introducción a las Actividades&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/topics/ui?hl=es-419&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Interfaz de usuario&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="29"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="info"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="9"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="18"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
               <string role="key" value="version"></string>
               <int value="0"></int>
              </dictionary>
@@ -1094,7 +1708,1619 @@
            <string role="key" value="exportType"></string>
            <string value="website"></string>
            <string role="key" value="last_full_node_path"></string>
-           <string value="exe-node:UA03.%20Programando...:3.3.%20Interfaces%20de%20usuario:3.3.1.%20Actividad"></string>
+           <string value="exe-node:UA03.%20Programando...:3.3.%20Interfaces%20de%20usuario:3.3.1.%20Activity%20y%20Layout"></string>
+           <string role="key" value="parent"></string>
+           <reference key="15"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="32">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="3.3.2. Context"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="30">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="31">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="835_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="30"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-representation&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Como se ha visto anteriormente, lo más importante de las clases del SDK de Android, es el ciclo de vida. Muchos errores de programación Android son debidos a un descuido en el ciclo de vida tanto de actividades como de fragmentos, servicios y otros componentes del sistema operativo.&lt;/p&gt;
+&lt;p&gt;Estos componentes tienen lo que se denomina un &lt;strong&gt;contexto&lt;/strong&gt;, que es una especie de identificador del recurso. De hecho, una clase &lt;strong&gt;Activity&lt;/strong&gt; hereda de la clase &lt;strong&gt;Context&lt;/strong&gt; a través de una larga cadena de subclases.&lt;/p&gt;
+&lt;p&gt;En palabras más precisas, &lt;strong&gt;Context&lt;/strong&gt; se considera una clase abstracta que nosotros como desarrolladores, directamente, no podemos crear, debido a que es uno de los objetos que crea el propio sistema como, por ejemplo, sucede con los Activities. Muchos de los componentes que se suelen utilizar en el desarrollo de una app Android son heredados de clases &lt;strong&gt;context&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;La clase context se utiliza para la obtención de recursos específicos de la aplicación; no obstante, es oportuno resaltar que existen diferentes tipos de lo qué es context en Android. Estos tipos son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Application.&lt;/li&gt;
+&lt;li&gt;Activity.&lt;/li&gt;
+&lt;li&gt;Service.&lt;/li&gt;
+&lt;li&gt;BroadCastReciver.&lt;/li&gt;
+&lt;li&gt;ContentProvider.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cada uno de estos objetos tiene una información diferente de modo que, dependiendo de cuándo o dónde lo vayamos a utilizar, nos va a dar una información u otra.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, si quieres implementar un context para conocer si el dispositivo se encuentra en posición vertical o en posición horizontal, llamas al context del activity y obtienes dicha información, mientras que en el context application no puedes acceder a ella.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="31"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="32"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="7"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="32"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="33">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Descuido en el Context"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="34">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="836_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="33"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Para comprobar cómo un descuido con los contextos puede ser un gran problema, añade el siguiente código sobrescribiendo la función &lt;strong&gt;onResume&lt;/strong&gt; para que se cambie el texto cuando la actividad vuelva a ser visible:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;override fun onResume() {
+    super.onResume()
+    tvSaludo.text = &quot;Ahora el contexto es: $this&quot;   // Cambio el texto
+    Log.e(&quot;MainActivity&quot;, &quot;Ahora el contexto es: $this&quot;)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Lanza la aplicación al terminal y rota el terminal. Observa que &lt;strong&gt;el identificador ha cambiado&lt;/strong&gt;. Esto se debe a que, cada vez que rotamos el móvil, el &lt;strong&gt;giroscopio&lt;/strong&gt; o &lt;strong&gt;acelerómetro&lt;/strong&gt; integrado en el terminal avisarán al sistema operativo de que la orientación de la pantalla ha cambiado. El sistema reliza en ese momento lo siguiente:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;preguntará a la app cómo desea adaptarse al cambio de formato de portrait a landscape, o viceversa.&lt;/li&gt;
+&lt;li&gt;Por defecto, la actividad será destruida y recreada con la nueva configuración de pantalla.&lt;/li&gt;
+&lt;li&gt;Lo mismo ocurriría con otros cambios del sistema, podemos adaptarnos a ellos o dejar que el sistema operativo destruya y vuelva a construir la actividad.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;exe-layout-2-cols exe-layout-2-50-50 exe-clear&quot;&gt;
+&lt;div class=&quot;exe-col exe-col-1&quot;&gt;
+&lt;p&gt;Esto no ocurre cuando llevamos la aplicación a background y la volvemos a activar.&amp;nbsp; ¿Qué ocurriría si almacenásemos el contexto en una variable e intentásemos utilizarla más tarde sin tener en cuenta el ciclo de vida de la actividad? Pues que estaríamos utilizando un &lt;strong&gt;contexto desfasado&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Si ejecutamos este código y rotamos el terminal, veremos que el contexto ya no es el&lt;br&gt;mismo que era antes de la rotación. Una vez más, debemos tener cuidado y respetar el&lt;br&gt;ciclo de vida de los componentes del sistema Android.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;exe-col exe-col-2&quot;&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        if(contexto == null)
+        contexto = this
+    }
+    override fun onResume() {
+        super.onResume()
+        tvSaludo.text = &quot;Son iguales los contextos: ${this == contexto}&quot;
+        Log.e(&quot;MainActivity&quot;, &quot;Son iguales los contextos: ${this == contexto}&quot;)
+    }
+    companion object {
+        private var contexto: Context? = null
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="34"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="think"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="8"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="32"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="35">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Enlaces"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="36">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="839_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="35"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;...&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="36"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="info"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="11"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="32"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="6"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA03.%20Programando...:3.3.%20Interfaces%20de%20usuario:3.3.2.%20Context"></string>
+           <string role="key" value="parent"></string>
+           <reference key="15"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="39">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="3.3.3. Intent"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="37">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="38">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="838_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="37"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Lo más probable, sobre todo si no utilizamos &lt;strong&gt;fragments&lt;/strong&gt;, es que nuestra app esté compuesta de más de una activity. Para navegar de una a otra, podemos utilizar un objeto &lt;strong&gt;intent&lt;/strong&gt;. Veámoslo con un ejemplo: vamos a crear una nueva actividad en nuestra app. En el menú de Android Studio, seleccionamos &lt;strong&gt;File &amp;gt; New &amp;gt; Activity &amp;gt; Empty Activity&lt;/strong&gt; y aceptamos las opciones por defecto de la nueva actividad. El wizard añadirá no solo una clase &lt;strong&gt;MainActivity2&lt;/strong&gt;, sino también su &lt;strong&gt;layout&lt;/strong&gt; y la línea en el &lt;strong&gt;manifiesto&lt;/strong&gt;. Para navegar de nuestra actividad a la nueva, modificaremos el código de este modo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_main)
+            findViewById&lt;button&gt;(R.id.btnCambiarSaludo).setOnClickListener {
+                val intent = Intent(this, OtraActivity::class.java)
+                startActivity(intent)
+            }
+        }&lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Creamos un objeto &lt;strong&gt;intent&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;el primer parámetro es el &lt;strong&gt;contexto&lt;/strong&gt; del paquete, pero valdrá con el contexto de nuestra actividad.&lt;/li&gt;
+&lt;li&gt;El segundo parámetro es la clase de la &lt;strong&gt;activity&lt;/strong&gt; a la que deseamos navegar.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Una vez creado el intent, llamaremos a la función de la &lt;strong&gt;startActivity&lt;/strong&gt; con él y la nueva actividad se mostrará sobre la actual. Decimos&lt;strong&gt; &quot;sobre&quot;&lt;/strong&gt; porque el sistema Android guardará una pila de vistas una sobre otra según vayamos abriéndolas, lo que se conoce como &lt;strong&gt;back stack&lt;/strong&gt;. Cuando cerremos (destruyamos) una ventana, presionando &lt;strong&gt;Atrás&lt;/strong&gt;, por ejemplo, se mostrará la anterior, la que está debajo en la pila.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;resources/backStack.png&quot; rel=&quot;lightbox&quot;&gt;&lt;img src=&quot;resources/backStack.png&quot; alt=&quot;Back Stack&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;560&quot; height=&quot;175&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list>
+                    <instance class="exe.engine.galleryidevice.GalleryImage">
+                     <dictionary>
+                      <string role="key" value="_caption"></string>
+                      <instance class="exe.engine.field.TextField">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <int value="134085"></int>
+                        <string role="key" value="_idevice"></string>
+                        <none></none>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="content"></string>
+                        <string value=""></string>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_id"></string>
+                      <unicode value="10_838_2.0"></unicode>
+                      <string role="key" value="_imageResource"></string>
+                      <instance class="exe.engine.resource.Resource" reference="40">
+                       <dictionary>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="37"></reference>
+                        <string role="key" value="_package"></string>
+                        <reference key="2"></reference>
+                        <string role="key" value="_storageName"></string>
+                        <string value="backStack.png"></string>
+                        <string role="key" value="_userName"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpzlatys.eXe\\previews\\allyourbase\\backStack.png"></string>
+                        <string role="key" value="checksum"></string>
+                        <string value="e344b9a0b33081cc061285691225baa8"></string>
+                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="warningMsg"></string>
+                        <string value=""></string>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_parent"></string>
+                      <reference key="38"></reference>
+                      <string role="key" value="_thumbnailResource"></string>
+                      <none></none>
+                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                      <int value="3"></int>
+                      <string role="key" value="makeThumbnail"></string>
+                      <bool value="0"></bool>
+                     </dictionary>
+                    </instance>
+                    <instance class="exe.engine.galleryidevice.GalleryImage">
+                     <dictionary>
+                      <string role="key" value="_caption"></string>
+                      <instance class="exe.engine.field.TextField">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <int value="134086"></int>
+                        <string role="key" value="_idevice"></string>
+                        <none></none>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="content"></string>
+                        <string value=""></string>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_id"></string>
+                      <unicode value="10_838_2.1"></unicode>
+                      <string role="key" value="_imageResource"></string>
+                      <instance class="exe.engine.resource.Resource" reference="41">
+                       <dictionary>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="37"></reference>
+                        <string role="key" value="_package"></string>
+                        <reference key="2"></reference>
+                        <string role="key" value="_storageName"></string>
+                        <string value="backStack.png"></string>
+                        <string role="key" value="_userName"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpzlatys.eXe\\previews\\allyourbase\\backStack.png"></string>
+                        <string role="key" value="checksum"></string>
+                        <string value="e344b9a0b33081cc061285691225baa8"></string>
+                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="warningMsg"></string>
+                        <string value=""></string>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_parent"></string>
+                      <reference key="38"></reference>
+                      <string role="key" value="_thumbnailResource"></string>
+                      <none></none>
+                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                      <int value="3"></int>
+                      <string role="key" value="makeThumbnail"></string>
+                      <bool value="0"></bool>
+                     </dictionary>
+                    </instance>
+                   </list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="38"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="2"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="39"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="10"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="39"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list>
+               <reference key="40"></reference>
+               <reference key="41"></reference>
+              </list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="42">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Paso de información entre Activities"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="43">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="840_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="42"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Cuando llamamos a otra activity, tanto dentro como fuera de nuestra app, podemos leer la información que devuelve. Para ello, en la Actividad principal debe existir el siguiente código:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;btnLanzarSegundaActividad.setOnClickListener {
+    val intent = Intent(this, OtraActivity::class.java)   // Declaramos un Intent para cambiar a la &quot;Otra&quot; actividad&lt;br&gt;    findViewById&lt;button&gt;(R.id.btnCambiarSaludo).setOnClickListener { // Asociamos el cambio de pantalla a un botón&lt;br&gt;        Log.d(&quot;MainActivity&quot;,&quot;voy&quot;) // Mostramos un Log para ver que se realiza el cambio&lt;br&gt;        getResult.launch(intent)    // Se lanza el intent para cambiar de pantalla&lt;br&gt;    }
+}&lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;La nueva actividad se mostrará, el usuario utilizará sus funciones y, cuando termine, la actividad se cerrará y devolverá los datos. En la primera activity, tendríamos un código para recibir esos datos, algo como:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt; val getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult -&amp;gt;
+        Log.d(&quot;MainActivity&quot;, &quot;vengo&quot;)              // Se muestra en Log la vuelta
+        if (result.resultCode == Activity.RESULT_OK) {      // Si ha ido bien...
+            Log.d(&quot;MainActivity&quot;, &quot;OK&quot;)             // Se muestra el mensaje OK
+            val data: Intent? = result.data                 // Se recoge el resultado del Intent devuelto
+
+            if (data != null) {                             // Si el dato no es nulo...
+                Log.d(&quot;MainActivity&quot;, data.toString())  // Se muestran los datos devueltos
+                // Se muestra en la etiqueta el dato devuelto
+                findViewById&lt;textview&gt;(R.id.tvSaludo).text = data.getStringExtra(&quot;nombre&quot;)
+            }
+        }
+    }&lt;/textview&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Sobrescribimos el método de la activity &lt;strong&gt;getResult&lt;/strong&gt; para obtener los datos devueltos por la &lt;strong&gt;activity&lt;/strong&gt;. Este método nos informa sobre el resultado mediante sus dos parámetros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;resultCode:&lt;/strong&gt; normalmente será una de los valores &lt;strong&gt;RESULT_OK&lt;/strong&gt; (para indicar que la actividad terminó adecuadamente y pueden utilizarse los valores devueltos) y &lt;strong&gt;RESULT_CANCELED&lt;/strong&gt; (si el usuario canceló el proceso y debemos tomar las medidas adecuadas ante el rechazo del proceso).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data:&lt;/strong&gt; un objeto intent con los datos requeridos por la activity que lanzamos. Podremos obtener los datos mediante diferentes métodos en función al tipo de datos, como &lt;strong&gt;getStringExtra&lt;/strong&gt;, &lt;strong&gt;getIntExtra&lt;/strong&gt;, &lt;strong&gt;getBooleanExtra&lt;/strong&gt;, &lt;strong&gt;getByteExtra&lt;/strong&gt;, etcétera.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="43"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="diary"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="12"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="39"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="44">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Ejercicio"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="45">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="841_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="44"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-representation&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Crea un proyecto con &lt;strong&gt;dos Actividades vacías&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;La primera Activity y su layout contendrán el código mostrado anteriormente para que, a través del botón, se muestre la segunda.&lt;/p&gt;
+&lt;p&gt;La segunda tendrá en su &lt;strong&gt;Activity&lt;/strong&gt; y &lt;strong&gt;layout&lt;/strong&gt; respectivamente, el siguiente código:&lt;/p&gt;
+&lt;div class=&quot;exe-layout-2-cols exe-layout-2-50-50 exe-clear&quot;&gt;
+&lt;div class=&quot;exe-col exe-col-1&quot;&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
+&amp;lt;androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    tools:context=&quot;.OtraActivity&quot;&amp;gt;
+    &amp;lt;Button
+        android:id=&quot;@+id/btnVolver&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;Volver&quot;
+        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+        app:layout_constraintEnd_toEndOf=&quot;parent&quot;
+        app:layout_constraintStart_toStartOf=&quot;parent&quot;
+        app:layout_constraintTop_toBottomOf=&quot;@+id/lblMensaje&quot; /&amp;gt;
+    &amp;lt;TextView
+        android:id=&quot;@+id/lblMensaje&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;Esta es la segunda actividad&quot;
+        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+        app:layout_constraintEnd_toEndOf=&quot;parent&quot;
+        app:layout_constraintStart_toStartOf=&quot;parent&quot;
+        app:layout_constraintTop_toTopOf=&quot;parent&quot; /&amp;gt;
+&amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;exe-col exe-col-2&quot;&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_second.*
+class OtraActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_otra)
+        btnVolver.setOnClickListener {
+            onClick(it)
+        }
+    }
+    fun onClick(view: android.view.View) {
+        val intent = Intent()
+        val datos = &quot;Estos son datos generados en ${SecondActivity::class.simpleName}&quot;
+        intent.putExtra(&quot;datos&quot;, datos)
+        setResult(RESULT_OK, intent)
+        finish()
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Observa el código del método &lt;strong&gt;onClick&lt;/strong&gt;. Este método crea un &lt;strong&gt;intent&lt;/strong&gt; y, mediante la función &lt;strong&gt;putExtra&lt;/strong&gt;, introduce en él los datos que va a devolver. La llamada a &lt;strong&gt;setResult&lt;/strong&gt; devolverá el &lt;strong&gt;intent&lt;/strong&gt;, pasando además como resultado &lt;strong&gt;RESULT_OK&lt;/strong&gt; para indicar que el proceso se llevó a cabo satisfactoriamente. No queda más que terminar el proceso llamando a &lt;strong&gt;finish&lt;/strong&gt;, que cerrará la actividad y volverá a la anterior.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="45"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="technology"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="13"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="39"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="5"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA03.%20Programando...:3.3.%20Interfaces%20de%20usuario:3.3.3.%20Intent"></string>
+           <string role="key" value="parent"></string>
+           <reference key="15"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="48">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="3.3.4. Tareas"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="46">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="47">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="843_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="46"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Android maneja las pilas de actividades asociadas a lo que se conoce como &lt;strong&gt;tareas&lt;/strong&gt;. Una tarea es un conjunto de actividades con las que interactúa el usuario mientras realiza una función. Normalmente, una aplicación tendrá una tarea con una pila de actividades, aunque no tiene por qué ser siempre así.&lt;/p&gt;
+&lt;p&gt;El orden de las actividades en la pila no puede modificarse una vez introducidas. Sin embargo, sí puede configurarse de antemano, mediante el uso de parámetros en la etiqueta &lt;strong&gt;&lt;activity&gt;&lt;/activity&gt;&lt;/strong&gt; del &lt;strong&gt;manifest&lt;/strong&gt; o mediante parámetros en la función &lt;strong&gt;startActivity&lt;/strong&gt;. Los parámetros de la función tendrán prioridad sobre los del &lt;strong&gt;manifest&lt;/strong&gt; en caso de que existan ambos y sean incompatibles.&lt;/p&gt;
+&lt;p&gt;En el manifest, tenemos la opción de especificar el atributo &lt;strong&gt;launchMode&lt;/strong&gt;, que especifica cómo la actividad encajará en la tarea, por ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;activity android:name=&quot;.MainActivity&quot; android:launchMode=&quot;standard&quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Hay cuatro modos diferentes, veamos qué hace cada uno:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;standard&lt;/strong&gt;: es el modo por defecto. El sistema creará una nueva instancia de la actividad en la tarea. La actividad podrá crearse más de una vez, y cada instancia puede pertenecer a una tarea diferente.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;singleTop&lt;/strong&gt;: si ya existe una instancia de la actividad en la tarea actual, el sistema enrutará el &lt;strong&gt;intent&lt;/strong&gt; a esa instancia. Como la actividad ya existe, no se llamará a &lt;strong&gt;onCreate&lt;/strong&gt;, sino a &lt;strong&gt;onNewIntent&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;singleTask&lt;/strong&gt;: el sistema crea una nueva tarea para instanciarla como la actividad principal de la tarea. Sin embargo, si ya existe una instancia de la actividad en una tarea separada, el sistema enrutará el &lt;strong&gt;intent&lt;/strong&gt; a la actividad existente mediante &lt;strong&gt;onNewIntent&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;singleInstance&lt;/strong&gt;: Sería lo mismo que &lt;strong&gt;singleTask&lt;/strong&gt;, excepto que el sistema no lanzará ninguna otra actividad en la tarea que tiene la instancia. La instancia de la actividad será siempre la única que tenga la tarea. Cualquier actividad que se lance de este modo creará una nueva tarea.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;resources/clear_top3.webp&quot; alt=&quot;Clear on top&quot; title=&quot;Clear on top&quot; style=&quot;float: right; margin-left: 10px; margin-right: 10px;&quot; width=&quot;240&quot; height=&quot;210&quot;&gt;Algunos parámetros que podemos utilizar en la función &lt;strong&gt;onStartActivity&lt;/strong&gt; serán:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;FLAG_ACTIVITY_NEW_TASK&lt;/strong&gt;: comienza la actividad en una nueva tarea. Si ya existe una tarea con esa actividad, la tarea se traerá al primer plano y la actividad ya existente recibirá la llamada de la función &lt;strong&gt;onNewIntent&lt;/strong&gt;. El resultado sería el mismo que utilizar &lt;strong&gt;singleTask&lt;/strong&gt; en el &lt;strong&gt;manifest&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FLAG_ACTIVITY_SINGLE_TOP&lt;/strong&gt;: si la actividad que se quiere lanzar es la actividad actual, la situada en lo alto de la pila, recibirá una llamada a &lt;strong&gt;onNewIntent&lt;/strong&gt; en lugar de crearse una nueva. Sería lo mismo que usar &lt;strong&gt;singleTop&lt;/strong&gt; en el &lt;strong&gt;manifest&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FLAG_ACTIVITY_CLEAR_TOP&lt;/strong&gt;: si la actividad que quiere lanzarse está ya en la tarea actual, en lugar de lanzarse una nueva instancia, todas las demás actividades que están sobre ella en la pila se destruirán y la actividad que ya existía, ahora en primer plano, recibirá la llamada a &lt;strong&gt;onNewIntent&lt;/strong&gt;. Normalmente, este flag se utiliza junto con &lt;strong&gt;FLAG_ACTIVITY_NEW_TASK&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list>
+                    <instance class="exe.engine.galleryidevice.GalleryImage">
+                     <dictionary>
+                      <string role="key" value="_caption"></string>
+                      <instance class="exe.engine.field.TextField">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <int value="134088"></int>
+                        <string role="key" value="_idevice"></string>
+                        <none></none>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="content"></string>
+                        <string value=""></string>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_id"></string>
+                      <unicode value="15_843_2.1"></unicode>
+                      <string role="key" value="_imageResource"></string>
+                      <instance class="exe.engine.resource.Resource" reference="49">
+                       <dictionary>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="46"></reference>
+                        <string role="key" value="_package"></string>
+                        <reference key="2"></reference>
+                        <string role="key" value="_storageName"></string>
+                        <string value="clear_top3.webp"></string>
+                        <string role="key" value="_userName"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpzlatys.eXe\\previews\\allyourbase\\clear_top3.webp"></string>
+                        <string role="key" value="checksum"></string>
+                        <string value="5741bec431c324cc46ff5f3db56dc1b0"></string>
+                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="warningMsg"></string>
+                        <string value=""></string>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_parent"></string>
+                      <reference key="47"></reference>
+                      <string role="key" value="_thumbnailResource"></string>
+                      <none></none>
+                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                      <int value="3"></int>
+                      <string role="key" value="makeThumbnail"></string>
+                      <bool value="0"></bool>
+                     </dictionary>
+                    </instance>
+                   </list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="47"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="3"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="48"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="15"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="48"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list>
+               <reference key="49"></reference>
+              </list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="50">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Enlaces"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="51">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="844_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="50"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/components/activities/tasks-and-back-stack?hl=es-419&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tareas y pila&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/topics/manifest/activity-element?hl=es-419#lmode&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Modos de lanzamiento de actividades&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="51"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="info"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="16"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="48"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="52">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Ejemplo"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="53">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="845_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="52"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-representation&quot;&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Paso 1&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Crea un nuevo proyecto, con Actividad vacía, denominado &lt;strong&gt;Llamada a Contacto&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Edita el layout para que tenga seis campos &lt;strong&gt;TextView&lt;/strong&gt;, unos servirán de etiquetas y otros de valores. Además, inserta dos botones &lt;strong&gt;Button&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Disponlo todo como en la siguiente imagen:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;resources/ejemploContactos.png&quot; alt=&quot;Ejemplo contactos&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;261&quot; height=&quot;343&quot;&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Paso 2&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Edita el código de &lt;strong&gt;MainActivity&lt;/strong&gt; para dar utilidad a los dos botones:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;El primer botón deberá llamar a la función &lt;strong&gt;obtenerContacto&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;El segundo botón deberá llamará a la función &lt;strong&gt;llamar&lt;/strong&gt; (valga la redundancia).&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Paso 3&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La función &lt;strong&gt;obtenerContacto&lt;/strong&gt;, tendrá el siguiente código:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;if(tenemosPermiso()) {
+    val intent = Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)
+    startActivityForResult(intent, REQUEST_CONTACTO)
+}else {
+    pidePermiso()
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list>
+                    <instance class="exe.engine.galleryidevice.GalleryImage">
+                     <dictionary>
+                      <string role="key" value="_caption"></string>
+                      <instance class="exe.engine.field.TextField">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <int value="134090"></int>
+                        <string role="key" value="_idevice"></string>
+                        <none></none>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="content"></string>
+                        <string value=""></string>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_id"></string>
+                      <unicode value="17_845_2.0"></unicode>
+                      <string role="key" value="_imageResource"></string>
+                      <instance class="exe.engine.resource.Resource" reference="54">
+                       <dictionary>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="52"></reference>
+                        <string role="key" value="_package"></string>
+                        <reference key="2"></reference>
+                        <string role="key" value="_storageName"></string>
+                        <string value="ejemploContactos.png"></string>
+                        <string role="key" value="_userName"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpzlatys.eXe\\previews\\allyourbase\\ejemploContactos.png"></string>
+                        <string role="key" value="checksum"></string>
+                        <string value="ef22ce06e1235978e39f02b615cd0b3f"></string>
+                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="warningMsg"></string>
+                        <string value=""></string>
+                       </dictionary>
+                      </instance>
+                      <string role="key" value="_parent"></string>
+                      <reference key="53"></reference>
+                      <string role="key" value="_thumbnailResource"></string>
+                      <none></none>
+                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                      <int value="3"></int>
+                      <string role="key" value="makeThumbnail"></string>
+                      <bool value="0"></bool>
+                     </dictionary>
+                    </instance>
+                   </list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="53"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="1"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="48"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="think"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="17"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="48"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list>
+               <reference key="54"></reference>
+              </list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="7"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA03.%20Programando...:3.3.%20Interfaces%20de%20usuario:3.3.4.%20Tareas"></string>
            <string role="key" value="parent"></string>
            <reference key="15"></reference>
            <string role="key" value="top_anchors_linked_from_fields"></string>
@@ -1117,6 +3343,12 @@
    <reference key="15"></reference>
    <unicode role="key" value="4"></unicode>
    <reference key="18"></reference>
+   <unicode role="key" value="5"></unicode>
+   <reference key="39"></reference>
+   <unicode role="key" value="6"></unicode>
+   <reference key="32"></reference>
+   <unicode role="key" value="7"></unicode>
+   <reference key="48"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -1127,7 +3359,7 @@
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="18"></reference>
+  <reference key="48"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -2163,6 +4395,24 @@
   <dictionary>
    <string role="key" value="1947795d5f67bdfd6eb70fc0190f3a28"></string>
    <list>
+    <reference key="21"></reference>
+    <reference key="22"></reference>
+   </list>
+   <string role="key" value="5327f15b80d4cda3bf5e333acb33d4bd"></string>
+   <list>
+    <reference key="25"></reference>
+    <reference key="26"></reference>
+   </list>
+   <string role="key" value="5741bec431c324cc46ff5f3db56dc1b0"></string>
+   <list>
+    <reference key="49"></reference>
+   </list>
+   <string role="key" value="abe92c3664b1380a02b84995ab657081"></string>
+   <list>
+    <reference key="27"></reference>
+   </list>
+   <string role="key" value="e161d15f197cc73275c8c986e7c16d81"></string>
+   <list>
     <reference key="19"></reference>
     <reference key="20"></reference>
    </list>
@@ -2170,6 +4420,15 @@
    <list>
     <reference key="5"></reference>
     <reference key="6"></reference>
+   </list>
+   <string role="key" value="e344b9a0b33081cc061285691225baa8"></string>
+   <list>
+    <reference key="40"></reference>
+    <reference key="41"></reference>
+   </list>
+   <string role="key" value="ef22ce06e1235978e39f02b615cd0b3f"></string>
+   <list>
+    <reference key="54"></reference>
    </list>
   </dictionary>
   <string role="key" value="root"></string>
