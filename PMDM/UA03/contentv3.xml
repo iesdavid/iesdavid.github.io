@@ -1951,7 +1951,7 @@ android:text=&quot;Button 1&quot; /&amp;gt;
 &lt;div class=&quot;exe-layout-2-cols exe-layout-2-50-50 exe-clear&quot;&gt;
 &lt;div class=&quot;exe-col exe-col-1&quot;&gt;
 &lt;p&gt;Esto no ocurre cuando llevamos la aplicación a background y la volvemos a activar.&amp;nbsp; ¿Qué ocurriría si almacenásemos el contexto en una variable e intentásemos utilizarla más tarde sin tener en cuenta el ciclo de vida de la actividad? Pues que estaríamos utilizando un &lt;strong&gt;contexto desfasado&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Si ejecutamos este código y rotamos el terminal, veremos que el contexto ya no es el&lt;br&gt;mismo que era antes de la rotación. Una vez más, debemos tener cuidado y respetar el&lt;br&gt;ciclo de vida de los componentes del sistema Android.&lt;/p&gt;
+&lt;p&gt;Si ejecutamos este código y rotamos el terminal, veremos que el contexto ya no es el mismo que era antes de la rotación. Una vez más, debemos tener cuidado y respetar el ciclo de vida de los componentes del sistema Android.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;exe-col exe-col-2&quot;&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
@@ -2501,7 +2501,11 @@ android:text=&quot;Button 1&quot; /&amp;gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
 &lt;pre&gt;&lt;code&gt;btnLanzarSegundaActividad.setOnClickListener {
-    val intent = Intent(this, OtraActivity::class.java)   // Declaramos un Intent para cambiar a la &quot;Otra&quot; actividad&lt;br&gt;    findViewById&lt;button&gt;(R.id.btnCambiarSaludo).setOnClickListener { // Asociamos el cambio de pantalla a un botón&lt;br&gt;        Log.d(&quot;MainActivity&quot;,&quot;voy&quot;) // Mostramos un Log para ver que se realiza el cambio&lt;br&gt;        getResult.launch(intent)    // Se lanza el intent para cambiar de pantalla&lt;br&gt;    }
+    val intent = Intent(this, OtraActivity::class.java)   // Declaramos un Intent para cambiar a la &quot;Otra&quot; actividad
+    findViewById&lt;button&gt;(R.id.btnCambiarSaludo).setOnClickListener { // Asociamos el cambio de pantalla a un botón
+        Log.d(&quot;MainActivity&quot;,&quot;voy&quot;) // Mostramos un Log para ver que se realiza el cambio
+        getResult.launch(intent)    // Se lanza el intent para cambiar de pantalla
+    }
 }&lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2517,7 +2521,7 @@ android:text=&quot;Button 1&quot; /&amp;gt;
             if (data != null) {                             // Si el dato no es nulo...
                 Log.d(&quot;MainActivity&quot;, data.toString())  // Se muestran los datos devueltos
                 // Se muestra en la etiqueta el dato devuelto
-                findViewById&lt;textview&gt;(R.id.tvSaludo).text = data.getStringExtra(&quot;nombre&quot;)
+                findViewById&lt;textview&gt;(R.id.tvSaludo).text = data.getStringExtra(&quot;datos&quot;)
             }
         }
     }&lt;/textview&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -2656,34 +2660,17 @@ android:text=&quot;Button 1&quot; /&amp;gt;
 &lt;div class=&quot;exe-layout-2-cols exe-layout-2-50-50 exe-clear&quot;&gt;
 &lt;div class=&quot;exe-col exe-col-1&quot;&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
-&amp;lt;androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
-    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
-    android:layout_width=&quot;match_parent&quot;
-    android:layout_height=&quot;match_parent&quot;
-    tools:context=&quot;.OtraActivity&quot;&amp;gt;
-    &amp;lt;Button
-        android:id=&quot;@+id/btnVolver&quot;
-        android:layout_width=&quot;wrap_content&quot;
-        android:layout_height=&quot;wrap_content&quot;
-        android:text=&quot;Volver&quot;
-        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
-        app:layout_constraintEnd_toEndOf=&quot;parent&quot;
-        app:layout_constraintStart_toStartOf=&quot;parent&quot;
-        app:layout_constraintTop_toBottomOf=&quot;@+id/lblMensaje&quot; /&amp;gt;
-    &amp;lt;TextView
-        android:id=&quot;@+id/lblMensaje&quot;
-        android:layout_width=&quot;wrap_content&quot;
-        android:layout_height=&quot;wrap_content&quot;
-        android:text=&quot;Esta es la segunda actividad&quot;
-        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
-        app:layout_constraintEnd_toEndOf=&quot;parent&quot;
-        app:layout_constraintStart_toStartOf=&quot;parent&quot;
-        app:layout_constraintTop_toTopOf=&quot;parent&quot; /&amp;gt;
-&amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&amp;lt;androidx.constraintlayout.widget.constraintlayout   &lt;br&gt;xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; &lt;br&gt;xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot; &lt;br&gt;xmlns:tools=&quot;http://schemas.android.com/tools&quot; &lt;br&gt;android:layout_width=&quot;match_parent&quot; &lt;br&gt;android:layout_height=&quot;match_parent&quot; &lt;br&gt;tools:context=&quot;.OtraActivity&quot;&amp;gt;
+    &amp;lt;button android:id=&quot;@+id/btnVolver&quot; &lt;br&gt;&amp;nbsp;       android:layout_width=&quot;wrap_content&quot; &lt;br&gt;&amp;nbsp;       android:layout_height=&quot;wrap_content&quot; &lt;br&gt;        android:text=&quot;Volver&quot; &lt;br&gt;        app:layout_constraintbottom_tobottomof=&quot;parent&quot; &lt;br&gt;        app:layout_constraintend_toendof=&quot;parent&quot; &lt;br&gt;        app:layout_constraintstart_tostartof=&quot;parent&quot; &lt;br&gt;        app:layout_constrainttop_tobottomof=&quot;@+id/lblMensaje&quot;&amp;gt;
+    &amp;lt;textview android:id=&quot;@+id/lblMensaje&quot; &lt;br&gt;        android:layout_width=&quot;wrap_content&quot; &lt;br&gt;        android:layout_height=&quot;wrap_content&quot; &lt;br&gt;        android:text=&quot;Esta es la segunda actividad&quot; &lt;br&gt;        app:layout_constraintbottom_tobottomof=&quot;parent&quot; &lt;br&gt;        app:layout_constraintend_toendof=&quot;parent&quot; &lt;br&gt;        app:layout_constraintstart_tostartof=&quot;parent&quot; &lt;br&gt;        app:layout_constrainttop_totopof=&quot;parent&quot;&amp;gt;
+    &amp;lt;/textview&amp;gt;
+    &amp;lt;/button&amp;gt;
+&amp;lt;/androidx.constraintlayout.widget.constraintlayout&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;exe-col exe-col-2&quot;&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
@@ -2702,7 +2689,7 @@ class OtraActivity : AppCompatActivity() {
     }
     fun onClick(view: android.view.View) {
         val intent = Intent()
-        val datos = &quot;Estos son datos generados en ${SecondActivity::class.simpleName}&quot;
+        val datos = &quot;Estos son datos generados en ${OtraActivity::class.simpleName}&quot;
         intent.putExtra(&quot;datos&quot;, datos)
         setResult(RESULT_OK, intent)
         finish()
@@ -3359,7 +3346,7 @@ class OtraActivity : AppCompatActivity() {
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="48"></reference>
+  <reference key="39"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>

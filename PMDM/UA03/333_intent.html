@@ -84,7 +84,11 @@
 <div class="highlighted-code language-java">
 <div>
 <pre><code>btnLanzarSegundaActividad.setOnClickListener {
-    val intent = Intent(this, OtraActivity::class.java)   // Declaramos un Intent para cambiar a la "Otra" actividad<br>    findViewById<button>(R.id.btnCambiarSaludo).setOnClickListener { // Asociamos el cambio de pantalla a un botón<br>        Log.d("MainActivity","voy") // Mostramos un Log para ver que se realiza el cambio<br>        getResult.launch(intent)    // Se lanza el intent para cambiar de pantalla<br>    }
+    val intent = Intent(this, OtraActivity::class.java)   // Declaramos un Intent para cambiar a la "Otra" actividad
+    findViewById<button>(R.id.btnCambiarSaludo).setOnClickListener { // Asociamos el cambio de pantalla a un botón
+        Log.d("MainActivity","voy") // Mostramos un Log para ver que se realiza el cambio
+        getResult.launch(intent)    // Se lanza el intent para cambiar de pantalla
+    }
 }</button></code></pre>
 </div>
 </div>
@@ -100,7 +104,7 @@
             if (data != null) {                             // Si el dato no es nulo...
                 Log.d("MainActivity", data.toString())  // Se muestran los datos devueltos
                 // Se muestra en la etiqueta el dato devuelto
-                findViewById<textview>(R.id.tvSaludo).text = data.getStringExtra("nombre")
+                findViewById<textview>(R.id.tvSaludo).text = data.getStringExtra("datos")
             }
         }
     }</textview></code></pre>
@@ -128,34 +132,17 @@
 <div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
 <div class="exe-col exe-col-1">
 <div class="highlighted-code language-java">
+<div>
 <pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".OtraActivity"&gt;
-    &lt;Button
-        android:id="@+id/btnVolver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Volver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblMensaje" /&gt;
-    &lt;TextView
-        android:id="@+id/lblMensaje"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Esta es la segunda actividad"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" /&gt;
-&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</code></pre>
+&lt;androidx.constraintlayout.widget.constraintlayout   <br>xmlns:android="http://schemas.android.com/apk/res/android" <br>xmlns:app="http://schemas.android.com/apk/res-auto" <br>xmlns:tools="http://schemas.android.com/tools" <br>android:layout_width="match_parent" <br>android:layout_height="match_parent" <br>tools:context=".OtraActivity"&gt;
+    &lt;button android:id="@+id/btnVolver" <br>&nbsp;       android:layout_width="wrap_content" <br>&nbsp;       android:layout_height="wrap_content" <br>        android:text="Volver" <br>        app:layout_constraintbottom_tobottomof="parent" <br>        app:layout_constraintend_toendof="parent" <br>        app:layout_constraintstart_tostartof="parent" <br>        app:layout_constrainttop_tobottomof="@+id/lblMensaje"&gt;
+    &lt;textview android:id="@+id/lblMensaje" <br>        android:layout_width="wrap_content" <br>        android:layout_height="wrap_content" <br>        android:text="Esta es la segunda actividad" <br>        app:layout_constraintbottom_tobottomof="parent" <br>        app:layout_constraintend_toendof="parent" <br>        app:layout_constraintstart_tostartof="parent" <br>        app:layout_constrainttop_totopof="parent"&gt;
+    &lt;/textview&gt;
+    &lt;/button&gt;
+&lt;/androidx.constraintlayout.widget.constraintlayout&gt;</code></pre>
 </div>
+</div>
+<p><br><br></p>
 </div>
 <div class="exe-col exe-col-2">
 <div class="highlighted-code language-java">
@@ -174,7 +161,7 @@ class OtraActivity : AppCompatActivity() {
     }
     fun onClick(view: android.view.View) {
         val intent = Intent()
-        val datos = "Estos son datos generados en ${SecondActivity::class.simpleName}"
+        val datos = "Estos son datos generados en ${OtraActivity::class.simpleName}"
         intent.putExtra("datos", datos)
         setResult(RESULT_OK, intent)
         finish()
