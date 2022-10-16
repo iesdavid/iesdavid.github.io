@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1. Estructura | UA03. HTML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. HTML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. HTML</a></li>
+   <li id="active"><a href="31_estructura.html" class="active no-ch">3.1. Estructura</a></li>
+   <li><a href="32_elementos.html" class="daddy">3.2. Elementos</a>
+   <ul class="other-section">
+      <li><a href="321_elementos_para_dar_formato.html" class="no-ch">3.2.1 Elementos para dar formato</a></li>
+      <li><a href="322_listas.html" class="no-ch">3.2.2. Listas</a></li>
+      <li><a href="323_tablas.html" class="no-ch">3.2.3. Tablas</a></li>
+   </ul>
+   </li>
+   <li><a href="33_contenedores.html" class="daddy">3.3. Contenedores</a>
+   <ul class="other-section">
+      <li><a href="331_texto_simple.html" class="no-ch">3.3.1. Texto simple</a></li>
+   </ul>
+   </li>
+   <li><a href="34_comentarios.html" class="no-ch">3.4. Comentarios</a></li>
+   <li><a href="ejercicio_0.html" class="no-ch">Ejercicio 0</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_elementos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1. Estructura</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id6">
+<div class="iDevice emphasis0" >
+<div id="ta6_846_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="htmlEstructura.png" alt="Estructura HTML" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="376"></p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="exe-fx exe-accordion">
+<h2>Etiqueta &lt;html&gt;</h2>
+<p>Un documento HTML contiene marcas (etiquetas), las cuales se escriben empleando los caracteres menor que “&lt;”, mayor que “&gt;” y barra inclinada “/”.</p>
+<p>Por ejemplo, las etiquetas de inicio (&lt;html&gt;) y fin (&lt;/html&gt;) representan al elemento raíz (“html”) que en todo documento HTML hay que escribir <strong>&lt;html&gt;&lt;/html&gt;</strong></p>
+<h2>Etiqueta &lt;head&gt;</h2>
+<p>Dentro del elemento “html”, es decir, entre &lt;html&gt; y &lt;/html&gt;, se debe escribir el elemento “head” que, como iremos viendo a lo largo del tutorial, puede contener diversa información sobre el documento:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+         ...
+    &lt;/head&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<h2>Etiqueta &lt;title&gt;</h2>
+<p>Entre &lt;head&gt; y &lt;/head&gt; se pueden escribir otros elementos. Por ejemplo, el elemento “title”, el cual sirve para indicar el título del documento.</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Ejemplo de 2 párrafos&lt;/title&gt;
+&lt;/head&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<h2>Etiqueta &lt;body&gt;</h2>
+<p>En un documento HTML, después del “head”, hay que escribir el elemento “body” y alberga todo el contenido (párrafos, imágenes, vídeos...) del documento, los cuales se mostrarán en el navegador.</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Ejemplo de 2 párrafos&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<h2>Etiqueta &lt;p&gt;</h2>
+<p>En este caso, entre &lt;body&gt; y &lt;/body&gt; se incluyen dos elementos “p” delimitados por la etiqueta de inicio &lt;p&gt; y la de cierre &lt;/p&gt;:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Ejemplo de 2 párrafos&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;Esto es un párrafo.&lt;/p&gt;
+&lt;p&gt;Esto es otro párrafo.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div id="ta7_847_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Finalmente, la estructura básica de un documento HTML es la siguiente:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es-ES"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo de 2 párrafos&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Esto es un párrafo.&lt;/p&gt;
+    &lt;p&gt;Esto es otro párrafo.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<ul>
+<li>&lt;!DOCTYPE html&gt; en la primera línea. Esta es la forma de indicar al navegador donde se visualice el documento que este está escrito en la versión HTML5.</li>
+<li><strong>lang="es-ES"</strong> en la etiqueta de inicio &lt;html&gt;. Esto sirve para especificar, mediante el atributo lang, el idioma del contenido del elemento “html”. En este caso español (España). Otros posibles valores del atributo lang son: "es-AR" para español (Argentina), "es-CO" para español (Colombia), "es-MX" para español (México), etc.</li>
+<li><strong>&lt;meta charset="utf-8"&gt;</strong> dentro del elemento “head”. Así, se indica la codificación de caracteres del documento, en esta ocasión UTF-8 (8-bit Unicode Transformation Format, Formato de&nbsp; Transformación Unicode de 8 bits). Obsérvese que, el elemento “meta” está vacío (no tiene contenido) y, en consecuencia, no necesita ser cerrado escribiendo &lt;/meta&gt;.</li>
+</ul>
+<p>De esta forma, hemos escrito la estructura básica de un documento HTML que muestra por pantalla dos párrafos.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_elementos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

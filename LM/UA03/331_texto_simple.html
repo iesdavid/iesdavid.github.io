@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.1. Texto simple | UA03. HTML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. HTML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. HTML</a></li>
+   <li><a href="31_estructura.html" class="no-ch">3.1. Estructura</a></li>
+   <li><a href="32_elementos.html" class="daddy">3.2. Elementos</a>
+   <ul class="other-section">
+      <li><a href="321_elementos_para_dar_formato.html" class="no-ch">3.2.1 Elementos para dar formato</a></li>
+      <li><a href="322_listas.html" class="no-ch">3.2.2. Listas</a></li>
+      <li><a href="323_tablas.html" class="no-ch">3.2.3. Tablas</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="33_contenedores.html" class="current-page-parent daddy">3.3. Contenedores</a>
+   <ul>
+      <li id="active"><a href="331_texto_simple.html" class="active no-ch">3.3.1. Texto simple</a></li>
+   </ul>
+   </li>
+   <li><a href="34_comentarios.html" class="no-ch">3.4. Comentarios</a></li>
+   <li><a href="ejercicio_0.html" class="no-ch">Ejercicio 0</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="33_contenedores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_comentarios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3.1. Texto simple</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div id="ta10_850_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Todo el contenido de su página Web se sitúa en el cuerpo del documento Html5, es decir entre las etiquetas <strong>...</strong> se considera texto simple sin ningún formato por defecto.</p>
+<p>No es recomendable escribir texto simple sin estar contenido en alguna etiqueta, ya sea de línea o de bloque. En caso contrario, para poder acceder a su formato tendríamos que actuar sobre la etiqueta <strong>body</strong> afectando a todo el documento.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Ejemplo</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Crea una página HTMl con la siguiente frase:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;body&gt;
+Esta frase se verá afectada &lt;b&gt;en su totalidad&lt;/b&gt; debido a que no está dentro de un contenedor.<br>&lt;p&gt;Pero esta frase sí lo está&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</div>
+</div>
+<p>Observa cómo resulta. Verás que hay un fragmento en negrita.</p>
+<p>Ahora inserta en el <strong>head</strong> el siguiente código:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;style&gt;
+        b{
+            color: red;
+            text-decoration: underline;
+        }<br>&nbsp;       body{<br>            color: blue;<br>        }
+&lt;/style&gt;</code></pre>
+</div>
+</div>
+<p>Comprueba cómo todo el texto se pone de color azul excepto el fragmento dentro de <strong>b</strong>.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="33_contenedores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_comentarios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

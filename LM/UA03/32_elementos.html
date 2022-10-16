@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2. Elementos | UA03. HTML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. HTML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. HTML</a></li>
+   <li><a href="31_estructura.html" class="no-ch">3.1. Estructura</a></li>
+   <li id="active"><a href="32_elementos.html" class="active daddy">3.2. Elementos</a>
+   <ul>
+      <li><a href="321_elementos_para_dar_formato.html" class="no-ch">3.2.1 Elementos para dar formato</a></li>
+      <li><a href="322_listas.html" class="no-ch">3.2.2. Listas</a></li>
+      <li><a href="323_tablas.html" class="no-ch">3.2.3. Tablas</a></li>
+   </ul>
+   </li>
+   <li><a href="33_contenedores.html" class="daddy">3.3. Contenedores</a>
+   <ul class="other-section">
+      <li><a href="331_texto_simple.html" class="no-ch">3.3.1. Texto simple</a></li>
+   </ul>
+   </li>
+   <li><a href="34_comentarios.html" class="no-ch">3.4. Comentarios</a></li>
+   <li><a href="ejercicio_0.html" class="no-ch">Ejercicio 0</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="31_estructura.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="321_elementos_para_dar_formato.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2. Elementos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_841_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Un elemento HTML se define mediante una etiqueta inicial. Si el elemento contiene otro contenido, termina con una etiqueta de cierre, donde el nombre del elemento está precedido por una barra diagonal. Ejemplos:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;div&gt; ... &lt;/div&gt;
+&lt;h1&gt; .. &lt;/h1&gt;
+&lt;p&gt; .. &lt;/p&gt;</code></pre>
+</div>
+</div>
+<p>Los elementos <strong>&lt;p&gt; .... &lt;/p&gt;</strong> y <strong>&lt;h1&gt; ... &lt;/h1&gt;</strong> son elementos HTML.</p>
+<p>Mientras que <strong>&lt;p&gt;</strong> y <strong>&lt;/p&gt;</strong> son las etiquetas con las que construyo el elemento, <strong>&lt;p&gt; Este es el párrafo &lt;/p&gt;</strong> es un bloque de párrafo con el texto indicado.</p>
+<p>Hay algunos elementos HTML que no necesitan cerrarse, solo tienen etiqueta inicial, como &lt;img&gt;, &lt;br&gt;, &lt;hr&gt;, etc. Estos se conocen como <strong>elementos vacíos.</strong></p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Elementos anidados</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_842_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En HTML esta permitido (y abundantemente usado) tener elementos HTML anidados (unos dentro de otros)</p>
+<p>El único problema es siempre recordar cerrar los elementos (si hay que cerrarlos), y en el orden correcto.</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt; Ejemplo de código HTML&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Bienvenido al &lt;b&gt;Curso de HTML&lt;/b&gt;&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_843_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Las etiquetas de HTML pueden tener varios formatos, según el elemento que se trate:</p>
+<div class="exe-fx exe-accordion">
+<h2>Etiquetas con contenido</h2>
+<p>Se inician en una etiqueta de <strong>apertura</strong>, luego llevan el <strong>contenido</strong>, y finalizan con una etiqueta de <strong>cierre</strong>:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;p&gt; aquí va el contenido &lt;/p&gt;
+
+&lt;h1&gt; aquí va el contenido &lt;/h1&gt;</code></pre>
+</div>
+</div>
+<h2>Etiquetas sin contenido</h2>
+<p>Se inician en una etiqueta de <strong>apertura</strong>, <strong>no llevan el contenido</strong>, y finalizan en la misma etiqueta, que aunque puede ser "<strong>autocerrada</strong>", las reglas dicen que esta hasta prohibido cerrarlas:</p>
+<p><strong>&lt;br&gt;</strong> (insistimos, aunque funcione &lt;br/&gt;, no esta bien según las reglas de w3.org)</p>
+<p><strong>&lt;input type="submit" value="Acceder"&gt;</strong></p>
+<p><strong>&lt;img src=“unaimagen.png" width=“128" height=“128"&gt;</strong></p>
+<p>Las etiquetas que tienen prohibido cerrarse, son :</p>
+<p><strong>area, base, basefont, br, col, frame, hr, img, input, isindex, link, meta, param</strong> </p>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="31_estructura.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="321_elementos_para_dar_formato.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
