@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<meta name="description" content="UA03 del módulo Acceso a datos" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">UA03. Conectores</a></li>
+   <li><a href="31_protocolos_de_acceso.html" class="daddy">3.1. Protocolos de acceso</a>
+   <ul class="other-section">
+      <li><a href="311_arquitectura_jdbc.html" class="no-ch">3.1.1. Arquitectura JDBC</a></li>
+      <li><a href="312_drivers.html" class="no-ch">3.1.2. Drivers</a></li>
+      <li><a href="313_conexin.html" class="no-ch">3.1.3. Conexión</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="31_protocolos_de_acceso.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">UA03. Conectores</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_860_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="AD03_CONT_R02_tabla.jpg" rel="lightbox"><img src="AD03_CONT_R02_tabla.jpg" alt="Ejemplo tabla base de datos" style="float: right; margin: 10px;" width="320" height="174"></a>Actualmente, las <strong>bases de datos relacionales</strong> constituyen el sistema de almacenamiento probablemente más extendido, aunque otros sistemas de almacenamiento de la información se estén abriendo paso poco a poco.</p>
+<p>Una <strong>base de datos relacional</strong> se puede definir, de una manera simple, como aquella que presenta la información en tablas con filas y columnas.</p>
+<p>Una tabla o relación es una colección de objetos del mismo tipo (filas o tuplas).</p>
+<p>En cada tabla de una base de datos se elige una <strong>clave primaria</strong> para identificar de manera unívoca a cada fila de la misma.</p>
+<p>El sistema gestor de bases de datos, en inglés conocido como: Database Management System (<strong>DBMS</strong>) gestiona el modo en que los datos se almacenan, mantienen y recuperan.</p>
+<p>En el caso de una base de datos relacional, el sistema gestor de base de datos se denomina: Relational Database Management System (<strong>RDBMS</strong>).</p>
+<p>Tradicionalmente, la programación de bases de datos ha sido como una torre de Babel: gran cantidad de productos de bases de datos en el mercado y cada uno "hablando" en su lenguaje privado con las aplicaciones.</p>
+<p>Java, mediante <strong>JDBC (Java Database Connectivity)</strong>, permite simplificar el acceso a bases de datos relacionales, proporcionando un lenguaje mediante el cual las aplicaciones pueden comunicarse con motores de bases de datos. Sun desarrolló este API para el acceso a bases de datos, con tres objetivos principales en mente:</p>
+<ul>
+<li>Ser un <strong>API con soporte de SQL</strong>: poder construir sentencias SQL e insertarlas dentro de llamadas al API de Java.</li>
+<li><strong>Aprovechar</strong> la experiencia de los API's de bases de datos existentes.</li>
+<li>Ser lo más <strong>sencillo</strong> posible.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id1">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Desfase objeto-relacional</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta1_861_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>El <strong>desfase objeto-relacional</strong> consiste en la diferencia de aspectos que existen entre la <strong>programación orientada a objetos</strong> y la <strong>base de datos</strong>. Estos aspectos se puede presentar en cuestiones como:</p>
+<ul>
+<li><strong>Lenguaje de programación</strong>: el programador debe conocer el lenguaje de programación orientado a objetos (POO) y el lenguaje de acceso a datos.</li>
+<li><strong>Tipos de datos</strong>: en las bases de datos relacionales siempre hay restricciones en el uso de tipos, mientras que la programación orientada a objetos utiliza tipos de datos mas complejos.</li>
+<li><strong>Paradigma de programación</strong>: en el proceso de diseño y construcción del software se tiene que hacer una traducción del modelo orientado a objetos de clases al modelo Entidad-Relación (E/R) puesto que el primero maneja objetos y el segundo maneja tablas y tuplas (o filas), lo que implica que se tengan que diseñar dos diagramas diferentes para el diseño de la aplicación.</li>
+</ul>
+<p>El <strong>modelo relacional trata con relaciones y conjuntos</strong> debido a su naturaleza matemática. Sin embargo, el <strong>modelo de POO trata con objetos y las asociaciones entre ellos</strong>. Por esta razón, el problema entre estos dos modelos surge en el momento de querer persistir los objetos de negocio.</p>
+<p>La escritura (y de manera similar la lectura) mediante <strong>JDBC</strong> implica:</p>
+<ol>
+<li>Abrir una conexión.</li>
+<li>Crear una sentencia en SQL.</li>
+<li>Copiar todos los valores de las propiedades de un objeto en la sentencia, ejecutarla y así almacenar el objeto.</li>
+</ol>
+<p>Esto es sencillo para un caso simple, pero complicado si el objeto posee muchas propiedades, o bien se necesita almacenar un objeto que a su vez posee una colección de otros elementos. Se necesita crear mucho más código, además del tedioso trabajo de creación de sentencias SQL.</p>
+<p>Este problema es lo que denominábamos <strong>desfase Objeto-Relacional</strong>, o sea, el conjunto de dificultades técnicas que surgen cuando una base de datos relacional se usa en conjunto con un programa escrito en POO.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Ejemplo</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para entender mejor el concepto, lo que ocurre en nuestra aplicación es que tendremos algo más o menos así:</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class Estudiante {
+    private int id;
+    private String dni;
+    private String nombre;
+    private String apellido;
+    private int edad;
+//constructor
+// getters y setters
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="exe-col exe-col-2">
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>CREATE TABLE estudiante (
+    id INT PRIMARY KEY AUTO_INCREMENT;
+    dni VARCHAR(50) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(100),
+    edad INT DEFAULT 10;
+);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>En lenguaje de programación POO tenemos un objeto llamado "Estudiante", con diferentes atributos. En cambio, en la base de datos, cuando creamos la tabla, normalmente creamos campos que se asemejen a los definidos en el objeto de la clase.</p>
+<p>Como podemos ver, no están definidos del mismo modo que en el objeto, sino con un equivalente, y realizamos el mapeo de manera manual. Es decir, cada vez que tengamos que añadir o modificar registros, se tendrán que hacer de manera manual a través de consultas de base de datos.</p>
+<p>Además, los tipos de atributos en un objeto y en una tabla no se definen con el mismo tipo, sino con equivalentes.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="31_protocolos_de_acceso.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

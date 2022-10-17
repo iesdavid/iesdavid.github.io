@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1.1. Arquitectura JDBC | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Conectores</a></li>
+   <li class="current-page-parent"><a href="31_protocolos_de_acceso.html" class="current-page-parent daddy">3.1. Protocolos de acceso</a>
+   <ul>
+      <li id="active"><a href="311_arquitectura_jdbc.html" class="active no-ch">3.1.1. Arquitectura JDBC</a></li>
+      <li><a href="312_drivers.html" class="no-ch">3.1.2. Drivers</a></li>
+      <li><a href="313_conexin.html" class="no-ch">3.1.3. Conexión</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="31_protocolos_de_acceso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="312_drivers.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1.1. Arquitectura JDBC</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_863_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>El <strong>API JDBC</strong> soporta dos modelos de procesamiento para acceso a bases de datos: de dos y tres capas.</p>
+<ul>
+<li>En el <strong>modelo de dos capas</strong>, una aplicación se comunica directamente a la fuente de datos. Esto necesita un conector JDBC que pueda comunicar con la fuente de datos específica a la que acceder. Los comandos o instrucciones del usuario se envían a la base de datos y los resultados se devuelven al usuario. La fuente de datos puede estar ubicada en otra máquina a la que el usuario se conecte por red. A esto se denomina configuración <strong>cliente/servidor</strong>, con la máquina del usuario como cliente y la máquina que aloja los datos como servidor.</li>
+<li>En el modelo de <strong>tres capas</strong>, los comandos se envían a una capa intermedia de servicios, la cual envía los comandos a la fuente de datos. La fuente de datos procesa los comandos y envía los resultados de vuelta la capa intermedia, desde la que luego se le envían al usuario.</li>
+</ul>
+<p>El API JDBC viene distribuido en dos paquetes:</p>
+<ul>
+<li>java.sql, dentro de J2SE.</li>
+<li>javax.sql, extensión dentro de J2EE.</li>
+</ul>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p><a href="AD03_CONT_R06_2capas.JPG" rel="lightbox"><img src="AD03_CONT_R06_2capas.JPG" alt="Modelo de 2 capas" style="display: block; margin-left: auto; margin-right: auto;" width="239" height="149"></a></p>
+</div>
+<div class="exe-col exe-col-2">
+<p><a href="AD03_CONT_R07_3capas.JPG" rel="lightbox"><img src="AD03_CONT_R07_3capas.JPG" alt="Modelo de 3 capas" width="240" height="206"></a></p>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="31_protocolos_de_acceso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="312_drivers.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
