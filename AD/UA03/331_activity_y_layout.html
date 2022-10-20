@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.1. Activity y Layout | UA03. Programando... </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Programando...</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Programando...</a></li>
+   <li><a href="31_herramientas.html" class="no-ch">3.1. Herramientas</a></li>
+   <li><a href="32_fases_de_construccin.html" class="no-ch">3.2. Fases de construcción</a></li>
+   <li class="current-page-parent"><a href="33_interfaces_de_usuario.html" class="current-page-parent daddy">3.3. Interfaces de usuario</a>
+   <ul>
+      <li id="active"><a href="331_activity_y_layout.html" class="active no-ch">3.3.1. Activity y Layout</a></li>
+      <li><a href="332_context.html" class="no-ch">3.3.2. Context</a></li>
+      <li><a href="333_intent.html" class="no-ch">3.3.3. Intent</a></li>
+      <li><a href="334_tareas.html" class="no-ch">3.3.4. Tareas</a></li>
+      <li><a href="335_fragment.html" class="no-ch">3.3.5. Fragment</a></li>
+   </ul>
+   </li>
+   <li><a href="34_otras_ventanas.html" class="no-ch">3.4. Otras ventanas</a></li>
+   <li><a href="35_imgenes.html" class="daddy">3.5. Imágenes</a>
+   <ul class="other-section">
+      <li><a href="351_drawables.html" class="no-ch">3.5.1. Drawables</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicio_1.html" class="no-ch">Ejercicio 1</a></li>
+   <li><a href="ejercicio_2.html" class="no-ch">Ejercicio 2</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="33_interfaces_de_usuario.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="332_context.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3.1. Activity y Layout</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id5">
+<div class="iDevice emphasis0" >
+<div id="ta5_836_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La actividad (<strong>Activity</strong>) es la más común de las clases del SDK de Android para crear una pantalla en nuestra app. Dentro de cada actividad, colocaremos los diferentes componentes de la interfaz gráfica, como campos de introducción de texto, botones, etcétera. Toda actividad debe declararse en el manifiesto de nuestra app (<strong>AndroidManifest.xml</strong>), pues, de otro modo, obtendremos un error de compilación. Normalmente, además, crearemos un recurso <strong>layout</strong> que defina los elementos que componen la pantalla, así como su posición dentro de ella. De lo contrario, tendríamos que <strong>crear</strong> los componentes en<strong> tiempo de ejecución</strong>, lo que resulta más difícil y tendrá sentido solo en algunos casos particulares.</p>
+<p><a href="new-project-wizard-choose_2x.png" rel="lightbox"><img src="new-project-wizard-choose_2x.png" alt="Tipos de Actividades" title="Tipos de actividades" style="display: block; margin-left: auto; margin-right: auto;" width="560"></a></p>
+<p>Como hemos mencionado, el archivo de layout definirá, mediante código <strong>XML</strong>, el aspecto y los componentes de la interfaz gráfica de la actividad. Existen diferentes tipos de layouts predefinidos, que nos ayudarán a&nbsp; ordenar los componentes de diferentes formas según nuestras necesidades. Además, estos contenedores pueden agruparse jerárquicamente unos sobre otros, con la intención de crear interfaces gráficas más complejas.</p>
+<p>Es conveniente, no obstante, utilizar lo menos posible este mecanismo, pues la <strong>eficiencia</strong> de la interfaz gráfica puede verse reducida. Veamos algunos de los layouts más conocidos:</p>
+<div class="exe-fx exe-accordion">
+<h2>LinearLayout</h2>
+<p>Uno de los más sencillos y, a la vez, más usados. Este contenedor agrupa las vistas en su interior de forma lineal, en dirección horizontal o vertical, dependiendo del parámetro orientation. Veamos un ejemplo:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="16dp"
+android:paddingRight="16dp"
+android:orientation="vertical" &gt;
+&lt;EditText
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="EditText 1" /&gt;
+&lt;EditText
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="EditText 2" /&gt;
+&lt;EditText
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1"
+android:gravity="top"
+android:hint="EditText 3" /&gt;
+&lt;Button
+android:layout_width="100dp"
+android:layout_height="wrap_content"
+android:layout_gravity="right"
+android:text="Button 1" /&gt;
+&lt;/LinearLayout&gt;</code></pre>
+</div>
+</div>
+<p>El elemento raíz es un LinearLayout, y la etiqueta orientation indica que los elementos se ordenarán verticalmente.</p>
+<p>Observa cómo todos los elementos presentan los atributos <strong>layout_width</strong> y <strong>layout_height</strong>. Estos atributos son obligatorios en todos los tipos de layout, e indican el ancho y el alto de cada componente, es decir, cuánto espacio ocupa cada ventana dentro del contenedor. Estos valores pueden ser valores fijos, como <strong>16px</strong> (para píxeles), <strong>16dp</strong> (siendo dp una medida estándar, un píxel virtual que se adaptará a cada densidad de pantalla), etcétera. Estos valores pueden ser también valores clave, como <strong>match_parent</strong> (utiliza todo el espacio que ofrece el contenedor padre) o <strong>wrap_content</strong> (utiliza solo el espacio que necesite el contenido de la ventana, por ejemplo, un botón ocupará lo que ocupe su título, y no más).</p>
+<p>Observa que en el último <strong>EditText</strong> se ha utilizado <strong>layout_height=0dp;</strong> esto no significa que tenga altura cero, sino que pretendemos que la vista se extienda todo el espacio sobrante que han dejado el resto de componentes. En la pestaña <strong>Design</strong> se puede ver el resultado del layout que se acaba de codificar:</p>
+<p><a href="layoutActivity.png" rel="lightbox"><img src="layoutActivity.png" alt="Imagen resultado Layout" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="317"></a></p>
+<h2>RelativeLayout</h2>
+<p>Este contenedor agrupa a las vistas en una posición relativa al layout contenedor o entre las distintas vistas que agrupa.</p>
+<h2>TableLayout</h2>
+<p>Contenedor tipo tabla que utiliza filas y columnas para alinear los elementos en la vista. Las columnas y filas pueden tener un tamaño particular o ampliarse, y las celdas pueden extenderse más allá de sus límites.</p>
+<h2>GridLayout</h2>
+<p>Muy parecido al TableLayout, en el que el diseño se basa en una rejilla de celdas de diferentes tamaños.</p>
+<h2>ConstraintLayout</h2>
+<p>El layout más utilizado actualmente. Antes de la aparición del <strong>ConstraintLayout</strong>, construir una interfaz gráfica compleja requería de la composición jerárquica de varios, a veces demasiados, layouts unos dentro de otros para obtener el orden y la colocación precisos de las ventanas en su interior. El problema de ese tipo de anidamiento es que llega un punto en el que la eficiencia del layout comienza a degradarse, la presentación de la interfaz gráfica se ralentiza y el consumo de memoria se dispara. Por ello, los desarrolladores de Android crearon el ConstraintLayout. Gracias a la versatilidad de este contenedor, raramente será necesario encadenarlo a otro contenedor, pues permite ordenar los componentes de forma eficiente y elástica. Tras su aparición, los demás layouts han quedado obsoletos. Además, este layout permite el diseño de forma gráfica mediante cajitas con enlaces laterales que pueden asociarse con el contenedor padre o entre las vistas. Ese diseño se traduce en código con los atributos de control de posición:</p>
+<ul>
+<li><strong>layout_constraintLeft_toLeftOf</strong> o <strong>toRightOf</strong>: la vista se alineará a la izquierda de la parte izquierda o derecha del componente que se indique. El elemento al que hace referencia se indicará mediante el id o con la palabra claveparent, que indica que la posición es relativa al contenedor padre.</li>
+<li><strong>layout_constraintRight_toLeftOf</strong> o <strong>toRightOf</strong>: la vista se alineará a la derecha de la parte izquierda o derecha del componente que se indique.</li>
+<li><strong>layout_constraintTop_toTopOf</strong> o <strong>toBottomOf</strong>: la vista se alineará en lo alto de la parte superior o inferior del componente que se indique.</li>
+<li><strong>layout_constraintBottom_toTopOf</strong> o <strong>toBottomOf</strong>: la vista se alineará debajo de la parte superior o inferior del componente que se indique.</li>
+</ul>
+<p>Tiene otras opciones para establecer márgenes, centrado, offsets, etcétera. Lo mejor para comprobar todas las posibilidades de este layout es jugar con la herramienta <strong>Design</strong>, cambiando las configuraciones de las vistas y observando cómo cada parámetro afecta al diseño final de la interfaz gráfica.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id6">
+<div class="iDevice emphasis0" >
+<div id="ta6_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Dentro de cada contenedor layout podremos colocar nuestras vistas, que son los componentes visuales que el usuario puede ver y con los que puede interactuar. Ya hemos visto algunos, pero hagamos una lista de los más usados:</p>
+<div class="exe-fx exe-accordion">
+<h2>TextView</h2>
+<p>Representa un texto estático para el usuario, aunque podemos cambiar su texto desde código. Puede servirnos para presentar información al usuario, como mensajes o etiquetas de otros componentes.</p>
+<h2>EditText</h2>
+<p>Representa un campo de texto que el usuario puede rellenar. Gracias a sus atributos, podemos crear un filtro de entrada, de modo que si, por ejemplo, solo queremos números, el campo solo acepte números, etcétera.</p>
+<h2>Button</h2>
+<p>Un componente que el usuario puede presionar para obtener alguna función. Estableceremos un listener o el atributo onClick para definir las acciones que efectuar cuando sea pulsado.</p>
+<h2>ImageButton</h2>
+<p>Un botón exactamente igual al anterior, con la diferencia de que podemos añadirle un icono para un mejor aspecto visual de su función.</p>
+<h2>ImageView</h2>
+<p>Representa una imagen estática, aunque podemos cambiarla dinámicamente mediante el código. Puede servirnos para mejorar el aspecto de la interfaz gráfica o para presentar una imagen real relacionada con datos.</p>
+<h2>RecyclerView</h2>
+<p>Una lista de objetos cuya presentación podemos adaptar a nuestras necesidades mediante un adapter. Este tipo de listas son muy eficientes, pues solo retienen en memoria los objetos que serán mostrados.</p>
+<h2>Switch</h2>
+<p>Representa un interruptor, puede estar en on o en off. Puede servirnos para presentar al usuario dos opciones posibles de las que debe escoger una.</p>
+<h2>Checkbox</h2>
+<p>Representa una opción seleccionable. Sería parecido al anterior, mostrando si una opción está activa o no.</p>
+<h2>RadioButton + RadioGroup</h2>
+<p>Similar al anterior, con la diferencia de que estas opciones son excluyentes: si eliges una opción, las demás se desactivarán.</p>
+</div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="layoutBasico.png" rel="lightbox"><img src="layoutBasico.png" alt="Layout por defecto" style="float: right; margin: 10px;" width="320" height="231"></a>Como observamos en el código autogenerado, nuestra actividad <strong>MainActivity</strong> hereda de <strong>AppCompatActivity</strong> de modo que podamos aprovechar las funcionalidades básicas sin<br>más código. La función <strong>onCreate</strong> debe ser sobreescrita para especificar el layout que deseamos para nuestra ventana. Pulsar la tecla <strong>Ctrl</strong> mientras hacemos clic sobre <strong>activity_main</strong>, navegaremos al editor de <strong>layouts</strong>, que nos mostrará el diseños de la ventana MainActivity (ver imagen).</p>
+<p>Los layouts se definen con código XML, pero no debemos alarmarnos antes de tiempo, pues no tendremos que recordar todos y cada uno de los parámetros. Para facilitarnos el trabajo, el <strong>editor de layouts</strong> dispone de capacidades gráficas con las que podremos añadir, eliminar y distribuir los componentes de nuestra interfaz gráfica sin necesidad de escribir código XML. Sí es cierto que, en ocasiones, nos será más sencillo modificar directamente el código, por eso es conveniente ir comprendiendo cada etiqueta XML.</p>
+<p>Por ejemplo, la segunda línea de la imagen indica que el layout será un <strong>ConstraintLayout</strong>, que es uno de los más utilizados actualmente. Dentro del layout encontramos un <strong>TextView</strong>, que no es más que un texto que el usuario verá pero no podrá editar.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Ejemplo</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Haz clic tras <strong>TextView</strong>, pulsa <strong>Intro</strong> y añade la línea: <strong>android:id="@+id/tvSaludo"</strong>. Se ha establecido un indicador para el componente de modo que se pueda acceder a él desde el código. Ahora observa que en la esquina superior derecha del editor existen tres opciones:</p>
+<ul>
+<li><strong>Code</strong>, muestra el código XML del layout;</li>
+<li><strong>Split,</strong>&nbsp;muestra tanto el código como el diseño visual;&nbsp;</li>
+<li><strong>Design, </strong>muestra únicamente el diseño gráfico de la ventana.</li>
+</ul>
+<p>Selecciona <strong>Design</strong>. Aparecerá un mockup de cómo se verá la actividad. En el lateral izquierdo aparece un listado de componentes gráficos, que se puede arrastrar hasta la ventana de diseño, para añadirlos al layout.</p>
+<p>En el lateral derecho se encuentran los atributos del componente actualmente seleccionado.</p>
+<p>Añade un componente <strong>Button</strong> al layout: para disponerlo en un <strong>ConstraintLayout</strong>, tendremos que hacer clic en cada uno de los <strong>circulitos</strong> y arrastrar hasta los bordes de la ventana para dejarlo anclado. La bolita superior podemos anclarla a la parte baja del <strong>TextView</strong> que ya teníamos:</p>
+<p><img src="layoutEjemplo.png" alt="Ejemplo Layout" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="505"></p>
+<p>Es importante establecer un <strong>id</strong> en el botón para poder acceder a él desde el código:</p>
+<p style="text-align: center;"><strong>android:id="@+id/tvSaludo"</strong></p>
+<p>El acceso al elemento del layout se haría indicando el id anterior en el <strong>MainActivity</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        <strong>val btnCambiarSaludo: Button? = findViewById(R.id.btnCambiarSaludo)
+        val tvSaludo: TextView? = findViewById(R.id.tvSaludo)
+        btnCambiarSaludo?.setOnClickListener {
+            tvSaludo?.text="Hola a tod@s"
+        }</strong>
+    }
+}</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_info" id="id9">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Enlaces</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_837_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="https://developer.android.com/guide/components/activities/intro-activities?hl=es-419" target="_blank" rel="noopener">Introducción a las Actividades</a></p>
+<p><a href="https://developer.android.com/guide/topics/ui?hl=es-419" target="_blank" rel="noopener">Interfaz de usuario</a></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="33_interfaces_de_usuario.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="332_context.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

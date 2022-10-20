@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.3. Intent | UA03. Programando... </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Programando...</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Programando...</a></li>
+   <li><a href="31_herramientas.html" class="no-ch">3.1. Herramientas</a></li>
+   <li><a href="32_fases_de_construccin.html" class="no-ch">3.2. Fases de construcción</a></li>
+   <li class="current-page-parent"><a href="33_interfaces_de_usuario.html" class="current-page-parent daddy">3.3. Interfaces de usuario</a>
+   <ul>
+      <li><a href="331_activity_y_layout.html" class="no-ch">3.3.1. Activity y Layout</a></li>
+      <li><a href="332_context.html" class="no-ch">3.3.2. Context</a></li>
+      <li id="active"><a href="333_intent.html" class="active no-ch">3.3.3. Intent</a></li>
+      <li><a href="334_tareas.html" class="no-ch">3.3.4. Tareas</a></li>
+      <li><a href="335_fragment.html" class="no-ch">3.3.5. Fragment</a></li>
+   </ul>
+   </li>
+   <li><a href="34_otras_ventanas.html" class="no-ch">3.4. Otras ventanas</a></li>
+   <li><a href="35_imgenes.html" class="daddy">3.5. Imágenes</a>
+   <ul class="other-section">
+      <li><a href="351_drawables.html" class="no-ch">3.5.1. Drawables</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicio_1.html" class="no-ch">Ejercicio 1</a></li>
+   <li><a href="ejercicio_2.html" class="no-ch">Ejercicio 2</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="332_context.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="334_tareas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3.3. Intent</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div id="ta10_838_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Lo más probable, sobre todo si no utilizamos <strong>fragments</strong>, es que nuestra app esté compuesta de más de una activity. Para navegar de una a otra, podemos utilizar un objeto <strong>intent</strong>. Veámoslo con un ejemplo: vamos a crear una nueva actividad en nuestra app. En el menú de Android Studio, seleccionamos <strong>File &gt; New &gt; Activity &gt; Empty Activity</strong> y aceptamos las opciones por defecto de la nueva actividad. El wizard añadirá no solo una clase <strong>MainActivity2</strong>, sino también su <strong>layout</strong> y la línea en el <strong>manifiesto</strong>. Para navegar de nuestra actividad a la nueva, modificaremos el código de este modo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_main)
+            findViewById<button>(R.id.btnCambiarSaludo).setOnClickListener {
+                val intent = Intent(this, OtraActivity::class.java)
+                startActivity(intent)
+            }
+        }</button></code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Creamos un objeto <strong>intent</strong>:</p>
+<ol>
+<li>el primer parámetro es el <strong>contexto</strong> del paquete, pero valdrá con el contexto de nuestra actividad.</li>
+<li>El segundo parámetro es la clase de la <strong>activity</strong> a la que deseamos navegar.</li>
+</ol>
+<p>Una vez creado el intent, llamaremos a la función de la <strong>startActivity</strong> con él y la nueva actividad se mostrará sobre la actual. Decimos<strong> "sobre"</strong> porque el sistema Android guardará una pila de vistas una sobre otra según vayamos abriéndolas, lo que se conoce como <strong>back stack</strong>. Cuando cerremos (destruyamos) una ventana, presionando <strong>Atrás</strong>, por ejemplo, se mostrará la anterior, la que está debajo en la pila.</p>
+<p><a href="backStack.png" rel="lightbox"><img src="backStack.png" alt="Back Stack" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="175"></a></p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id12">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Paso de información entre Activities</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_840_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Cuando llamamos a otra activity, tanto dentro como fuera de nuestra app, podemos leer la información que devuelve. Para ello, en la Actividad principal debe existir el siguiente código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>btnLanzarSegundaActividad.setOnClickListener {
+    val intent = Intent(this, OtraActivity::class.java)   // Declaramos un Intent para cambiar a la "Otra" actividad
+    findViewById<button>(R.id.btnCambiarSaludo).setOnClickListener { // Asociamos el cambio de pantalla a un botón
+        Log.d("MainActivity","voy") // Mostramos un Log para ver que se realiza el cambio
+        getResult.launch(intent)    // Se lanza el intent para cambiar de pantalla
+    }
+}</button></code></pre>
+</div>
+</div>
+<p>La nueva actividad se mostrará, el usuario utilizará sus funciones y, cuando termine, la actividad se cerrará y devolverá los datos. En la primera activity, tendríamos un código para recibir esos datos, algo como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code> val getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult -&gt;
+        Log.d("MainActivity", "vengo")              // Se muestra en Log la vuelta
+        if (result.resultCode == Activity.RESULT_OK) {      // Si ha ido bien...
+            Log.d("MainActivity", "OK")             // Se muestra el mensaje OK
+            val data: Intent? = result.data                 // Se recoge el resultado del Intent devuelto
+
+            if (data != null) {                             // Si el dato no es nulo...
+                Log.d("MainActivity", data.toString())  // Se muestran los datos devueltos
+                // Se muestra en la etiqueta el dato devuelto
+                findViewById<textview>(R.id.tvSaludo).text = data.getStringExtra("datos")
+            }
+        }
+    }</textview></code></pre>
+</div>
+</div>
+<p>Sobrescribimos el método de la activity <strong>getResult</strong> para obtener los datos devueltos por la <strong>activity</strong>. Este método nos informa sobre el resultado mediante sus dos parámetros:</p>
+<ul>
+<li><strong>resultCode:</strong> normalmente será una de los valores <strong>RESULT_OK</strong> (para indicar que la actividad terminó adecuadamente y pueden utilizarse los valores devueltos) y <strong>RESULT_CANCELED</strong> (si el usuario canceló el proceso y debemos tomar las medidas adecuadas ante el rechazo del proceso).</li>
+<li><strong>data:</strong> un objeto intent con los datos requeridos por la activity que lanzamos. Podremos obtener los datos mediante diferentes métodos en función al tipo de datos, como <strong>getStringExtra</strong>, <strong>getIntExtra</strong>, <strong>getBooleanExtra</strong>, <strong>getByteExtra</strong>, etcétera.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_technology" id="id13">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_technology.png)"><h1 class="iDeviceTitle">Ejercicio</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_841_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Crea un proyecto con <strong>dos Actividades vacías</strong>.</p>
+<p>La primera Activity y su layout contendrán el código mostrado anteriormente para que, a través del botón, se muestre la segunda.</p>
+<p>La segunda tendrá en su <strong>Activity</strong> y <strong>layout</strong> respectivamente, el siguiente código:</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;androidx.constraintlayout.widget.constraintlayout   <br>xmlns:android="http://schemas.android.com/apk/res/android" <br>xmlns:app="http://schemas.android.com/apk/res-auto" <br>xmlns:tools="http://schemas.android.com/tools" <br>android:layout_width="match_parent" <br>android:layout_height="match_parent" <br>tools:context=".OtraActivity"&gt;
+    &lt;button android:id="@+id/btnVolver" <br>&nbsp;       android:layout_width="wrap_content" <br>&nbsp;       android:layout_height="wrap_content" <br>        android:text="Volver" <br>        app:layout_constraintbottom_tobottomof="parent" <br>        app:layout_constraintend_toendof="parent" <br>        app:layout_constraintstart_tostartof="parent" <br>        app:layout_constrainttop_tobottomof="@+id/lblMensaje"&gt;
+    &lt;textview android:id="@+id/lblMensaje" <br>        android:layout_width="wrap_content" <br>        android:layout_height="wrap_content" <br>        android:text="Esta es la segunda actividad" <br>        app:layout_constraintbottom_tobottomof="parent" <br>        app:layout_constraintend_toendof="parent" <br>        app:layout_constraintstart_tostartof="parent" <br>        app:layout_constrainttop_totopof="parent"&gt;
+    &lt;/textview&gt;
+    &lt;/button&gt;
+&lt;/androidx.constraintlayout.widget.constraintlayout&gt;</code></pre>
+</div>
+</div>
+<p><br><br></p>
+</div>
+<div class="exe-col exe-col-2">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_second.*
+class OtraActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_otra)
+        btnVolver.setOnClickListener {
+            onClick(it)
+        }
+    }
+    fun onClick(view: android.view.View) {
+        val intent = Intent()
+        val datos = "Estos son datos generados en ${OtraActivity::class.simpleName}"
+        intent.putExtra("datos", datos)
+        setResult(RESULT_OK, intent)
+        finish()
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Observa el código del método <strong>onClick</strong>. Este método crea un <strong>intent</strong> y, mediante la función <strong>putExtra</strong>, introduce en él los datos que va a devolver. La llamada a <strong>setResult</strong> devolverá el <strong>intent</strong>, pasando además como resultado <strong>RESULT_OK</strong> para indicar que el proceso se llevó a cabo satisfactoriamente. No queda más que terminar el proceso llamando a <strong>finish</strong>, que cerrará la actividad y volverá a la anterior.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="332_context.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="334_tareas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
