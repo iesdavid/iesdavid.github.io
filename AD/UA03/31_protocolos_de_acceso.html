@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1. Protocolos de acceso | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Conectores</a></li>
+   <li id="active"><a href="31_protocolos_de_acceso.html" class="active daddy">3.1. Protocolos de acceso</a>
+   <ul>
+      <li><a href="311_arquitectura_jdbc.html" class="no-ch">3.1.1. Arquitectura JDBC</a></li>
+      <li><a href="312_drivers.html" class="no-ch">3.1.2. Drivers</a></li>
+      <li><a href="313_conexin.html" class="no-ch">3.1.3. Conexión</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="311_arquitectura_jdbc.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1. Protocolos de acceso</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id2">
+<div class="iDevice emphasis0" >
+<div id="ta2_862_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="JDBC_driver.png" alt="Esquema conexión JDBC" style="float: right; margin: 10px;" width="320" height="452">Hace años, cuando <strong>Sun Microsystems</strong> desarrolló <strong>Java</strong>, uno de los aspectos que tuvieron que pensar fue la manera de enfocar el acceso a datos, todo lo concerniente a los protocolos de acceso a bases de datos. En este sentido, Sun buscó los aspectos de éxito de un API abierto: <a href="https://es.wikipedia.org/wiki/Open_Database_Connectivity" target="_blank" rel="noopener"><strong>ODBC (Open Database Connectivity)</strong></a>.</p>
+<p>ODBC había sido desarrollado por Microsoft con la idea de tener un estándar para el acceso a bases de datos en entorno Windows.</p>
+<p>Aunque la industria aceptó ODBC como medio principal para acceso a bases de datos en Windows, la verdad es que no se introduce bien en el mundo Java, debido a la complejidad que presenta ODBC, y que entre otras cosas ha impedido su transición fuera del entorno Windows.</p>
+<p>La idea en el desarrollo de <strong>JDBC</strong> era intentar ser tan sencillo como fuera posible, pero proporcionando a los desarrolladores la máxima flexibilidad.</p>
+<p>A través de esta API, se establece la conexión a la BBDD, que nos permitirá realizar consultas, actualizar los datos y recibir resultados de las consultas. Permite realizar operaciones con lenguaje SQL independientemente de la instancia de la base de datos utilizada.</p>
+<p>La API de JDBC soporta la comunicación entre la aplicación Java y el <strong>driver</strong> que realizará la conexión con la base de datos, es decir, actúa como intermediaria. JDBC es la API común con la que interactúa el código de nuestra aplicación. Debajo está el controlador compatible con JDBC para la base de datos que vamos a utilizar.</p>
+<p>Según qué base de datos queramos utilizar, tendremos que usar el driver correspondiente.</p>
+<p>Como ventajas, podemos destacar que es muy fácil de utilizar y permite conectarse a cualquier base de datos. Por otro lado, como desventajas podemos destacar que su rendimiento puede verse degradado y el driver se tiene que instalar en el cliente.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="311_arquitectura_jdbc.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

@@ -43,6 +43,11 @@
    </ul>
    </li>
    <li><a href="34_otras_ventanas.html" class="no-ch">3.4. Otras ventanas</a></li>
+   <li><a href="35_imgenes.html" class="daddy">3.5. Imágenes</a>
+   <ul class="other-section">
+      <li><a href="351_drawables.html" class="no-ch">3.5.1. Drawables</a></li>
+   </ul>
+   </li>
    <li><a href="ejercicio_1.html" class="no-ch">Ejercicio 1</a></li>
    <li><a href="ejercicio_2.html" class="no-ch">Ejercicio 2</a></li>
 </ul>
@@ -83,58 +88,63 @@
 <p>Vemos el <strong>CoordinatorLayout</strong> y la barra de herramientas <strong>Toolbar</strong>. Más abajo veremos un include hacia otro layout, que será donde se defina el contenido de la ventana. Mientras presionamos <strong>Ctrl</strong>, hacemos clic sobre <strong>@layout/content_main</strong>. Veremos el código <strong>XML</strong>:</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-markup line-numbers">
 <div>
 <pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+&lt;androidx.constraintlayout.widget.constraintlayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
     app:layout_behavior="@string/appbar_scrolling_view_behavior"&gt;
 
-    &lt;fragment
+    &lt;fragment 
         android:id="@+id/nav_host_fragment_content_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
+        android:layout_width="0dp" 
         android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph" /&gt;
-&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</code></pre>
+        app:defaultnavhost="true"
+        app:layout_constraintbottom_tobottomof="parent"
+        app:layout_constraintend_toendof="parent"
+        app:layout_constraintstart_tostartof="parent"
+        app:layout_constrainttop_totopof="parent"
+        app:navgraph="@navigation/nav_graph"&gt;
+&lt;/fragment&gt;
+&lt;/androidx.constraintlayout.widget.constraintlayout&gt;</code></pre>
 </div>
 </div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La etiqueta <strong>fragment</strong> servirá como contenedor de los fragments que queremos mostrar. El atributo <strong>name</strong> referencia a la clase <strong>NavHostFragment</strong>, que tendrá la funcionalidad de permitir la navegación entre fragments. Cada <strong>NavHostFragment</strong> tiene un <strong>NavController</strong> que define los posibles caminos de navegación y que se define mediante el gráfico de navegación. En el código podemos ver que el gráfico de navegación se define con el atributo<strong> app:navGraph</strong> y que, en este caso, su valor es <strong>@navigation/nav_graph</strong>. Pulsemos <strong>Ctrl</strong> y clic sobre <strong>nav_graph</strong> para ver el gráfico de navegación:</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-markup line-numbers">
 <div>
 <pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment"&gt;
+&lt;navigation 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:id="@+id/nav_graph" 
+    app:startdestination="@id/FirstFragment"&gt;
 
-    &lt;fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.fragmentsapp.FirstFragment"
-        android:label="@string/first_fragment_label"
+    &lt;fragment 
+        android:id="@+id/FirstFragment" 
+        android:name="com.example.fragmentsapp.FirstFragment" 
+        android:label="@string/first_fragment_label" 
         tools:layout="@layout/fragment_first"&gt;
 
-        &lt;action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" /&gt;
+        &lt;action 
+            android:id="@+id/action_FirstFragment_to_SecondFragment" 
+            app:destination="@id/SecondFragment"&gt;
+        &lt;/action&gt;
     &lt;/fragment&gt;
-    &lt;fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.fragmentsapp.SecondFragment"
-        android:label="@string/second_fragment_label"
+    &lt;fragment 
+        android:id="@+id/SecondFragment" 
+        android:name="com.example.fragmentsapp.SecondFragment" 
+        android:label="@string/second_fragment_label" 
         tools:layout="@layout/fragment_second"&gt;
-
-        &lt;action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" /&gt;
+  
+        &lt;action 
+             android:id="@+id/action_SecondFragment_to_FirstFragment" 
+             app:destination="@id/FirstFragment"&gt;
+        &lt;/action&gt;
     &lt;/fragment&gt;
 &lt;/navigation&gt;</code></pre>
 </div>
 </div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Observa cómo el grafico tiene un elemento raíz <strong><navigation></navigation></strong> que define su <strong>id</strong> y establece el fragment que será visible al inicio con <strong>app:startDestination</strong>, que en este caso es el <strong>FirstFragment</strong>. Debajo veremos una lista de fragmentos definidos con la etiqueta <strong><fragment></fragment></strong> con varias propiedades, como la clase definida con <strong>android:name</strong> y el layout con <strong>tools:layout</strong>. Una etiqueta hija <strong><action></action></strong> define la acción de navegación de una etiqueta a otra. Igual que con los layouts, podemos ver una representación gráfica de la navegación entre fragments, pues tenemos las opciones en la esquina superior derecha: <strong>Code</strong>, <strong>Split</strong> y <strong>Design</strong> que ya conocemos de los puntos anteriores.</p>
-<p>Veamos ahora el código del primer fragmento, haciendo <strong>Ctrl</strong> y clic sobre <strong>FirstFragment</strong>:</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-markup line-numbers">
+<p>Veamos ahora el código del primer fragmento, haciendo <strong>Ctrl</strong> y clic sobre <strong>FirstFragment</strong>:</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java line-numbers">
 <div>
 <pre><code>package com.example.fragmentsapp
 
@@ -176,7 +186,7 @@ class FirstFragment : Fragment() {
 }</code></pre>
 </div>
 </div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Vemos que <strong>FirstFragment</strong> hereda de <strong>Fragment</strong> y sobrescribe <strong>onCreateView</strong> y <strong>onViewCreated</strong>. En la primera especifica el layout que diseña su contenido; en la segunda, establece un <strong>OnClickListener</strong> para el botón <strong>button_first</strong>. Cuando se pulse sobre el botón, se ejecutará el código <strong>findNavController().navigate(action)</strong>.</p>
-<p>El <strong>NavController</strong> conoce el gráfico de navegación, y sabe que esa acción requiere navegar hacia el fragment <strong>SecondFragment</strong>. El segundo fragment es igual de sencillo: simplemente, hace el recorrido contrario.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-markup line-numbers">
+<p>El <strong>NavController</strong> conoce el gráfico de navegación, y sabe que esa acción requiere navegar hacia el fragment <strong>SecondFragment</strong>. El segundo fragment es igual de sencillo: simplemente, hace el recorrido contrario.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java line-numbers">
 <div>
 <pre><code>    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -217,6 +227,83 @@ class FirstFragment : Fragment() {
 <p>Contiene tres funciones distintas que se irán llamado de manera secuencial una vez los procesos van terminando. El primero será&nbsp;<strong>onDestroyView()</strong> que se llamará cuando la vista vaya a ser destruida, al terminar pasará por&nbsp;<strong>onDestroy()&nbsp;</strong>que pondrá fin a la vida del fragment, terminando por&nbsp;<strong>onDetach()</strong>, que hará lo contrario a la función&nbsp;<strong>onAttach()</strong> que vimos al principio, básicamente desliga la activity con el&nbsp;fragment.</p>
 </div>
 <p><a href="ciclo-de-vida-fragment.png" rel="lightbox"><img src="ciclo-de-vida-fragment.png" alt="Ciclo de vida de los fragments" title="Ciclo de vida de los Fragments" style="margin: 10px auto; display: block;" width="240" height="641"></a></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id26">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Comunicación entre Activity y Fragment</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_117_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Hay veces en que necesitamos que nuestra&nbsp;activity realice algo, ya sea para controlar y centralizar la lógica o porque hay distintas funciones que los fragments no pueden hacer. Por ello debemos entender que la forma más sencilla que tenemos de hacer esto es a través de los&nbsp;<strong>listeners</strong>.</p>
+<p>Un&nbsp;<strong>listener&nbsp;</strong>no es más que una función que se llama en un sitio, pero avisa a otro de que ha sido llamado. Es decir, el&nbsp;listener hará de comunicador entre&nbsp;<strong>activity</strong> y&nbsp;<strong>fragment</strong> (aunque se puede utilizar en muchísimos más casos).</p>
+<p>Para ello lo primero que hay que hacer es crear una <strong>Clase Interface</strong> a través de <strong>new&gt;Kotlin File Class</strong> y nos saldrá un diálogo para configurar nuestro fichero.</p>
+<p>La interfaz fija un contrato entre quien los usa. Si añadimos la interfaz al activity, todos los métodos que estén en la interfaz deberán añadirse a dicho&nbsp;activity.</p>
+<p>En la interfaz solo se define la función con sus parámetros de entrada o salida si tuvieran, pero no la lógica, pues esta se tiene que implementar donde implementemos la interfaz (la activity).</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>interface OnFragmentActionsListener {
+    fun onClickFragmentButton()
+}</code></pre>
+</div>
+</div>
+<p>Hemos añadido una función llamada&nbsp;<strong>onClickFragmentButton()</strong> que no recibe parámetros ni devuelve nada. Ahora implementaremos esta interfaz en la clase&nbsp;<strong>MainActivity</strong>. Para ello lo añadiremos en la primera línea, quedando nuestra&nbsp;activity así:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>class MainActivity : AppCompatActivity(), OnFragmentActionsListener {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+
+}</code></pre>
+</div>
+</div>
+<p>Este código dará un error ya que no hemos añadido los métodos de la interface al MainActivity, para ello, iremos al menú superior&nbsp;<strong>Code&gt;Implement methods&nbsp;</strong>y nos saldrá un diálogo con todos los&nbsp; métodos que debemos implementar.</p>
+<p>Dentro del método insertado, se creará la lógica de funcionamiento de dicho método.</p>
+<p>Pasamos ahora a definir la comunicación en el Fragment. Lo primero que haremos será añadir nuestro <strong>listener</strong> al&nbsp;fragment, para ello empezaremos declarando una variable&nbsp;<strong>listener</strong>, que sea del mismo tipo que la interfaz.</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>private var listener: OnFragmentActionsListener? = null</code></pre>
+</div>
+</div>
+<p>Esta variable la pondremos al inicio de la clase, y podrá ser&nbsp;<strong>null</strong>, así nos obligamos a comprobar su contenido antes de intentar ejecutar cualquier acción.</p>
+<p>Luego para inicializarla usaremos uno de los métodos del ciclo de vida, la función&nbsp;<strong>onAttach().</strong></p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>override fun onAttach(context: Context) {
+    super.onAttach(context)
+    if (context is OnFragmentActionsListener) {
+        listener = context
+    }
+}</code></pre>
+</div>
+</div>
+<p>La primera línea llama a la función&nbsp;<strong>super()</strong> porque se desea añadir funcionalidad al método, no anular lo que haría normalmente.</p>
+<p>Luego encontramos un&nbsp;<strong>if()</strong>, que comprobará si el contexto que llega a la función&nbsp;<strong>onAttach()</strong>, tiene implementada la interfaz que hemos creado. En este caso el contexto será de&nbsp;<strong>MainActivity</strong>, pues es esta clase la que crea el&nbsp;<strong>fragment</strong>.&nbsp;Para finalizar igualamos el <strong>listener</strong> que hemos declarado en la parte superior de la clase al contexto.</p>
+<p>El último paso será que haremos será desconectar el fragment de la&nbsp;activity cuando vaya a morir. Usaremos otro método del ciclo de vida, <strong>onDetach()</strong>, volviéndolo nulo.</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>override fun onDetach() {
+    super.onDetach()
+    listener = null
+}</code></pre>
+</div>
+</div>
+<p>Para llamar al <strong>listener</strong>, lo habitual es crear un&nbsp;<strong>onClickListener()</strong> para que cuando un botón del&nbsp;fragment se ejecute lo llame. Asignaremos el&nbsp;<strong>onClick</strong> en el método&nbsp;<strong>onViewCreated</strong> que como verás también forma parte del ciclo de vida.</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+    botonPulsado.setOnClickListener { listener?.onClickFragmentButton() }
+}</code></pre>
+</div>
+</div>
+<p>De esta manera, hemos hecho que al hacer clic en un botón, se llame a la función&nbsp;<strong>onClickFragmentButton()</strong> de la interfaz, que hará que nuestra&nbsp;<strong>activity</strong> ejecute la lógica del método asociado.</p></div></div></section></div>
 </div>
 </div>
 </div>

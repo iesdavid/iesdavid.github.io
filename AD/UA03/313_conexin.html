@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1.3. Conexión | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Conectores</a></li>
+   <li class="current-page-parent"><a href="31_protocolos_de_acceso.html" class="current-page-parent daddy">3.1. Protocolos de acceso</a>
+   <ul>
+      <li><a href="311_arquitectura_jdbc.html" class="no-ch">3.1.1. Arquitectura JDBC</a></li>
+      <li><a href="312_drivers.html" class="no-ch">3.1.2. Drivers</a></li>
+      <li id="active"><a href="313_conexin.html" class="active no-ch">3.1.3. Conexión</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="312_drivers.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1.3. Conexión</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id5">
+<div class="iDevice emphasis0" >
+<div id="ta5_865_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para acceder a una base de datos y así poder operar con ella, lo primero que hay que hacer es conectarse a dicha base de datos.</p>
+<p>En Java, para establecer una conexión con una base de datos podemos utilizar el método getConnection() de la clase DriverManager. Este método recibe como parámetro la URL de JDBC que identifica a la base de datos con la que queremos realizar la conexión.</p>
+<p>La ejecución de este método devuelve un objeto Connection que representa la conexión con la base de datos.</p>
+<p>Cuando se presenta con una URL específica, DriverManager itera sobre la colección de drivers registrados hasta que uno de ellos reconoce la URL especificada. Si no se encuentra ningún conector adecuado, se lanza una SQLException</p>
+<p>Veamos un ejemplo para conectarnos a una base de datos MySQL:</p>
+<p><img src="conexion.png" alt="Ejemplo de conexión a una base de datos" style="display: block; margin-left: auto; margin-right: auto;" width="521" height="396"></p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_technology" id="id6">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_technology.png)"><h1 class="iDeviceTitle">Ejercicio</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_866_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Realiza las siguientes operaciones para la creación de la base de datos a la que nos conectaremos:</p>
+<ol>
+<li>Conéctate al servidor del <strong>ordenador del profesor</strong> o instalar <strong>XAMPP</strong> en tu equipo. Usa <strong>phpmyadmin</strong> para la gestión de la base de datos.</li>
+<li>Si aún no tienes un usuario en la base de datos, accede con <strong>root</strong> y crea uno con tu <strong>nick</strong> del correo del instituto. Deberás indicar que se cree una base de datos con el <strong>mismo nombre</strong> y todos los <strong>privilegios</strong>.</li>
+<li>Sal del usuario <strong>root</strong> y entra con el <strong>nuevo usuario</strong>.</li>
+<li><strong>Comprueba</strong> que todo es correcto.</li>
+</ol>
+<p>Realiza ahora los siguientes pasos para la conexión:</p>
+<ol>
+<li>Descarga e instala el Driver JDBC para la base de datos MySQL. En nuestro caso, <strong>Conector/J</strong>.</li>
+<li>En <strong>Eclipse</strong>, realiza los pasos indicados <a href="https://www.ediciones-eni.com/open/mediabook.aspx?idR=32fe21cb702e0eaa2fb41082ad000299" target="_blank" rel="noopener"><strong>aquí</strong></a>.</li>
+</ol></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_think" id="id7">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_think.png)"><h1 class="iDeviceTitle">Instalar el conector</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_867_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para que podamos ejecutar el código anterior, necesitamos instalar el conector de la base de datos.</p>
+<p>Entre nuestra aplicación Java y el Sistema Gestor de Base de Datos (SGBD), se intercala el conector <strong>JDBC</strong>. Este conector es el que implementa la funcionalidad de las clases de acceso a datos y proporciona la comunicación entre el API JDBC y el SGBD.</p>
+<p>La función del conector es traducir los comandos del API JDBC al protocolo nativo del SGBD. Tan sólo consiste en descargar un archivo, descomprimirlo y desde el IDE añadir el fichero<strong> .jar</strong> que constituye el driver que necesitamos. En nuestro caso, nos conectaremos a una base de datos MySql.</p>
+<ol>
+<li>Descarga el conector <a href="https://dev.mysql.com/downloads/connector/j/8.0.html" target="_blank" rel="noopener"><strong>desde aquí</strong></a> e instálalo en tu equipo.</li>
+<li>Abre tu IDE y busca información para incorporar el Driver que se encuentra en <strong>C:\Program Files (x86)\MySQL\Connector J 8.0\</strong></li>
+<li>Realiza la llamada en el código y ejecuta para comprobar.</li>
+</ol></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="312_drivers.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

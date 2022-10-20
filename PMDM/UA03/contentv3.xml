@@ -85,9 +85,9 @@
   <string role="key" value="_name"></string>
   <unicode value="UA03"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="26"></int>
+  <int value="29"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="12"></int>
+  <int value="14"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -3554,58 +3554,63 @@ class OtraActivity : AppCompatActivity() {
 &lt;p&gt;Vemos el &lt;strong&gt;CoordinatorLayout&lt;/strong&gt; y la barra de herramientas &lt;strong&gt;Toolbar&lt;/strong&gt;. Más abajo veremos un include hacia otro layout, que será donde se defina el contenido de la ventana. Mientras presionamos &lt;strong&gt;Ctrl&lt;/strong&gt;, hacemos clic sobre &lt;strong&gt;@layout/content_main&lt;/strong&gt;. Veremos el código &lt;strong&gt;XML&lt;/strong&gt;:&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-markup line-numbers&quot;&gt;
 &lt;div&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
-&amp;lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
-    android:layout_width=&quot;match_parent&quot;
-    android:layout_height=&quot;match_parent&quot;
+&amp;lt;androidx.constraintlayout.widget.constraintlayout 
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; 
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot; 
+    android:layout_width=&quot;match_parent&quot; 
+    android:layout_height=&quot;match_parent&quot; 
     app:layout_behavior=&quot;@string/appbar_scrolling_view_behavior&quot;&amp;gt;
 
-    &amp;lt;fragment
+    &amp;lt;fragment 
         android:id=&quot;@+id/nav_host_fragment_content_main&quot;
         android:name=&quot;androidx.navigation.fragment.NavHostFragment&quot;
-        android:layout_width=&quot;0dp&quot;
+        android:layout_width=&quot;0dp&quot; 
         android:layout_height=&quot;0dp&quot;
-        app:defaultNavHost=&quot;true&quot;
-        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
-        app:layout_constraintEnd_toEndOf=&quot;parent&quot;
-        app:layout_constraintStart_toStartOf=&quot;parent&quot;
-        app:layout_constraintTop_toTopOf=&quot;parent&quot;
-        app:navGraph=&quot;@navigation/nav_graph&quot; /&amp;gt;
-&amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+        app:defaultnavhost=&quot;true&quot;
+        app:layout_constraintbottom_tobottomof=&quot;parent&quot;
+        app:layout_constraintend_toendof=&quot;parent&quot;
+        app:layout_constraintstart_tostartof=&quot;parent&quot;
+        app:layout_constrainttop_totopof=&quot;parent&quot;
+        app:navgraph=&quot;@navigation/nav_graph&quot;&amp;gt;
+&amp;lt;/fragment&amp;gt;
+&amp;lt;/androidx.constraintlayout.widget.constraintlayout&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La etiqueta &lt;strong&gt;fragment&lt;/strong&gt; servirá como contenedor de los fragments que queremos mostrar. El atributo &lt;strong&gt;name&lt;/strong&gt; referencia a la clase &lt;strong&gt;NavHostFragment&lt;/strong&gt;, que tendrá la funcionalidad de permitir la navegación entre fragments. Cada &lt;strong&gt;NavHostFragment&lt;/strong&gt; tiene un &lt;strong&gt;NavController&lt;/strong&gt; que define los posibles caminos de navegación y que se define mediante el gráfico de navegación. En el código podemos ver que el gráfico de navegación se define con el atributo&lt;strong&gt; app:navGraph&lt;/strong&gt; y que, en este caso, su valor es &lt;strong&gt;@navigation/nav_graph&lt;/strong&gt;. Pulsemos &lt;strong&gt;Ctrl&lt;/strong&gt; y clic sobre &lt;strong&gt;nav_graph&lt;/strong&gt; para ver el gráfico de navegación:&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-markup line-numbers&quot;&gt;
 &lt;div&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
-&amp;lt;navigation xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
-    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
-    android:id=&quot;@+id/nav_graph&quot;
-    app:startDestination=&quot;@id/FirstFragment&quot;&amp;gt;
+&amp;lt;navigation 
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; 
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot; 
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot; 
+    android:id=&quot;@+id/nav_graph&quot; 
+    app:startdestination=&quot;@id/FirstFragment&quot;&amp;gt;
 
-    &amp;lt;fragment
-        android:id=&quot;@+id/FirstFragment&quot;
-        android:name=&quot;com.example.fragmentsapp.FirstFragment&quot;
-        android:label=&quot;@string/first_fragment_label&quot;
+    &amp;lt;fragment 
+        android:id=&quot;@+id/FirstFragment&quot; 
+        android:name=&quot;com.example.fragmentsapp.FirstFragment&quot; 
+        android:label=&quot;@string/first_fragment_label&quot; 
         tools:layout=&quot;@layout/fragment_first&quot;&amp;gt;
 
-        &amp;lt;action
-            android:id=&quot;@+id/action_FirstFragment_to_SecondFragment&quot;
-            app:destination=&quot;@id/SecondFragment&quot; /&amp;gt;
+        &amp;lt;action 
+            android:id=&quot;@+id/action_FirstFragment_to_SecondFragment&quot; 
+            app:destination=&quot;@id/SecondFragment&quot;&amp;gt;
+        &amp;lt;/action&amp;gt;
     &amp;lt;/fragment&amp;gt;
-    &amp;lt;fragment
-        android:id=&quot;@+id/SecondFragment&quot;
-        android:name=&quot;com.example.fragmentsapp.SecondFragment&quot;
-        android:label=&quot;@string/second_fragment_label&quot;
+    &amp;lt;fragment 
+        android:id=&quot;@+id/SecondFragment&quot; 
+        android:name=&quot;com.example.fragmentsapp.SecondFragment&quot; 
+        android:label=&quot;@string/second_fragment_label&quot; 
         tools:layout=&quot;@layout/fragment_second&quot;&amp;gt;
-
-        &amp;lt;action
-            android:id=&quot;@+id/action_SecondFragment_to_FirstFragment&quot;
-            app:destination=&quot;@id/FirstFragment&quot; /&amp;gt;
+  
+        &amp;lt;action 
+             android:id=&quot;@+id/action_SecondFragment_to_FirstFragment&quot; 
+             app:destination=&quot;@id/FirstFragment&quot;&amp;gt;
+        &amp;lt;/action&amp;gt;
     &amp;lt;/fragment&amp;gt;
 &amp;lt;/navigation&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Observa cómo el grafico tiene un elemento raíz &lt;strong&gt;&lt;navigation&gt;&lt;/navigation&gt;&lt;/strong&gt; que define su &lt;strong&gt;id&lt;/strong&gt; y establece el fragment que será visible al inicio con &lt;strong&gt;app:startDestination&lt;/strong&gt;, que en este caso es el &lt;strong&gt;FirstFragment&lt;/strong&gt;. Debajo veremos una lista de fragmentos definidos con la etiqueta &lt;strong&gt;&lt;fragment&gt;&lt;/fragment&gt;&lt;/strong&gt; con varias propiedades, como la clase definida con &lt;strong&gt;android:name&lt;/strong&gt; y el layout con &lt;strong&gt;tools:layout&lt;/strong&gt;. Una etiqueta hija &lt;strong&gt;&lt;action&gt;&lt;/action&gt;&lt;/strong&gt; define la acción de navegación de una etiqueta a otra. Igual que con los layouts, podemos ver una representación gráfica de la navegación entre fragments, pues tenemos las opciones en la esquina superior derecha: &lt;strong&gt;Code&lt;/strong&gt;, &lt;strong&gt;Split&lt;/strong&gt; y &lt;strong&gt;Design&lt;/strong&gt; que ya conocemos de los puntos anteriores.&lt;/p&gt;
-&lt;p&gt;Veamos ahora el código del primer fragmento, haciendo &lt;strong&gt;Ctrl&lt;/strong&gt; y clic sobre &lt;strong&gt;FirstFragment&lt;/strong&gt;:&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-markup line-numbers&quot;&gt;
+&lt;p&gt;Veamos ahora el código del primer fragmento, haciendo &lt;strong&gt;Ctrl&lt;/strong&gt; y clic sobre &lt;strong&gt;FirstFragment&lt;/strong&gt;:&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
 &lt;div&gt;
 &lt;pre&gt;&lt;code&gt;package com.example.fragmentsapp
 
@@ -3647,7 +3652,7 @@ class FirstFragment : Fragment() {
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Vemos que &lt;strong&gt;FirstFragment&lt;/strong&gt; hereda de &lt;strong&gt;Fragment&lt;/strong&gt; y sobrescribe &lt;strong&gt;onCreateView&lt;/strong&gt; y &lt;strong&gt;onViewCreated&lt;/strong&gt;. En la primera especifica el layout que diseña su contenido; en la segunda, establece un &lt;strong&gt;OnClickListener&lt;/strong&gt; para el botón &lt;strong&gt;button_first&lt;/strong&gt;. Cuando se pulse sobre el botón, se ejecutará el código &lt;strong&gt;findNavController().navigate(action)&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;El &lt;strong&gt;NavController&lt;/strong&gt; conoce el gráfico de navegación, y sabe que esa acción requiere navegar hacia el fragment &lt;strong&gt;SecondFragment&lt;/strong&gt;. El segundo fragment es igual de sencillo: simplemente, hace el recorrido contrario.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-markup line-numbers&quot;&gt;
+&lt;p&gt;El &lt;strong&gt;NavController&lt;/strong&gt; conoce el gráfico de navegación, y sabe que esa acción requiere navegar hacia el fragment &lt;strong&gt;SecondFragment&lt;/strong&gt;. El segundo fragment es igual de sencillo: simplemente, hace el recorrido contrario.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
 &lt;div&gt;
 &lt;pre&gt;&lt;code&gt;    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -3959,6 +3964,194 @@ class FirstFragment : Fragment() {
               <int value="0"></int>
              </dictionary>
             </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="64">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Comunicación entre Activity y Fragment"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="65">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="117_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="64"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-representation&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Hay veces en que necesitamos que nuestra&amp;nbsp;activity realice algo, ya sea para controlar y centralizar la lógica o porque hay distintas funciones que los fragments no pueden hacer. Por ello debemos entender que la forma más sencilla que tenemos de hacer esto es a través de los&amp;nbsp;&lt;strong&gt;listeners&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Un&amp;nbsp;&lt;strong&gt;listener&amp;nbsp;&lt;/strong&gt;no es más que una función que se llama en un sitio, pero avisa a otro de que ha sido llamado. Es decir, el&amp;nbsp;listener hará de comunicador entre&amp;nbsp;&lt;strong&gt;activity&lt;/strong&gt; y&amp;nbsp;&lt;strong&gt;fragment&lt;/strong&gt; (aunque se puede utilizar en muchísimos más casos).&lt;/p&gt;
+&lt;p&gt;Para ello lo primero que hay que hacer es crear una &lt;strong&gt;Clase Interface&lt;/strong&gt; a través de &lt;strong&gt;new&amp;gt;Kotlin File Class&lt;/strong&gt; y nos saldrá un diálogo para configurar nuestro fichero.&lt;/p&gt;
+&lt;p&gt;La interfaz fija un contrato entre quien los usa. Si añadimos la interfaz al activity, todos los métodos que estén en la interfaz deberán añadirse a dicho&amp;nbsp;activity.&lt;/p&gt;
+&lt;p&gt;En la interfaz solo se define la función con sus parámetros de entrada o salida si tuvieran, pero no la lógica, pues esta se tiene que implementar donde implementemos la interfaz (la activity).&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;interface OnFragmentActionsListener {
+    fun onClickFragmentButton()
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Hemos añadido una función llamada&amp;nbsp;&lt;strong&gt;onClickFragmentButton()&lt;/strong&gt; que no recibe parámetros ni devuelve nada. Ahora implementaremos esta interfaz en la clase&amp;nbsp;&lt;strong&gt;MainActivity&lt;/strong&gt;. Para ello lo añadiremos en la primera línea, quedando nuestra&amp;nbsp;activity así:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;class MainActivity : AppCompatActivity(), OnFragmentActionsListener {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Este código dará un error ya que no hemos añadido los métodos de la interface al MainActivity, para ello, iremos al menú superior&amp;nbsp;&lt;strong&gt;Code&amp;gt;Implement methods&amp;nbsp;&lt;/strong&gt;y nos saldrá un diálogo con todos los&amp;nbsp; métodos que debemos implementar.&lt;/p&gt;
+&lt;p&gt;Dentro del método insertado, se creará la lógica de funcionamiento de dicho método.&lt;/p&gt;
+&lt;p&gt;Pasamos ahora a definir la comunicación en el Fragment. Lo primero que haremos será añadir nuestro &lt;strong&gt;listener&lt;/strong&gt; al&amp;nbsp;fragment, para ello empezaremos declarando una variable&amp;nbsp;&lt;strong&gt;listener&lt;/strong&gt;, que sea del mismo tipo que la interfaz.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;private var listener: OnFragmentActionsListener? = null&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Esta variable la pondremos al inicio de la clase, y podrá ser&amp;nbsp;&lt;strong&gt;null&lt;/strong&gt;, así nos obligamos a comprobar su contenido antes de intentar ejecutar cualquier acción.&lt;/p&gt;
+&lt;p&gt;Luego para inicializarla usaremos uno de los métodos del ciclo de vida, la función&amp;nbsp;&lt;strong&gt;onAttach().&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;override fun onAttach(context: Context) {
+    super.onAttach(context)
+    if (context is OnFragmentActionsListener) {
+        listener = context
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;La primera línea llama a la función&amp;nbsp;&lt;strong&gt;super()&lt;/strong&gt; porque se desea añadir funcionalidad al método, no anular lo que haría normalmente.&lt;/p&gt;
+&lt;p&gt;Luego encontramos un&amp;nbsp;&lt;strong&gt;if()&lt;/strong&gt;, que comprobará si el contexto que llega a la función&amp;nbsp;&lt;strong&gt;onAttach()&lt;/strong&gt;, tiene implementada la interfaz que hemos creado. En este caso el contexto será de&amp;nbsp;&lt;strong&gt;MainActivity&lt;/strong&gt;, pues es esta clase la que crea el&amp;nbsp;&lt;strong&gt;fragment&lt;/strong&gt;.&amp;nbsp;Para finalizar igualamos el &lt;strong&gt;listener&lt;/strong&gt; que hemos declarado en la parte superior de la clase al contexto.&lt;/p&gt;
+&lt;p&gt;El último paso será que haremos será desconectar el fragment de la&amp;nbsp;activity cuando vaya a morir. Usaremos otro método del ciclo de vida, &lt;strong&gt;onDetach()&lt;/strong&gt;, volviéndolo nulo.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;override fun onDetach() {
+    super.onDetach()
+    listener = null
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Para llamar al &lt;strong&gt;listener&lt;/strong&gt;, lo habitual es crear un&amp;nbsp;&lt;strong&gt;onClickListener()&lt;/strong&gt; para que cuando un botón del&amp;nbsp;fragment se ejecute lo llame. Asignaremos el&amp;nbsp;&lt;strong&gt;onClick&lt;/strong&gt; en el método&amp;nbsp;&lt;strong&gt;onViewCreated&lt;/strong&gt; que como verás también forma parte del ciclo de vida.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+    botonPulsado.setOnClickListener { listener?.onClickFragmentButton() }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;De esta manera, hemos hecho que al hacer clic en un botón, se llame a la función&amp;nbsp;&lt;strong&gt;onClickFragmentButton()&lt;/strong&gt; de la interfaz, que hará que nuestra&amp;nbsp;&lt;strong&gt;activity&lt;/strong&gt; ejecute la lógica del método asociado.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="65"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="diary"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="26"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="57"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
            </list>
            <string role="key" value="_id"></string>
            <unicode value="8"></unicode>
@@ -3983,13 +4176,13 @@ class FirstFragment : Fragment() {
         </list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="66">
+      <instance class="exe.engine.node.Node" reference="68">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="3.4. Otras ventanas"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="64">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="66">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -4048,12 +4241,12 @@ class FirstFragment : Fragment() {
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="65">
+            <instance class="exe.engine.field.TextAreaField" reference="67">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="114_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="64"></reference>
+              <reference key="66"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -4135,7 +4328,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="65"></reference>
+                <reference key="67"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -4160,7 +4353,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="66"></reference>
+           <reference key="68"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -4171,7 +4364,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="67">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="69">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Más información"></unicode>
@@ -4230,12 +4423,12 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="68">
+            <instance class="exe.engine.field.TextAreaField" reference="70">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="115_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="67"></reference>
+              <reference key="69"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -4258,7 +4451,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="68"></reference>
+                <reference key="70"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -4283,7 +4476,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="66"></reference>
+           <reference key="68"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -4315,13 +4508,13 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="71">
+      <instance class="exe.engine.node.Node" reference="73">
        <dictionary>
         <string role="key" value="_title"></string>
-        <unicode value="Ejercicio 1"></unicode>
+        <unicode value="3.5. Imágenes"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="69">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="71">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -4380,12 +4573,389 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="70">
+            <instance class="exe.engine.field.TextAreaField" reference="72">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="118_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="71"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;img src=&quot;resources/Figura-2-Diseno-de-interfaz-aplicacion-movil-Elaboracion-propia.png&quot; alt=&quot;Diseño en dispositivos móviles&quot; style=&quot;float: right; margin: 10px;&quot; width=&quot;320&quot; height=&quot;196&quot;&gt;Cualquier app puede beneficiarse estéticamente del uso de buenos gráficos que decoren la interfaz gráfica. No solo eso, también puede facilitar al usuario la comprensión de datos complejos mediante la representaciones gráficas interactivas. En gran medida, los usuarios buscan aplicaciones eficientes, al mismo tiempo que fáciles de usar y estéticamente cuidadas. En este punto estudiaremos algunas de las posibilidades gráficas más sencillas y el manejo de imágenes en nuestra app Android. En un tema posterior veremos cómo podemos mostrar animaciones y efectos de sonido en nuestra app.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list>
+                 <instance class="exe.engine.galleryidevice.GalleryImage">
+                  <dictionary>
+                   <string role="key" value="_caption"></string>
+                   <instance class="exe.engine.field.TextField">
+                    <dictionary>
+                     <string role="key" value="_id"></string>
+                     <int value="136210"></int>
+                     <string role="key" value="_idevice"></string>
+                     <none></none>
+                     <string role="key" value="_instruc"></string>
+                     <string value=""></string>
+                     <string role="key" value="_name"></string>
+                     <string value=""></string>
+                     <string role="key" value="content"></string>
+                     <string value=""></string>
+                     <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                     <int value="4"></int>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_id"></string>
+                   <unicode value="27_118_2.0"></unicode>
+                   <string role="key" value="_imageResource"></string>
+                   <instance class="exe.engine.resource.Resource" reference="74">
+                    <dictionary>
+                     <string role="key" value="_idevice"></string>
+                     <reference key="71"></reference>
+                     <string role="key" value="_package"></string>
+                     <reference key="2"></reference>
+                     <string role="key" value="_storageName"></string>
+                     <string value="Figura-2-Diseno-de-interfaz-aplicacion-movil-Elaboracion-propia.png"></string>
+                     <string role="key" value="_userName"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpgdcbc7.eXe\\previews\\allyourbase\\Figura-2-Diseno-de-interfaz-aplicacion-movil-Elaboracion-propia.png"></string>
+                     <string role="key" value="checksum"></string>
+                     <string value="9b177e60f2e4c447940d734f78721f7e"></string>
+                     <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="warningMsg"></string>
+                     <string value=""></string>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_parent"></string>
+                   <reference key="72"></reference>
+                   <string role="key" value="_thumbnailResource"></string>
+                   <none></none>
+                   <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                   <int value="3"></int>
+                   <string role="key" value="makeThumbnail"></string>
+                   <bool value="0"></bool>
+                  </dictionary>
+                 </instance>
+                </list>
+                <string role="key" value="idevice"></string>
+                <reference key="72"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="1"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="73"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="27"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="73"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list>
+            <reference key="74"></reference>
+           </list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="12"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="2"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:UA03.%20Programando...:3.5.%20Im%C3%A1genes"></string>
+        <string role="key" value="parent"></string>
+        <reference key="4"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list>
+         <instance class="exe.engine.node.Node" reference="77">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="3.5.1. Drawables"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="75">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="76">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="119_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="75"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;En la carpeta de recursos &lt;strong&gt;&quot;res&quot;,&lt;/strong&gt; que los proyectos Android tienen dentro del directorio &lt;strong&gt;&quot;app&quot;&lt;/strong&gt;, podemos encontrar la carpeta &quot;&lt;strong&gt;drawable&lt;/strong&gt;&quot;.&lt;/p&gt;
+&lt;p&gt;En esa carpeta, el proyecto guardará las imágenes como recursos &lt;strong&gt;drawables&lt;/strong&gt; que la app utilizará en &lt;strong&gt;layouts&lt;/strong&gt;, &lt;strong&gt;gráficos&lt;/strong&gt;, &lt;strong&gt;diálogos&lt;/strong&gt; e &lt;strong&gt;iconos&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Un recurso drawable es una abstracción del SDK para manejar imágenes que puedan ser mostradas en pantalla. Los drawables pueden cargarse mediante funciones de la API como &lt;strong&gt;getDrawable&lt;/strong&gt; o ser incluidas en otros recursos &lt;strong&gt;XML&lt;/strong&gt;, como layouts, con algún atributo como &lt;strong&gt;android:drawable&lt;/strong&gt; o &lt;strong&gt;android:icon&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Imagina que se desea mostrar una imagen en uno de nuestros layouts. En ese caso, podemos utilizar el componente &lt;strong&gt;ImageView&lt;/strong&gt;, que es un contenedor de imágenes. El código sería algo como:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ImageView
+android:layout_height=&quot;wrap_content&quot;
+android:layout_width=&quot;wrap_content&quot;
+android:src=&quot;@drawable/imagen&quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Si necesitamos modificar la imagen desde el código, primero cargaríamos el recurso drawable así:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;val drawable: Drawable?= ResourcesCompat.getDrawable(resources, R.drawable.imagen, null)
+...
+imageView.setImageDrawable(drawable)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="76"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="28"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="77"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="13"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA03.%20Programando...:3.5.%20Im%C3%A1genes:3.5.1.%20Drawables"></string>
+           <string role="key" value="parent"></string>
+           <reference key="73"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+        </list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="80">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="Ejercicio 1"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="78">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="79">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="839_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="69"></reference>
+              <reference key="78"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -4414,7 +4984,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="70"></reference>
+                <reference key="79"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -4422,7 +4992,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="71"></reference>
+              <reference key="80"></reference>
              </dictionary>
             </instance>
            </list>
@@ -4439,7 +5009,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="71"></reference>
+           <reference key="80"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -4471,13 +5041,13 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="74">
+      <instance class="exe.engine.node.Node" reference="83">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="Ejercicio 2"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="72">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="81">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -4536,12 +5106,12 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="73">
+            <instance class="exe.engine.field.TextAreaField" reference="82">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="116_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="72"></reference>
+              <reference key="81"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -4570,7 +5140,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="73"></reference>
+                <reference key="82"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -4595,7 +5165,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="74"></reference>
+           <reference key="83"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -4633,9 +5203,13 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
    <unicode role="key" value="1"></unicode>
    <reference key="9"></reference>
    <unicode role="key" value="10"></unicode>
-   <reference key="66"></reference>
+   <reference key="68"></reference>
    <unicode role="key" value="11"></unicode>
-   <reference key="74"></reference>
+   <reference key="83"></reference>
+   <unicode role="key" value="12"></unicode>
+   <reference key="73"></reference>
+   <unicode role="key" value="13"></unicode>
+   <reference key="77"></reference>
    <unicode role="key" value="2"></unicode>
    <reference key="12"></reference>
    <unicode role="key" value="3"></unicode>
@@ -4651,7 +5225,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
    <unicode role="key" value="8"></unicode>
    <reference key="57"></reference>
    <unicode role="key" value="9"></unicode>
-   <reference key="71"></reference>
+   <reference key="80"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -4662,7 +5236,7 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="74"></reference>
+  <reference key="77"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -5714,6 +6288,10 @@ Log.d(&quot;Dialog&quot;, &quot;Fecha seleccionada: $dayOfMonth/${monthOfYear+1}
    <list>
     <reference key="62"></reference>
     <reference key="63"></reference>
+   </list>
+   <string role="key" value="9b177e60f2e4c447940d734f78721f7e"></string>
+   <list>
+    <reference key="74"></reference>
    </list>
    <string role="key" value="abe92c3664b1380a02b84995ab657081"></string>
    <list>
