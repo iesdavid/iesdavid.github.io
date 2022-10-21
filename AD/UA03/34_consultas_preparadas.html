@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.4. Consultas preparadas | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Conectores</a></li>
+   <li><a href="31_protocolos_de_acceso.html" class="daddy">3.1. Protocolos de acceso</a>
+   <ul class="other-section">
+      <li><a href="311_arquitectura_jdbc.html" class="no-ch">3.1.1. Arquitectura JDBC</a></li>
+      <li><a href="312_drivers.html" class="no-ch">3.1.2. Drivers</a></li>
+      <li><a href="313_conexin.html" class="no-ch">3.1.3. Conexión</a></li>
+   </ul>
+   </li>
+   <li><a href="32_creacin_de_bases_de_datos.html" class="no-ch">3.2. Creación de Bases de datos</a></li>
+   <li><a href="33_ejecucin_de_consultas.html" class="no-ch">3.3. Ejecución de consultas</a></li>
+   <li id="active"><a href="34_consultas_preparadas.html" class="active no-ch">3.4. Consultas preparadas</a></li>
+   <li><a href="35_procedimientos_almacenados.html" class="no-ch">3.5. Procedimientos almacenados</a></li>
+   <li><a href="36_transacciones.html" class="no-ch">3.6. Transacciones</a></li>
+   <li><a href="37_excepciones_y_cierres.html" class="no-ch">3.7. Excepciones y cierres</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="33_ejecucin_de_consultas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_procedimientos_almacenados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.4. Consultas preparadas</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id12">
+<div class="iDevice emphasis0" >
+<div id="ta12_124_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Las consultas preparadas están representadas por la clase <strong>PrepareStatement</strong>.</p>
+<p>Son consultas precompiladas, por lo que son más eficientes, y pueden tener parámetros.</p>
+<p>Una consulta se instancia del modo que vemos con un ejemplo:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>PreparedStatement pstmt = con.prepareStatement("SELECT * from medicamentos");</code></pre>
+</div>
+</div>
+<p>Para las consultas que se realizan muy a menudo es aconsejable usar este tipo de consultas, de modo que el rendimiento del sistema será mejor de esta manera.</p>
+<p>Si hay que emplear parámetros en una consulta, se puede hacer usando el carácter<strong> ‘?’.</strong> Por ejemplo, para realizar una consulta de un producto que tenga un código determinado, haríamos la consulta siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>PreparedStatement pstmt = con.prepareStatement("SELECT * from productos WHERE codigo = ? ");</code></pre>
+</div>
+</div>
+<p>Establecemos los parámetros de una consulta utilizando métodos set que dependen del tipo SQL de la columna.</p>
+<p>Así, le decimos que el primer parámetro, que es el único que tiene esta consulta, es “786”:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>pstmt.setString(1, "786");</code></pre>
+</div>
+</div>
+<p>El primer argumento de este método es la posición del parámetro dentro de la consulta.</p>
+<p>Finalmente, ejecutamos la consulta utilizando el método <strong>executeQuery()</strong> o <strong>executeUpdate(),</strong> ambos sin parámetros, dependiendo del tipo de consulta.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="33_ejecucin_de_consultas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_procedimientos_almacenados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

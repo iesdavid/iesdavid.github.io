@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3. Ejecución de consultas | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Conectores</a></li>
+   <li><a href="31_protocolos_de_acceso.html" class="daddy">3.1. Protocolos de acceso</a>
+   <ul class="other-section">
+      <li><a href="311_arquitectura_jdbc.html" class="no-ch">3.1.1. Arquitectura JDBC</a></li>
+      <li><a href="312_drivers.html" class="no-ch">3.1.2. Drivers</a></li>
+      <li><a href="313_conexin.html" class="no-ch">3.1.3. Conexión</a></li>
+   </ul>
+   </li>
+   <li><a href="32_creacin_de_bases_de_datos.html" class="no-ch">3.2. Creación de Bases de datos</a></li>
+   <li id="active"><a href="33_ejecucin_de_consultas.html" class="active no-ch">3.3. Ejecución de consultas</a></li>
+   <li><a href="34_consultas_preparadas.html" class="no-ch">3.4. Consultas preparadas</a></li>
+   <li><a href="35_procedimientos_almacenados.html" class="no-ch">3.5. Procedimientos almacenados</a></li>
+   <li><a href="36_transacciones.html" class="no-ch">3.6. Transacciones</a></li>
+   <li><a href="37_excepciones_y_cierres.html" class="no-ch">3.7. Excepciones y cierres</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="32_creacin_de_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_consultas_preparadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3. Ejecución de consultas</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div id="ta10_122_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para operar con una base de datos, ejecutando las consultas necesarias, nuestra aplicación deberá hacer:</p>
+<ul>
+<li><strong>Cargar</strong> el driver necesario para comprender el protocolo que usa la base de datos en cuestión.</li>
+<li><strong>Establecer</strong> una conexión con la base de datos.</li>
+<li><strong>Enviar</strong> consultas SQL y procesar el resultado.</li>
+<li><strong>Liberar</strong> los recursos al terminar.</li>
+<li><strong>Gestionar</strong> los errores que se puedan producir.</li>
+</ul>
+<p>Podemos utilizar los siguientes tipos de sentencias:</p>
+<ul>
+<li><strong>Statement</strong>: para sentencias sencillas en SQL.</li>
+<li><strong>PreparedStatement</strong>: para consultas preparadas, como por ejemplo las que tienen parámetros.</li>
+<li><strong>CallableStatement</strong>: para ejecutar procedimientos almacenados en la base de datos.</li>
+</ul>
+<p>El API JDBC distingue dos tipos de consultas:</p>
+<ul>
+<li><strong>Consultas</strong>: SELECT</li>
+<li><strong>Actualizaciones</strong>: INSERT, UPDATE, DELETE, sentencias DDL.</li>
+</ul></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Ejemplo</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>	Connection con = DriverManager.getConnection(conexionUrl);
+			ResultSet lista=consultar(con);
+			int rowCount=0;
+			while(lista.next()) {
+				rowCount++;
+                System.out.println("Datos para la fila " + lista.getString(1));
+                for (int i = 2; i &lt;= 5; i++)
+                    System.out.println("   Fila " + lista.getString(i) + ": " + lista.getString(i));
+			}</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_think" id="id11">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_think.png)"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_123_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Usando la tabla creada anteriormente en el servidor remoto, vamos a insertar datos aleatorios para poder trabajar sobre ellos.</p>
+<p>Para ello, usa la página web <a href="https://www.mockaroo.com/" target="_blank" rel="noopener"><strong>mockaroo</strong></a> y generaremos <strong>200 registros</strong> que coincidan con las especificaciones de nuestra tabla.</p>
+<p>Cuando tengas la tabla llena, realiza las siguientes consultas:</p>
+<ol>
+<li>Listado ordenado por edad.</li>
+<li>Listado de los nombres y apellidos ordenados por apellido.</li>
+<li>Listado de nombres y apellidos de más de 30 años</li>
+<li>Listado de los nombres que comiencen por "J" ordenados por apellido .</li>
+<li>Listado de los nombres que comiencen por "C" y los apellidos por "A" ordenados por edad de mayor a menor.</li>
+<li>Media de edad de la muestra.</li>
+<li>Listado de los apellidos que contengan las letras "oh" o las letras "ma" (si el resultado fuera nulo, cambiar las letras)</li>
+<li>Listado de las personas en la franja de edad comprendida entre los 24 y los 32 años.</li>
+<li>Listado de las personas mayores de 65 años.</li>
+<li>Crea una columna denominada <strong>"laboral"</strong> que contendrá los siguientes valores: <strong>estudiante</strong>, <strong>ocupado</strong>, <strong>parado</strong>, <strong>jubilado</strong>.</li>
+<li>Actualiza la columna <strong>laboral</strong> con el siguiente criterio:
+<ul style="list-style-type: disc;">
+<li>Los menores de 18 son <strong>estudiantes</strong></li>
+<li>Los mayores de 65 son <strong>jubilados</strong></li>
+<li>Los de edad impar, que no pertenezcan a los colectivos anteriores, están <strong>parados</strong></li>
+<li>El resto, <strong>ocupados</strong></li>
+</ul>
+</li>
+</ol>
+<p>¿Qué consulta más se te ocurre?</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="32_creacin_de_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_consultas_preparadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

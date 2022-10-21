@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.6. Transacciones | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Conectores</a></li>
+   <li><a href="31_protocolos_de_acceso.html" class="daddy">3.1. Protocolos de acceso</a>
+   <ul class="other-section">
+      <li><a href="311_arquitectura_jdbc.html" class="no-ch">3.1.1. Arquitectura JDBC</a></li>
+      <li><a href="312_drivers.html" class="no-ch">3.1.2. Drivers</a></li>
+      <li><a href="313_conexin.html" class="no-ch">3.1.3. Conexión</a></li>
+   </ul>
+   </li>
+   <li><a href="32_creacin_de_bases_de_datos.html" class="no-ch">3.2. Creación de Bases de datos</a></li>
+   <li><a href="33_ejecucin_de_consultas.html" class="no-ch">3.3. Ejecución de consultas</a></li>
+   <li><a href="34_consultas_preparadas.html" class="no-ch">3.4. Consultas preparadas</a></li>
+   <li><a href="35_procedimientos_almacenados.html" class="no-ch">3.5. Procedimientos almacenados</a></li>
+   <li id="active"><a href="36_transacciones.html" class="active no-ch">3.6. Transacciones</a></li>
+   <li><a href="37_excepciones_y_cierres.html" class="no-ch">3.7. Excepciones y cierres</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="35_procedimientos_almacenados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="37_excepciones_y_cierres.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.6. Transacciones</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id15">
+<div class="iDevice emphasis0" >
+<div id="ta15_837_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Cuando tenemos una serie de consultas SQL que deben ejecutarse en conjunto, con el uso de <strong>transacciones</strong> podemos asegurarnos de que nunca nos quedaremos a medio camino de su ejecución.</p>
+<p>Las transacciones tienen la característica de poder “<strong>deshacer</strong>” los cambios efectuados en las tablas, de una transacción dada, si no se han podido realizar todas las operaciones que forman parte de dicha transacción.</p>
+<p>Por eso, las bases de datos que soportan transacciones son mucho más seguras y fáciles de recuperar si se produce algún fallo en el servidor que almacena la base de datos, ya que las consultas se ejecutan o no en su totalidad.</p>
+<p>Al ejecutar una transacción, el motor de base de datos garantiza: <strong>atomicidad, consistencia, aislamiento y durabilidad (ACID)</strong> de la transacción (o conjunto de comandos) que se utilice.</p>
+<p>El ejemplo típico que se pone para hacer más clara la necesidad de transacciones en algunos casos es el de una transacción bancaria:</p>
+<p>Para transferir una cantidad de dinero de la cuenta de Antonio a la cuenta de Pedro, se necesitarían dos consultas:</p>
+<ol>
+<li>En la cuenta de Antonio para quitar de su cuenta ese dinero.</li>
+<li>En la cuenta de Pedro para añadir ese dinero a su cuenta.</li>
+</ol>
+<div class="highlighted-code language-sql line-numbers">
+<pre><code>UPDATE cuentas SET saldo = saldo - cantidad WHERE cliente = “Antonio”;&nbsp;//&nbsp;Antonio&nbsp;entrega&nbsp;dinero</code></pre>
+</div>
+<div class="highlighted-code language-sql line-numbers">
+<pre><code>UPDATE cuentas SET saldo = saldo + cantidad WHERE cliente = “Pedro”;&nbsp;//&nbsp;Pedro&nbsp;recibe&nbsp;dinero</code></pre>
+</div>
+<p>Pero, ¿qué ocurre si por algún imprevisto (un apagón de luz, etc.), el sistema “cae” después de que se ejecute la primera consulta, y antes de que se ejecute la segunda? Antonio tendrá una cantidad de dinero menos en su cuenta y creerá que ha realizado la transferencia. Pedro, sin embargo, creerá que todavía no le han realizado la transferencia.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id16">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Commit y Rollback</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_838_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Una transacción tiene dos finales posibles, <strong>COMMIT</strong> o <strong>ROLLBACK</strong>. Si se finaliza correctamente y sin problemas se hará con <strong>COMMIT</strong>, con lo que los cambios se realizan en la base de datos, y si por alguna razón hay un fallo, se deshacen los cambios efectuados hasta ese momento, con la ejecución de <strong>ROLLBACK</strong>.</p>
+<p>Por defecto, al menos en <strong>MySQL</strong>, en una conexión trabajamos en modo <strong>autocommit</strong> con valor <strong>true</strong>. Eso significa que cada consulta es una transacción en la base de datos.</p>
+<p>Por tanto, si queremos definir una transacción de varias operaciones, estableceremos el modo <strong>autocommit</strong> a <strong>false</strong> con el método <strong>setAutoCommit</strong> de la clase <strong>Connection</strong>.</p>
+<p>En modo <strong>no autocommit</strong> las transacciones quedan definidas por las ejecuciones de los métodos <strong>commit</strong> y <strong>rollback</strong>. Una transacción abarca desde el último commit o rollback hasta el siguiente commit. Los métodos <strong>commit</strong> o <strong>rollback</strong> forman parte de la clase <strong>Connection</strong>.</p>
+<p>En la siguiente porción de código de un procedimiento almacenado, puedes ver un ejemplo sencillo de cómo se puede utilizar <strong>commit</strong> y <strong>rollback</strong>: tras las operaciones se realiza el commit, y si ocurre una excepción, al capturarla realizaríamos el rollback.</p>
+<div class="highlighted-code language-sql line-numbers">
+<div>
+<pre><code>BEGIN
+…
+SET AUTOCOMMIT OFF
+update cuenta set saldo=saldo + 250 where dni=”12345678-L”;
+update cuenta set saldo=saldo - 250 where dni=”89009999-L”;
+COMMIT;
+…
+EXCEPTION
+   WHEN OTHERS THEN
+      ROLLBACK ;
+END;
+</code></pre>
+</div>
+</div>
+<p>Es conveniente planificar bien la aplicación para minimizar el tiempo en el que se tengan transacciones abiertas ejecutándose, ya que <strong>consumen recursos</strong> y suponen bloqueos en la base de datos que puede parar otras transacciones. En muchos casos, un diseño cuidadoso puede evitar usos innecesarios que se salgan fuera del modo estándar <strong>AutoCommit</strong>.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="35_procedimientos_almacenados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="37_excepciones_y_cierres.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
