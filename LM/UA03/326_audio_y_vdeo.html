@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2.6. Audio y vídeo | UA03. HTML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. HTML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. HTML</a></li>
+   <li><a href="31_estructura.html" class="no-ch">3.1. Estructura</a></li>
+   <li class="current-page-parent"><a href="32_elementos.html" class="current-page-parent daddy">3.2. Elementos</a>
+   <ul>
+      <li><a href="321_elementos_para_dar_formato.html" class="no-ch">3.2.1 Elementos para dar formato</a></li>
+      <li><a href="322_listas.html" class="no-ch">3.2.2. Listas</a></li>
+      <li><a href="323_tablas.html" class="no-ch">3.2.3. Tablas</a></li>
+      <li><a href="324_enlaces.html" class="no-ch">3.2.4. Enlaces</a></li>
+      <li><a href="325_imgenes.html" class="no-ch">3.2.5. Imágenes</a></li>
+      <li id="active"><a href="326_audio_y_vdeo.html" class="active no-ch">3.2.6. Audio y vídeo</a></li>
+      <li><a href="327_formularios.html" class="no-ch">3.2.7. Formularios</a></li>
+      <li><a href="328_comentarios.html" class="no-ch">3.2.8. Comentarios</a></li>
+   </ul>
+   </li>
+   <li><a href="33_atributos.html" class="no-ch">3.3. Atributos</a></li>
+   <li><a href="34_contenedores.html" class="daddy">3.4. Contenedores</a>
+   <ul class="other-section">
+      <li><a href="341_texto_simple.html" class="no-ch">3.4.1. Texto simple</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="325_imgenes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="327_formularios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2.6. Audio y vídeo</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id21">
+<div class="iDevice emphasis0" >
+<div id="ta21_835_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>El sonido y el video han tenido y tienen un papel muy importante en el diseño de sitios web. Ofrecen servicios de descarga de una muestra de un número musical o del último video de moda.</p>
+<p>Antes de incorporar este tipo de archivos, hay que tener en cuenta que formatos sin comprimir pueden ser muy grandes y nada recomendables.</p>
+<p>Existen formatos de archivos para la Web con <strong>algoritmo de compresión</strong> complejos que mejoran en gran medida esta cuestión: MP3, OGG, MPA, WMA...</p>
+<p>Incluso estos formatos permiten iniciar la reproducción descargando sólo parte del archivo mientras se muestra el contenido al usuario, y continuar con la reproducción en un segundo plano.</p>
+<p>Se recomienda <strong>no reproducir los archivos de audio y video automáticamente</strong> cuando un usuario visita un sitio Web.</p>
+<p>La sintaxis de la etiqueta es la siguiente.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;audio autoplay controls loop muted preload="valor" src="valor"&gt;
+Texto para navegadores que no soportan audio…
+&lt;/audio&gt;</code></pre>
+</div>
+</div>
+<p>Entre los atributos de la etiqueta encontramos los siguientes:</p>
+<table class="exe-table">
+<tbody>
+<tr>
+<th style="width: 20%;">Atributo</th>
+<th style="width: 15%;">Valor</th>
+<th style="width: 55%;">Descripción</th>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>autoplay</td>
+<td>El audio comenzará a reproducirse tras su carga.</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>controls</td>
+<td>Especifica que se mostrarán los controles (play, stop, ...)</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>loop</td>
+<td>El audio se repetirá indefinidamente una vez acabe.</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>muted</td>
+<td>El audio estará en silencio.</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>auto<br>metadata<br>none</td>
+<td>Especifica el comportamiento del audio una vez se cargue la página.</td>
+</tr>
+<tr>
+<td>src</td>
+<td><i>URL</i></td>
+<td>Origen del audio</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_audio" target="_blank" rel="noopener">Ejemplo de la etiqueta audio en w3schools</a></p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="325_imgenes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="327_formularios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
