@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.6. Eventos de teclado | UA03. Programando... </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Programando...</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Programando...</a></li>
+   <li><a href="31_herramientas.html" class="no-ch">3.1. Herramientas</a></li>
+   <li><a href="32_fases_de_construccin.html" class="no-ch">3.2. Fases de construcción</a></li>
+   <li><a href="33_interfaces_de_usuario.html" class="daddy">3.3. Interfaces de usuario</a>
+   <ul class="other-section">
+      <li><a href="331_activity_y_layout.html" class="no-ch">3.3.1. Activity y Layout</a></li>
+      <li><a href="332_context.html" class="no-ch">3.3.2. Context</a></li>
+      <li><a href="333_intent.html" class="no-ch">3.3.3. Intent</a></li>
+      <li><a href="334_tareas.html" class="no-ch">3.3.4. Tareas</a></li>
+      <li><a href="335_fragment.html" class="no-ch">3.3.5. Fragment</a></li>
+   </ul>
+   </li>
+   <li><a href="34_otras_ventanas.html" class="no-ch">3.4. Otras ventanas</a></li>
+   <li><a href="35_imgenes.html" class="daddy">3.5. Imágenes</a>
+   <ul class="other-section">
+      <li><a href="351_drawables.html" class="no-ch">3.5.1. Drawables</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="36_eventos_de_teclado.html" class="active no-ch">3.6. Eventos de teclado</a></li>
+   <li><a href="ejercicio_1.html" class="no-ch">Ejercicio 1</a></li>
+   <li><a href="ejercicio_2.html" class="no-ch">Ejercicio 2</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="351_drawables.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.6. Eventos de teclado</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id30">
+<div class="iDevice emphasis0" >
+<div id="ta30_841_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Los dispositivos móviles tienen dos tipos de teclas: las <strong>físicas</strong>, como el botón de encendido y las de volumen, y las del <strong>teclado virtual</strong> que vemos cuando nos colocamos sobre un campo de texto, por ejemplo.</p>
+<p>Según la finalidad, podemos interceptar las pulsaciones de unos u otros mediante diferentes métodos. Por ejemplo, tanto la clase <strong>Activity</strong> como <strong>View</strong> implementan la interfaz <strong>KeyEvent.Callback</strong>. Podemos sobrescribir los métodos de la interfaz y de ese modo interceptar los eventos de teclado. Veamos un ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class MainActivity : AppCompatActivity() {
+override fun onCreate(savedInstanceState: Bundle?) {
+super.onCreate(savedInstanceState)
+setContentView(R.layout.activity_main)
+}
+override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+Log.e("Activity", "onKeyDown: keyCode=$keyCode, $event")
+return super.onKeyDown(keyCode, event)
+}
+override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
+Log.e("Activity", "onKeyDown: keyCode=$keyCode, $event")
+return super.onKeyUp(keyCode, event)
+}
+override fun onKeyLongPress(keyCode: Int, event: KeyEvent?): Boolean {
+Log.e("Activity", "onKeyDown: keyCode=$keyCode, $event")
+return super.onKeyLongPress(keyCode, event)
+}
+...</code></pre>
+</div>
+</div>
+<p>Si ejecutamos la app y presionamos el botón de volumen, en el Logcat veremos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Activity: onKeyDown: keyCode=25, KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_VOLUME_DOWN, scanCode=114, repeatCount=0, eventTime=79300600, downTime=79300600 }
+Activity: onKeyDown: keyCode=25, KeyEvent { action=ACTION_UP, keyCode=KEYCODE_VOLUME_DOWN, scanCode=114, repeatCount=0, eventTime=79300800, downTime=79300600 }</code></pre>
+</div>
+</div>
+<p>Estas funciones onKeyXXX nos informan del evento mediante dos parámetros:</p>
+<ul>
+<li><strong>keyCode</strong>: un entero relacionado con una constante que nos indicará la tecla pulsada. Si pulsamos la tecla <strong>Ctrl</strong> y hacemos clic sobre la clase <strong>KeyEvent</strong> en el código anterior, Android Studio abrirá el código fuente de la clase. Aquí podremos ver la definición de todas las funciones y constantes, como, por ejemplo, <strong>KEYCODE_CAMERA</strong>, <strong>KEYCODE_A</strong>, <strong>KEYCODE_Z</strong>, etcétera.</li>
+<li><strong>event</strong>: es una instancia de la clase KeyEvent. Esta clase amplía la información sobre el evento. No solo guarda el <strong>keyCode</strong>, sino otros parámetros como: <strong>action</strong> (<strong>ACTION_DOWN</strong>, <strong>ACTION_UP</strong> o <strong>ACTION_MULTIPLE</strong>), <strong>repeatCount</strong> (número de veces que se presionó la tecla), <strong>isAltPressed</strong> si la tecla <strong>Alt</strong> estaba presionada mientras se pulsó y muchos otros parámetros relativos al evento.</li>
+</ul>
+<p>El valor devuelto por las funciones es <strong>booleano</strong>. Si ya hemos procesado el evento y no deseamos que siga propagándose por las demás vistas, retornaremos <strong>true</strong>. Si, por el contrario, solo queríamos escuchar pero queremos que el evento siga hasta el siguiente listener, retornaremos <strong>false</strong>.</p>
+<p>También podríamos necesitar manejar los botones de medios. Estos botones son botones físicos que tienen algunos dispositivos periféricos, como los auriculares o joysticks, que se conectan al móvil. Al presionar estos botones, la aplicación recibirá un <strong>KeyEvent</strong>, como hemos visto anteriormente. El código de estos botones, sin embargo, comienza con <strong>KEYCODE_MEDIA</strong> en lugar de con <strong>KEYCODE</strong>.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="351_drawables.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

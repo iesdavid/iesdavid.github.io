@@ -44,13 +44,14 @@
       <li id="active"><a href="351_drawables.html" class="active no-ch">3.5.1. Drawables</a></li>
    </ul>
    </li>
+   <li><a href="36_eventos_de_teclado.html" class="no-ch">3.6. Eventos de teclado</a></li>
    <li><a href="ejercicio_1.html" class="no-ch">Ejercicio 1</a></li>
    <li><a href="ejercicio_2.html" class="no-ch">Ejercicio 2</a></li>
 </ul>
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="35_imgenes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="35_imgenes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="36_eventos_de_teclado.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
@@ -83,6 +84,140 @@ imageView.setImageDrawable(drawable)</code></pre>
 </div>
 </div>
 </article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id29">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">ShapeDrawable</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta29_840_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La clase <strong>ShapeDrawable</strong> es una subclase de <strong>Drawable</strong>, y es una buena opción cuando pretendemos dibujar un gráfico bidimensional relativamente sencillo. En el código de nuestra app, podremos codificar formas básicas, como cuadrados o círculos, utilizando las líneas y colores que deseemos. En los objetos ShapeDrawable podemos sobrescribir su método draw para personalizar el aspecto de la imagen. Veamos un&nbsp; ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>mport android.content.Context
+import android.graphics.Canvas
+import android.graphics.drawable.ShapeDrawable
+import android.graphics.drawable.shapes.OvalShape
+import android.util.AttributeSet
+import android.view.View
+//Constructor que se llamará cuando la vista se llame desde código
+class CustomDrawableView(context: Context) : View(context) {
+constructor(context: Context, attributeSet: AttributeSet): this(context) {
+//Constructor que se llamará cuando la vista se utilice en un layout
+}
+private val drawable: ShapeDrawable = run {
+val x = 0
+val y = 0
+val width = 100
+val height = 100
+contentDescription = "Descripción de la imagen!"
+ShapeDrawable(OvalShape()).apply {
+// Si no establecemos el color, será negro por defecto.
+paint.color = 0xff74AC23.toInt()
+// Debemos establecer los límites del gráfico.
+setBounds(x, y, x + width, y + height)
+}
+}
+override fun onDraw(canvas: Canvas) {
+drawable.draw(canvas)
+}
+}
+</code></pre>
+</div>
+</div>
+<p>Se ha creado una subclase de <strong>View</strong> con dos constructores, uno que se llamará cuando se incruste la vista en un layout y el otro para ser usado directamente en una activity o un fragment. Dentro de la clase hemos creado un ShapeDrawable con OvalShape, que dibujará un óvalo. Como el ancho y el alto son 100, será un círculo. Para personalizar nuestra vista, sobrescribimos el método onDraw de View. Aquí solo tendremos que llamar a la función draw del drawable. Veamos cómo podemos utilizar esta vista:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class SecondFragment : Fragment() {
+override fun onCreateView(
+inflater: LayoutInflater, container: ViewGroup?,
+savedInstanceState: Bundle?
+): View? {
+return CustomDrawableView(requireContext())
+}</code></pre>
+</div>
+</div>
+<p>En este caso, la vista ocupará todo el fragment, pero también podríamos utilizar la vista dentro de un layout junto con otros componentes gráficos:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".NuestroFragment"&gt;
+&lt;com.ilernaonline.miapp.CustomDrawableView
+android:id="@+id/view"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/button_second" /&gt;</code></pre>
+</div>
+</div>
+<p>Otra opción para crear un drawable sería heredar directamente de Drawable:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import android.graphics.Canvas
+import android.graphics.ColorFilter
+import android.graphics.Paint
+import android.graphics.PixelFormat
+import android.graphics.drawable.Drawable
+import kotlin.math.min
+class NuestroDrawable : Drawable() {
+private val redPaint: Paint = Paint().apply { setARGB(255, 255, 0, 0) }
+override fun draw(canvas: Canvas) {
+// Obtenemos los márgenes que nos han dejado
+val width: Int = bounds.width()
+val height: Int = bounds.height()
+val radius: Float = min(width, height).toFloat() / 2f
+// Dibujamos un circulo rojo en mitad de la vista
+canvas.drawCircle((width/2).toFloat(), (height/2).toFloat(), radius, redPaint)
+}
+override fun setAlpha(alpha: Int) {
+// Sobrescribir este método es obligatorio aunque no lo uses
+}
+override fun setColorFilter(colorFilter: ColorFilter?) {
+// Sobrescribir este método es obligatorio aunque no lo uses
+}
+override fun getOpacity(): Int =
+// Puede ser PixelFormat.UNKNOWN, TRANSLUCENT, TRANSPARENT, or OPAQUE
+PixelFormat.OPAQUE
+}
+</code></pre>
+</div>
+</div>
+<p>NuestroDrawable hereda de Drawable. Crea un objeto Pain de color rojo, que utilizará en el método draw que ya conocemos. En el método draw utilizamos el objeto Canvas que nos pasan por parámetro para dibujar un círculo con el método drawCircle. La clase Canvas es la responsable de dibujar todas las primitivas de imagen, se trata de un lienzo virtual que contiene las llamadas a métodos de dibujo para finalmente presentar una imagen. Los objetos drawables pueden utilizar un bitmap, es decir, una imagen corriente para definir su apariencia, y/o utilizar la clase Canvas para definir formas básicas como óvalos y rectángulos. La clase ShapeDrawable que vimos anteriormente no hace más que utilizar las funciones del Canvas para definir su aspecto.</p>
+<p>Continuemos con nuestro código. En el layout, podríamos definir un componente ImageView:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;ImageView
+android:id="@+id/imageView"
+android:layout_width="100dp"
+android:layout_height="100dp"
+app:layout_constraintBottom_toTopOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+android:contentDescription="Nuestra imagen" /&gt;</code></pre>
+</div>
+</div>
+<p>Y en el código lo iniciaríamos con:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+super.onViewCreated(view, savedInstanceState)
+imageView.setImageDrawable(NuestroDrawable())
+...
+}</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
 <div id="packageLicense" class="cc cc-by-nc-sa">
 <p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
 </div>
@@ -90,7 +225,7 @@ imageView.setImageDrawable(drawable)</code></pre>
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="35_imgenes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="35_imgenes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="36_eventos_de_teclado.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 </div>
