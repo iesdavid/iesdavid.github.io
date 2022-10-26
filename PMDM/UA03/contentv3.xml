@@ -85,7 +85,7 @@
   <string role="key" value="_name"></string>
   <unicode value="UA03"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="36"></int>
+  <int value="37"></int>
   <string role="key" value="_nextNodeId"></string>
   <int value="17"></int>
   <string role="key" value="_nodeIdDict"></string>
@@ -5630,6 +5630,129 @@ MediaPlayer contentPlayer =
            <int value="0"></int>
           </dictionary>
          </instance>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="88">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Más información"></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="1"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="89">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="842_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="88"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/topics/media/mediaplayer?hl=es-419&quot;&gt;https://developer.android.com/guide/topics/media/mediaplayer?hl=es-419&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="89"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <none></none>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value="info"></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="36"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="85"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
         </list>
         <string role="key" value="_id"></string>
         <unicode value="16"></unicode>
@@ -5651,13 +5774,13 @@ MediaPlayer contentPlayer =
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="90">
+      <instance class="exe.engine.node.Node" reference="92">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="Ejercicio 1"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="88">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="90">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -5716,12 +5839,12 @@ MediaPlayer contentPlayer =
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="89">
+            <instance class="exe.engine.field.TextAreaField" reference="91">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="839_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="88"></reference>
+              <reference key="90"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -5750,7 +5873,7 @@ MediaPlayer contentPlayer =
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="89"></reference>
+                <reference key="91"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -5758,7 +5881,7 @@ MediaPlayer contentPlayer =
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="90"></reference>
+              <reference key="92"></reference>
              </dictionary>
             </instance>
            </list>
@@ -5775,7 +5898,7 @@ MediaPlayer contentPlayer =
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="90"></reference>
+           <reference key="92"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -5807,13 +5930,13 @@ MediaPlayer contentPlayer =
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="93">
+      <instance class="exe.engine.node.Node" reference="95">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="Ejercicio 2"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="91">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="93">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -5872,12 +5995,12 @@ MediaPlayer contentPlayer =
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="92">
+            <instance class="exe.engine.field.TextAreaField" reference="94">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="116_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="91"></reference>
+              <reference key="93"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -5908,7 +6031,7 @@ MediaPlayer contentPlayer =
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="92"></reference>
+                <reference key="94"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -5916,7 +6039,7 @@ MediaPlayer contentPlayer =
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="93"></reference>
+              <reference key="95"></reference>
              </dictionary>
             </instance>
            </list>
@@ -5933,7 +6056,7 @@ MediaPlayer contentPlayer =
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="93"></reference>
+           <reference key="95"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -5973,7 +6096,7 @@ MediaPlayer contentPlayer =
    <unicode role="key" value="10"></unicode>
    <reference key="68"></reference>
    <unicode role="key" value="11"></unicode>
-   <reference key="93"></reference>
+   <reference key="95"></reference>
    <unicode role="key" value="12"></unicode>
    <reference key="73"></reference>
    <unicode role="key" value="13"></unicode>
@@ -5997,7 +6120,7 @@ MediaPlayer contentPlayer =
    <unicode role="key" value="8"></unicode>
    <reference key="57"></reference>
    <unicode role="key" value="9"></unicode>
-   <reference key="90"></reference>
+   <reference key="92"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
