@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3. ResultSet | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Gestión de la información</a></li>
+   <li><a href="41_statement.html" class="no-ch">4.1. Statement</a></li>
+   <li><a href="42_preparedstatement.html" class="no-ch">4.2. PreparedStatement</a></li>
+   <li id="active"><a href="43_resultset.html" class="active no-ch">4.3. ResultSet</a></li>
+   <li><a href="33_ejecucin_de_consultas.html" class="no-ch">3.3. Ejecución de consultas</a></li>
+   <li><a href="34_consultas_preparadas.html" class="no-ch">3.4. Consultas preparadas</a></li>
+   <li><a href="35_procedimientos_almacenados.html" class="no-ch">3.5. Procedimientos almacenados</a></li>
+   <li><a href="36_transacciones.html" class="no-ch">3.6. Transacciones</a></li>
+   <li><a href="37_excepciones_y_cierres.html" class="no-ch">3.7. Excepciones y cierres</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="42_preparedstatement.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_ejecucin_de_consultas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3. ResultSet</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id27">
+<div class="iDevice emphasis0" >
+<div id="ta27_120_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>ResultSet</strong> es otra interfaz que podemos utilizar para recoger el resultado de una de nuestras consultas. Solo podemos utilizar este tipo de objeto para seleccionar datos, ya que no permite actualizar datos, es decir, solo se usa en las sentencias <strong>select</strong>. Se caracteriza por devolver una tabla de datos según columnas y filas.</p>
+<p>Para obtener los datos de la consulta, se tendrá que acceder con un <strong>get</strong> más el tipo de dato al que queramos acceder. Por ejemplo, <strong>getInt</strong> devolverá un <strong>integer</strong>, mientras que un <strong>getString</strong> devolverá un <strong>varchar</strong>.</p>
+<p>Aquí tenemos una relación de datos que podemos obtener en nuestras consultas:</p>
+<table class="exe-table" style="height: 224px;">
+<tbody>
+<tr style="height: 28px;">
+<td style="height: 28px; width: 99.5333px;"><strong>Tipo de get</strong></td>
+<td style="height: 28px; width: 216.967px;"><strong>Tipo de dato de la BBDD</strong></td>
+</tr>
+<tr style="height: 28px;">
+<td style="height: 28px; width: 99.5333px;"><strong>getInt</strong></td>
+<td style="height: 28px; width: 216.967px;">Integer</td>
+</tr>
+<tr style="height: 28px;">
+<td style="height: 28px; width: 99.5333px;"><strong>getLong</strong></td>
+<td style="height: 28px; width: 216.967px;">Big int</td>
+</tr>
+<tr style="height: 28px;">
+<td style="height: 28px; width: 99.5333px;"><strong>getFloat</strong></td>
+<td style="height: 28px; width: 216.967px;">Real</td>
+</tr>
+<tr style="height: 28px;">
+<td style="height: 28px; width: 99.5333px;"><strong>getDouble</strong></td>
+<td style="height: 28px; width: 216.967px;">Float</td>
+</tr>
+<tr style="height: 28px;">
+<td style="height: 28px; width: 99.5333px;"><strong>getBignum</strong></td>
+<td style="height: 28px; width: 216.967px;">BTI</td>
+</tr>
+<tr style="height: 28px;">
+<td style="height: 28px; width: 99.5333px;"><strong>getString</strong></td>
+<td style="height: 28px; width: 216.967px;">Varchar/char</td>
+</tr>
+<tr style="height: 28px;">
+<td style="height: 28px; width: 99.5333px;"><strong>getDate</strong></td>
+<td style="height: 28px; width: 216.967px;">Date</td>
+</tr>
+<tr>
+<td style="width: 99.5333px;"><strong>getTime</strong></td>
+<td style="width: 216.967px;">Time</td>
+</tr>
+<tr>
+<td style="width: 99.5333px;"><strong>getTimestamp</strong></td>
+<td style="width: 216.967px;">Time stamp</td>
+</tr>
+<tr style="height: 0px;">
+<td style="height: 0px; width: 99.5333px;"><strong>getObject</strong></td>
+<td style="height: 0px; width: 216.967px;">Cualquier otro tipo</td>
+</tr>
+</tbody>
+</table>
+<p>Se caracteriza también por solo avanzar hacia delante con los datos que obtiene, por tanto, no podremos recorrerlos hacia atrás. Para ver cómo funciona, aquí mostramos un breve ejemplo de implementación.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//Paso 1 establecer conexión + pasar la consulta
+PreparedStatement s= con.prepareStatement(“select id, dni, nombre
+from Estudiantes”);
+//Paso 2. Definir resultSet y ejecutar la consulta
+ResultSet resultado = s.executeQuery();
+//Paso 3. Imprimir el resultado
+while(resultado.next()){
+System.out.printIn(“Id: “ + resultado.getInt());
+System.out.printIn(“dni: “ + resultado.getString());
+System.out.printIn(“nombre: “ + resultado.getString());
+}
+//Paso 4: Cerramos los objetos que usamos para realizar la
+conexión y obtener resultado
+resultado.close();</code></pre>
+</div>
+</div>
+<p>Tal y como apreciamos en el ejemplo, primero necesitamos un objeto <strong>PreparedStatement</strong> para realizar la conexión y preparar la consulta.</p>
+<p>A continuación, creamos un <strong>ResultSet</strong> que nos permitirá ejecutar la consulta y que es donde guardaremos los datos obtenidos.</p>
+<p>Como vemos, para ejecutar la consulta solo necesitamos que el objeto <strong>PreparedStatement</strong> llame al método <strong>executeQuery()</strong> y que el objeto <strong>ResultSet</strong> recoja el resultado. Con el método <strong>next()</strong> recorremos los resultados hacia delante y podemos ir accediendo a ellos según su tipo, como hemos explicado anteriormente.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="42_preparedstatement.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_ejecucin_de_consultas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

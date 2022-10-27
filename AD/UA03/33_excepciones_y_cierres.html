@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3. Excepciones y cierres | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Conectores</a></li>
+   <li><a href="31_protocolos_de_acceso.html" class="daddy">3.1. Protocolos de acceso</a>
+   <ul class="other-section">
+      <li><a href="311_arquitectura_jdbc.html" class="no-ch">3.1.1. Arquitectura JDBC</a></li>
+      <li><a href="312_drivers.html" class="no-ch">3.1.2. Drivers</a></li>
+      <li><a href="313_conexin.html" class="no-ch">3.1.3. Conexión</a></li>
+   </ul>
+   </li>
+   <li><a href="32_creacin_de_bases_de_datos.html" class="no-ch">3.2. Creación de Bases de datos</a></li>
+   <li id="active"><a href="33_excepciones_y_cierres.html" class="active no-ch">3.3. Excepciones y cierres</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="32_creacin_de_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3. Excepciones y cierres</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id17">
+<div class="iDevice emphasis0" >
+<div id="ta17_839_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Debemos tener en cuenta siempre que las <strong>conexiones</strong> con una base de datos <strong>consumen muchos recursos</strong> en el sistema gestor, y por lo tanto en el sistema informático en general. Por ello, conviene cerrarlas con el método <strong>close</strong> siempre que vayan a dejar de ser utilizadas, en lugar de esperar a que el <strong>garbage collector</strong> de Java las elimine.</p>
+<p>También conviene cerrar las consultas (<strong>Statement</strong> y <strong>PreparedStatement</strong>) y los resultados (<strong>ResultSet</strong>) para liberar los recursos.</p>
+<p>Una <strong>excepción</strong> es una situación que no se puede resolver y que provoca la detención del programa de manera abrupta. Se produce por una condición de error en tiempo de ejecución.</p>
+<p>En Java hay muchos <strong>tipos de excepciones</strong>, el paquete <strong>java.lang.Exception</strong> es el que contiene los tipos de excepciones.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id18">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Excepciones</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_840_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="AD03_CONT_R34_estrucexcp.jpg" alt="Try catch" style="float: right; margin: 10px;" width="478" height="290">Cuando se produce un <strong>error</strong> durante la ejecución de un programa, se genera un objeto asociado a esa <strong>excepción</strong>. Ese objeto es de la clase <strong>Exception</strong> o de alguna de sus subclases. Este objeto se pasa entonces al código que se ha definido para gestionar la excepción.</p>
+<p>En una porción de programa donde se trabajara con ficheros, y con bases de datos podríamos tener esta estructura para capturar las posibles excepciones.</p>
+<p>El bloque de instrucciones del try es el que se ejecuta, y si en él ocurre un error que dispara una excepción, entonces se mira si es de tipo fichero no encontrado; si es así, se ejecutarían las instrucciones del bloque del fichero no encontrado. Si no era de ese tipo la excepción, se mira si es del siguiente tipo, o sea, de entrada salida, y así sucesivamente.</p>
+<p>Las instrucciones que hay en el bloque del <strong>finally</strong>, se ejecutarán siempre, se haya producido una excepción o no, ahí suelen ponerse instrucciones de limpieza, de cierre de conexiones, etc.</p>
+<p>Las acciones que se realizan sobre una base de datos pueden lanzar la excepción <strong>SQLException</strong>. Este tipo de excepción proporciona entre otra información:</p>
+<ul>
+<li>Una cadena de caracteres describiendo el error. Se obtiene con el método <strong>getMesage</strong>.</li>
+<li>Un código entero de error que especifica al fabricante de la base de datos.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id19">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Cierre de conexiones</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta19_841_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Como ya hemos dicho, al trabajar con bases de datos, se consumen muchos recursos por parte del sistema gestor, así como del resto de la aplicación.</p>
+<p>Por esta razón, resulta totalmente conveniente <strong>cerrarlas</strong> con el método <strong>close</strong> cuando ya no se utilizan.</p>
+<p>Podríamos por tanto tener un ejemplo de cómo hacer esto:</p>
+<p><img src="AD03_CONT_R37_cierre.jpg" alt="Cierre de conexiones" style="display: block; margin-left: auto; margin-right: auto;" width="545" height="385"></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="32_creacin_de_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

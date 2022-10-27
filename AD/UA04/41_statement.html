@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1. Statement | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Gestión de la información</a></li>
+   <li id="active"><a href="41_statement.html" class="active no-ch">4.1. Statement</a></li>
+   <li><a href="42_preparedstatement.html" class="no-ch">4.2. PreparedStatement</a></li>
+   <li><a href="43_resultset.html" class="no-ch">4.3. ResultSet</a></li>
+   <li><a href="33_ejecucin_de_consultas.html" class="no-ch">3.3. Ejecución de consultas</a></li>
+   <li><a href="34_consultas_preparadas.html" class="no-ch">3.4. Consultas preparadas</a></li>
+   <li><a href="35_procedimientos_almacenados.html" class="no-ch">3.5. Procedimientos almacenados</a></li>
+   <li><a href="36_transacciones.html" class="no-ch">3.6. Transacciones</a></li>
+   <li><a href="37_excepciones_y_cierres.html" class="no-ch">3.7. Excepciones y cierres</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_preparedstatement.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.1. Statement</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id23">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Contenido DUA</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta23_116_2" class="block iDevice_content">
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id25">
+<div class="iDevice emphasis0" >
+<div id="ta25_118_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Este tipo de interfaz se utiliza para conexiones de carácter general. Es bastante útil cuando queremos usar consultas estáticas SQL.</p>
+<p>Una <strong>consulta estática</strong> es aquella operación SQL que no varía la consulta en ningún momento, siempre será la misma y los valores de la consulta no cambiarán.</p>
+<p>Este tipo de clase no acepta parámetros. Las sentencias más utilizadas son todas aquellas que no necesitan datos de los objetos Java, como, por ejemplo, cualquier <strong>create, insert, delete, alter o drop</strong>.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Ejemplo</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java">
+<div>
+<pre><code>Statement stmt = null;
+private Connection connect = null;
+// JDBC driver name and database URL
+private String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+private final String DB_URL = "jdbc:mysql://localhost/database";
+private String USUARIO = "alumno";
+private String CONTA = "password";
+try {
+Class.forName(JDBC_DRIVER);
+// Establecemos la conexion
+connect = DriverManager.getConnection(DB_URL + "user=" + USUARIO
++ " &amp;password=" + CONTA);
+System.out.println("Nos hemos conectado a la BBDD");
+stmt = connect.createStatement();
+String sql = "ALTER DATABASE ilerna MODIFY NAME = tema2";
+stmt.executeUpdate(sql);
+}
+catch (SQLException e) {
+//continuación codigo
+}
+finally {
+stmt.close();
+}</code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Una vez creado el objeto, podemos usarlo para ejecutar consultas SQL. Este objeto tiene tres métodos importantes para ello:</p>
+<ul>
+<li><strong>execute()</strong>: se usará para ejecutar consultas dinámicas SQL.</li>
+<li><strong>executeUpdate()</strong>: se usa cuando hacemos insert, delete o update.</li>
+<li><strong>executeQuery()</strong>: se usa para realizar select.</li>
+</ul>
+<p>Debemos tener en cuenta que, cada vez que creemos este tipo de objeto, tendremos que cerrarlos, por lo que es necesario utilizar el método <strong>close()</strong> para cerrar la conexión.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_preparedstatement.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

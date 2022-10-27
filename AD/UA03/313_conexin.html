@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
@@ -12,6 +13,7 @@
 <meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <link rel="stylesheet" type="text/css" href="udl-content.css" />
@@ -33,11 +35,7 @@
    </ul>
    </li>
    <li><a href="32_creacin_de_bases_de_datos.html" class="no-ch">3.2. Creación de Bases de datos</a></li>
-   <li><a href="33_ejecucin_de_consultas.html" class="no-ch">3.3. Ejecución de consultas</a></li>
-   <li><a href="34_consultas_preparadas.html" class="no-ch">3.4. Consultas preparadas</a></li>
-   <li><a href="35_procedimientos_almacenados.html" class="no-ch">3.5. Procedimientos almacenados</a></li>
-   <li><a href="36_transacciones.html" class="no-ch">3.6. Transacciones</a></li>
-   <li><a href="37_excepciones_y_cierres.html" class="no-ch">3.7. Excepciones y cierres</a></li>
+   <li><a href="33_excepciones_y_cierres.html" class="no-ch">3.3. Excepciones y cierres</a></li>
 </ul>
 </nav>
 <div id='topPagination'>
@@ -52,9 +50,23 @@
 <div class="iDevice emphasis0" >
 <div id="ta5_865_2" class="block iDevice_content">
 <div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para acceder a una base de datos y así poder operar con ella, lo primero que hay que hacer es conectarse a dicha base de datos.</p>
-<p>En Java, para establecer una conexión con una base de datos podemos utilizar el método getConnection() de la clase DriverManager. Este método recibe como parámetro la URL de JDBC que identifica a la base de datos con la que queremos realizar la conexión.</p>
-<p>La ejecución de este método devuelve un objeto Connection que representa la conexión con la base de datos.</p>
-<p>Cuando se presenta con una URL específica, DriverManager itera sobre la colección de drivers registrados hasta que uno de ellos reconoce la URL especificada. Si no se encuentra ningún conector adecuado, se lanza una SQLException</p>
+<p>En Java, para establecer una conexión con una base de datos podemos utilizar el método <strong>getConnection()</strong> de la clase <strong>DriverManager</strong>. Este método recibe como parámetro la URL de JDBC que identifica a la base de datos con la que queremos realizar la conexión.</p>
+<p>La ejecución de este método devuelve un objeto <strong>Connection</strong> que representa la conexión con la base de datos.</p>
+<p>Cuando se presenta con una URL específica, <strong>DriverManager</strong> itera sobre la colección de drivers registrados hasta que uno de ellos reconoce la URL especificada. Si no se encuentra ningún conector adecuado, se lanza una SQLException</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Preparar la conexión a la base de datos es un paso importante que tener en cuenta. Para realizar la conexión, es necesario utilizar la clase <strong>Connection</strong>. Este será el intermediario que conectará nuestra aplicación y la base de datos. Si estamos utilizando otro entorno para realizar la conexión, se necesitará el nombre del host y el puerto. Para construir la URL, seguiremos esta estructura:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String url = "jdbc:mysql://hostname:port/database";</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String url = "jdbc:mysql://localhost/database";
+String usuario= "alumno";
+String contrasena = "password"
+Connection conn = DriverManager.getConnection(url, usuario, contrasena);</code></pre>
+</div>
+</div>
+<p>Para realizar la conexión se utiliza <strong>DriverManager</strong> y se llamará al método <strong>getConnection()</strong>, que devolverá el objeto <strong>Connection</strong> con todos los datos de la conexión realizada en BBDD.</p>
 <p>Veamos un ejemplo para conectarnos a una base de datos MySQL:</p>
 <p><img src="conexion.png" alt="Ejemplo de conexión a una base de datos" style="display: block; margin-left: auto; margin-right: auto;" width="521" height="396"></p></div></div></section></div>
 </div>
@@ -97,6 +109,36 @@
 <li>Abre tu IDE y busca información para incorporar el Driver que se encuentra en <strong>C:\Program Files (x86)\MySQL\Connector J 8.0\</strong></li>
 <li>Realiza la llamada en el código y ejecuta para comprobar.</li>
 </ol></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_info" id="id22">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Más información</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_115_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><table style="width: 66%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 50%;"><strong>Método</strong></td>
+<td style="width: 50%;"><strong>Descripción</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">getConnection(String url)</td>
+<td style="width: 50%;">Establecerá la conexión con tan solo la URL. La URL<br>deberá contener toda la información necesaria para<br>conectarse a la base de datos.</td>
+</tr>
+<tr>
+<td style="width: 50%;">getConnection(String url, Properties info)</td>
+<td style="width: 50%;">
+<p>Este método se encargará de realizar la conexión a<br>partir de la URL y un Properties. Esta clase contendrá<br>toda la información necesaria para conectarse a la<br>base de datos, como el usuario o la contraseña.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Debemos tener en cuenta que cabe la posibilidad de que se produzca un error en este proceso, por este motivo hemos englobado todos los pasos dentro de un <strong>try-catch</strong> que controlará el error si se produce. Un posible error podría ser un error de conexión debido a que hemos definido incorrectamente la conexión, a que el usuario o la contraseña están mal o a que no hemos realizado el proceso de registrar el driver. En todo caso, si se produce un error, entrará en el bloque <strong>catch</strong>. Para finalizar, vemos que tenemos un bloque <strong>finally</strong> para cerrar la conexión del objeto.</p></div></div></section></div>
 </div>
 </div>
 </div>
