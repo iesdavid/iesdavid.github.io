@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.6. Eliminación de datos | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Gestión de la información</a></li>
+   <li><a href="41_statement.html" class="no-ch">4.1. Statement</a></li>
+   <li><a href="42_preparedstatement.html" class="no-ch">4.2. PreparedStatement</a></li>
+   <li><a href="43_resultset.html" class="no-ch">4.3. ResultSet</a></li>
+   <li><a href="44_sentencias_de_definicin_de_datos.html" class="no-ch">4.4. Sentencias de definición de datos</a></li>
+   <li><a href="45_sentencias_de_modificacin_de_datos.html" class="no-ch">4.5. Sentencias de modificación de datos</a></li>
+   <li id="active"><a href="46_eliminacin_de_datos.html" class="active no-ch">4.6. Eliminación de datos</a></li>
+   <li><a href="47_ejecucin_de_consultas.html" class="no-ch">4.7. Ejecución de consultas</a></li>
+   <li><a href="48_consultas_preparadas.html" class="no-ch">4.8. Consultas preparadas</a></li>
+   <li><a href="49_procedimientos_almacenados.html" class="no-ch">4.9. Procedimientos almacenados</a></li>
+   <li><a href="410_transacciones.html" class="no-ch">4.10. Transacciones</a></li>
+   <li><a href="411_excepciones_y_cierres.html" class="no-ch">4.11. Excepciones y cierres</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="45_sentencias_de_modificacin_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="47_ejecucin_de_consultas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.6. Eliminación de datos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id30">
+<div class="iDevice emphasis0" >
+<div id="ta30_123_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La sentencia <strong>DELETE</strong> nos servirá para eliminar registros de nuestra base de datos, ya sea porque no queremos que estén o porque ya no los necesitemos. La sentencia se realizaría siguiendo esta estructura:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>//Para borrar datos a la bbdd
+DELETE FROM nombre_tabla WHERE nombre_columna =valor;</code></pre>
+</div>
+</div>
+<p>Cuando realizamos un <strong>DELETE</strong>, siempre tenemos que poner un <strong>WHERE</strong> para poder filtrar mejor los datos que queremos borrar de la tabla, si no es así, se borrarán todos los registros.</p>
+<p>También tenemos la posibilidad de realizar la eliminación de los dos modos explicados anteriormente. Un ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Connection conn = null;
+Statement stmt = null;
+try {
+	conn = conector.conector();
+	System.out.println("Nos hemos conectado a la BBDD");
+	stmt = conn.createStatement();
+	String sql = "DELETE FROM estudiante WHERE dni = '00000000T'";
+	stmt.executeUpdate(sql);
+} catch (SQLException e) {
+	e.printStackTrace();
+} catch (Exception e) {
+	e.printStackTrace();
+} finally {
+	try {
+		stmt.close();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+}</code></pre>
+</div>
+</div>
+<p>Al ejecutar la sentencia, si no borra ningún registro porque no encuentra el DNI no se producirá ningún error, simplemente no borrará ningún registro. En este caso, también debemos englobar todo el código entre un <strong>try-catch</strong> para poder controlar los errores que se puedan generar.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="45_sentencias_de_modificacin_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="47_ejecucin_de_consultas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
