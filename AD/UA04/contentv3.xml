@@ -85,9 +85,9 @@
   <string role="key" value="_name"></string>
   <unicode value="UA04"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="28"></int>
+  <int value="30"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="14"></int>
+  <int value="16"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -969,7 +969,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
       <instance class="exe.engine.node.Node" reference="18">
        <dictionary>
         <string role="key" value="_title"></string>
-        <unicode value="3.3. Ejecución de consultas"></unicode>
+        <unicode value="4.4. Sentencias de definición de datos"></unicode>
         <string role="key" value="idevices"></string>
         <list>
          <instance class="exe.engine.jsidevice.JsIdevice" reference="16">
@@ -1034,9 +1034,527 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
             <instance class="exe.engine.field.TextAreaField" reference="17">
              <dictionary>
               <string role="key" value="_id"></string>
-              <unicode value="122_2"></unicode>
+              <unicode value="121_2"></unicode>
               <string role="key" value="_idevice"></string>
               <reference key="16"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Entendemos como sentencias de definición de datos (&lt;strong&gt;data definition language&lt;/strong&gt;) todas aquellas que permitan manipular la estructura de nuestra base de datos.&lt;/p&gt;
+&lt;p&gt;Se trata de una manera de definir ciertos comandos de datos. Estas sentencias pueden ser:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CREATE&lt;/strong&gt;: se encarga de crear bases de datos o tablas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ALTER:&lt;/strong&gt; la usaremos para la modificación de tablas o bases de datos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DROP:&lt;/strong&gt; la usaremos para borrar bases de datos o tablas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RENAME:&lt;/strong&gt; usaremos esta sentencia para cambiar el nombre de nuestra base de&lt;br&gt;datos o de una tabla.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Estos comandos son exclusivamente para hacer modificaciones en las tablas, no para realizar consultas en MySQL. JDBC nos da opciones para poder hacer este tipo de sentencias mediante el código Java.&lt;/p&gt;
+&lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
+&lt;h2&gt;Crear tablas o bases de datos&lt;/h2&gt;
+&lt;p&gt;El comando CREATE se puede usar para crear una tabla o una base de datos. Normalmente, ya tendremos creada la base de datos, pero si en alguna ocasión se tiene que realizar, se puede hacer mediante la aplicación.&lt;/p&gt;
+&lt;p&gt;Aquí tenemos la estructura teórica que podemos adaptar para nuestras sentencias y necesidades. La estructura básica de estas sentencias son estas, a modo de recordatorio:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;public void crecionBaseDeDatos() throws Exception {
+    Connection conn = null;
+    Statement stmt = null;
+    try {
+        //Paso 1.Previamente habremos realizado la conexión
+        conn = conector.conector();
+        //Paso 2. Creamos un nuevo objeto con la conexión
+        stmt = conn.createStatement();
+        //Paso 3. Definimos la sentencia de crear una nueva base de datos
+        String sql = &quot;CREATE DATABASE ejemplo&quot;;
+        //Paso 4. Ejecutar la sentencia
+        stmt.executeUpdate(sql);
+    }catch(SQLException se){
+        //Gestionamos los posibles errores que puedan surgir durante la ejecucion de la insercion
+        se.printStackTrace();
+    }catch(Exception e){
+        //Gestionamos los posibles errores
+        e.printStackTrace();
+    }finally{
+        //Paso 5. Cerrar el objeto en uso y la conexión
+        stmt.close();
+        conn.close();
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Modificar tablas&lt;/h2&gt;
+&lt;p&gt;Para la modificación de tablas o de bases de datos utilizaremos la sentencia &lt;strong&gt;ALTER&lt;/strong&gt;. ALTER es la operación SQL que se encargará de realizar cambios dentro de la base de datos o de la tabla que especifiquemos, siempre que esos datos existan. Nos permitirá añadir, cambiar o eliminar campos de una tabla, o también renombrar una tabla. Estas son las estructuras básicas para realizar este tipo de operaciones:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;//Para modificar la base de datos
+ALTER DATABASE nombre_base_de_datos MODIFY NAME=nuevo_nombre;
+//Para añadir columnas
+ALTER TABLE nombre_tabla ADD COLUMN nombre_columna tipo_dato;
+//Para modificar columnas
+ALTER TABLE nombre_tabla MODIFY COLUMN nombre_columna tipo_dato;
+//Para borrar una columna
+ALTER TABLE nombre_tabla DROP COLUMN nombre_columna;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Las opciones con esta sentencia son bastante amplias: podremos modificar columnas, añadirlas o hasta borrarlas. Aquí podemos ver un ejemplo práctico:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;Statement stmt = null;
+try {
+    //Paso 1: Realizamos la conexión
+    conn = conector.conector();
+    System.out.println(&quot;Nos hemos conectado a la BBDD&quot;);
+    //Paso 2: Preparamos el objeto Statement
+    stmt = conn.createStatement();
+    //Paso 3:Modificacion de la base de datos, borrar 2 columnas
+    String sql = &quot;ALTER TABLE estudiante DROP COLUMN dni, DROP COLUMN edad;&quot;;
+    stmt.executeUpdate(sql);
+}catch(SQLException se){
+    //Gestionamos los posibles errores que puedan surgir durante la ejecución de la inserción
+    se.printStackTrace();
+} catch (Exception e) {
+    System.out.println(&quot;Se ha producido un error.&quot;);
+} finally {
+    stmt.close();
+    conn.close();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Eliminar tablas o bases de datos&lt;/h2&gt;
+&lt;p&gt;El comando DROP es utilizado para borrar bases de datos o tablas dentro de nuestra base de datos. Cuando ejecutamos este comando, todos los datos que contenga la BBDD o la tabla también se borran. Como recordatorio, aquí tenemos la estructura básica para las dos opciones de DROP:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;//Para borrar una base de datos
+DROP DATABASE nombre_base_datos;
+//Para borrar una tabla
+DROP TABLE nombre_tabla;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;La estructura es muy simple y adaptarlo a la estructura JDBC será parecido a lo que venimos realizando con los otros comandos. Como podemos apreciar, también usaremos la interfaz Statement. La sentencia DROP, al no devolver ningún registro ni información, es ideal para este tipo de interfaz, ya que está especialmente diseñada para operaciones sencillas con la base de datos.&lt;/p&gt;
+&lt;h2&gt;Renombrar tablas&lt;/h2&gt;
+&lt;p&gt;El comando RENAME nos permitirá renombrar una tabla, es decir, modificar el nombre por otro. Este tipo de operación no producirá ningún cambio en los registros que contenga esa tabla, solo se modificará el nombre de la tabla. La estructura que deberemos seguir es esta:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;//Para renombrar una tabla
+RENAME TABLE nombre_tabla TO Nuevo_nombre_tabla;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Como hemos visto en ejemplos anteriores, el procedimiento es el mismo, solo cambia la sentencia SQL.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="17"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <none></none>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="28"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="18"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="14"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:4.4.%20Sentencias%20de%20definici%C3%B3n%20de%20datos"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="21">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="4.5. Sentencias de modificación de datos"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="19">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="20">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="122_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="19"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Entendemos como sentencias de modificación de datos todas aquellas que actualicen o modifiquen de algún modo uno o más registros en una tabla. Este tipo de comando SQL contempla la manipulación de los datos presentes en la base de datos, y serán prácticamente la gran mayoría de los comandos conocidos por SQL:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;INSERT:&lt;/strong&gt; añadirá una fila en la tabla de base de datos indicada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DELETE:&lt;/strong&gt; se encarga de borrar información de una tabla de la base de datos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; se encarga de modificar los registros de una tabla de la base de datos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Estas sentencias nos permitirán borrar datos, insertar nuevos registros o actualizar uno existente. El procedimiento para crear estas sentencias dentro de nuestra aplicación Java es parecido a los ejemplos anteriores, cambiará la consulta.&lt;/p&gt;
+&lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
+&lt;h2&gt;Inserción de datos&lt;/h2&gt;
+&lt;p&gt;Esta es una sentencia que nos permitirá insertar nuevos registros en una tabla de nuestra base de datos. Esta será una de las opciones más usadas. La implementación en nuestra aplicación será de forma muy parecida a los ejemplos ya explicados con anterioridad.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;//Para insertar datos a la bbdd
+INSERT INTO nombre_tabla (nombre_columna, nombre_columna) VALUES (valor, valor);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Para realizar un nuevo registro también tenemos que crear un objeto &lt;strong&gt;Statement&lt;/strong&gt; que nos servirá para llamar al método &lt;strong&gt;createStatement()&lt;/strong&gt;. La sintaxis del &lt;strong&gt;INSERT&lt;/strong&gt; la crearemos mediante un string, tal y como veníamos haciendo hasta ahora, y se lo pasaremos al método &lt;strong&gt;executeUpdate()&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;Connection conn = null;
+PreparedStatement stmt = null;
+try {
+    //Utiliza la clase auxiliar que hemos creado para establecer conexión con bbdd
+    conn = conector.conector();
+    System.out.println(&quot;Nos hemos conectado a la BBDD&quot;);
+    String sql = &quot;INSERT INTO Estudiante (id, dni, nombre, apellido, edad) VALUES (22, '11111111H', 'Zara', 'Ali', 18)&quot;;
+    stmt.executeUpdate(sql);
+}catch(SQLException se){
+    se.printStackTrace();
+}catch(Exception e){
+    e.printStackTrace();
+}finally{
+    try{
+        if(stmt!=null)
+            stmt.close();
+            conn.close();
+    }catch(SQLException se){
+        System.out.println(&quot;No se ha podido cerrar la conexión.&quot;);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Existe la posibilidad de realizar sentencias SQL dinámicas. La estructura será muy parecida a lo que estábamos usando hasta ahora, pero en lugar del objeto &lt;strong&gt;Statement&lt;/strong&gt; usaremos el objeto PreparedStatement. Este tipo de objeto está especialmente diseñado para poder realizar operaciones con sentencias dinámicas.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;Connection conn = null;
+PreparedStatement stmt = null;
+try {
+    //Utiliza la clase auxiliar que hemos creado para establecer conexión con bbdd
+    conn = conector.conector();
+    System.out.println(&quot;Nos hemos conectado a la BBDD&quot;);
+    String sql = &quot;INSERT INTO Estudiantes (id, dni, nombre, apellido, edad) VALUES (?, ?, ?, ?, ?)&quot;;
+    //Imaginemos que viene con datos
+    Estudiante estudiante = new Estudiante();
+    //Prepararemos la query para que coja los datos de manera dinamica.
+    stmt = conn.prepareStatement(sql);
+    stmt.setInt(1, estudiante.getId());
+    stmt.setString(2, estudiante.getDni());
+    stmt.setString(3, estudiante.getNombre());
+    stmt.setString(4, estudiante.getApellido());
+    stmt.setInt(5, estudiante.getEdad());
+    stmt.executeUpdate(sql);
+}catch(SQLException se){
+    se.printStackTrace();
+}catch(Exception e){
+    e.printStackTrace();
+}finally{
+    try{
+        if(stmt!=null)
+            stmt.close();
+        conn.close();
+    }catch(SQLException se){
+            System.out.println(&quot;No se ha podido cerrar la conexión.&quot;);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Actualización de datos&lt;/h2&gt;
+&lt;p&gt;La sentencia UPDATE es conocida por permitir actualizar valores de una tabla concreta de la base de datos. Recordamos cómo se realiza un UPDATE:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;//Para actualizar datos a la bbdd
+UPDATE nombre_tabla SET nombre_columna =valor, nombre_columna=valor2 WHERE nombre_columna =valor;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Este tipo de sentencia se puede ejecutar del mismo modo que en el ejemplo del INSERT. Tenemos dos posibilidades: con una sentencia ya preescrita en nuestro código o con datos dinámicos. Así se implementaría:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;Connection conn = null;
+Statement stmt = null;
+try {
+	// Paso 1: Realizamos la conexión
+	//Paso 2. Crear objeto y llamar a la conexión
+	conn = conector.conector();
+	System.out.println(&quot;Nos hemos conectado a la BBDD&quot;);
+	//Paso 3. Crear estructura de la sentencia
+	String sql = &quot;UPDATE estudiante SET dni = '00000000T' WHERE id = '12'&quot;;
+	//Paso 4. Ejecución
+	stmt = conn.createStatement();
+}catch(SQLException se){
+	//Gestionamos los posibles errores que puedan surgir durante la ejecucion de la insercion
+	se.printStackTrace();
+}catch(Exception e){
+	//Gestionamos los posibles errores
+	e.printStackTrace();
+}finally{
+	//Paso 5. Cerrar objetos abiertos
+	try{
+		if(stmt!=null)
+			stmt.close();
+		conn.close();
+	}catch(SQLException se){
+		System.out.println(&quot;No se ha podido cerrar la conexión.&quot;);
+	}
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Para un &lt;strong&gt;UPDATE&lt;/strong&gt; con sentencia fija, usaremos el objeto Statement, ya que es una operación sencilla. El procedimiento es exactamente igual que con otras sentencias: deberemos meter todo el código entre el try-catch para poder controlar los errores que puedan surgir. Para un &lt;strong&gt;UPDATE&lt;/strong&gt; con datos dinámicos usaremos un objeto &lt;strong&gt;PreparedStatement&lt;/strong&gt;, que nos va a permitir añadir dinámicamente los valores que nos interesen a nuestra sentencia.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="20"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <none></none>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="29"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="21"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="15"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:4.5.%20Sentencias%20de%20modificaci%C3%B3n%20de%20datos"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="24">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="4.6. Ejecución de consultas"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="22">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="23">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="122_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="22"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -1091,7 +1609,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="17"></reference>
+                <reference key="23"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -1099,7 +1617,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="18"></reference>
+              <reference key="24"></reference>
              </dictionary>
             </instance>
            </list>
@@ -1116,7 +1634,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="18"></reference>
+           <reference key="24"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -1127,7 +1645,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="19">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="25">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Ejemplo"></unicode>
@@ -1186,12 +1704,12 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="20">
+            <instance class="exe.engine.field.TextAreaField" reference="26">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="123_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="19"></reference>
+              <reference key="25"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -1239,7 +1757,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="20"></reference>
+                <reference key="26"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -1247,7 +1765,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="18"></reference>
+              <reference key="24"></reference>
              </dictionary>
             </instance>
            </list>
@@ -1264,7 +1782,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="18"></reference>
+           <reference key="24"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -1287,7 +1805,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
         <string role="key" value="exportType"></string>
         <string value="website"></string>
         <string role="key" value="last_full_node_path"></string>
-        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:3.3.%20Ejecuci%C3%B3n%20de%20consultas"></string>
+        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:4.6.%20Ejecuci%C3%B3n%20de%20consultas"></string>
         <string role="key" value="parent"></string>
         <reference key="3"></reference>
         <string role="key" value="top_anchors_linked_from_fields"></string>
@@ -1296,13 +1814,13 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="23">
+      <instance class="exe.engine.node.Node" reference="29">
        <dictionary>
         <string role="key" value="_title"></string>
-        <unicode value="3.4. Consultas preparadas"></unicode>
+        <unicode value="4.7. Consultas preparadas"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="21">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="27">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -1361,12 +1879,12 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="22">
+            <instance class="exe.engine.field.TextAreaField" reference="28">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="124_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="21"></reference>
+              <reference key="27"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -1414,7 +1932,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="22"></reference>
+                <reference key="28"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -1422,7 +1940,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="23"></reference>
+              <reference key="29"></reference>
              </dictionary>
             </instance>
            </list>
@@ -1439,7 +1957,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="23"></reference>
+           <reference key="29"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -1462,351 +1980,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
         <string role="key" value="exportType"></string>
         <string value="website"></string>
         <string role="key" value="last_full_node_path"></string>
-        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:3.4.%20Consultas%20preparadas"></string>
-        <string role="key" value="parent"></string>
-        <reference key="3"></reference>
-        <string role="key" value="top_anchors_linked_from_fields"></string>
-        <list></list>
-        <string role="key" value="children"></string>
-        <list></list>
-       </dictionary>
-      </instance>
-      <instance class="exe.engine.node.Node" reference="26">
-       <dictionary>
-        <string role="key" value="_title"></string>
-        <unicode value="3.5. Procedimientos almacenados"></unicode>
-        <string role="key" value="idevices"></string>
-        <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="24">
-          <dictionary>
-           <string role="key" value="_title"></string>
-           <unicode value=""></unicode>
-           <string role="key" value="_attributes"></string>
-           <list>
-            <tuple>
-             <string value="title"></string>
-             <list>
-              <string value="Title"></string>
-              <int value="0"></int>
-              <int value="0"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="category"></string>
-             <list>
-              <string value="Category"></string>
-              <int value="0"></int>
-              <int value="1"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="css-class"></string>
-             <list>
-              <string value="CSS class"></string>
-              <int value="0"></int>
-              <int value="2"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="icon"></string>
-             <list>
-              <string value="Icon"></string>
-              <int value="0"></int>
-              <int value="3"></int>
-             </list>
-            </tuple>
-           </list>
-           <string role="key" value="_author"></string>
-           <string value=""></string>
-           <string role="key" value="_iDeviceDir"></string>
-           <string value="udl-content"></string>
-           <string role="key" value="_purpose"></string>
-           <string value=""></string>
-           <string role="key" value="_tip"></string>
-           <string value=""></string>
-           <string role="key" value="_valid"></string>
-           <bool value="1"></bool>
-           <string role="key" value="class_"></string>
-           <unicode value="UDLcontent"></unicode>
-           <string role="key" value="edit"></string>
-           <bool value="0"></bool>
-           <string role="key" value="emphasis"></string>
-           <int value="0"></int>
-           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
-           <int value="1"></int>
-           <string role="key" value="fields"></string>
-           <list>
-            <instance class="exe.engine.field.TextAreaField" reference="25">
-             <dictionary>
-              <string role="key" value="_id"></string>
-              <unicode value="835_2"></unicode>
-              <string role="key" value="_idevice"></string>
-              <reference key="24"></reference>
-              <string role="key" value="_instruc"></string>
-              <string value=""></string>
-              <string role="key" value="_name"></string>
-              <string value=""></string>
-              <string role="key" value="anchor_names"></string>
-              <list></list>
-              <string role="key" value="anchors_linked_from_fields"></string>
-              <dictionary></dictionary>
-              <string role="key" value="content_w_resourcePaths"></string>
-              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Un procedimiento almacenado es un procedimiento o subprograma que está almacenado en la base de datos. Muchos sistemas gestores de bases de datos los soportan, por ejemplo: MySQL, Oracle, etc.&lt;/p&gt;
-&lt;p&gt;Además, estos procedimientos suelen ser de dos clases:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Procedimientos&lt;/strong&gt; almacenados.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Funciones&lt;/strong&gt;, las cuales devuelven un valor que se puede emplear en otras sentencias SQL.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Un procedimiento almacenado típico tiene:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Un nombre.&lt;/li&gt;
-&lt;li&gt;Una lista de parámetros.&lt;/li&gt;
-&lt;li&gt;Unas sentencias SQL.&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
-              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-              <int value="4"></int>
-              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-              <int value="2"></int>
-              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-              <int value="3"></int>
-              <string role="key" value="htmlTag"></string>
-              <string value="div"></string>
-              <string role="key" value="images"></string>
-              <instance class="exe.engine.galleryidevice.GalleryImages">
-               <dictionary>
-                <string role="key" value=".listitems"></string>
-                <list></list>
-                <string role="key" value="idevice"></string>
-                <reference key="25"></reference>
-               </dictionary>
-              </instance>
-              <string role="key" value="intlinks_to_anchors"></string>
-              <dictionary></dictionary>
-              <string role="key" value="nextImageId"></string>
-              <int value="1"></int>
-              <string role="key" value="parentNode"></string>
-              <reference key="26"></reference>
-             </dictionary>
-            </instance>
-           </list>
-           <string role="key" value="icon"></string>
-           <unicode value=""></unicode>
-           <string role="key" value="id"></string>
-           <unicode value="13"></unicode>
-           <string role="key" value="ideviceCategory"></string>
-           <unicode value="Text and Tasks"></unicode>
-           <string role="key" value="lastIdevice"></string>
-           <bool value="0"></bool>
-           <string role="key" value="nextFieldId"></string>
-           <int value="3"></int>
-           <string role="key" value="originalicon"></string>
-           <string value=""></string>
-           <string role="key" value="parentNode"></string>
-           <reference key="26"></reference>
-           <string role="key" value="systemResources"></string>
-           <list></list>
-           <string role="key" value="undo"></string>
-           <bool value="1"></bool>
-           <string role="key" value="userResources"></string>
-           <list></list>
-           <string role="key" value="version"></string>
-           <int value="0"></int>
-          </dictionary>
-         </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="27">
-          <dictionary>
-           <string role="key" value="_title"></string>
-           <unicode value="Ejemplo"></unicode>
-           <string role="key" value="_attributes"></string>
-           <list>
-            <tuple>
-             <string value="title"></string>
-             <list>
-              <string value="Title"></string>
-              <int value="0"></int>
-              <int value="0"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="category"></string>
-             <list>
-              <string value="Category"></string>
-              <int value="0"></int>
-              <int value="1"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="css-class"></string>
-             <list>
-              <string value="CSS class"></string>
-              <int value="0"></int>
-              <int value="2"></int>
-             </list>
-            </tuple>
-            <tuple>
-             <string value="icon"></string>
-             <list>
-              <string value="Icon"></string>
-              <int value="0"></int>
-              <int value="3"></int>
-             </list>
-            </tuple>
-           </list>
-           <string role="key" value="_author"></string>
-           <string value=""></string>
-           <string role="key" value="_iDeviceDir"></string>
-           <string value="udl-content"></string>
-           <string role="key" value="_purpose"></string>
-           <string value=""></string>
-           <string role="key" value="_tip"></string>
-           <string value=""></string>
-           <string role="key" value="_valid"></string>
-           <bool value="1"></bool>
-           <string role="key" value="class_"></string>
-           <unicode value="UDLcontent"></unicode>
-           <string role="key" value="edit"></string>
-           <bool value="0"></bool>
-           <string role="key" value="emphasis"></string>
-           <int value="1"></int>
-           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
-           <int value="1"></int>
-           <string role="key" value="fields"></string>
-           <list>
-            <instance class="exe.engine.field.TextAreaField" reference="28">
-             <dictionary>
-              <string role="key" value="_id"></string>
-              <unicode value="836_2"></unicode>
-              <string role="key" value="_idevice"></string>
-              <reference key="27"></reference>
-              <string role="key" value="_instruc"></string>
-              <string value=""></string>
-              <string role="key" value="_name"></string>
-              <string value=""></string>
-              <string role="key" value="anchor_names"></string>
-              <list></list>
-              <string role="key" value="anchors_linked_from_fields"></string>
-              <dictionary></dictionary>
-              <string role="key" value="content_w_resourcePaths"></string>
-              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-representation&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Veamos un ejemplo de sentencia para crear un procedimiento almacenado sencillo para MySQL, aunque sería similar en otros sistemas gestores:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;resources/AD03_CONT_R27_01_codPL.jpg&quot; alt=&quot;Procedimientos en bases de datos&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;560&quot; height=&quot;174&quot;&gt;Como se ve en los comentarios, este procedimiento admite un parámetro, llamado &lt;strong&gt;par1&lt;/strong&gt;. También se declara una variable a la que llamamos &lt;strong&gt;var1&lt;/strong&gt; y es de tipo &lt;strong&gt;carácter&lt;/strong&gt; y &lt;strong&gt;longitud 13&lt;/strong&gt;. Si el valor que le llega de parámetro es igual a &lt;strong&gt;24&lt;/strong&gt;, entonces se asigna a la variable &lt;strong&gt;var1&lt;/strong&gt;, la cadena &lt;strong&gt;'perro rabioso'&lt;/strong&gt; y en caso contrario se le asignará la cadena: &lt;strong&gt;'gato persa'&lt;/strong&gt;. Finalmente, se inserta en la tabla “&lt;strong&gt;Animales&lt;/strong&gt;” el valor que se asignó a la variable &lt;strong&gt;var1&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
-              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-              <int value="4"></int>
-              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-              <int value="2"></int>
-              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-              <int value="3"></int>
-              <string role="key" value="htmlTag"></string>
-              <string value="div"></string>
-              <string role="key" value="images"></string>
-              <instance class="exe.engine.galleryidevice.GalleryImages">
-               <dictionary>
-                <string role="key" value=".listitems"></string>
-                <list>
-                 <instance class="exe.engine.galleryidevice.GalleryImage">
-                  <dictionary>
-                   <string role="key" value="_caption"></string>
-                   <instance class="exe.engine.field.TextField">
-                    <dictionary>
-                     <string role="key" value="_id"></string>
-                     <int value="140621"></int>
-                     <string role="key" value="_idevice"></string>
-                     <none></none>
-                     <string role="key" value="_instruc"></string>
-                     <string value=""></string>
-                     <string role="key" value="_name"></string>
-                     <string value=""></string>
-                     <string role="key" value="content"></string>
-                     <string value=""></string>
-                     <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-                     <int value="4"></int>
-                    </dictionary>
-                   </instance>
-                   <string role="key" value="_id"></string>
-                   <unicode value="14_836_2.3"></unicode>
-                   <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="29">
-                    <dictionary>
-                     <string role="key" value="_idevice"></string>
-                     <reference key="27"></reference>
-                     <string role="key" value="_package"></string>
-                     <reference key="4"></reference>
-                     <string role="key" value="_storageName"></string>
-                     <string value="AD03_CONT_R27_01_codPL.jpg"></string>
-                     <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpv6yulx\\AD03_CONT_R27_01_codPL.jpg"></string>
-                     <string role="key" value="checksum"></string>
-                     <string value="a0beee66177f908d3881090812bb2f03"></string>
-                     <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
-                     <int value="2"></int>
-                     <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
-                     <int value="2"></int>
-                     <string role="key" value="warningMsg"></string>
-                     <string value=""></string>
-                    </dictionary>
-                   </instance>
-                   <string role="key" value="_parent"></string>
-                   <reference key="28"></reference>
-                   <string role="key" value="_thumbnailResource"></string>
-                   <none></none>
-                   <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
-                   <int value="3"></int>
-                   <string role="key" value="makeThumbnail"></string>
-                   <bool value="0"></bool>
-                  </dictionary>
-                 </instance>
-                </list>
-                <string role="key" value="idevice"></string>
-                <reference key="28"></reference>
-               </dictionary>
-              </instance>
-              <string role="key" value="intlinks_to_anchors"></string>
-              <dictionary></dictionary>
-              <string role="key" value="nextImageId"></string>
-              <int value="4"></int>
-              <string role="key" value="parentNode"></string>
-              <reference key="26"></reference>
-             </dictionary>
-            </instance>
-           </list>
-           <string role="key" value="icon"></string>
-           <unicode value="think"></unicode>
-           <string role="key" value="id"></string>
-           <unicode value="14"></unicode>
-           <string role="key" value="ideviceCategory"></string>
-           <unicode value="Text and Tasks"></unicode>
-           <string role="key" value="lastIdevice"></string>
-           <bool value="0"></bool>
-           <string role="key" value="nextFieldId"></string>
-           <int value="3"></int>
-           <string role="key" value="originalicon"></string>
-           <string value=""></string>
-           <string role="key" value="parentNode"></string>
-           <reference key="26"></reference>
-           <string role="key" value="systemResources"></string>
-           <list></list>
-           <string role="key" value="undo"></string>
-           <bool value="1"></bool>
-           <string role="key" value="userResources"></string>
-           <list>
-            <reference key="29"></reference>
-           </list>
-           <string role="key" value="version"></string>
-           <int value="0"></int>
-          </dictionary>
-         </instance>
-        </list>
-        <string role="key" value="_id"></string>
-        <unicode value="8"></unicode>
-        <string role="key" value="_package"></string>
-        <reference key="4"></reference>
-        <string role="key" value="anchor_fields"></string>
-        <list></list>
-        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
-        <int value="2"></int>
-        <string role="key" value="exportType"></string>
-        <string value="website"></string>
-        <string role="key" value="last_full_node_path"></string>
-        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:3.5.%20Procedimientos%20almacenados"></string>
+        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:4.7.%20Consultas%20preparadas"></string>
         <string role="key" value="parent"></string>
         <reference key="3"></reference>
         <string role="key" value="top_anchors_linked_from_fields"></string>
@@ -1818,7 +1992,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
       <instance class="exe.engine.node.Node" reference="32">
        <dictionary>
         <string role="key" value="_title"></string>
-        <unicode value="3.6. Transacciones"></unicode>
+        <unicode value="4.8. Procedimientos almacenados"></unicode>
         <string role="key" value="idevices"></string>
         <list>
          <instance class="exe.engine.jsidevice.JsIdevice" reference="30">
@@ -1883,7 +2057,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
             <instance class="exe.engine.field.TextAreaField" reference="31">
              <dictionary>
               <string role="key" value="_id"></string>
-              <unicode value="837_2"></unicode>
+              <unicode value="835_2"></unicode>
               <string role="key" value="_idevice"></string>
               <reference key="30"></reference>
               <string role="key" value="_instruc"></string>
@@ -1895,23 +2069,18 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
               <string role="key" value="anchors_linked_from_fields"></string>
               <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
-              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Cuando tenemos una serie de consultas SQL que deben ejecutarse en conjunto, con el uso de &lt;strong&gt;transacciones&lt;/strong&gt; podemos asegurarnos de que nunca nos quedaremos a medio camino de su ejecución.&lt;/p&gt;
-&lt;p&gt;Las transacciones tienen la característica de poder “&lt;strong&gt;deshacer&lt;/strong&gt;” los cambios efectuados en las tablas, de una transacción dada, si no se han podido realizar todas las operaciones que forman parte de dicha transacción.&lt;/p&gt;
-&lt;p&gt;Por eso, las bases de datos que soportan transacciones son mucho más seguras y fáciles de recuperar si se produce algún fallo en el servidor que almacena la base de datos, ya que las consultas se ejecutan o no en su totalidad.&lt;/p&gt;
-&lt;p&gt;Al ejecutar una transacción, el motor de base de datos garantiza: &lt;strong&gt;atomicidad, consistencia, aislamiento y durabilidad (ACID)&lt;/strong&gt; de la transacción (o conjunto de comandos) que se utilice.&lt;/p&gt;
-&lt;p&gt;El ejemplo típico que se pone para hacer más clara la necesidad de transacciones en algunos casos es el de una transacción bancaria:&lt;/p&gt;
-&lt;p&gt;Para transferir una cantidad de dinero de la cuenta de Antonio a la cuenta de Pedro, se necesitarían dos consultas:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;En la cuenta de Antonio para quitar de su cuenta ese dinero.&lt;/li&gt;
-&lt;li&gt;En la cuenta de Pedro para añadir ese dinero a su cuenta.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;highlighted-code language-sql line-numbers&quot;&gt;
-&lt;pre&gt;&lt;code&gt;UPDATE cuentas SET saldo = saldo - cantidad WHERE cliente = “Antonio”;&amp;nbsp;//&amp;nbsp;Antonio&amp;nbsp;entrega&amp;nbsp;dinero&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;highlighted-code language-sql line-numbers&quot;&gt;
-&lt;pre&gt;&lt;code&gt;UPDATE cuentas SET saldo = saldo + cantidad WHERE cliente = “Pedro”;&amp;nbsp;//&amp;nbsp;Pedro&amp;nbsp;recibe&amp;nbsp;dinero&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Pero, ¿qué ocurre si por algún imprevisto (un apagón de luz, etc.), el sistema “cae” después de que se ejecute la primera consulta, y antes de que se ejecute la segunda? Antonio tendrá una cantidad de dinero menos en su cuenta y creerá que ha realizado la transferencia. Pedro, sin embargo, creerá que todavía no le han realizado la transferencia.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Un procedimiento almacenado es un procedimiento o subprograma que está almacenado en la base de datos. Muchos sistemas gestores de bases de datos los soportan, por ejemplo: MySQL, Oracle, etc.&lt;/p&gt;
+&lt;p&gt;Además, estos procedimientos suelen ser de dos clases:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Procedimientos&lt;/strong&gt; almacenados.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Funciones&lt;/strong&gt;, las cuales devuelven un valor que se puede emplear en otras sentencias SQL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Un procedimiento almacenado típico tiene:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Un nombre.&lt;/li&gt;
+&lt;li&gt;Una lista de parámetros.&lt;/li&gt;
+&lt;li&gt;Unas sentencias SQL.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
               <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -1932,7 +2101,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="0"></int>
+              <int value="1"></int>
               <string role="key" value="parentNode"></string>
               <reference key="32"></reference>
              </dictionary>
@@ -1941,7 +2110,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
            <string role="key" value="icon"></string>
            <unicode value=""></unicode>
            <string role="key" value="id"></string>
-           <unicode value="15"></unicode>
+           <unicode value="13"></unicode>
            <string role="key" value="ideviceCategory"></string>
            <unicode value="Text and Tasks"></unicode>
            <string role="key" value="lastIdevice"></string>
@@ -1965,7 +2134,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
          <instance class="exe.engine.jsidevice.JsIdevice" reference="33">
           <dictionary>
            <string role="key" value="_title"></string>
-           <unicode value="Commit y Rollback"></unicode>
+           <unicode value="Ejemplo"></unicode>
            <string role="key" value="_attributes"></string>
            <list>
             <tuple>
@@ -2024,7 +2193,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
             <instance class="exe.engine.field.TextAreaField" reference="34">
              <dictionary>
               <string role="key" value="_id"></string>
-              <unicode value="838_2"></unicode>
+              <unicode value="836_2"></unicode>
               <string role="key" value="_idevice"></string>
               <reference key="33"></reference>
               <string role="key" value="_instruc"></string>
@@ -2036,28 +2205,8 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
               <string role="key" value="anchors_linked_from_fields"></string>
               <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
-              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Una transacción tiene dos finales posibles, &lt;strong&gt;COMMIT&lt;/strong&gt; o &lt;strong&gt;ROLLBACK&lt;/strong&gt;. Si se finaliza correctamente y sin problemas se hará con &lt;strong&gt;COMMIT&lt;/strong&gt;, con lo que los cambios se realizan en la base de datos, y si por alguna razón hay un fallo, se deshacen los cambios efectuados hasta ese momento, con la ejecución de &lt;strong&gt;ROLLBACK&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Por defecto, al menos en &lt;strong&gt;MySQL&lt;/strong&gt;, en una conexión trabajamos en modo &lt;strong&gt;autocommit&lt;/strong&gt; con valor &lt;strong&gt;true&lt;/strong&gt;. Eso significa que cada consulta es una transacción en la base de datos.&lt;/p&gt;
-&lt;p&gt;Por tanto, si queremos definir una transacción de varias operaciones, estableceremos el modo &lt;strong&gt;autocommit&lt;/strong&gt; a &lt;strong&gt;false&lt;/strong&gt; con el método &lt;strong&gt;setAutoCommit&lt;/strong&gt; de la clase &lt;strong&gt;Connection&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;En modo &lt;strong&gt;no autocommit&lt;/strong&gt; las transacciones quedan definidas por las ejecuciones de los métodos &lt;strong&gt;commit&lt;/strong&gt; y &lt;strong&gt;rollback&lt;/strong&gt;. Una transacción abarca desde el último commit o rollback hasta el siguiente commit. Los métodos &lt;strong&gt;commit&lt;/strong&gt; o &lt;strong&gt;rollback&lt;/strong&gt; forman parte de la clase &lt;strong&gt;Connection&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;En la siguiente porción de código de un procedimiento almacenado, puedes ver un ejemplo sencillo de cómo se puede utilizar &lt;strong&gt;commit&lt;/strong&gt; y &lt;strong&gt;rollback&lt;/strong&gt;: tras las operaciones se realiza el commit, y si ocurre una excepción, al capturarla realizaríamos el rollback.&lt;/p&gt;
-&lt;div class=&quot;highlighted-code language-sql line-numbers&quot;&gt;
-&lt;div&gt;
-&lt;pre&gt;&lt;code&gt;BEGIN
-…
-SET AUTOCOMMIT OFF
-update cuenta set saldo=saldo + 250 where dni=”12345678-L”;
-update cuenta set saldo=saldo - 250 where dni=”89009999-L”;
-COMMIT;
-…
-EXCEPTION
-   WHEN OTHERS THEN
-      ROLLBACK ;
-END;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Es conveniente planificar bien la aplicación para minimizar el tiempo en el que se tengan transacciones abiertas ejecutándose, ya que &lt;strong&gt;consumen recursos&lt;/strong&gt; y suponen bloqueos en la base de datos que puede parar otras transacciones. En muchos casos, un diseño cuidadoso puede evitar usos innecesarios que se salgan fuera del modo estándar &lt;strong&gt;AutoCommit&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-representation&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Veamos un ejemplo de sentencia para crear un procedimiento almacenado sencillo para MySQL, aunque sería similar en otros sistemas gestores:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;resources/AD03_CONT_R27_01_codPL.jpg&quot; alt=&quot;Procedimientos en bases de datos&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;560&quot; height=&quot;174&quot;&gt;Como se ve en los comentarios, este procedimiento admite un parámetro, llamado &lt;strong&gt;par1&lt;/strong&gt;. También se declara una variable a la que llamamos &lt;strong&gt;var1&lt;/strong&gt; y es de tipo &lt;strong&gt;carácter&lt;/strong&gt; y &lt;strong&gt;longitud 13&lt;/strong&gt;. Si el valor que le llega de parámetro es igual a &lt;strong&gt;24&lt;/strong&gt;, entonces se asigna a la variable &lt;strong&gt;var1&lt;/strong&gt;, la cadena &lt;strong&gt;'perro rabioso'&lt;/strong&gt; y en caso contrario se le asignará la cadena: &lt;strong&gt;'gato persa'&lt;/strong&gt;. Finalmente, se inserta en la tabla “&lt;strong&gt;Animales&lt;/strong&gt;” el valor que se asignó a la variable &lt;strong&gt;var1&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
               <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -2070,7 +2219,60 @@ END;
               <instance class="exe.engine.galleryidevice.GalleryImages">
                <dictionary>
                 <string role="key" value=".listitems"></string>
-                <list></list>
+                <list>
+                 <instance class="exe.engine.galleryidevice.GalleryImage">
+                  <dictionary>
+                   <string role="key" value="_caption"></string>
+                   <instance class="exe.engine.field.TextField">
+                    <dictionary>
+                     <string role="key" value="_id"></string>
+                     <int value="140621"></int>
+                     <string role="key" value="_idevice"></string>
+                     <none></none>
+                     <string role="key" value="_instruc"></string>
+                     <string value=""></string>
+                     <string role="key" value="_name"></string>
+                     <string value=""></string>
+                     <string role="key" value="content"></string>
+                     <string value=""></string>
+                     <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                     <int value="4"></int>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_id"></string>
+                   <unicode value="14_836_2.3"></unicode>
+                   <string role="key" value="_imageResource"></string>
+                   <instance class="exe.engine.resource.Resource" reference="35">
+                    <dictionary>
+                     <string role="key" value="_idevice"></string>
+                     <reference key="33"></reference>
+                     <string role="key" value="_package"></string>
+                     <reference key="4"></reference>
+                     <string role="key" value="_storageName"></string>
+                     <string value="AD03_CONT_R27_01_codPL.jpg"></string>
+                     <string role="key" value="_userName"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpv6yulx\\AD03_CONT_R27_01_codPL.jpg"></string>
+                     <string role="key" value="checksum"></string>
+                     <string value="a0beee66177f908d3881090812bb2f03"></string>
+                     <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="warningMsg"></string>
+                     <string value=""></string>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_parent"></string>
+                   <reference key="34"></reference>
+                   <string role="key" value="_thumbnailResource"></string>
+                   <none></none>
+                   <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                   <int value="3"></int>
+                   <string role="key" value="makeThumbnail"></string>
+                   <bool value="0"></bool>
+                  </dictionary>
+                 </instance>
+                </list>
                 <string role="key" value="idevice"></string>
                 <reference key="34"></reference>
                </dictionary>
@@ -2078,16 +2280,16 @@ END;
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="0"></int>
+              <int value="4"></int>
               <string role="key" value="parentNode"></string>
               <reference key="32"></reference>
              </dictionary>
             </instance>
            </list>
            <string role="key" value="icon"></string>
-           <unicode value="diary"></unicode>
+           <unicode value="think"></unicode>
            <string role="key" value="id"></string>
-           <unicode value="16"></unicode>
+           <unicode value="14"></unicode>
            <string role="key" value="ideviceCategory"></string>
            <unicode value="Text and Tasks"></unicode>
            <string role="key" value="lastIdevice"></string>
@@ -2103,14 +2305,16 @@ END;
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
-           <list></list>
+           <list>
+            <reference key="35"></reference>
+           </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
           </dictionary>
          </instance>
         </list>
         <string role="key" value="_id"></string>
-        <unicode value="9"></unicode>
+        <unicode value="8"></unicode>
         <string role="key" value="_package"></string>
         <reference key="4"></reference>
         <string role="key" value="anchor_fields"></string>
@@ -2120,7 +2324,7 @@ END;
         <string role="key" value="exportType"></string>
         <string value="website"></string>
         <string role="key" value="last_full_node_path"></string>
-        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:3.6.%20Transacciones"></string>
+        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:4.8.%20Procedimientos%20almacenados"></string>
         <string role="key" value="parent"></string>
         <reference key="3"></reference>
         <string role="key" value="top_anchors_linked_from_fields"></string>
@@ -2129,13 +2333,13 @@ END;
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="37">
+      <instance class="exe.engine.node.Node" reference="38">
        <dictionary>
         <string role="key" value="_title"></string>
-        <unicode value="3.7. Excepciones y cierres"></unicode>
+        <unicode value="4.9. Transacciones"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="35">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="36">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -2194,12 +2398,326 @@ END;
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="36">
+            <instance class="exe.engine.field.TextAreaField" reference="37">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="837_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="36"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Cuando tenemos una serie de consultas SQL que deben ejecutarse en conjunto, con el uso de &lt;strong&gt;transacciones&lt;/strong&gt; podemos asegurarnos de que nunca nos quedaremos a medio camino de su ejecución.&lt;/p&gt;
+&lt;p&gt;Las transacciones tienen la característica de poder “&lt;strong&gt;deshacer&lt;/strong&gt;” los cambios efectuados en las tablas, de una transacción dada, si no se han podido realizar todas las operaciones que forman parte de dicha transacción.&lt;/p&gt;
+&lt;p&gt;Por eso, las bases de datos que soportan transacciones son mucho más seguras y fáciles de recuperar si se produce algún fallo en el servidor que almacena la base de datos, ya que las consultas se ejecutan o no en su totalidad.&lt;/p&gt;
+&lt;p&gt;Al ejecutar una transacción, el motor de base de datos garantiza: &lt;strong&gt;atomicidad, consistencia, aislamiento y durabilidad (ACID)&lt;/strong&gt; de la transacción (o conjunto de comandos) que se utilice.&lt;/p&gt;
+&lt;p&gt;El ejemplo típico que se pone para hacer más clara la necesidad de transacciones en algunos casos es el de una transacción bancaria:&lt;/p&gt;
+&lt;p&gt;Para transferir una cantidad de dinero de la cuenta de Antonio a la cuenta de Pedro, se necesitarían dos consultas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;En la cuenta de Antonio para quitar de su cuenta ese dinero.&lt;/li&gt;
+&lt;li&gt;En la cuenta de Pedro para añadir ese dinero a su cuenta.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;highlighted-code language-sql line-numbers&quot;&gt;
+&lt;pre&gt;&lt;code&gt;UPDATE cuentas SET saldo = saldo - cantidad WHERE cliente = “Antonio”;&amp;nbsp;//&amp;nbsp;Antonio&amp;nbsp;entrega&amp;nbsp;dinero&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlighted-code language-sql line-numbers&quot;&gt;
+&lt;pre&gt;&lt;code&gt;UPDATE cuentas SET saldo = saldo + cantidad WHERE cliente = “Pedro”;&amp;nbsp;//&amp;nbsp;Pedro&amp;nbsp;recibe&amp;nbsp;dinero&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Pero, ¿qué ocurre si por algún imprevisto (un apagón de luz, etc.), el sistema “cae” después de que se ejecute la primera consulta, y antes de que se ejecute la segunda? Antonio tendrá una cantidad de dinero menos en su cuenta y creerá que ha realizado la transferencia. Pedro, sin embargo, creerá que todavía no le han realizado la transferencia.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="37"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="38"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="15"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="38"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="39">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Commit y Rollback"></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="1"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="40">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="838_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="39"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Una transacción tiene dos finales posibles, &lt;strong&gt;COMMIT&lt;/strong&gt; o &lt;strong&gt;ROLLBACK&lt;/strong&gt;. Si se finaliza correctamente y sin problemas se hará con &lt;strong&gt;COMMIT&lt;/strong&gt;, con lo que los cambios se realizan en la base de datos, y si por alguna razón hay un fallo, se deshacen los cambios efectuados hasta ese momento, con la ejecución de &lt;strong&gt;ROLLBACK&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Por defecto, al menos en &lt;strong&gt;MySQL&lt;/strong&gt;, en una conexión trabajamos en modo &lt;strong&gt;autocommit&lt;/strong&gt; con valor &lt;strong&gt;true&lt;/strong&gt;. Eso significa que cada consulta es una transacción en la base de datos.&lt;/p&gt;
+&lt;p&gt;Por tanto, si queremos definir una transacción de varias operaciones, estableceremos el modo &lt;strong&gt;autocommit&lt;/strong&gt; a &lt;strong&gt;false&lt;/strong&gt; con el método &lt;strong&gt;setAutoCommit&lt;/strong&gt; de la clase &lt;strong&gt;Connection&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En modo &lt;strong&gt;no autocommit&lt;/strong&gt; las transacciones quedan definidas por las ejecuciones de los métodos &lt;strong&gt;commit&lt;/strong&gt; y &lt;strong&gt;rollback&lt;/strong&gt;. Una transacción abarca desde el último commit o rollback hasta el siguiente commit. Los métodos &lt;strong&gt;commit&lt;/strong&gt; o &lt;strong&gt;rollback&lt;/strong&gt; forman parte de la clase &lt;strong&gt;Connection&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En la siguiente porción de código de un procedimiento almacenado, puedes ver un ejemplo sencillo de cómo se puede utilizar &lt;strong&gt;commit&lt;/strong&gt; y &lt;strong&gt;rollback&lt;/strong&gt;: tras las operaciones se realiza el commit, y si ocurre una excepción, al capturarla realizaríamos el rollback.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;BEGIN
+…
+SET AUTOCOMMIT OFF
+update cuenta set saldo=saldo + 250 where dni=”12345678-L”;
+update cuenta set saldo=saldo - 250 where dni=”89009999-L”;
+COMMIT;
+…
+EXCEPTION
+   WHEN OTHERS THEN
+      ROLLBACK ;
+END;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Es conveniente planificar bien la aplicación para minimizar el tiempo en el que se tengan transacciones abiertas ejecutándose, ya que &lt;strong&gt;consumen recursos&lt;/strong&gt; y suponen bloqueos en la base de datos que puede parar otras transacciones. En muchos casos, un diseño cuidadoso puede evitar usos innecesarios que se salgan fuera del modo estándar &lt;strong&gt;AutoCommit&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="40"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="38"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value="diary"></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="16"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="38"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="9"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="4"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:4.9.%20Transacciones"></string>
+        <string role="key" value="parent"></string>
+        <reference key="3"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="43">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="4.10. Excepciones y cierres"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="41">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="42">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="839_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="35"></reference>
+              <reference key="41"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2227,7 +2745,7 @@ END;
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="36"></reference>
+                <reference key="42"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2235,7 +2753,7 @@ END;
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="37"></reference>
+              <reference key="43"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2252,7 +2770,7 @@ END;
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="37"></reference>
+           <reference key="43"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -2263,7 +2781,7 @@ END;
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="38">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="44">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Excepciones"></unicode>
@@ -2322,12 +2840,12 @@ END;
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="39">
+            <instance class="exe.engine.field.TextAreaField" reference="45">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="840_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="38"></reference>
+              <reference key="44"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2381,10 +2899,10 @@ END;
                    <string role="key" value="_id"></string>
                    <unicode value="18_840_2.3"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="40">
+                   <instance class="exe.engine.resource.Resource" reference="46">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="38"></reference>
+                     <reference key="44"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="4"></reference>
                      <string role="key" value="_storageName"></string>
@@ -2402,7 +2920,7 @@ END;
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="39"></reference>
+                   <reference key="45"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -2413,7 +2931,7 @@ END;
                  </instance>
                 </list>
                 <string role="key" value="idevice"></string>
-                <reference key="39"></reference>
+                <reference key="45"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2421,7 +2939,7 @@ END;
               <string role="key" value="nextImageId"></string>
               <int value="4"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="37"></reference>
+              <reference key="43"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2438,20 +2956,20 @@ END;
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="37"></reference>
+           <reference key="43"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
            <list>
-            <reference key="40"></reference>
+            <reference key="46"></reference>
            </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="41">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="47">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Cierre de conexiones"></unicode>
@@ -2510,12 +3028,12 @@ END;
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="42">
+            <instance class="exe.engine.field.TextAreaField" reference="48">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="841_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="41"></reference>
+              <reference key="47"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2564,10 +3082,10 @@ END;
                    <string role="key" value="_id"></string>
                    <unicode value="19_841_2.3"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="43">
+                   <instance class="exe.engine.resource.Resource" reference="49">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="41"></reference>
+                     <reference key="47"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="4"></reference>
                      <string role="key" value="_storageName"></string>
@@ -2585,7 +3103,7 @@ END;
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="42"></reference>
+                   <reference key="48"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -2596,7 +3114,7 @@ END;
                  </instance>
                 </list>
                 <string role="key" value="idevice"></string>
-                <reference key="42"></reference>
+                <reference key="48"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2604,7 +3122,7 @@ END;
               <string role="key" value="nextImageId"></string>
               <int value="4"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="37"></reference>
+              <reference key="43"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2621,14 +3139,14 @@ END;
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="37"></reference>
+           <reference key="43"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
            <list>
-            <reference key="43"></reference>
+            <reference key="49"></reference>
            </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
@@ -2646,7 +3164,7 @@ END;
         <string role="key" value="exportType"></string>
         <string value="website"></string>
         <string role="key" value="last_full_node_path"></string>
-        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:3.7.%20Excepciones%20y%20cierres"></string>
+        <string value="exe-node:UA04.%20Gesti%C3%B3n%20de%20la%20informaci%C3%B3n:4.10.%20Excepciones%20y%20cierres"></string>
         <string role="key" value="parent"></string>
         <reference key="3"></reference>
         <string role="key" value="top_anchors_linked_from_fields"></string>
@@ -2659,21 +3177,25 @@ END;
     </dictionary>
    </instance>
    <unicode role="key" value="10"></unicode>
-   <reference key="37"></reference>
+   <reference key="43"></reference>
    <unicode role="key" value="11"></unicode>
    <reference key="7"></reference>
    <unicode role="key" value="12"></unicode>
    <reference key="12"></reference>
    <unicode role="key" value="13"></unicode>
    <reference key="15"></reference>
-   <unicode role="key" value="6"></unicode>
+   <unicode role="key" value="14"></unicode>
    <reference key="18"></reference>
+   <unicode role="key" value="15"></unicode>
+   <reference key="21"></reference>
+   <unicode role="key" value="6"></unicode>
+   <reference key="24"></reference>
    <unicode role="key" value="7"></unicode>
-   <reference key="23"></reference>
+   <reference key="29"></reference>
    <unicode role="key" value="8"></unicode>
-   <reference key="26"></reference>
-   <unicode role="key" value="9"></unicode>
    <reference key="32"></reference>
+   <unicode role="key" value="9"></unicode>
+   <reference key="38"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -2684,7 +3206,7 @@ END;
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="3"></reference>
+  <reference key="43"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -3720,15 +4242,15 @@ END;
   <dictionary>
    <string role="key" value="428b0e8d5205579c73aa7a46f17a5556"></string>
    <list>
-    <reference key="43"></reference>
+    <reference key="49"></reference>
    </list>
    <string role="key" value="4bced6f89bac88c591ce5266081f99d0"></string>
    <list>
-    <reference key="40"></reference>
+    <reference key="46"></reference>
    </list>
    <string role="key" value="a0beee66177f908d3881090812bb2f03"></string>
    <list>
-    <reference key="29"></reference>
+    <reference key="35"></reference>
    </list>
   </dictionary>
   <string role="key" value="root"></string>

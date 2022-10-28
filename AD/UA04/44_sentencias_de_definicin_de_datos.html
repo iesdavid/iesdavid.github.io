@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4. Sentencias de definición de datos | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Gestión de la información</a></li>
+   <li><a href="41_statement.html" class="no-ch">4.1. Statement</a></li>
+   <li><a href="42_preparedstatement.html" class="no-ch">4.2. PreparedStatement</a></li>
+   <li><a href="43_resultset.html" class="no-ch">4.3. ResultSet</a></li>
+   <li id="active"><a href="44_sentencias_de_definicin_de_datos.html" class="active no-ch">4.4. Sentencias de definición de datos</a></li>
+   <li><a href="45_sentencias_de_modificacin_de_datos.html" class="no-ch">4.5. Sentencias de modificación de datos</a></li>
+   <li><a href="46_ejecucin_de_consultas.html" class="no-ch">4.6. Ejecución de consultas</a></li>
+   <li><a href="47_consultas_preparadas.html" class="no-ch">4.7. Consultas preparadas</a></li>
+   <li><a href="48_procedimientos_almacenados.html" class="no-ch">4.8. Procedimientos almacenados</a></li>
+   <li><a href="49_transacciones.html" class="no-ch">4.9. Transacciones</a></li>
+   <li><a href="410_excepciones_y_cierres.html" class="no-ch">4.10. Excepciones y cierres</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="43_resultset.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="45_sentencias_de_modificacin_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4. Sentencias de definición de datos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id28">
+<div class="iDevice emphasis0" >
+<div id="ta28_121_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Entendemos como sentencias de definición de datos (<strong>data definition language</strong>) todas aquellas que permitan manipular la estructura de nuestra base de datos.</p>
+<p>Se trata de una manera de definir ciertos comandos de datos. Estas sentencias pueden ser:</p>
+<ul>
+<li><strong>CREATE</strong>: se encarga de crear bases de datos o tablas.</li>
+<li><strong>ALTER:</strong> la usaremos para la modificación de tablas o bases de datos.</li>
+<li><strong>DROP:</strong> la usaremos para borrar bases de datos o tablas.</li>
+<li><strong>RENAME:</strong> usaremos esta sentencia para cambiar el nombre de nuestra base de<br>datos o de una tabla.</li>
+</ul>
+<p>Estos comandos son exclusivamente para hacer modificaciones en las tablas, no para realizar consultas en MySQL. JDBC nos da opciones para poder hacer este tipo de sentencias mediante el código Java.</p>
+<div class="exe-fx exe-accordion">
+<h2>Crear tablas o bases de datos</h2>
+<p>El comando CREATE se puede usar para crear una tabla o una base de datos. Normalmente, ya tendremos creada la base de datos, pero si en alguna ocasión se tiene que realizar, se puede hacer mediante la aplicación.</p>
+<p>Aquí tenemos la estructura teórica que podemos adaptar para nuestras sentencias y necesidades. La estructura básica de estas sentencias son estas, a modo de recordatorio:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public void crecionBaseDeDatos() throws Exception {
+    Connection conn = null;
+    Statement stmt = null;
+    try {
+        //Paso 1.Previamente habremos realizado la conexión
+        conn = conector.conector();
+        //Paso 2. Creamos un nuevo objeto con la conexión
+        stmt = conn.createStatement();
+        //Paso 3. Definimos la sentencia de crear una nueva base de datos
+        String sql = "CREATE DATABASE ejemplo";
+        //Paso 4. Ejecutar la sentencia
+        stmt.executeUpdate(sql);
+    }catch(SQLException se){
+        //Gestionamos los posibles errores que puedan surgir durante la ejecucion de la insercion
+        se.printStackTrace();
+    }catch(Exception e){
+        //Gestionamos los posibles errores
+        e.printStackTrace();
+    }finally{
+        //Paso 5. Cerrar el objeto en uso y la conexión
+        stmt.close();
+        conn.close();
+    }
+}</code></pre>
+</div>
+</div>
+<h2>Modificar tablas</h2>
+<p>Para la modificación de tablas o de bases de datos utilizaremos la sentencia <strong>ALTER</strong>. ALTER es la operación SQL que se encargará de realizar cambios dentro de la base de datos o de la tabla que especifiquemos, siempre que esos datos existan. Nos permitirá añadir, cambiar o eliminar campos de una tabla, o también renombrar una tabla. Estas son las estructuras básicas para realizar este tipo de operaciones:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>//Para modificar la base de datos
+ALTER DATABASE nombre_base_de_datos MODIFY NAME=nuevo_nombre;
+//Para añadir columnas
+ALTER TABLE nombre_tabla ADD COLUMN nombre_columna tipo_dato;
+//Para modificar columnas
+ALTER TABLE nombre_tabla MODIFY COLUMN nombre_columna tipo_dato;
+//Para borrar una columna
+ALTER TABLE nombre_tabla DROP COLUMN nombre_columna;</code></pre>
+</div>
+</div>
+<p>Las opciones con esta sentencia son bastante amplias: podremos modificar columnas, añadirlas o hasta borrarlas. Aquí podemos ver un ejemplo práctico:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Statement stmt = null;
+try {
+    //Paso 1: Realizamos la conexión
+    conn = conector.conector();
+    System.out.println("Nos hemos conectado a la BBDD");
+    //Paso 2: Preparamos el objeto Statement
+    stmt = conn.createStatement();
+    //Paso 3:Modificacion de la base de datos, borrar 2 columnas
+    String sql = "ALTER TABLE estudiante DROP COLUMN dni, DROP COLUMN edad;";
+    stmt.executeUpdate(sql);
+}catch(SQLException se){
+    //Gestionamos los posibles errores que puedan surgir durante la ejecución de la inserción
+    se.printStackTrace();
+} catch (Exception e) {
+    System.out.println("Se ha producido un error.");
+} finally {
+    stmt.close();
+    conn.close();
+}</code></pre>
+</div>
+</div>
+<h2>Eliminar tablas o bases de datos</h2>
+<p>El comando DROP es utilizado para borrar bases de datos o tablas dentro de nuestra base de datos. Cuando ejecutamos este comando, todos los datos que contenga la BBDD o la tabla también se borran. Como recordatorio, aquí tenemos la estructura básica para las dos opciones de DROP:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>//Para borrar una base de datos
+DROP DATABASE nombre_base_datos;
+//Para borrar una tabla
+DROP TABLE nombre_tabla;</code></pre>
+</div>
+</div>
+<p>La estructura es muy simple y adaptarlo a la estructura JDBC será parecido a lo que venimos realizando con los otros comandos. Como podemos apreciar, también usaremos la interfaz Statement. La sentencia DROP, al no devolver ningún registro ni información, es ideal para este tipo de interfaz, ya que está especialmente diseñada para operaciones sencillas con la base de datos.</p>
+<h2>Renombrar tablas</h2>
+<p>El comando RENAME nos permitirá renombrar una tabla, es decir, modificar el nombre por otro. Este tipo de operación no producirá ningún cambio en los registros que contenga esa tabla, solo se modificará el nombre de la tabla. La estructura que deberemos seguir es esta:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>//Para renombrar una tabla
+RENAME TABLE nombre_tabla TO Nuevo_nombre_tabla;</code></pre>
+</div>
+</div>
+<p>Como hemos visto en ejemplos anteriores, el procedimiento es el mismo, solo cambia la sentencia SQL.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="43_resultset.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="45_sentencias_de_modificacin_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

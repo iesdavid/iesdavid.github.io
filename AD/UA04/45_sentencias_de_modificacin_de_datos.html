@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.5. Sentencias de modificación de datos | UA03. Conectores </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Gestión de la información</a></li>
+   <li><a href="41_statement.html" class="no-ch">4.1. Statement</a></li>
+   <li><a href="42_preparedstatement.html" class="no-ch">4.2. PreparedStatement</a></li>
+   <li><a href="43_resultset.html" class="no-ch">4.3. ResultSet</a></li>
+   <li><a href="44_sentencias_de_definicin_de_datos.html" class="no-ch">4.4. Sentencias de definición de datos</a></li>
+   <li id="active"><a href="45_sentencias_de_modificacin_de_datos.html" class="active no-ch">4.5. Sentencias de modificación de datos</a></li>
+   <li><a href="46_ejecucin_de_consultas.html" class="no-ch">4.6. Ejecución de consultas</a></li>
+   <li><a href="47_consultas_preparadas.html" class="no-ch">4.7. Consultas preparadas</a></li>
+   <li><a href="48_procedimientos_almacenados.html" class="no-ch">4.8. Procedimientos almacenados</a></li>
+   <li><a href="49_transacciones.html" class="no-ch">4.9. Transacciones</a></li>
+   <li><a href="410_excepciones_y_cierres.html" class="no-ch">4.10. Excepciones y cierres</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="44_sentencias_de_definicin_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="46_ejecucin_de_consultas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.5. Sentencias de modificación de datos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id29">
+<div class="iDevice emphasis0" >
+<div id="ta29_122_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Entendemos como sentencias de modificación de datos todas aquellas que actualicen o modifiquen de algún modo uno o más registros en una tabla. Este tipo de comando SQL contempla la manipulación de los datos presentes en la base de datos, y serán prácticamente la gran mayoría de los comandos conocidos por SQL:</p>
+<ul>
+<li><strong>INSERT:</strong> añadirá una fila en la tabla de base de datos indicada.</li>
+<li><strong>DELETE:</strong> se encarga de borrar información de una tabla de la base de datos.</li>
+<li><strong>UPDATE:</strong> se encarga de modificar los registros de una tabla de la base de datos.</li>
+</ul>
+<p>Estas sentencias nos permitirán borrar datos, insertar nuevos registros o actualizar uno existente. El procedimiento para crear estas sentencias dentro de nuestra aplicación Java es parecido a los ejemplos anteriores, cambiará la consulta.</p>
+<div class="exe-fx exe-accordion">
+<h2>Inserción de datos</h2>
+<p>Esta es una sentencia que nos permitirá insertar nuevos registros en una tabla de nuestra base de datos. Esta será una de las opciones más usadas. La implementación en nuestra aplicación será de forma muy parecida a los ejemplos ya explicados con anterioridad.</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>//Para insertar datos a la bbdd
+INSERT INTO nombre_tabla (nombre_columna, nombre_columna) VALUES (valor, valor);</code></pre>
+</div>
+</div>
+<p>Para realizar un nuevo registro también tenemos que crear un objeto <strong>Statement</strong> que nos servirá para llamar al método <strong>createStatement()</strong>. La sintaxis del <strong>INSERT</strong> la crearemos mediante un string, tal y como veníamos haciendo hasta ahora, y se lo pasaremos al método <strong>executeUpdate()</strong>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Connection conn = null;
+PreparedStatement stmt = null;
+try {
+    //Utiliza la clase auxiliar que hemos creado para establecer conexión con bbdd
+    conn = conector.conector();
+    System.out.println("Nos hemos conectado a la BBDD");
+    String sql = "INSERT INTO Estudiante (id, dni, nombre, apellido, edad) VALUES (22, '11111111H', 'Zara', 'Ali', 18)";
+    stmt.executeUpdate(sql);
+}catch(SQLException se){
+    se.printStackTrace();
+}catch(Exception e){
+    e.printStackTrace();
+}finally{
+    try{
+        if(stmt!=null)
+            stmt.close();
+            conn.close();
+    }catch(SQLException se){
+        System.out.println("No se ha podido cerrar la conexión.");
+    }
+}</code></pre>
+</div>
+</div>
+<p>Existe la posibilidad de realizar sentencias SQL dinámicas. La estructura será muy parecida a lo que estábamos usando hasta ahora, pero en lugar del objeto <strong>Statement</strong> usaremos el objeto PreparedStatement. Este tipo de objeto está especialmente diseñado para poder realizar operaciones con sentencias dinámicas.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Connection conn = null;
+PreparedStatement stmt = null;
+try {
+    //Utiliza la clase auxiliar que hemos creado para establecer conexión con bbdd
+    conn = conector.conector();
+    System.out.println("Nos hemos conectado a la BBDD");
+    String sql = "INSERT INTO Estudiantes (id, dni, nombre, apellido, edad) VALUES (?, ?, ?, ?, ?)";
+    //Imaginemos que viene con datos
+    Estudiante estudiante = new Estudiante();
+    //Prepararemos la query para que coja los datos de manera dinamica.
+    stmt = conn.prepareStatement(sql);
+    stmt.setInt(1, estudiante.getId());
+    stmt.setString(2, estudiante.getDni());
+    stmt.setString(3, estudiante.getNombre());
+    stmt.setString(4, estudiante.getApellido());
+    stmt.setInt(5, estudiante.getEdad());
+    stmt.executeUpdate(sql);
+}catch(SQLException se){
+    se.printStackTrace();
+}catch(Exception e){
+    e.printStackTrace();
+}finally{
+    try{
+        if(stmt!=null)
+            stmt.close();
+        conn.close();
+    }catch(SQLException se){
+            System.out.println("No se ha podido cerrar la conexión.");
+    }
+}</code></pre>
+</div>
+</div>
+<h2>Actualización de datos</h2>
+<p>La sentencia UPDATE es conocida por permitir actualizar valores de una tabla concreta de la base de datos. Recordamos cómo se realiza un UPDATE:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>//Para actualizar datos a la bbdd
+UPDATE nombre_tabla SET nombre_columna =valor, nombre_columna=valor2 WHERE nombre_columna =valor;</code></pre>
+</div>
+</div>
+<p>Este tipo de sentencia se puede ejecutar del mismo modo que en el ejemplo del INSERT. Tenemos dos posibilidades: con una sentencia ya preescrita en nuestro código o con datos dinámicos. Así se implementaría:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Connection conn = null;
+Statement stmt = null;
+try {
+	// Paso 1: Realizamos la conexión
+	//Paso 2. Crear objeto y llamar a la conexión
+	conn = conector.conector();
+	System.out.println("Nos hemos conectado a la BBDD");
+	//Paso 3. Crear estructura de la sentencia
+	String sql = "UPDATE estudiante SET dni = '00000000T' WHERE id = '12'";
+	//Paso 4. Ejecución
+	stmt = conn.createStatement();
+}catch(SQLException se){
+	//Gestionamos los posibles errores que puedan surgir durante la ejecucion de la insercion
+	se.printStackTrace();
+}catch(Exception e){
+	//Gestionamos los posibles errores
+	e.printStackTrace();
+}finally{
+	//Paso 5. Cerrar objetos abiertos
+	try{
+		if(stmt!=null)
+			stmt.close();
+		conn.close();
+	}catch(SQLException se){
+		System.out.println("No se ha podido cerrar la conexión.");
+	}
+}</code></pre>
+</div>
+</div>
+<p>Para un <strong>UPDATE</strong> con sentencia fija, usaremos el objeto Statement, ya que es una operación sencilla. El procedimiento es exactamente igual que con otras sentencias: deberemos meter todo el código entre el try-catch para poder controlar los errores que puedan surgir. Para un <strong>UPDATE</strong> con datos dinámicos usaremos un objeto <strong>PreparedStatement</strong>, que nos va a permitir añadir dinámicamente los valores que nos interesen a nuestra sentencia.</p>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="44_sentencias_de_definicin_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="46_ejecucin_de_consultas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
