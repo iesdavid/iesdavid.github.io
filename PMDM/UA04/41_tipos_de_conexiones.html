@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1. Tipos de conexiones | UA04. Comunicando... </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. Comunicando...</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Comunicando...</a></li>
+   <li id="active"><a href="41_tipos_de_conexiones.html" class="active no-ch">4.1. Tipos de conexiones</a></li>
+   <li><a href="42_gestin_de_la_comunicacin.html" class="no-ch">4.2. Gestión de la comunicación</a></li>
+   <li><a href="43_bsqueda_de_dispositivos.html" class="no-ch">4.3. Búsqueda de dispositivos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_gestin_de_la_comunicacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.1. Tipos de conexiones</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_835_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Los terminales móviles tienen una gran habilidad para conectarse con otros dispositivos, ya sea mediante llamadas de <strong>voz</strong>, de <strong>VoIP</strong>, <strong>Bluetooth</strong>, <a href="https://developer.android.com/guide/topics/connectivity/usb?hl=es-419" target="_blank" rel="noopener"><strong>USB</strong></a>, <strong>internet</strong> mediante datos del operador o <a href="https://developer.android.com/guide/topics/connectivity/wifi-scan?hl=es-419" target="_blank" rel="noopener"><strong>wifi</strong></a>, además de <a href="https://developer.android.com/guide/topics/connectivity/vpn?hl=es-419" target="_blank" rel="noopener"><strong>VPN</strong></a>; algunos incluso disponen de comunicación infrarroja <strong>IR</strong>, o <strong>NFC</strong>.</p>
+<p>Comentemos brevemente algunos de estos tipos de conexiones:</p>
+<ul>
+<li><a href="https://developer.android.com/guide/topics/connectivity/telecom?hl=es-419" target="_blank" rel="noopener"><strong>Telecom</strong></a>: el framework Telecom de Android administra las llamadas y videollamadas. Eso incluye las llamadas clásicas mediante el framework <strong>Telephony</strong> y las llamadas <strong>VoIP</strong> mediante la API <strong>ConnectionService</strong>.</li>
+<li><a href="https://developer.android.com/training/basics/network-ops?hl=es-419" target="_blank" rel="noopener"><strong>Internet</strong></a>: Ya sea mediante datos del operador de telecomunicaciones o mediante conexión a una red wifi a la que tenga acceso, el dispositivo móvil podrá acceder a internet. Podríamos utilizar la siguiente función para comprobar si disponemos de conexión; de no tener, podríamos pedir al usuario que la activase. Se utilizan los métodos del servicio <strong>ConnectivityManager</strong> para comprobar qué tipos de conexiones están disponibles.</li>
+<li><a href="https://developer.android.com/guide/topics/connectivity/bluetooth?hl=es-419" target="_blank" rel="noopener"><strong>Bluetooth</strong></a>: las conexiones BT se utilizan en miles de aplicaciones. Podemos usar Bluetooth para enviar sonido desde una app hasta nuestros auriculares, o para obtener los datos de nuestra pulsera de ejercicio. Se podrían distinguir dos tipos de conexión Bluetooth: la <strong>Classic</strong> y la <a href="https://developer.android.com/guide/topics/connectivity/bluetooth/ble-overview?hl=es-419" target="_blank" rel="noopener"><strong>Low Energy</strong> o <strong>LE</strong></a>. Esta última es la más usada debido a la cantidad de pequeños dispositivos conectables con nuestro smartphone, que sólo necesitan una cantidad limitada de datos para comunicarse. El Low Energy va montado sobre las funcionalidades del Classic, pero, una vez establecida la conexión, la transmisión de datos es más eficiente energéticamente. Android dispone de las clases necesarias para escanear el entorno en busca de dispositivos BT, parearse con ellos, conectarse y comenzar el intercambio de datos. Para ello, dispondremos de clases como <strong>BluetoothAdapter</strong> y <strong>BluetoothDevice</strong>, localizadas en el paquete <strong>android.bluetooth</strong>.</li>
+<li><a href="https://developer.android.com/guide/topics/connectivity/nfc?hl=es-419" target="_blank" rel="noopener"><strong>NFC</strong></a>: <strong>Near Field Communication</strong> es un conjunto de tecnologías wireless de rango muy corto (alrededor de cuatro centímetros). Sin embargo, a diferencia del Bluetooth, es una comunicación más sencilla y rápida al no necesitar descubrimiento de dispositivos ni emparejamiento alguno. NFC permite compartir datos entre una etiqueta NFC y un móvil con antena NFC, o entre dos móviles de este tipo, o entre el móvil y un sistema de pago, etcétera.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_ask" id="id5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_ask.png)"><h1 class="iDeviceTitle">UWB</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_835_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Android prepara el soporte oficial para <strong>UWB</strong>, la conectividad de banda ultra ancha que aspira a reemplazar al Bluetooth. <a href="https://www.xatakandroid.com/sistema-operativo/android-prepara-soporte-oficial-para-uwb-conectividad-banda-ultra-ancha-que-aspira-a-reemplazar-al-bluetooth" target="_blank" rel="noopener">Puedes ver la noticia aquí</a> y su apartado en el manual de Android, <a href="https://developer.android.com/guide/topics/connectivity/uwb?hl=es-419" target="_blank" rel="noopener"><strong>aquí</strong></a>.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_think" id="id6">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_think.png)"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_836_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La siguiente función devuelve si existe una conexión a Internet activa o no:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>private fun checkForInternet(context: Context): Boolean {
+
+        // registra la actividad mediante el Servicio de control de conectividad
+        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        // Devuelve un objeto de tipo Network correspondiente a la conexión actual o FALSE
+        val network = connectivityManager.activeNetwork ?: return false
+
+        // Devuelve las capacidades de la conexión activa
+        val activeNetwork = connectivityManager.getNetworkCapabilities(network) ?: return false
+
+        return when {
+            // Indica si la red usa un transporte WIFI,
+            // o si WiFi tiene conectividad
+            activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -&gt; true
+
+            // Indica si la red usa un transporte de red móvil,
+            // o si la red móvil tiene conectividad
+            activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -&gt; true
+
+            // si no, devuelve false
+            else -&gt; false
+        }
+    }</code></pre>
+</div>
+</div>
+<p>Si realizamos una llamada (por <em>listener</em>, cambios de estado, etc.), podemos gestionar su retorno para realizar alguna acción al respecto. Por ejemplo, hacer una transferencia de información si existe conexión, avisar al usuario si no existiera, etc...</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>checkButton.setOnClickListener() {
+            if (checkForInternet(this)) {
+                Toast.makeText(this, "Connected", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Disconnected", Toast.LENGTH_SHORT).show()
+            }
+        }</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_gestin_de_la_comunicacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

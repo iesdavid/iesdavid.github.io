@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3. Búsqueda de dispositivos | UA04. Comunicando... </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. Comunicando...</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Comunicando...</a></li>
+   <li><a href="41_tipos_de_conexiones.html" class="no-ch">4.1. Tipos de conexiones</a></li>
+   <li><a href="42_gestin_de_la_comunicacin.html" class="no-ch">4.2. Gestión de la comunicación</a></li>
+   <li id="active"><a href="43_bsqueda_de_dispositivos.html" class="active no-ch">4.3. Búsqueda de dispositivos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="42_gestin_de_la_comunicacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3. Búsqueda de dispositivos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_837_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para que dos dispositivos puedan conectarse, uno de ellos tiene que establecerse en modo de visible y conectable; el otro estará visible y en búsqueda hasta que encuentre al primero. Entonces se llevará a cabo el emparejamiento de los dos dispositivos. El emparejamiento puede ser directo o requerir una contraseña. Una vez emparejados, los dispositivos pueden establecer una conexión y comenzar el intercambio de datos de uno a otro.</p>
+<p>Veamos cómo programar una aplicación que busque los dispositivos Bluetooth que tenga a su alcance. Abrimos Android Studio y ejecutamos <strong>File &gt; New &gt; New Project... &gt; Empty Activity &gt; Finish</strong>. Tendremos la actividad <strong>MainActivity</strong> y su layout <strong>activity_main</strong>.</p>
+<p>Primero vamos a añadir en el build.gradle del módulo de aplicación las siguientes librerías:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>def coroutines_version = '1.3.7'
+// Coroutines
+implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+// EventBus
+implementation 'org.greenrobot:eventbus:3.2.0'
+// RecyclerView
+implementation 'androidx.recyclerview:recyclerview:1.1.0'</code></pre>
+</div>
+</div>
+<p>Las primeras dos instrucciones implementation son para poder utilizar <strong>coroutines</strong> en nuestra app, de modo que podamos llamar a funciones de BT sin que el hilo principal se bloquee. Después incluimos <strong>EventBus</strong> para enviar mensajes desde una clase a otra. Por último, incluimos la librería de Android para utilizar las listas reciclables. El <strong>RecyclerView</strong> es un componente de interfaz gráfica que nos permite presentar una lista de elementos de forma eficiente.</p>
+<p>Para manipular el dispositivo Bluetooth del terminal, nuestra app tendrá que registrar algunos registros en el manifest. Además, definiremos una clase App:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.ilernaonline.bluetooth"&gt;
+&lt;uses-permission android:name="android.permission.BLUETOOTH" /&gt;
+&lt;uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /&gt;
+&lt;application
+android:name=".App"
+android:allowBackup="true"
+android:icon="@mipmap/ic_launcher"
+android:label="@string/app_name"
+android:roundIcon="@mipmap/ic_launcher_round"
+android:supportsRtl="true"
+android:theme="@style/AppTheme"&gt;
+&lt;activity android:name=".MainActivity"&gt;
+&lt;intent-filter&gt;
+&lt;action android:name="android.intent.action.MAIN" /&gt;
+&lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+&lt;/intent-filter&gt;
+&lt;/activity&gt;
+&lt;/application&gt;
+&lt;/manifest&gt;</code></pre>
+</div>
+</div>
+<p>Como la hemos definido en el manifest, tendremos que crear una clase <strong>Application</strong> para nuestra aplicación. Pulsemos con el botón derecho sobre el nombre del paquete de la app y elijamos <strong>File &gt; New &gt; Kotlin File/Class</strong>. El código es:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import android.app.Application
+class App : Application() {
+override fun onCreate() {
+super.onCreate()
+_instance = this
+}
+companion object {
+private var _instance: App? = null
+val instance: App
+get() = _instance!!
+}
+}</code></pre>
+</div>
+</div>
+<p>Ahora podemos empezar a diseñar el <strong>layout</strong>. Añadiremos algunos botones y un par de <strong>RecyclerView</strong> que mostrarán listas de dispositivos <strong>Bluetooth</strong>:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity"&gt;
+&lt;Button
+android:id="@+id/btnEscanear"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="16dp"
+android:layout_marginTop="16dp"
+android:text="Escanear"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent" /&gt;
+&lt;Button
+android:id="@+id/btnVisible"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginEnd="16dp"
+android:text="VISIBLE"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toTopOf="@+id/btnEscanear" /&gt;
+&lt;androidx.recyclerview.widget.RecyclerView
+android:id="@+id/lstEscaner"
+android:layout_width="0dp"
+android:layout_height="200dp"
+android:layout_marginStart="16dp"
+android:layout_marginTop="16dp"
+android:layout_marginEnd="16dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/btnEscanear" /&gt;
+&lt;ProgressBar
+android:id="@+id/progressBarEscaneo"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+app:layout_constraintBottom_toBottomOf="@+id/lstEscaner"
+app:layout_constraintEnd_toEndOf="@+id/lstEscaner"
+app:layout_constraintStart_toStartOf="@+id/lstEscaner"
+app:layout_constraintTop_toTopOf="@+id/lstEscaner" /&gt;
+&lt;Button
+android:id="@+id/btnPareados"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="32dp"
+android:text="Pareados"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/lstEscaner" /&gt;
+&lt;androidx.recyclerview.widget.RecyclerView
+android:id="@+id/lstPareados"
+android:layout_width="0dp"
+android:layout_height="0dp"
+android:layout_marginStart="16dp"
+android:layout_marginTop="16dp"
+android:layout_marginEnd="16dp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/btnPareados" /&gt;
+&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</code></pre>
+</div>
+</div>
+<p>El resultado sería algo como esto:</p>
+<p><img src="conexionBT.png" alt="Layout conexión BT" title="Layout conexión BT" style="display: block; margin-left: auto; margin-right: auto;" width="331" height="590"></p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_838_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Antes de ponernos con la actividad, vamos a crear un objeto que llevará a cabo todo el trabajo de activar y escanear dispositivos Bluetooth. Pulsamos con el botón derecho sobre el nombre del paquete de nuestra aplicación y escogemos New &gt; Kotlin File/Class. Lo llamaremos MiBluetooth, y lo codificaremos así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import android.app.Activity
+import android.bluetooth.*
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.util.Log
+import androidx.core.content.ContextCompat.startActivity
+import org.greenrobot.eventbus.EventBus
+object MiBluetooth {
+/// EventBus event class
+class EscaneoTerminado
+private val appContext: Context? by lazy(LazyThreadSafetyMode.NONE) {
+App.instance
+}
+private val _adapter: BluetoothAdapter? by lazy(LazyThreadSafetyMode.NONE) {
+val bluetoothManager =
+appContext!!.getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
+bluetoothManager.adapter
+}
+private val adapter: BluetoothAdapter
+get() = _adapter!!
+val escaneados = ArrayList<bluetoothdevice>()
+val estaDesactivado: Boolean
+get() = !adapter.isEnabled
+fun activar() {
+adapter.enable()
+}
+fun visibilizar(context: Context, segundos: Int) {
+val discoverableIntent
+= Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE).apply {
+putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, segundos)
+}
+startActivity(context, discoverableIntent, null)
+}
+private val escanearBroadcastReceiver = object: BroadcastReceiver() {
+override fun onReceive(context: Context, intent: Intent) {
+when(intent.action) {
+BluetoothDevice.ACTION_FOUND, BluetoothDevice.ACTION_NAME_CHANGED -&gt; {
+val device: BluetoothDevice
+= intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)!!
+escaneados.add(device)
+EventBus.getDefault().post(device)
+}
+BluetoothAdapter.ACTION_DISCOVERY_FINISHED -&gt; {
+EventBus.getDefault().post(EscaneoTerminado())
+}
+}
+}
+}
+fun comenzarEscaner(context: Context) {
+val intentFilter = IntentFilter()
+intentFilter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED)
+intentFilter.addAction(BluetoothDevice.ACTION_NAME_CHANGED)
+context.registerReceiver(escanearBroadcastReceiver, intentFilter)
+adapter.startDiscovery()
+}
+fun finalizarEscaner(context: Context) {
+try {
+context.unregisterReceiver(escanearBroadcastReceiver)
+} catch (e: Exception) { }
+}
+fun listarPareados(): List<bluetoothdevice> {
+return adapter.bondedDevices.toList()
+}
+}</bluetoothdevice></bluetoothdevice></code></pre>
+</div>
+</div>
+<p>Podemos observar que <strong>BluetoothAdapter</strong> es la clase más importante de este código, pues está presente en todas las llamadas a Bluetooth. Para obtener una instancia de la clase, llamaremos a:</p>
+<p style="text-align: center;"><strong>adapter = appContext.getSystemService(Context.BLUETOOTH_SERVICE).adapter</strong></p>
+<p>No debemos preocuparnos por la manera tan sofisticada del código, hace más o menos lo mismo, simplemente utilizamos <strong>by lazy</strong> para no obtener el objeto hasta que no sea necesario. El resto de funciones utilizarán este objeto: por ejemplo, la función activar no hace más que <strong>adapter.enable</strong>.</p>
+<p>Para escanear los dispositivos Bluetooth cercanos, el proceso es algo más complicado.</p>
+<p>Primero debemos crear un <strong>BroadcastReceiver</strong>, que es un objeto que recibe llamadas del sistema o de otras clases. Es un mecanismo del sistema Android bastante parecido a <strong>EventBus</strong>, de hecho, podríamos utilizar <strong>BroadcastReceiver</strong> en lugar de <strong>EventBus</strong>, pero este último es más moderno, cómodo y eficiente. Una vez creado el <strong>BroadcastReceiver</strong>, lo programamos para que solo reciba ciertos mensajes mediante el <strong>IntentFilter</strong>. En nuestro caso, nos interesan los mensajes: <strong>ACTION_NAME_CHANGED</strong>, que recibiremos cuando se detecte un nuevo dispositivo, y <strong>ACTION_DISCOVERY_FINISHED</strong>, que nos llegará cuando el sistema decida que el escáner ha terminado. Una vez preparado nuestro receptor de mensajes, llamaremos a <strong>adapter.startDiscovery</strong>.</p>
+<p>Cada vez que recibamos un mensaje <strong>ACTION_NAME_CHANGED</strong>, lo guardaremos en una lista y enviaremos un mensaje <strong>EventBus</strong> para que cualquier otra clase pueda enterarse del evento.</p>
+<p>Veamos ahora cómo podemos utilizar esta clase en nuestra actividad:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import android.app.Activity
+import android.bluetooth.BluetoothDevice
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
+class MainActivity : AppCompatActivity() {
+override fun onCreate(savedInstanceState: Bundle?) {
+super.onCreate(savedInstanceState)
+setContentView(R.layout.activity_main)
+btnVisible.setOnClickListener {
+MiBluetooth.visibilizar(this, CINCO_MINUTOS)
+}
+btnEscanear.setOnClickListener {
+btnEscanear.isEnabled = false
+progressBarEscaneo.visibility = View.VISIBLE
+MiBluetooth.comenzarEscaner(applicationContext)
+}
+btnPareados.setOnClickListener {
+btnPareados.isEnabled = false
+lstPareados.adapter = BluetoothListAdapter(MiBluetooth.listarPareados())
+btnPareados.isEnabled = true
+}
+progressBarEscaneo.visibility = View.GONE
+val layoutManager1 = LinearLayoutManager(this)
+lstEscaner.layoutManager = layoutManager1
+val layoutManager2 = LinearLayoutManager(this)
+lstPareados.layoutManager = layoutManager2
+}
+override fun onResume() {
+super.onResume()
+MiBluetooth.activar()
+EventBus.getDefault().register(this)
+}
+override fun onPause() {
+super.onPause()
+MiBluetooth.finalizarEscaner(this)
+EventBus.getDefault().unregister(this)
+}
+@Subscribe(threadMode = ThreadMode.MAIN)
+fun onBluetoothDevice(device: BluetoothDevice) 
+lstEscaner.adapter = BluetoothListAdapter(MiBluetooth.escaneados)
+}
+@Subscribe(threadMode = ThreadMode.MAIN)
+fun onBluetoothEscaneoTerminado(escaneo: MiBluetooth.EscaneoTerminado) {
+btnEscanear.isEnabled = true
+progressBarEscaneo.visibility = View.GONE
+lstEscaner.adapter =
+BluetoothListAdapter(MiBluetooth.escaneados)
+}
+companion object {
+private const val CINCO_MINUTOS = 300
+}
+}</code></pre>
+</div>
+</div>
+<p>En <strong>onCreate</strong> establecemos las acciones para los botones.</p>
+<ul>
+<li>Para el botón <strong>Visible</strong>, llamamos a <strong>MiBluetooth.visibilizar</strong>, que pedirá al sistema Android que haga visible el dispositivo actual durante el tiempo especificado.</li>
+<li>Para el botón <strong>Escanear</strong>, llamamos a la función <strong>MiBluetooth.comenzarEscaner</strong>. Para obtener los dispositivos ya pareados, llamamos a <strong>MiBluetooth.listarPareados</strong>. El resultado se utiliza como parámetro del objeto <strong>BluetoothListAdapter. </strong>Tras establecer las acciones para los botones, vemos cómo creamos un <strong>layout</strong> que estableceremos en sendos <strong>RecyclerView</strong>. Esto es así debido a la gran capacidad de adaptación que tiene este control. En nuestro caso, nos basta con el layout más sencillo, pues solo le pedimos a cada elemento de la lista que muestre un texto plano.</li>
+<li>Después de <strong>onCreate</strong>, tenemos <strong>onResume</strong> y <strong>onPause</strong>. En estas funciones aprovechamos para registrarnos como observadores de mensajes <strong>EventBus</strong>, de modo que podamos escuchar las respuestas de <strong>MiBluetooth</strong>. Además, en <strong>onResume</strong> activamos el Bluetooth de nuestro dispositivo, por si no estuviese activo aún.</li>
+<li>Ahora vemos dos funciones de suscripción a mensajes de EventBus. Sus nombres no importan realmente, ya que EventBus los distingue por los parámetros, de modo que el primero recibe un <strong>BluetoothDevice</strong>, que es el mensaje que obtendremos cuando el sistema nos comunique que ha encontrado un nuevo dispositivo BT, y el segundo mensaje lo recibiremos cuando el escáner haya terminado. Si hubiésemos metido todo el código de <strong>MiBluetooth</strong> en <strong>MainActivity</strong>, nos hubiésemos ahorrado los mensajes EventBus, pues nos llegarían mensajes directamente al <strong>BroadcastReceiver</strong>, pero de este modo demostramos que es posible liberar a la activity de cualquier tarea, incluso de las que están asociadas a su contexto.</li>
+</ul>
+<p>Por último, solo nos queda entender cómo funciona el BluetoothListAdapter. Esta clase será la responsable de administrar los elementos de los RecyclerView. Veamos su código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import android.bluetooth.BluetoothDevice
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+class BluetoothListAdapter(
+private val dataSet: List&lt;BluetoothDevice&gt;)
+: RecyclerView.Adapter&lt;BluetoothListAdapter.ViewHolder&gt;() {
+class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
+val textView: TextView = v.findViewById(R.id.txt)
+}
+override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
+val v = LayoutInflater
+.from(viewGroup.context)
+.inflate(R.layout.bluetooth_item, viewGroup, false)
+return ViewHolder(v)
+}
+override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
+viewHolder.textView.text = dataSet[position].name
+viewHolder.textView.setOnClickListener {
+val device: BluetoothDevice = dataSet[position]
+}
+}
+override fun getItemCount() = dataSet.size
+}</code></pre>
+</div>
+</div>
+<p>Esta clase recibe una lista de objetos, en nuestro caso, una lista de <strong>BluetoothDevices</strong>. La eficiencia de los <strong>RecyclerView</strong> reside en que, para mostrar una lista de cientos de elementos, el componente solo tiene en memoria la representación gráfica de los objetos que pueden verse, y no más. Para ello, define la clase <strong>ViewHolder</strong>, que es la vista de un elemento. Cuando el usuario haga scroll sobre la lista, el RecyclerView irá reutilizando (reciclando) los ViewHolder con los datos de los nuevos elementos ahora visibles. Vemos cómo en <strong>onCreateViewHolder</strong> utilizamos otro layout para definir qué aspecto tendrán los elementos de la lista. En nuestro caso, el layout del elemento es: </p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;FrameLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginLeft="8dp"
+android:layout_marginRight="8dp"
+android:gravity="center_vertical"&gt;
+&lt;TextView
+android:id="@+id/txt"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textSize="16sp"
+tools:text="Bluetooth Fake Name"
+/&gt;
+&lt;/FrameLayout&gt;</code></pre>
+</div>
+</div>
+<p>Simplemente, un campo de texto que recibirá el nombre del Bluetooth. Como vemos, las funciones relativas al Bluetooth son bastante sencillas gracias a las clases del SDK de Android.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="42_gestin_de_la_comunicacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
