@@ -43,9 +43,10 @@
 <article class="iDevice_wrapper UDLcontentIdevice" id="id3">
 <div class="iDevice emphasis0" >
 <div id="ta3_837_2" class="block iDevice_content">
-<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para que dos dispositivos puedan conectarse, uno de ellos tiene que establecerse en modo de visible y conectable; el otro estará visible y en búsqueda hasta que encuentre al primero. Entonces se llevará a cabo el emparejamiento de los dos dispositivos. El emparejamiento puede ser directo o requerir una contraseña. Una vez emparejados, los dispositivos pueden establecer una conexión y comenzar el intercambio de datos de uno a otro.</p>
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para que dos dispositivos puedan conectarse, uno de ellos tiene que establecerse en modo de visible y conectable; el otro estará visible y en búsqueda hasta que encuentre al primero. Entonces se llevará a cabo el emparejamiento de los dos dispositivos.</p>
+<p>El emparejamiento puede ser directo o requerir una contraseña. Una vez emparejados, los dispositivos pueden establecer una conexión y comenzar el intercambio de datos de uno a otro.</p>
 <p>Veamos cómo programar una aplicación que busque los dispositivos Bluetooth que tenga a su alcance. Abrimos Android Studio y ejecutamos <strong>File &gt; New &gt; New Project... &gt; Empty Activity &gt; Finish</strong>. Tendremos la actividad <strong>MainActivity</strong> y su layout <strong>activity_main</strong>.</p>
-<p>Primero vamos a añadir en el build.gradle del módulo de aplicación las siguientes librerías:</p>
+<p>Primero vamos a añadir en el <strong>build.gradle</strong> del módulo de aplicación las siguientes librerías:</p>
 <div class="highlighted-code language-java">
 <div>
 <pre><code>def coroutines_version = '1.3.7'
@@ -58,27 +59,21 @@ implementation 'org.greenrobot:eventbus:3.2.0'
 implementation 'androidx.recyclerview:recyclerview:1.1.0'</code></pre>
 </div>
 </div>
-<p>Las primeras dos instrucciones implementation son para poder utilizar <strong>coroutines</strong> en nuestra app, de modo que podamos llamar a funciones de BT sin que el hilo principal se bloquee. Después incluimos <strong>EventBus</strong> para enviar mensajes desde una clase a otra. Por último, incluimos la librería de Android para utilizar las listas reciclables. El <strong>RecyclerView</strong> es un componente de interfaz gráfica que nos permite presentar una lista de elementos de forma eficiente.</p>
+<p>Las primeras dos instrucciones <strong>implementation</strong> son para poder utilizar <a href="https://developer.android.com/kotlin/coroutines" target="_blank" rel="noopener"><strong>coroutines</strong> </a>en nuestra app, de modo que podamos llamar a funciones de BT sin que el hilo principal se bloquee. Después incluimos <strong>EventBus</strong> para enviar mensajes desde una clase a otra. Por último, incluimos la librería de Android para utilizar las listas reciclables. El <strong>RecyclerView</strong> es un componente de interfaz gráfica que nos permite presentar una lista de elementos de forma eficiente.</p>
 <p>Para manipular el dispositivo Bluetooth del terminal, nuestra app tendrá que registrar algunos registros en el manifest. Además, definiremos una clase App:</p>
 <div class="highlighted-code language-markup">
 <div>
-<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.ilernaonline.bluetooth"&gt;
-&lt;uses-permission android:name="android.permission.BLUETOOTH" /&gt;
-&lt;uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /&gt;
-&lt;application
-android:name=".App"
-android:allowBackup="true"
-android:icon="@mipmap/ic_launcher"
-android:label="@string/app_name"
-android:roundIcon="@mipmap/ic_launcher_round"
-android:supportsRtl="true"
-android:theme="@style/AppTheme"&gt;
+<pre><code>
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.bluetooth"&gt;
+&lt;uses-permission android:name="android.permission.BLUETOOTH"&gt;&lt;/uses-permission&gt;
+&lt;uses-permission android:name="android.permission.BLUETOOTH_ADMIN"&gt;&lt;/uses-permission&gt;
+&lt;application android:name=".App" android:allowbackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundicon="@mipmap/ic_launcher_round" android:supportsrtl="true" android:theme="@style/AppTheme"&gt;
 &lt;activity android:name=".MainActivity"&gt;
 &lt;intent-filter&gt;
-&lt;action android:name="android.intent.action.MAIN" /&gt;
-&lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+&lt;action android:name="android.intent.action.MAIN"&gt;&lt;/action&gt;
+&lt;category android:name="android.intent.category.LAUNCHER"&gt;&lt;/category&gt;
 &lt;/intent-filter&gt;
 &lt;/activity&gt;
 &lt;/application&gt;
@@ -106,68 +101,77 @@ get() = _instance!!
 <div class="highlighted-code language-markup">
 <div>
 <pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;androidx.constraintlayout.widget.ConstraintLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".MainActivity"&gt;
-&lt;Button
-android:id="@+id/btnEscanear"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginStart="16dp"
-android:layout_marginTop="16dp"
-android:text="Escanear"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toTopOf="parent" /&gt;
-&lt;Button
-android:id="@+id/btnVisible"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginEnd="16dp"
-android:text="VISIBLE"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintTop_toTopOf="@+id/btnEscanear" /&gt;
-&lt;androidx.recyclerview.widget.RecyclerView
-android:id="@+id/lstEscaner"
-android:layout_width="0dp"
-android:layout_height="200dp"
-android:layout_marginStart="16dp"
-android:layout_marginTop="16dp"
-android:layout_marginEnd="16dp"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@+id/btnEscanear" /&gt;
-&lt;ProgressBar
-android:id="@+id/progressBarEscaneo"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-app:layout_constraintBottom_toBottomOf="@+id/lstEscaner"
-app:layout_constraintEnd_toEndOf="@+id/lstEscaner"
-app:layout_constraintStart_toStartOf="@+id/lstEscaner"
-app:layout_constraintTop_toTopOf="@+id/lstEscaner" /&gt;
-&lt;Button
-android:id="@+id/btnPareados"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginTop="32dp"
-android:text="Pareados"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@+id/lstEscaner" /&gt;
-&lt;androidx.recyclerview.widget.RecyclerView
-android:id="@+id/lstPareados"
-android:layout_width="0dp"
-android:layout_height="0dp"
-android:layout_marginStart="16dp"
-android:layout_marginTop="16dp"
-android:layout_marginEnd="16dp"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@+id/btnPareados" /&gt;
+&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;Button
+        android:id="@+id/btnEscanear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginstart="16dp"
+        android:layout_margintop="16dp"
+        android:text="Escanear"
+        app:layout_constraintstart_tostartof="parent"
+        app:layout_constrainttop_totopof="parent"&gt;&lt;/Button&gt;
+
+    &lt;Button
+        android:id="@+id/btnVisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginend="16dp"
+        android:text="VISIBLE"
+        app:layout_constraintend_toendof="parent"
+        app:layout_constrainttop_totopof="@+id/btnEscanear"&gt;
+
+        &lt;androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lstEscaner"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginend="16dp"
+            android:layout_marginstart="16dp"
+            android:layout_margintop="16dp"
+            app:layout_constraintend_toendof="parent"
+            app:layout_constraintstart_tostartof="parent"
+            app:layout_constrainttop_tobottomof="@+id/btnEscanear"&gt;
+
+            &lt;ProgressBar
+                android:id="@+id/progressBarEscaneo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintbottom_tobottomof="@+id/lstEscaner"
+                app:layout_constraintend_toendof="@+id/lstEscaner"
+                app:layout_constraintstart_tostartof="@+id/lstEscaner"
+                app:layout_constrainttop_totopof="@+id/lstEscaner"&gt;&lt;/ProgressBar&gt;
+        &lt;/androidx.recyclerview.widget.RecyclerView&gt;
+    &lt;/Button&gt;
+
+    &lt;Button
+        android:id="@+id/btnPareados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margintop="32dp"
+        android:text="Pareados"
+        app:layout_constraintend_toendof="parent"
+        app:layout_constraintstart_tostartof="parent"
+        app:layout_constrainttop_tobottomof="@+id/lstEscaner"
+        &gt;
+
+        &lt;androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lstPareados"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginend="16dp"
+            android:layout_marginstart="16dp"
+            android:layout_margintop="16dp"
+            app:layout_constraintbottom_tobottomof="parent"
+            app:layout_constraintend_toendof="parent"
+            app:layout_constraintstart_tostartof="parent"
+            app:layout_constrainttop_tobottomof="@+id/btnPareados"&gt;&lt;/androidx.recyclerview.widget.RecyclerView&gt;
+    &lt;/Button&gt;
 &lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</code></pre>
 </div>
 </div>
