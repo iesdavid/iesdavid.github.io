@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.2. Cómo incluir los estilos | UA04. CSS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. CSS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. CSS</a></li>
+   <li><a href="41_sintaxis.html" class="no-ch">4.1. Sintaxis</a></li>
+   <li id="active"><a href="42_cmo_incluir_los_estilos.html" class="active daddy">4.2. Cómo incluir los estilos</a>
+   <ul>
+      <li><a href="421_inline_css.html" class="no-ch">4.2.1. Inline CSS</a></li>
+      <li><a href="422_internal_css.html" class="no-ch">4.2.2. Internal CSS</a></li>
+      <li><a href="423_external_css.html" class="no-ch">4.2.3. External CSS</a></li>
+   </ul>
+   </li>
+   <li><a href="43_atributos_principales.html" class="daddy">4.3. Atributos principales</a>
+   <ul class="other-section">
+      <li><a href="431_color_y_fondo.html" class="no-ch">4.3.1. Color y fondo</a></li>
+      <li><a href="432_texto.html" class="no-ch">4.3.2. Texto</a></li>
+      <li><a href="433_fuente.html" class="no-ch">4.3.3. Fuente</a></li>
+      <li><a href="434_modelos_de_caja.html" class="no-ch">4.3.4. Modelos de caja</a></li>
+      <li><a href="435_enlaces.html" class="no-ch">4.3.5. Enlaces</a></li>
+      <li><a href="436_listas.html" class="no-ch">4.3.6. Listas</a></li>
+      <li><a href="437_tablas.html" class="no-ch">4.3.7. Tablas</a></li>
+   </ul>
+   </li>
+   <li><a href="44_definicin_y_uso_de_clases.html" class="no-ch">4.4. Definición y uso de clases</a></li>
+   <li><a href="45_div_y_span.html" class="no-ch">4.5. div y span</a></li>
+   <li><a href="46_mejoras_de_css3.html" class="no-ch">4.6. Mejoras de CSS3</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="41_sintaxis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="421_inline_css.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.2. Cómo incluir los estilos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_836_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="incluirCSS.jpg" alt="Incluir CSS" style="display: block; margin-left: auto; margin-right: auto;" width="400" height="297">Existen tres opciones para incluir estilos en una página web:</p>
+<div class="exe-fx exe-accordion">
+<h2>Incluir estilos en los elementos HTML (inline CSS)</h2>
+<ul>
+<li>En esta opción se aplica un estilo único a un solo elemento HTML.</li>
+<li>Se usa el atributo de style de un elemento HTML.</li>
+<li>Este método es el menos utilizado, ya que para modificar un formato hay que cambiar todos los elementos que estén asociados a él. Solamente se utiliza en determinadas situaciones en las que se debe incluir un estilo muy específico para un solo elemento concreto.</li>
+</ul>
+<h2>Incluir estilos en el documento HTML (internal CSS)</h2>
+<ul>
+<li>Este método se usa para definir un estilo en una sola página HTML.</li>
+<li>Se define el estilo de una página HTML en la sección <strong>&lt; head &gt;</strong>, dentro de un elemento <strong>&lt; style &gt;</strong>.</li>
+<li>Este método se emplea cuando se definen pocos estilos o cuando se quieren incluir estilos específicos en una determinada página HTML que completen los estilos globales de todas las páginas del sitio web.</li>
+<li>Tiene el inconveniente de que para modificar los estilos definidos, es necesario modificar todas las páginas que incluyen el estilo que se va a cambiar.</li>
+</ul>
+<h2>Definir estilos en un archivo externo (external CSS)</h2>
+<ul>
+<li>En este caso, todos los estilos CSS se incluyen en uno, o varios, archivos de texto plano, cuya extensión es<strong> .css</strong>, que las páginas HTML enlazan mediante el elemento de la cabecera del fichero HTML.</li>
+<li>Puesto que una página web puede tener asociados varios ficheros CSS es recomendable agrupar estos últimos en un directorio. El navegador descarga los archivos CSS externos, además de la página web asociada a ellos, y aplica los estilos a los contenidos de la página antes de mostrar sus contenidos.</li>
+<li>Esta es la forma de incluir CSS en las páginas HTML más utilizada. La principal ventaja es que se puede incluir un mismo archivo CSS en multitud de páginas HTML, por lo que se garantiza la aplicación homogénea de los mismos estilos a todas las páginas que forman un sitio web. Además, el mantenimiento del sitio web se simplifica al máximo, ya que el cambio en un solo archivo CSS permite variar de forma instantánea los estilos de todas las páginas HTML asociadas.</li>
+</ul>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="41_sintaxis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="421_inline_css.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

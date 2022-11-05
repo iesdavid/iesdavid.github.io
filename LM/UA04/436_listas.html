@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3.6. Listas | UA04. CSS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. CSS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. CSS</a></li>
+   <li><a href="41_sintaxis.html" class="no-ch">4.1. Sintaxis</a></li>
+   <li><a href="42_cmo_incluir_los_estilos.html" class="daddy">4.2. Cómo incluir los estilos</a>
+   <ul class="other-section">
+      <li><a href="421_inline_css.html" class="no-ch">4.2.1. Inline CSS</a></li>
+      <li><a href="422_internal_css.html" class="no-ch">4.2.2. Internal CSS</a></li>
+      <li><a href="423_external_css.html" class="no-ch">4.2.3. External CSS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="43_atributos_principales.html" class="current-page-parent daddy">4.3. Atributos principales</a>
+   <ul>
+      <li><a href="431_color_y_fondo.html" class="no-ch">4.3.1. Color y fondo</a></li>
+      <li><a href="432_texto.html" class="no-ch">4.3.2. Texto</a></li>
+      <li><a href="433_fuente.html" class="no-ch">4.3.3. Fuente</a></li>
+      <li><a href="434_modelos_de_caja.html" class="no-ch">4.3.4. Modelos de caja</a></li>
+      <li><a href="435_enlaces.html" class="no-ch">4.3.5. Enlaces</a></li>
+      <li id="active"><a href="436_listas.html" class="active no-ch">4.3.6. Listas</a></li>
+      <li><a href="437_tablas.html" class="no-ch">4.3.7. Tablas</a></li>
+   </ul>
+   </li>
+   <li><a href="44_definicin_y_uso_de_clases.html" class="no-ch">4.4. Definición y uso de clases</a></li>
+   <li><a href="45_div_y_span.html" class="no-ch">4.5. div y span</a></li>
+   <li><a href="46_mejoras_de_css3.html" class="no-ch">4.6. Mejoras de CSS3</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="435_enlaces.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="437_tablas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3.6. Listas</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id16">
+<div class="iDevice emphasis0" >
+<div id="ta16_849_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Las propiedades de la lista CSS nos van a permitir:</p>
+<ul>
+<li>Establecer diferentes marcadores de elementos de lista para listas ordenadas</li>
+<li>Establecer diferentes marcadores de elementos de lista para listas desordenadas</li>
+<li>Establecer una imagen como marcador de elemento de lista</li>
+<li>Agregar colores de fondo a listas y elementos de lista</li>
+</ul>
+<table class="exe-table-minimalist"><colgroup><col> <col></colgroup>
+<tbody>
+<tr>
+<th scope="col"><b>Elemento</b></th>
+<th scope="col"><b>Descripción</b></th>
+<th scope="col"><b>Ejemplo</b></th>
+</tr>
+<tr>
+<td style="width: 130px;"><span>list-style-type</span></td>
+<td><span><strong>Indica cual es el símbolo que se utiliza como marcador en las listas</strong>. Valores que puede tomar son: disc, circle, square, decimal, lower-roman, upper-roman, lower-alpha, upper-alpha, none.</span></td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>ul {
+    list-style-type: circle;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">list-style-image</td>
+<td><strong>Permite utilizar el uso de una imagen como marcador en una lista</strong>. El valor que toma es la ruta del fichero imagen</td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>ul {
+    list-style-image: url('borobil.gif');
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">list-style-position</td>
+<td><strong>Determinan la posición del marcador en una lista</strong>. Puede tomar los valores: outside o inside.</td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>ul {
+    list-style-position: inside;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">list-style</td>
+<td><strong>Permite establecer de una única vez todas las características de una lista</strong>. Hay que seguir el orden siguiente: list-style-type, list-style-position y list-style-image.</td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>ul {
+    list-style: square inside url("borobil.gif");
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Podemos combinar varios atributos sobre los enlaces y crear <strong>Botones de enlace</strong>:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;style&gt;
+    ol {
+    background: #ff9999;
+    padding: 20px;
+    }
+    ul {
+    background: #3399ff;
+    padding: 20px;
+    }
+    ol li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+    }
+    ul li {
+    background: #cce5ff;
+    margin: 5px;
+    }
+   &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Colores en listas:&lt;/h1&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Viena&lt;/li&gt;
+      &lt;li&gt;Praga&lt;/li&gt;
+      &lt;li&gt;Budapest&lt;/li&gt;
+   &lt;/ol&gt;
+   &lt;ul&gt;
+      &lt;li&gt;Viena&lt;/li&gt;
+      &lt;li&gt;Praga&lt;/li&gt;
+      &lt;li&gt;Budapest&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="435_enlaces.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="437_tablas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

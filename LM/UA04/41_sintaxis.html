@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1. Sintaxis | UA04. CSS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. CSS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. CSS</a></li>
+   <li id="active"><a href="41_sintaxis.html" class="active no-ch">4.1. Sintaxis</a></li>
+   <li><a href="42_cmo_incluir_los_estilos.html" class="daddy">4.2. Cómo incluir los estilos</a>
+   <ul class="other-section">
+      <li><a href="421_inline_css.html" class="no-ch">4.2.1. Inline CSS</a></li>
+      <li><a href="422_internal_css.html" class="no-ch">4.2.2. Internal CSS</a></li>
+      <li><a href="423_external_css.html" class="no-ch">4.2.3. External CSS</a></li>
+   </ul>
+   </li>
+   <li><a href="43_atributos_principales.html" class="daddy">4.3. Atributos principales</a>
+   <ul class="other-section">
+      <li><a href="431_color_y_fondo.html" class="no-ch">4.3.1. Color y fondo</a></li>
+      <li><a href="432_texto.html" class="no-ch">4.3.2. Texto</a></li>
+      <li><a href="433_fuente.html" class="no-ch">4.3.3. Fuente</a></li>
+      <li><a href="434_modelos_de_caja.html" class="no-ch">4.3.4. Modelos de caja</a></li>
+      <li><a href="435_enlaces.html" class="no-ch">4.3.5. Enlaces</a></li>
+      <li><a href="436_listas.html" class="no-ch">4.3.6. Listas</a></li>
+      <li><a href="437_tablas.html" class="no-ch">4.3.7. Tablas</a></li>
+   </ul>
+   </li>
+   <li><a href="44_definicin_y_uso_de_clases.html" class="no-ch">4.4. Definición y uso de clases</a></li>
+   <li><a href="45_div_y_span.html" class="no-ch">4.5. div y span</a></li>
+   <li><a href="46_mejoras_de_css3.html" class="no-ch">4.6. Mejoras de CSS3</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_cmo_incluir_los_estilos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.1. Sintaxis</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_115_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="sintaxis.png" rel="lightbox"><img src="sintaxis.png" alt="Sintaxis CSS" title="Sintaxis CSS" style="float: right; margin: 10px;" width="320" height="128"></a>Cada uno de los estilos que componen una hoja de estilos CSS se denomina regla.</p>
+<p>Observa la imagen, cada regla se forma por:</p>
+<ul>
+<li><strong>Selector</strong>: indica el elemento o elementos HTML a los que se aplica la regla CSS</li>
+<li><strong>Llave de apertura</strong>, {</li>
+<li><strong>Declaración</strong>: especifica los estilos que se aplican a los elementos.
+<ul>
+<li><strong>Propiedad</strong>: permite modificar el aspecto de un atributo del elemento.</li>
+<li><strong>Valor</strong>: indica el nuevo valor del atributo modificado en el elemento.</li>
+</ul>
+</li>
+<li><strong>Llave de cierre</strong>, }.&nbsp;</li>
+</ul>
+<p>También puede indicarse identado, por ejemplo:</p>
+<div class="highlighted-code language-css">
+<div>
+<pre><code>p {
+    color : blue;
+    text-align: center;
+}</code></pre>
+</div>
+</div>
+<p>En este caso el selector es "p", la declaración es: "color : blue" y, dentro de ésta, podemos diferenciar la propiedad "color" y el valor "blue".</p>
+<p>Un archivo CSS puede contener infinitas reglas CSS, cada regla puede contener varios selectores y cada declaración puede estar formada por diferentes declaraciones.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_cmo_incluir_los_estilos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

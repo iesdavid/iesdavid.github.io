@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3.1. Color y fondo | UA04. CSS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. CSS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. CSS</a></li>
+   <li><a href="41_sintaxis.html" class="no-ch">4.1. Sintaxis</a></li>
+   <li><a href="42_cmo_incluir_los_estilos.html" class="daddy">4.2. Cómo incluir los estilos</a>
+   <ul class="other-section">
+      <li><a href="421_inline_css.html" class="no-ch">4.2.1. Inline CSS</a></li>
+      <li><a href="422_internal_css.html" class="no-ch">4.2.2. Internal CSS</a></li>
+      <li><a href="423_external_css.html" class="no-ch">4.2.3. External CSS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="43_atributos_principales.html" class="current-page-parent daddy">4.3. Atributos principales</a>
+   <ul>
+      <li id="active"><a href="431_color_y_fondo.html" class="active no-ch">4.3.1. Color y fondo</a></li>
+      <li><a href="432_texto.html" class="no-ch">4.3.2. Texto</a></li>
+      <li><a href="433_fuente.html" class="no-ch">4.3.3. Fuente</a></li>
+      <li><a href="434_modelos_de_caja.html" class="no-ch">4.3.4. Modelos de caja</a></li>
+      <li><a href="435_enlaces.html" class="no-ch">4.3.5. Enlaces</a></li>
+      <li><a href="436_listas.html" class="no-ch">4.3.6. Listas</a></li>
+      <li><a href="437_tablas.html" class="no-ch">4.3.7. Tablas</a></li>
+   </ul>
+   </li>
+   <li><a href="44_definicin_y_uso_de_clases.html" class="no-ch">4.4. Definición y uso de clases</a></li>
+   <li><a href="45_div_y_span.html" class="no-ch">4.5. div y span</a></li>
+   <li><a href="46_mejoras_de_css3.html" class="no-ch">4.6. Mejoras de CSS3</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="43_atributos_principales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="432_texto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3.1. Color y fondo</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id8">
+<div class="iDevice emphasis0" >
+<div id="ta8_841_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><table class="exe-table-minimalist">
+<tbody>
+<tr>
+<th scope="col"><b>Elemento</b></th>
+<th scope="col"><b>Descripción</b></th>
+<th scope="col"><b>Ejemplo</b></th>
+</tr>
+<tr>
+<td style="width: 130px;">color</td>
+<td><strong>Indica el color del texto</strong>. Lo admiten casi todas las etiquetas de HTML. El valor de este atributo es un color, con su nombre o su valor RGB. HTML soporta <a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank" title="Abrir enlace" class="html" rel="noopener">nombres de colores.</a></td>
+<td style="width: 220px;">
+<div class="pre-code">
+<div>
+<pre><code>&lt;p style="color:DodgerBlue;"&gt;Lorem ipsum...&lt;/p&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">border</td>
+<td><strong>Cambia el color de los bordes</strong>.</td>
+<td style="width: 220px;">
+<div class="pre-code">
+<div>
+<pre><code>&lt;h1 style="border:2px solid Violet;"&gt;Hello World&lt;/h1&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">background-color</td>
+<td><strong>Indica el color de fondo del elemento</strong>. El valor de este atributo es un color, con su nombre o su valor RGB.</td>
+<td style="width: 220px;">
+<div class="pre-code">
+<div>
+<pre><code>&lt;h1 style="background-color:Tomato;"&gt;Hello World&lt;/h1&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">background-image</td>
+<td><strong>Permite colocar una imagen de fondo del elemento</strong>. El valor que toma es el nombre de la imagen con su camino relativo o absoluto</td>
+<td style="width: 220px;">
+<div class="pre-code">
+<div>
+<pre><code>body {
+    background-image: url("fondo.jpg");
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">background-repeat</td>
+<td><strong>Indica si ha de repetirse la imagen de fondo y, en ese caso, si debe ser horizontal o verticalmente</strong>. Los valores que puede tomar son: repeat-x, repeat-y o no-repeat.</td>
+<td style="width: 220px;">
+<div class="pre-code">
+<div>
+<pre><code>body {
+    background-image: url("fondo.gif");
+    background-repeat: repeat-x;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">background-attachment</td>
+<td><strong>Especifica si la imagen ha de permanecer fija o realizar un scroll</strong>. Los valores que pueden tomar son: scroll o fixed.</td>
+<td style="width: 220px;">
+<div class="pre-code">
+<div>
+<pre><code>body {
+    background-image: url("fondo.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">background-position</td>
+<td><strong>Es una medida, porcentaje o el posicionamiento vertical u horizontal con los valores establecidos que sirve para posicionar una imagen</strong>. Los valores que puede tomar son: porcentaje, tamaño, o [top, center, bottom] [left, center, rigth]</td>
+<td style="width: 220px;">
+<div class="pre-code">
+<div>
+<pre><code>body {
+    background-image: url("fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">background</td>
+<td><strong>Establece en un solo paso cualquiera de las propiedades de background anteriores</strong>. Los valores que puede tomar son: background-color, background-image, background-repeat, background-attachment, background-position.</td>
+<td style="width: 220px;">
+<div class="pre-code">
+<div>
+<pre><code>body {
+    background: #ffffff url("img_tree.png") no-repeat right top;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_info" id="id12">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Más información</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_845_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="https://www.mclibre.org/consultar/htmlcss/css/css-color.html" target="_blank" rel="noopener">https://www.mclibre.org/consultar/htmlcss/css/css-color.html</a></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="43_atributos_principales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="432_texto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

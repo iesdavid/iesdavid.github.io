@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3.2. Texto | UA04. CSS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. CSS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. CSS</a></li>
+   <li><a href="41_sintaxis.html" class="no-ch">4.1. Sintaxis</a></li>
+   <li><a href="42_cmo_incluir_los_estilos.html" class="daddy">4.2. Cómo incluir los estilos</a>
+   <ul class="other-section">
+      <li><a href="421_inline_css.html" class="no-ch">4.2.1. Inline CSS</a></li>
+      <li><a href="422_internal_css.html" class="no-ch">4.2.2. Internal CSS</a></li>
+      <li><a href="423_external_css.html" class="no-ch">4.2.3. External CSS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="43_atributos_principales.html" class="current-page-parent daddy">4.3. Atributos principales</a>
+   <ul>
+      <li><a href="431_color_y_fondo.html" class="no-ch">4.3.1. Color y fondo</a></li>
+      <li id="active"><a href="432_texto.html" class="active no-ch">4.3.2. Texto</a></li>
+      <li><a href="433_fuente.html" class="no-ch">4.3.3. Fuente</a></li>
+      <li><a href="434_modelos_de_caja.html" class="no-ch">4.3.4. Modelos de caja</a></li>
+      <li><a href="435_enlaces.html" class="no-ch">4.3.5. Enlaces</a></li>
+      <li><a href="436_listas.html" class="no-ch">4.3.6. Listas</a></li>
+      <li><a href="437_tablas.html" class="no-ch">4.3.7. Tablas</a></li>
+   </ul>
+   </li>
+   <li><a href="44_definicin_y_uso_de_clases.html" class="no-ch">4.4. Definición y uso de clases</a></li>
+   <li><a href="45_div_y_span.html" class="no-ch">4.5. div y span</a></li>
+   <li><a href="46_mejoras_de_css3.html" class="no-ch">4.6. Mejoras de CSS3</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="431_color_y_fondo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="433_fuente.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3.2. Texto</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id9">
+<div class="iDevice emphasis0" >
+<div id="ta9_842_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><table class="exe-table-minimalist">
+<tbody>
+<tr>
+<th scope="col"><strong>Elemento</strong></th>
+<th scope="col"><strong>Descripción</strong></th>
+<th scope="col"><strong>Ejemplo</strong></th>
+</tr>
+<tr>
+<td style="width: 130px;">text-decoration</td>
+<td><strong>Establece si el texto está subrayado, sobrerayado o tachado</strong>. los valores que puede tomar son: none, underline, overline, line-through o blink</td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>h3 {
+    text-decoration: underline;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">text-align</td>
+<td><strong>Indica la alineación del texto</strong>. Aunque las hojas de estilo permiten el justificado de texto no funciona en todos los sistemas. Los valores que puede tomar son: left, right, center o justify</td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>h1 {
+    text-align: center;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">text-indent</td>
+<td><strong>Determina la tabulación del texto</strong>. Los valores que toma son una longitud, en unidades CSS, o un porcentaje de la establecida.</td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>p {
+    text-indent: 50px;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">text-transform</td>
+<td><strong>Nos permite transformar el texto, haciendo que tenga la primera letra en mayúsculas de todas las palabras, todo en mayúsculas o minúsculas</strong>. Los valores que puede tomar son: capitalize, uppercase, lowercase o none</td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>p {
+    text-transform: capitalize;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">word-spacing</td>
+<td><strong>Determina el espaciado entre las palabras</strong>. Los valores que puede tomar es un tamaño.</td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>h2 {
+    word-spacing: -5px;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">letter-spacing</td>
+<td><strong>Determina el espaciado entre letras</strong>. Los valores que puede tomar es un tamaño.</td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>h1 {
+    letter-spacing: 3px;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 130px;">line-height</td>
+<td><strong>Altura de la línea</strong>. Puede establecerse mediante un tamaño o un porcentaje</td>
+<td style="width: 200px;">
+<div class="pre-code">
+<div>
+<pre><code>p {
+    line-height: 0.8;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_info" id="id13">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Más información</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_846_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="https://www.w3schools.com/css/css_text_decoration.asp" target="_blank" rel="noopener">Decoración</a></p>
+<p><a href="https://www.w3schools.com/css/css_text_align.asp" target="_blank" rel="noopener">Alineación</a></p>
+<p><a href="https://www.w3schools.com/css/css_text_transformation.asp" target="_blank" rel="noopener">Transformación</a></p>
+<p><a href="https://www.w3schools.com/css/css_text_spacing.asp" target="_blank" rel="noopener">Espaciado</a></p>
+<p><a href="https://www.w3schools.com/css/css_text_shadow.asp" target="_blank" rel="noopener">Sombra</a></p>
+<p><a href="https://www.w3schools.com/css/css3_text_effects.asp" target="_blank" rel="noopener">Efectos de texto</a></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="431_color_y_fondo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="433_fuente.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
