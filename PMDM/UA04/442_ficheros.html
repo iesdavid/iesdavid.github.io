@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4.2. Ficheros | UA04. Comunicando... </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. Comunicando...</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Comunicando...</a></li>
+   <li><a href="41_tipos_de_conexiones.html" class="no-ch">4.1. Tipos de conexiones</a></li>
+   <li><a href="42_gestin_de_la_comunicacin.html" class="no-ch">4.2. Gestión de la comunicación</a></li>
+   <li><a href="43_bsqueda_de_dispositivos.html" class="no-ch">4.3. Búsqueda de dispositivos</a></li>
+   <li class="current-page-parent"><a href="44_permanencia.html" class="current-page-parent daddy">4.4. Permanencia</a>
+   <ul>
+      <li><a href="441_sharedpreferences.html" class="no-ch">4.4.1. SharedPreferences</a></li>
+      <li id="active"><a href="442_ficheros.html" class="active no-ch">4.4.2. Ficheros</a></li>
+      <li><a href="443_bases_de_datos.html" class="no-ch">4.4.3. Bases de datos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="441_sharedpreferences.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="443_bases_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4.2. Ficheros</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id11">
+<div class="iDevice emphasis0" >
+<div id="ta11_856_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Si la App que planteamos hace que el uso de SharedPreferences no sea una solución, siempre podríamos escribir y leer de un archivo de disco. Será algo más tedioso, pero tendremos mayor libertad.</p>
+<p>Android usa un sistema de ficheros similar a los sistemas de ficheros de otras plataformas. Para trabajar con el sistema de ficheros de Android<br>usaremos la API <strong>java.io.*</strong></p>
+<p>Se usarán ficheros para guardar e intercambiar información a través de la red, o para trabajar con recursos como imágenes, audio y video.</p>
+<p>Los sistemas Android siempre disponen de dos zonas de almacenamiento:</p>
+<div class="exe-fx exe-accordion">
+<h2>Almacenamiento interno</h2>
+<p>Es un almacenamiento no volátil, inherente al propio dispositivo y, por tanto, siempre disponible. Los ficheros guardados aquí sólo son accesibles por la aplicación que, se mantendrán hasta su desinstalación.</p>
+<p>No es necesario ningún permiso para leer o escribir en la memoria interna si es en el directorio correspondiente a la aplicación.</p>
+<p>El método <strong>getFilesDir()</strong> devuelve el directorio interno disponible para nuestra aplicación. Así, con la siguiente instrucción abriríamos un flujo de salida o de entrada según nos conveniese (<strong>FileOutputStream</strong>, <strong>FileInputStream</strong>).</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>File fich = new File(context.getFilesDir(), nombre_fichero);</code></pre>
+</div>
+</div>
+<p>También podríamos haber utilizado <strong>openFileOutput</strong> para obtener un <strong>FileOutputStream</strong> que escribe en un fichero del directorio interno de nuestra aplicación.</p>
+<p>Si queremos usar ficheros temporales, nos podemos valer de <strong>getCacheDir()</strong> para obtener nuestro directorio interno temporal y de <strong>createTempFile</strong> para crear el fichero.</p>
+<h2>Almacenamiento externo</h2>
+<p>Se empezó a llamar así porque hacía referencia al almacenamiento en un medio extraíble (generalmente tarjeta SD).</p>
+<p>Por este motivo, debemos entender que no siempre puede estar disponible (el usuario puede montar la tarjeta SD como almacenamiento USB para otro dispositivo...)</p>
+<p>El acceso es practicamente global y todos pueden leer su contenido. Los permisos necesarios para su acceso son:</p>
+<ul>
+<li><strong>WRITE_EXTERNAL_STORAGE</strong> es el permiso que hay que solicitar en el AndroidManifest para poder escribir en la memoria externa.</li>
+<li><strong>READ_EXTERNAL_STORAGE</strong> es el permiso para leer de la memoria externa (aunque si se pide el permiso de escritura, implícitamente se tendrá permiso de lectura también).</li>
+</ul>
+<p>Cuando el usuario desinstala, los ficheros almacenados aquí sólo se eliminan si están guardados en el directorio proporcionado por<br><strong>getExternalFilesDir()</strong>.</p>
+<p>Como la memoria externa puede no estar disponible, siempre hay que comprabar su disponibilidad antes de hacer uso de ella mediante el método <strong>getExternalStorageState():</strong></p>
+<ul>
+<li>si devuelve <strong>MEDIA_MOUNTED, </strong>la podemos usar en escritura y lectura,</li>
+<li>si devuelve <strong>MEDIA_MOUNTED_READ_ONLY</strong> sólo podemos leer.</li>
+</ul>
+<p><strong>getExternalStoragePublicDirectory</strong> nos devuelve el directorio en el que podemos guardar datos que permanecerán aunque la aplicación se desinstale. Estos datos serán accesibles para otras aplicaciones (públicos).</p>
+<p>Al método anterior le pasamos una constante (p.ej: <strong>DIRECTORY_MUSIC</strong>) para categorizar los datos a guardar.</p>
+<p><strong>getExternalFilesDir</strong> nos devuelve un directorio externo en el que podemos almacenar datos “privados”, que se borrarán al desinstalar la aplicación.</p>
+</div>
+<p><br>El almacenamiento interno es la mejor opción cuando no queremos que otros usuarios o aplicaciones puedan acceder a los datos de nuestra aplicación.</p>
+<p>Usaremos el almacenamiento externo para guardar datos que queremos compartir con otras aplicaciones o que queremos que permanezcan aunque la aplicación se desinstale (por ej, un archivo de música editado por nuestra aplicación...)</p>
+<p>Por defecto las aplicaciones se instalan en el almacenamiento interno, pero este comportamiento se puede modificar con la propiedad <strong>android:installLocation</strong> en nuestro <strong>AndroidManifest.xml</strong>.</p>
+<p>File dispone de los métodos <strong>getFreeSpace()</strong> y <strong>getTotalSpace()</strong> que nos indican respectivamente el espacio libre y el espacio total. Sin embargo, no tenemos garantizado poder escribir tantos bytes como nos devuelva <strong>getFreeSpace()</strong>.</p>
+<p>No estamos obligados a comprobar el espacio libre antes de escribir, podemos capturar una <strong>IOException</strong> si no podemos escribir por falta de espacio (a veces no sabemos el tamaño de los datos a escribir...)</p>
+<p>Para eliminar ficheros, que ya no necesitemos, podemos utilizar el método <strong>delete()</strong> de <strong>File</strong>.</p>
+<p>En el caso de tratarse de ficheros almacenados internamente, también podemos borrarlos llamando a: <strong>myContext.deleteFile(nombre_fichero)</strong></p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id14">
+<div class="iDevice emphasis0" >
+<div id="ta14_859_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Ejemplo</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java">
+<div>
+<pre><code>class MainActivity : AppCompatActivity() {
+    private val fichero:String="configuracion.txt"
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        writeToFile("HOla Mundo")
+        readFromFile()
+    }
+
+    private fun writeToFile(data: String) {
+        try {
+            val f = File(this.filesDir,fichero)
+            val file = openFileOutput(fichero, Context.MODE_PRIVATE)
+            Log.e("Espacio libre", f.totalSpace.toString())
+            val outputStreamWriter = OutputStreamWriter(file)
+            findViewById&lt;TextView&gt;(R.id.textoE1).text="Dir: "+this.filesDir.toString()
+            findViewById&lt;TextView&gt;(R.id.textoE2).text="Escrito: $data - "+f.usableSpace.toString()
+            outputStreamWriter.write(data)
+            outputStreamWriter.close()
+        }
+        catch(e: IOException) {
+            Log.e("Error", "File write failed: ", e)
+        }
+    }
+    private fun readFromFile(): String? {
+        val f = File(this.filesDir,fichero)
+        var ret = ""
+        try {
+            val inputStream: InputStream? = openFileInput(fichero)
+            if (inputStream != null) {
+                val inputStreamReader = InputStreamReader(inputStream)
+                val bufferedReader = BufferedReader(inputStreamReader)
+                var receiveString: String? = ""
+                val stringBuilder = StringBuilder()
+                while (bufferedReader.readLine().also { receiveString = it } != null) {
+                    stringBuilder.append("\n").append(receiveString)
+                }
+                inputStream.close()
+                ret = stringBuilder.toString()
+                findViewById&lt;TextView&gt;(R.id.textoL1).text="Leído : "+ret+" - "+f.usableSpace.toString()
+                f.delete()
+                findViewById&lt;TextView&gt;(R.id.textoL2).text="Borrado : "+f.usableSpace.toString()
+
+            }
+        }
+        catch (e: FileNotFoundException) {
+            Log.e("login activity", "File not found: ", e)
+        }
+        catch (e: IOException) {
+            Log.e("login activity", "Can not read file: ", e)
+        }
+        return ret
+    }
+}</code></pre>
+</div>
+</div>
+<p>En la función de escritura, vemos cómo mediante el método <strong>openFileOutput</strong> abrimos el archivo para <strong>escritura</strong>. Luego utilizamos ese <strong>stream</strong> para crear otro que nos permita escribir de forma cómoda nuestros datos, el <strong>OutputStreamWriter</strong>. Basta llamar a <strong>write</strong> con nuestros datos y luego a <strong>close</strong> para dar por finalizada la sesión de escritura.</p>
+<p>El archivo contendrá nuestros datos. Ahora, para leerlos, utilizaremos el método <strong>openInputStream</strong> para abrir el archivo en <strong>modo lectura</strong>. El stream resultante lo usaremos para crear un <strong>InputStreamReader</strong>, y luego un <strong>BufferedReader</strong>, que nos facilita mucho las operaciones de lectura.</p>
+<p>Llamaremos al método <strong>readLine</strong> una y otra vez hasta que no haya más líneas en el archivo. Cerraremos el archivo y devolvemos los datos.</p>
+<p>En este caso escribimos cadenas de caracteres, pero podríamos haber escrito cualquier otro dato. Vemos cómo Android nos facilita bastante cualquier tarea, solo es necesario conocer las clases adecuadas para cada necesidad.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="441_sharedpreferences.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="443_bases_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

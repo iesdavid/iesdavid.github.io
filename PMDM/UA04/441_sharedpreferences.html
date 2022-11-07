@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4.1. SharedPreferences | UA04. Comunicando... </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. Comunicando...</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Comunicando...</a></li>
+   <li><a href="41_tipos_de_conexiones.html" class="no-ch">4.1. Tipos de conexiones</a></li>
+   <li><a href="42_gestin_de_la_comunicacin.html" class="no-ch">4.2. Gestión de la comunicación</a></li>
+   <li><a href="43_bsqueda_de_dispositivos.html" class="no-ch">4.3. Búsqueda de dispositivos</a></li>
+   <li class="current-page-parent"><a href="44_permanencia.html" class="current-page-parent daddy">4.4. Permanencia</a>
+   <ul>
+      <li id="active"><a href="441_sharedpreferences.html" class="active no-ch">4.4.1. SharedPreferences</a></li>
+      <li><a href="442_ficheros.html" class="no-ch">4.4.2. Ficheros</a></li>
+      <li><a href="443_bases_de_datos.html" class="no-ch">4.4.3. Bases de datos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="44_permanencia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="442_ficheros.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4.1. SharedPreferences</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div id="ta10_855_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Si lo que necesitamos guardar no es más que un pequeño conjunto de pares clave-valor, deberíamos utilizar la clase <strong>SharedPreferences</strong>. Un objeto de este tipo utilizará un archivo para escribir y leer pares <strong>clave-valor</strong>. Pero nosotros solo veremos una simple interfaz con algunos pocos métodos con los que podremos hacer persistentes nuestros datos. Si necesitamos el objeto desde un objeto de nuestra app que no sea una activity, tendríamos que crearlo con:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>val sharedPref = getSharedPreferences("configuracion", Context.MODE_PRIVATE)</code></pre>
+</div>
+</div>
+<p>Lo que hace esta función es crear, o abrir si ya existiese, un archivo de pares clave-valor con el nombre pasado como primer parámetro. El segundo parámetro es un flag que controla la creación del archivo.</p>
+<p><strong>MODE_PRIVATE</strong> hará que este archivo sea privado para otras apps. Este archivo sería accesible desde cualquier parte de la aplicación.</p>
+<p><strong>MODE_WORLD_READABLE</strong> y <strong>MODE_WORLD_WRITEABLE</strong> dan acceso en lectura y escritura respectivamente a todo el mundo.</p>
+<p>Si, por el contrario, quisiéramos almacenar solo valores para una actividad en concreto, podríamos crear el objeto con:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>val sharedPref = getPreferences(Context.MODE_PRIVATE)</code></pre>
+</div>
+</div>
+<p>Aquí se ahorra el nombre del archivo, porque el archivo estará asociado unívocamente con la <strong>activity</strong> que lo llame. De este modo, podríamos tener un archivo por actividad sin riesgo de confundirnos con los nombres.</p>
+<div class="exe-fx exe-accordion">
+<h2>Almacenar valores</h2>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>val sharedPref = getPreferences(Context.MODE_PRIVATE)
+with(sharedPref.edit()) {
+putInt("claveInt", 69)
+putString("claveString", "valor")
+putBoolean("claveBoolean", true)
+//...
+//commit()//llamada síncrona, ten cuidado con el main thread
+apply()//llamada asíncrona, puedes llamarla en el main thread
+}</code></pre>
+</div>
+</div>
+<p>Vemos que lo primero es acceder a una instancia de SharedPreferences con uno de los dos métodos que hemos visto. Después, llamaríamos a <strong>edit</strong> para ponernos en <strong>modo escritura</strong>. Ahora podríamos llamar a los métodos <strong>putX</strong> necesarios para guardar todas nuestras variables.</p>
+<p>Por cada tipo de datos, tendremos una llamada a la clase. Cuando hallamos terminado, llamaremos a <strong>apply</strong>, que dará por finalizada la edición, aunque el proceso de escritura definitivo lo ejecutará en un hilo distinto para no paralizar la interfaz gráfica de la <strong>activity</strong>. Si fuesen pocos campos, podríamos llamar a <strong>comit</strong>, pero salvo que sea imprescindible, preferiremos utilizar el método <strong>apply</strong>.</p>
+<h2>Recuperar datos</h2>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>val sharedPref = getPreferences(Context.MODE_PRIVATE)
+val valorInt = sp1.getInt("claveInt", 0)
+val valorString = sp1.getString("claveString", null)
+val valorBoolean = sp1.getBoolean("claveBoolean", false)</code></pre>
+</div>
+</div>
+<p>Si no son demasiados valores y son básicamente pares de clave-valor, este será el método que utilizaremos.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="44_permanencia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="442_ficheros.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

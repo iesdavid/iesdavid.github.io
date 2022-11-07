@@ -85,9 +85,9 @@
   <string role="key" value="_name"></string>
   <unicode value="UA04"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="9"></int>
+  <int value="17"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="4"></int>
+  <int value="9"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -897,6 +897,8 @@
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Ejemplo de aplicación con WebView que muestra una página Web y un comprobador de conexión a Internet mediante Wi-Fi o Móvil.&lt;/p&gt;
 &lt;p&gt;Puedes descarcar el &lt;a href=&quot;resources/MainActivity.kt&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MainActivity.kt&lt;/a&gt; y el &lt;a href=&quot;resources/activity_main.xml&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;activity_main.xml&lt;/a&gt;.&lt;/p&gt;
@@ -920,7 +922,7 @@
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="144972"></int>
+                     <int value="149508"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -934,7 +936,7 @@
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="8_114_2.0"></unicode>
+                   <unicode value="8_114_2.4"></unicode>
                    <string role="key" value="_imageResource"></string>
                    <instance class="exe.engine.resource.Resource" reference="17">
                     <dictionary>
@@ -943,11 +945,11 @@
                      <string role="key" value="_package"></string>
                      <reference key="1"></reference>
                      <string role="key" value="_storageName"></string>
-                     <string value="MainActivity.kt"></string>
+                     <string value="activity_main.xml"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpumelh7.eXe\\previews\\allyourbase\\MainActivity.kt"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpeagpqd\\activity_main.xml"></string>
                      <string role="key" value="checksum"></string>
-                     <string value="0b3a7fa642ffc3d40563a8f8ac4b18cb"></string>
+                     <string value="02985fe3f4d8bdc899a006c9f0c6317b"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
                      <int value="2"></int>
                      <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
@@ -972,7 +974,7 @@
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="144973"></int>
+                     <int value="149510"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -986,7 +988,7 @@
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="8_114_2.1"></unicode>
+                   <unicode value="8_114_2.5"></unicode>
                    <string role="key" value="_imageResource"></string>
                    <instance class="exe.engine.resource.Resource" reference="18">
                     <dictionary>
@@ -995,11 +997,11 @@
                      <string role="key" value="_package"></string>
                      <reference key="1"></reference>
                      <string role="key" value="_storageName"></string>
-                     <string value="activity_main.xml"></string>
+                     <string value="MainActivity.kt"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpumelh7.eXe\\previews\\allyourbase\\activity_main.xml"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpeagpqd\\MainActivity.kt"></string>
                      <string role="key" value="checksum"></string>
-                     <string value="02985fe3f4d8bdc899a006c9f0c6317b"></string>
+                     <string value="0b3a7fa642ffc3d40563a8f8ac4b18cb"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
                      <int value="2"></int>
                      <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
@@ -1026,7 +1028,7 @@
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="2"></int>
+              <int value="6"></int>
               <string role="key" value="parentNode"></string>
               <reference key="12"></reference>
              </dictionary>
@@ -1313,7 +1315,7 @@ get() = _instance!!
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="144971"></int>
+                     <int value="149509"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -1327,7 +1329,7 @@ get() = _instance!!
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="3_837_2.4"></unicode>
+                   <unicode value="3_837_2.6"></unicode>
                    <string role="key" value="_imageResource"></string>
                    <instance class="exe.engine.resource.Resource" reference="22">
                     <dictionary>
@@ -1338,7 +1340,7 @@ get() = _instance!!
                      <string role="key" value="_storageName"></string>
                      <string value="conexionBT.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpfbgrww\\conexionBT.png"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpeagpqd\\conexionBT.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="ae3579d59141272f624c1e722af90af2"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1367,7 +1369,7 @@ get() = _instance!!
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="5"></int>
+              <int value="7"></int>
               <string role="key" value="parentNode"></string>
               <reference key="21"></reference>
              </dictionary>
@@ -1748,6 +1750,1199 @@ tools:text=&quot;Bluetooth Fake Name&quot;
         <list></list>
        </dictionary>
       </instance>
+      <instance class="exe.engine.node.Node" reference="27">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="4.4. Permanencia"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="25">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="26">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="854_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="25"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Los programas, ya sean de escritorio, web o móvil, necesitan guardar datos de una ejecución a otra para su correcto funcionamiento. Quizá necesiten almacenar opciones de usuario, quizá guarden logs de depuración con errores y alertas, quizá estemos hablando de un juego en el que debemos guardar los jugadores y los puntos que han conseguido en cada partida. Veamos los métodos más usuales para guardar información en el dispositivo móvil.&lt;/p&gt;
+&lt;p&gt;En Android las aplicaciones pueden guardar información de varias maneras:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pares de datos “Clave-Valor” (SharedPreferences)&lt;/li&gt;
+&lt;li&gt;Ficheros&lt;/li&gt;
+&lt;li&gt;Bases de datos SQLite&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En función del tipo y complejidad de la información a guardar se elegirá la forma de almacenamiento&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="26"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="27"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="9"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="27"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="4"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="1"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:UA04.%20Comunicando...:4.4.%20Permanencia"></string>
+        <string role="key" value="parent"></string>
+        <reference key="9"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list>
+         <instance class="exe.engine.node.Node" reference="30">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="4.4.1. SharedPreferences"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="28">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="29">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="855_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="28"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Si lo que necesitamos guardar no es más que un pequeño conjunto de pares clave-valor, deberíamos utilizar la clase &lt;strong&gt;SharedPreferences&lt;/strong&gt;. Un objeto de este tipo utilizará un archivo para escribir y leer pares &lt;strong&gt;clave-valor&lt;/strong&gt;. Pero nosotros solo veremos una simple interfaz con algunos pocos métodos con los que podremos hacer persistentes nuestros datos. Si necesitamos el objeto desde un objeto de nuestra app que no sea una activity, tendríamos que crearlo con:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;val sharedPref = getSharedPreferences(&quot;configuracion&quot;, Context.MODE_PRIVATE)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Lo que hace esta función es crear, o abrir si ya existiese, un archivo de pares clave-valor con el nombre pasado como primer parámetro. El segundo parámetro es un flag que controla la creación del archivo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MODE_PRIVATE&lt;/strong&gt; hará que este archivo sea privado para otras apps. Este archivo sería accesible desde cualquier parte de la aplicación.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MODE_WORLD_READABLE&lt;/strong&gt; y &lt;strong&gt;MODE_WORLD_WRITEABLE&lt;/strong&gt; dan acceso en lectura y escritura respectivamente a todo el mundo.&lt;/p&gt;
+&lt;p&gt;Si, por el contrario, quisiéramos almacenar solo valores para una actividad en concreto, podríamos crear el objeto con:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;val sharedPref = getPreferences(Context.MODE_PRIVATE)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Aquí se ahorra el nombre del archivo, porque el archivo estará asociado unívocamente con la &lt;strong&gt;activity&lt;/strong&gt; que lo llame. De este modo, podríamos tener un archivo por actividad sin riesgo de confundirnos con los nombres.&lt;/p&gt;
+&lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
+&lt;h2&gt;Almacenar valores&lt;/h2&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;val sharedPref = getPreferences(Context.MODE_PRIVATE)
+with(sharedPref.edit()) {
+putInt(&quot;claveInt&quot;, 69)
+putString(&quot;claveString&quot;, &quot;valor&quot;)
+putBoolean(&quot;claveBoolean&quot;, true)
+//...
+//commit()//llamada síncrona, ten cuidado con el main thread
+apply()//llamada asíncrona, puedes llamarla en el main thread
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Vemos que lo primero es acceder a una instancia de SharedPreferences con uno de los dos métodos que hemos visto. Después, llamaríamos a &lt;strong&gt;edit&lt;/strong&gt; para ponernos en &lt;strong&gt;modo escritura&lt;/strong&gt;. Ahora podríamos llamar a los métodos &lt;strong&gt;putX&lt;/strong&gt; necesarios para guardar todas nuestras variables.&lt;/p&gt;
+&lt;p&gt;Por cada tipo de datos, tendremos una llamada a la clase. Cuando hallamos terminado, llamaremos a &lt;strong&gt;apply&lt;/strong&gt;, que dará por finalizada la edición, aunque el proceso de escritura definitivo lo ejecutará en un hilo distinto para no paralizar la interfaz gráfica de la &lt;strong&gt;activity&lt;/strong&gt;. Si fuesen pocos campos, podríamos llamar a &lt;strong&gt;comit&lt;/strong&gt;, pero salvo que sea imprescindible, preferiremos utilizar el método &lt;strong&gt;apply&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Recuperar datos&lt;/h2&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;val sharedPref = getPreferences(Context.MODE_PRIVATE)
+val valorInt = sp1.getInt(&quot;claveInt&quot;, 0)
+val valorString = sp1.getString(&quot;claveString&quot;, null)
+val valorBoolean = sp1.getBoolean(&quot;claveBoolean&quot;, false)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Si no son demasiados valores y son básicamente pares de clave-valor, este será el método que utilizaremos.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="29"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="30"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="10"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="30"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="5"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="1"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA04.%20Comunicando...:4.4.%20Permanencia:4.4.1.%20SharedPreferences"></string>
+           <string role="key" value="parent"></string>
+           <reference key="27"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="33">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="4.4.2. Ficheros"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="31">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="32">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="856_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="31"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Si la App que planteamos hace que el uso de SharedPreferences no sea una solución, siempre podríamos escribir y leer de un archivo de disco. Será algo más tedioso, pero tendremos mayor libertad.&lt;/p&gt;
+&lt;p&gt;Android usa un sistema de ficheros similar a los sistemas de ficheros de otras plataformas. Para trabajar con el sistema de ficheros de Android&lt;br&gt;usaremos la API &lt;strong&gt;java.io.*&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Se usarán ficheros para guardar e intercambiar información a través de la red, o para trabajar con recursos como imágenes, audio y video.&lt;/p&gt;
+&lt;p&gt;Los sistemas Android siempre disponen de dos zonas de almacenamiento:&lt;/p&gt;
+&lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
+&lt;h2&gt;Almacenamiento interno&lt;/h2&gt;
+&lt;p&gt;Es un almacenamiento no volátil, inherente al propio dispositivo y, por tanto, siempre disponible. Los ficheros guardados aquí sólo son accesibles por la aplicación que, se mantendrán hasta su desinstalación.&lt;/p&gt;
+&lt;p&gt;No es necesario ningún permiso para leer o escribir en la memoria interna si es en el directorio correspondiente a la aplicación.&lt;/p&gt;
+&lt;p&gt;El método &lt;strong&gt;getFilesDir()&lt;/strong&gt; devuelve el directorio interno disponible para nuestra aplicación. Así, con la siguiente instrucción abriríamos un flujo de salida o de entrada según nos conveniese (&lt;strong&gt;FileOutputStream&lt;/strong&gt;, &lt;strong&gt;FileInputStream&lt;/strong&gt;).&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;File fich = new File(context.getFilesDir(), nombre_fichero);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;También podríamos haber utilizado &lt;strong&gt;openFileOutput&lt;/strong&gt; para obtener un &lt;strong&gt;FileOutputStream&lt;/strong&gt; que escribe en un fichero del directorio interno de nuestra aplicación.&lt;/p&gt;
+&lt;p&gt;Si queremos usar ficheros temporales, nos podemos valer de &lt;strong&gt;getCacheDir()&lt;/strong&gt; para obtener nuestro directorio interno temporal y de &lt;strong&gt;createTempFile&lt;/strong&gt; para crear el fichero.&lt;/p&gt;
+&lt;h2&gt;Almacenamiento externo&lt;/h2&gt;
+&lt;p&gt;Se empezó a llamar así porque hacía referencia al almacenamiento en un medio extraíble (generalmente tarjeta SD).&lt;/p&gt;
+&lt;p&gt;Por este motivo, debemos entender que no siempre puede estar disponible (el usuario puede montar la tarjeta SD como almacenamiento USB para otro dispositivo...)&lt;/p&gt;
+&lt;p&gt;El acceso es practicamente global y todos pueden leer su contenido. Los permisos necesarios para su acceso son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;WRITE_EXTERNAL_STORAGE&lt;/strong&gt; es el permiso que hay que solicitar en el AndroidManifest para poder escribir en la memoria externa.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;READ_EXTERNAL_STORAGE&lt;/strong&gt; es el permiso para leer de la memoria externa (aunque si se pide el permiso de escritura, implícitamente se tendrá permiso de lectura también).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cuando el usuario desinstala, los ficheros almacenados aquí sólo se eliminan si están guardados en el directorio proporcionado por&lt;br&gt;&lt;strong&gt;getExternalFilesDir()&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Como la memoria externa puede no estar disponible, siempre hay que comprabar su disponibilidad antes de hacer uso de ella mediante el método &lt;strong&gt;getExternalStorageState():&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;si devuelve &lt;strong&gt;MEDIA_MOUNTED, &lt;/strong&gt;la podemos usar en escritura y lectura,&lt;/li&gt;
+&lt;li&gt;si devuelve &lt;strong&gt;MEDIA_MOUNTED_READ_ONLY&lt;/strong&gt; sólo podemos leer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;getExternalStoragePublicDirectory&lt;/strong&gt; nos devuelve el directorio en el que podemos guardar datos que permanecerán aunque la aplicación se desinstale. Estos datos serán accesibles para otras aplicaciones (públicos).&lt;/p&gt;
+&lt;p&gt;Al método anterior le pasamos una constante (p.ej: &lt;strong&gt;DIRECTORY_MUSIC&lt;/strong&gt;) para categorizar los datos a guardar.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;getExternalFilesDir&lt;/strong&gt; nos devuelve un directorio externo en el que podemos almacenar datos “privados”, que se borrarán al desinstalar la aplicación.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;El almacenamiento interno es la mejor opción cuando no queremos que otros usuarios o aplicaciones puedan acceder a los datos de nuestra aplicación.&lt;/p&gt;
+&lt;p&gt;Usaremos el almacenamiento externo para guardar datos que queremos compartir con otras aplicaciones o que queremos que permanezcan aunque la aplicación se desinstale (por ej, un archivo de música editado por nuestra aplicación...)&lt;/p&gt;
+&lt;p&gt;Por defecto las aplicaciones se instalan en el almacenamiento interno, pero este comportamiento se puede modificar con la propiedad &lt;strong&gt;android:installLocation&lt;/strong&gt; en nuestro &lt;strong&gt;AndroidManifest.xml&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;File dispone de los métodos &lt;strong&gt;getFreeSpace()&lt;/strong&gt; y &lt;strong&gt;getTotalSpace()&lt;/strong&gt; que nos indican respectivamente el espacio libre y el espacio total. Sin embargo, no tenemos garantizado poder escribir tantos bytes como nos devuelva &lt;strong&gt;getFreeSpace()&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;No estamos obligados a comprobar el espacio libre antes de escribir, podemos capturar una &lt;strong&gt;IOException&lt;/strong&gt; si no podemos escribir por falta de espacio (a veces no sabemos el tamaño de los datos a escribir...)&lt;/p&gt;
+&lt;p&gt;Para eliminar ficheros, que ya no necesitemos, podemos utilizar el método &lt;strong&gt;delete()&lt;/strong&gt; de &lt;strong&gt;File&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En el caso de tratarse de ficheros almacenados internamente, también podemos borrarlos llamando a: &lt;strong&gt;myContext.deleteFile(nombre_fichero)&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="32"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="33"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="11"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="33"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="34">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="35">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="859_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="34"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Ejemplo&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;class MainActivity : AppCompatActivity() {
+    private val fichero:String=&quot;configuracion.txt&quot;
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        writeToFile(&quot;HOla Mundo&quot;)
+        readFromFile()
+    }
+
+    private fun writeToFile(data: String) {
+        try {
+            val f = File(this.filesDir,fichero)
+            val file = openFileOutput(fichero, Context.MODE_PRIVATE)
+            Log.e(&quot;Espacio libre&quot;, f.totalSpace.toString())
+            val outputStreamWriter = OutputStreamWriter(file)
+            findViewById&amp;lt;TextView&amp;gt;(R.id.textoE1).text=&quot;Dir: &quot;+this.filesDir.toString()
+            findViewById&amp;lt;TextView&amp;gt;(R.id.textoE2).text=&quot;Escrito: $data - &quot;+f.usableSpace.toString()
+            outputStreamWriter.write(data)
+            outputStreamWriter.close()
+        }
+        catch(e: IOException) {
+            Log.e(&quot;Error&quot;, &quot;File write failed: &quot;, e)
+        }
+    }
+    private fun readFromFile(): String? {
+        val f = File(this.filesDir,fichero)
+        var ret = &quot;&quot;
+        try {
+            val inputStream: InputStream? = openFileInput(fichero)
+            if (inputStream != null) {
+                val inputStreamReader = InputStreamReader(inputStream)
+                val bufferedReader = BufferedReader(inputStreamReader)
+                var receiveString: String? = &quot;&quot;
+                val stringBuilder = StringBuilder()
+                while (bufferedReader.readLine().also { receiveString = it } != null) {
+                    stringBuilder.append(&quot;\n&quot;).append(receiveString)
+                }
+                inputStream.close()
+                ret = stringBuilder.toString()
+                findViewById&amp;lt;TextView&amp;gt;(R.id.textoL1).text=&quot;Leído : &quot;+ret+&quot; - &quot;+f.usableSpace.toString()
+                f.delete()
+                findViewById&amp;lt;TextView&amp;gt;(R.id.textoL2).text=&quot;Borrado : &quot;+f.usableSpace.toString()
+
+            }
+        }
+        catch (e: FileNotFoundException) {
+            Log.e(&quot;login activity&quot;, &quot;File not found: &quot;, e)
+        }
+        catch (e: IOException) {
+            Log.e(&quot;login activity&quot;, &quot;Can not read file: &quot;, e)
+        }
+        return ret
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En la función de escritura, vemos cómo mediante el método &lt;strong&gt;openFileOutput&lt;/strong&gt; abrimos el archivo para &lt;strong&gt;escritura&lt;/strong&gt;. Luego utilizamos ese &lt;strong&gt;stream&lt;/strong&gt; para crear otro que nos permita escribir de forma cómoda nuestros datos, el &lt;strong&gt;OutputStreamWriter&lt;/strong&gt;. Basta llamar a &lt;strong&gt;write&lt;/strong&gt; con nuestros datos y luego a &lt;strong&gt;close&lt;/strong&gt; para dar por finalizada la sesión de escritura.&lt;/p&gt;
+&lt;p&gt;El archivo contendrá nuestros datos. Ahora, para leerlos, utilizaremos el método &lt;strong&gt;openInputStream&lt;/strong&gt; para abrir el archivo en &lt;strong&gt;modo lectura&lt;/strong&gt;. El stream resultante lo usaremos para crear un &lt;strong&gt;InputStreamReader&lt;/strong&gt;, y luego un &lt;strong&gt;BufferedReader&lt;/strong&gt;, que nos facilita mucho las operaciones de lectura.&lt;/p&gt;
+&lt;p&gt;Llamaremos al método &lt;strong&gt;readLine&lt;/strong&gt; una y otra vez hasta que no haya más líneas en el archivo. Cerraremos el archivo y devolvemos los datos.&lt;/p&gt;
+&lt;p&gt;En este caso escribimos cadenas de caracteres, pero podríamos haber escrito cualquier otro dato. Vemos cómo Android nos facilita bastante cualquier tarea, solo es necesario conocer las clases adecuadas para cada necesidad.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="35"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="33"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="14"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="33"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="6"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="1"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA04.%20Comunicando...:4.4.%20Permanencia:4.4.2.%20Ficheros"></string>
+           <string role="key" value="parent"></string>
+           <reference key="27"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="38">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="4.4.3. Bases de datos"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="36">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="37">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="862_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="36"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Una base de datos o BBDD es un software que permite almacenar y recuperar datos mediante consultas inteligentes, manteniendo la coherencia entre las estructuras de datos. Existen principalmente dos tipos de BBDD: relacionales y no relacionales.&lt;/p&gt;
+&lt;p&gt;Para la mayoría de los casos de uso, una BBDD relacional será idónea. Por ello, los sistemas operativos móviles tienen integrado software de gestión de bases de datos para que las aplicaciones puedan utilizarlas.&lt;/p&gt;
+&lt;p&gt;Cuando creamos una base de datos desde nuestra aplicación, básicamente estamos creando un &lt;strong&gt;archivo&lt;/strong&gt; que el sistema guardará en la carpeta privada de la app, de la misma forma que con los archivos del almacenamiento interno. De este modo se mantiene la privacidad de los datos, pues el directorio de la aplicación &lt;strong&gt;no es accesible&lt;/strong&gt; para otros usuarios o aplicaciones.&lt;/p&gt;
+&lt;p&gt;Desde las primeras versiones de iOS y Android, la mejor forma de mantener una base de datos local ha sido mediante &lt;strong&gt;SQLite&lt;/strong&gt;. Aunque existen muchos otros, el sistema de gestión de base de datos SQLite está escrito en C, por lo que es muy &lt;strong&gt;eficiente&lt;/strong&gt;, es &lt;strong&gt;simple&lt;/strong&gt; pero &lt;strong&gt;completo&lt;/strong&gt; y ocupa muy poco.&lt;/p&gt;
+&lt;p&gt;Hoy en día sigue siendo el preferido y está preinstalado en el sistema. Sin embargo, debemos tener algunas consideraciones antes de usar &lt;strong&gt;SQLite&lt;/strong&gt; de forma directa, porque los sistemas relacionales como este tienen algunos inconvenientes. Su lenguaje de consulta, llamado SQL (Structured Query Language), es potente, pero nada tiene que ver con los lenguajes de programación orientados a objetos actuales, de modo que existe un desacople entre el código de la aplicación y el que entiende la base de datos.&lt;/p&gt;
+&lt;p&gt;Para solucionar ese problema, podemos usar una librería &lt;strong&gt;ORM&lt;/strong&gt; (Object Relational Mapping) que traducirá de un lenguaje al otro dentro de la aplicación sin esfuerzo por nuestra parte. Existen muchas librerías que nos ayudan a usar SQLite, pero actualmente la preferida es &lt;strong&gt;Room&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="37"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="15"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="38"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="39">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="40">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="863_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="39"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;SQL es sencillo y potente, solo requiere algo de estudio y práctica. Sin embargo, como programadores, no seremos nosotros los que hablemos con la BBDD, será nuestra aplicación.&lt;/p&gt;
+&lt;p&gt;Veamos entonces cómo podríamos crear y usar una base de datos &lt;strong&gt;SQLite&lt;/strong&gt; desde nuestra aplicación Android con las funciones integradas de bajo nivel, es decir, sin utilizar ningún &lt;strong&gt;ORM&lt;/strong&gt; como &lt;strong&gt;Room&lt;/strong&gt; que nos facilite las cosas.&lt;/p&gt;
+&lt;div class=&quot;exe-fx exe-paginated&quot;&gt;
+&lt;h2&gt;Las tablas&lt;/h2&gt;
+&lt;p&gt;Imaginemos que nuestra aplicación es un videojuego y necesitamos guardar los datos de los usuarios y los puntos de cada partida. Con el DDL de SQL crearíamos dos tablas:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;CREATE TABLE jugadores (
+    jugador_id INTEGER PRIMARY KEY,
+    nombre TEXT NOT NULL UNIQUE,
+    avatar TEXT,
+    cinturon INTEGER,
+);
+CREATE TABLE partidas (
+    partida_id INTEGER PRIMARY KEY,
+    jugador_id INTEGER,
+    fecha INTEGER,
+    puntos INTEGER,
+    nivel INTEGER
+);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;La tabla &lt;strong&gt;jugadores&lt;/strong&gt; almacenará a los jugadores que han echado una partida hasta ahora. Sus campos serán:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;jugador_id&lt;/strong&gt;, un identificador único para identificar al jugador;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;nombre&lt;/strong&gt;, que será el alias del jugador en la interfaz gráfica del juego;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;avatar&lt;/strong&gt;, que será una URL o ruta del sistema de archivos hacia una imagen que identifique gráficamente al jugador en el juego;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;cinturon&lt;/strong&gt;, que no es más que el nivel que ha alcanzado el jugador en el juego por puntos o niveles superados.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Por otro lado, la tabla &lt;strong&gt;partidas&lt;/strong&gt; guardará los datos de todas las partidas jugadas por los diferentes jugadores, y sus campos serán:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;partida_id&lt;/strong&gt;, que es el identificador único de cada partida;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;jugador_id&lt;/strong&gt;, que identifica qué jugador en la partida;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;fecha&lt;/strong&gt; de la partida;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;puntos&lt;/strong&gt; conseguidos por el jugador en la partida;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;nivel&lt;/strong&gt; máximo alcanzado en la partida.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Las consultas&lt;/h2&gt;
+&lt;p&gt;Imaginemos que un nuevo jugador echa una partida: mediante el DML de SQL guardaríamos esa nueva información:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;INSERT INTO jugadores (jugador_id, nombre, avatar, cinturon) VALUES (69, “Ninja Rookie”, “http://img.com/ninja”, 0)
+INSERT INTO partidas (partida_id, jugador_id, fecha, puntos, nivel) VALUES (3, 69, strftime('%s','now'), 30, 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Con el comando &lt;strong&gt;INSERT INTO&lt;/strong&gt; introducimos los datos del jugador &lt;strong&gt;Ninja Rookie&lt;/strong&gt; con el código &lt;strong&gt;identificador 69&lt;/strong&gt; en la tabla &lt;strong&gt;jugadores&lt;/strong&gt;, y la partida que ha jugado con el &lt;strong&gt;identificador 3&lt;/strong&gt; y los &lt;strong&gt;30&lt;/strong&gt; &lt;strong&gt;puntos&lt;/strong&gt; obtenidos hasta el &lt;strong&gt;nivel 2&lt;/strong&gt; del juego se guardan en partidas.&lt;/p&gt;
+&lt;p&gt;Como SQLite no tiene un tipo de datos para fechas, usaremos un número entero, como el número de segundos desde 1970, una forma clásica de contar el tiempo en computación (&lt;a href=&quot;https://es.wikipedia.org/wiki/Tiempo_Unix&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;timestamp&lt;/strong&gt;&lt;/a&gt;). De ahí la función &lt;strong&gt;strftime&lt;/strong&gt;, que convierte la fecha &lt;strong&gt;now&lt;/strong&gt; a segundos &lt;strong&gt;%s&lt;/strong&gt; y lo pasa a entero. Cuando después quisiéramos recuperar los datos del jugador 69, haríamos la consulta:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;SELECT * FROM jugadores WHERE jugador_id = 69&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Y si quisiéramos recuperar todas las partidas del jugador 69 haríamos:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;SELECT * FROM partidas WHERE jugador_id = 69&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Estructuramos en Android&lt;/h2&gt;
+&lt;p&gt;Lo primero es definir las estructuras que almacenarán nuestros datos, las tablas. Para ello heredamos de la clase &lt;strong&gt;SQLiteOpenHelper&lt;/strong&gt;, que será la responsable de mantener esas&lt;br&gt;estructuras en el archivo de base de datos:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;class JuegoDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+    ....
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Como vemos, necesita un contexto, el nombre del archivo donde se almacenará la BBDD y la versión actual, que como en nuestro caso será la primera, podríamos definir como 1.&lt;/p&gt;
+&lt;p&gt;Después sobrescribimos la función &lt;strong&gt;onCreate&lt;/strong&gt; para definir las tablas que darán forma a nuestra base de datos:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;override fun onCreate(db: SQLiteDatabase) {
+    db.execSQL(SQL_CREATE_JUGADORES)
+    db.execSQL(SQL_CREATE_PARTIDAS)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Se nos pasa un objeto &lt;strong&gt;db&lt;/strong&gt; de base de datos y llamamos a su &lt;strong&gt;execSQL&lt;/strong&gt;, una función que ejecutará el código SQL que se le pase.&lt;/p&gt;
+&lt;p&gt;Las constantes string &lt;strong&gt;SQL_CREATE_JUGADORES &lt;/strong&gt;y &lt;strong&gt;SQL_CREATE_PARTIDAS&lt;/strong&gt; que más tarde mostraremos son el código SQL para crear las tablas que deseamos. Si mientras creamos la BBDD desde nuestra aplicación resulta que ya existía otra con una versión anterior, se llamará a &lt;strong&gt;onUpdate&lt;/strong&gt;, que será la encargada de actualizar los datos antiguos a la nueva estructura:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+    db.execSQL(SQL_DELETE_JUGADORES)
+    db.execSQL(SQL_DELETE_PARTIDAS)
+    onCreate(db)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Para no complicar el código, y puesto que solo tenemos una versión de nuestras tablas, hacemos lo más sencillo, que es eliminar las tablas antiguas y volverlas a crear con la nueva estructura, sin tener en cuenta que perderemos los datos de la versión previa en caso de que los hubiera. El código completo sería:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-sql&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;import android.content.Context
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
+class JuegoDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+    // Se llama cuando la base de datos aun no existe y debe crearse
+    override fun onCreate(db: SQLiteDatabase) {
+        // Ejecutamos el SQL que crea las tablas
+        db.execSQL(SQL_CREATE_JUGADORES)
+        db.execSQL(SQL_CREATE_PARTIDAS)
+    }
+    // Se llama cuando hemos modificado la estructura de las tablas
+    // y hemos incrementado el número de la versión pero aún tenemos
+    // una BBDD antigua con una versión anterior, aquí se actualizará
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        // Ejecutamos el SQL que borra las tablas,
+        // después el que las crea con la nueva versión
+        db.execSQL(SQL_DELETE_JUGADORES)
+        db.execSQL(SQL_DELETE_PARTIDAS)
+        onCreate(db)
+    }
+    companion object {
+        // Si necesitamos cambiar las tablas una vez que la
+        // app está en producción, debemos incrementar este numero
+        const val DATABASE_VERSION = 1
+        const val DATABASE_NAME = &quot;juego.db&quot;
+        const val TABLE_JUGADORES = &quot;jugadores&quot;
+        private const val SQL_CREATE_JUGADORES = 
+            &quot;CREATE TABLE $TABLE_JUGADORES (&quot; + 
+            &quot;jugador_id INTEGER PRIMARY KEY,&quot; + 
+            &quot;nombre TEXT NOT NULL UNIQUE,&quot; + 
+            &quot;avatar TEXT,&quot; + 
+            &quot;cinturon INTEGER&quot;
+        private const val SQL_DELETE_JUGADORES = &quot;DROP TABLE IF EXISTS $TABLE_JUGADORES&quot;
+        const val TABLE_PARTIDAS = &quot;partidas&quot;
+        private const val SQL_CREATE_PARTIDAS = 
+            &quot;CREATE TABLE $TABLE_PARTIDAS (&quot; + 
+            &quot;partida_id INTEGER PRIMARY KEY,&quot; + 
+            &quot;jugador_id INTEGER NOT NULL,&quot; + 
+            &quot;fecha INTEGER NOT NULL,&quot; + 
+            &quot;puntos INTEGER NOT NULL,&quot; + 
+            &quot;nivel INTEGER NOT NULL&quot;
+        private const val SQL_DELETE_PARTIDAS = &quot;DROP TABLE IF EXISTS $TABLE_PARTIDAS&quot;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Introducir datos&lt;/h2&gt;
+&lt;p&gt;Hemos definido los comandos SQL como constantes string para tenerlos bien definidos solo en un lugar y no desperdigados por el código. Ahora podríamos introducir datos en nuestra nueva base de datos. Como programamos con Kotlin, nuestros datos serán objetos de alguna clase. Definamos nuestra clase Jugador, asociada a la tabla jugadores:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;data class jugador(
+    val id: Int,
+    val nombre: String,
+    val avatar: String?,
+    val cinturon: Int?)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Nada más que un data class de Kotlin con los campos de nuestro jugador. Añadamos una función a la clase para insertar el propio objeto en la BBDD:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;fun introducirEnBBDD(db: SQLiteDatabase) {
+    // Juntamos todos los campos en una colección ContentValues
+    val values = ContentValues().apply {
+        put(&quot;nombre&quot;, jugador.nombre)
+        put(&quot;avatar&quot;, jugador.avatar)
+        put(&quot;cinturon&quot;, jugador.cinturon)
+    }
+    // Insertamos la fila de datos, y el sistema devuelve el id
+    id = db?.insert(JuegoDbHelper.TABLE_JUGADORES, null, values)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Esta nueva función &lt;strong&gt;introducirEnBBDD&lt;/strong&gt; recibe por parámetro un objeto &lt;strong&gt;SQLiteDatabase&lt;/strong&gt; que crearemos mediante nuestro &lt;strong&gt;JuegoDbHelper&lt;/strong&gt;. Este objeto de base de datos nos permite insertar, seleccionar, actualizar y borrar. Introducimos los datos en un objeto &lt;strong&gt;ContentValues&lt;/strong&gt;, que no es más que un objeto contenedor de pares clave-valor, y lamamos a la función &lt;strong&gt;insert&lt;/strong&gt;, que devolverá el identificador de la fila insertada en la tabla. Para introducir un &lt;strong&gt;nuevo jugador&lt;/strong&gt;, el código sería:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;val dbHelper = JuegoDbHelper(context)
+val db = dbHelper.writableDatabase //Creamos base de datos en modo escritura
+val jugador = Jugador(69, &quot;Ninja Rookie&quot;, &quot;http://img.com/ninja.png&quot;, 0)
+jugador.insertarEnBBDD(db)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Primero creamos nuestra clase de ayuda para BBDD. Con ese objeto creamos nuestra base de datos db. Luego creamos el &lt;strong&gt;Jugador&lt;/strong&gt;, y llamamos a su método insertarEnBBDD con el objeto &lt;strong&gt;db&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Conclusión&lt;/h2&gt;
+&lt;p&gt;Utilizar las funciones de bajo nivel para manejar nuestra base de datos es posible, pero tiene ciertos inconvenientes e incomodidades:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;requiere mucho código para cada tabla.&lt;/li&gt;
+&lt;li&gt;Pasar un objeto de Kotlin a una fila de base de datos SQL es incómodo y repetitivo, entre otras cosas porque para cada acción de BBDD necesitamos desgranar los campos del objeto en pares clave-valor.&lt;/li&gt;
+&lt;li&gt;Necesitamos conocer el lenguaje SQL para definir las tablas y sus relaciones, y para codificar las consultas de selección, actualización y borrado.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Room&lt;/h2&gt;
+&lt;p&gt;Room, una librería con la que crear y acceder a los datos de nuestra BBDD SQLite de forma fácil, eficiente y orientada a objetos. Veamos cómo utilizar este ORM. Lo primero es añadir la librería en Gradle para que esté disponible en nuestro proyecto:&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="40"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="16"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="38"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="7"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="1"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA04.%20Comunicando...:4.4.%20Permanencia:4.4.3.%20Bases%20de%20datos"></string>
+           <string role="key" value="parent"></string>
+           <reference key="27"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+        </list>
+       </dictionary>
+      </instance>
      </list>
     </dictionary>
    </instance>
@@ -1757,6 +2952,14 @@ tools:text=&quot;Bluetooth Fake Name&quot;
    <reference key="12"></reference>
    <unicode role="key" value="3"></unicode>
    <reference key="21"></reference>
+   <unicode role="key" value="4"></unicode>
+   <reference key="27"></reference>
+   <unicode role="key" value="5"></unicode>
+   <reference key="30"></reference>
+   <unicode role="key" value="6"></unicode>
+   <reference key="33"></reference>
+   <unicode role="key" value="7"></unicode>
+   <reference key="38"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -1767,7 +2970,7 @@ tools:text=&quot;Bluetooth Fake Name&quot;
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="21"></reference>
+  <reference key="38"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -2803,11 +4006,11 @@ tools:text=&quot;Bluetooth Fake Name&quot;
   <dictionary>
    <string role="key" value="02985fe3f4d8bdc899a006c9f0c6317b"></string>
    <list>
-    <reference key="18"></reference>
+    <reference key="17"></reference>
    </list>
    <string role="key" value="0b3a7fa642ffc3d40563a8f8ac4b18cb"></string>
    <list>
-    <reference key="17"></reference>
+    <reference key="18"></reference>
    </list>
    <string role="key" value="ae3579d59141272f624c1e722af90af2"></string>
    <list>
