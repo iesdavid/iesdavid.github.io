@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4.4. Room | UA04. Comunicando... </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. Comunicando...</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Comunicando...</a></li>
+   <li><a href="41_tipos_de_conexiones.html" class="no-ch">4.1. Tipos de conexiones</a></li>
+   <li><a href="42_gestin_de_la_comunicacin.html" class="no-ch">4.2. Gestión de la comunicación</a></li>
+   <li><a href="43_bsqueda_de_dispositivos.html" class="no-ch">4.3. Búsqueda de dispositivos</a></li>
+   <li class="current-page-parent"><a href="44_permanencia.html" class="current-page-parent daddy">4.4. Permanencia</a>
+   <ul>
+      <li><a href="441_sharedpreferences.html" class="no-ch">4.4.1. SharedPreferences</a></li>
+      <li><a href="442_ficheros.html" class="no-ch">4.4.2. Ficheros</a></li>
+      <li><a href="443_bases_de_datos.html" class="no-ch">4.4.3. Bases de datos</a></li>
+      <li id="active"><a href="444_room.html" class="active no-ch">4.4.4. Room</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="443_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4.4. Room</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id18">
+<div class="iDevice emphasis0" >
+<div id="ta18_865_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Room es un ORM (Object- Relational mapping) que nos permitirá trabajar de una forma más sencilla con bases de datos SQL.</p>
+<p><img src="room_architecture.png" alt="Room Architecture" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="506"></p>
+<p>La imagen anterior nos muestra el funcionamiento de dicha herramienta que, aunque parezca complicado al principio, es muy fácil de entender cuando nos pongamos a ello.&nbsp;<br>Tendremos una base de datos que le devolverá a nuestra app los <strong>Data Access Objects</strong> (DAO) estos son los encargados de persistir la información en la base de datos y de devolvernos las <strong>entities</strong>, que serán las encargadas de devolvernos la información que hemos ido almacenando.</p>
+<p>Necesitas incluir el plugin kotlin-kapt y las dos siguientes dependencias:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>id 'kotlin-kapt'
+
+implementation 'androidx.recyclerview:recyclerview:1.2.1'
+implementation 'androidx.room:room-ktx:2.4.3'
+kapt 'androidx.room:room-compiler:2.4.3'</code></pre>
+</div>
+</div>
+<div class="exe-fx exe-accordion">
+<h2>Entidades</h2>
+<p>En Room, cada entidad (<a href="https://developer.android.com/training/data-storage/room/defining-data" target="_blank" rel="noopener"><strong>Entity</strong></a>) representa una tabla debe ser una clase. En nuestro caso, vamos a definir una tabla que nos permita almacenar los datos de un disco de música. En concreto, vamos a crear una clase llamada<strong> TaskEntity</strong> Y la anotaremos con <strong>@Entity</strong>.&nbsp;<br>Las anotaciones convierten clases normales en elementos interpretables por <strong>Room</strong>. Habrá que utilizarlas continuamente para configurar la base de datos y conseguir una estructura y propiedades a nuestro gusto.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity(tableName = "task_entity")
+data class TaskEntity (
+        @PrimaryKey(autoGenerate = true)
+        var id:Int = 0,
+        var name:String = "",
+        var isDone:Boolean = false
+)</code></pre>
+</div>
+</div>
+<p>La anotación <strong>@Entity</strong> la utilizamos para añadirle un nombre a nuestra entidad como tabla de la base de datos. Cada base de datos puede contener una o varias tablas y cada una persiste un modelo diferente.</p>
+<p>La anotación <strong>@PrimaryKey (autoGenerate = true)</strong> está diciendo que la variable <strong>id</strong> es un valor que se autogenera al crear un objeto de esta clase y que no podrá repetirse. Es un valor único con el cual podremos localizar un objeto concreto.</p>
+<h2>DAOs</h2>
+<p>También necesitaremos una <strong>interface DAO</strong> (Data Access Object), que será la que nos permita acceder a la tabla, <strong>hay que crear una por cada entidad</strong>. En nuestro caso, esta clase será <strong>TaskDao.kt</strong> &nbsp;y la anotaremos con <strong>@Dao</strong>.</p>
+<p>Los objetos DAO facilitan mucho el acceso a la BD. Aquí se declararán los métodos que interactuarán con las tablas:</p>
+<ul>
+<li><strong>@Query</strong>: Se hacen consultas directamente a la base de datos usando SQL. En este ejemplo haremos dos muy sencillas, pero se pueden hacer cosas impresionantes.</li>
+<li><strong>@Insert</strong>: Se usará para insertar entidades a la base de datos, a diferencia de las <strong>@Query</strong>&nbsp;no hay que hacer ningún tipo de consulta, sino pasar el objeto a insertar.</li>
+<li><strong>@Update</strong>: Actualizan una entidad ya insertada. Solo tendremos que pasar ese objeto modificado y ya se encarga de actualizarlo. ¿Cómo sabe que objeto hay que modificar? Pues por nuestro <strong>id</strong>, la <strong>PrimaryKey</strong>.</li>
+<li><strong>@Delete</strong>:&nbsp;Como su propio nombre indica borra de la tabla un objeto que le pasemos.</li>
+</ul>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Dao
+interface TaskDao {
+    @Query("SELECT * FROM task_entity")
+    fun getAllTasks(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/" target="_blank" rel="noopener">MutableList</a><taskentity><br>&nbsp;   @Insert<br>    ...<br>    @Update<br>    ...<br>    @Delete<br>    ...
+}</taskentity></code></pre>
+</div>
+</div>
+<p>Android Studio permite <strong>autocompletar</strong> y hacer validaciones sencillas de las queries que definamos.</p>
+<p>A las consultas también podemos pasarles argumentos. Sólo hay que indicar el argumento en la función:&nbsp; </p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Query("SELECT * FROM task_entity WHERE id = :id")
+fun findById(id: Int): TaskEntity</code></pre>
+</div>
+</div>
+<p>Gracias a <strong>onConflict</strong>, podemos definir la estrategia de inserción si hubiera conflictos: <strong>IGNORE</strong>, <strong>ABORT</strong> o <strong>REPLACE:</strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Insert(onConflict = OnConflictStrategy.IGNORE)
+fun insert(tasks: List&lt;TaskEntity&gt;)</code></pre>
+</div>
+</div>
+<h2>Base de datos</h2>
+<p>Por último, definiremos una clase que nos permitirá la creación de la base de datos como tal. Para ello crearemos el archivo <strong>TaskDatabase.kt</strong> y usaremos la anotación <strong>@Database</strong> .</p>
+<p>Lo recomendado es que esta clase siga un patrón <strong>singleton</strong>. Aquí es donde se indicarán las entidades que formaran la base de datos, la forma de crearla/destruirla, la versión, etc.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Database(entities = arrayOf(TaskEntity::class), version = 1)
+    abstract class TasksDatabase : RoomDatabase() {
+    abstract fun taskDao(): TaskDao
+}</code></pre>
+</div>
+</div>
+<p>Lo primero que debemos fijarnos es en la anotación <strong>@Database</strong>, que especifica que la entidad será una lista de <strong>TaskEntity</strong> (entidad que ya hemos creado) y que la <a href="#t948b25f9-d7ec-5fa8-7dc4-1191dd0fa660" id="link948b25f9-d7ec-5fa8-7dc4-1191dd0fa660" class="exe-tooltip definition-tt titled-tt" title="Versiones | Versiones">versión es 1</a>.</p>
+<p>La clase extendida <strong>RoomDatabase()</strong>, es una clase que tenemos gracias a importar la dependencia de <strong>Room</strong> en nuestro <strong>gradle</strong>. Para finalizar tiene una sola función que hace referencia al <strong>Dao</strong> que hemos creado anteriormente, si tuviésemos más Dao’s pues habría que implementarlos ahí también.</p>
+<p>Para crear la instancia de Room, en el <strong>Application</strong> por ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>val room: TasksDatabase = Room
+.databaseBuilder(this, TasksDatabase::class.java, "tasks")
+.build()</code></pre>
+</div>
+</div>
+<p>Y para usarlo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>val tasks = room.TaskDao().getAll()</code></pre>
+</div>
+</div>
+<h2>MisNotasApp</h2>
+<p>Ahora vamos a crear una clase algo diferente. Esta clase va a extender de <strong>Application()</strong> y eso significa que será lo primero en ejecutarse al abrirse la aplicación.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class MisNotasApp: Application() {
+    companion object {
+        lateinit var database: TasksDatabase
+    }
+    override fun onCreate() {
+        super.onCreate()
+        MisNotasApp.database =  Room.databaseBuilder(this, TasksDatabase::class.java, "tasks-db").build()
+    }
+}</code></pre>
+</div>
+</div>
+<p>Aquí, la instancia de <strong>database</strong> necesitará tres parámetros, el <strong>contexto</strong> (<strong>this</strong>), la clase de nuestra base de datos (<strong>TasksDatabase</strong>) y el nombre que le pondremos, en este caso, <strong>"tasks-db"</strong>.</p>
+<p>Para que esta clase se lance al abrir la app debemos ir al <strong>AndroidManifest.xml</strong> y añadir&nbsp;<strong>android:name=".MisNotasApp"</strong> dentro de la etiqueta <strong><application></application></strong><strong></strong></p>
+<h2>activity_main</h2>
+<p>Aunque tengamos varias clases por detrás, nuestra app solo tendrá un <strong>layout</strong>, una sola vista. La idea es crear algo sencillo y usable, por lo que me contaremos con una barra superior donde añadir las tareas y luego un <strong>RecyclerView</strong> donde se muestren todas.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.cursokotlin.misnotas.UI.MainActivity"&gt;
+    &lt;android.support.v7.widget.RecyclerView
+        android:id="@+id/rvTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlAddTask"/&gt;
+    &lt;RelativeLayout
+        android:id="@+id/rlAddTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/white"&gt;
+        &lt;EditText
+            android:id="@+id/etTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="añade una tarea"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/btnAddTask"
+            /&gt;
+        &lt;Button
+            android:id="@+id/btnAddTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Añadir"/&gt;
+    &lt;/RelativeLayout&gt;
+&lt;/RelativeLayout&gt;</code></pre>
+</div>
+</div>
+<h2>MainActivity</h2>
+<p>Con la vista preparada, es el momento de empezar a generar la lógica. Empezamos creando las variables necesarias.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>lateinit var recyclerView: RecyclerView
+lateinit var tasks: MutableList&lt;TaskEntity&gt;</code></pre>
+</div>
+</div>
+<p>Ahora nos vamos al <strong>OnCreate</strong> de nuestra actividad, lo primero que haremos será instanciar tasks&nbsp;como una <strong>arrayList</strong> y acto seguido llamaremos a la función <strong>getTasks()</strong> que vamos a crear. Esta función será la encargada de acceder a nuestro <strong>DAO</strong> para hacer la primera consulta, recuperar todas las entidades que el usuario tenga guardadas. Así que por ahora dejamos el <strong>OnCreate</strong> así.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+    tasks = ArrayList()
+    getTasks()
+}</code></pre>
+</div>
+</div>
+<p>Con lo realizado hasta ahora, ya tendríamos suficiente para crear y manejar la base de datos. De entre las posibles complicaciones que nos podemos encontrar en este primer contacto con Room, solo hay que tener una cosa importante en cuenta: <strong>las operaciones de acceso a la base de datos no pueden realizarse en el hilo principal de la app</strong>. Si hacemos esto, la app se cerrará abruptamente.</p>
+<p>Tendremos que detenernos para conocer un poco el uso de los <strong>hilos</strong>. Los hilos son los que permiten la multitarea de un dispositivo, por ejemplo en un hilo puedes ir guardando información asíncronamente (por detrás) mientras el usuario sigue haciendo cosas.</p>
+<p>En Android, el <strong>hilo principal</strong> es el encargado de la parte visual de la aplicación, por lo que <strong>no nos deja acceder a la base de datos</strong> desde ahí, por ello crearemos un <strong>hilo secundario</strong> que de modo <strong>asíncrono</strong> hará la petición a la base de datos y recuperará la información que necesitemos.</p>
+</div>
+<div id="t948b25f9-d7ec-5fa8-7dc4-1191dd0fa660" class="exe-tooltip-text">
+<p>Las versiones se usan para la posible migración de datos al actualizar la App. Imaginemos que sacamos una segunda versión de la app y en vez de 3 parámetros almacenamos 4, no podemos cambiar nuestra entidad de golpe pues habría problemas. Para eso se usa la versión, junto a un fichero de migración que le dice al programa que deberá hacer para pasar de la versión 1 a la 2, 3 o la que sea.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id19">
+<div class="iDevice emphasis0" >
+<div id="ta19_866_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Corrutinas</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Todas estas operaciones de base de datos deberían hacerse fuera del hilo principal. Esto se puede realizar manualmente, o usar alguna de las integraciones que ya se nos dan implementadas.</p>
+<p>Lo único que necesitamos es añadir la palabra <strong>suspend</strong> delante de las funciones del DAO, ¡y listo!</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Query("SELECT * from task_entity")
+suspend fun getAll(): List<taskentity>
+
+</taskentity></code></pre>
+</div>
+</div>
+<p>En el <strong>MainActivity</strong>, creamos el método <strong>getTasks()</strong> como corrutina de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>fun getTasks()= runBlocking{
+        launch {
+            tasks = MisNotasApp.database.taskDao().getAllTasks()
+            setUpRecyclerView(tasks)
+        }
+    }</code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>TaskAdapter</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Antes de continuar, vamos a crear un nuevo layout llamado <strong>item_task.xml</strong>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"&gt;
+    &lt;CheckBox
+        android:id="@+id/cbIsDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp" /&gt;
+    &lt;TextView
+        android:id="@+id/tvTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        tools:text="Test"/&gt;
+&lt;/LinearLayout&gt;</code></pre>
+</div>
+</div>
+<p><img src="checkBoxEjemplo.png" alt="Checkbox" style="float: left; margin: 10px;" width="242" height="34">Nos quedará una celda muy sencilla. La idea es que cuando pulsemos el <strong>Checkbox,</strong> se actualice en la base de datos el objeto y, si hacemos click en cualquier otra parte de la vista, se borre de la base de datos.</p>
+<p>Crearemos una nueva clase, <strong>TaskAdapter</strong>, a la que le pasaremos 3 parámetros: la lista de tareas que tenemos almacenadas en nuestra base de datos y funciones. Estas funciones nos permitirán recuperar el evento del click en cada una de las celdas, ya sea la vista completa o un componente concreto.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class TasksAdapter(
+val tasks: List<taskentity>,
+val checkTask: (TaskEntity) -&gt; Unit,
+val deleteTask: (TaskEntity) -&gt; Unit) : RecyclerView.Adapter<tasksadapter.viewholder>() {</tasksadapter.viewholder></taskentity></code></pre>
+</div>
+</div>
+<p>En el&nbsp;<strong>onBindViewHolder </strong>añadimos el&nbsp;<strong>setOnClickListener</strong> a cada uno de los componentes que nos interese, en este caso se ha puesto al <strong>checkbox</strong> y, para controlar el click en cualquier otra parte de la vista, podemos acceder a&nbsp;<strong>itemView&nbsp;</strong>que nos devuelve la celda completa.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    val item = tasks[position]
+    holder.bind(item, checkTask, deleteTask)
+}</code></pre>
+</div>
+</div>
+<p>Y ya completamos <strong>TaskAdapter</strong> con los dos métodos que nos faltan&nbsp;<strong>onCreateViewHolder&nbsp;</strong>y&nbsp;<strong>getItemCount</strong>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    val layoutInflater = LayoutInflater.from(parent.context)
+    return ViewHolder(layoutInflater.inflate(R.layout.item_task, parent, false))
+}<br>override fun getItemCount(): Int {<br>return tasks.size<br>}</code></pre>
+</div>
+</div>
+<p>Para finalizar, añadimos la clase <strong>ViewHolder</strong> que solo tendrá de novedad en la función <strong>bind</strong> donde, a través de&nbsp;<strong>.isChecked,</strong> podemos iniciar la vista con el <strong>checkbox</strong> marcado o no, así que comprobaremos si está a <strong>true</strong> nuestra entidad y si es así pues lo marcamos.</p>
+<p>Una vez configurada la celda, le añadimos&nbsp;<strong>.setOnClickListener</strong> a nuestro <strong>checkBox</strong> y al&nbsp;<strong>itemView</strong> que es el componente completo pasando el propio objeto.&nbsp;</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    val tvTask = view.findViewById<textview>(R.id.tvTask)
+    val cbIsDone = view.findViewById<checkbox>(R.id.cbIsDone)
+ 
+    fun bind(task: TaskEntity, checkTask: (TaskEntity) -&gt; Unit, deleteTask: (TaskEntity) -&gt; Unit) {
+        tvTask.text = task.name
+        cbIsDone.isChecked = task.isDone
+        cbIsDone.setOnClickListener{checkTask(task)}
+        itemView.setOnClickListener { deleteTask(task) }
+    }
+}</checkbox></textview></code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Volvemos a MainActivity</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Con nuestro adapter completo es el paso de configurarlo desde <strong>MainActivity</strong> con nuestra función&nbsp;<strong>setUpRecyclerView()</strong>&nbsp;a la cual le pasaremos la lista de tareas que hemos recuperado.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>fun setUpRecyclerView(tasks: List<taskentity>) {
+    adapter = TasksAdapter(tasks, { updateTask(it) }, {deleteTask(it)})
+    recyclerView = findViewById(R.id.rvTask)
+    recyclerView.setHasFixedSize(true)
+    recyclerView.layoutManager = LinearLayoutManager(this)
+    recyclerView.adapter = adapter
+}</taskentity></code></pre>
+</div>
+</div>
+<p>Debemos fijarnos que al instanciar el adapter le pasamos tres parámetros:</p>
+<ol>
+<li>&nbsp;lista de tareas,&nbsp;</li>
+<li>updateTask(it)</li>
+<li>deleteTask(it).&nbsp;</li>
+</ol>
+<p>Estos no son parámetros sino métodos que tendremos en el <strong>MainActivity</strong>, que serán llamados automáticamente cuando se ejecute el evento del click que configuramos en el adapter.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>fun updateTask(task: TaskEntity) =runBlocking {
+      launch {
+         task.isDone = !task.isDone
+         MisNotasApp.database.taskDao().updateTask(task)
+       }
+   }<br>fun deleteTask(task: TaskEntity)=runBlocking{<br>     launch{<br>         val position = tasks.indexOf(task)<br>         MisNotasApp.database.taskDao().deleteTask(task)<br>        tasks.remove(task)<br>        adapter.notifyItemRemoved(position)<br>    }<br>}</code></pre>
+</div>
+</div>
+<p>En el método&nbsp;<strong>deleteTask()&nbsp;</strong>debemos hacer algo más, para empezar, buscaremos en nuestra lista&nbsp;<strong>tasks</strong> la posición del item que vamos a borrar para tener una referencia. Para ello usaremos la función de las listas&nbsp;<strong>indexOf(item)</strong> que nos devolverá dicha posición y la almacenamos en una variable, luego borraremos el objeto de la base de datos y de nuestra lista y acabaremos en el hilo principal avisando al adapter que hemos removido un objeto, pasándole la posición.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id22">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Últimos retoques</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_869_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Vamos a configurar el botón de añadir tareas, que lo que hará será crear un objeto <strong>Task</strong>, almacenarlo en base de datos y luego añadirlo a la lista que tiene el adapter. Lo primero que haremos será ir a nuestro DAO y añadir una nueva función de insertar.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Insert
+fun addTask(taskEntity : TaskEntity):Long</code></pre>
+</div>
+</div>
+<p>Simplemente recibirá un objeto <strong>TaskEntity</strong> y lo añadirá a la base de datos. Fijaros que devuelve un <strong>Long</strong>, eso es porque nos dará automáticamente la&nbsp;<strong>ID&nbsp;</strong>del item añadido.</p>
+<p>Nos vamos a nuestro&nbsp;<strong>onCreate&nbsp;</strong>del <strong>MainAcitivity</strong> y añadimos lo siguiente.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>btnAddTask.setOnClickListener {
+addTask(TaskEntity(name = etTask.text.toString()))}</code></pre>
+</div>
+</div>
+<p>Simplemente le hemos asignado al evento del click un método llamado&nbsp;<strong>addTask()</strong>&nbsp;al cual le pasamos un objeto nuevo con el texto de la celda. Dicha función añadirá a la base de datos la tarea, luego recuperemos dicha tarea y la añadiremos a la lista del <strong>adapter</strong>. </p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>  fun addTask(task:TaskEntity)= runBlocking{
+        launch {
+            val id = MisNotasApp.database.taskDao().addTask(task)
+            val recoveryTask = MisNotasApp.database.taskDao().getTaskById(id)
+                tasks.add(recoveryTask)
+                adapter.notifyItemInserted(tasks.size)
+                clearFocus()
+                hideKeyboard()
+        }
+    }</code></pre>
+</div>
+</div>
+<p>Así que lo que estamos haciendo es añadir la tarea y luego recuperamos dicho objeto a través de <strong>getTaskById</strong> pasándole la <strong>ID</strong> que nos devuelve <strong>addTask</strong>. Obviamente debemos añadir a nuestro DAO la función de recuperar el item.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Query("SELECT * FROM task_entity where id like :arg0")
+fun getTaskById(id: Long): TaskEntity</code></pre>
+</div>
+</div>
+<p>Cuando hemos acabado de realizar esto, en el hilo principal añadimos el objeto recuperado a la lista, le decimos al adapter que hemos añadido un objeto nuevo a través de&nbsp;<strong>adapter.notifyItemInserted</strong> (hay que pasarle pa posición, como es el último objeto añadido, podemos saber cual es recuperando el tamaño de la lista) y luego los métodos&nbsp;<strong>clearFocus()&nbsp;</strong>y&nbsp;<strong>hideKeyboard()&nbsp;</strong>simplemente nos quitarán el texto del <strong>editText</strong> y bajarán el teclado.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>fun clearFocus(){
+   etTask.setText("")
+}
+fun Context.hideKeyboard() {
+    val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    inputMethodManager.hideSoftInputFromWindow(currentFocus.windowToken, 0)
+}</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="443_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
