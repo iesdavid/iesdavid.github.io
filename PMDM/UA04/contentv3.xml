@@ -85,9 +85,9 @@
   <string role="key" value="_name"></string>
   <unicode value="UA04"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="23"></int>
+  <int value="31"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="10"></int>
+  <int value="11"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -922,7 +922,7 @@
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="149514"></int>
+                     <int value="149518"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -936,7 +936,7 @@
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="8_114_2.6"></unicode>
+                   <unicode value="8_114_2.8"></unicode>
                    <string role="key" value="_imageResource"></string>
                    <instance class="exe.engine.resource.Resource" reference="17">
                     <dictionary>
@@ -947,7 +947,7 @@
                      <string role="key" value="_storageName"></string>
                      <string value="activity_main.xml"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmperz_du\\activity_main.xml"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpppkmai\\activity_main.xml"></string>
                      <string role="key" value="checksum"></string>
                      <string value="02985fe3f4d8bdc899a006c9f0c6317b"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -974,7 +974,7 @@
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="149516"></int>
+                     <int value="149520"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -988,7 +988,7 @@
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="8_114_2.7"></unicode>
+                   <unicode value="8_114_2.9"></unicode>
                    <string role="key" value="_imageResource"></string>
                    <instance class="exe.engine.resource.Resource" reference="18">
                     <dictionary>
@@ -999,7 +999,7 @@
                      <string role="key" value="_storageName"></string>
                      <string value="MainActivity.kt"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmperz_du\\MainActivity.kt"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpppkmai\\MainActivity.kt"></string>
                      <string role="key" value="checksum"></string>
                      <string value="0b3a7fa642ffc3d40563a8f8ac4b18cb"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1028,7 +1028,7 @@
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="8"></int>
+              <int value="10"></int>
               <string role="key" value="parentNode"></string>
               <reference key="12"></reference>
              </dictionary>
@@ -1315,7 +1315,7 @@ get() = _instance!!
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="149515"></int>
+                     <int value="149519"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -1329,7 +1329,7 @@ get() = _instance!!
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="3_837_2.7"></unicode>
+                   <unicode value="3_837_2.8"></unicode>
                    <string role="key" value="_imageResource"></string>
                    <instance class="exe.engine.resource.Resource" reference="22">
                     <dictionary>
@@ -1340,7 +1340,7 @@ get() = _instance!!
                      <string role="key" value="_storageName"></string>
                      <string value="conexionBT.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmperz_du\\conexionBT.png"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpppkmai\\conexionBT.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="ae3579d59141272f624c1e722af90af2"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1369,7 +1369,7 @@ get() = _instance!!
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="8"></int>
+              <int value="9"></int>
               <string role="key" value="parentNode"></string>
               <reference key="21"></reference>
              </dictionary>
@@ -2944,85 +2944,90 @@ jugador.insertarEnBBDD(db)&lt;/code&gt;&lt;/pre&gt;
            <list></list>
           </dictionary>
          </instance>
-         <instance class="exe.engine.node.Node" reference="43">
+        </list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="43">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="4.5. Room"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="41">
           <dictionary>
            <string role="key" value="_title"></string>
-           <unicode value="4.4.4. Room"></unicode>
-           <string role="key" value="idevices"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
            <list>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="41">
-             <dictionary>
-              <string role="key" value="_title"></string>
-              <unicode value=""></unicode>
-              <string role="key" value="_attributes"></string>
-              <list>
-               <tuple>
-                <string value="title"></string>
-                <list>
-                 <string value="Title"></string>
-                 <int value="0"></int>
-                 <int value="0"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="category"></string>
-                <list>
-                 <string value="Category"></string>
-                 <int value="0"></int>
-                 <int value="1"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="css-class"></string>
-                <list>
-                 <string value="CSS class"></string>
-                 <int value="0"></int>
-                 <int value="2"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="icon"></string>
-                <list>
-                 <string value="Icon"></string>
-                 <int value="0"></int>
-                 <int value="3"></int>
-                </list>
-               </tuple>
-              </list>
-              <string role="key" value="_author"></string>
-              <string value=""></string>
-              <string role="key" value="_iDeviceDir"></string>
-              <string value="udl-content"></string>
-              <string role="key" value="_purpose"></string>
-              <string value=""></string>
-              <string role="key" value="_tip"></string>
-              <string value=""></string>
-              <string role="key" value="_valid"></string>
-              <bool value="1"></bool>
-              <string role="key" value="class_"></string>
-              <unicode value="UDLcontent"></unicode>
-              <string role="key" value="edit"></string>
-              <bool value="0"></bool>
-              <string role="key" value="emphasis"></string>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
               <int value="0"></int>
-              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
               <int value="1"></int>
-              <string role="key" value="fields"></string>
-              <list>
-               <instance class="exe.engine.field.TextAreaField" reference="42">
-                <dictionary>
-                 <string role="key" value="_id"></string>
-                 <unicode value="865_2"></unicode>
-                 <string role="key" value="_idevice"></string>
-                 <reference key="41"></reference>
-                 <string role="key" value="_instruc"></string>
-                 <string value=""></string>
-                 <string role="key" value="_name"></string>
-                 <string value=""></string>
-                 <string role="key" value="anchor_names"></string>
-                 <list></list>
-                 <string role="key" value="content_w_resourcePaths"></string>
-                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Room es un ORM (Object- Relational mapping) que nos permitirá trabajar de una forma más sencilla con bases de datos SQL.&lt;/p&gt;
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="42">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="865_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="41"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Room es un ORM (Object- Relational mapping) que nos permitirá trabajar de una forma más sencilla con bases de datos SQL.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;resources/room_architecture.png&quot; alt=&quot;Room Architecture&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;560&quot; height=&quot;506&quot;&gt;&lt;/p&gt;
 &lt;p&gt;La imagen anterior nos muestra el funcionamiento de dicha herramienta que, aunque parezca complicado al principio, es muy fácil de entender cuando nos pongamos a ello.&amp;nbsp;&lt;br&gt;Tendremos una base de datos que le devolverá a nuestra app los &lt;strong&gt;Data Access Objects&lt;/strong&gt; (DAO) estos son los encargados de persistir la información en la base de datos y de devolvernos las &lt;strong&gt;entities&lt;/strong&gt;, que serán las encargadas de devolvernos la información que hemos ido almacenando.&lt;/p&gt;
 &lt;p&gt;Necesitas incluir el plugin kotlin-kapt y las dos siguientes dependencias:&lt;/p&gt;
@@ -3195,184 +3200,186 @@ lateinit var tasks: MutableList&amp;lt;TaskEntity&amp;gt;&lt;/code&gt;&lt;/pre&g
 &lt;div id=&quot;t948b25f9-d7ec-5fa8-7dc4-1191dd0fa660&quot; class=&quot;exe-tooltip-text&quot;&gt;
 &lt;p&gt;Las versiones se usan para la posible migración de datos al actualizar la App. Imaginemos que sacamos una segunda versión de la app y en vez de 3 parámetros almacenamos 4, no podemos cambiar nuestra entidad de golpe pues habría problemas. Para eso se usa la versión, junto a un fichero de migración que le dice al programa que deberá hacer para pasar de la versión 1 a la 2, 3 o la que sea.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
-                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-                 <int value="4"></int>
-                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-                 <int value="2"></int>
-                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-                 <int value="3"></int>
-                 <string role="key" value="htmlTag"></string>
-                 <string value="div"></string>
-                 <string role="key" value="images"></string>
-                 <instance class="exe.engine.galleryidevice.GalleryImages">
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list>
+                 <instance class="exe.engine.galleryidevice.GalleryImage">
                   <dictionary>
-                   <string role="key" value=".listitems"></string>
-                   <list>
-                    <instance class="exe.engine.galleryidevice.GalleryImage">
-                     <dictionary>
-                      <string role="key" value="_caption"></string>
-                      <instance class="exe.engine.field.TextField">
-                       <dictionary>
-                        <string role="key" value="_id"></string>
-                        <int value="149517"></int>
-                        <string role="key" value="_idevice"></string>
-                        <none></none>
-                        <string role="key" value="_instruc"></string>
-                        <string value=""></string>
-                        <string role="key" value="_name"></string>
-                        <string value=""></string>
-                        <string role="key" value="content"></string>
-                        <string value=""></string>
-                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-                        <int value="4"></int>
-                       </dictionary>
-                      </instance>
-                      <string role="key" value="_id"></string>
-                      <unicode value="18_865_2.0"></unicode>
-                      <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="44">
-                       <dictionary>
-                        <string role="key" value="_idevice"></string>
-                        <reference key="41"></reference>
-                        <string role="key" value="_package"></string>
-                        <reference key="1"></reference>
-                        <string role="key" value="_storageName"></string>
-                        <string value="room_architecture.png"></string>
-                        <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpglioux.eXe\\previews\\allyourbase\\room_architecture.png"></string>
-                        <string role="key" value="checksum"></string>
-                        <string value="9cf2e9f17b01edee76f5ff365e075dc8"></string>
-                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
-                        <int value="2"></int>
-                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
-                        <int value="2"></int>
-                        <string role="key" value="warningMsg"></string>
-                        <string value=""></string>
-                       </dictionary>
-                      </instance>
-                      <string role="key" value="_parent"></string>
-                      <reference key="42"></reference>
-                      <string role="key" value="_thumbnailResource"></string>
-                      <none></none>
-                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
-                      <int value="3"></int>
-                      <string role="key" value="makeThumbnail"></string>
-                      <bool value="0"></bool>
-                     </dictionary>
-                    </instance>
-                   </list>
-                   <string role="key" value="idevice"></string>
+                   <string role="key" value="_caption"></string>
+                   <instance class="exe.engine.field.TextField">
+                    <dictionary>
+                     <string role="key" value="_id"></string>
+                     <int value="149521"></int>
+                     <string role="key" value="_idevice"></string>
+                     <none></none>
+                     <string role="key" value="_instruc"></string>
+                     <string value=""></string>
+                     <string role="key" value="_name"></string>
+                     <string value=""></string>
+                     <string role="key" value="content"></string>
+                     <string value=""></string>
+                     <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                     <int value="4"></int>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_id"></string>
+                   <unicode value="18_865_2.1"></unicode>
+                   <string role="key" value="_imageResource"></string>
+                   <instance class="exe.engine.resource.Resource" reference="44">
+                    <dictionary>
+                     <string role="key" value="_idevice"></string>
+                     <reference key="41"></reference>
+                     <string role="key" value="_package"></string>
+                     <reference key="1"></reference>
+                     <string role="key" value="_storageName"></string>
+                     <string value="room_architecture.png"></string>
+                     <string role="key" value="_userName"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpppkmai\\room_architecture.png"></string>
+                     <string role="key" value="checksum"></string>
+                     <string value="9cf2e9f17b01edee76f5ff365e075dc8"></string>
+                     <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="warningMsg"></string>
+                     <string value=""></string>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_parent"></string>
                    <reference key="42"></reference>
+                   <string role="key" value="_thumbnailResource"></string>
+                   <none></none>
+                   <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                   <int value="3"></int>
+                   <string role="key" value="makeThumbnail"></string>
+                   <bool value="0"></bool>
                   </dictionary>
                  </instance>
-                 <string role="key" value="intlinks_to_anchors"></string>
-                 <dictionary></dictionary>
-                 <string role="key" value="nextImageId"></string>
-                 <int value="1"></int>
-                 <string role="key" value="parentNode"></string>
-                 <reference key="43"></reference>
-                </dictionary>
-               </instance>
-              </list>
-              <string role="key" value="icon"></string>
-              <unicode value=""></unicode>
-              <string role="key" value="id"></string>
-              <unicode value="18"></unicode>
-              <string role="key" value="ideviceCategory"></string>
-              <unicode value="Text and Tasks"></unicode>
-              <string role="key" value="lastIdevice"></string>
-              <bool value="0"></bool>
-              <string role="key" value="nextFieldId"></string>
-              <int value="3"></int>
-              <string role="key" value="originalicon"></string>
-              <string value=""></string>
+                </list>
+                <string role="key" value="idevice"></string>
+                <reference key="42"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="2"></int>
               <string role="key" value="parentNode"></string>
               <reference key="43"></reference>
-              <string role="key" value="systemResources"></string>
-              <list></list>
-              <string role="key" value="undo"></string>
-              <bool value="1"></bool>
-              <string role="key" value="userResources"></string>
-              <list>
-               <reference key="44"></reference>
-              </list>
-              <string role="key" value="version"></string>
-              <int value="0"></int>
              </dictionary>
             </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="45">
-             <dictionary>
-              <string role="key" value="_title"></string>
-              <unicode value=""></unicode>
-              <string role="key" value="_attributes"></string>
-              <list>
-               <tuple>
-                <string value="title"></string>
-                <list>
-                 <string value="Title"></string>
-                 <int value="0"></int>
-                 <int value="0"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="category"></string>
-                <list>
-                 <string value="Category"></string>
-                 <int value="0"></int>
-                 <int value="1"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="css-class"></string>
-                <list>
-                 <string value="CSS class"></string>
-                 <int value="0"></int>
-                 <int value="2"></int>
-                </list>
-               </tuple>
-               <tuple>
-                <string value="icon"></string>
-                <list>
-                 <string value="Icon"></string>
-                 <int value="0"></int>
-                 <int value="3"></int>
-                </list>
-               </tuple>
-              </list>
-              <string role="key" value="_author"></string>
-              <string value=""></string>
-              <string role="key" value="_iDeviceDir"></string>
-              <string value="udl-content"></string>
-              <string role="key" value="_purpose"></string>
-              <string value=""></string>
-              <string role="key" value="_tip"></string>
-              <string value=""></string>
-              <string role="key" value="_valid"></string>
-              <bool value="1"></bool>
-              <string role="key" value="class_"></string>
-              <unicode value="UDLcontent"></unicode>
-              <string role="key" value="edit"></string>
-              <bool value="0"></bool>
-              <string role="key" value="emphasis"></string>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="18"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="43"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list>
+            <reference key="44"></reference>
+           </list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="45">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
               <int value="0"></int>
-              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
               <int value="1"></int>
-              <string role="key" value="fields"></string>
-              <list>
-               <instance class="exe.engine.field.TextAreaField" reference="46">
-                <dictionary>
-                 <string role="key" value="_id"></string>
-                 <unicode value="866_2"></unicode>
-                 <string role="key" value="_idevice"></string>
-                 <reference key="45"></reference>
-                 <string role="key" value="_instruc"></string>
-                 <string value=""></string>
-                 <string role="key" value="_name"></string>
-                 <string value=""></string>
-                 <string role="key" value="anchor_names"></string>
-                 <list></list>
-                 <string role="key" value="content_w_resourcePaths"></string>
-                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-expression&quot;&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Corrutinas&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Todas estas operaciones de base de datos deberían hacerse fuera del hilo principal. Esto se puede realizar manualmente, o usar alguna de las integraciones que ya se nos dan implementadas.&lt;/p&gt;
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="46">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="866_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="45"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-expression&quot;&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Corrutinas&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Todas estas operaciones de base de datos deberían hacerse fuera del hilo principal. Esto se puede realizar manualmente, o usar alguna de las integraciones que ya se nos dan implementadas.&lt;/p&gt;
 &lt;p&gt;Lo único que necesitamos es añadir la palabra &lt;strong&gt;suspend&lt;/strong&gt; delante de las funciones del DAO, ¡y listo!&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
@@ -3492,60 +3499,259 @@ val deleteTask: (TaskEntity) -&amp;gt; Unit) : RecyclerView.Adapter&lt;tasksadap
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;En el método&amp;nbsp;&lt;strong&gt;deleteTask()&amp;nbsp;&lt;/strong&gt;debemos hacer algo más, para empezar, buscaremos en nuestra lista&amp;nbsp;&lt;strong&gt;tasks&lt;/strong&gt; la posición del item que vamos a borrar para tener una referencia. Para ello usaremos la función de las listas&amp;nbsp;&lt;strong&gt;indexOf(item)&lt;/strong&gt; que nos devolverá dicha posición y la almacenamos en una variable, luego borraremos el objeto de la base de datos y de nuestra lista y acabaremos en el hilo principal avisando al adapter que hemos removido un objeto, pasándole la posición.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
-                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-                 <int value="4"></int>
-                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-                 <int value="2"></int>
-                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-                 <int value="3"></int>
-                 <string role="key" value="htmlTag"></string>
-                 <string value="div"></string>
-                 <string role="key" value="images"></string>
-                 <instance class="exe.engine.galleryidevice.GalleryImages">
-                  <dictionary>
-                   <string role="key" value=".listitems"></string>
-                   <list></list>
-                   <string role="key" value="idevice"></string>
-                   <reference key="46"></reference>
-                  </dictionary>
-                 </instance>
-                 <string role="key" value="intlinks_to_anchors"></string>
-                 <dictionary></dictionary>
-                 <string role="key" value="nextImageId"></string>
-                 <int value="0"></int>
-                 <string role="key" value="parentNode"></string>
-                 <none></none>
-                </dictionary>
-               </instance>
-              </list>
-              <string role="key" value="icon"></string>
-              <unicode value=""></unicode>
-              <string role="key" value="id"></string>
-              <unicode value="19"></unicode>
-              <string role="key" value="ideviceCategory"></string>
-              <unicode value="Text and Tasks"></unicode>
-              <string role="key" value="lastIdevice"></string>
-              <bool value="0"></bool>
-              <string role="key" value="nextFieldId"></string>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
               <int value="3"></int>
-              <string role="key" value="originalicon"></string>
-              <string value=""></string>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="46"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
               <string role="key" value="parentNode"></string>
               <reference key="43"></reference>
-              <string role="key" value="systemResources"></string>
-              <list></list>
-              <string role="key" value="undo"></string>
-              <bool value="1"></bool>
-              <string role="key" value="userResources"></string>
-              <list></list>
-              <string role="key" value="version"></string>
-              <int value="0"></int>
              </dictionary>
             </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="47">
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="19"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="43"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="47">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Últimos retoques"></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="1"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="48">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="869_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="47"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Vamos a configurar el botón de añadir tareas, que lo que hará será crear un objeto &lt;strong&gt;Task&lt;/strong&gt;, almacenarlo en base de datos y luego añadirlo a la lista que tiene el adapter. Lo primero que haremos será ir a nuestro DAO y añadir una nueva función de insertar.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;@Insert
+fun addTask(taskEntity : TaskEntity):Long&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Simplemente recibirá un objeto &lt;strong&gt;TaskEntity&lt;/strong&gt; y lo añadirá a la base de datos. Fijaros que devuelve un &lt;strong&gt;Long&lt;/strong&gt;, eso es porque nos dará automáticamente la&amp;nbsp;&lt;strong&gt;ID&amp;nbsp;&lt;/strong&gt;del item añadido.&lt;/p&gt;
+&lt;p&gt;Nos vamos a nuestro&amp;nbsp;&lt;strong&gt;onCreate&amp;nbsp;&lt;/strong&gt;del &lt;strong&gt;MainAcitivity&lt;/strong&gt; y añadimos lo siguiente.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;btnAddTask.setOnClickListener {
+addTask(TaskEntity(name = etTask.text.toString()))}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Simplemente le hemos asignado al evento del click un método llamado&amp;nbsp;&lt;strong&gt;addTask()&lt;/strong&gt;&amp;nbsp;al cual le pasamos un objeto nuevo con el texto de la celda. Dicha función añadirá a la base de datos la tarea, luego recuperemos dicha tarea y la añadiremos a la lista del &lt;strong&gt;adapter&lt;/strong&gt;. &lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;  fun addTask(task:TaskEntity)= runBlocking{
+        launch {
+            val id = MisNotasApp.database.taskDao().addTask(task)
+            val recoveryTask = MisNotasApp.database.taskDao().getTaskById(id)
+                tasks.add(recoveryTask)
+                adapter.notifyItemInserted(tasks.size)
+                clearFocus()
+                hideKeyboard()
+        }
+    }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Así que lo que estamos haciendo es añadir la tarea y luego recuperamos dicho objeto a través de &lt;strong&gt;getTaskById&lt;/strong&gt; pasándole la &lt;strong&gt;ID&lt;/strong&gt; que nos devuelve &lt;strong&gt;addTask&lt;/strong&gt;. Obviamente debemos añadir a nuestro DAO la función de recuperar el item.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;@Query(&quot;SELECT * FROM task_entity where id like :arg0&quot;)
+fun getTaskById(id: Long): TaskEntity&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Cuando hemos acabado de realizar esto, en el hilo principal añadimos el objeto recuperado a la lista, le decimos al adapter que hemos añadido un objeto nuevo a través de&amp;nbsp;&lt;strong&gt;adapter.notifyItemInserted&lt;/strong&gt; (hay que pasarle pa posición, como es el último objeto añadido, podemos saber cual es recuperando el tamaño de la lista) y luego los métodos&amp;nbsp;&lt;strong&gt;clearFocus()&amp;nbsp;&lt;/strong&gt;y&amp;nbsp;&lt;strong&gt;hideKeyboard()&amp;nbsp;&lt;/strong&gt;simplemente nos quitarán el texto del &lt;strong&gt;editText&lt;/strong&gt; y bajarán el teclado.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;fun clearFocus(){
+   etTask.setText(&quot;&quot;)
+}
+fun Context.hideKeyboard() {
+    val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    inputMethodManager.hideSoftInputFromWindow(currentFocus.windowToken, 0)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="48"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="43"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="22"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="43"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="9"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="1"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:UA04.%20Comunicando...:4.5.%20Room"></string>
+        <string role="key" value="parent"></string>
+        <reference key="9"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list>
+         <instance class="exe.engine.node.Node" reference="51">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="4.5.1. Ejemplo"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="49">
              <dictionary>
               <string role="key" value="_title"></string>
-              <unicode value="Últimos retoques"></unicode>
+              <unicode value=""></unicode>
               <string role="key" value="_attributes"></string>
               <list>
                <tuple>
@@ -3596,17 +3802,17 @@ val deleteTask: (TaskEntity) -&amp;gt; Unit) : RecyclerView.Adapter&lt;tasksadap
               <string role="key" value="edit"></string>
               <bool value="0"></bool>
               <string role="key" value="emphasis"></string>
-              <int value="1"></int>
+              <int value="0"></int>
               <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="48">
+               <instance class="exe.engine.field.TextAreaField" reference="50">
                 <dictionary>
                  <string role="key" value="_id"></string>
-                 <unicode value="869_2"></unicode>
+                 <unicode value="114_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="47"></reference>
+                 <reference key="49"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -3614,52 +3820,285 @@ val deleteTask: (TaskEntity) -&amp;gt; Unit) : RecyclerView.Adapter&lt;tasksadap
                  <string role="key" value="anchor_names"></string>
                  <list></list>
                  <string role="key" value="content_w_resourcePaths"></string>
-                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Vamos a configurar el botón de añadir tareas, que lo que hará será crear un objeto &lt;strong&gt;Task&lt;/strong&gt;, almacenarlo en base de datos y luego añadirlo a la lista que tiene el adapter. Lo primero que haremos será ir a nuestro DAO y añadir una nueva función de insertar.&lt;/p&gt;
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Vamos a desglosar la explicación del código anterior por documentos, desde Gradle, hasta el MainActivity que ejecuta la aplicación:&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;build.gradle&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Este archivo debe modificarse añadiendo varias líneas en la zona &lt;strong&gt;plugins&lt;/strong&gt; y en &lt;strong&gt;dependencies&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;@Insert
-fun addTask(taskEntity : TaskEntity):Long&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;id 'kotlin-kapt' // En plugins
+
+// En dependencies
+implementation 'androidx.recyclerview:recyclerview:1.2.1'
+implementation 'androidx.room:room-ktx:2.4.3'
+kapt 'androidx.room:room-compiler:2.4.3'&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Simplemente recibirá un objeto &lt;strong&gt;TaskEntity&lt;/strong&gt; y lo añadirá a la base de datos. Fijaros que devuelve un &lt;strong&gt;Long&lt;/strong&gt;, eso es porque nos dará automáticamente la&amp;nbsp;&lt;strong&gt;ID&amp;nbsp;&lt;/strong&gt;del item añadido.&lt;/p&gt;
-&lt;p&gt;Nos vamos a nuestro&amp;nbsp;&lt;strong&gt;onCreate&amp;nbsp;&lt;/strong&gt;del &lt;strong&gt;MainAcitivity&lt;/strong&gt; y añadimos lo siguiente.&lt;/p&gt;
+&lt;p&gt;Esto cargará en nuestra aplicación el plugin &lt;a href=&quot;https://runebook.dev/es/docs/kotlin/docs/reference/kapt&quot; target=&quot;_blank&quot; title=&quot;Kotlin Annotation Processing Tool&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;kapt&lt;/strong&gt; &lt;/a&gt;y las dependencias para utilizar los métodos de &lt;a href=&quot;https://developer.android.com/jetpack/androidx/releases/room&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;Room&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Además, incorporamos los métodos del &lt;strong&gt;RecyclerView&lt;/strong&gt; que usaremos para mostrar la información.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;TaskEntity.kt&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Este archivo contiene las &lt;strong&gt;entidades&lt;/strong&gt; (tablas) en forma de &lt;strong&gt;data class&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Cada entidad en Room debe tener la anotación &lt;strong&gt;@Entity&lt;/strong&gt; delante de la definición de la clase. Además, se le puede añadir parámetro como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;tableName:&lt;/strong&gt; nombre de la tabla&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;primaryKeys:&lt;/strong&gt; para combinar dos o más campos como campo clave.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ignoreColumns&lt;/strong&gt;: para ignorar algún campo que no deseemos cargar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Debe existir una clase por cada entidad.&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;btnAddTask.setOnClickListener {
-addTask(TaskEntity(name = etTask.text.toString()))}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;@Entity(tableName = &quot;task_entity&quot;)
+data class TaskEntity (
+    @PrimaryKey(autoGenerate = true)
+    var id:Int = 0, // Id de la tarea
+    var name:String = &quot;&quot;, // Nombre de la tarea
+    var isDone:Boolean = false // Booleano que indica si la tarea está hecha o no
+)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Simplemente le hemos asignado al evento del click un método llamado&amp;nbsp;&lt;strong&gt;addTask()&lt;/strong&gt;&amp;nbsp;al cual le pasamos un objeto nuevo con el texto de la celda. Dicha función añadirá a la base de datos la tarea, luego recuperemos dicha tarea y la añadiremos a la lista del &lt;strong&gt;adapter&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;La anotación&lt;strong&gt; @Entity&lt;/strong&gt; la utilizamos para añadirle un nombre a nuestra entidad como tabla de la base de datos.&lt;/p&gt;
+&lt;p&gt;La anotación &lt;strong&gt;@PrimaryKey (autoGenerate = true)&lt;/strong&gt; está diciendo que la variable &lt;strong&gt;id&lt;/strong&gt; es un valor que se autogenera al crear un objeto de esta clase y que no podrá repetirse.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;TaskDao.kt&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La interfaz &lt;strong&gt;TaskDao&lt;/strong&gt; será la primera capa sobre la base de datos y encargada de la comunicación con esta mediante sentencias SQL. &lt;strong&gt;Hay que crear una por cada entidad.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bajo la notación&lt;strong&gt; @&lt;/strong&gt;, se declara la función que se ejecutará en cada caso. Estas funciones o métodos, deben declararse como &lt;strong&gt;suspend&lt;/strong&gt; para poder ejecutarlos en hilos diferentes al principal ya que, las lecturas/escrituras a bases de datos, consumen muchos recursos.&lt;/p&gt;
+&lt;p&gt;Los objetos DAO facilitan mucho el acceso a la BD. Aquí se declararán los métodos que interactuarán con las tablas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;@Query&lt;/strong&gt;: Se hacen &lt;strong&gt;consultas&lt;/strong&gt; directamente a la base de datos usando SQL.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;@Insert&lt;/strong&gt;: Se usará para &lt;strong&gt;insertar&lt;/strong&gt; entidades a la base de datos, a diferencia de las &lt;strong&gt;@Query&lt;/strong&gt;&amp;nbsp;no hay que hacer ningún tipo de consulta, sino &lt;strong&gt;pasar el objeto&lt;/strong&gt; a insertar.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;@Update&lt;/strong&gt;: &lt;strong&gt;Actualizan&lt;/strong&gt; una entidad ya insertada. Solo tendremos que pasar ese objeto modificado y ya se encarga de actualizarlo. ¿Cómo sabe que objeto hay que modificar? Pues por nuestro &lt;strong&gt;id&lt;/strong&gt;, la &lt;strong&gt;PrimaryKey&lt;/strong&gt;. Si usamos o&lt;strong&gt;nConflict&lt;/strong&gt;, podremos decidir la acción en caso de conflicto: &lt;strong&gt;Ignore&lt;/strong&gt;, &lt;strong&gt;Abort&lt;/strong&gt; o &lt;strong&gt;Replace&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;@Delete&lt;/strong&gt;:&amp;nbsp;Como su propio nombre indica &lt;strong&gt;borra&lt;/strong&gt; de la tabla un objeto que le pasemos.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;  fun addTask(task:TaskEntity)= runBlocking{
-        launch {
-            val id = MisNotasApp.database.taskDao().addTask(task)
-            val recoveryTask = MisNotasApp.database.taskDao().getTaskById(id)
-                tasks.add(recoveryTask)
-                adapter.notifyItemInserted(tasks.size)
-                clearFocus()
-                hideKeyboard()
+&lt;pre&gt;&lt;code&gt;@Dao
+interface TaskDao {
+    @Query(&quot;SELECT * FROM task_entity&quot;)
+    suspend fun getAllTasks(): MutableList&amp;lt; TaskEntity&amp;gt;  // Función que devuelve todas las tareas de la base de datos en una lista Mutable.
+
+    @Insert
+    suspend fun addTask(taskEntity : TaskEntity):Long    // Función que añade una tarea, la que se pasa por parámetro, y devuelve el id insertado. &lt;br&gt;                                                         // Devuelve Long porque la cantidad de datos guardada puede ser muy alto.
+
+    @Query(&quot;SELECT * FROM task_entity where id like :id&quot;)
+    suspend fun getTaskById(id: Long): TaskEntity        // Función que busca tareas por id (debe ser Long, no Int)
+
+    @Update
+    suspend fun updateTask(task: TaskEntity):Int         // Función que actualiza una tarea y devuelve 
+
+    @Delete
+    suspend fun deleteTask(task: TaskEntity):Int         // Función que borra una tarea y devuelve
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Estas funciones se declararán en el &lt;strong&gt;MainActivity&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;TaskDatabase.kt&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Esta clase nos permite la creación de la Base de Datos.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;@Database(entities = arrayOf(TaskEntity::class), version = 1)
+abstract class TasksDatabase : RoomDatabase() {
+    abstract fun taskDao(): TaskDao
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Como se puede observar, a la notificación &lt;strong&gt;@Database&lt;/strong&gt; se le pasa como parámetro un array de Entidades (tipo clase) y se especifica la versión 1 de la base de datos (en el futuro, si se amplia la base de datos, se puede crear otra versión y el programa se adaptará a la base de datos adecuada)&lt;/p&gt;
+&lt;p&gt;El objeto base de datos &lt;strong&gt;TasksDatabase &lt;/strong&gt;hereda la estructura Room y contiene una única función, &lt;strong&gt;taskDao()&lt;/strong&gt; que devuelve la interface &lt;strong&gt;TaskDao&lt;/strong&gt; encargada del manejo de la base de datos.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;MisNotasApp.kt&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Esta clase va a extender de &lt;strong&gt;Application()&lt;/strong&gt; y será lo primero en ejecutarse al abrirse la aplicación.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre class=&quot;  language-java&quot;&gt;&lt;code class=&quot;  language-java&quot;&gt;class MisNotasApp: Application() {
+    &lt;a href=&quot;#td8c7df3a-9a9c-b30b-7cc9-53b568db1790&quot; id=&quot;linkd8c7df3a-9a9c-b30b-7cc9-53b568db1790&quot; class=&quot;exe-tooltip definition-tt titled-tt&quot; title=&quot;Companion Object | &quot;&gt;&lt;strong&gt;companion object&lt;/strong&gt; &lt;/a&gt;{
+        lateinit var database: TasksDatabase
+    }
+    override fun onCreate() {
+        super.onCreate()
+        MisNotasApp.database =  Room.databaseBuilder(this, TasksDatabase::class.java, &quot;tasks-db&quot;).build()
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;La instancia &lt;strong&gt;database&lt;/strong&gt; necesita tres parámetros:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;el &lt;strong&gt;contexto&lt;/strong&gt; (&lt;strong&gt;this&lt;/strong&gt;),&lt;/li&gt;
+&lt;li&gt;la clase de nuestra base de datos (&lt;strong&gt;TasksDatabase&lt;/strong&gt;) declarada de forma global y accesible de forma estática,&lt;/li&gt;
+&lt;li&gt;el nombre que le pondremos a la base de datos, en este caso, &lt;strong&gt;&quot;tasks-db&quot;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;Para que esta clase se lance al abrir la app debemos ir al &lt;strong&gt;AndroidManifest.xml&lt;/strong&gt; y añadir&amp;nbsp;&lt;strong&gt;android:name=&quot;.MisNotasApp&quot;&lt;/strong&gt; dentro de la etiqueta.&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&quot;td8c7df3a-9a9c-b30b-7cc9-53b568db1790&quot; class=&quot;exe-tooltip-text&quot;&gt;
+&lt;p&gt;Los objetos y variables declarados dentro de un companion object, pueden ser llamadas simplemente usando la clase y el nombre del objeto o variable, sin tener que instanciar la clase.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;activity_main.xml&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt; ?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
+&amp;lt; RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:background=&quot;@android:color/background_light&quot;
+    tools:context=&quot;com.cursokotlin.misnotas.UI.MainActivity&quot;&amp;gt;
+    &amp;lt; android.support.v7.widget.RecyclerView
+        android:id=&quot;@+id/rvTask&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;
+        android:layout_below=&quot;@+id/rlAddTask&quot;/&amp;gt;
+    &amp;lt; RelativeLayout
+        android:id=&quot;@+id/rlAddTask&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:elevation=&quot;10dp&quot;
+        android:layout_margin=&quot;10dp&quot;
+        android:background=&quot;@android:color/white&quot;&amp;gt;
+        &amp;lt; EditText
+            android:id=&quot;@+id/etTask&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:hint=&quot;añade una tarea&quot;
+            android:layout_alignParentLeft=&quot;true&quot;
+            android:layout_toLeftOf=&quot;@+id/btnAddTask&quot;
+            /&amp;gt;
+        &amp;lt; Button
+            android:id=&quot;@+id/btnAddTask&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_alignParentRight=&quot;true&quot;
+            android:text=&quot;Añadir&quot;/&amp;gt;
+    &amp;lt; /RelativeLayout&amp;gt;
+&amp;lt; /RelativeLayout&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;item_task.xml&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt; ?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
+&amp;lt; LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:orientation=&quot;horizontal&quot;
+    android:layout_margin=&quot;10dp&quot;&amp;gt;
+    &amp;lt; CheckBox
+        android:id=&quot;@+id/cbIsDone&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_marginRight=&quot;10dp&quot;
+        android:layout_marginEnd=&quot;10dp&quot; /&amp;gt;
+    &amp;lt; TextView
+        android:id=&quot;@+id/tvTask&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:textStyle=&quot;bold&quot;
+        android:textSize=&quot;18sp&quot;
+        tools:text=&quot;Test&quot;/&amp;gt;
+&amp;lt; /LinearLayout&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;TaskAdapter.kt&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://keepcoding.io/blog/metodo-onbindviewholder-en-android/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;Adapter&lt;/strong&gt;&lt;/a&gt; es una herramienta que proporciona el sistema operativo Android, con la cual tenemos la posibilidad de transformar una cosa en otra diferente. De manera que podríamos decir que hace referencia a una especificación que realizamos en el programa, la cual permite que la información almacenada por medio de código se adapte a lo que el usuario verá en la pantalla.&lt;/p&gt;
+&lt;p&gt;Cuando creamos un &lt;strong&gt;RecyclerViewAdapter&lt;/strong&gt;, la clase padre nos pide que debemos configurar tres métodos diferentes, los cuales son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;getItemCount&lt;/strong&gt;: este método le dice al &lt;strong&gt;RecyclerView&lt;/strong&gt; la cantidad de vistas que tenemos que renderizar. En este caso, el método &lt;strong&gt;getItemCount&lt;/strong&gt; le indicará el tamaño de los elementos que están almacenados en la lista.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;onCreateViewHolder&lt;/strong&gt;: este es otro de los métodos que nos pide la clase padre. En pocas palabras, es el que va a funcionar como el &lt;strong&gt;contenedor&lt;/strong&gt; en el que estaría la vista.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;onBindViewHolder&lt;/strong&gt;: este es el último de los métodos, el cual nos devuelve un &lt;strong&gt;View Holder&lt;/strong&gt; con el fin de renderizarle la posición.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Crearemos una nueva clase, &lt;strong&gt;TaskAdapter&lt;/strong&gt;, a la que le pasaremos 3 parámetros:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;la lista de tareas que tenemos almacenadas en nuestra base de datos,&lt;/li&gt;
+&lt;li&gt;función que se ejecuta al pulsar el checkbox (&lt;strong&gt;check&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;función que se ejecuta al pulsar la tarea (&lt;strong&gt;delete&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Estas funciones nos permitirán recuperar el evento del click en cada una de las celdas. Devuelve la vista de elementos en la lista.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;class TasksAdapter(
+    val tasks: List&amp;lt; TaskEntity&amp;gt;,                   // Objeto Lista de tareas
+    val checkTask: (TaskEntity) -&amp;gt; Unit,            // chequeo de tarea
+    val deleteTask: (TaskEntity) -&amp;gt; Unit            // borrado de tarea
+) : RecyclerView.Adapter&amp;lt; TasksAdapter.ViewHolder&amp;gt;() {    // Devuelve la vista
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {     // Muestra la vista (holder) y cada tarea de la lista (position)
+        val item = tasks[position]                                         // Extrae la tarea de la lista
+        holder.bind(item, checkTask, deleteTask)                           // Muestra el item en la vista (ver más adelante)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {    // Contenedor de la vista (holder) y la posición de la tarea en la lista (position)
+        val layoutInflater = LayoutInflater.from(parent.context)                       // Se instancia el Layout para la vista
+        return ViewHolder(layoutInflater.inflate(R.layout.item_task, parent, false))   // Devuelve la vista inflando el layout del item
+    }
+
+    override fun getItemCount(): Int {
+        return tasks.size     // Devuelve el número de tareas de la lista
+    }
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {     // Clase con la vista
+        val tvTask = view.findViewById&amp;lt; TextView&amp;gt;(R.id.tvTask)         // instancia del Textview de la vista
+        val cbIsDone = view.findViewById&amp;lt; CheckBox&amp;gt;(R.id.cbIsDone)     // instancia del Checkbox de la vista
+
+        fun bind(                                   // función que une los elementos en la vista y prepara los listeners
+            task: TaskEntity,
+            checkTask: (TaskEntity) -&amp;gt; Unit,
+            deleteTask: (TaskEntity) -&amp;gt; Unit
+        ) {
+            tvTask.text = task.name
+            cbIsDone.isChecked = task.isDone
+            cbIsDone.setOnClickListener { checkTask(task) }
+            itemView.setOnClickListener { deleteTask(task) }
         }
-    }&lt;/code&gt;&lt;/pre&gt;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Así que lo que estamos haciendo es añadir la tarea y luego recuperamos dicho objeto a través de &lt;strong&gt;getTaskById&lt;/strong&gt; pasándole la &lt;strong&gt;ID&lt;/strong&gt; que nos devuelve &lt;strong&gt;addTask&lt;/strong&gt;. Obviamente debemos añadir a nuestro DAO la función de recuperar el item.&lt;/p&gt;
-&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;MainActivity.kt&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;@Query(&quot;SELECT * FROM task_entity where id like :arg0&quot;)
-fun getTaskById(id: Long): TaskEntity&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Cuando hemos acabado de realizar esto, en el hilo principal añadimos el objeto recuperado a la lista, le decimos al adapter que hemos añadido un objeto nuevo a través de&amp;nbsp;&lt;strong&gt;adapter.notifyItemInserted&lt;/strong&gt; (hay que pasarle pa posición, como es el último objeto añadido, podemos saber cual es recuperando el tamaño de la lista) y luego los métodos&amp;nbsp;&lt;strong&gt;clearFocus()&amp;nbsp;&lt;/strong&gt;y&amp;nbsp;&lt;strong&gt;hideKeyboard()&amp;nbsp;&lt;/strong&gt;simplemente nos quitarán el texto del &lt;strong&gt;editText&lt;/strong&gt; y bajarán el teclado.&lt;/p&gt;
-&lt;div class=&quot;highlighted-code language-java&quot;&gt;
-&lt;div&gt;
-&lt;pre&gt;&lt;code&gt;fun clearFocus(){
-   etTask.setText(&quot;&quot;)
-}
-fun Context.hideKeyboard() {
-    val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
-    inputMethodManager.hideSoftInputFromWindow(currentFocus.windowToken, 0)
+&lt;pre&gt;&lt;code&gt;class MainActivity : AppCompatActivity() {
+
+    lateinit var recyclerView: RecyclerView
+    lateinit var adapter: TasksAdapter
+    lateinit var tasks: MutableList&amp;lt; TaskEntity&amp;gt;
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        tasks = ArrayList()         // Se prepara la lista
+        getTasks()                  // Se carga la lista de tareas a través del DAO
+        findViewById&amp;lt; Button&amp;gt;(R.id.btnAddTask).setOnClickListener {
+            addTask(TaskEntity(name = findViewById&amp;lt; EditText&amp;gt;(R.id.etTask).text.toString()))}
+    }
+
+    fun clearFocus(){
+        findViewById&amp;lt; EditText&amp;gt;(R.id.etTask).setText(&quot;&quot;) // Borra el texto en el EditText
+    }
+
+    fun Context.hideKeyboard() {    // Oculta el teclado de texto
+        val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+    }
+
+    fun getTasks()= runBlocking {       // Corrutina que saca de la base de datos la lista de tareas
+        launch {                        // Inicio del hilo
+            tasks = MisNotasApp.database.taskDao().getAllTasks()    // Se carga la lista de tareas
+            setUpRecyclerView(tasks)        // se pasa la lista a la Vista
+        }
+    }
+
+    fun addTask(task:TaskEntity)= runBlocking{  // Corrutina que añade una tarea a la lista
+        launch {
+            val id = MisNotasApp.database.taskDao().addTask(task)   // Inserta una tarea nueva
+            val recoveryTask = MisNotasApp.database.taskDao().getTaskById(id)   // Recarga la lista
+            tasks.add(recoveryTask) // Añade al final de la lista, el nuevo
+            adapter.notifyItemInserted(tasks.size)  // El adaptador notifica que se ha insertado
+            clearFocus()        // Se elimina el texto del et ... 
+            hideKeyboard()      // y se oculta el teclado
+        }
+    }
+
+    fun updateTask(task: TaskEntity) = runBlocking{
+        launch {
+            task.isDone = !task.isDone  // Marca o desmarca el checkbox
+            MisNotasApp.database.taskDao().updateTask(task) // Actualiza en la base de datos
+        }
+    }
+
+    fun deleteTask(task: TaskEntity)= runBlocking{
+        launch {
+            val position = tasks.indexOf(task)  // Busca la posición de la tarea en la lista...
+            MisNotasApp.database.taskDao().deleteTask(task) // ... y la borra de la base de datos.
+            tasks.remove(task)      // Finalmente, la elimina de la lista
+            adapter.notifyItemRemoved(position) // El adaptador notifica que se ha eliminado la tarea
+        }
+    }
+
+    fun setUpRecyclerView(tasks: List&amp;lt; TaskEntity&amp;gt;) {    // Método que muestra la vista usando el adaptador
+        adapter = TasksAdapter(tasks, { updateTask(it) }, {deleteTask(it)})
+        recyclerView = findViewById(R.id.rvTask)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
+    }
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3678,7 +4117,7 @@ fun Context.hideKeyboard() {
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="48"></reference>
+                   <reference key="50"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -3693,7 +4132,7 @@ fun Context.hideKeyboard() {
               <string role="key" value="icon"></string>
               <unicode value=""></unicode>
               <string role="key" value="id"></string>
-              <unicode value="22"></unicode>
+              <unicode value="23"></unicode>
               <string role="key" value="ideviceCategory"></string>
               <unicode value="Text and Tasks"></unicode>
               <string role="key" value="lastIdevice"></string>
@@ -3703,7 +4142,7 @@ fun Context.hideKeyboard() {
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="43"></reference>
+              <reference key="51"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -3716,7 +4155,7 @@ fun Context.hideKeyboard() {
             </instance>
            </list>
            <string role="key" value="_id"></string>
-           <unicode value="9"></unicode>
+           <unicode value="10"></unicode>
            <string role="key" value="_package"></string>
            <reference key="1"></reference>
            <string role="key" value="anchor_fields"></string>
@@ -3726,9 +4165,9 @@ fun Context.hideKeyboard() {
            <string role="key" value="exportType"></string>
            <string value="website"></string>
            <string role="key" value="last_full_node_path"></string>
-           <string value="exe-node:UA04.%20Comunicando...:4.4.%20Permanencia:4.4.4.%20Room"></string>
+           <string value="exe-node:UA04.%20Comunicando...:4.5.%20Room:4.5.1.%20Ejemplo"></string>
            <string role="key" value="parent"></string>
-           <reference key="27"></reference>
+           <reference key="43"></reference>
            <string role="key" value="top_anchors_linked_from_fields"></string>
            <list></list>
            <string role="key" value="children"></string>
@@ -3743,6 +4182,8 @@ fun Context.hideKeyboard() {
    </instance>
    <unicode role="key" value="1"></unicode>
    <reference key="4"></reference>
+   <unicode role="key" value="10"></unicode>
+   <reference key="51"></reference>
    <unicode role="key" value="2"></unicode>
    <reference key="12"></reference>
    <unicode role="key" value="3"></unicode>
@@ -3767,7 +4208,7 @@ fun Context.hideKeyboard() {
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="43"></reference>
+  <reference key="51"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>

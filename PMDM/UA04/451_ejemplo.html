@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.5.1. Ejemplo | UA04. Comunicando... </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA04. Comunicando...</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. Comunicando...</a></li>
+   <li><a href="41_tipos_de_conexiones.html" class="no-ch">4.1. Tipos de conexiones</a></li>
+   <li><a href="42_gestin_de_la_comunicacin.html" class="no-ch">4.2. Gestión de la comunicación</a></li>
+   <li><a href="43_bsqueda_de_dispositivos.html" class="no-ch">4.3. Búsqueda de dispositivos</a></li>
+   <li><a href="44_permanencia.html" class="daddy">4.4. Permanencia</a>
+   <ul class="other-section">
+      <li><a href="441_sharedpreferences.html" class="no-ch">4.4.1. SharedPreferences</a></li>
+      <li><a href="442_ficheros.html" class="no-ch">4.4.2. Ficheros</a></li>
+      <li><a href="443_bases_de_datos.html" class="no-ch">4.4.3. Bases de datos</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="45_room.html" class="current-page-parent daddy">4.5. Room</a>
+   <ul>
+      <li id="active"><a href="451_ejemplo.html" class="active no-ch">4.5.1. Ejemplo</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="45_room.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.5.1. Ejemplo</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id23">
+<div class="iDevice emphasis0" >
+<div id="ta23_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Vamos a desglosar la explicación del código anterior por documentos, desde Gradle, hasta el MainActivity que ejecuta la aplicación:</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>build.gradle</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Este archivo debe modificarse añadiendo varias líneas en la zona <strong>plugins</strong> y en <strong>dependencies</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>id 'kotlin-kapt' // En plugins
+
+// En dependencies
+implementation 'androidx.recyclerview:recyclerview:1.2.1'
+implementation 'androidx.room:room-ktx:2.4.3'
+kapt 'androidx.room:room-compiler:2.4.3'</code></pre>
+</div>
+</div>
+<p>Esto cargará en nuestra aplicación el plugin <a href="https://runebook.dev/es/docs/kotlin/docs/reference/kapt" target="_blank" title="Kotlin Annotation Processing Tool" rel="noopener"><strong>kapt</strong> </a>y las dependencias para utilizar los métodos de <a href="https://developer.android.com/jetpack/androidx/releases/room" target="_blank" rel="noopener"><strong>Room</strong></a>.</p>
+<p>Además, incorporamos los métodos del <strong>RecyclerView</strong> que usaremos para mostrar la información.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>TaskEntity.kt</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Este archivo contiene las <strong>entidades</strong> (tablas) en forma de <strong>data class</strong>.</p>
+<p>Cada entidad en Room debe tener la anotación <strong>@Entity</strong> delante de la definición de la clase. Además, se le puede añadir parámetro como:</p>
+<ul>
+<li><strong>tableName:</strong> nombre de la tabla</li>
+<li><strong>primaryKeys:</strong> para combinar dos o más campos como campo clave.</li>
+<li><strong>ignoreColumns</strong>: para ignorar algún campo que no deseemos cargar.</li>
+</ul>
+<p>Debe existir una clase por cada entidad.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity(tableName = "task_entity")
+data class TaskEntity (
+    @PrimaryKey(autoGenerate = true)
+    var id:Int = 0, // Id de la tarea
+    var name:String = "", // Nombre de la tarea
+    var isDone:Boolean = false // Booleano que indica si la tarea está hecha o no
+)</code></pre>
+</div>
+</div>
+<p>La anotación<strong> @Entity</strong> la utilizamos para añadirle un nombre a nuestra entidad como tabla de la base de datos.</p>
+<p>La anotación <strong>@PrimaryKey (autoGenerate = true)</strong> está diciendo que la variable <strong>id</strong> es un valor que se autogenera al crear un objeto de esta clase y que no podrá repetirse.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>TaskDao.kt</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La interfaz <strong>TaskDao</strong> será la primera capa sobre la base de datos y encargada de la comunicación con esta mediante sentencias SQL. <strong>Hay que crear una por cada entidad.</strong></p>
+<p>Bajo la notación<strong> @</strong>, se declara la función que se ejecutará en cada caso. Estas funciones o métodos, deben declararse como <strong>suspend</strong> para poder ejecutarlos en hilos diferentes al principal ya que, las lecturas/escrituras a bases de datos, consumen muchos recursos.</p>
+<p>Los objetos DAO facilitan mucho el acceso a la BD. Aquí se declararán los métodos que interactuarán con las tablas:</p>
+<ul>
+<li><strong>@Query</strong>: Se hacen <strong>consultas</strong> directamente a la base de datos usando SQL.</li>
+<li><strong>@Insert</strong>: Se usará para <strong>insertar</strong> entidades a la base de datos, a diferencia de las <strong>@Query</strong>&nbsp;no hay que hacer ningún tipo de consulta, sino <strong>pasar el objeto</strong> a insertar.</li>
+<li><strong>@Update</strong>: <strong>Actualizan</strong> una entidad ya insertada. Solo tendremos que pasar ese objeto modificado y ya se encarga de actualizarlo. ¿Cómo sabe que objeto hay que modificar? Pues por nuestro <strong>id</strong>, la <strong>PrimaryKey</strong>. Si usamos o<strong>nConflict</strong>, podremos decidir la acción en caso de conflicto: <strong>Ignore</strong>, <strong>Abort</strong> o <strong>Replace</strong></li>
+<li><strong>@Delete</strong>:&nbsp;Como su propio nombre indica <strong>borra</strong> de la tabla un objeto que le pasemos.</li>
+</ul>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Dao
+interface TaskDao {
+    @Query("SELECT * FROM task_entity")
+    suspend fun getAllTasks(): MutableList&lt; TaskEntity&gt;  // Función que devuelve todas las tareas de la base de datos en una lista Mutable.
+
+    @Insert
+    suspend fun addTask(taskEntity : TaskEntity):Long    // Función que añade una tarea, la que se pasa por parámetro, y devuelve el id insertado. <br>                                                         // Devuelve Long porque la cantidad de datos guardada puede ser muy alto.
+
+    @Query("SELECT * FROM task_entity where id like :id")
+    suspend fun getTaskById(id: Long): TaskEntity        // Función que busca tareas por id (debe ser Long, no Int)
+
+    @Update
+    suspend fun updateTask(task: TaskEntity):Int         // Función que actualiza una tarea y devuelve 
+
+    @Delete
+    suspend fun deleteTask(task: TaskEntity):Int         // Función que borra una tarea y devuelve
+}</code></pre>
+</div>
+</div>
+<p>Estas funciones se declararán en el <strong>MainActivity</strong>.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>TaskDatabase.kt</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Esta clase nos permite la creación de la Base de Datos.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Database(entities = arrayOf(TaskEntity::class), version = 1)
+abstract class TasksDatabase : RoomDatabase() {
+    abstract fun taskDao(): TaskDao
+}</code></pre>
+</div>
+</div>
+<p>Como se puede observar, a la notificación <strong>@Database</strong> se le pasa como parámetro un array de Entidades (tipo clase) y se especifica la versión 1 de la base de datos (en el futuro, si se amplia la base de datos, se puede crear otra versión y el programa se adaptará a la base de datos adecuada)</p>
+<p>El objeto base de datos <strong>TasksDatabase </strong>hereda la estructura Room y contiene una única función, <strong>taskDao()</strong> que devuelve la interface <strong>TaskDao</strong> encargada del manejo de la base de datos.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>MisNotasApp.kt</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Esta clase va a extender de <strong>Application()</strong> y será lo primero en ejecutarse al abrirse la aplicación.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre class="  language-java"><code class="  language-java">class MisNotasApp: Application() {
+    <a href="#td8c7df3a-9a9c-b30b-7cc9-53b568db1790" id="linkd8c7df3a-9a9c-b30b-7cc9-53b568db1790" class="exe-tooltip definition-tt titled-tt" title="Companion Object | "><strong>companion object</strong> </a>{
+        lateinit var database: TasksDatabase
+    }
+    override fun onCreate() {
+        super.onCreate()
+        MisNotasApp.database =  Room.databaseBuilder(this, TasksDatabase::class.java, "tasks-db").build()
+    }
+}</code></pre>
+</div>
+</div>
+<p>La instancia <strong>database</strong> necesita tres parámetros:</p>
+<ol>
+<li>el <strong>contexto</strong> (<strong>this</strong>),</li>
+<li>la clase de nuestra base de datos (<strong>TasksDatabase</strong>) declarada de forma global y accesible de forma estática,</li>
+<li>el nombre que le pondremos a la base de datos, en este caso, <strong>"tasks-db"</strong>.</li>
+</ol>
+<p><span style="color: #ff0000;">Para que esta clase se lance al abrir la app debemos ir al <strong>AndroidManifest.xml</strong> y añadir&nbsp;<strong>android:name=".MisNotasApp"</strong> dentro de la etiqueta.</span></p>
+<div id="td8c7df3a-9a9c-b30b-7cc9-53b568db1790" class="exe-tooltip-text">
+<p>Los objetos y variables declarados dentro de un companion object, pueden ser llamadas simplemente usando la clase y el nombre del objeto o variable, sin tener que instanciar la clase.</p>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>activity_main.xml</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java">
+<div>
+<pre><code>&lt; ?xml version="1.0" encoding="utf-8"?&gt;
+&lt; RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.cursokotlin.misnotas.UI.MainActivity"&gt;
+    &lt; android.support.v7.widget.RecyclerView
+        android:id="@+id/rvTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlAddTask"/&gt;
+    &lt; RelativeLayout
+        android:id="@+id/rlAddTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/white"&gt;
+        &lt; EditText
+            android:id="@+id/etTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="añade una tarea"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/btnAddTask"
+            /&gt;
+        &lt; Button
+            android:id="@+id/btnAddTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Añadir"/&gt;
+    &lt; /RelativeLayout&gt;
+&lt; /RelativeLayout&gt;
+
+</code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>item_task.xml</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt; ?xml version="1.0" encoding="utf-8"?&gt;
+&lt; LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"&gt;
+    &lt; CheckBox
+        android:id="@+id/cbIsDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp" /&gt;
+    &lt; TextView
+        android:id="@+id/tvTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        tools:text="Test"/&gt;
+&lt; /LinearLayout&gt;</code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>TaskAdapter.kt</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="https://keepcoding.io/blog/metodo-onbindviewholder-en-android/" target="_blank" rel="noopener"><strong>Adapter</strong></a> es una herramienta que proporciona el sistema operativo Android, con la cual tenemos la posibilidad de transformar una cosa en otra diferente. De manera que podríamos decir que hace referencia a una especificación que realizamos en el programa, la cual permite que la información almacenada por medio de código se adapte a lo que el usuario verá en la pantalla.</p>
+<p>Cuando creamos un <strong>RecyclerViewAdapter</strong>, la clase padre nos pide que debemos configurar tres métodos diferentes, los cuales son:</p>
+<ul>
+<li><strong>getItemCount</strong>: este método le dice al <strong>RecyclerView</strong> la cantidad de vistas que tenemos que renderizar. En este caso, el método <strong>getItemCount</strong> le indicará el tamaño de los elementos que están almacenados en la lista.</li>
+<li><strong>onCreateViewHolder</strong>: este es otro de los métodos que nos pide la clase padre. En pocas palabras, es el que va a funcionar como el <strong>contenedor</strong> en el que estaría la vista.</li>
+<li><strong>onBindViewHolder</strong>: este es el último de los métodos, el cual nos devuelve un <strong>View Holder</strong> con el fin de renderizarle la posición.</li>
+</ul>
+<p>Crearemos una nueva clase, <strong>TaskAdapter</strong>, a la que le pasaremos 3 parámetros:</p>
+<ol>
+<li>la lista de tareas que tenemos almacenadas en nuestra base de datos,</li>
+<li>función que se ejecuta al pulsar el checkbox (<strong>check</strong>)</li>
+<li>función que se ejecuta al pulsar la tarea (<strong>delete</strong>)</li>
+</ol>
+<p>Estas funciones nos permitirán recuperar el evento del click en cada una de las celdas. Devuelve la vista de elementos en la lista.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class TasksAdapter(
+    val tasks: List&lt; TaskEntity&gt;,                   // Objeto Lista de tareas
+    val checkTask: (TaskEntity) -&gt; Unit,            // chequeo de tarea
+    val deleteTask: (TaskEntity) -&gt; Unit            // borrado de tarea
+) : RecyclerView.Adapter&lt; TasksAdapter.ViewHolder&gt;() {    // Devuelve la vista
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {     // Muestra la vista (holder) y cada tarea de la lista (position)
+        val item = tasks[position]                                         // Extrae la tarea de la lista
+        holder.bind(item, checkTask, deleteTask)                           // Muestra el item en la vista (ver más adelante)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {    // Contenedor de la vista (holder) y la posición de la tarea en la lista (position)
+        val layoutInflater = LayoutInflater.from(parent.context)                       // Se instancia el Layout para la vista
+        return ViewHolder(layoutInflater.inflate(R.layout.item_task, parent, false))   // Devuelve la vista inflando el layout del item
+    }
+
+    override fun getItemCount(): Int {
+        return tasks.size     // Devuelve el número de tareas de la lista
+    }
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {     // Clase con la vista
+        val tvTask = view.findViewById&lt; TextView&gt;(R.id.tvTask)         // instancia del Textview de la vista
+        val cbIsDone = view.findViewById&lt; CheckBox&gt;(R.id.cbIsDone)     // instancia del Checkbox de la vista
+
+        fun bind(                                   // función que une los elementos en la vista y prepara los listeners
+            task: TaskEntity,
+            checkTask: (TaskEntity) -&gt; Unit,
+            deleteTask: (TaskEntity) -&gt; Unit
+        ) {
+            tvTask.text = task.name
+            cbIsDone.isChecked = task.isDone
+            cbIsDone.setOnClickListener { checkTask(task) }
+            itemView.setOnClickListener { deleteTask(task) }
+        }
+    }
+}</code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>MainActivity.kt</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java">
+<div>
+<pre><code>class MainActivity : AppCompatActivity() {
+
+    lateinit var recyclerView: RecyclerView
+    lateinit var adapter: TasksAdapter
+    lateinit var tasks: MutableList&lt; TaskEntity&gt;
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        tasks = ArrayList()         // Se prepara la lista
+        getTasks()                  // Se carga la lista de tareas a través del DAO
+        findViewById&lt; Button&gt;(R.id.btnAddTask).setOnClickListener {
+            addTask(TaskEntity(name = findViewById&lt; EditText&gt;(R.id.etTask).text.toString()))}
+    }
+
+    fun clearFocus(){
+        findViewById&lt; EditText&gt;(R.id.etTask).setText("") // Borra el texto en el EditText
+    }
+
+    fun Context.hideKeyboard() {    // Oculta el teclado de texto
+        val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+    }
+
+    fun getTasks()= runBlocking {       // Corrutina que saca de la base de datos la lista de tareas
+        launch {                        // Inicio del hilo
+            tasks = MisNotasApp.database.taskDao().getAllTasks()    // Se carga la lista de tareas
+            setUpRecyclerView(tasks)        // se pasa la lista a la Vista
+        }
+    }
+
+    fun addTask(task:TaskEntity)= runBlocking{  // Corrutina que añade una tarea a la lista
+        launch {
+            val id = MisNotasApp.database.taskDao().addTask(task)   // Inserta una tarea nueva
+            val recoveryTask = MisNotasApp.database.taskDao().getTaskById(id)   // Recarga la lista
+            tasks.add(recoveryTask) // Añade al final de la lista, el nuevo
+            adapter.notifyItemInserted(tasks.size)  // El adaptador notifica que se ha insertado
+            clearFocus()        // Se elimina el texto del et ... 
+            hideKeyboard()      // y se oculta el teclado
+        }
+    }
+
+    fun updateTask(task: TaskEntity) = runBlocking{
+        launch {
+            task.isDone = !task.isDone  // Marca o desmarca el checkbox
+            MisNotasApp.database.taskDao().updateTask(task) // Actualiza en la base de datos
+        }
+    }
+
+    fun deleteTask(task: TaskEntity)= runBlocking{
+        launch {
+            val position = tasks.indexOf(task)  // Busca la posición de la tarea en la lista...
+            MisNotasApp.database.taskDao().deleteTask(task) // ... y la borra de la base de datos.
+            tasks.remove(task)      // Finalmente, la elimina de la lista
+            adapter.notifyItemRemoved(position) // El adaptador notifica que se ha eliminado la tarea
+        }
+    }
+
+    fun setUpRecyclerView(tasks: List&lt; TaskEntity&gt;) {    // Método que muestra la vista usando el adaptador
+        adapter = TasksAdapter(tasks, { updateTask(it) }, {deleteTask(it)})
+        recyclerView = findViewById(R.id.rvTask)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
+    }
+}</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="45_room.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
