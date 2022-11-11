@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.13. El bloque PL/SQL | UA4b. PL/SQL </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA4b. PL/SQL</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. PL/SQL</a></li>
+   <li><a href="410_conceptos_bsicos.html" class="no-ch">4.10. Conceptos básicos</a></li>
+   <li><a href="411_tipos_de_datos_simples_variables_y_constantes.html" class="no-ch">4.11. Tipos de datos simples, variables y constantes</a></li>
+   <li><a href="412_variables_y_constantes.html" class="no-ch">4.12. Variables y constantes</a></li>
+   <li id="active"><a href="413_el_bloque_plsql.html" class="active daddy">4.13. El bloque PL/SQL</a>
+   <ul>
+      <li><a href="4131_estructuras_de_control.html" class="no-ch">4.13.1. Estructuras de control</a></li>
+   </ul>
+   </li>
+   <li><a href="414_excepciones.html" class="daddy">4.14. Excepciones</a>
+   <ul class="other-section">
+      <li><a href="4141_excepciones_ii.html" class="no-ch">4.14.1. Excepciones II</a></li>
+      <li><a href="4142_excepciones_iii.html" class="no-ch">4.14.2. Excepciones III</a></li>
+      <li><a href="4143_excepciones_iv.html" class="no-ch">4.14.3. Excepciones IV</a></li>
+   </ul>
+   </li>
+   <li><a href="415_cursores.html" class="no-ch">4.15. Cursores</a></li>
+   <li><a href="416_abstraccin.html" class="daddy">4.16. Abstracción</a>
+   <ul class="other-section">
+      <li><a href="4161_subprogramas.html" class="no-ch">4.16.1. Subprogramas</a></li>
+      <li><a href="4162_almacenar_subprogramas.html" class="no-ch">4.16.2. Almacenar subprogramas</a></li>
+      <li><a href="4163_paso_de_parmetros.html" class="no-ch">4.16.3. Paso de parámetros</a></li>
+      <li><a href="4164_paquetes.html" class="no-ch">4.16.4. Paquetes</a></li>
+   </ul>
+   </li>
+   <li><a href="417_disparadores.html" class="no-ch">4.17. Disparadores</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="412_variables_y_constantes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4131_estructuras_de_control.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.13. El bloque PL/SQL</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div id="ta7_126_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Ya hemos visto las unidades léxicas que componen PL/SQL, los tipos de datos que podemos utilizar y cómo se definen las variables y las constantes. Ahora vamos a ver la unidad básica en PL/SQL que es el bloque.</p>
+<p>Un bloque PL/SQL consta de tres zonas:</p>
+<ul>
+<li><strong>Declaraciones</strong>: definiciones de variables, constantes, cursores y excepciones.</li>
+<li><strong>Proceso</strong>: zona donde se realizará el proceso en sí, conteniendo las sentencias ejecutables.</li>
+<li><strong>Excepciones:</strong> zona de manejo de errores en tiempo de ejecución.</li>
+</ul>
+<p>La sintaxis es la siguiente:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>[DECLARE
+[Declaración de variables, constantes, cursores y excepciones]]
+BEGIN
+[Sentencias ejecutables]
+[EXCEPTION
+Manejadores de excepciones]
+END;</code></pre>
+</div>
+</div>
+<p>Los bloques PL/SQL pueden anidarse a cualquier nivel. Como hemos comentado anteriormente el ámbito y la visibilidad de las variables es la normal en un lenguaje procedimental. Por ejemplo, en el siguiente fragmento de código se declara la variable aux en ambos bloques, pero en el bloque anidado aux con valor igual a 10 actúa de variable global y aux con valor igual a 5 actúa como variable local, por lo que en la comparación evaluaría a FALSE, ya que al tener el mismo nombre la visibilidad dominante sería la de la variable local.</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>
+DECLARE
+     aux number := 10;
+BEGIN
+     DECLARE
+          aux number := 5;          
+     BEGIN
+          ...
+          IF aux = 10 THEN     --evalúa a FALSE, no entraría
+          ...
+     END;
+END;</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="412_variables_y_constantes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4131_estructuras_de_control.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

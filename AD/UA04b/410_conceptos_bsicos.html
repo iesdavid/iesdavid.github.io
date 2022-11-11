@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.10. Conceptos básicos | UA4b. PL/SQL </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA4b. PL/SQL</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. PL/SQL</a></li>
+   <li id="active"><a href="410_conceptos_bsicos.html" class="active no-ch">4.10. Conceptos básicos</a></li>
+   <li><a href="411_tipos_de_datos_simples_variables_y_constantes.html" class="no-ch">4.11. Tipos de datos simples, variables y constantes</a></li>
+   <li><a href="412_variables_y_constantes.html" class="no-ch">4.12. Variables y constantes</a></li>
+   <li><a href="413_el_bloque_plsql.html" class="daddy">4.13. El bloque PL/SQL</a>
+   <ul class="other-section">
+      <li><a href="4131_estructuras_de_control.html" class="no-ch">4.13.1. Estructuras de control</a></li>
+   </ul>
+   </li>
+   <li><a href="414_excepciones.html" class="daddy">4.14. Excepciones</a>
+   <ul class="other-section">
+      <li><a href="4141_excepciones_ii.html" class="no-ch">4.14.1. Excepciones II</a></li>
+      <li><a href="4142_excepciones_iii.html" class="no-ch">4.14.2. Excepciones III</a></li>
+      <li><a href="4143_excepciones_iv.html" class="no-ch">4.14.3. Excepciones IV</a></li>
+   </ul>
+   </li>
+   <li><a href="415_cursores.html" class="no-ch">4.15. Cursores</a></li>
+   <li><a href="416_abstraccin.html" class="daddy">4.16. Abstracción</a>
+   <ul class="other-section">
+      <li><a href="4161_subprogramas.html" class="no-ch">4.16.1. Subprogramas</a></li>
+      <li><a href="4162_almacenar_subprogramas.html" class="no-ch">4.16.2. Almacenar subprogramas</a></li>
+      <li><a href="4163_paso_de_parmetros.html" class="no-ch">4.16.3. Paso de parámetros</a></li>
+      <li><a href="4164_paquetes.html" class="no-ch">4.16.4. Paquetes</a></li>
+   </ul>
+   </li>
+   <li><a href="417_disparadores.html" class="no-ch">4.17. Disparadores</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="411_tipos_de_datos_simples_variables_y_constantes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.10. Conceptos básicos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_120_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En este apartado nos vamos a centrar en conocer cuáles son las <strong>unidades léxicas</strong> que podemos utilizar para escribir código en PL/SQL. Al igual que en nuestra lengua podemos distinguir diferentes unidades léxicas como palabras, signos de puntuación, etc. En los lenguajes de programación también existen diferentes unidades léxicas que definen los elementos más pequeños que tienen sentido propio y que al combinarlos de manera adecuada, siguiendo las reglas de <strong>sintaxis</strong>, dan lugar a sentencias válidas sintácticamente.</p>
+<p>PL/SQL es un lenguaje <strong>no sensible a las mayúsculas</strong>, por lo que será equivalente escribir en mayúsculas o minúsculas, excepto cuando hablemos de literales de tipo cadena o de tipo carácter.</p>
+<p>Cada unidad léxica puede estar separada por espacios (debe estar separada por espacios si se trata de 2 identificadores), por saltos de línea o por tabuladores para aumentar la legibilidad del código escrito.</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>IF A=CLAVE THEN ENCONTRADO:=TRUE;ELSE ENCONTRADO:=FALSE;END IF;</code></pre>
+</div>
+</div>
+<p>Sería equivalente a escribir la siguiente línea:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>if a=clave then encontrado:=true;else encontrado:=false;end if;
+</code></pre>
+</div>
+</div>
+<p>Y también sería equivalente a este otro fragmento, mucho más fácil de&nbsp; interpretar:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>IF a = clave THEN
+    encontrado := TRUE;
+ELSE
+    encontrado := FALSE;
+END IF;</code></pre>
+</div>
+</div>
+<p>Las unidades léxicas se pueden clasificar en:</p>
+<ul>
+<li>Delimitadores.</li>
+<li>Identificadores.</li>
+<li>Literales.</li>
+<li>Comentarios.</li>
+</ul>
+<div class="exe-fx exe-accordion">
+<h2>Delimitadores</h2>
+<p>PL/SQL tiene un conjunto de símbolos denominados delimitadores utilizados para representar operaciones entre tipos de datos, delimitar comentarios, etc. En la siguiente tabla puedes ver un resumen de los mismos.</p>
+<table class="exe-table" summary="Tabla en la que se muestran los delimitadores simples y compuestos que se pueden utilizar en PL/SQL acompañados por su significado."><caption>Delimitadores en PL/SQL.</caption>
+<thead>
+<tr>
+<th colspan="2" id="delimitadorsimple">Delimitadores Simples.</th>
+<th colspan="2" id="delimitadorcompuestos">Delimitadores Compuestos.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th headers="delimitadorsimple" id="simbolo01">Símbolo.</th>
+<th headers="delimitadorsimple" id="significado01">Significado.</th>
+<th headers="delimitadorcompuestos" id="simbolo02">Símbolo.</th>
+<th headers="delimitadorcompuestos" id="significado02">Significado.</th>
+</tr>
+<tr>
+<td headers="simbolo01">+</td>
+<td headers="significado01">Suma.</td>
+<td headers="simbolo02">**</td>
+<td headers="significado02">Exponenciación.</td>
+</tr>
+<tr>
+<td headers="simbolo01">%</td>
+<td headers="significado01">Indicador de atributo.</td>
+<td headers="simbolo02">&lt;&gt;</td>
+<td headers="significado02">Distinto.</td>
+</tr>
+<tr>
+<td headers="simbolo01">.</td>
+<td headers="significado01">Selector.</td>
+<td headers="simbolo02">¡=</td>
+<td headers="significado02">Distinto.</td>
+</tr>
+<tr>
+<td headers="simbolo01">/</td>
+<td headers="significado01">División.</td>
+<td headers="simbolo02">&lt;=</td>
+<td headers="significado02">Menor o igual.</td>
+</tr>
+<tr>
+<td headers="simbolo01">(</td>
+<td headers="significado01">Delimitador de lista.</td>
+<td headers="simbolo02">&gt;=</td>
+<td headers="significado02">Mayor o igual.</td>
+</tr>
+<tr>
+<td headers="simbolo01">)</td>
+<td headers="significado01">Delimitador de lista.</td>
+<td headers="simbolo02">..</td>
+<td headers="significado02">Rango.</td>
+</tr>
+<tr>
+<td headers="simbolo01">:</td>
+<td headers="significado01">Variable <span lang="en">host</span>.</td>
+<td headers="simbolo02">||</td>
+<td headers="significado02">Concatenación.</td>
+</tr>
+<tr>
+<td headers="simbolo01">,</td>
+<td headers="significado01">Separador de elementos.</td>
+<td headers="simbolo02">&lt;&lt;</td>
+<td headers="significado02">Delimitador de etiquetas.</td>
+</tr>
+<tr>
+<td headers="simbolo01">*</td>
+<td headers="significado01">Producto.</td>
+<td headers="simbolo02">&gt;&gt;</td>
+<td headers="significado02">Delimitador de etiquetas.</td>
+</tr>
+<tr>
+<td headers="simbolo01">"</td>
+<td headers="significado01">Delimitador de identificador acotado.</td>
+<td headers="simbolo02">--</td>
+<td headers="significado02">Comentario de una línea.</td>
+</tr>
+<tr>
+<td headers="simbolo01">=</td>
+<td headers="significado01">Igual relacional.</td>
+<td headers="simbolo02">/*</td>
+<td headers="significado02">Comentario de varias líneas.</td>
+</tr>
+<tr>
+<td headers="simbolo01">&lt;</td>
+<td headers="significado01">Menor.</td>
+<td headers="simbolo02">*/</td>
+<td headers="significado02">Comentario de varias líneas.</td>
+</tr>
+<tr>
+<td headers="simbolo01">&gt;</td>
+<td headers="significado01">Mayor.</td>
+<td headers="simbolo02">:=</td>
+<td headers="significado02">Asignación.</td>
+</tr>
+<tr>
+<td headers="simbolo01">@</td>
+<td headers="significado01">Indicador de acceso remoto.</td>
+<td headers="simbolo02">=&gt;</td>
+<td headers="significado02">Selector de nombre de parámetro.</td>
+</tr>
+<tr>
+<td headers="simbolo01">;</td>
+<td headers="significado01">Terminador de sentencias.</td>
+<td headers="simbolo02"></td>
+<td headers="significado02"></td>
+</tr>
+<tr>
+<td headers="simbolo01">-</td>
+<td headers="significado01">Resta/negación.</td>
+<td headers="simbolo02"></td>
+<td headers="significado02"></td>
+</tr>
+</tbody>
+</table>
+<h2>Identificadores</h2>
+<p>Los identificadores en PL/SQL, como en cualquier otro lenguaje de programación, son utilizados para nombrar elementos de nuestros programas. A la hora de utilizar los identificadores debemos tener en cuenta los siguientes aspectos:</p>
+<ul>
+<li>Un identificador es una letra seguida opcionalmente de letras, números, $, _, #.</li>
+<li>No podemos utilizar como identificador una palabra reservada.
+<ul>
+<li>Ejemplos válidos:&nbsp;X,&nbsp;A1,&nbsp;codigo_postal.</li>
+<li>Ejemplos no válidos:&nbsp;rock&amp;roll,&nbsp;on/off.</li>
+</ul>
+</li>
+<li>PL/SQL nos permite además definir los identificadores acotados, en los que podemos usar cualquier carácter con una longitud máxima de 30 y deben estar delimitados por ". Ejemplo:&nbsp;"X*Y".</li>
+<li>En PL/SQL existen algunos identificadores predefinidos y que tienen un significado especial ya que nos permitirán darle sentido sintáctico a nuestros programas. Estos identificadores son las palabras reservadas y no las podemos utilizar como identificadores en nuestros programas. Ejemplo:&nbsp;IF,&nbsp;THEN,&nbsp;ELSE&nbsp;...</li>
+<li>Algunas palabras reservadas para PL/SQL no lo son para SQL, por lo que podríamos tener una tabla con una columna llamada 'type' por ejemplo, que nos daría un error de compilación al referirnos a ella en PL/SQL. La solución sería acotarlos.&nbsp;SELECT "TYPE" …</li>
+</ul>
+<h2>Literales</h2>
+<p>Los literales se utilizan en las comparaciones de valores o para asignar valores concretos a los identificadores que actúan como variables o constantes. Para expresar estos literales tendremos en cuenta que:</p>
+<ul>
+<li>Los literales numéricos se expresarán por medio de notación decimal o de notación exponencial. Ejemplos: 234, +341, 2e3, -2E-3, 7.45, 8.1e3.</li>
+<li>Los literales tipo carácter y tipo cadena se deben delimitar con unas comillas simples.</li>
+<li>Los literales lógicos son&nbsp;TRUE&nbsp;y&nbsp;FALSE.</li>
+<li>El literal&nbsp;NULL&nbsp;que expresa que una variable no tiene ningún valor asignado.</li>
+</ul>
+<h2>Comentarios</h2>
+<p>En los lenguajes de programación es muy conveniente utilizar comentarios en mitad del código. Los comentarios no tienen ningún efecto sobre el código pero sí ayudan mucho al programador o la programadora a recordar qué se está intentando hacer en cada caso (más aún cuando el código es compartido entre varias personas que se dedican a mejorarlo o corregirlo).</p>
+<p>En PL/SQL podemos utilizar dos tipos de comentarios:</p>
+<ul>
+<li>Los comentarios de una línea se expresaran por medio del delimitador&nbsp;--. Ejemplo:</li>
+</ul>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>a:=b; --asignación</code></pre>
+</div>
+</div>
+<ul>
+<li>Los comentarios de varias líneas se acotarán por medio de los delimitadores /* y */. Ejemplo:</li>
+</ul>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>/* Primera línea de comentarios.
+Segunda línea de comentarios. */</code></pre>
+</div>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="411_tipos_de_datos_simples_variables_y_constantes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

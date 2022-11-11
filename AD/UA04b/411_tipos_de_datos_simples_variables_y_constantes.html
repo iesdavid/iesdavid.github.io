@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.11. Tipos de datos simples, variables y constantes | UA4b. PL/SQL </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA4b. PL/SQL</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. PL/SQL</a></li>
+   <li><a href="410_conceptos_bsicos.html" class="no-ch">4.10. Conceptos básicos</a></li>
+   <li id="active"><a href="411_tipos_de_datos_simples_variables_y_constantes.html" class="active no-ch">4.11. Tipos de datos simples, variables y constantes</a></li>
+   <li><a href="412_variables_y_constantes.html" class="no-ch">4.12. Variables y constantes</a></li>
+   <li><a href="413_el_bloque_plsql.html" class="daddy">4.13. El bloque PL/SQL</a>
+   <ul class="other-section">
+      <li><a href="4131_estructuras_de_control.html" class="no-ch">4.13.1. Estructuras de control</a></li>
+   </ul>
+   </li>
+   <li><a href="414_excepciones.html" class="daddy">4.14. Excepciones</a>
+   <ul class="other-section">
+      <li><a href="4141_excepciones_ii.html" class="no-ch">4.14.1. Excepciones II</a></li>
+      <li><a href="4142_excepciones_iii.html" class="no-ch">4.14.2. Excepciones III</a></li>
+      <li><a href="4143_excepciones_iv.html" class="no-ch">4.14.3. Excepciones IV</a></li>
+   </ul>
+   </li>
+   <li><a href="415_cursores.html" class="no-ch">4.15. Cursores</a></li>
+   <li><a href="416_abstraccin.html" class="daddy">4.16. Abstracción</a>
+   <ul class="other-section">
+      <li><a href="4161_subprogramas.html" class="no-ch">4.16.1. Subprogramas</a></li>
+      <li><a href="4162_almacenar_subprogramas.html" class="no-ch">4.16.2. Almacenar subprogramas</a></li>
+      <li><a href="4163_paso_de_parmetros.html" class="no-ch">4.16.3. Paso de parámetros</a></li>
+      <li><a href="4164_paquetes.html" class="no-ch">4.16.4. Paquetes</a></li>
+   </ul>
+   </li>
+   <li><a href="417_disparadores.html" class="no-ch">4.17. Disparadores</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="410_conceptos_bsicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="412_variables_y_constantes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.11. Tipos de datos simples, variables y constantes</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_122_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En cualquier lenguaje de programación, las variables y las constantes tienen un tipo de dato asignado (bien sea explícitamente o implícitamente). Dependiendo del tipo de dato el lenguaje de programación sabrá la estructura que utilizará para su almacenamiento, las restricciones en los valores que puede aceptar, la precisión del mismo, etc.</p>
+<p>En PL/SQL contamos con todos los&nbsp;<strong>tipos de datos simples</strong>&nbsp;utilizados en SQL y algunos más. En este apartado vamos a enumerar los más utilizados.</p>
+<div class="exe-fx exe-accordion">
+<h2>Numéricos</h2>
+<ul>
+<li><strong>BINARY_INTEGER</strong>: Tipo de dato numérico cuyo rango es de -2147483647 .. 2147483647. PL/SQL además define algunos subtipos de éste:&nbsp;NATURAL,&nbsp;NATURALN,&nbsp;POSITIVE,&nbsp;POSITIVEN,&nbsp;SIGNTYPE.</li>
+<li><strong>NUMBER</strong>: Tipo de dato numérico para almacenar números racionales. Podemos especificar su escala (-84 .. 127) y su precisión (1 .. 38). La escala indica cuándo se redondea y hacia dónde. Ejemplos. escala=2: 8.234 -&gt; 8.23, escala=-3: 7689 -&gt; 8000. PL/SQL también define algunos subtipos como:&nbsp;DEC,&nbsp;DECIMAL,&nbsp;DOUBLE&nbsp;PRECISION,&nbsp;FLOAT,&nbsp;INTEGER,&nbsp;INT,&nbsp;NUMERIC,&nbsp;REAL,&nbsp;SMALLINT.</li>
+<li><strong>PLS_INTEGER</strong>: Tipo de datos numérico cuyo rango es el mismo que el del tipo de dato&nbsp;BINARY_INTEGER, pero que su representación es distinta por lo que las operaciones aritméticas llevadas a cabo con los mismos serán más eficientes que en los dos casos anteriores.</li>
+</ul>
+<h2>Alfanuméricos</h2>
+<ul>
+<li>CHAR(n):&nbsp;Array&nbsp;de n caracteres, máximo 2000&nbsp;bytes. Si no especificamos longitud sería 1.</li>
+<li>LONG:&nbsp;Array&nbsp;de caracteres con un máximo de 32760&nbsp;bytes.</li>
+<li>RAW:&nbsp;Array&nbsp;de&nbsp;bytes&nbsp;con un número máximo de 2000.</li>
+<li>LONG RAW:&nbsp;Array&nbsp;de&nbsp;bytes&nbsp;con un máximo de 32760.</li>
+<li>VARCHAR2: Tipo de dato para almacenar cadenas de longitud variable con un máximo de 32760.</li>
+</ul>
+<h2>Grandes objetos</h2>
+<ul>
+<li>BFILE:&nbsp;Puntero&nbsp;a un fichero del Sistema Operativo.</li>
+<li>BLOB: Objeto binario con una capacidad de 4&nbsp;GB.</li>
+<li>CLOB: Objeto carácter con una capacidad de 2 GB.</li>
+</ul>
+<h2>Otros.</h2>
+<ul>
+<li>BOOLEAN:&nbsp;TRUE/FALSE.</li>
+<li>DATE: Tipo de dato para almacenar valores día/hora desde el 1 enero de 4712&nbsp;a.c.&nbsp;hasta el 31 diciembre de 4712&nbsp;d.c.</li>
+<li>%TYPE:&nbsp;Se utiliza&nbsp;para declarar una variable de acuerdo a una columna de la Base de Datos o a otra variable ya declarada. Una de sus ventajas principales es que se&nbsp;evitan errores causados por la falta de coincidencia del tipo de dato.</li>
+</ul>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="410_conceptos_bsicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="412_variables_y_constantes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

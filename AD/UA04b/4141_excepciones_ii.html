@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.14.1. Excepciones II | UA4b. PL/SQL </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA4b. PL/SQL</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. PL/SQL</a></li>
+   <li><a href="410_conceptos_bsicos.html" class="no-ch">4.10. Conceptos básicos</a></li>
+   <li><a href="411_tipos_de_datos_simples_variables_y_constantes.html" class="no-ch">4.11. Tipos de datos simples, variables y constantes</a></li>
+   <li><a href="412_variables_y_constantes.html" class="no-ch">4.12. Variables y constantes</a></li>
+   <li><a href="413_el_bloque_plsql.html" class="daddy">4.13. El bloque PL/SQL</a>
+   <ul class="other-section">
+      <li><a href="4131_estructuras_de_control.html" class="no-ch">4.13.1. Estructuras de control</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="414_excepciones.html" class="current-page-parent daddy">4.14. Excepciones</a>
+   <ul>
+      <li id="active"><a href="4141_excepciones_ii.html" class="active no-ch">4.14.1. Excepciones II</a></li>
+      <li><a href="4142_excepciones_iii.html" class="no-ch">4.14.2. Excepciones III</a></li>
+      <li><a href="4143_excepciones_iv.html" class="no-ch">4.14.3. Excepciones IV</a></li>
+   </ul>
+   </li>
+   <li><a href="415_cursores.html" class="no-ch">4.15. Cursores</a></li>
+   <li><a href="416_abstraccin.html" class="daddy">4.16. Abstracción</a>
+   <ul class="other-section">
+      <li><a href="4161_subprogramas.html" class="no-ch">4.16.1. Subprogramas</a></li>
+      <li><a href="4162_almacenar_subprogramas.html" class="no-ch">4.16.2. Almacenar subprogramas</a></li>
+      <li><a href="4163_paso_de_parmetros.html" class="no-ch">4.16.3. Paso de parámetros</a></li>
+      <li><a href="4164_paquetes.html" class="no-ch">4.16.4. Paquetes</a></li>
+   </ul>
+   </li>
+   <li><a href="417_disparadores.html" class="no-ch">4.17. Disparadores</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="414_excepciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4142_excepciones_iii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.14.1. Excepciones II</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div id="ta10_129_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Ahora que ya sabemos lo que son las excepciones, cómo capturarlas y manejarlas y cómo definir y lanzar las nuestras propias. Es la hora de comentar algunos detalles sobre el uso de las mismas.</p>
+<p>El alcance de una excepción sigue las mismas reglas que el de una variable, por lo que si nosotros redefinimos una excepción que ya es global para el bloque, la definición local prevalecerá y no podremos capturar esa excepción a menos que el bloque en la que estaba definida esa excepción fuese un bloque nombrado, y podremos capturarla usando la sintaxis: <code>nombre_bloque.nombre_excepcion</code>.</p>
+<p>Las excepciones predefinidas están definidas globalmente. No necesitamos (ni debemos) redefinir las excepciones predefinidas.</p>
+<div class="codigo elemento_centrado" style="width: 42.3em;">
+<div class="texto_izquierda">
+<pre><code></code></pre>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>DECLARE
+     no_data_found EXCEPTION;
+BEGIN
+     SELECT * INTO ...
+EXCEPTION
+     WHEN no_data_found THEN     --captura la excepción local, no 
+                         --la global
+END;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Cuando manejamos una excepción no podemos continuar por la siguiente sentencia a la que la lanzó.</p>
+<div class="codigo elemento_centrado" style="width: 41.2em;">
+<div class="texto_izquierda">
+<pre><code></code></pre>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>DECLARE
+     ...
+BEGIN
+     ...
+     INSERT INTO familias VALUES 
+(id_fam, nom_fam, NULL, oficina);
+     INSERT INTO agentes VALUES 
+(id_ag, nom_ag, login, password, 0, 0, id_fam, NULL);
+     ...
+EXCEPTION
+     WHEN DUP_VAL_ON_INDEX THEN
+          --manejamos la excepción debida a que el nombre de
+          --la familia ya existe, pero no podemos continuar por 
+          --el INSERT INTO agentes, a no ser que lo pongamos 
+          --explícitamente en el manejador
+END;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Pero sí podemos encerrar la sentencia dentro de un bloque, y ahí capturar las posibles excepciones, para continuar con las siguientes sentencias.</p>
+<div class="codigo elemento_centrado" style="width: 52.75em;">
+<div class="texto_izquierda">
+<pre><code></code></pre>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>DECLARE
+     id_fam NUMBER;
+     nom_fam VARCHAR2(40);
+     oficina NUMBER;
+     id_ag NUMBER;
+     nom_ag VARCHAR2(60);
+     usuario VARCHAR2(20);
+     clave VARCHAR2(20);
+BEGIN
+     ...
+     BEGIN
+          INSERT INTO familias VALUES (id_fam, nom_fam, NULL, oficina);
+     EXCEPTION
+          WHEN DUP_VAL_ON_INDEX THEN
+SELECT identificador INTO id_fam FROM familias WHERE nombre = nom_fam;
+     END;
+     INSERT INTO agentes VALUES (id_ag, nom_ag, login, password, 1, 1, id_fam, null);
+     ...
+END;</code></pre>
+</div>
+</div>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="414_excepciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4142_excepciones_iii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.12. Variables y constantes | UA4b. PL/SQL </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA4b. PL/SQL</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. PL/SQL</a></li>
+   <li><a href="410_conceptos_bsicos.html" class="no-ch">4.10. Conceptos básicos</a></li>
+   <li><a href="411_tipos_de_datos_simples_variables_y_constantes.html" class="no-ch">4.11. Tipos de datos simples, variables y constantes</a></li>
+   <li id="active"><a href="412_variables_y_constantes.html" class="active no-ch">4.12. Variables y constantes</a></li>
+   <li><a href="413_el_bloque_plsql.html" class="daddy">4.13. El bloque PL/SQL</a>
+   <ul class="other-section">
+      <li><a href="4131_estructuras_de_control.html" class="no-ch">4.13.1. Estructuras de control</a></li>
+   </ul>
+   </li>
+   <li><a href="414_excepciones.html" class="daddy">4.14. Excepciones</a>
+   <ul class="other-section">
+      <li><a href="4141_excepciones_ii.html" class="no-ch">4.14.1. Excepciones II</a></li>
+      <li><a href="4142_excepciones_iii.html" class="no-ch">4.14.2. Excepciones III</a></li>
+      <li><a href="4143_excepciones_iv.html" class="no-ch">4.14.3. Excepciones IV</a></li>
+   </ul>
+   </li>
+   <li><a href="415_cursores.html" class="no-ch">4.15. Cursores</a></li>
+   <li><a href="416_abstraccin.html" class="daddy">4.16. Abstracción</a>
+   <ul class="other-section">
+      <li><a href="4161_subprogramas.html" class="no-ch">4.16.1. Subprogramas</a></li>
+      <li><a href="4162_almacenar_subprogramas.html" class="no-ch">4.16.2. Almacenar subprogramas</a></li>
+      <li><a href="4163_paso_de_parmetros.html" class="no-ch">4.16.3. Paso de parámetros</a></li>
+      <li><a href="4164_paquetes.html" class="no-ch">4.16.4. Paquetes</a></li>
+   </ul>
+   </li>
+   <li><a href="417_disparadores.html" class="no-ch">4.17. Disparadores</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="411_tipos_de_datos_simples_variables_y_constantes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="413_el_bloque_plsql.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.12. Variables y constantes</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_123_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para declarar variables o constantes pondremos el nombre de la variable, seguido del tipo de datos y opcionalmente una asignación. Si es una constante antepondremos la palabra&nbsp;<strong>CONSTANT&nbsp;</strong>al tipo de dato (lo que querrá decir que no podemos cambiar su valor). Podremos sustituir el operador de asignación en las declaraciones por la palabra reservada&nbsp;<strong>DEFAULT</strong>. También podremos forzar a que no sea nula utilizando la palabra&nbsp;<strong>NOT NULL</strong>&nbsp;después del tipo y antes de la asignación. Si restringimos una variable con&nbsp;NOT NULL&nbsp;deberemos asignarle un valor al declararla, de lo contrario PL/SQL lanzará la excepción&nbsp;<strong>VALUE_ERROR&nbsp;</strong>(no te asustes que más adelante veremos lo que son las excepciones, pero como adelanto te diré que es un error en tiempo de ejecución).</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>id SMALLINT;
+hoy DATE := sysdate;
+pi CONSTANT REAL:= 3.1415;
+id SMALLINT NOT NULL; --ilegal, no está inicializada
+id SMALLINT NOT NULL := 9999; --legal</code></pre>
+</div>
+</div>
+<p>El alcance y la visibilidad de las variables en PL/SQL será el típico de los lenguajes estructurados basados en bloques, aunque eso lo veremos más adelante.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Conversión de tipos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_124_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Aunque en PL/SQL existe la conversión implícita de tipos para tipos parecidos, siempre es aconsejable utilizar la conversión explícita de tipos por medio de funciones de conversión (TO_CHAR,&nbsp;TO_DATE,&nbsp;TO_NUMBER, …) y así evitar resultados inesperados.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Precedencia de operadores</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_125_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Al igual que en nuestro lenguaje matemático se utiliza una precedencia entre operadores a la hora de realizar las operaciones aritméticas, en PL/SQL también se establece dicha precedencia para evitar confusiones. Si dos operadores tienen la misma precedencia lo aconsejable es utilizar los paréntesis (al igual que hacemos en nuestro lenguaje matemático) para alterar la precedencia de los mismos ya que las operaciones encerradas entre paréntesis tienen mayor precedencia. En la tabla siguiente se muestra la precedencia de los operadores de mayor a menor.</p>
+<table class="exe-table" summary="Tabla en la que se muestra la precedencia de operadores de mayor a menor y se acompaña de la operación asociada a dicho operador."><caption>Precedencia de operadores.</caption>
+<thead>
+<tr>
+<th scope="col">Operador.</th>
+<th scope="col">Operación.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>**</code>, <code>NOT</code></td>
+<td>Exponenciación, negación lógica.</td>
+</tr>
+<tr>
+<td><code>+</code>, <code>-</code></td>
+<td>Identidad, negación.</td>
+</tr>
+<tr>
+<td><code>*</code>, <code>/</code></td>
+<td>Multiplicación, división.</td>
+</tr>
+<tr>
+<td><code>+</code>, <code>-</code>, <code>||</code></td>
+<td>Suma, resta y concatenación.</td>
+</tr>
+<tr>
+<td><code>=</code>, <code>¡=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>IS NULL</code>, <code>LIKE</code>, <code>BETWEEN</code>, <code>IN</code></td>
+<td>Comparaciones.</td>
+</tr>
+<tr>
+<td><code>AND</code></td>
+<td>Conjunción lógica</td>
+</tr>
+<tr>
+<td><code>OR</code></td>
+<td>Disyunción lógica.</td>
+</tr>
+</tbody>
+</table></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="411_tipos_de_datos_simples_variables_y_constantes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="413_el_bloque_plsql.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

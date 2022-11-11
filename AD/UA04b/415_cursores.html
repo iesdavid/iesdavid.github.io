@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.15. Cursores | UA4b. PL/SQL </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA4b. PL/SQL</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA04. PL/SQL</a></li>
+   <li><a href="410_conceptos_bsicos.html" class="no-ch">4.10. Conceptos básicos</a></li>
+   <li><a href="411_tipos_de_datos_simples_variables_y_constantes.html" class="no-ch">4.11. Tipos de datos simples, variables y constantes</a></li>
+   <li><a href="412_variables_y_constantes.html" class="no-ch">4.12. Variables y constantes</a></li>
+   <li><a href="413_el_bloque_plsql.html" class="daddy">4.13. El bloque PL/SQL</a>
+   <ul class="other-section">
+      <li><a href="4131_estructuras_de_control.html" class="no-ch">4.13.1. Estructuras de control</a></li>
+   </ul>
+   </li>
+   <li><a href="414_excepciones.html" class="daddy">4.14. Excepciones</a>
+   <ul class="other-section">
+      <li><a href="4141_excepciones_ii.html" class="no-ch">4.14.1. Excepciones II</a></li>
+      <li><a href="4142_excepciones_iii.html" class="no-ch">4.14.2. Excepciones III</a></li>
+      <li><a href="4143_excepciones_iv.html" class="no-ch">4.14.3. Excepciones IV</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="415_cursores.html" class="active no-ch">4.15. Cursores</a></li>
+   <li><a href="416_abstraccin.html" class="daddy">4.16. Abstracción</a>
+   <ul class="other-section">
+      <li><a href="4161_subprogramas.html" class="no-ch">4.16.1. Subprogramas</a></li>
+      <li><a href="4162_almacenar_subprogramas.html" class="no-ch">4.16.2. Almacenar subprogramas</a></li>
+      <li><a href="4163_paso_de_parmetros.html" class="no-ch">4.16.3. Paso de parámetros</a></li>
+      <li><a href="4164_paquetes.html" class="no-ch">4.16.4. Paquetes</a></li>
+   </ul>
+   </li>
+   <li><a href="417_disparadores.html" class="no-ch">4.17. Disparadores</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4143_excepciones_iv.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="416_abstraccin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.15. Cursores</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id13">
+<div class="iDevice emphasis0" >
+<div id="ta13_132_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En este apartado vamos a ver un tipo de dato, que aunque se puede asemejar a otros que ya conozcas, su uso es exclusivo en la programación de las bases de datos y que es el cursor .<br>Un cursor no es más que una estructura que almacena el conjunto de filas devuelto por una consulta a la base de datos.<br>Oracle usa áreas de trabajo para ejecutar sentencias SQL y almacenar la información procesada. Hay 2 clases de cursores: implícitos y explícitos. PL/SQL declara implícitamente un cursor para todas las sentencias SQL de manipulación de datos, incluyendo consultas que devuelven una sola fila. Para las consultas que devuelven más de una fila, se debe declarar explícitamente un cursor para procesar las filas individualmente.</p>
+<p>En este primer apartado vamos a hablar de los cursores implícitos y de los atributos de un cursor (estos atributos tienen sentido con los cursores explícitos, pero los introducimos aquí para ir abriendo boca), para luego pasar a ver los cursores explícitos y terminaremos hablando de los cursores variables.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id15">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Cursores implícitos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta15_134_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Oracle abre implícitamente un cursor para procesar cada sentencia SQL que no esté asociada con un cursor declarado explícitamente.</p>
+<p>Con un cursor implícito no podemos usar las sentencias OPEN, FETCH y CLOSE para controlar el cursor. Pero sí podemos usar los atributos del cursor para obtener información sobre las sentencias SQL más recientemente ejecutadas.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id16">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Atributos de un cursor</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_135_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Cada cursor tiene 4 atributos que podemos usar para obtener información sobre la ejecución del mismo o sobre los datos. Estos atributos pueden ser usados en PL/SQL, pero no en SQL. Aunque estos atributos se refieren en general a cursores explícitos y tienen que ver con las operaciones que hayamos realizado con el cursor, es deseable comentarlas aquí y en el siguiente apartado tomarán pleno sentido.</p>
+<ul>
+<li><strong>%FOUND</strong>: Después de que el cursor esté abierto y antes del primer FETCH, %FOUND devuelve NULL. Después del primer FETCH, %FOUND devolverá TRUE si el último FETCH ha devuelto una fila y FALSE en caso contrario. Para cursores implícitos %FOUND devuelve TRUE si un INSERT, UPDATE o DELETE afectan a una o más de una fila, o un SELECT ... INTO ... devuelve una o más filas. En otro caso %FOUND devuelve FALSE.</li>
+<li><strong>%NOTFOUND</strong>: Es lógicamente lo contrario a %FOUND.</li>
+<li><strong>%ISOPEN</strong>: Evalúa a TRUE si el cursor está abierto y FALSE en caso contrario. Para cursores implícitos, como Oracle los cierra automáticamente, %ISOPEN evalúa siempre a FALSE.</li>
+<li><strong>%ROWCOUNT</strong>: Para un cursor abierto y antes del primer FETCH, %ROWCOUNT evalúa a 0. Después de cada FETCH, %ROWCOUNT es incrementado y evalúa al número de filas que hemos procesado. Para cursores implícitos %ROWCOUNT evalúa al número de filas afectadas por un INSERT, UPDATE o DELETE o el número de filas devueltas por un SELECT ... INTO ...</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id14">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Cursores explícitos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta14_133_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Cuando una consulta devuelve múltiples filas, podemos declarar explícitamente un cursor para procesar las filas devueltas. Cuando declaramos un cursor, lo que hacemos es darle un nombre y asociarle una consulta usando la siguiente sintaxis:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CURSOR nombre_cursor [(parametro [, parametro] ...)] [RETURN tipo_devuelto] IS sentencia_select;</code></pre>
+</div>
+</div>
+<p>Donde tipo_devuelto debe representar un registro o una fila de una tabla de la base de datos, y parámetro sigue la siguiente sintaxis:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>parametro := nombre_parametro [IN] tipo_dato [{:= | DEFAULT} expresion]</code></pre>
+</div>
+</div>
+<p>Ejemplos:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CURSOR cAgentes IS SELECT * FROM agentes;
+CURSOR cFamilias RETURN familias%ROWTYPE IS SELECT * FROM familias WHERE ...</code></pre>
+</div>
+</div>
+<p>Además, como hemos visto en la declaración, un cursor puede tomar parámetros, los cuales pueden aparecer en la consulta asociada como si fuesen constantes. Los parámetros serán de entrada, un cursor no puede devolver valores en los parámetros actuales. A un parámetro de un cursor no podemos imponerle la restricción <strong>NOT NULL</strong>.</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CURSOR c1 (cat INTEGER DEFAULT 0) IS SELECT * FROM agentes WHERE categoria = cat;</code></pre>
+</div>
+</div>
+<p>Cuando abrimos un cursor, lo que se hace es ejecutar la consulta asociada e identificar el conjunto resultado, que serán todas las filas que emparejen con el criterio de búsqueda de la consulta. Para abrir un cursor usamos la sintaxis:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>OPEN nombre_cursor [(parametro [, parametro] ...)];</code></pre>
+</div>
+</div>
+<p>Ejemplos:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>OPEN cAgentes;
+OPEN c1(1);
+OPEN c1;</code></pre>
+</div>
+</div>
+<p>La sentencia <strong>FETCH</strong> devuelve una fila del conjunto resultado. Después de cada FETCH, el cursor avanza a la próxima fila en el conjunto resultado.</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>FETCH cFamilias INTO mi_id, mi_nom, mi_fam, mi_ofi;</code></pre>
+</div>
+</div>
+<p>Para cada valor de columna devuelto por la consulta asociada al cursor, debe haber una variable que se corresponda en la lista de variables después del INTO.</p>
+<p>Para procesar un cursor entero deberemos hacerlo por medio de un bucle.</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>BEGIN
+...
+OPEN cFamilias;
+LOOP
+FETCH cFamilias INTO mi_id, mi_nom, mi_fam, mi_ofi;
+EXIT WHEN cFamilias%NOTFOUND;
+...
+END LOOP;
+...
+END;</code></pre>
+</div>
+</div>
+<p>Una vez procesado el cursor, deberemos cerrarlo, con lo que desabilitamos el cursor y el conjunto resultado queda indefinido.</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CLOSE cFamilias;</code></pre>
+</div>
+</div>
+<p>Una vez cerrado el cursor podemos reabrirlo, pero cualquier otra operación que hagamos con el cursor cerrado lanzará la excepción <strong>INVALID_CURSOR</strong>.</p>
+<p>También podemos simplificar la operación de procesamiento de un cursor, por medio de los bucles para cursores, los cuales declaran implícitamente una variable índice definida como <strong>%ROWTYPE</strong> para el cursor, abren el cursor, se van trayendo los valores de cada fila del cursor, almacenándolas en la variable índice, y finalmente cierran el cursor.</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>BEGIN
+...
+FOR cFamilias_rec IN cFamilias LOOP
+--Procesamos las filas accediendo a
+--cFamilias_rec.identificador, cFamilias_rec.nombre,
+--cFamilias_rec.familia, ...
+END LOOP;
+...
+END;</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4143_excepciones_iv.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="416_abstraccin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
