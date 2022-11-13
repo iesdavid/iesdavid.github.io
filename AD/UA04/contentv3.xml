@@ -3,7 +3,7 @@
 <instance xmlns="http://www.exelearning.org/content/v0.3" reference="4" version="0.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.exelearning.org/content/v0.3 content.xsd" class="exe.engine.package.Package">
  <dictionary>
   <string role="key" value="_title"></string>
-  <unicode value="UA03. Conectores"></unicode>
+  <unicode value="UA04. Gestión de la información"></unicode>
   <string role="key" value="idevices"></string>
   <list></list>
   <string role="key" value="_addPagination"></string>
@@ -15,11 +15,11 @@
   <string role="key" value="_backgroundImg"></string>
   <unicode value=""></unicode>
   <string role="key" value="_contextMode"></string>
-  <unicode value=""></unicode>
+  <unicode value="presencial"></unicode>
   <string role="key" value="_contextPlace"></string>
-  <unicode value=""></unicode>
+  <unicode value="classroom"></unicode>
   <string role="key" value="_description"></string>
-  <unicode value="UA03 del módulo Acceso a datos"></unicode>
+  <unicode value="UA04 del módulo Acceso a datos"></unicode>
   <string role="key" value="_docType"></string>
   <unicode value="HTML5"></unicode>
   <string role="key" value="_exportElp"></string>
@@ -67,7 +67,7 @@
   <string role="key" value="_intendedEndUserRoleTutor"></string>
   <bool value="0"></bool>
   <string role="key" value="_intendedEndUserRoleType"></string>
-  <unicode value=""></unicode>
+  <unicode value="learner"></unicode>
   <string role="key" value="_isChanged"></string>
   <bool value="0"></bool>
   <string role="key" value="_isTemplate"></string>
@@ -85,7 +85,7 @@
   <string role="key" value="_name"></string>
   <unicode value="UA04"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="31"></int>
+  <int value="32"></int>
   <string role="key" value="_nextNodeId"></string>
   <int value="17"></int>
   <string role="key" value="_nodeIdDict"></string>
@@ -168,6 +168,8 @@
            <string value=""></string>
            <string role="key" value="anchor_names"></string>
            <list></list>
+           <string role="key" value="anchors_linked_from_fields"></string>
+           <dictionary></dictionary>
            <string role="key" value="content_w_resourcePaths"></string>
            <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Ya realizada la conexión, nuestra aplicación está preparada para interactuar con la base de datos. En este apartado os explicaremos qué objetos serán los más adecuados para almacenar la información de nuestras operaciones con la base de datos. Podemos destacar estos tres como los más importantes:&lt;/p&gt;
 &lt;table class=&quot;exe-table&quot;&gt;
@@ -217,7 +219,7 @@
            <string role="key" value="nextImageId"></string>
            <int value="0"></int>
            <string role="key" value="parentNode"></string>
-           <none></none>
+           <reference key="3"></reference>
           </dictionary>
          </instance>
         </list>
@@ -339,6 +341,10 @@
               <string value=""></string>
               <string role="key" value="_name"></string>
               <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <string content="true" value=""></string>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
@@ -358,10 +364,12 @@
                 <reference key="6"></reference>
                </dictionary>
               </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="7"></reference>
              </dictionary>
             </instance>
            </list>
@@ -460,6 +468,8 @@
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Este tipo de interfaz se utiliza para conexiones de carácter general. Es bastante útil cuando queremos usar consultas estáticas SQL.&lt;/p&gt;
 &lt;p&gt;Una &lt;strong&gt;consulta estática&lt;/strong&gt; es aquella operación SQL que no varía la consulta en ningún momento, siempre será la misma y los valores de la consulta no cambiarán.&lt;/p&gt;
@@ -518,7 +528,7 @@ stmt.close();
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="7"></reference>
              </dictionary>
             </instance>
            </list>
@@ -644,6 +654,8 @@ stmt.close();
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Esta interfaz hereda de &lt;strong&gt;Statement&lt;/strong&gt;, y nos dará mucha más funcionalidad respecto del objeto anterior. Este objeto nos ofrecerá más flexibilidad, permitiendo pasarle dinámicamente argumentos al objeto. Podremos usar todas las sentencias mencionadas anteriormente, igual que en el objeto &lt;strong&gt;Statement&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
@@ -695,7 +707,7 @@ pstmt.close();&lt;/code&gt;&lt;/pre&gt;
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="12"></reference>
              </dictionary>
             </instance>
            </list>
@@ -821,6 +833,8 @@ pstmt.close();&lt;/code&gt;&lt;/pre&gt;
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;strong&gt;ResultSet&lt;/strong&gt; es otra interfaz que podemos utilizar para recoger el resultado de una de nuestras consultas. Solo podemos utilizar este tipo de objeto para seleccionar datos, ya que no permite actualizar datos, es decir, solo se usa en las sentencias &lt;strong&gt;select&lt;/strong&gt;. Se caracteriza por devolver una tabla de datos según columnas y filas.&lt;/p&gt;
 &lt;p&gt;Para obtener los datos de la consulta, se tendrá que acceder con un &lt;strong&gt;get&lt;/strong&gt; más el tipo de dato al que queramos acceder. Por ejemplo, &lt;strong&gt;getInt&lt;/strong&gt; devolverá un &lt;strong&gt;integer&lt;/strong&gt;, mientras que un &lt;strong&gt;getString&lt;/strong&gt; devolverá un &lt;strong&gt;varchar&lt;/strong&gt;.&lt;/p&gt;
@@ -917,7 +931,7 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="15"></reference>
              </dictionary>
             </instance>
            </list>
@@ -1043,6 +1057,8 @@ resultado.close();&lt;/code&gt;&lt;/pre&gt;
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Entendemos como sentencias de definición de datos (&lt;strong&gt;data definition language&lt;/strong&gt;) todas aquellas que permitan manipular la estructura de nuestra base de datos.&lt;/p&gt;
 &lt;p&gt;Se trata de una manera de definir ciertos comandos de datos. Estas sentencias pueden ser:&lt;/p&gt;
@@ -1166,7 +1182,7 @@ RENAME TABLE nombre_tabla TO Nuevo_nombre_tabla;&lt;/code&gt;&lt;/pre&gt;
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="18"></reference>
              </dictionary>
             </instance>
            </list>
@@ -1292,6 +1308,8 @@ RENAME TABLE nombre_tabla TO Nuevo_nombre_tabla;&lt;/code&gt;&lt;/pre&gt;
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Entendemos como sentencias de modificación de datos todas aquellas que actualicen o modifiquen de algún modo uno o más registros en una tabla. Este tipo de comando SQL contempla la manipulación de los datos presentes en la base de datos, y serán prácticamente la gran mayoría de los comandos conocidos por SQL:&lt;/p&gt;
 &lt;ul&gt;
@@ -1410,9 +1428,8 @@ try {
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Para un &lt;strong&gt;UPDATE&lt;/strong&gt; con sentencia fija, usaremos el objeto Statement, ya que es una operación sencilla. El procedimiento es exactamente igual que con otras sentencias: deberemos meter todo el código entre el try-catch para poder controlar los errores que puedan surgir. Para un &lt;strong&gt;UPDATE&lt;/strong&gt; con datos dinámicos usaremos un objeto &lt;strong&gt;PreparedStatement&lt;/strong&gt;, que nos va a permitir añadir dinámicamente los valores que nos interesen a nuestra sentencia.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+&lt;p&gt;Para un &lt;strong&gt;UPDATE&lt;/strong&gt; con sentencia fija, usaremos el objeto &lt;strong&gt;Statement&lt;/strong&gt;, ya que es una operación sencilla. El procedimiento es exactamente igual que con otras sentencias: deberemos meter todo el código entre el try-catch para poder controlar los errores que puedan surgir. Para un &lt;strong&gt;UPDATE&lt;/strong&gt; con datos dinámicos usaremos un objeto &lt;strong&gt;PreparedStatement&lt;/strong&gt;, que nos va a permitir añadir dinámicamente los valores que nos interesen a nuestra sentencia.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
               <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -1435,7 +1452,7 @@ try {
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="21"></reference>
              </dictionary>
             </instance>
            </list>
@@ -1561,6 +1578,8 @@ try {
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La sentencia &lt;strong&gt;DELETE&lt;/strong&gt; nos servirá para eliminar registros de nuestra base de datos, ya sea porque no queremos que estén o porque ya no los necesitemos. La sentencia se realizaría siguiendo esta estructura:&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-sql&quot;&gt;
@@ -1573,28 +1592,37 @@ DELETE FROM nombre_tabla WHERE nombre_columna =valor;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;También tenemos la posibilidad de realizar la eliminación de los dos modos explicados anteriormente. Un ejemplo:&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;Connection conn = null;
-Statement stmt = null;
+&lt;pre&gt;&lt;code&gt;PreparedStatement sentencia = null;
 try {
-	conn = conector.conector();
-	System.out.println(&quot;Nos hemos conectado a la BBDD&quot;);
-	stmt = conn.createStatement();
-	String sql = &quot;DELETE FROM estudiante WHERE dni = '00000000T'&quot;;
-	stmt.executeUpdate(sql);
+    // Paso 1. Previamente habremos realizado la conexion
+    conn = conector.conector();
+    System.out.println(&quot;Nos hemos conectado a la BBDD&quot;);
+    // Paso 2. Crear estructura de la sentencia, ponemos interrogantes a los datos que serán dinámicos
+    String consulta = &quot;DELETE FROM estudiante WHERE dni =?&quot;
+    // Paso 3. Pasamos la consulta al objeto PreparedStatement
+    sentencia = conn.prepareStatement(consulta);
+    // Paso 4. Asignamos los valores del objeto que queramos guardar
+    // Imaginemos que el objeto estudiante esta ya declarado y con datos.
+    Estudiante estudiante = new Estudiante();
+    sentencia.setString(1, estudiante.getDni());
+    // Paso 5. Ejecucion
+    sentencia.execute();
 } catch (SQLException e) {
-	e.printStackTrace();
-} catch (Exception e) {
-	e.printStackTrace();
+    System.out.println(e.getCause());
+}catch (Exception e) {
+    System.out.println(e.getCause());
 } finally {
-	try {
-		stmt.close();
-	} catch (SQLException e) {
-		e.printStackTrace();
-	}
+    // Paso 6. cerramos la conexión y el objeto en uso
+    try {
+        sentencia.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Al ejecutar la sentencia, si no borra ningún registro porque no encuentra el DNI no se producirá ningún error, simplemente no borrará ningún registro. En este caso, también debemos englobar todo el código entre un &lt;strong&gt;try-catch&lt;/strong&gt; para poder controlar los errores que se puedan generar.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+&lt;p&gt;Este ejemplo es una implementación de un &lt;strong&gt;DELETE&lt;/strong&gt; con una sentencia dinámica. El objetivo es borrar los registros de la tabla &quot;Estudiante&quot; que tenga como DNI el valor que contenga el &lt;strong&gt;estudiante.getDni().&lt;/strong&gt; El valor será dinámico porque cada objeto &quot;Estudiante&quot; tendrá un valor distinto.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
               <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -1617,7 +1645,7 @@ try {
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="24"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2408,7 +2436,7 @@ try {
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="140621"></int>
+                     <int value="152103"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -2422,7 +2450,7 @@ try {
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="14_836_2.3"></unicode>
+                   <unicode value="14_836_2.7"></unicode>
                    <string role="key" value="_imageResource"></string>
                    <instance class="exe.engine.resource.Resource" reference="38">
                     <dictionary>
@@ -2433,7 +2461,7 @@ try {
                      <string role="key" value="_storageName"></string>
                      <string value="AD03_CONT_R27_01_codPL.jpg"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpv6yulx\\AD03_CONT_R27_01_codPL.jpg"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpaatohy\\AD03_CONT_R27_01_codPL.jpg"></string>
                      <string role="key" value="checksum"></string>
                      <string value="a0beee66177f908d3881090812bb2f03"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2462,7 +2490,7 @@ try {
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="4"></int>
+              <int value="8"></int>
               <string role="key" value="parentNode"></string>
               <reference key="35"></reference>
              </dictionary>
@@ -2808,6 +2836,199 @@ END;
            <int value="0"></int>
           </dictionary>
          </instance>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="44">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Ejemplo en Java"></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="1"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="45">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="850_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="44"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;public static void transaccion() throws SQLException {
+	con.setAutoCommit(false);	// Se desactiva el AutoCommit para poder realizar la transacción
+	Statement st = con.createStatement();
+	String sql;
+	sql=&quot;drop table if exists cliente;&quot;;
+	st.execute(sql);	// Se elimina la tabla si existiera
+	System.out.println(&quot;Elimina la tabla&quot;);
+	sql=&quot;CREATE TABLE cliente(id int primary key, nombre varchar(45));&quot;;
+	st.execute(sql);	// Se crea la tabla
+	System.out.println(&quot;Crea la tabla&quot;);
+	sql=&quot;insert into cliente VALUES (1,'UNO');&quot;;
+	st.executeUpdate(sql);	// Inserta el registro 1
+	System.out.println(&quot;Inserta registro 1&quot;);
+	try{
+		con.commit();		// Comienza la transacción
+		sql=&quot;insert into cliente VALUES (2,'DOS');&quot;;
+		st.executeUpdate(sql);	// Inserta el registro 2
+		System.out.println(&quot;Inserta registro 2&quot;);
+		sql=&quot;insert into cliente VALUES (3,'TRES');&quot;;
+		st.executeUpdate(sql);	// Inserta el registro 3
+		System.out.println(&quot;Inserta registro 3&quot;);
+		sql=&quot;insert into cliente VALUES (3,'CUATRO');&quot;;
+		st.executeUpdate(sql);	// Intenta insertar el registro 3 en vez de 4
+		System.out.println(&quot;No inserta registro al exister el ID 3&quot;);
+	}catch(SQLException e) {
+		con.rollback();		// Deshace las dos últimas inserciones (2 y 3) ya que la última lanzó el error
+	}
+	con.setAutoCommit(true);	// Se vuelve a activar el AutoCommit
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;PreparedStatement Version&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;public static void transaccion() throws SQLException {
+		con.setAutoCommit(false);	// Se desactiva el AutoCommit para poder realizar la transacción
+		String sql;
+		sql=&quot;drop table if exists cliente;&quot;;
+		PreparedStatement st = con.prepareStatement(sql);
+		st.execute();	// Se elimina la tabla si existiera
+		System.out.println(&quot;Elimina la tabla&quot;);
+		sql=&quot;CREATE TABLE cliente(id int primary key, nombre varchar(45));&quot;;
+		st.execute(sql);	// Se crea la tabla
+		System.out.println(&quot;Crea la tabla&quot;);
+		sql=&quot;insert into cliente VALUES (?,?);&quot;;
+		st=con.prepareStatement(sql);
+		st.setInt(1, 1);
+		st.setString(2, &quot;UNO&quot;);// Inserta el registro (1,&quot;UNO&quot;)
+		st.executeUpdate();
+		System.out.println(&quot;Inserta registro 1&quot;);
+		try{
+			con.commit();		// Comienza la transacción
+			st.setInt(1, 2);
+			st.setString(2, &quot;DOS&quot;);// Inserta el registro (1,&quot;UNO&quot;)
+			st.executeUpdate();
+			System.out.println(&quot;Inserta registro 2&quot;);
+			st.setInt(1, 3);
+			st.setString(2, &quot;TRES&quot;);// Inserta el registro (1,&quot;UNO&quot;)
+			st.executeUpdate();
+			System.out.println(&quot;Inserta registro 3&quot;);
+			st.setInt(1, 3);
+			st.setString(2, &quot;CUATRO&quot;);// Inserta el registro (1,&quot;UNO&quot;)
+			st.executeUpdate();
+			System.out.println(&quot;Inserta registro 4&quot;);
+		}catch(SQLException e) {
+			con.rollback();		// Deshace las dos últimas inserciones (2 y 3)
+		}
+		con.setAutoCommit(true);	// Se vuelve a activar el AutoCommit
+	}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="45"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <none></none>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value="technology"></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="31"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="41"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
         </list>
         <string role="key" value="_id"></string>
         <unicode value="9"></unicode>
@@ -2829,13 +3050,13 @@ END;
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="46">
+      <instance class="exe.engine.node.Node" reference="48">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="4.11. Excepciones y cierres"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="44">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="46">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -2894,12 +3115,12 @@ END;
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="45">
+            <instance class="exe.engine.field.TextAreaField" reference="47">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="839_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="44"></reference>
+              <reference key="46"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2927,7 +3148,7 @@ END;
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="45"></reference>
+                <reference key="47"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2935,7 +3156,7 @@ END;
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="46"></reference>
+              <reference key="48"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2952,7 +3173,7 @@ END;
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="46"></reference>
+           <reference key="48"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -2963,7 +3184,7 @@ END;
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="47">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="49">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Excepciones"></unicode>
@@ -3022,12 +3243,12 @@ END;
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="48">
+            <instance class="exe.engine.field.TextAreaField" reference="50">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="840_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="47"></reference>
+              <reference key="49"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -3065,7 +3286,7 @@ END;
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="140622"></int>
+                     <int value="152104"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -3079,18 +3300,18 @@ END;
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="18_840_2.3"></unicode>
+                   <unicode value="18_840_2.7"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="49">
+                   <instance class="exe.engine.resource.Resource" reference="51">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="47"></reference>
+                     <reference key="49"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="4"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="AD03_CONT_R34_estrucexcp.jpg"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpv6yulx\\AD03_CONT_R34_estrucexcp.jpg"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpaatohy\\AD03_CONT_R34_estrucexcp.jpg"></string>
                      <string role="key" value="checksum"></string>
                      <string value="4bced6f89bac88c591ce5266081f99d0"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3102,7 +3323,7 @@ END;
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="48"></reference>
+                   <reference key="50"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3113,15 +3334,15 @@ END;
                  </instance>
                 </list>
                 <string role="key" value="idevice"></string>
-                <reference key="48"></reference>
+                <reference key="50"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="4"></int>
+              <int value="8"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="46"></reference>
+              <reference key="48"></reference>
              </dictionary>
             </instance>
            </list>
@@ -3138,20 +3359,20 @@ END;
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="46"></reference>
+           <reference key="48"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
            <list>
-            <reference key="49"></reference>
+            <reference key="51"></reference>
            </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="50">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="52">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Cierre de conexiones"></unicode>
@@ -3210,12 +3431,12 @@ END;
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="51">
+            <instance class="exe.engine.field.TextAreaField" reference="53">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="841_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="50"></reference>
+              <reference key="52"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -3248,7 +3469,7 @@ END;
                    <instance class="exe.engine.field.TextField">
                     <dictionary>
                      <string role="key" value="_id"></string>
-                     <int value="140623"></int>
+                     <int value="152105"></int>
                      <string role="key" value="_idevice"></string>
                      <none></none>
                      <string role="key" value="_instruc"></string>
@@ -3262,18 +3483,18 @@ END;
                     </dictionary>
                    </instance>
                    <string role="key" value="_id"></string>
-                   <unicode value="19_841_2.3"></unicode>
+                   <unicode value="19_841_2.7"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="52">
+                   <instance class="exe.engine.resource.Resource" reference="54">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="50"></reference>
+                     <reference key="52"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="4"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="AD03_CONT_R37_cierre.jpg"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpv6yulx\\AD03_CONT_R37_cierre.jpg"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmpaatohy\\AD03_CONT_R37_cierre.jpg"></string>
                      <string role="key" value="checksum"></string>
                      <string value="428b0e8d5205579c73aa7a46f17a5556"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3285,7 +3506,7 @@ END;
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="51"></reference>
+                   <reference key="53"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3296,15 +3517,15 @@ END;
                  </instance>
                 </list>
                 <string role="key" value="idevice"></string>
-                <reference key="51"></reference>
+                <reference key="53"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="4"></int>
+              <int value="8"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="46"></reference>
+              <reference key="48"></reference>
              </dictionary>
             </instance>
            </list>
@@ -3321,14 +3542,14 @@ END;
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="46"></reference>
+           <reference key="48"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
            <list>
-            <reference key="52"></reference>
+            <reference key="54"></reference>
            </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
@@ -3359,7 +3580,7 @@ END;
     </dictionary>
    </instance>
    <unicode role="key" value="10"></unicode>
-   <reference key="46"></reference>
+   <reference key="48"></reference>
    <unicode role="key" value="11"></unicode>
    <reference key="7"></reference>
    <unicode role="key" value="12"></unicode>
@@ -3390,7 +3611,7 @@ END;
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="27"></reference>
+  <reference key="41"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -3403,7 +3624,7 @@ END;
     <string role="key" value="date"></string>
     <unicode value=""></unicode>
     <string role="key" value="description"></string>
-    <unicode value="UA03 del módulo Acceso a datos"></unicode>
+    <unicode value="UA04 del módulo Acceso a datos"></unicode>
     <string role="key" value="format"></string>
     <unicode value=""></unicode>
     <string role="key" value="identifier"></string>
@@ -3421,7 +3642,7 @@ END;
     <string role="key" value="subject"></string>
     <unicode value=""></unicode>
     <string role="key" value="title"></string>
-    <unicode value="UA03. Conectores"></unicode>
+    <unicode value="UA04. Gestión de la información"></unicode>
     <string role="key" value="type"></string>
     <unicode value=""></unicode>
    </dictionary>
@@ -3433,7 +3654,7 @@ END;
   <string role="key" value="exportSource"></string>
   <bool value="1"></bool>
   <string role="key" value="footer"></string>
-  <string value=""></string>
+  <unicode value=""></unicode>
   <string role="key" value="isLoading"></string>
   <bool value="0"></bool>
   <string role="key" value="license"></string>
@@ -3456,13 +3677,117 @@ END;
        <string role="key" value="cognitiveProcess"></string>
        <list></list>
        <string role="key" value="context"></string>
-       <list></list>
+       <list>
+        <instance class="exe.engine.lom.lomsubs.contextSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="string"></string>
+            <list></list>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="source"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="LOMv1.0"></string>
+           </dictionary>
+          </instance>
+          <string role="key" value="value"></string>
+          <instance class="exe.engine.lom.lomsubs.contextValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="source"></string>
+            <none></none>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="value"></string>
+            <string role="key" value="value"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="other"></string>
+           </dictionary>
+          </instance>
+         </dictionary>
+        </instance>
+        <instance class="exe.engine.lom.lomsubs.contextSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="string"></string>
+            <list></list>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="source"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="LOMv1.0"></string>
+           </dictionary>
+          </instance>
+          <string role="key" value="value"></string>
+          <instance class="exe.engine.lom.lomsubs.contextValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="source"></string>
+            <none></none>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="value"></string>
+            <string role="key" value="value"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="school"></string>
+           </dictionary>
+          </instance>
+         </dictionary>
+        </instance>
+       </list>
        <string role="key" value="description"></string>
        <list></list>
        <string role="key" value="difficulty"></string>
        <none></none>
        <string role="key" value="intendedEndUserRole"></string>
-       <list></list>
+       <list>
+        <instance class="exe.engine.lom.lomsubs.intendedEndUserRoleSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="string"></string>
+            <list></list>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="source"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="LOMv1.0"></string>
+           </dictionary>
+          </instance>
+          <string role="key" value="value"></string>
+          <instance class="exe.engine.lom.lomsubs.intendedEndUserRoleValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="source"></string>
+            <none></none>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="value"></string>
+            <string role="key" value="value"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="learner"></string>
+           </dictionary>
+          </instance>
+         </dictionary>
+        </instance>
+       </list>
        <string role="key" value="interactivityLevel"></string>
        <none></none>
        <string role="key" value="interactivityType"></string>
@@ -3544,7 +3869,7 @@ END;
             <string role="key" value="language"></string>
             <string value="es"></string>
             <string role="key" value="valueOf_"></string>
-            <string value="UA03 del m\xc3\xb3dulo Acceso a datos"></string>
+            <string value="UA04 del m\xc3\xb3dulo Acceso a datos"></string>
            </dictionary>
           </instance>
          </list>
@@ -3603,7 +3928,7 @@ END;
            <string role="key" value="language"></string>
            <string value="es"></string>
            <string role="key" value="valueOf_"></string>
-           <string value="UA03. Conectores"></string>
+           <string value="UA04. Gesti\xc3\xb3n de la informaci\xc3\xb3n"></string>
           </dictionary>
          </instance>
         </list>
@@ -3913,13 +4238,117 @@ END;
        <string role="key" value="cognitiveProcess"></string>
        <list></list>
        <string role="key" value="context"></string>
-       <list></list>
+       <list>
+        <instance class="exe.engine.lom.lomsubs.contextSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="string"></string>
+            <list></list>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="source"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="LOM-ESv1.0"></string>
+           </dictionary>
+          </instance>
+          <string role="key" value="value"></string>
+          <instance class="exe.engine.lom.lomsubs.contextValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="source"></string>
+            <none></none>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="value"></string>
+            <string role="key" value="value"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="presencial"></string>
+           </dictionary>
+          </instance>
+         </dictionary>
+        </instance>
+        <instance class="exe.engine.lom.lomsubs.contextSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="string"></string>
+            <list></list>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="source"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="LOM-ESv1.0"></string>
+           </dictionary>
+          </instance>
+          <string role="key" value="value"></string>
+          <instance class="exe.engine.lom.lomsubs.contextValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="source"></string>
+            <none></none>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="value"></string>
+            <string role="key" value="value"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="classroom"></string>
+           </dictionary>
+          </instance>
+         </dictionary>
+        </instance>
+       </list>
        <string role="key" value="description"></string>
        <list></list>
        <string role="key" value="difficulty"></string>
        <none></none>
        <string role="key" value="intendedEndUserRole"></string>
-       <list></list>
+       <list>
+        <instance class="exe.engine.lom.lomsubs.intendedEndUserRoleSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="string"></string>
+            <list></list>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="source"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="LOM-ESv1.0"></string>
+           </dictionary>
+          </instance>
+          <string role="key" value="value"></string>
+          <instance class="exe.engine.lom.lomsubs.intendedEndUserRoleValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="source"></string>
+            <none></none>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="value"></string>
+            <string role="key" value="value"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="learner"></string>
+           </dictionary>
+          </instance>
+         </dictionary>
+        </instance>
+       </list>
        <string role="key" value="interactivityLevel"></string>
        <none></none>
        <string role="key" value="interactivityType"></string>
@@ -4001,7 +4430,7 @@ END;
             <string role="key" value="language"></string>
             <string value="es"></string>
             <string role="key" value="valueOf_"></string>
-            <string value="UA03 del m\xc3\xb3dulo Acceso a datos"></string>
+            <string value="UA04 del m\xc3\xb3dulo Acceso a datos"></string>
            </dictionary>
           </instance>
          </list>
@@ -4060,7 +4489,7 @@ END;
            <string role="key" value="language"></string>
            <string value="es"></string>
            <string role="key" value="valueOf_"></string>
-           <string value="UA03. Conectores"></string>
+           <string value="UA04. Gesti\xc3\xb3n de la informaci\xc3\xb3n"></string>
           </dictionary>
          </instance>
         </list>
@@ -4426,11 +4855,11 @@ END;
   <dictionary>
    <string role="key" value="428b0e8d5205579c73aa7a46f17a5556"></string>
    <list>
-    <reference key="52"></reference>
+    <reference key="54"></reference>
    </list>
    <string role="key" value="4bced6f89bac88c591ce5266081f99d0"></string>
    <list>
-    <reference key="49"></reference>
+    <reference key="51"></reference>
    </list>
    <string role="key" value="a0beee66177f908d3881090812bb2f03"></string>
    <list>

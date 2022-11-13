@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>4.10. Transacciones | UA03. Conectores </title>
+<title>4.10. Transacciones | UA04. Gestión de la información </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
@@ -23,7 +23,7 @@
 <body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
-<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<header id="header" ><div id="headerContent">UA04. Gestión de la información</div></header>
 <nav id="siteNav">
 <ul>
    <li><a href="index.html" class="daddy main-node">UA04. Gestión de la información</a></li>
@@ -99,6 +99,88 @@ END;
 </div>
 </div>
 <p>Es conveniente planificar bien la aplicación para minimizar el tiempo en el que se tengan transacciones abiertas ejecutándose, ya que <strong>consumen recursos</strong> y suponen bloqueos en la base de datos que puede parar otras transacciones. En muchos casos, un diseño cuidadoso puede evitar usos innecesarios que se salgan fuera del modo estándar <strong>AutoCommit</strong>.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_technology" id="id31">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_technology.png)"><h1 class="iDeviceTitle">Ejemplo en Java</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta31_850_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public static void transaccion() throws SQLException {
+	con.setAutoCommit(false);	// Se desactiva el AutoCommit para poder realizar la transacción
+	Statement st = con.createStatement();
+	String sql;
+	sql="drop table if exists cliente;";
+	st.execute(sql);	// Se elimina la tabla si existiera
+	System.out.println("Elimina la tabla");
+	sql="CREATE TABLE cliente(id int primary key, nombre varchar(45));";
+	st.execute(sql);	// Se crea la tabla
+	System.out.println("Crea la tabla");
+	sql="insert into cliente VALUES (1,'UNO');";
+	st.executeUpdate(sql);	// Inserta el registro 1
+	System.out.println("Inserta registro 1");
+	try{
+		con.commit();		// Comienza la transacción
+		sql="insert into cliente VALUES (2,'DOS');";
+		st.executeUpdate(sql);	// Inserta el registro 2
+		System.out.println("Inserta registro 2");
+		sql="insert into cliente VALUES (3,'TRES');";
+		st.executeUpdate(sql);	// Inserta el registro 3
+		System.out.println("Inserta registro 3");
+		sql="insert into cliente VALUES (3,'CUATRO');";
+		st.executeUpdate(sql);	// Intenta insertar el registro 3 en vez de 4
+		System.out.println("No inserta registro al exister el ID 3");
+	}catch(SQLException e) {
+		con.rollback();		// Deshace las dos últimas inserciones (2 y 3) ya que la última lanzó el error
+	}
+	con.setAutoCommit(true);	// Se vuelve a activar el AutoCommit
+}</code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>PreparedStatement Version</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public static void transaccion() throws SQLException {
+		con.setAutoCommit(false);	// Se desactiva el AutoCommit para poder realizar la transacción
+		String sql;
+		sql="drop table if exists cliente;";
+		PreparedStatement st = con.prepareStatement(sql);
+		st.execute();	// Se elimina la tabla si existiera
+		System.out.println("Elimina la tabla");
+		sql="CREATE TABLE cliente(id int primary key, nombre varchar(45));";
+		st.execute(sql);	// Se crea la tabla
+		System.out.println("Crea la tabla");
+		sql="insert into cliente VALUES (?,?);";
+		st=con.prepareStatement(sql);
+		st.setInt(1, 1);
+		st.setString(2, "UNO");// Inserta el registro (1,"UNO")
+		st.executeUpdate();
+		System.out.println("Inserta registro 1");
+		try{
+			con.commit();		// Comienza la transacción
+			st.setInt(1, 2);
+			st.setString(2, "DOS");// Inserta el registro (1,"UNO")
+			st.executeUpdate();
+			System.out.println("Inserta registro 2");
+			st.setInt(1, 3);
+			st.setString(2, "TRES");// Inserta el registro (1,"UNO")
+			st.executeUpdate();
+			System.out.println("Inserta registro 3");
+			st.setInt(1, 3);
+			st.setString(2, "CUATRO");// Inserta el registro (1,"UNO")
+			st.executeUpdate();
+			System.out.println("Inserta registro 4");
+		}catch(SQLException e) {
+			con.rollback();		// Deshace las dos últimas inserciones (2 y 3)
+		}
+		con.setAutoCommit(true);	// Se vuelve a activar el AutoCommit
+	}</code></pre>
+</div>
+</div></div></div></section></div>
 </div>
 </div>
 </div>

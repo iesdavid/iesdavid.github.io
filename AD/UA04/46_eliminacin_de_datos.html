@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>4.6. Eliminación de datos | UA03. Conectores </title>
+<title>4.6. Eliminación de datos | UA04. Gestión de la información </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
@@ -23,7 +23,7 @@
 <body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
-<header id="header" ><div id="headerContent">UA03. Conectores</div></header>
+<header id="header" ><div id="headerContent">UA04. Gestión de la información</div></header>
 <nav id="siteNav">
 <ul>
    <li><a href="index.html" class="daddy main-node">UA04. Gestión de la información</a></li>
@@ -62,28 +62,37 @@ DELETE FROM nombre_tabla WHERE nombre_columna =valor;</code></pre>
 <p>También tenemos la posibilidad de realizar la eliminación de los dos modos explicados anteriormente. Un ejemplo:</p>
 <div class="highlighted-code language-java">
 <div>
-<pre><code>Connection conn = null;
-Statement stmt = null;
+<pre><code>PreparedStatement sentencia = null;
 try {
-	conn = conector.conector();
-	System.out.println("Nos hemos conectado a la BBDD");
-	stmt = conn.createStatement();
-	String sql = "DELETE FROM estudiante WHERE dni = '00000000T'";
-	stmt.executeUpdate(sql);
+    // Paso 1. Previamente habremos realizado la conexion
+    conn = conector.conector();
+    System.out.println("Nos hemos conectado a la BBDD");
+    // Paso 2. Crear estructura de la sentencia, ponemos interrogantes a los datos que serán dinámicos
+    String consulta = "DELETE FROM estudiante WHERE dni =?"
+    // Paso 3. Pasamos la consulta al objeto PreparedStatement
+    sentencia = conn.prepareStatement(consulta);
+    // Paso 4. Asignamos los valores del objeto que queramos guardar
+    // Imaginemos que el objeto estudiante esta ya declarado y con datos.
+    Estudiante estudiante = new Estudiante();
+    sentencia.setString(1, estudiante.getDni());
+    // Paso 5. Ejecucion
+    sentencia.execute();
 } catch (SQLException e) {
-	e.printStackTrace();
-} catch (Exception e) {
-	e.printStackTrace();
+    System.out.println(e.getCause());
+}catch (Exception e) {
+    System.out.println(e.getCause());
 } finally {
-	try {
-		stmt.close();
-	} catch (SQLException e) {
-		e.printStackTrace();
-	}
+    // Paso 6. cerramos la conexión y el objeto en uso
+    try {
+        sentencia.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
 }</code></pre>
 </div>
 </div>
-<p>Al ejecutar la sentencia, si no borra ningún registro porque no encuentra el DNI no se producirá ningún error, simplemente no borrará ningún registro. En este caso, también debemos englobar todo el código entre un <strong>try-catch</strong> para poder controlar los errores que se puedan generar.</p></div></div></section></div>
+<p>Este ejemplo es una implementación de un <strong>DELETE</strong> con una sentencia dinámica. El objetivo es borrar los registros de la tabla "Estudiante" que tenga como DNI el valor que contenga el <strong>estudiante.getDni().</strong> El valor será dinámico porque cada objeto "Estudiante" tendrá un valor distinto.</p>
+</div></div></section></div>
 </div>
 </div>
 </article>
