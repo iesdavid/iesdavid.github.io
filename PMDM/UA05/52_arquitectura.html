@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.2. Arquitectura | UA05. Multimedia </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA05. Multimedia</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA05. Uso de multimedia</a></li>
+   <li><a href="51_conceptos.html" class="no-ch">5.1. Conceptos</a></li>
+   <li id="active"><a href="52_arquitectura.html" class="active daddy">5.2. Arquitectura</a>
+   <ul>
+      <li><a href="521_app_de_audio.html" class="no-ch">5.2.1. App de audio</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="51_conceptos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="521_app_de_audio.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.2. Arquitectura</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id2">
+<div class="iDevice emphasis0" >
+<div id="ta2_871_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Antes de comenzar el desarrollo de cualquier sistema de software, el análisis y diseño de la arquitectura es uno de los factores más importantes. En el caso de las apps multimedia, es vital tener los conceptos claros sobre cómo se estructuran los módulos que las componen.</p>
+<p>Tengamos en cuenta, por ejemplo, la diferencia entre una aplicación reproductora de audio y otra de vídeo. Mientras el usuario escucha música desde nuestra app, puede estar trabajando con un editor de textos o chateando por una app de mensajería. Si en un momento dado necesita detener la reproducción o cambiar la canción, puede lanzar comandos a nuestra aplicación, ya sea mediante la activación de nuestra <strong>activity</strong> o mediante botones en una notificación que habremos lanzado en la barra de notificaciones.</p>
+<p>Entendemos por ello que nuestra app de audio se ejecutará como un servicio en segundo plano. Sin embargo, si el usuario está viendo un videoclip en otra de nuestras apps, es lógico suponer que nuestra app tendrá simplemente una vista enlazada al reproductor y se ejecutará solo en primer plano.</p>
+<p>En el caso de una app captadora de vídeo o audio, podrían plantearse diferentes alternativas. Normalmente, si grabamos vídeo, necesitaremos una app en primer plano que muestre en pantalla lo que captamos a través de la cámara. Si adquirimos audio, podríamos plantearnos que el servicio corra en background o no, dependiendo del análisis de necesidades que queramos cubrir.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="51_conceptos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="521_app_de_audio.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

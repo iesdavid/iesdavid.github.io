@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.1. Conceptos | UA05. Multimedia </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA05. Multimedia</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA05. Uso de multimedia</a></li>
+   <li id="active"><a href="51_conceptos.html" class="active no-ch">5.1. Conceptos</a></li>
+   <li><a href="52_arquitectura.html" class="daddy">5.2. Arquitectura</a>
+   <ul class="other-section">
+      <li><a href="521_app_de_audio.html" class="no-ch">5.2.1. App de audio</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_arquitectura.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.1. Conceptos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_870_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En el desarrollo de apps multimedia para dispositivos móviles debemos tener en cuenta varios factores, como puedan ser las diversas capacidades de cada terminal.</p>
+<p>Existe una amplia variedad de dispositivos diferentes con diferentes características:</p>
+<ul>
+<li>resoluciones y tamaños de pantalla,</li>
+<li>tipos de procesadores,</li>
+<li>capacidades de memoria,</li>
+<li>códecs soportados,</li>
+<li>etcétera.</li>
+</ul>
+<p>Además, los usuarios pueden utilizar diferentes periféricos, como teclados, joysticks, auriculares Bluetooth o con cable, micros y cámaras.</p>
+<p>Por ejemplo, los auriculares <strong>Bluetooth</strong> pueden llevar botones de play, pause, canal, push to talk o control de volumen, y tendremos que tratarlos adecuadamente.</p>
+<p>También deberemos tener en cuenta que estos dispositivos pueden ser desconectados en cualquier momento durante la reproducción o grabación.</p>
+<p>Los sistemas operativos móviles tratan de <strong>estandarizar</strong>, mediante las librerías multimedia, todas las diferentes funcionalidades del hardware, ocultando además las posibles diferencias entre terminales. De este modo, el programador podrá centrarse en su tarea en lugar de codificar mecanismos que mantengan la estabilidad de la app ante diferencias de hardware.</p>
+<p>Pero debemos tener en cuenta también que la evolución del hardware y el software de los dispositivos móviles ha sido tan violenta que incluso en las librerías encontraremos diferentes clases para llevar a cabo las mismas funciones.</p>
+<p>Mientras programamos, nos encontraremos con diferentes clases o interfaces que han ido quedando <strong>obsoletas</strong>, así como interfaces que funcionarán para un versión moderna del sistema operativo pero no para una más antigua. Este es el caso de los paquetes <strong>Camera</strong>, <strong>Camera2</strong> y <strong>CameraX</strong>, por ejemplo.</p>
+<p>Manejar el hardware de la cámara a bajo nivel, o la reproducción de vídeo, no es una tarea sencilla en ningún caso, y aunque el SDK nos facilite el trabajo, tendremos la obligación de entender bien la arquitectura interna del sistema para no cometer fallos que impidan a nuestra app dar lo mejor de sí misma.</p>
+<p>Algo que ya sabíamos también es que el manejo de imágenes requiere mucha memoria. Imaginemos entonces la memoria y el tiempo de CPU que requieren el tratamiento de imágenes en movimiento, y más aún el vídeo en <strong>streaming</strong>, que debe reproducirse en <strong>tiempo real</strong>. Tendremos que tener en cuenta las limitaciones de memoria de los terminales, así como los protocolos de <strong>compresión</strong> que soportan.</p>
+<p>Por último, debemos considerar las fuentes de los datos multimedia, cómo acceder a esas fuentes de la manera más eficiente. Los datos están en el almacenamiento interno, en el externo, en internet o llegarán desde los sensores del terminal, la cámara o el micrófono.</p>
+<p>En los temas siguientes estudiaremos la arquitectura del software necesario para desarrollar aplicaciones multimedia eficientes. Más adelante estudiaremos las clases, interfaces y métodos más utilizados para cada tarea.</p>
+<p>Finalmente, veremos algunos ejemplos prácticos de cómo utilizar las librerías multimedia integradas en el SDK de Android.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_arquitectura.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
