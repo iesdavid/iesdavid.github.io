@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.4. Sesiones. Estados de un objeto | UA05. ORM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA05. ORM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA05. ORM</a></li>
+   <li><a href="51_herramientas.html" class="no-ch">5.1. Herramientas</a></li>
+   <li><a href="52_instalacin_y_configuracin_de_hibernate.html" class="daddy">5.2. Instalación y configuración de Hibernate</a>
+   <ul class="other-section">
+      <li><a href="521_ficheros_de_configuracin_propiedades.html" class="no-ch">5.2.1. Ficheros de configuración. Propiedades</a></li>
+      <li><a href="522_anotaciones_jpa.html" class="no-ch">5.2.2. Anotaciones JPA</a></li>
+   </ul>
+   </li>
+   <li><a href="53_mapeo_de_relaciones.html" class="no-ch">5.3. Mapeo de relaciones</a></li>
+   <li id="active"><a href="54_sesiones_estados_de_un_objeto.html" class="active no-ch">5.4. Sesiones. Estados de un objeto</a></li>
+   <li><a href="55_crud.html" class="no-ch">5.5. CRUD</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="53_mapeo_de_relaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="55_crud.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.4. Sesiones. Estados de un objeto</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div id="ta7_121_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para poder utilizar la persistencia en Hibernate es necesario definir un objeto <strong>Session</strong> utilizando la clase <strong>SessionFactory</strong>. La sesión corresponde con un objeto que representa una unidad de trabajo con la base de datos. La sesión nos permite representar el gestor de persistencia, ya que dispone de una API básica que nos permite cargar y guardar objetos.</p>
+<p>La sesión está formada internamente por una cola de sentencias&nbsp;SQL que son necesarias ejecutar para poder sincronizar el estado de la sesión con la base de datos.</p>
+<p>Asimismo, la <strong>sesión</strong> contiene un lista de objetos persistentes. Un sesión corresponde con el primer nivel de caché.</p>
+<p>Si para realizar el acceso a datos, usamos Hibernate, la sesión nos permite definir el alcance de un contexto determinado. Para poder utilizar los mecanismos de persistencia de Hibernate se debe inicializar el entorno Hibernate y obtener un objeto Session utilizando la clase SessionFactory de Hibernate. Un objeto Session Hibernate representa una única unidad-de-trabajo para un almacén de datos dado y lo abre un ejemplar de SessionFactory. Se deben cerrar las sesiones cuando se haya completado todo el trabajo de una transacción.</p>
+<p>Para obtener un ejemplar de SessionFactory realizaremos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>protected void setUp() throws Exception {
+	final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
+			.configure() // por defecto: hibernate.cfg.xml
+			.build();
+	try {
+		sessionFactory = new MetadataSources( registry ).buildMetadata().buildSessionFactory();
+	}
+	catch (Exception e) {
+		StandardServiceRegistryBuilder.destroy( registry );
+	}
+}</code></pre>
+</div>
+</div>
+<p>Los estados en los que se puede encontrar un objetos son:</p>
+<ul>
+<li><strong>Transitorio (Transient)</strong>. En este estado estará un objeto recién creado que no ha sido enlazado con el gestor de persistencia.</li>
+<li><strong>Persistente</strong>: Ente este caso el objeto está enlazado con la sesión. Todos los cambios que se realicen será persistentes.</li>
+<li><strong>Disociado (Detached)</strong>: En este caso nos encontramos con un objeto persistente que sigue en memoria después de que termine la sesión. En este caso existe en Java y en la base de datos.</li>
+<li><strong>Borrado (Removed)</strong>: En esta caso el objeto está marcado para ser borrado de la base de datos. Existe en la aplicación Java y se borrará de la base de datos al terminar la sesión.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="53_mapeo_de_relaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="55_crud.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

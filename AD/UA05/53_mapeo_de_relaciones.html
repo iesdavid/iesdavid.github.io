@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.3. Mapeo de relaciones | UA05. ORM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA05. ORM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA05. ORM</a></li>
+   <li><a href="51_herramientas.html" class="no-ch">5.1. Herramientas</a></li>
+   <li><a href="52_instalacin_y_configuracin_de_hibernate.html" class="daddy">5.2. Instalación y configuración de Hibernate</a>
+   <ul class="other-section">
+      <li><a href="521_ficheros_de_configuracin_propiedades.html" class="no-ch">5.2.1. Ficheros de configuración. Propiedades</a></li>
+      <li><a href="522_anotaciones_jpa.html" class="no-ch">5.2.2. Anotaciones JPA</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="53_mapeo_de_relaciones.html" class="active no-ch">5.3. Mapeo de relaciones</a></li>
+   <li><a href="54_sesiones_estados_de_un_objeto.html" class="no-ch">5.4. Sesiones. Estados de un objeto</a></li>
+   <li><a href="55_crud.html" class="no-ch">5.5. CRUD</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="522_anotaciones_jpa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="54_sesiones_estados_de_un_objeto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.3. Mapeo de relaciones</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id6">
+<div class="iDevice emphasis0" >
+<div id="ta6_120_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para persistir, las relaciones usan las denominadas <strong>transacciones</strong>, ya que los cambios pueden incluir varias tablas. Una regla general para el mapeo es respetar el <strong>tipo de relación</strong> en el modelo de objetos y en el modelo relacional: así, una relación 1-1 en el modelo de objetos deberá corresponderse a una relación 1-1 en el modelo relacional.</p>
+<p>Para mapear las relaciones, se usan direntes anotaciones dependiendo de la asociación que tienen las entidades. Estas pueden ser:</p>
+<p>@OneToOne</p>
+<p>@ManyToOne</p>
+<p>@OneToMany</p>
+<p>@ManyToMany</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: center;"><a href="https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#associations" target="_blank" rel="noopener">Asociaciones en Hibernate</a></p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="522_anotaciones_jpa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="54_sesiones_estados_de_un_objeto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.2.2. Anotaciones JPA | UA05. ORM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA05. ORM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA05. ORM</a></li>
+   <li><a href="51_herramientas.html" class="no-ch">5.1. Herramientas</a></li>
+   <li class="current-page-parent"><a href="52_instalacin_y_configuracin_de_hibernate.html" class="current-page-parent daddy">5.2. Instalación y configuración de Hibernate</a>
+   <ul>
+      <li><a href="521_ficheros_de_configuracin_propiedades.html" class="no-ch">5.2.1. Ficheros de configuración. Propiedades</a></li>
+      <li id="active"><a href="522_anotaciones_jpa.html" class="active no-ch">5.2.2. Anotaciones JPA</a></li>
+   </ul>
+   </li>
+   <li><a href="53_mapeo_de_relaciones.html" class="no-ch">5.3. Mapeo de relaciones</a></li>
+   <li><a href="54_sesiones_estados_de_un_objeto.html" class="no-ch">5.4. Sesiones. Estados de un objeto</a></li>
+   <li><a href="55_crud.html" class="no-ch">5.5. CRUD</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="521_ficheros_de_configuracin_propiedades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="53_mapeo_de_relaciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.2.2. Anotaciones JPA</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id5">
+<div class="iDevice emphasis0" >
+<div id="ta5_119_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Hibernate utiliza <strong>ficheros de mapeo</strong> (en formato XML que tienen extensión<strong> .hbm.xml</strong>.) o <strong>anotaciones JPA</strong> para relacionar tablas con objetos Java. Entre estas dos opciones, se recomienda utilizar las anotaciones JPA.</p>
+<p><strong>JPA</strong> es una especificación estándar e Hibernate es una implementación de esa especificación JPA. Hibernate implemente todas las anotaciones JPA y el propio equipo de Hibernate recomienda utilizar anotaciones JPA como buena práctica.</p>
+<p>Estas anotaciones se realizan directamente en los <strong>POJOs</strong> junto con el código y es ahí donde se especifica la correspondencia con las tablas de la base de datos.</p>
+<p>Un ejemplo de mapeo simple de la tabla student podría ser el siguiente:</p>
+<p><img src="student.png" alt="Tabla Student" title="Tabla Student" style="display: block; margin-left: auto; margin-right: auto;" width="164" height="160"></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>...
+
+@Entity
+@Table(name="student")
+public class Student {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY) //La opción más usada con MySQL
+    @Column(name="id")
+    private int id;
+    
+    @Column(name="first_name")
+    private String firstName;
+    
+    @Column(name="last_name")
+    private String lastName;
+    
+    @Column(name="email")
+    private String email;
+...</code></pre>
+</div>
+</div>
+<p>Seguido de los constructores, getters y setters y toString del POJO.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id8">
+<div class="iDevice emphasis0" >
+<div id="ta8_829_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Anotaciones de entidad</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Una <strong>entidad</strong> hará referencia a la clase que se quiere persistir en la base de datos. También la podemos nombrar como <strong>clase entidad</strong>.<br>Estas etiquetas se usan para para mapear la entidad con la base de datos. Las más importantes son:</p>
+<table class="exe-table" style="width: 80%;">
+<tbody>
+<tr>
+<td><strong>@Entity</strong></td>
+<td>Se utiliza para marcar la clase como una entidad de Hibernate que se tiene que persistir en la base de datos.</td>
+</tr>
+<tr>
+<td><strong>@Table</strong></td>
+<td>Se utiliza para definir la equivalencia con la tabla de BBDD.</td>
+</tr>
+<tr>
+<td><strong>@Id</strong></td>
+<td>Sirve para indicar la clave única de la base de datos, es decir, la primary key.</td>
+</tr>
+<tr>
+<td><strong>@GeneratedValue</strong></td>
+<td>Esta etiqueta se utiliza para definir que el campo se generará automáticamente.</td>
+</tr>
+<tr>
+<td><strong>@Column</strong></td>
+<td>Se utiliza para mapear el campo con el atributo de la tabla de la BBDD, se puede definir la longitud del campo o si es obligatorio o no.</td>
+</tr>
+<tr>
+<td><strong>@OrderBy</strong></td>
+<td>Se usa para indicar que esa columna se ordenará del modo que se indique. El orden puede ser asc o desc.</td>
+</tr>
+<tr>
+<td><strong>@Transient</strong></td>
+<td>Se utiliza para indicar que ese atributo no se guarda en la base de datos.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>@Entity</strong> indicará a Hibernate que esa clase se guardará en la base de datos. La etiqueta <strong>@Table</strong> se usará para indicar a qué tabla de la base de datos corresponde. Estas etiquetas se añaden a la clase.</p>
+<p>En los atributos también deberemos añadir etiquetas. En primer lugar, debemos asegurarnos de que nuestra clase tendrá un atributo <strong>@Id</strong>, que garantizará que sea un registro único. Tendremos que añadir la etiqueta <strong>@Id</strong> y <strong>@GeneratedValue</strong>, para indicar que se trata de un identificador único autoincrementado, además de la etiqueta <strong>@Column</strong>, ya que esta etiqueta servirá para indicar a qué columna de la tabla corresponde.</p>
+<p>Cada atributo de la clase deberá tener una etiqueta <strong>@Column</strong>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+@Table (name="profesor")
+public class Profesor {
+@Id @GeneratedValue
+@Column (name="id")
+private int id;
+@Column (name="dni")
+@OrderBy("desc")
+private String dni;
+@Column(name = "nombre")
+private String nombre;
+@Column(name = "apellido")
+private String apellido;
+@Column(name = "edad")
+private int edad;
+}</code></pre>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Anotaciones entre tablas</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Este tipo de anotaciones se usa para establecer <strong>relaciones entre tablas</strong>. En ocasiones, en las entidades se define como atributo un objeto, y este objeto tiene una relación con otra tabla, por lo que debemos definir una <strong>relación</strong>.</p>
+<p>Estas anotaciones se añadirán a los atributos. Tenemos otro conjunto de anotaciones que se usan para especificar la relación entre columnas y entre diferentes tablas y entidades.</p>
+<table class="exe-table" style="width: 80%;">
+<tbody>
+<tr>
+<td><strong>@OneToOne</strong></td>
+<td>Se usa para establecer la relación uno a uno.</td>
+</tr>
+<tr>
+<td><strong>@OneToMany</strong></td>
+<td>Se usa para establecer la relación de ese atributo con múltiples tablas.</td>
+</tr>
+<tr>
+<td><strong>@PrimaryKeyJoinColumn</strong></td>
+<td>Esta anotación se utiliza para asociar entidades que comparten la misma clave primaria.</td>
+</tr>
+<tr>
+<td><strong>@JoinColumn</strong></td>
+<td>Se usa para asociaciones uno a uno o muchos a uno cuando una de las entidades posee una clave foránea.</td>
+</tr>
+<tr>
+<td><strong>@JoinTable</strong></td>
+<td>Se utiliza para entidades vinculadas a través de una tabla de asociación.</td>
+</tr>
+<tr>
+<td><strong>@MapsId</strong></td>
+<td>Se usa para persistir dos entidades con clave compartida.</td>
+</tr>
+<tr>
+<td><strong>@ManyToMany</strong></td>
+<td>Se utiliza cuando la relación entre tablas es de muchos a muchos. Por ejemplo, un estudiante puede elegir muchas asignaturas, y las asignaturas pueden tener muchos estudiantes.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+@Table(name = "pregunta")
+public class Entrevista {
+@Id
+@GeneratedValue(strategy = GenerationType.TABLE)
+private int id;
+private String nombrePregunta;
+@OneToMany(cascade = CascadeType.ALL)
+@JoinColumn(name = "id")
+@OrderColumn(name = "type")
+private List<preguntas> preguntas;
+//constructor,getter, setter
+}</preguntas></code></pre>
+</div>
+</div>
+<p>Se observa que tenemos una lista de preguntas que tiene la etiqueta <strong>@OneToMany.</strong></p>
+<p>Llo que indicará esta anotación es que cada clase "<strong>Entrevista</strong>" tendrá una lista de preguntas y tendrá una relación <strong>@OneToMany</strong>, es decir, que la clase podrá tener más de una pregunta.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Anotaciones herencia</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En Java, la herencia es una de los conceptos principales. El hecho es que transformar esta herencia en mapeo de Hibernate puede resultar un problema porque las bases de datos relacionales no cuentan con un proceso para realizar la operación, es decir, SQL, Hibernate o cualquier otro ORM no soporta este tipo de mapeo.</p>
+<p>Para poder solucionar este problema, JPA (Java Persistance API) tiene ciertas estrategias para abordar esta problemática.</p>
+<table class="exe-table" style="width: 80%;">
+<tbody>
+<tr>
+<td>@Inheritance</td>
+<td>Se usa para indicar qué estrategia de herencia se utilizará.</td>
+</tr>
+<tr>
+<td>@DiscriminatorColumn</td>
+<td>Como su nombre indica, esta columna es el discriminador, y esta anotación especifica la columna discriminada para las estrategias de mapeo de herencia SINGLE_TABLE y JOINED.</td>
+</tr>
+<tr>
+<td>@DiscriminatorValue</td>
+<td>Se utiliza para indicar que esa clase será filtrada con el valor que se asigne.</td>
+</tr>
+<tr>
+<td>@PrimaryKeyJoinColumn</td>
+<td>Se utiliza para indicar que esa columna se utiliza para unir con otra a través de un identificador.</td>
+</tr>
+<tr>
+<td>@MappedSuperclass</td>
+<td>Se utiliza para indicar que esa clase es una clase padre.</td>
+</tr>
+</tbody>
+</table>
+<p>Para poder resolver la problemática, JPA abordó el problema con varias soluciones:</p>
+<div class="exe-fx exe-tabs">
+<h2>Mapeo superclase</h2>
+<p>Esta estrategia de mapeo es el enfoque más simple para asignar una estructura de herencia a las tablas de la base de datos. Se establece que la clase padre no puede ser una entidad. Por ejemplo, si tenemos una superclase "Persona":</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@MappedSuperclass
+public class Persona {
+@Id
+private long idPersona;
+private String nombre;
+//constructor, getters, setters
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="exe-col exe-col-2">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+public class Alumno extends Persona {
+private String dni;
+//constructor, getters, setters
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Tendremos que añadir la anotación <strong>@MappedSuperclass</strong>, que indicará que esa clase no se mapea porque es una superclase. En cambio, la clase "Alumno" es una entidad porque extiende de "Persona". Por eso, a esa subclase deberemos añadirle la etiqueta <strong>@Entity</strong>.</p>
+<p>En la base de datos, la clase "Alumno" equivaldrá a la tabla "Alumno" y tendrá tres columnas: las dos primeras de la superclase y la de la subclase. Por tanto, la representación en la base de datos será con los datos de la superclase más los de la entidad.</p>
+<p>Asigna cada clase concreta a su propia tabla. Eso permite compartir la definición de atributo entre varias entidades, pero también supone un gran inconveniente: el mapeo de una superclase no es una entidad, y no hay una tabla para ello.</p>
+<h2>Tabla única</h2>
+<p>Esta estrategia es muy similar a la anterior, la principal diferencia es que ahora la superclase también es una entidad. La estrategia de tabla única crea una tabla para cada jerarquía de clase, la superclase y las subclases estarán dentro de la misma tabla. Esta es también la estrategia predeterminada elegida por <strong>JPA</strong> si no especificamos una explícitamente. Eso hace que la consulta para una clase específica sea fácil y eficiente.</p>
+<p>Esta estrategia se centrará en agrupar las clases padre e hijo en una misma tabla. Dado que los registros de esta jerarquía de clases estarán en la misma tabla, Hibernate necesita una forma de identificar a qué entidad pertenece cada registro.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity(name="articulos")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="tipo_articulo",
+discriminatorType = DiscriminatorType.INTEGER)
+public class Articulo{
+//atributos,constructor, getters, setters
+}</code></pre>
+</div>
+</div>
+<p>Como podemos apreciar por el ejemplo, la clase padre se mapeará como una entidad y se añadirá la etiqueta <strong>@Inheritance</strong>, definiendo la estrategia como <strong>InheritanceType.SINGLE_TABLE</strong>. Esta definición indicará que la estrategia de herencia será de tabla única y es necesario añadirla a toda clase que sea superclase. Ahora deberemos definir qué columna se utilizará para distinguir a qué clase pertenece cada registro. Para ello utilizamos la etiqueta <strong>@DiscriminatorColumn</strong> y le asignamos un nombre "tipo_articulo". Aquí se añadirá el nombre de la clase y se podrá filtrar cuando se haga una consulta. Si no se especifica el nombre, Hibernate establecerá esa columna como <strong>DTYPE</strong>.</p>
+<p>Para las subclases, se añadirá solo la anotación <strong>@Entity</strong> y la anotación <strong>@DiscriminatorValue</strong>.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+@DiscriminatorValue("1")
+public class Lapiz extends Articulo{
+//atributos,constructor, getters, setters
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="exe-col exe-col-2">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+@DiscriminatorValue("2")
+public class Libreta extends Articulo{
+//atributos,constructor, getters, setters
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>En la definición de las subclases, se debe añadir la anotación <strong>@DiscriminatorValue</strong>, que especificará el valor que discriminar para esa entidad. Es decir, el valor 1 indicará que la clase a la que pertenece ese registro es 1, y el 2 hará referencia a la clase "Libreta". Es una manera simple de identificar la clase a la que pertenecen, pero también se puede indicar que la columna sea un string y asignar un valor de texto. En lugar de poner <strong>discriminatorType=DiscriminatorType.INTEGER</strong>, se pondría <strong>discriminatorType=DiscriminatorType.STRING</strong>.</p>
+<p>Este tipo de estrategia es una manera eficiente y fácil de acceder a los datos de la base de datos. Todos los atributos de cada entidad se guardan en una misma tabla, y las consultas no necesitan de joins para ejecutarse. La única particularidad es que Hibernate necesita añadir a la consulta SQL una comparación del valor discriminador para obtener la entidad.</p>
+<h2>Joined table</h2>
+<p>Esta estrategia, a diferencia de la anterior, se encarga de mapear cada clase en una tabla propia. La única columna que se repite es el identificador, que se utilizará para enlazar las tablas.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Animal {
+@Id
+private long idAnimal;
+private String especie;
+// constructor, getters, setters
+}</code></pre>
+</div>
+</div>
+<p>En la clase padre, deberemos definir la clase con la etiqueta <strong>@Entity</strong> y en strategy de la etiqueta <strong>@Inheritance</strong> deberemos añadir&nbsp; <strong>InheritanceType.JOINED</strong>.</p>
+<p>Para la subclase se definirá así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+@PrimaryKeyJoinColum("idGato")
+public class Gato extends Animal {
+private String nombre;
+// constructor, getters, setters
+}</code></pre>
+</div>
+</div>
+<p>Las dos clases tendrán un identificador "idAnimal". La clave primaria de la entidad "Gato" también tiene una restricción de clave externa para la clave primaria de su clase padre. Para personalizar esta columna, podemos agregar la anotación <strong>@PrimaryKeyJoinColumn</strong> y añadir el nombre de la columna.</p>
+<p>La desventaja de este tipo de estrategia es que la recuperación de entidades requiere uniones entre tablas, lo que puede resultar en un menor rendimiento para grandes cantidades de registros. El número de combinaciones es mayor cuando se consulta la clase principal, ya que se unirá con cada elemento secundario relacionado, por lo que es más probable que el rendimiento se vea afectado en la superclase de la que queremos recuperar registros.</p>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id11">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_diary.png)"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java">
+<div>
+<pre><code>import org.hibernate.mapping.List;
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "Escritores_personas")
+public class PersonasEntity implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idPersona")
+    private int idPersona;
+    @Column(name = "Nombre")
+    private String Nombre;
+    @Column(name = "Tipo")
+    private String Tipo;
+
+    PersonasEntity(String Nombre, String Tipo) {
+        this.Nombre = Nombre;
+        this.Tipo = Tipo;
+    }
+
+    public PersonasEntity() {
+    }
+
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String nombre) {
+        Nombre = nombre;
+    }
+
+    public String getTipo() {
+        return Tipo;
+    }
+
+    public void setTipo(String tipo) {
+        Tipo = tipo;
+    }
+}
+</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="521_ficheros_de_configuracin_propiedades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="53_mapeo_de_relaciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

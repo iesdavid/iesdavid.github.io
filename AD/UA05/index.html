@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>UA05. ORM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<meta name="description" content="Acceso a datos.
+Unidad de Aprendizaje 5: Mapeo de objeto-relacional" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA05. ORM</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">UA05. ORM</a></li>
+   <li><a href="51_herramientas.html" class="no-ch">5.1. Herramientas</a></li>
+   <li><a href="52_instalacin_y_configuracin_de_hibernate.html" class="daddy">5.2. Instalación y configuración de Hibernate</a>
+   <ul class="other-section">
+      <li><a href="521_ficheros_de_configuracin_propiedades.html" class="no-ch">5.2.1. Ficheros de configuración. Propiedades</a></li>
+      <li><a href="522_anotaciones_jpa.html" class="no-ch">5.2.2. Anotaciones JPA</a></li>
+   </ul>
+   </li>
+   <li><a href="53_mapeo_de_relaciones.html" class="no-ch">5.3. Mapeo de relaciones</a></li>
+   <li><a href="54_sesiones_estados_de_un_objeto.html" class="no-ch">5.4. Sesiones. Estados de un objeto</a></li>
+   <li><a href="55_crud.html" class="no-ch">5.5. CRUD</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="51_herramientas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">UA05. ORM</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>A la hora de almacenar los datos de un programa orientado a objetos en una base de datos relacional, surge un inconveniente debido a <strong>incompatibilidad</strong> de sistemas de tipos de datos.</p>
+<p>En el software orientado a objetos, la información se representa como <strong>clases</strong> y <strong>objetos</strong>. En las bases de datos relacionales, como <strong>tablas</strong> y sus <strong>restricciones</strong>. Por tanto, para almacenar la información tratada en un programa orientado a objetos en una base de datos relacional es necesaria una <strong>traducción</strong> entre ambas formas.</p>
+<p><a href="ORM-object-relational-mapping.png" rel="lightbox"><img src="ORM-object-relational-mapping.png" alt="ORM + Java" title="ORM + Java" style="float: left; margin: 10px;" width="321" height="167"></a>El <strong>mapeo objeto-relacional (ORM)</strong> soluciona este problema. Es una técnica de programación que se utiliza con el propósito de convertir datos entre el utilizado en un lenguaje de programación orientado a objetos y el utilizado en una base de datos relacional, gracias a la la persistencia. Esto posibilita el uso en las bases de datos relacionales de las características propias de la programación orientada a objetos (básicamente <strong>herencia</strong> y <strong>polimorfismo</strong>).</p>
+<p>Las bases de datos más extendidas son del tipo <strong>relacional</strong> y estas sólo permiten guardar <strong>tipos de datos primitivos</strong> (enteros, cadenas de texto, etc.) por lo que no se puede guardar de forma directa los objetos de la aplicación en las tablas. Por tanto, se debe convertir los valores de los objetos en <strong>valores simples</strong> que puedan ser almacenados en una base de datos (y poder recuperarlos más tarde).</p>
+<p>El mapeo objeto-relacional surge, pues, para dar respuesta a esta problemática: <strong>traducir</strong> los objetos a formas que puedan ser almacenadas en bases de datos <strong>preservando</strong> las propiedades de los objetos y sus relaciones; estos objetos se dice entonces que son <strong>persistentes</strong>.</p>
+<p>El ORM se encarga, de forma automática, de convertir los <strong>objetos</strong> en <strong>registros</strong> y viceversa, simulando así tener una base de datos orientada a objetos.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="51_herramientas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
