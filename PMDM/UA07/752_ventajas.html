@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.5.2. Ventajas | UA07. Motores de juegos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA07. Motores de juegos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA07. Motores de juegos</a></li>
+   <li><a href="71_orgenes_de_los_videojuegos.html" class="no-ch">7.1. Orígenes de los videojuegos</a></li>
+   <li><a href="72_los_videojuegos_en_la_actualidad.html" class="no-ch">7.2. Los videojuegos en la actualidad</a></li>
+   <li><a href="73_clasificacin.html" class="no-ch">7.3. Clasificación</a></li>
+   <li><a href="74_la_industria_del_videojuego.html" class="no-ch">7.4. La industria del videojuego</a></li>
+   <li class="current-page-parent"><a href="75_el_motor_del_videojuego.html" class="current-page-parent daddy">7.5. El motor del videojuego</a>
+   <ul>
+      <li><a href="751_clasificacin.html" class="no-ch">7.5.1. Clasificación</a></li>
+      <li id="active"><a href="752_ventajas.html" class="active no-ch">7.5.2. Ventajas</a></li>
+   </ul>
+   </li>
+   <li><a href="76_componentes_de_un_motor_de_juegos.html" class="no-ch">7.6. Componentes de un motor de juegos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="751_clasificacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="76_componentes_de_un_motor_de_juegos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.5.2. Ventajas</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id18">
+<div class="iDevice emphasis0" >
+<div id="ta18_122_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>¿Qué pasaría si no usáramos un motor de juegos?</p>
+<p>De hecho, los primeros videojuegos no los utilizaban. Cuando esto ocurre, el código específico es el encargado de todas las tareas:</p>
+<ul>
+<li>comunicarse directamente con el sistema operativo y el hardware,</li>
+<li>dibujar en la pantalla,</li>
+<li>interceptar los dispositivos de entrada,</li>
+<li>conectarse con otras instancias a través de la red en el caso multijugador,</li>
+<li>implementar la "inteligencia" de los enemigos,</li>
+<li>simular la gravedad,</li>
+<li>detectar cuando dos objetos colisionan, etc.</li>
+</ul>
+<p>A priori, puede parecer una idea buena porque sólo se implementa aquello que se va a necesitar, con lo que el resultado será más óptimo. Además, el código estará más integrado.</p>
+<p>Imaginemos que realizamos el proyecto así. <strong>¿Qué problemas podríamos encontrarnos?</strong> Analicemos algunos escenarios posibles:</p>
+<table class="exe-table" summary="Tabla de 5 filas y 3 columnas de título 'Ventajas del uso de un motor de juegos' donde cada fila se corresponde con un escenario, la segunda columna nos explica cómo se llevaría a cabo sin el uso de un motor de juegos y la tercera cómo se resolvería con un motor de juegos. Debe ser leída por filas de arriba a abajo y de izquierda a derecha."><caption><strong>Ventajas del uso de un motor de juegos</strong></caption>
+<thead>
+<tr>
+<th scope="col">Escenarios</th>
+<th scope="col">Sin un motor de juegos</th>
+<th scope="col">Con un motor de juegos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>El juego tiene tanto éxito que nos encargan una continuación.</td>
+<td>Tendremos que revisar todo el código del proyecto anterior y diferenciando lo que nos sigue sirviendo de lo que no. El motivo es que no hay una separación clara entre lo genérico y lo específico del juego.</td>
+<td>El código del proyecto ya está separado en código específico del juego y el motor (código genérico).</td>
+</tr>
+<tr>
+<td>Hay que migrar el juego a una nueva plataforma.</td>
+<td>
+<p>No nos queda más remedio que revisar todo el código del proyecto anterior y analizar qué parte es dependiente de la plataforma antigua para sustituirlo por código nuevo. Por supuesto, tendríamos que tener cuidado de no estropear nada.</p>
+<p>Es posible que los recursos ya no sean válidos para la nueva plataforma y haya que adaptarlos.</p>
+<p>Además, si detectamos un error en el juego o mejoramos alguna herramienta habrá que cambiar el código por separado en ambos proyectos.</p>
+</td>
+<td>En el momento que el motor de juegos soporte la nueva plataforma bastará con recompilar el proyecto.</td>
+</tr>
+<tr>
+<td>Llega un nuevo programador a la empresa y queremos formarlo para trabajar en nuestros proyectos.</td>
+<td>Habrá que explicarle la estructura del código, que será distinta para cada proyecto en el que vaya a trabajar y plataforma soportada.</td>
+<td>Bastará con enseñarle a usar el motor de juego, que será el mismo en muchos proyectos. Luego se le señalarán las particularidades de cada proyecto concreto en el que vaya a trabajar.</td>
+</tr>
+<tr>
+<td>Queremos incorporar a nuestro juego el efecto gráfico X de un juego de la competencia.</td>
+<td>Será necesario investigar cómo funciona la característica X, implementarla en todas las plataformas del proyecto y hacer las pruebas correspondientes antes de usarla.</td>
+<td>Seguramente haya un motor de juego que implemente la característica X de serie en todas las plataformas, con lo únicamente tendremos que usarla.</td>
+</tr>
+</tbody>
+</table></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="751_clasificacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="76_componentes_de_un_motor_de_juegos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
