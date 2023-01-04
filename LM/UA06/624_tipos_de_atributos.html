@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.4. Tipos de atributos | UA06. Definición de esquemas y vocabularios </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA06. Definición de esquemas y vocabularios</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA06. Definición de esquemas y vocabularios en XML</a></li>
+   <li><a href="61_dtd.html" class="no-ch">6.1. DTD</a></li>
+   <li class="current-page-parent"><a href="62_construir_una_dtd.html" class="current-page-parent daddy">6.2. Construir una DTD</a>
+   <ul>
+      <li><a href="621_elementos.html" class="no-ch">6.2.1. Elementos</a></li>
+      <li><a href="622_entidades.html" class="no-ch">6.2.2. Entidades</a></li>
+      <li><a href="623_atributos.html" class="no-ch">6.2.3. Atributos</a></li>
+      <li id="active"><a href="624_tipos_de_atributos.html" class="active no-ch">6.2.4. Tipos de atributos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="623_atributos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.4. Tipos de atributos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id11">
+<div class="iDevice emphasis0" >
+<div id="ta11_123_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="exe-fx exe-accordion">
+<h2>ID</h2>
+<p>Sirve para generar identificadores a los elementos. Un identificador es un valor único que tendrá cada elemento y son muy usados en XML. El valor de un atributo de tipo ID cumple estas reglas:</p>
+<ul>
+<li>El valor tiene que cumplir las mismas reglas que para especificar nombres XML. Es decir: nada de espacios, no pueden comenzar con un número y sólo admite letras, números y el carácter de subrayado (_).</li>
+<li>No puede haber dos elementos con el mismo ID en un mismo documento XML</li>
+<li>En el DTD, para cada elemento sólo puede indicarse un atributo como ID. No puede haber dos atributos distintos en el mismo elemento que contengan IDs.</li>
+<li>Los atributos ID sólo pueden indicar #IMPLIED o #REQUIRED en el apartado del valor por defecto.</li>
+</ul>
+<p>Los IDs son especialmente útiles para las herramientas de maquetación, análisis y programación de aplicaciones XML. Ya que permiten diferenciar de manera única a cada elemento.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplo [
+&lt;!ELEMENT ejemplo (libro*)&gt;
+&lt;!ELEMENT libro (#PCDATA) &gt;
+&lt;!ATTLIST libro codigo ID #REQUIRED&gt;
+]&gt;
+&lt;ejemplo&gt;
+   &lt;libro codigo="L1"&gt;Poema de Gilgamesh&lt;/libro&gt;
+   &lt;libro codigo="L2"&gt;Los preceptos de Ptah-Hotep&lt;/libro&gt;
+&lt;/ejemplo&gt;
+&lt;ejemplo&gt;
+   &lt;libro codigo="1"&gt;Poema de Gilgamesh&lt;/libro&gt; &lt;!-- ERROR: el valor de un atributo de tipo ID no puede empezar con un número --&gt;
+   &lt;libro codigo="L2"&gt;Los preceptos de Ptah-Hotep&lt;/libro&gt;
+&lt;/ejemplo&gt;
+&lt;ejemplo&gt;
+   &lt;libro codigo="L1"&gt;Poema de Gilgamesh&lt;/libro&gt;
+   &lt;libro codigo="L1"&gt;Los preceptos de Ptah-Hotep&lt;/libro&gt; &lt;!-- ERROR: el valor "L1" ya se ha utilizado --&gt;
+&lt;/ejemplo&gt;</code></pre>
+</div>
+</div>
+<h2>IDREF</h2>
+<p>Los atributos <strong>IDREF</strong> contienen el valor de un <strong>ID</strong> de otro elemento. Es decir será una referencia a otro elemento. Las reglas de los <strong>IDREF</strong> son:</p>
+<ul>
+<li>El valor de un <strong>IDREF</strong> debe cumplir las reglas para especificar nombres <strong>XML</strong> (es lógico ya que contienen valores de tipo <strong>ID</strong>)</li>
+<li>Debe existir un atributo <strong>ID</strong> en el documento <strong>XML</strong> cuyo valor coincida con el especificado en un <strong>IDREF</strong> (de otro modo se haría referencia a un elemento inexistente y esto no está permitido)</li>
+</ul>
+<p>La idea es poder relacionar elementos a través de atributos de tipo <strong>ID</strong> e <strong>IDREF</strong>. Ejemplo de uso:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- Archivo directorio.dtd --&gt;
+&lt;!ELEMENT directorio (persona)+ &gt;
+&lt;!ELEMENT persona (#PCDATA) &gt;
+&lt;!ATTLIST persona id ID #REQUIRED
+   madre IDREF #IMPLIED
+   padre IDREF #IMPLIED&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- Archivo directorio1.xml--&gt;
+&lt;!DOCTYPE directorio SYSTEM "directorio.dtd"&gt;
+&lt;directorio&gt;
+   &lt;persona id="p1"&gt;Pedro&lt;/persona&gt;
+   &lt;persona id="p2"&gt;Marisa&lt;/persona&gt;
+   &lt;persona id="p3" madre="p2" padre="p1"&gt;Carmen&lt;/persona&gt;
+&lt;/directorio&gt;</code></pre>
+</div>
+</div>
+<p>Carmen es la hija de Pedro y Marisa, según el código anterior, ya que los atributos padre y madre de tipo <strong>IDREF</strong> contienen los <strong>ID</strong> de <strong>Pedro</strong> y <strong>Marisa</strong>.</p>
+<h2>IDREFS</h2>
+<p>Igual que el anterior sólo que permite indicar varias referencias (que deben existir en el documento XML) a otros <strong>ID</strong>, separadas por espacios. Ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- Archivo directorio.dtd --&gt;
+&lt;!ELEMENT directorio (persona)+ &gt;
+&lt;!ELEMENT persona (#PCDATA) &gt;
+&lt;!ATTLIST persona id ID #REQUIRED padres IDREFS #IMPLIED &gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- Archivo directorio1.xml--&gt;
+&lt;!DOCTYPE directorio SYSTEM "directorio.dtd"&gt;
+&lt;directorio&gt;
+   &lt;persona id="p1"&gt;Pedro&lt;/persona&gt;
+   &lt;persona id="p2"&gt;Marisa&lt;/persona&gt;
+   &lt;persona id="p3" padres="p1 p2"&gt;Carmen&lt;/persona&gt;
+&lt;/directorio&gt;</code></pre>
+</div>
+</div>
+<h2>NMTOKEN</h2>
+<p>El valor del atributo será un texto que cumplirá las reglas para nombres <strong>XML</strong>. Se usa en atributos donde se entiende que <strong>CDATA</strong> permite demasiadas libertades, de esta forma al menos sabremos que es un texto donde sólo existirán letras, números y el los caracteres de <strong>punto</strong> “.”, <strong>guión</strong> “-“, <strong>subrayado</strong> “_” y <strong>dos puntos</strong> “:”, es decir un texto que cumple las reglas para nombres <strong>XML</strong>.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplo [
+&lt;!ELEMENT ejemplo EMPTY&gt;
+&lt;!ATTLIST ejemplo color NMTOKEN #REQUIRED&gt;
+]&gt;
+&lt;ejemplo color="azul-marino"&gt;&lt;/ejemplo&gt;
+&lt;ejemplo color="1"&gt;&lt;/ejemplo&gt;
+
+</code></pre>
+</div>
+</div>
+<p>Los siguientes casos darían un error de validación:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;ejemplo color=""&gt;&lt;/ejemplo&gt;&lt;!-- ERROR: no admite vacío --&gt;
+&lt;ejemplo color="azul marino"&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: hay un espacio en blanco --&gt;
+&lt;ejemplo color="#F0F0F0"&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: contiene el carácter # --&gt;</code></pre>
+</div>
+</div>
+<h2>NMTOKENS</h2>
+<p>El atributo puede contener varios valores de tipo NMTOKEN separados por espacios</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplo [
+&lt;!ELEMENT ejemplo EMPTY&gt;
+&lt;!ATTLIST ejemplo color NMTOKENS #REQUIRED&gt;
+]&gt;</code></pre>
+</div>
+</div>
+<p>En el documento XML podría aparecer escrito de la siguiente manera:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;ejemplo color="1"&gt;&lt;/ejemplo&gt;
+&lt;ejemplo color="azul marino"&gt;&lt;/ejemplo&gt;</code></pre>
+</div>
+</div>
+<p>Los siguientes casos darían un error de validación:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;ejemplo color=""&gt;&lt;/ejemplo&gt;&lt;!-- ERROR: no admite vacío --&gt;
+&lt;ejemplo color="2*2"&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: hay un asterisco --&gt;</code></pre>
+</div>
+</div>
+<h2>ENTITY</h2>
+<p>El valor de un atributo será una entidad de la cual se indica el nombre, se debe de declarar en el DTD.</p>
+<h2>ENTITIES</h2>
+<p>El valor del atributo será una lista de nombres de entidades (que deben declararse en el DTD) separadas por espacios.</p>
+<h2>Enumeración</h2>
+<p>En este caso el valor del atributo debe de ser uno de una lista de valores posibles cada uno de los cuales se separa del siguiente mediante el símbolo <strong>|</strong>.</p>
+<p>Ejemplo:</p>
+<p style="text-align: center;"><strong>&lt;!ATTLIST persona sexo (Hombre | Mujer) #REQUIRED &gt;</strong></p>
+<p>Las personas sólo podrán especificar como sexo "Hombre" o "Mujer" y nada más:</p>
+<p style="text-align: center;"><strong>&lt;persona sexo="Varón"&gt;Javier Ruiz&lt;/persona&gt;</strong></p>
+<p>El código anterior XML fallaría ya que el atributo sexo no admite el valor "Varón".</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplo [
+&lt;!ELEMENT ejemplo EMPTY&gt;
+&lt;!ATTLIST ejemplo color (azul | blanco | rojo) #REQUIRED&gt;
+]&gt;</code></pre>
+</div>
+</div>
+<p>En el documento XML podría aparecer escrito de la siguiente manera:</p>
+<p style="text-align: center;"><strong>&lt;ejemplo color="azul"&gt;&lt;/ejemplo&gt;</strong></p>
+<p>El siguiente caso darían un error de validación:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;ejemplo color=""&gt;&lt;/ejemplo&gt;&lt;!-- ERROR: no admite vacío, no está entre los valores declarados --&gt;
+&lt;ejemplo color="verde"&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: "verde"no está en la lista de valores --&gt;</code></pre>
+</div>
+</div>
+<p>Limitaciones de los esquemas <strong>DTD</strong>:</p>
+<ul>
+<li>Un DTD no es un documento XML, luego no se puede verificar si está bien formado.</li>
+<li>No se pueden fijar restricciones sobre los valores y atributos, como su tipo de datos, su tamaño, etc.</li>
+<li>No soporta espacios de nombres.</li>
+<li>Sólo se puede enumerar los valores de los atributos, no de los elementos.</li>
+<li>Sólo se puede dar un valor por defecto para atributos, no para elementos.</li>
+<li>Existe un control limitado sobre las cardinalidades de los elementos, es decir, concretar el número de veces que pueden aparecer.</li>
+</ul>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id12">
+<div class="iDevice emphasis0" >
+<div id="ta12_124_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Ejemplo XML y DTD asociada</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p><strong>agenda.xml</strong></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE agenda SYSTEM "agenda.dtd"&gt;
+&lt;agenda&gt;
+   &lt;contacto codigo="c001"&gt;
+      &lt;nombre&gt;Juan&lt;/nombre&gt;
+      &lt;apellidos&gt;Marquez&lt;/apellidos&gt;
+      &lt;movil empresa="movistar"&gt;656773221&lt;/movil&gt;
+      &lt;movil&gt;666123432&lt;/movil&gt;
+      &lt;fijo&gt;912343820&lt;/fijo&gt;
+      &lt;movil&gt;609398271&lt;/movil&gt;
+      &lt;email tipo="trabajo"&gt;juan@ticarte.com&lt;/email&gt;
+      &lt;sexo&gt;
+         &lt;hombre/&gt;
+      &lt;/sexo&gt;
+      &lt;comentarios&gt;&lt;/comentarios&gt;
+   &lt;/contacto&gt;
+   &lt;contacto codigo="c002"&gt;
+      &lt;nombre&gt;Maria&lt;/nombre&gt;
+      &lt;apellidos&gt;Bonilla&lt;/apellidos&gt;
+      &lt;movil empresa="movistar"&gt;665343092&lt;/movil&gt;
+      &lt;movil&gt;666232096&lt;/movil&gt;
+      &lt;fijo&gt;923430675&lt;/fijo&gt;
+      &lt;email tipo="personal"&gt;maria@ticarte.com&lt;/email&gt;
+      &lt;sexo&gt;
+         &lt;mujer/&gt;
+      &lt;/sexo&gt;
+      &lt;pareja codigo="c001"&gt;Juan&lt;/pareja&gt;
+      &lt;comentarios&gt;Llamar solo por la mañana.&lt;/comentarios&gt;
+   &lt;/contacto&gt;
+&lt;/agenda&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="exe-col exe-col-2">
+<p><strong>agenda.dtd</strong></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!ELEMENT agenda (contacto*)&gt;
+&lt;!ELEMENT contacto (nombre, apellidos, (movil|fijo)*, email?, sexo?, pareja?, comentarios? )&gt;<br>&lt;!ELEMENT nombre (#PCDATA)&gt;<br>&lt;!ELEMENT apellidos (#PCDATA)&gt;<br>&lt;!ELEMENT fijo (#PCDATA)&gt;<br>&lt;!ELEMENT movil (#PCDATA)&gt;<br>&lt;!ATTLIST movil empresa CDATA #IMPLIED&gt;<br>&lt;!ELEMENT email (#PCDATA)&gt;<br>&lt;!ATTLIST email tipo (personal|trabajo) #REQUIRED&gt;<br>&lt;!ELEMENT sexo (hombre|mujer)&gt;<br>&lt;!ELEMENT hombre EMPTY&gt;<br>&lt;!ELEMENT mujer EMPTY&gt;<br>&lt;!ELEMENT pareja (#PCDATA)&gt;<br>&lt;!ATTLIST pareja codigo IDREF #IMPLIED&gt;<br>&lt;!ELEMENT comentarios ANY&gt;</code></pre>
+</div>
+</div>
+<p><br><br></p>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="623_atributos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

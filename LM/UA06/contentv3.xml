@@ -1,0 +1,3820 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<instance xmlns="http://www.exelearning.org/content/v0.3" reference="2" version="0.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.exelearning.org/content/v0.3 content.xsd" class="exe.engine.package.Package">
+ <dictionary>
+  <string role="key" value="_title"></string>
+  <unicode value="UA06. Definición de esquemas y vocabularios"></unicode>
+  <string role="key" value="idevices"></string>
+  <list></list>
+  <string role="key" value="_addPagination"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_addSearchBox"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_author"></string>
+  <unicode value="David Bermúdez"></unicode>
+  <string role="key" value="_backgroundImg"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_contextMode"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_contextPlace"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_description"></string>
+  <unicode value="UA06 Lenguaje de Marcas"></unicode>
+  <string role="key" value="_docType"></string>
+  <unicode value="HTML5"></unicode>
+  <string role="key" value="_exportElp"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_extraHeadContent"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_fieldValidationInfo"></string>
+  <dictionary>
+   <unicode role="key" value="all"></unicode>
+   <dictionary>
+    <unicode role="key" value="mandatory_fields"></unicode>
+    <list>
+     <unicode value="pp_title"></unicode>
+     <unicode value="pp_lang"></unicode>
+     <unicode value="pp_description"></unicode>
+     <unicode value="pp_author"></unicode>
+     <unicode value="pp_newlicense"></unicode>
+    </list>
+   </dictionary>
+   <unicode role="key" value="procomun"></unicode>
+   <dictionary>
+    <unicode role="key" value="mandatory_fields"></unicode>
+    <list>
+     <unicode value="pp_learningResourceType"></unicode>
+    </list>
+    <unicode role="key" value="values_from_list"></unicode>
+    <dictionary>
+     <unicode role="key" value="pp_learningResourceType"></unicode>
+     <list>
+      <unicode value="master class"></unicode>
+      <unicode value="closed exercise or problem"></unicode>
+      <unicode value="real project"></unicode>
+      <unicode value="didactic game"></unicode>
+      <unicode value="webquest"></unicode>
+      <unicode value="open problem"></unicode>
+      <unicode value="simulation"></unicode>
+      <unicode value="questionnaire"></unicode>
+      <unicode value="conceptual map"></unicode>
+     </list>
+    </dictionary>
+   </dictionary>
+  </dictionary>
+  <string role="key" value="_intendedEndUserRoleGroup"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_intendedEndUserRoleTutor"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_intendedEndUserRoleType"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_isChanged"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_isTemplate"></string>
+  <bool value="0"></bool>
+  <string role="key" value="_lang"></string>
+  <unicode value="es"></unicode>
+  <string role="key" value="_learningResourceType"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_levelNames"></string>
+  <list>
+   <unicode value="Tema"></unicode>
+   <unicode value="Sección"></unicode>
+   <unicode value="Unidad"></unicode>
+  </list>
+  <string role="key" value="_name"></string>
+  <unicode value="UA06"></unicode>
+  <string role="key" value="_nextIdeviceId"></string>
+  <int value="13"></int>
+  <string role="key" value="_nextNodeId"></string>
+  <int value="7"></int>
+  <string role="key" value="_nodeIdDict"></string>
+  <dictionary>
+   <unicode role="key" value="0"></unicode>
+   <instance class="exe.engine.node.Node" reference="4">
+    <dictionary>
+     <string role="key" value="_title"></string>
+     <unicode value="UA06. Definición de esquemas y vocabularios en XML"></unicode>
+     <string role="key" value="idevices"></string>
+     <list>
+      <instance class="exe.engine.jsidevice.JsIdevice" reference="1">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value=""></unicode>
+        <string role="key" value="_attributes"></string>
+        <list>
+         <tuple>
+          <string value="title"></string>
+          <list>
+           <string value="Title"></string>
+           <int value="0"></int>
+           <int value="0"></int>
+          </list>
+         </tuple>
+         <tuple>
+          <string value="category"></string>
+          <list>
+           <string value="Category"></string>
+           <int value="0"></int>
+           <int value="1"></int>
+          </list>
+         </tuple>
+         <tuple>
+          <string value="css-class"></string>
+          <list>
+           <string value="CSS class"></string>
+           <int value="0"></int>
+           <int value="2"></int>
+          </list>
+         </tuple>
+         <tuple>
+          <string value="icon"></string>
+          <list>
+           <string value="Icon"></string>
+           <int value="0"></int>
+           <int value="3"></int>
+          </list>
+         </tuple>
+        </list>
+        <string role="key" value="_author"></string>
+        <string value=""></string>
+        <string role="key" value="_iDeviceDir"></string>
+        <string value="udl-content"></string>
+        <string role="key" value="_purpose"></string>
+        <string value=""></string>
+        <string role="key" value="_tip"></string>
+        <string value=""></string>
+        <string role="key" value="_valid"></string>
+        <bool value="1"></bool>
+        <string role="key" value="class_"></string>
+        <unicode value="UDLcontent"></unicode>
+        <string role="key" value="edit"></string>
+        <bool value="0"></bool>
+        <string role="key" value="emphasis"></string>
+        <int value="0"></int>
+        <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+        <int value="1"></int>
+        <string role="key" value="fields"></string>
+        <list>
+         <instance class="exe.engine.field.TextAreaField" reference="3">
+          <dictionary>
+           <string role="key" value="_id"></string>
+           <unicode value="114_2"></unicode>
+           <string role="key" value="_idevice"></string>
+           <reference key="1"></reference>
+           <string role="key" value="_instruc"></string>
+           <string value=""></string>
+           <string role="key" value="_name"></string>
+           <string value=""></string>
+           <string role="key" value="anchor_names"></string>
+           <list></list>
+           <string role="key" value="anchors_linked_from_fields"></string>
+           <dictionary></dictionary>
+           <string role="key" value="content_w_resourcePaths"></string>
+           <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;img src=&quot;resources/Introduccion_seguridad_html_m5e559c5b.png&quot; alt=&quot;Modificación&quot; style=&quot;float: right; margin: 10px;&quot; width=&quot;320&quot; height=&quot;188&quot;&gt;XML ha sido propuesto como un estándar en el intercambio de información, independientemente de la plataforma en la que se genere o se utilice. Esta premisa, en principio, es válida mientras que &lt;strong&gt;los documentos XML no cambien entre los intercambios&lt;/strong&gt;. Si en los intercambios se permite la modificación, adición o supresión de elementos de información, se ha de tener especial cuidado de no modificar la estructura del documento. No siempre es posible y puede llegar el caso a situaciones en las que el mismo documento pueda leerse en una aplicación y en otra no.&lt;/p&gt;
+&lt;p&gt;No solo es imprescindible que el documento esté &lt;strong&gt;bien formado&lt;/strong&gt; (con las etiquetas de apertura y cierre bien ubicadas, que la codificación sea correcta, que los elementos cumplan la sintaxis de XML, etc.), sino que ambos actores (emisor y receptor) se ciñan a un &lt;strong&gt;formato de fichero definido&lt;/strong&gt; previamente. Para evitar estos casos, se ha de definir una estructura fija del documento que conozcan las partes que intercambian la información.&lt;/p&gt;
+&lt;p&gt;A continuación, se mostrarán dos maneras de especificar formatos de comunicación en XML, de los que destacan las &lt;strong&gt;DTD&lt;/strong&gt; y los &lt;strong&gt;XML Schema&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+           <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+           <int value="4"></int>
+           <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+           <int value="3"></int>
+           <string role="key" value="htmlTag"></string>
+           <string value="div"></string>
+           <string role="key" value="images"></string>
+           <instance class="exe.engine.galleryidevice.GalleryImages">
+            <dictionary>
+             <string role="key" value=".listitems"></string>
+             <list>
+              <instance class="exe.engine.galleryidevice.GalleryImage">
+               <dictionary>
+                <string role="key" value="_caption"></string>
+                <instance class="exe.engine.field.TextField">
+                 <dictionary>
+                  <string role="key" value="_id"></string>
+                  <int value="230"></int>
+                  <string role="key" value="_idevice"></string>
+                  <none></none>
+                  <string role="key" value="_instruc"></string>
+                  <string value=""></string>
+                  <string role="key" value="_name"></string>
+                  <string value=""></string>
+                  <string role="key" value="content"></string>
+                  <string value=""></string>
+                  <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                  <int value="4"></int>
+                 </dictionary>
+                </instance>
+                <string role="key" value="_id"></string>
+                <unicode value="0_114_2.3"></unicode>
+                <string role="key" value="_imageResource"></string>
+                <instance class="exe.engine.resource.Resource" reference="5">
+                 <dictionary>
+                  <string role="key" value="_idevice"></string>
+                  <reference key="1"></reference>
+                  <string role="key" value="_package"></string>
+                  <reference key="2"></reference>
+                  <string role="key" value="_storageName"></string>
+                  <string value="Introduccion_seguridad_html_m5e559c5b.png"></string>
+                  <string role="key" value="_userName"></string>
+                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmpsv2doe\\Introduccion_seguridad_html_m5e559c5b.png"></string>
+                  <string role="key" value="checksum"></string>
+                  <string value="1ff7bfc66e68dd44c0c908fb1632f674"></string>
+                  <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                  <int value="2"></int>
+                  <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                  <int value="2"></int>
+                  <string role="key" value="warningMsg"></string>
+                  <string value=""></string>
+                 </dictionary>
+                </instance>
+                <string role="key" value="_parent"></string>
+                <reference key="3"></reference>
+                <string role="key" value="_thumbnailResource"></string>
+                <none></none>
+                <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                <int value="3"></int>
+                <string role="key" value="makeThumbnail"></string>
+                <bool value="0"></bool>
+               </dictionary>
+              </instance>
+             </list>
+             <string role="key" value="idevice"></string>
+             <reference key="3"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="intlinks_to_anchors"></string>
+           <dictionary></dictionary>
+           <string role="key" value="nextImageId"></string>
+           <int value="4"></int>
+           <string role="key" value="parentNode"></string>
+           <reference key="4"></reference>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="icon"></string>
+        <unicode value=""></unicode>
+        <string role="key" value="id"></string>
+        <unicode value="0"></unicode>
+        <string role="key" value="ideviceCategory"></string>
+        <unicode value="Text and Tasks"></unicode>
+        <string role="key" value="lastIdevice"></string>
+        <bool value="0"></bool>
+        <string role="key" value="nextFieldId"></string>
+        <int value="3"></int>
+        <string role="key" value="originalicon"></string>
+        <string value=""></string>
+        <string role="key" value="parentNode"></string>
+        <reference key="4"></reference>
+        <string role="key" value="systemResources"></string>
+        <list></list>
+        <string role="key" value="undo"></string>
+        <bool value="1"></bool>
+        <string role="key" value="userResources"></string>
+        <list>
+         <reference key="5"></reference>
+        </list>
+        <string role="key" value="version"></string>
+        <int value="0"></int>
+       </dictionary>
+      </instance>
+     </list>
+     <string role="key" value="_id"></string>
+     <unicode value="0"></unicode>
+     <string role="key" value="_package"></string>
+     <reference key="2"></reference>
+     <string role="key" value="anchor_fields"></string>
+     <list></list>
+     <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+     <int value="2"></int>
+     <string role="key" value="exportType"></string>
+     <string value="website"></string>
+     <string role="key" value="last_full_node_path"></string>
+     <string value="exe-node:UA06.%20Definici%C3%B3n%20de%20esquemas%20y%20vocabularios%20en%20XML"></string>
+     <string role="key" value="parent"></string>
+     <none></none>
+     <string role="key" value="top_anchors_linked_from_fields"></string>
+     <list></list>
+     <string role="key" value="children"></string>
+     <list>
+      <instance class="exe.engine.node.Node" reference="8">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="6.1. DTD"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="6">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="7">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="115_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="6"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;DTD (Document Type Definition) es la definición de cómo se construye un documento XML para que se ajuste a las necesidades previamente analizadas. Es decir, establece qué elementos son aceptados y en qué posiciones deben estar dentro de un documento XML.&lt;/p&gt;
+&lt;p&gt;Cuando se define una DTD y se referencia dentro de un documento XML, se establece una relación de:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Qué léxico es el que se espera.&lt;/li&gt;
+&lt;li&gt;Qué reglas sintácticas debe cumplir nuestro lenguaje.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;El significado semántico se proporciona en el uso del DTD y del documento XML al generar las aplicaciones que lo utilizan.&lt;/p&gt;
+&lt;p&gt;Por tanto, antes de crear un documento XML se deberá analizar qué elementos y etiquetas se van a necesitar para la aplicación que se quiere crear. Para esto sirve una DTD.&lt;/p&gt;
+&lt;p&gt;¿Por qué resulta importante la creación de DTD? Principalmente, cuando se analiza un almacenamiento de información en XML es porque esa información es importante compartirla. Pero aunque la compartición de la información pueda resultar interesante, que la información esté sujeta a una serie de reglas para que todos los que lo utilicen (en consultas, inserciones, modificaciones, borrados, etc.); se asegure que esté bien formado y resulte válido para el uso por terceras aplicaciones. Si en el proceso de acceso y modificación del documento XML se incumple su estructura, nos encontraremos con un documento no válido y con un futuro problema en su futura utilización. Por tanto una DTD permitirá asegurar que la información que contiene es válida y cumple los requisitos de intercambio de información entre terceras (personas con la misma DTD).&lt;/p&gt;
+&lt;p&gt;La creación de una DTD resulta muy simple y se verá más adelante pero resulta interesante como ubicar estas declaraciones:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;La DTD se puede ubicar dentro del propio documento XML.&lt;/li&gt;
+&lt;li&gt;La DTD se ubica fuera del documento XML (en un fichero externo).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ambas realizan la misma función pero resulta más cómoda utilizar un fichero externo para almacenar la DTD y realizar un enlace en el documento XML para que la use. Además de la comodidad, existe otra ventaja fundamental: no se almacena en cada documento XML la DTD. Si tuviéramos muchos ficheros XML que se basan en la misma especificación DTD, se tendría que cambiar en todos los fichero la declaración de la DTD, cosa que si estuviera enlazado en un fichero externo, se cambiaría una única vez y todos los documentos XML lo aprovecharían. Además se estaría almacenando la misma información en todos los documentos, lo que aumentaría el tamaño del documento XML.&lt;/p&gt;
+&lt;p&gt;Para continuar, establezcamos un ejemplo en el que utilizar una DTD. Se quiere almacenar los mensajes de móviles que se envían a un servidor. Los datos que se guardarán son los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Número de teléfono del usuario.&lt;/li&gt;
+&lt;li&gt;Fecha de envío.&lt;/li&gt;
+&lt;li&gt;Hora de envío.&lt;/li&gt;
+&lt;li&gt;Contenido del mensaje.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Un ejemplo de documento XML que guarde estos mensajes SMS podría ser el siguiente:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;
+&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&amp;gt;
+&amp;lt;!DOCTYPE BDsms SYSTEM &quot;BDsms.dtd&quot;&amp;gt;
+&amp;lt;BDsms&amp;gt;
+&amp;lt;sms&amp;gt;
+&amp;lt;telefono&amp;gt;955 55 66 55&amp;lt;/telefono&amp;gt;
+&amp;lt;fecha&amp;gt;1/7/2011&amp;lt;/fecha&amp;gt;
+&amp;lt;hora&amp;gt;23:55&amp;lt;/hora&amp;gt;
+&amp;lt;mensaje&amp;gt;Juego1: Tetris&amp;lt;/mensaje&amp;gt;
+&amp;lt;/sms&amp;gt;
+&amp;lt;sms&amp;gt;
+&amp;lt;telefono&amp;gt;745 15 56 11&amp;lt;/telefono&amp;gt;
+&amp;lt;fecha&amp;gt;22/9/2011&amp;lt;/fecha&amp;gt;
+&amp;lt;hora&amp;gt;15:05&amp;lt;/hora&amp;gt;
+&amp;lt;mensaje&amp;gt;Juego2: Arkanoid&amp;lt;/mensaje&amp;gt;
+&amp;lt;/sms&amp;gt;
+&amp;lt;sms&amp;gt;
+&amp;lt;telefono&amp;gt;842 35 22 00&amp;lt;/telefono&amp;gt;
+&amp;lt;fecha&amp;gt;10/11/2011&amp;lt;/fecha&amp;gt;
+&amp;lt;hora&amp;gt;09:22&amp;lt;/bora&amp;gt;
+&amp;lt;mensaje&amp;gt;Juego3: Comecocos&amp;lt;/mensaje&amp;gt;
+&amp;lt;/sms&amp;gt;
+&amp;lt;/BDsms&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="7"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="8"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="1"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="8"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="9">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="10">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="114_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="9"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La DTD que permite establecer el formato de intercambio de estos mensajes SMS en el documento XML, podría ser la siguiente (fichero &quot;BDsms.dtd&quot;):&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT BDsms (sms*)&amp;gt;
+&amp;lt;!ELEMENT sms (telefono, fecha, hora, mensaje)&amp;gt;
+&amp;lt;!ELEMENT telefono (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT fecha (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT hora (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT mensaje (#PCDATA)&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Observa que el fichero &lt;strong&gt;BDsms.dtd&lt;/strong&gt; está referenciado en el documento XML. Si se quisiera incluir todo en el mismo documento XML, entonces quedaría:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE BDsms
+[
+&amp;lt;!ELEMENT BDsms (sms*)&amp;gt;
+&amp;lt;!ELEMENT sms (telefono, fecha, hora, mensaje)&amp;gt;
+&amp;lt;!ELEMENT telefono (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT fecha (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT hora (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT mensaje (#PCDATA)&amp;gt;
+]&amp;gt;
+&amp;lt;BDsms&amp;gt;
+&amp;lt;sms&amp;gt;
+&amp;lt;telefono&amp;gt;955 55 66 55&amp;lt;/telefono&amp;gt;
+...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="10"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="8"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="2"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="8"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="1"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="2"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:UA06.%20Definici%C3%B3n%20de%20esquemas%20y%20vocabularios%20en%20XML:6.1.%20DTD"></string>
+        <string role="key" value="parent"></string>
+        <reference key="4"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="13">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="6.2. Construir una DTD"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="11">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="12">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="115_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="11"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Los esquemas DTD describen la estructura de los documentos XML mediante declaraciones. Hay cuatro tipos de declaraciones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Declaraciones de elementos&lt;/strong&gt;: Indican los elementos permitidos en un documento y su contenido.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Declaraciones de entidades&lt;/strong&gt;: Indican valores constantes en todo el documento XML.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Declaraciones de atributos&lt;/strong&gt;: Indican los atributos permitidos en cada elemento y el tipo o valores permitidos de cada elemento.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="12"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="13"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="3"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="13"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="2"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="2"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:UA06.%20Definici%C3%B3n%20de%20esquemas%20y%20vocabularios%20en%20XML:6.2.%20Construir%20una%20DTD"></string>
+        <string role="key" value="parent"></string>
+        <reference key="4"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list>
+         <instance class="exe.engine.node.Node" reference="16">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="6.2.1. Elementos"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="14">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="15">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="116_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="14"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Se realiza mendiante la etiqueta !ELEMENT, la sintaxis es la siguiente&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ELEMENT nombre_del_elemento tipo_de_contenido&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;El nombre es el identificador que tendrá el elemento en el documento XML (hay que recordar que se distingue entre mayúsculas y minúsculas).&lt;/p&gt;
+&lt;p&gt;El tipo indica el funcionamiento del elemento, relativo al contenido que puede tener: EMPTY, (#PCDATA), ANY, un elemento concreto, secuencias de elementos, elementos opcionales, combinaciones de elementos, cardinalidad.&lt;/p&gt;
+&lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
+&lt;h2&gt;Empty&lt;/h2&gt;
+&lt;p&gt;Significa que el elemento no podrá tener contenido alguno, es un elemento vacío (como la etiqueta br de las páginas web).&lt;/p&gt;
+&lt;p&gt;Ejemplo de definición de elemento vacío: &lt;strong&gt;&amp;lt;!ELEMENT br EMPTY &amp;gt; =&amp;gt; &amp;lt;br /&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplo [ &amp;lt;!ELEMENT ejemplo EMPTY&amp;gt; ]&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo /&amp;gt;
+&amp;lt;ejemplo&amp;gt;Esto es un ejemplo&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: contiene texto --&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: contiene un elemento &amp;lt;a&amp;gt; --&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;(#PCDATA)&lt;/h2&gt;
+&lt;p&gt;Elemento de contenido textual que no contenga marcas (Parsed Character Data – Datos de Carácter Procesados):&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ELEMENT nombre (#PCDATA)&amp;gt; =&amp;gt; &amp;lt;nombre&amp;gt; Enrique &amp;lt;/nombre&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplos [
+&amp;lt;!ELEMENT ejemplos (ejemplo*) &amp;gt;
+&amp;lt;!ELEMENT ejemplo (#PCDATA)&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplos&amp;gt;
+   &amp;lt;ejemplo /&amp;gt;
+   &amp;lt;ejemplo&amp;gt;Esto es un ejemplo&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo&amp;gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: contiene un elemento &amp;lt;a&amp;gt; --&amp;gt;
+&amp;lt;/ejemplos&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 style=&quot;text-align: left;&quot;&gt;ANY&lt;/h2&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Elementos que pueden tener cualquier tipo de contenido, se puede utilizar para dejar la descripción de un elemento como válida en cualquier caso, eliminando cualquier comprobación sintáctica, no debería de aparecer en una versión definitiva del DTD:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;
+&amp;lt;!DOCTYPE persona [
+&amp;lt;!ELEMENT persona (nombre, apellido)&amp;gt;
+&amp;lt;!ELEMENT nombre (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT apellido ANY&amp;gt;
+]&amp;gt;
+&amp;lt;persona&amp;gt;
+   &amp;lt;nombre&amp;gt;Enrique&amp;lt;/nombre&amp;gt;
+   &amp;lt;apellido&amp;gt; Rivas
+      &amp;lt;nombre&amp;gt;Enrique&amp;lt;/nombre&amp;gt;
+   &amp;lt;/apellido&amp;gt;
+&amp;lt;/persona&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 style=&quot;text-align: left;&quot;&gt;Elemento Concreto&lt;/h2&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;En los elementos se puede indicar claramente un contenido concreto para el mismo. Dicho contenido se indica entre paréntesis. Ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE persona [
+&amp;lt;!ELEMENT persona (nombre)&amp;gt;
+&amp;lt;!ELEMENT nombre (#PCDATA)&amp;gt;
+]&amp;gt;
+&amp;lt;persona&amp;gt;
+   &amp;lt;nombre&amp;gt;Juan&amp;lt;/nombre&amp;gt;
+&amp;lt;/persona&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;En el ejemplo dentro de una etiqueta &lt;strong&gt;persona&lt;/strong&gt; obligatoriamente debe de existir una etiqueta &lt;strong&gt;nombre&lt;/strong&gt; (una y sólo una).&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;No sólo se pueden indicar nombres de elementos como contenido concreto, la indicación &lt;strong&gt;#PCDATA&lt;/strong&gt; significa que el elemento podrá contener texto literal (tan largo como se desee).&lt;/p&gt;
+&lt;h2 style=&quot;text-align: left;&quot;&gt;Secuencia de elementos&lt;/h2&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;En el caso de indicar una lista de elementos separados por comas, por ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE persona [
+&amp;lt;!ELEMENT persona (nombre, apellidos, edad)&amp;gt;
+&amp;lt;!ELEMENT nombre (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT apellidos (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT edad (#PCDATA)&amp;gt;
+]&amp;gt;
+&amp;lt;persona&amp;gt;
+   &amp;lt;nombre&amp;gt;Antonio&amp;lt;/nombre&amp;gt;
+   &amp;lt;apellidos&amp;gt;Pérez&amp;lt;/apellidos&amp;gt;
+   &amp;lt;edad&amp;gt;35&amp;lt;/edad&amp;gt;
+&amp;lt;/persona&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Indica que el elemento contendrá la lista de elementos indicada, la cual deberá estar en el mismo orden de la secuencia. Es decir en el ejemplo los &lt;strong&gt;apellidos&lt;/strong&gt; no se podrían poner delante del &lt;strong&gt;nombre&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 style=&quot;text-align: left;&quot;&gt;Elementos opcionales&lt;/h2&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Los elementos pueden contener elementos opcionales (puede aparecer uno u otro). Ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE artículo [
+&amp;lt;!ELEMENT artículo (id | serie)&amp;gt;
+&amp;lt;!ELEMENT id (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT serie (#PCDATA)&amp;gt;
+]&amp;gt;
+&amp;lt;artículo&amp;gt;
+   &amp;lt;id&amp;gt;16&amp;lt;/id&amp;gt;
+&amp;lt;/artículo&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;La barra vertical indica que el elemento puede contener una u otra opción (pero &lt;strong&gt;sólo una&lt;/strong&gt;) En el caso anterior aparece &lt;strong&gt;&amp;lt;id&amp;gt;&lt;/strong&gt;, también sería válido&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;artículo&amp;gt;
+   &amp;lt;serie&amp;gt;A345H&amp;lt;/serie&amp;gt;
+&amp;lt;/artículo&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Sin embargo los siguientes tienen error:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;artículo&amp;gt;&lt;br&gt;   &amp;lt;id&amp;gt;16&amp;lt;/id&amp;gt;&lt;br&gt;   &amp;lt;serie&amp;gt;A345H&amp;lt;/serie&amp;gt;&lt;br&gt;&amp;lt;/artículo&amp;gt; &amp;lt;!-- ERROR: están los dos elementos --&amp;gt;
+&amp;lt;artículo&amp;gt;&amp;lt;/artículo&amp;gt; &amp;lt;!-- ERROR: no hay ningún elemento --&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 style=&quot;text-align: left;&quot;&gt;Combinaciones de elementos&lt;/h2&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Por supuesto puede haber combinaciones, si tenemos un documento DTD llamado &lt;strong&gt;coordenada.dtd&lt;/strong&gt; con este contenido:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!ELEMENT coordenada ((longitud, latitud) | coordUniversal)&amp;gt;
+&amp;lt;!ELEMENT longitud (#PCDATA) &amp;gt;
+&amp;lt;!ELEMENT latitud (#PCDATA) &amp;gt;
+&amp;lt;!ELEMENT coordUniversal (#PCDATA) &amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Sería válido este documento:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE coordenada SYSTEM &quot;coordenada.dtd&quot;&amp;gt;
+&amp;lt;coordenada&amp;gt;
+   &amp;lt;longitud&amp;gt;234&amp;lt;/longitud&amp;gt;
+   &amp;lt;latitud&amp;gt;-23&amp;lt;/latitud&amp;gt;
+&amp;lt;/coordenada&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Sería válido también:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE coordenada SYSTEM &quot;coordenada.dtd&quot;&amp;gt;
+&amp;lt;coordenada&amp;gt;
+&amp;lt;coordUniversal&amp;gt;1232332&amp;lt;/coordUniversal&amp;gt;
+&amp;lt;/coordenada&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Otro ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplo [
+&amp;lt;!ELEMENT ejemplo ((a, b)|(b, a))&amp;gt;
+&amp;lt;!ELEMENT a EMPTY&amp;gt;
+&amp;lt;!ELEMENT b EMPTY&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: sólo admite &amp;lt;a /&amp;gt;&amp;lt;b /&amp;gt; o &amp;lt;b /&amp;gt;&amp;lt;a /&amp;gt; --&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 style=&quot;text-align: left;&quot;&gt;Cardinalidad&lt;/h2&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;La cardinalidad es el número de veces que puede aparecer un determinado contenido en un elemento. Se realiza mediante estos símbolos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;?&lt;/strong&gt; Contenido opcional, puede aparecer (una sola vez) o no aparecer&lt;/li&gt;
+&lt;li style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;*&lt;/strong&gt; Contenido opcional y repetible. Es decir puede no aparecer y puede incluso aparecer varias veces&lt;/li&gt;
+&lt;li style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;+&lt;/strong&gt; Contenido obligatorio y repetible. Tiene que aparecer e incluso puede aparecer varias veces&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ejemplos:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;? (interrogante)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplo [
+&amp;lt;!ELEMENT ejemplo (a, b?)&amp;gt;
+&amp;lt;!ELEMENT a EMPTY&amp;gt;
+&amp;lt;!ELEMENT b EMPTY&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: falta el elemento &amp;lt;a /&amp;gt; --&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: el elemento &amp;lt;b /&amp;gt; aparece dos veces --&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;* (asterísco):&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplo [
+&amp;lt;!ELEMENT ejemplo (a*, b)&amp;gt;
+&amp;lt;!ELEMENT a EMPTY&amp;gt;
+&amp;lt;!ELEMENT b EMPTY&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: el elemento &amp;lt;a /&amp;gt; aparece después de &amp;lt;b /&amp;gt;--&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;+ (suma):&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplo [
+&amp;lt;!ELEMENT ejemplo (a+, b)&amp;gt;
+&amp;lt;!ELEMENT a EMPTY&amp;gt;
+&amp;lt;!ELEMENT b EMPTY&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;a /&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo&amp;gt;&amp;lt;b /&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: falta el elmento &amp;lt;a /&amp;gt; --&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Según la instrucción siguiente&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ELEMENT pelicula (titulo, direccion+, argumento?, actor*)&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;el elemento &lt;strong&gt;película&lt;/strong&gt; consta de un &lt;strong&gt;título&lt;/strong&gt;, uno o más elementos de &lt;strong&gt;dirección&lt;/strong&gt;, puede o no tener &lt;strong&gt;argumento&lt;/strong&gt;, y de varios a ningún &lt;strong&gt;actor&lt;/strong&gt; (además se tendría que &lt;strong&gt;respetar ese orden&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;Otro ejemplo (&lt;strong&gt;polígono.dtd&lt;/strong&gt;):&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!ELEMENT poligono ((coordX,coordY)+ | nombre)&amp;gt;
+&amp;lt;!ELEMENT coordX (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT coordY (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT nombre (#PCDATA)&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Con esa DTD sería válido el documento:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE poligono SYSTEM &quot;polígono.dtd&quot;&amp;gt;
+&amp;lt;poligono&amp;gt;
+   &amp;lt;coordX&amp;gt;12&amp;lt;/coordX&amp;gt;
+   &amp;lt;coordY&amp;gt;13&amp;lt;/coordY&amp;gt;
+   &amp;lt;coordX&amp;gt;17&amp;lt;/coordX&amp;gt;
+   &amp;lt;coordY&amp;gt;23&amp;lt;/coordY&amp;gt;
+   &amp;lt;coordX&amp;gt;34&amp;lt;/coordX&amp;gt;
+   &amp;lt;coordY&amp;gt;56&amp;lt;/coordY&amp;gt;
+&amp;lt;/poligono&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Pero también es válido:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE poligono SYSTEM &quot;polígono.dtd&quot;&amp;gt;
+&amp;lt;poligono&amp;gt;
+   &amp;lt;nombre&amp;gt;Triángulo&amp;lt;/nombre&amp;gt;
+&amp;lt;/poligono&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="15"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="16"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="4"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="16"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="3"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA06.%20Definici%C3%B3n%20de%20esquemas%20y%20vocabularios%20en%20XML:6.2.%20Construir%20una%20DTD:6.2.1.%20Elementos"></string>
+           <string role="key" value="parent"></string>
+           <reference key="13"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="19">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="6.2.2. Entidades"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="17">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="18">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="117_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="17"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Las entidades son elementos XML que permiten indicar abreviaturas de texto (o referencias a elementos externos abreviadas) o utilizar caracteres que de otra forma serían inválidos en el documento. En XML están definidas las siguientes entidades:&lt;/p&gt;
+&lt;table class=&quot;exe-table&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;Entidad&lt;/td&gt;
+&lt;td&gt;Sustitución&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;amp;lt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;lt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;amp;gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;amp;amp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;amp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;amp;apos;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;'&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;amp;quot;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;(Espacio)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Estas entidades no hay que declararlas en ningún DTD, todos los analizadores de XML estándar conocen estas entidades. Ejemplo:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;autor&amp;gt;Leopoldo Alas &amp;amp;apos;Clarín&amp;amp;apos;&amp;lt;/autor&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;El texto PCDATA del autor es &lt;strong&gt;Leopoldo Alas 'Clarín'&lt;/strong&gt; (así se visualizará en el navegador).&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="18"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="19"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="5"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="19"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="20">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Entidades a caracteres especiales"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="21">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="118_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="20"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La etiqueta inicial &amp;lt;?xml permite indicar (entre otras cosas) el juego de caracteres que utiliza un documento XML (normalmente Unicode, UTF8).&lt;/p&gt;
+&lt;p&gt;Si deseamos indicar un carácter especial que no está contenido en nuestro teclado, conociendo su código en el juego de caracteres que utiliza el documento, podemos especificarle con la sintaxis:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;amp;#número;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Donde el número es el código del carácter en decimal. Ejemplo:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;calle&amp;gt;Kantstra&amp;amp;#223;e, Berlín&amp;lt;/calle&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;En el navegador este elemento aparecería como:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;calle&amp;gt;Kantstraße, Berlín&amp;lt;/calle&amp;gt;&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="21"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="19"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="6"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="19"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="22">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Entidades generales"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="23">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="119_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="22"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Se usan como abreviaturas que aparecerán en el documento XML. La razón de su uso es facilitar la escritura de nombres repetitivos (nombres de la empresa, direcciones muy utilizadas,...). La sintaxis para declarar una entidad de este tipo es:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ENTITY nombre &quot;texto&quot;&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Para usar en un documento XML la entidad declarada, se usa:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;amp;nombre;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ejemplo de declaración de una entidad:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ENTITY mayor &quot;Calle Mayor Principal&quot; &amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;uso en un documento XML:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;dirección&amp;gt;&amp;amp;mayor; 18&amp;lt;/dirección&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;La dirección indicada es Calle Mayor Principal 18.&lt;/p&gt;
+&lt;p&gt;Incluso se pueden indicar símbolos que no son PCDATA al definir entidades:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ENTITY negCursiva &quot;&amp;lt;strong&amp;gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/strong&amp;gt;&quot;&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;El documento XML que utilice dicha entidad incluirá todos los símbolos (y por lo tanto estará especificando etiquetas en el código).&lt;/p&gt;
+&lt;p&gt;Un uso muy interesante es usar entidades que hacen referencia a archivos externos (mediante su dirección URL), por ejemplo:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ENTITY direcciónCompleta SYSTEM &quot;direccion.txt&quot; &amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Es la palabra &lt;strong&gt;SYSTEM&lt;/strong&gt; la que indica que la entidad no es un texto sino que es el contenido de un archivo. El uso de la entidad &lt;strong&gt;&amp;amp;direcciónCompleta;&lt;/strong&gt; en un documento XML provocará que en dicho documento se añada el contenido del archivo &lt;strong&gt;dirección.txt&lt;/strong&gt; (en la posición exacta en la que esté colocada la referencia a la entidad).&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="23"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="19"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="7"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="19"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="24">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Entidades de parámetros"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="25">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="120_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="24"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Sólo se pueden utilizar dentro del DTD (no en el documento XML).&lt;/p&gt;
+&lt;p&gt;Su uso más habitual es construir DTD utilizando las entidades definidas a fin de ahorrar trabajo al crear el propio DTD.&lt;/p&gt;
+&lt;p&gt;Su uso es similar a las entidades generales sólo que utilizan el símbolo&lt;strong&gt; %&lt;/strong&gt; en lugar del símbolo &lt;strong&gt;&amp;amp;&lt;/strong&gt;. Al igual que las generales deben de ser declaradas antes de poder usarse:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ENTITY % mayor &quot;Calle Mayor Principal&quot; &amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Y su uso (dentro del DTD), por ejemplo:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ATTLIST persona dirección CDATA &quot;%mayor;&quot;&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;En este caso las comillas dobles son obligatorias porque los valores por defecto van entrecomillados (como se ha visto anteriormente).&lt;/p&gt;
+&lt;p&gt;Las entidades de parámetros pueden utilizar archivos externos, ejemplo de DTD:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!ENTITY % directorio SYSTEM &quot;directorio.dtd&quot; &amp;gt;
+%directorio;
+&amp;lt;!ELEMENT empresa (razónSocial, dirección) &amp;gt;
+&amp;lt;!ELEMENT razónSocial (#PCDATA) &amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;De esta forma se construye un DTD con el contenido ya especificado en otro DTD. En el ejemplo las empresas constan de elementos &lt;strong&gt;razónSocial&lt;/strong&gt; y de &lt;strong&gt;directorio&lt;/strong&gt;. El elemento &lt;strong&gt;directorio&lt;/strong&gt; no se define, sino que su descripción está especificada en &lt;strong&gt;directorio.dtd&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="25"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="19"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="8"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="19"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="4"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA06.%20Definici%C3%B3n%20de%20esquemas%20y%20vocabularios%20en%20XML:6.2.%20Construir%20una%20DTD:6.2.2.%20Entidades"></string>
+           <string role="key" value="parent"></string>
+           <reference key="13"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="28">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="6.2.3. Atributos"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="26">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="27">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="121_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="26"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Los atributos dan información sobre un elemento, un atributo sólo puede aparecer una vez en un elemento.&lt;/p&gt;
+&lt;p&gt;Una declaración de atributos sigue la siguiente sintaxis:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ATTLIST nombreElemento nombreAtributo tipoAtributo valorInicialAtributo &amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Dónde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&quot;nombreElemento&quot;&lt;/strong&gt;: Es el nombre del elemento para el que se define un atributo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;nombreAtributo&quot;&lt;/strong&gt;: Es el nombre del atributo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;tipoAtributo&quot;&lt;/strong&gt;: Es el tipo de dato que almacenará el atributo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&quot;valorInicialAtributo&quot;&lt;/strong&gt;: Es el valor por defecto del atributo (texto entre comillas dobles) o la opcionalidad (&lt;strong&gt;#IMPLIED&lt;/strong&gt;) u obligatoriedad del mismo sin valor por defecto (&lt;strong&gt;#REQUIRED&lt;/strong&gt;) u obligatoriedad del mismo con valor por defecto (&lt;strong&gt;#FIXED&lt;/strong&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para definir varios atributos de un mismo elemento, se puede utilizar una o varias declaraciones de atributos. Los siguientes ejemplos son equivalentes:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ATTLIST nombreElemento nombreAtributo1 tipoAtributo1 valorInicialAtributo1&amp;gt;
+&amp;lt;!ATTLIST nombreElemento nombreAtributo2 tipoAtributo2 valorInicialAtributo2&amp;gt;
+&amp;lt;!ATTLIST nombreElemento nombreAtributo1 tipoAtributo1 valorInicialAtributo1 nombreAtributo2 tipoAtributo2 valorInicialAtributo2 &amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Se usa muy habitualmente para indicar de forma cómoda todos los atributos de un determinado elemento:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT directorio (persona)+&amp;gt;
+&amp;lt;!ELEMENT persona (#PCDATA)&amp;gt;
+&amp;lt;!ATTLIST persona nacionalidad CDATA &quot;Española&quot; sexo (Hombre | Mujer) #IMPLIED id ID #REQUIRED&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Para ese documento DTD, sería válido este XML:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE directorio SYSTEM &quot;directorio.dtd&quot;&amp;gt;
+&amp;lt;directorio&amp;gt;
+   &amp;lt;persona nacionalidad=&quot;Francesa&quot; id=&quot;A1234&quot;&amp;gt;Vivian Maret&amp;lt;/persona&amp;gt;
+   &amp;lt;persona id=&quot;A789&quot;&amp;gt;Juan Martín&amp;lt;/persona&amp;gt;
+   &amp;lt;persona sexo=&quot;Hombre&quot; id=&quot;A12&quot;&amp;gt;Rafael Díaz&amp;lt;/persona&amp;gt;
+&amp;lt;/directorio&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="27"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="28"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="9"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="28"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="29">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Declarar atributos"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="30">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="122_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="29"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Esta declaración:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ATTLIST persona nacionalidad CDATA&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Significa que hemos definido el atributo nacionalidad correspondiente al elemento persona. Que será de tipo CDATA, es decir texto normal. Así en un XML que se valide con el DTD en el que está la instrucción anterior, podremos:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&lt;persona nacionalidad=&quot;”española”&quot;&gt;&lt;/persona&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Para indicar el tipo de valores de un atributo se usa la palabra &lt;strong&gt;CDATA&lt;/strong&gt; para indicar que el atributos contiene texto (CDATA es el acrónimo de Character DATA).&lt;/p&gt;
+&lt;p&gt;A diferencia de &lt;strong&gt;#PCDATA&lt;/strong&gt;, su contenido no es procesado, lo que significa que puede contener cualquier valor, incluidos los caracteres no permitidos en los elementos &amp;lt;, &amp;gt;, &amp;amp;, ' y “.&lt;ejemplo color=&quot;&quot;&gt;&lt;/ejemplo&gt; &lt;ejemplo color=&quot;amarillo&quot;&gt;&lt;/ejemplo&gt; &lt;ejemplo color=&quot;azul marino #000080&quot;&gt;&lt;/ejemplo&gt; &lt;ejemplo&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: falta el atributo &quot;color&quot;, obligatorio debido al #REQUIRED --&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplos [
+&amp;lt;!ELEMENT ejemplo EMPTY&amp;gt;
+&amp;lt;!ATTLIST ejemplo color CDATA #REQUIRED&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplos&amp;gt;
+   &amp;lt;ejemplo color=&quot;&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo color=&quot;amarillo&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo color=&quot;azul marino #000080&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: falta el atributo &quot;color&quot;, obligatorio debido al #REQUIRED --&amp;gt;
+&amp;lt;/ejemplos&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Al declarar un atributo, lo último que se indica es la propiedad relativa al &lt;strong&gt;valor por defecto del atributo&lt;/strong&gt;. Se comentan a continuación sus posibilidades:&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
+&lt;h2&gt;Valor por defecto concreto&lt;/h2&gt;
+&lt;p&gt;Si al final de la declaración de un atributo aparece un valor concreto, se entiende que ese será el valor por defecto. Es decir que se podría no utilizar el atributo en un elemento y entonces dicho atributo tomaría dicho valor.&lt;/p&gt;
+&lt;p&gt;Por ejemplo supongamos que éste es el archivo &lt;strong&gt;directorio.dtd&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT directorio ( persona )+&amp;gt;
+&amp;lt;!ELEMENT persona (#PCDATA)&amp;gt;
+&amp;lt;!ATTLIST persona nacionalidad CDATA &quot;Española&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Se define en él el atributo nacionalidad para el elemento persona como un atributo que contendrá texto de todo tipo, pero que por defecto toma el valor &lt;strong&gt;Española&lt;/strong&gt; (nacionalidad por defecto en dicho archivo).&lt;/p&gt;
+&lt;p&gt;Entonces este archivo XML será válido:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE directorio SYSTEM &quot;directorio.dtd&quot;&amp;gt;
+&amp;lt;directorio&amp;gt;
+   &amp;lt;persona nacionalidad=&quot;Francesa&quot;&amp;gt;Vivian Maret&amp;lt;/persona&amp;gt;
+   &amp;lt;persona&amp;gt;Juan Martín&amp;lt;/persona&amp;gt;
+&amp;lt;/directorio&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Entonces para &lt;strong&gt;Vivian Maret&lt;/strong&gt; se ha indicado explícitamente la &lt;strong&gt;nacionalidad&lt;/strong&gt;, pero no se ha usado el atributo para &lt;strong&gt;Juan Martín&lt;/strong&gt;, por lo que tomará la nacionalidad &lt;strong&gt;española&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Otro ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE ejemplos [
+&amp;lt;!ELEMENT ejemplo EMPTY&amp;gt;
+&amp;lt;!ATTLIST ejemplo color CDATA &quot;verde&quot;&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplos&amp;gt;
+    &amp;lt;ejemplo&amp;gt;&amp;lt;/ejemplo&amp;gt;
+    &amp;lt;ejemplo color=&quot;&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+    &amp;lt;ejemplo color=&quot;amarillo&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+    &amp;lt;ejemplo color=&quot;verde&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;/ejemplos&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Valores fijos&lt;/h2&gt;
+&lt;p&gt;Se puede utilizar el término &lt;strong&gt;#FIXED&lt;/strong&gt; antes de indicar un valor fijo para un atributo. En ese caso en ningún documento XML se podrá modificar dicho atributo. Ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT directorio ( persona )+&amp;gt;
+&amp;lt;!ELEMENT persona (#PCDATA)&amp;gt;
+&amp;lt;!ATTLIST persona nacionalidad CDATA #FIXED &quot;Española&quot;&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;El atributo &lt;strong&gt;nacionalidad&lt;/strong&gt; no podrá tomar ningún valor que no sea el valor &lt;strong&gt;Española&lt;/strong&gt;, impidiendo tomar otra nacionalidad. En la práctica este tipo de atributos no se usa demasiado, sólo se usa en el caso de que la presencia o no de dicho atributo en un elemento sea determinante.&lt;/p&gt;
+&lt;p&gt;Otro ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplos [
+&amp;lt;!ELEMENT ejemplo EMPTY&amp;gt;
+&amp;lt;!ATTLIST ejemplo color CDATA #FIXED &quot;verde&quot;&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplos&amp;gt;
+   &amp;lt;ejemplo&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo color=&quot;verde&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo color=&quot;&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: el atributo &quot;color&quot; no tiene el valor &quot;verde&quot; --&amp;gt;
+   &amp;lt;ejemplo color=&quot;amarillo&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: el atributo &quot;color&quot; no tiene el valor &quot;verde&quot; --&amp;gt;
+&amp;lt;/ejemplos&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Valores requeridos&lt;/h2&gt;
+&lt;p&gt;En este caso se usa la palabra &lt;strong&gt;#REQUIRED&lt;/strong&gt; indicando con ello que siempre hay que dar valor al atributo. Ejemplo:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ATTLIST persona nacionalidad CDATA #REQUIRED&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un documento XML que utilice el elemento persona deberá especificar obligatoriamente la nacionalidad. Obviamente usando &lt;strong&gt;#REQUIRED&lt;/strong&gt; no se puede indicar un valor por defecto (al no poder dejarse sin especificar el atributo).&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplos [
+&amp;lt;!ELEMENT ejemplo EMPTY&amp;gt;
+&amp;lt;!ATTLIST ejemplo color CDATA #REQUIRED&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplos&amp;gt;
+   &amp;lt;ejemplo color=&quot;&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo color=&quot;amarillo&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo color=&quot;azul marino #000080&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: falta el atributo &quot;color&quot; --&amp;gt;
+&amp;lt;/ejemplos&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Valor opcional&lt;/h2&gt;
+&lt;p&gt;La palabra &lt;strong&gt;#IMPLIED&lt;/strong&gt; especificada en el atributo indicaría que dicho atributo puede quedarse sin valor; es decir no posee valor por defecto, pero puede quedarse sin especificar (quedaría nulo por tanto).&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ATTLIST persona nacionalidad CDATA #IMPLIED&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;En el ejemplo, el atributo &lt;strong&gt;nacionalidad&lt;/strong&gt; no es obligatorio especificarlo, puede quedar &lt;strong&gt;sin valor&lt;/strong&gt;. Nuevamente en este caso no se puede especificar un valor por defecto (sería absurdo).&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplos [
+&amp;lt;!ELEMENT ejemplo EMPTY&amp;gt;
+&amp;lt;!ATTLIST ejemplo color CDATA #IMPLIED&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplos&amp;gt;
+   &amp;lt;ejemplo&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo color=&quot;&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo color=&quot;amarillo&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+   &amp;lt;ejemplo color=&quot;azul marino #000080&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;/ejemplos&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="30"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="10"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="28"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="5"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA06.%20Definici%C3%B3n%20de%20esquemas%20y%20vocabularios%20en%20XML:6.2.%20Construir%20una%20DTD:6.2.3.%20Atributos"></string>
+           <string role="key" value="parent"></string>
+           <reference key="13"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="33">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="6.2.4. Tipos de atributos"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="31">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="32">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="123_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="31"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
+&lt;h2&gt;ID&lt;/h2&gt;
+&lt;p&gt;Sirve para generar identificadores a los elementos. Un identificador es un valor único que tendrá cada elemento y son muy usados en XML. El valor de un atributo de tipo ID cumple estas reglas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El valor tiene que cumplir las mismas reglas que para especificar nombres XML. Es decir: nada de espacios, no pueden comenzar con un número y sólo admite letras, números y el carácter de subrayado (_).&lt;/li&gt;
+&lt;li&gt;No puede haber dos elementos con el mismo ID en un mismo documento XML&lt;/li&gt;
+&lt;li&gt;En el DTD, para cada elemento sólo puede indicarse un atributo como ID. No puede haber dos atributos distintos en el mismo elemento que contengan IDs.&lt;/li&gt;
+&lt;li&gt;Los atributos ID sólo pueden indicar #IMPLIED o #REQUIRED en el apartado del valor por defecto.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Los IDs son especialmente útiles para las herramientas de maquetación, análisis y programación de aplicaciones XML. Ya que permiten diferenciar de manera única a cada elemento.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplo [
+&amp;lt;!ELEMENT ejemplo (libro*)&amp;gt;
+&amp;lt;!ELEMENT libro (#PCDATA) &amp;gt;
+&amp;lt;!ATTLIST libro codigo ID #REQUIRED&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplo&amp;gt;
+   &amp;lt;libro codigo=&quot;L1&quot;&amp;gt;Poema de Gilgamesh&amp;lt;/libro&amp;gt;
+   &amp;lt;libro codigo=&quot;L2&quot;&amp;gt;Los preceptos de Ptah-Hotep&amp;lt;/libro&amp;gt;
+&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo&amp;gt;
+   &amp;lt;libro codigo=&quot;1&quot;&amp;gt;Poema de Gilgamesh&amp;lt;/libro&amp;gt; &amp;lt;!-- ERROR: el valor de un atributo de tipo ID no puede empezar con un número --&amp;gt;
+   &amp;lt;libro codigo=&quot;L2&quot;&amp;gt;Los preceptos de Ptah-Hotep&amp;lt;/libro&amp;gt;
+&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo&amp;gt;
+   &amp;lt;libro codigo=&quot;L1&quot;&amp;gt;Poema de Gilgamesh&amp;lt;/libro&amp;gt;
+   &amp;lt;libro codigo=&quot;L1&quot;&amp;gt;Los preceptos de Ptah-Hotep&amp;lt;/libro&amp;gt; &amp;lt;!-- ERROR: el valor &quot;L1&quot; ya se ha utilizado --&amp;gt;
+&amp;lt;/ejemplo&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;IDREF&lt;/h2&gt;
+&lt;p&gt;Los atributos &lt;strong&gt;IDREF&lt;/strong&gt; contienen el valor de un &lt;strong&gt;ID&lt;/strong&gt; de otro elemento. Es decir será una referencia a otro elemento. Las reglas de los &lt;strong&gt;IDREF&lt;/strong&gt; son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El valor de un &lt;strong&gt;IDREF&lt;/strong&gt; debe cumplir las reglas para especificar nombres &lt;strong&gt;XML&lt;/strong&gt; (es lógico ya que contienen valores de tipo &lt;strong&gt;ID&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Debe existir un atributo &lt;strong&gt;ID&lt;/strong&gt; en el documento &lt;strong&gt;XML&lt;/strong&gt; cuyo valor coincida con el especificado en un &lt;strong&gt;IDREF&lt;/strong&gt; (de otro modo se haría referencia a un elemento inexistente y esto no está permitido)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La idea es poder relacionar elementos a través de atributos de tipo &lt;strong&gt;ID&lt;/strong&gt; e &lt;strong&gt;IDREF&lt;/strong&gt;. Ejemplo de uso:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!-- Archivo directorio.dtd --&amp;gt;
+&amp;lt;!ELEMENT directorio (persona)+ &amp;gt;
+&amp;lt;!ELEMENT persona (#PCDATA) &amp;gt;
+&amp;lt;!ATTLIST persona id ID #REQUIRED
+   madre IDREF #IMPLIED
+   padre IDREF #IMPLIED&amp;gt;
+&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!-- Archivo directorio1.xml--&amp;gt;
+&amp;lt;!DOCTYPE directorio SYSTEM &quot;directorio.dtd&quot;&amp;gt;
+&amp;lt;directorio&amp;gt;
+   &amp;lt;persona id=&quot;p1&quot;&amp;gt;Pedro&amp;lt;/persona&amp;gt;
+   &amp;lt;persona id=&quot;p2&quot;&amp;gt;Marisa&amp;lt;/persona&amp;gt;
+   &amp;lt;persona id=&quot;p3&quot; madre=&quot;p2&quot; padre=&quot;p1&quot;&amp;gt;Carmen&amp;lt;/persona&amp;gt;
+&amp;lt;/directorio&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Carmen es la hija de Pedro y Marisa, según el código anterior, ya que los atributos padre y madre de tipo &lt;strong&gt;IDREF&lt;/strong&gt; contienen los &lt;strong&gt;ID&lt;/strong&gt; de &lt;strong&gt;Pedro&lt;/strong&gt; y &lt;strong&gt;Marisa&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;IDREFS&lt;/h2&gt;
+&lt;p&gt;Igual que el anterior sólo que permite indicar varias referencias (que deben existir en el documento XML) a otros &lt;strong&gt;ID&lt;/strong&gt;, separadas por espacios. Ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!-- Archivo directorio.dtd --&amp;gt;
+&amp;lt;!ELEMENT directorio (persona)+ &amp;gt;
+&amp;lt;!ELEMENT persona (#PCDATA) &amp;gt;
+&amp;lt;!ATTLIST persona id ID #REQUIRED padres IDREFS #IMPLIED &amp;gt;
+&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!-- Archivo directorio1.xml--&amp;gt;
+&amp;lt;!DOCTYPE directorio SYSTEM &quot;directorio.dtd&quot;&amp;gt;
+&amp;lt;directorio&amp;gt;
+   &amp;lt;persona id=&quot;p1&quot;&amp;gt;Pedro&amp;lt;/persona&amp;gt;
+   &amp;lt;persona id=&quot;p2&quot;&amp;gt;Marisa&amp;lt;/persona&amp;gt;
+   &amp;lt;persona id=&quot;p3&quot; padres=&quot;p1 p2&quot;&amp;gt;Carmen&amp;lt;/persona&amp;gt;
+&amp;lt;/directorio&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;NMTOKEN&lt;/h2&gt;
+&lt;p&gt;El valor del atributo será un texto que cumplirá las reglas para nombres &lt;strong&gt;XML&lt;/strong&gt;. Se usa en atributos donde se entiende que &lt;strong&gt;CDATA&lt;/strong&gt; permite demasiadas libertades, de esta forma al menos sabremos que es un texto donde sólo existirán letras, números y el los caracteres de &lt;strong&gt;punto&lt;/strong&gt; “.”, &lt;strong&gt;guión&lt;/strong&gt; “-“, &lt;strong&gt;subrayado&lt;/strong&gt; “_” y &lt;strong&gt;dos puntos&lt;/strong&gt; “:”, es decir un texto que cumple las reglas para nombres &lt;strong&gt;XML&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplo [
+&amp;lt;!ELEMENT ejemplo EMPTY&amp;gt;
+&amp;lt;!ATTLIST ejemplo color NMTOKEN #REQUIRED&amp;gt;
+]&amp;gt;
+&amp;lt;ejemplo color=&quot;azul-marino&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo color=&quot;1&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Los siguientes casos darían un error de validación:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ejemplo color=&quot;&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;&amp;lt;!-- ERROR: no admite vacío --&amp;gt;
+&amp;lt;ejemplo color=&quot;azul marino&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: hay un espacio en blanco --&amp;gt;
+&amp;lt;ejemplo color=&quot;#F0F0F0&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: contiene el carácter # --&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;NMTOKENS&lt;/h2&gt;
+&lt;p&gt;El atributo puede contener varios valores de tipo NMTOKEN separados por espacios&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplo [
+&amp;lt;!ELEMENT ejemplo EMPTY&amp;gt;
+&amp;lt;!ATTLIST ejemplo color NMTOKENS #REQUIRED&amp;gt;
+]&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En el documento XML podría aparecer escrito de la siguiente manera:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ejemplo color=&quot;1&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;
+&amp;lt;ejemplo color=&quot;azul marino&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Los siguientes casos darían un error de validación:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ejemplo color=&quot;&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;&amp;lt;!-- ERROR: no admite vacío --&amp;gt;
+&amp;lt;ejemplo color=&quot;2*2&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: hay un asterisco --&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;ENTITY&lt;/h2&gt;
+&lt;p&gt;El valor de un atributo será una entidad de la cual se indica el nombre, se debe de declarar en el DTD.&lt;/p&gt;
+&lt;h2&gt;ENTITIES&lt;/h2&gt;
+&lt;p&gt;El valor del atributo será una lista de nombres de entidades (que deben declararse en el DTD) separadas por espacios.&lt;/p&gt;
+&lt;h2&gt;Enumeración&lt;/h2&gt;
+&lt;p&gt;En este caso el valor del atributo debe de ser uno de una lista de valores posibles cada uno de los cuales se separa del siguiente mediante el símbolo &lt;strong&gt;|&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ATTLIST persona sexo (Hombre | Mujer) #REQUIRED &amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Las personas sólo podrán especificar como sexo &quot;Hombre&quot; o &quot;Mujer&quot; y nada más:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;persona sexo=&quot;Varón&quot;&amp;gt;Javier Ruiz&amp;lt;/persona&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;El código anterior XML fallaría ya que el atributo sexo no admite el valor &quot;Varón&quot;.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE ejemplo [
+&amp;lt;!ELEMENT ejemplo EMPTY&amp;gt;
+&amp;lt;!ATTLIST ejemplo color (azul | blanco | rojo) #REQUIRED&amp;gt;
+]&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En el documento XML podría aparecer escrito de la siguiente manera:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;ejemplo color=&quot;azul&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;El siguiente caso darían un error de validación:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ejemplo color=&quot;&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt;&amp;lt;!-- ERROR: no admite vacío, no está entre los valores declarados --&amp;gt;
+&amp;lt;ejemplo color=&quot;verde&quot;&amp;gt;&amp;lt;/ejemplo&amp;gt; &amp;lt;!-- ERROR: &quot;verde&quot;no está en la lista de valores --&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Limitaciones de los esquemas &lt;strong&gt;DTD&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Un DTD no es un documento XML, luego no se puede verificar si está bien formado.&lt;/li&gt;
+&lt;li&gt;No se pueden fijar restricciones sobre los valores y atributos, como su tipo de datos, su tamaño, etc.&lt;/li&gt;
+&lt;li&gt;No soporta espacios de nombres.&lt;/li&gt;
+&lt;li&gt;Sólo se puede enumerar los valores de los atributos, no de los elementos.&lt;/li&gt;
+&lt;li&gt;Sólo se puede dar un valor por defecto para atributos, no para elementos.&lt;/li&gt;
+&lt;li&gt;Existe un control limitado sobre las cardinalidades de los elementos, es decir, concretar el número de veces que pueden aparecer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="32"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="11"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="33"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="34">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="35">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="124_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="34"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Ejemplo XML y DTD asociada&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;exe-layout-2-cols exe-layout-2-50-50 exe-clear&quot;&gt;
+&lt;div class=&quot;exe-col exe-col-1&quot;&gt;
+&lt;p&gt;&lt;strong&gt;agenda.xml&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;!DOCTYPE agenda SYSTEM &quot;agenda.dtd&quot;&amp;gt;
+&amp;lt;agenda&amp;gt;
+   &amp;lt;contacto codigo=&quot;c001&quot;&amp;gt;
+      &amp;lt;nombre&amp;gt;Juan&amp;lt;/nombre&amp;gt;
+      &amp;lt;apellidos&amp;gt;Marquez&amp;lt;/apellidos&amp;gt;
+      &amp;lt;movil empresa=&quot;movistar&quot;&amp;gt;656773221&amp;lt;/movil&amp;gt;
+      &amp;lt;movil&amp;gt;666123432&amp;lt;/movil&amp;gt;
+      &amp;lt;fijo&amp;gt;912343820&amp;lt;/fijo&amp;gt;
+      &amp;lt;movil&amp;gt;609398271&amp;lt;/movil&amp;gt;
+      &amp;lt;email tipo=&quot;trabajo&quot;&amp;gt;juan@ticarte.com&amp;lt;/email&amp;gt;
+      &amp;lt;sexo&amp;gt;
+         &amp;lt;hombre/&amp;gt;
+      &amp;lt;/sexo&amp;gt;
+      &amp;lt;comentarios&amp;gt;&amp;lt;/comentarios&amp;gt;
+   &amp;lt;/contacto&amp;gt;
+   &amp;lt;contacto codigo=&quot;c002&quot;&amp;gt;
+      &amp;lt;nombre&amp;gt;Maria&amp;lt;/nombre&amp;gt;
+      &amp;lt;apellidos&amp;gt;Bonilla&amp;lt;/apellidos&amp;gt;
+      &amp;lt;movil empresa=&quot;movistar&quot;&amp;gt;665343092&amp;lt;/movil&amp;gt;
+      &amp;lt;movil&amp;gt;666232096&amp;lt;/movil&amp;gt;
+      &amp;lt;fijo&amp;gt;923430675&amp;lt;/fijo&amp;gt;
+      &amp;lt;email tipo=&quot;personal&quot;&amp;gt;maria@ticarte.com&amp;lt;/email&amp;gt;
+      &amp;lt;sexo&amp;gt;
+         &amp;lt;mujer/&amp;gt;
+      &amp;lt;/sexo&amp;gt;
+      &amp;lt;pareja codigo=&quot;c001&quot;&amp;gt;Juan&amp;lt;/pareja&amp;gt;
+      &amp;lt;comentarios&amp;gt;Llamar solo por la mañana.&amp;lt;/comentarios&amp;gt;
+   &amp;lt;/contacto&amp;gt;
+&amp;lt;/agenda&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;exe-col exe-col-2&quot;&gt;
+&lt;p&gt;&lt;strong&gt;agenda.dtd&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT agenda (contacto*)&amp;gt;
+&amp;lt;!ELEMENT contacto (nombre, apellidos, (movil|fijo)*, email?, sexo?, pareja?, comentarios? )&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT nombre (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT apellidos (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT fijo (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT movil (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ATTLIST movil empresa CDATA #IMPLIED&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT email (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ATTLIST email tipo (personal|trabajo) #REQUIRED&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT sexo (hombre|mujer)&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT hombre EMPTY&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT mujer EMPTY&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT pareja (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ATTLIST pareja codigo IDREF #IMPLIED&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT comentarios ANY&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="35"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="12"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="33"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="6"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA06.%20Definici%C3%B3n%20de%20esquemas%20y%20vocabularios%20en%20XML:6.2.%20Construir%20una%20DTD:6.2.4.%20Tipos%20de%20atributos"></string>
+           <string role="key" value="parent"></string>
+           <reference key="13"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+        </list>
+       </dictionary>
+      </instance>
+     </list>
+    </dictionary>
+   </instance>
+   <unicode role="key" value="1"></unicode>
+   <reference key="8"></reference>
+   <unicode role="key" value="2"></unicode>
+   <reference key="13"></reference>
+   <unicode role="key" value="3"></unicode>
+   <reference key="16"></reference>
+   <unicode role="key" value="4"></unicode>
+   <reference key="19"></reference>
+   <unicode role="key" value="5"></unicode>
+   <reference key="28"></reference>
+   <unicode role="key" value="6"></unicode>
+   <reference key="33"></reference>
+  </dictionary>
+  <string role="key" value="_objectives"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_preknowledge"></string>
+  <unicode value=""></unicode>
+  <string role="key" value="_templateFile"></string>
+  <string value="Base"></string>
+  <string role="key" value="backgroundImgTile"></string>
+  <bool value="0"></bool>
+  <string role="key" value="currentNode"></string>
+  <reference key="33"></reference>
+  <string role="key" value="dublinCore"></string>
+  <instance class="exe.engine.package.DublinCore">
+   <dictionary>
+    <string role="key" value="contributors"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="coverage"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="creator"></string>
+    <unicode value="David Bermúdez"></unicode>
+    <string role="key" value="date"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="description"></string>
+    <unicode value="UA06 Lenguaje de Marcas"></unicode>
+    <string role="key" value="format"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="identifier"></string>
+    <unicode value="4a7d755e-34a5-410a-a7d4-601881136623"></unicode>
+    <string role="key" value="language"></string>
+    <unicode value="es"></unicode>
+    <string role="key" value="publisher"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="relation"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="rights"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="source"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="subject"></string>
+    <unicode value=""></unicode>
+    <string role="key" value="title"></string>
+    <unicode value="UA06. Definición de esquemas y vocabularios"></unicode>
+    <string role="key" value="type"></string>
+    <unicode value=""></unicode>
+   </dictionary>
+  </instance>
+  <string role="key" value="exe.engine.package.Package.persistenceVersion"></string>
+  <int value="16"></int>
+  <string role="key" value="exportMetadataType"></string>
+  <string value="LOMES"></string>
+  <string role="key" value="exportSource"></string>
+  <bool value="1"></bool>
+  <string role="key" value="footer"></string>
+  <string value=""></string>
+  <string role="key" value="isLoading"></string>
+  <bool value="0"></bool>
+  <string role="key" value="license"></string>
+  <unicode value="creative commons: attribution - non commercial - share alike 4.0"></unicode>
+  <string role="key" value="lom"></string>
+  <instance class="exe.engine.lom.lomsubs.lomSub">
+   <dictionary>
+    <string role="key" value="__index__"></string>
+    <dictionary></dictionary>
+    <string role="key" value="__oldchild__"></string>
+    <none></none>
+    <string role="key" value="annotation"></string>
+    <list></list>
+    <string role="key" value="classification"></string>
+    <list></list>
+    <string role="key" value="educational"></string>
+    <list>
+     <instance class="exe.engine.lom.lomsubs.educationalSub">
+      <dictionary>
+       <string role="key" value="cognitiveProcess"></string>
+       <list></list>
+       <string role="key" value="context"></string>
+       <list></list>
+       <string role="key" value="description"></string>
+       <list></list>
+       <string role="key" value="difficulty"></string>
+       <none></none>
+       <string role="key" value="intendedEndUserRole"></string>
+       <list></list>
+       <string role="key" value="interactivityLevel"></string>
+       <none></none>
+       <string role="key" value="interactivityType"></string>
+       <none></none>
+       <string role="key" value="language"></string>
+       <list>
+        <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="es"></string>
+         </dictionary>
+        </instance>
+       </list>
+       <string role="key" value="learningResourceType"></string>
+       <list></list>
+       <string role="key" value="semanticDensity"></string>
+       <none></none>
+       <string role="key" value="typicalAgeRange"></string>
+       <list></list>
+       <string role="key" value="typicalLearningTime"></string>
+       <none></none>
+      </dictionary>
+     </instance>
+    </list>
+    <string role="key" value="general"></string>
+    <instance class="exe.engine.lom.lomsubs.generalSub">
+     <dictionary>
+      <string role="key" value="aggregationLevel"></string>
+      <instance class="exe.engine.lom.lomsubs.aggregationLevelSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="source"></string>
+        <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="string"></string>
+          <list></list>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="source"></string>
+          <string role="key" value="valueOf_"></string>
+          <string value="LOMv1.0"></string>
+         </dictionary>
+        </instance>
+        <string role="key" value="uniqueElementName"></string>
+        <string value="aggregationLevel"></string>
+        <string role="key" value="value"></string>
+        <instance class="exe.engine.lom.lomsubs.aggregationLevelValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <none></none>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="value"></string>
+          <string role="key" value="value"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="2"></string>
+         </dictionary>
+        </instance>
+       </dictionary>
+      </instance>
+      <string role="key" value="coverage"></string>
+      <list></list>
+      <string role="key" value="description"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.descriptionSub">
+        <dictionary>
+         <string role="key" value="extensiontype_"></string>
+         <none></none>
+         <string role="key" value="string"></string>
+         <list>
+          <instance class="exe.engine.lom.lomsubs.LangStringSub">
+           <dictionary>
+            <string role="key" value="language"></string>
+            <string value="es"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="UA06 Lenguaje de Marcas"></string>
+           </dictionary>
+          </instance>
+         </list>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="identifier"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.identifierSub">
+        <dictionary>
+         <string role="key" value="catalog"></string>
+         <instance class="exe.engine.lom.lomsubs.catalogSub">
+          <dictionary>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="catalog"></string>
+           <string role="key" value="valueOf_"></string>
+           <unicode value="My Catalog"></unicode>
+          </dictionary>
+         </instance>
+         <string role="key" value="entry"></string>
+         <instance class="exe.engine.lom.lomsubs.entrySub">
+          <dictionary>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="entry"></string>
+           <string role="key" value="valueOf_"></string>
+           <unicode value="4a7d755e-34a5-410a-a7d4-601881136623"></unicode>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="keyword"></string>
+      <list></list>
+      <string role="key" value="language"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+        <dictionary>
+         <string role="key" value="extensiontype_"></string>
+         <none></none>
+         <string role="key" value="valueOf_"></string>
+         <string value="es"></string>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="structure"></string>
+      <none></none>
+      <string role="key" value="title"></string>
+      <instance class="exe.engine.lom.lomsubs.titleSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="string"></string>
+        <list>
+         <instance class="exe.engine.lom.lomsubs.LangStringSub">
+          <dictionary>
+           <string role="key" value="language"></string>
+           <string value="es"></string>
+           <string role="key" value="valueOf_"></string>
+           <string value="UA06. Definici\xc3\xb3n de esquemas y vocabularios"></string>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="uniqueElementName"></string>
+        <none></none>
+       </dictionary>
+      </instance>
+      <string role="key" value="uniqueElementName"></string>
+      <string value="general"></string>
+     </dictionary>
+    </instance>
+    <string role="key" value="lifeCycle"></string>
+    <instance class="exe.engine.lom.lomsubs.lifeCycleSub">
+     <dictionary>
+      <string role="key" value="contribute"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.contributeSub">
+        <dictionary>
+         <string role="key" value="date"></string>
+         <instance class="exe.engine.lom.lomsubs.dateSub">
+          <dictionary>
+           <string role="key" value="dateTime"></string>
+           <instance class="exe.engine.lom.lomsubs.DateTimeValueSub">
+            <dictionary>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="dateTime"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="2023-01-04T20:23:41.00+01:00"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="description"></string>
+           <instance class="exe.engine.lom.lomsubs.LanguageStringSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list>
+              <instance class="exe.engine.lom.lomsubs.LangStringSub">
+               <dictionary>
+                <string role="key" value="language"></string>
+                <string value="es"></string>
+                <string role="key" value="valueOf_"></string>
+                <string value="Fecha de creaci\xc3\xb3n de los metadatos"></string>
+               </dictionary>
+              </instance>
+             </list>
+            </dictionary>
+           </instance>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="uniqueElementName"></string>
+           <none></none>
+           <string role="key" value="valueOf_"></string>
+           <none></none>
+          </dictionary>
+         </instance>
+         <string role="key" value="entity"></string>
+         <list>
+          <instance class="exe.engine.lom.lomsubs.entitySub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="BEGIN:VCARD VERSION:3.0 FN:David Berm\xc3\xbadez EMAIL;TYPE=INTERNET: ORG: END:VCARD"></string>
+           </dictionary>
+          </instance>
+         </list>
+         <string role="key" value="role"></string>
+         <instance class="exe.engine.lom.lomsubs.roleSub">
+          <dictionary>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="source"></string>
+           <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list></list>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="source"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="LOMv1.0"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="role"></string>
+           <string role="key" value="value"></string>
+           <instance class="exe.engine.lom.lomsubs.roleValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="source"></string>
+             <none></none>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="value"></string>
+             <string role="key" value="value"></string>
+             <none></none>
+             <string role="key" value="valueOf_"></string>
+             <string value="author"></string>
+            </dictionary>
+           </instance>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="status"></string>
+      <none></none>
+      <string role="key" value="uniqueElementName"></string>
+      <none></none>
+      <string role="key" value="version"></string>
+      <none></none>
+     </dictionary>
+    </instance>
+    <string role="key" value="metaMetadata"></string>
+    <instance class="exe.engine.lom.lomsubs.metaMetadataSub">
+     <dictionary>
+      <string role="key" value="contribute"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.contributeMetaSub">
+        <dictionary>
+         <string role="key" value="date"></string>
+         <instance class="exe.engine.lom.lomsubs.dateSub">
+          <dictionary>
+           <string role="key" value="dateTime"></string>
+           <instance class="exe.engine.lom.lomsubs.DateTimeValueSub">
+            <dictionary>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="dateTime"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="2022-12-23T13:27:53.00+01:00"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="description"></string>
+           <instance class="exe.engine.lom.lomsubs.LanguageStringSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list>
+              <instance class="exe.engine.lom.lomsubs.LangStringSub">
+               <dictionary>
+                <string role="key" value="language"></string>
+                <string value="es"></string>
+                <string role="key" value="valueOf_"></string>
+                <string value="Fecha de creaci\xc3\xb3n de los metadatos"></string>
+               </dictionary>
+              </instance>
+             </list>
+            </dictionary>
+           </instance>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="uniqueElementName"></string>
+           <none></none>
+           <string role="key" value="valueOf_"></string>
+           <none></none>
+          </dictionary>
+         </instance>
+         <string role="key" value="entity"></string>
+         <list>
+          <instance class="exe.engine.lom.lomsubs.entitySub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="BEGIN:VCARD VERSION:3.0 FN:David Berm\xc3\xbadez EMAIL;TYPE=INTERNET: ORG: END:VCARD"></string>
+           </dictionary>
+          </instance>
+         </list>
+         <string role="key" value="role"></string>
+         <instance class="exe.engine.lom.lomsubs.roleSub">
+          <dictionary>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="source"></string>
+           <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list></list>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="source"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="LOMv1.0"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="role"></string>
+           <string role="key" value="value"></string>
+           <instance class="exe.engine.lom.lomsubs.roleValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="source"></string>
+             <none></none>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="value"></string>
+             <string role="key" value="value"></string>
+             <none></none>
+             <string role="key" value="valueOf_"></string>
+             <string value="creator"></string>
+            </dictionary>
+           </instance>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="identifier"></string>
+      <list></list>
+      <string role="key" value="language"></string>
+      <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="valueOf_"></string>
+        <string value="es"></string>
+       </dictionary>
+      </instance>
+      <string role="key" value="metadataSchema"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.metadataSchemaSub">
+        <dictionary>
+         <string role="key" value="valueOf_"></string>
+         <string value="LOMv1.0"></string>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="uniqueElementName"></string>
+      <string value="metaMetadata"></string>
+     </dictionary>
+    </instance>
+    <string role="key" value="relation"></string>
+    <list></list>
+    <string role="key" value="rights"></string>
+    <instance class="exe.engine.lom.lomsubs.rightsSub">
+     <dictionary>
+      <string role="key" value="access"></string>
+      <none></none>
+      <string role="key" value="copyrightAndOtherRestrictions"></string>
+      <instance class="exe.engine.lom.lomsubs.copyrightAndOtherRestrictionsSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="source"></string>
+        <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="string"></string>
+          <list></list>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="source"></string>
+          <string role="key" value="valueOf_"></string>
+          <string value="LOMv1.0"></string>
+         </dictionary>
+        </instance>
+        <string role="key" value="uniqueElementName"></string>
+        <string value="copyrightAndOtherRestrictions"></string>
+        <string role="key" value="value"></string>
+        <instance class="exe.engine.lom.lomsubs.copyrightAndOtherRestrictionsValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <none></none>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="value"></string>
+          <string role="key" value="value"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="yes"></string>
+         </dictionary>
+        </instance>
+       </dictionary>
+      </instance>
+      <string role="key" value="cost"></string>
+      <none></none>
+      <string role="key" value="description"></string>
+      <none></none>
+      <string role="key" value="uniqueElementName"></string>
+      <none></none>
+     </dictionary>
+    </instance>
+    <string role="key" value="technical"></string>
+    <none></none>
+   </dictionary>
+  </instance>
+  <string role="key" value="lomEs"></string>
+  <instance class="exe.engine.lom.lomsubs.lomSub">
+   <dictionary>
+    <string role="key" value="__index__"></string>
+    <dictionary></dictionary>
+    <string role="key" value="__oldchild__"></string>
+    <none></none>
+    <string role="key" value="annotation"></string>
+    <list></list>
+    <string role="key" value="classification"></string>
+    <list></list>
+    <string role="key" value="educational"></string>
+    <list>
+     <instance class="exe.engine.lom.lomsubs.educationalSub">
+      <dictionary>
+       <string role="key" value="cognitiveProcess"></string>
+       <list></list>
+       <string role="key" value="context"></string>
+       <list></list>
+       <string role="key" value="description"></string>
+       <list></list>
+       <string role="key" value="difficulty"></string>
+       <none></none>
+       <string role="key" value="intendedEndUserRole"></string>
+       <list></list>
+       <string role="key" value="interactivityLevel"></string>
+       <none></none>
+       <string role="key" value="interactivityType"></string>
+       <none></none>
+       <string role="key" value="language"></string>
+       <list>
+        <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="es"></string>
+         </dictionary>
+        </instance>
+       </list>
+       <string role="key" value="learningResourceType"></string>
+       <list></list>
+       <string role="key" value="semanticDensity"></string>
+       <none></none>
+       <string role="key" value="typicalAgeRange"></string>
+       <list></list>
+       <string role="key" value="typicalLearningTime"></string>
+       <none></none>
+      </dictionary>
+     </instance>
+    </list>
+    <string role="key" value="general"></string>
+    <instance class="exe.engine.lom.lomsubs.generalSub">
+     <dictionary>
+      <string role="key" value="aggregationLevel"></string>
+      <instance class="exe.engine.lom.lomsubs.aggregationLevelSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="source"></string>
+        <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="string"></string>
+          <list></list>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="source"></string>
+          <string role="key" value="valueOf_"></string>
+          <string value="LOM-ESv1.0"></string>
+         </dictionary>
+        </instance>
+        <string role="key" value="uniqueElementName"></string>
+        <string value="aggregationLevel"></string>
+        <string role="key" value="value"></string>
+        <instance class="exe.engine.lom.lomsubs.aggregationLevelValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <none></none>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="value"></string>
+          <string role="key" value="value"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="2"></string>
+         </dictionary>
+        </instance>
+       </dictionary>
+      </instance>
+      <string role="key" value="coverage"></string>
+      <list></list>
+      <string role="key" value="description"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.descriptionSub">
+        <dictionary>
+         <string role="key" value="extensiontype_"></string>
+         <none></none>
+         <string role="key" value="string"></string>
+         <list>
+          <instance class="exe.engine.lom.lomsubs.LangStringSub">
+           <dictionary>
+            <string role="key" value="language"></string>
+            <string value="es"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="UA06 Lenguaje de Marcas"></string>
+           </dictionary>
+          </instance>
+         </list>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="identifier"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.identifierSub">
+        <dictionary>
+         <string role="key" value="catalog"></string>
+         <instance class="exe.engine.lom.lomsubs.catalogSub">
+          <dictionary>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="catalog"></string>
+           <string role="key" value="valueOf_"></string>
+           <unicode value="My Catalog"></unicode>
+          </dictionary>
+         </instance>
+         <string role="key" value="entry"></string>
+         <instance class="exe.engine.lom.lomsubs.entrySub">
+          <dictionary>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="entry"></string>
+           <string role="key" value="valueOf_"></string>
+           <unicode value="4a7d755e-34a5-410a-a7d4-601881136623"></unicode>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="keyword"></string>
+      <list></list>
+      <string role="key" value="language"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+        <dictionary>
+         <string role="key" value="extensiontype_"></string>
+         <none></none>
+         <string role="key" value="valueOf_"></string>
+         <string value="es"></string>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="structure"></string>
+      <none></none>
+      <string role="key" value="title"></string>
+      <instance class="exe.engine.lom.lomsubs.titleSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="string"></string>
+        <list>
+         <instance class="exe.engine.lom.lomsubs.LangStringSub">
+          <dictionary>
+           <string role="key" value="language"></string>
+           <string value="es"></string>
+           <string role="key" value="valueOf_"></string>
+           <string value="UA06. Definici\xc3\xb3n de esquemas y vocabularios"></string>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="uniqueElementName"></string>
+        <none></none>
+       </dictionary>
+      </instance>
+      <string role="key" value="uniqueElementName"></string>
+      <string value="general"></string>
+     </dictionary>
+    </instance>
+    <string role="key" value="lifeCycle"></string>
+    <instance class="exe.engine.lom.lomsubs.lifeCycleSub">
+     <dictionary>
+      <string role="key" value="contribute"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.contributeSub">
+        <dictionary>
+         <string role="key" value="date"></string>
+         <instance class="exe.engine.lom.lomsubs.dateSub">
+          <dictionary>
+           <string role="key" value="dateTime"></string>
+           <instance class="exe.engine.lom.lomsubs.DateTimeValueSub">
+            <dictionary>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="dateTime"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="2023-01-04T20:23:41.00+01:00"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="description"></string>
+           <instance class="exe.engine.lom.lomsubs.LanguageStringSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list>
+              <instance class="exe.engine.lom.lomsubs.LangStringSub">
+               <dictionary>
+                <string role="key" value="language"></string>
+                <string value="es"></string>
+                <string role="key" value="valueOf_"></string>
+                <string value="Fecha de creaci\xc3\xb3n de los metadatos"></string>
+               </dictionary>
+              </instance>
+             </list>
+            </dictionary>
+           </instance>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="uniqueElementName"></string>
+           <none></none>
+           <string role="key" value="valueOf_"></string>
+           <none></none>
+          </dictionary>
+         </instance>
+         <string role="key" value="entity"></string>
+         <list>
+          <instance class="exe.engine.lom.lomsubs.entitySub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="BEGIN:VCARD VERSION:3.0 FN:David Berm\xc3\xbadez EMAIL;TYPE=INTERNET: ORG: END:VCARD"></string>
+           </dictionary>
+          </instance>
+         </list>
+         <string role="key" value="role"></string>
+         <instance class="exe.engine.lom.lomsubs.roleSub">
+          <dictionary>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="source"></string>
+           <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list></list>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="source"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="LOM-ESv1.0"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="role"></string>
+           <string role="key" value="value"></string>
+           <instance class="exe.engine.lom.lomsubs.roleValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="source"></string>
+             <none></none>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="value"></string>
+             <string role="key" value="value"></string>
+             <none></none>
+             <string role="key" value="valueOf_"></string>
+             <string value="author"></string>
+            </dictionary>
+           </instance>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="status"></string>
+      <none></none>
+      <string role="key" value="uniqueElementName"></string>
+      <none></none>
+      <string role="key" value="version"></string>
+      <none></none>
+     </dictionary>
+    </instance>
+    <string role="key" value="metaMetadata"></string>
+    <instance class="exe.engine.lom.lomsubs.metaMetadataSub">
+     <dictionary>
+      <string role="key" value="contribute"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.contributeMetaSub">
+        <dictionary>
+         <string role="key" value="date"></string>
+         <instance class="exe.engine.lom.lomsubs.dateSub">
+          <dictionary>
+           <string role="key" value="dateTime"></string>
+           <instance class="exe.engine.lom.lomsubs.DateTimeValueSub">
+            <dictionary>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="dateTime"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="2022-12-23T13:27:53.00+01:00"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="description"></string>
+           <instance class="exe.engine.lom.lomsubs.LanguageStringSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list>
+              <instance class="exe.engine.lom.lomsubs.LangStringSub">
+               <dictionary>
+                <string role="key" value="language"></string>
+                <string value="es"></string>
+                <string role="key" value="valueOf_"></string>
+                <string value="Fecha de creaci\xc3\xb3n de los metadatos"></string>
+               </dictionary>
+              </instance>
+             </list>
+            </dictionary>
+           </instance>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="uniqueElementName"></string>
+           <none></none>
+           <string role="key" value="valueOf_"></string>
+           <none></none>
+          </dictionary>
+         </instance>
+         <string role="key" value="entity"></string>
+         <list>
+          <instance class="exe.engine.lom.lomsubs.entitySub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="BEGIN:VCARD VERSION:3.0 FN:David Berm\xc3\xbadez EMAIL;TYPE=INTERNET: ORG: END:VCARD"></string>
+           </dictionary>
+          </instance>
+         </list>
+         <string role="key" value="role"></string>
+         <instance class="exe.engine.lom.lomsubs.roleSub">
+          <dictionary>
+           <string role="key" value="extensiontype_"></string>
+           <none></none>
+           <string role="key" value="source"></string>
+           <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="string"></string>
+             <list></list>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="source"></string>
+             <string role="key" value="valueOf_"></string>
+             <string value="LOM-ESv1.0"></string>
+            </dictionary>
+           </instance>
+           <string role="key" value="uniqueElementName"></string>
+           <string value="role"></string>
+           <string role="key" value="value"></string>
+           <instance class="exe.engine.lom.lomsubs.roleValueSub">
+            <dictionary>
+             <string role="key" value="extensiontype_"></string>
+             <none></none>
+             <string role="key" value="source"></string>
+             <none></none>
+             <string role="key" value="uniqueElementName"></string>
+             <string value="value"></string>
+             <string role="key" value="value"></string>
+             <none></none>
+             <string role="key" value="valueOf_"></string>
+             <string value="creator"></string>
+            </dictionary>
+           </instance>
+          </dictionary>
+         </instance>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="identifier"></string>
+      <list></list>
+      <string role="key" value="language"></string>
+      <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="valueOf_"></string>
+        <string value="es"></string>
+       </dictionary>
+      </instance>
+      <string role="key" value="metadataSchema"></string>
+      <list>
+       <instance class="exe.engine.lom.lomsubs.metadataSchemaSub">
+        <dictionary>
+         <string role="key" value="valueOf_"></string>
+         <string value="LOM-ESv1.0"></string>
+        </dictionary>
+       </instance>
+      </list>
+      <string role="key" value="uniqueElementName"></string>
+      <string value="metaMetadata"></string>
+     </dictionary>
+    </instance>
+    <string role="key" value="relation"></string>
+    <list></list>
+    <string role="key" value="rights"></string>
+    <instance class="exe.engine.lom.lomsubs.rightsSub">
+     <dictionary>
+      <string role="key" value="access"></string>
+      <instance class="exe.engine.lom.lomsubs.accessSub">
+       <dictionary>
+        <string role="key" value="accessType"></string>
+        <instance class="exe.engine.lom.lomsubs.accessTypeSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="string"></string>
+            <list></list>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="source"></string>
+            <string role="key" value="valueOf_"></string>
+            <string value="LOM-ESv1.0"></string>
+           </dictionary>
+          </instance>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="accessType"></string>
+          <string role="key" value="value"></string>
+          <instance class="exe.engine.lom.lomsubs.accessTypeValueSub">
+           <dictionary>
+            <string role="key" value="extensiontype_"></string>
+            <none></none>
+            <string role="key" value="source"></string>
+            <none></none>
+            <string role="key" value="uniqueElementName"></string>
+            <string value="value"></string>
+            <string role="key" value="value"></string>
+            <none></none>
+            <string role="key" value="valueOf_"></string>
+            <string value="universal"></string>
+           </dictionary>
+          </instance>
+         </dictionary>
+        </instance>
+        <string role="key" value="description"></string>
+        <instance class="exe.engine.lom.lomsubs.LanguageStringSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="string"></string>
+          <list>
+           <instance class="exe.engine.lom.lomsubs.LangStringSub">
+            <dictionary>
+             <string role="key" value="language"></string>
+             <string value="en"></string>
+             <string role="key" value="valueOf_"></string>
+             <unicode value="Default"></unicode>
+            </dictionary>
+           </instance>
+          </list>
+         </dictionary>
+        </instance>
+        <string role="key" value="uniqueElementName"></string>
+        <string value="access"></string>
+       </dictionary>
+      </instance>
+      <string role="key" value="copyrightAndOtherRestrictions"></string>
+      <instance class="exe.engine.lom.lomsubs.copyrightAndOtherRestrictionsSub">
+       <dictionary>
+        <string role="key" value="extensiontype_"></string>
+        <none></none>
+        <string role="key" value="source"></string>
+        <instance class="exe.engine.lom.lomsubs.sourceValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="string"></string>
+          <list></list>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="source"></string>
+          <string role="key" value="valueOf_"></string>
+          <string value="LOM-ESv1.0"></string>
+         </dictionary>
+        </instance>
+        <string role="key" value="uniqueElementName"></string>
+        <string value="copyrightAndOtherRestrictions"></string>
+        <string role="key" value="value"></string>
+        <instance class="exe.engine.lom.lomsubs.copyrightAndOtherRestrictionsValueSub">
+         <dictionary>
+          <string role="key" value="extensiontype_"></string>
+          <none></none>
+          <string role="key" value="source"></string>
+          <none></none>
+          <string role="key" value="uniqueElementName"></string>
+          <string value="value"></string>
+          <string role="key" value="value"></string>
+          <none></none>
+          <string role="key" value="valueOf_"></string>
+          <string value="creative commons: attribution - non commercial - share alike"></string>
+         </dictionary>
+        </instance>
+       </dictionary>
+      </instance>
+      <string role="key" value="cost"></string>
+      <none></none>
+      <string role="key" value="description"></string>
+      <none></none>
+      <string role="key" value="uniqueElementName"></string>
+      <string value="rights"></string>
+     </dictionary>
+    </instance>
+    <string role="key" value="technical"></string>
+    <none></none>
+   </dictionary>
+  </instance>
+  <string role="key" value="mxmlforcemediaonly"></string>
+  <bool value="0"></bool>
+  <string role="key" value="mxmlheight"></string>
+  <string value=""></string>
+  <string role="key" value="mxmlprofilelist"></string>
+  <string value=""></string>
+  <string role="key" value="mxmlwidth"></string>
+  <string value=""></string>
+  <string role="key" value="release"></string>
+  <string value="2.7"></string>
+  <string role="key" value="resources"></string>
+  <dictionary>
+   <string role="key" value="1ff7bfc66e68dd44c0c908fb1632f674"></string>
+   <list>
+    <reference key="5"></reference>
+   </list>
+  </dictionary>
+  <string role="key" value="root"></string>
+  <reference key="4"></reference>
+  <string role="key" value="scolinks"></string>
+  <bool value="0"></bool>
+  <string role="key" value="scowsinglepage"></string>
+  <bool value="0"></bool>
+  <string role="key" value="scowwebsite"></string>
+  <bool value="0"></bool>
+  <string role="key" value="style"></string>
+  <unicode value="nervion"></unicode>
+  <string role="key" value="sugaractivityname"></string>
+  <string value=""></string>
+  <string role="key" value="sugarservicename"></string>
+  <string value=""></string>
+  <string role="key" value="tempFile"></string>
+  <bool value="0"></bool>
+ </dictionary>
+</instance>

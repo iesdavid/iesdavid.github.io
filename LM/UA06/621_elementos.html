@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.1. Elementos | UA06. Definición de esquemas y vocabularios </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA06. Definición de esquemas y vocabularios</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA06. Definición de esquemas y vocabularios en XML</a></li>
+   <li><a href="61_dtd.html" class="no-ch">6.1. DTD</a></li>
+   <li class="current-page-parent"><a href="62_construir_una_dtd.html" class="current-page-parent daddy">6.2. Construir una DTD</a>
+   <ul>
+      <li id="active"><a href="621_elementos.html" class="active no-ch">6.2.1. Elementos</a></li>
+      <li><a href="622_entidades.html" class="no-ch">6.2.2. Entidades</a></li>
+      <li><a href="623_atributos.html" class="no-ch">6.2.3. Atributos</a></li>
+      <li><a href="624_tipos_de_atributos.html" class="no-ch">6.2.4. Tipos de atributos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="62_construir_una_dtd.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="622_entidades.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.1. Elementos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_116_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Se realiza mendiante la etiqueta !ELEMENT, la sintaxis es la siguiente</p>
+<p style="text-align: center;"><strong>&lt;!ELEMENT nombre_del_elemento tipo_de_contenido&gt;</strong></p>
+<p>El nombre es el identificador que tendrá el elemento en el documento XML (hay que recordar que se distingue entre mayúsculas y minúsculas).</p>
+<p>El tipo indica el funcionamiento del elemento, relativo al contenido que puede tener: EMPTY, (#PCDATA), ANY, un elemento concreto, secuencias de elementos, elementos opcionales, combinaciones de elementos, cardinalidad.</p>
+<div class="exe-fx exe-accordion">
+<h2>Empty</h2>
+<p>Significa que el elemento no podrá tener contenido alguno, es un elemento vacío (como la etiqueta br de las páginas web).</p>
+<p>Ejemplo de definición de elemento vacío: <strong>&lt;!ELEMENT br EMPTY &gt; =&gt; &lt;br /&gt;</strong></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplo [ &lt;!ELEMENT ejemplo EMPTY&gt; ]&gt;
+&lt;ejemplo&gt;&lt;/ejemplo&gt;
+&lt;ejemplo /&gt;
+&lt;ejemplo&gt;Esto es un ejemplo&lt;/ejemplo&gt; &lt;!-- ERROR: contiene texto --&gt;
+&lt;ejemplo&gt;&lt;a&gt;&lt;/a&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: contiene un elemento &lt;a&gt; --&gt;</code></pre>
+</div>
+</div>
+<h2>(#PCDATA)</h2>
+<p>Elemento de contenido textual que no contenga marcas (Parsed Character Data – Datos de Carácter Procesados):</p>
+<p style="text-align: center;"><strong>&lt;!ELEMENT nombre (#PCDATA)&gt; =&gt; &lt;nombre&gt; Enrique &lt;/nombre&gt;</strong></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplos [
+&lt;!ELEMENT ejemplos (ejemplo*) &gt;
+&lt;!ELEMENT ejemplo (#PCDATA)&gt;
+]&gt;
+&lt;ejemplos&gt;
+   &lt;ejemplo /&gt;
+   &lt;ejemplo&gt;Esto es un ejemplo&lt;/ejemplo&gt;
+   &lt;ejemplo&gt;&lt;a&gt;&lt;/a&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: contiene un elemento &lt;a&gt; --&gt;
+&lt;/ejemplos&gt;</code></pre>
+</div>
+</div>
+<h2 style="text-align: left;">ANY</h2>
+<p style="text-align: left;">Elementos que pueden tener cualquier tipo de contenido, se puede utilizar para dejar la descripción de un elemento como válida en cualquier caso, eliminando cualquier comprobación sintáctica, no debería de aparecer en una versión definitiva del DTD:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE persona [
+&lt;!ELEMENT persona (nombre, apellido)&gt;
+&lt;!ELEMENT nombre (#PCDATA)&gt;
+&lt;!ELEMENT apellido ANY&gt;
+]&gt;
+&lt;persona&gt;
+   &lt;nombre&gt;Enrique&lt;/nombre&gt;
+   &lt;apellido&gt; Rivas
+      &lt;nombre&gt;Enrique&lt;/nombre&gt;
+   &lt;/apellido&gt;
+&lt;/persona&gt;</code></pre>
+</div>
+</div>
+<h2 style="text-align: left;">Elemento Concreto</h2>
+<p style="text-align: left;">En los elementos se puede indicar claramente un contenido concreto para el mismo. Dicho contenido se indica entre paréntesis. Ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE persona [
+&lt;!ELEMENT persona (nombre)&gt;
+&lt;!ELEMENT nombre (#PCDATA)&gt;
+]&gt;
+&lt;persona&gt;
+   &lt;nombre&gt;Juan&lt;/nombre&gt;
+&lt;/persona&gt;
+
+</code></pre>
+</div>
+</div>
+<p style="text-align: left;">En el ejemplo dentro de una etiqueta <strong>persona</strong> obligatoriamente debe de existir una etiqueta <strong>nombre</strong> (una y sólo una).</p>
+<p style="text-align: left;">No sólo se pueden indicar nombres de elementos como contenido concreto, la indicación <strong>#PCDATA</strong> significa que el elemento podrá contener texto literal (tan largo como se desee).</p>
+<h2 style="text-align: left;">Secuencia de elementos</h2>
+<p style="text-align: left;">En el caso de indicar una lista de elementos separados por comas, por ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE persona [
+&lt;!ELEMENT persona (nombre, apellidos, edad)&gt;
+&lt;!ELEMENT nombre (#PCDATA)&gt;
+&lt;!ELEMENT apellidos (#PCDATA)&gt;
+&lt;!ELEMENT edad (#PCDATA)&gt;
+]&gt;
+&lt;persona&gt;
+   &lt;nombre&gt;Antonio&lt;/nombre&gt;
+   &lt;apellidos&gt;Pérez&lt;/apellidos&gt;
+   &lt;edad&gt;35&lt;/edad&gt;
+&lt;/persona&gt;</code></pre>
+</div>
+</div>
+<p style="text-align: left;">Indica que el elemento contendrá la lista de elementos indicada, la cual deberá estar en el mismo orden de la secuencia. Es decir en el ejemplo los <strong>apellidos</strong> no se podrían poner delante del <strong>nombre</strong>.</p>
+<h2 style="text-align: left;">Elementos opcionales</h2>
+<p style="text-align: left;">Los elementos pueden contener elementos opcionales (puede aparecer uno u otro). Ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE artículo [
+&lt;!ELEMENT artículo (id | serie)&gt;
+&lt;!ELEMENT id (#PCDATA)&gt;
+&lt;!ELEMENT serie (#PCDATA)&gt;
+]&gt;
+&lt;artículo&gt;
+   &lt;id&gt;16&lt;/id&gt;
+&lt;/artículo&gt;
+
+</code></pre>
+</div>
+</div>
+<p style="text-align: left;">La barra vertical indica que el elemento puede contener una u otra opción (pero <strong>sólo una</strong>) En el caso anterior aparece <strong>&lt;id&gt;</strong>, también sería válido</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;artículo&gt;
+   &lt;serie&gt;A345H&lt;/serie&gt;
+&lt;/artículo&gt;</code></pre>
+</div>
+</div>
+<p style="text-align: left;">Sin embargo los siguientes tienen error:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;artículo&gt;<br>   &lt;id&gt;16&lt;/id&gt;<br>   &lt;serie&gt;A345H&lt;/serie&gt;<br>&lt;/artículo&gt; &lt;!-- ERROR: están los dos elementos --&gt;
+&lt;artículo&gt;&lt;/artículo&gt; &lt;!-- ERROR: no hay ningún elemento --&gt;</code></pre>
+</div>
+</div>
+<h2 style="text-align: left;">Combinaciones de elementos</h2>
+<p style="text-align: left;">Por supuesto puede haber combinaciones, si tenemos un documento DTD llamado <strong>coordenada.dtd</strong> con este contenido:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!ELEMENT coordenada ((longitud, latitud) | coordUniversal)&gt;
+&lt;!ELEMENT longitud (#PCDATA) &gt;
+&lt;!ELEMENT latitud (#PCDATA) &gt;
+&lt;!ELEMENT coordUniversal (#PCDATA) &gt;</code></pre>
+</div>
+</div>
+<p style="text-align: left;">Sería válido este documento:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE coordenada SYSTEM "coordenada.dtd"&gt;
+&lt;coordenada&gt;
+   &lt;longitud&gt;234&lt;/longitud&gt;
+   &lt;latitud&gt;-23&lt;/latitud&gt;
+&lt;/coordenada&gt;</code></pre>
+</div>
+</div>
+<p style="text-align: left;">Sería válido también:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE coordenada SYSTEM "coordenada.dtd"&gt;
+&lt;coordenada&gt;
+&lt;coordUniversal&gt;1232332&lt;/coordUniversal&gt;
+&lt;/coordenada&gt;</code></pre>
+</div>
+</div>
+<p style="text-align: left;">Otro ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplo [
+&lt;!ELEMENT ejemplo ((a, b)|(b, a))&gt;
+&lt;!ELEMENT a EMPTY&gt;
+&lt;!ELEMENT b EMPTY&gt;
+]&gt;
+&lt;ejemplo&gt;&lt;a /&gt;&lt;b /&gt;&lt;/ejemplo&gt;
+&lt;ejemplo&gt;&lt;b /&gt;&lt;a /&gt;&lt;/ejemplo&gt;
+&lt;ejemplo&gt;&lt;a /&gt;&lt;a /&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: sólo admite &lt;a /&gt;&lt;b /&gt; o &lt;b /&gt;&lt;a /&gt; --&gt;</code></pre>
+</div>
+</div>
+<h2 style="text-align: left;">Cardinalidad</h2>
+<p style="text-align: left;">La cardinalidad es el número de veces que puede aparecer un determinado contenido en un elemento. Se realiza mediante estos símbolos:</p>
+<ul>
+<li style="text-align: left;"><strong>?</strong> Contenido opcional, puede aparecer (una sola vez) o no aparecer</li>
+<li style="text-align: left;"><strong>*</strong> Contenido opcional y repetible. Es decir puede no aparecer y puede incluso aparecer varias veces</li>
+<li style="text-align: left;"><strong>+</strong> Contenido obligatorio y repetible. Tiene que aparecer e incluso puede aparecer varias veces</li>
+</ul>
+<p>Ejemplos:</p>
+<p><strong>? (interrogante)</strong></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplo [
+&lt;!ELEMENT ejemplo (a, b?)&gt;
+&lt;!ELEMENT a EMPTY&gt;
+&lt;!ELEMENT b EMPTY&gt;
+]&gt;
+&lt;ejemplo&gt;&lt;a /&gt;&lt;/ejemplo&gt;
+&lt;ejemplo&gt;&lt;a /&gt;&lt;b /&gt;&lt;/ejemplo&gt;
+&lt;ejemplo&gt;&lt;b /&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: falta el elemento &lt;a /&gt; --&gt;
+&lt;ejemplo&gt;&lt;b /&gt;&lt;b /&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: el elemento &lt;b /&gt; aparece dos veces --&gt;</code></pre>
+</div>
+</div>
+<p><strong>* (asterísco):</strong></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplo [
+&lt;!ELEMENT ejemplo (a*, b)&gt;
+&lt;!ELEMENT a EMPTY&gt;
+&lt;!ELEMENT b EMPTY&gt;
+]&gt;
+&lt;ejemplo&gt;&lt;b /&gt;&lt;/ejemplo&gt;
+&lt;ejemplo&gt;&lt;a /&gt;&lt;a /&gt;&lt;b /&gt;&lt;/ejemplo&gt;
+&lt;ejemplo&gt;&lt;b /&gt;&lt;a /&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: el elemento &lt;a /&gt; aparece después de &lt;b /&gt;--&gt;</code></pre>
+</div>
+</div>
+<p><strong>+ (suma):</strong></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplo [
+&lt;!ELEMENT ejemplo (a+, b)&gt;
+&lt;!ELEMENT a EMPTY&gt;
+&lt;!ELEMENT b EMPTY&gt;
+]&gt;
+&lt;ejemplo&gt;&lt;a /&gt;&lt;b /&gt;&lt;/ejemplo&gt;
+&lt;ejemplo&gt;&lt;a /&gt;&lt;a /&gt;&lt;b /&gt;&lt;/ejemplo&gt;
+&lt;ejemplo&gt;&lt;b /&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: falta el elmento &lt;a /&gt; --&gt;</code></pre>
+</div>
+</div>
+</div>
+<p>Según la instrucción siguiente</p>
+<p style="text-align: center;"><strong>&lt;!ELEMENT pelicula (titulo, direccion+, argumento?, actor*)&gt;</strong></p>
+<p>el elemento <strong>película</strong> consta de un <strong>título</strong>, uno o más elementos de <strong>dirección</strong>, puede o no tener <strong>argumento</strong>, y de varios a ningún <strong>actor</strong> (además se tendría que <strong>respetar ese orden</strong>).</p>
+<p>Otro ejemplo (<strong>polígono.dtd</strong>):</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!ELEMENT poligono ((coordX,coordY)+ | nombre)&gt;
+&lt;!ELEMENT coordX (#PCDATA)&gt;
+&lt;!ELEMENT coordY (#PCDATA)&gt;
+&lt;!ELEMENT nombre (#PCDATA)&gt;</code></pre>
+</div>
+</div>
+<p>Con esa DTD sería válido el documento:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE poligono SYSTEM "polígono.dtd"&gt;
+&lt;poligono&gt;
+   &lt;coordX&gt;12&lt;/coordX&gt;
+   &lt;coordY&gt;13&lt;/coordY&gt;
+   &lt;coordX&gt;17&lt;/coordX&gt;
+   &lt;coordY&gt;23&lt;/coordY&gt;
+   &lt;coordX&gt;34&lt;/coordX&gt;
+   &lt;coordY&gt;56&lt;/coordY&gt;
+&lt;/poligono&gt;</code></pre>
+</div>
+</div>
+<p>Pero también es válido:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE poligono SYSTEM "polígono.dtd"&gt;
+&lt;poligono&gt;
+   &lt;nombre&gt;Triángulo&lt;/nombre&gt;
+&lt;/poligono&gt;</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="62_construir_una_dtd.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="622_entidades.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

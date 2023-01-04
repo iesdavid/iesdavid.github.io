@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.3. Atributos | UA06. Definición de esquemas y vocabularios </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA06. Definición de esquemas y vocabularios</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA06. Definición de esquemas y vocabularios en XML</a></li>
+   <li><a href="61_dtd.html" class="no-ch">6.1. DTD</a></li>
+   <li class="current-page-parent"><a href="62_construir_una_dtd.html" class="current-page-parent daddy">6.2. Construir una DTD</a>
+   <ul>
+      <li><a href="621_elementos.html" class="no-ch">6.2.1. Elementos</a></li>
+      <li><a href="622_entidades.html" class="no-ch">6.2.2. Entidades</a></li>
+      <li id="active"><a href="623_atributos.html" class="active no-ch">6.2.3. Atributos</a></li>
+      <li><a href="624_tipos_de_atributos.html" class="no-ch">6.2.4. Tipos de atributos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="622_entidades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="624_tipos_de_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.3. Atributos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id9">
+<div class="iDevice emphasis0" >
+<div id="ta9_121_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Los atributos dan información sobre un elemento, un atributo sólo puede aparecer una vez en un elemento.</p>
+<p>Una declaración de atributos sigue la siguiente sintaxis:</p>
+<p style="text-align: center;"><strong>&lt;!ATTLIST nombreElemento nombreAtributo tipoAtributo valorInicialAtributo &gt;</strong></p>
+<p>Dónde:</p>
+<ul>
+<li><strong>"nombreElemento"</strong>: Es el nombre del elemento para el que se define un atributo.</li>
+<li><strong>"nombreAtributo"</strong>: Es el nombre del atributo.</li>
+<li><strong>"tipoAtributo"</strong>: Es el tipo de dato que almacenará el atributo.</li>
+<li><strong>"valorInicialAtributo"</strong>: Es el valor por defecto del atributo (texto entre comillas dobles) o la opcionalidad (<strong>#IMPLIED</strong>) u obligatoriedad del mismo sin valor por defecto (<strong>#REQUIRED</strong>) u obligatoriedad del mismo con valor por defecto (<strong>#FIXED</strong>).</li>
+</ul>
+<p>Para definir varios atributos de un mismo elemento, se puede utilizar una o varias declaraciones de atributos. Los siguientes ejemplos son equivalentes:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!ATTLIST nombreElemento nombreAtributo1 tipoAtributo1 valorInicialAtributo1&gt;
+&lt;!ATTLIST nombreElemento nombreAtributo2 tipoAtributo2 valorInicialAtributo2&gt;
+&lt;!ATTLIST nombreElemento nombreAtributo1 tipoAtributo1 valorInicialAtributo1 nombreAtributo2 tipoAtributo2 valorInicialAtributo2 &gt;</code></pre>
+</div>
+</div>
+<p>Se usa muy habitualmente para indicar de forma cómoda todos los atributos de un determinado elemento:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!ELEMENT directorio (persona)+&gt;
+&lt;!ELEMENT persona (#PCDATA)&gt;
+&lt;!ATTLIST persona nacionalidad CDATA "Española" sexo (Hombre | Mujer) #IMPLIED id ID #REQUIRED&gt;
+
+</code></pre>
+</div>
+</div>
+<p>Para ese documento DTD, sería válido este XML:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE directorio SYSTEM "directorio.dtd"&gt;
+&lt;directorio&gt;
+   &lt;persona nacionalidad="Francesa" id="A1234"&gt;Vivian Maret&lt;/persona&gt;
+   &lt;persona id="A789"&gt;Juan Martín&lt;/persona&gt;
+   &lt;persona sexo="Hombre" id="A12"&gt;Rafael Díaz&lt;/persona&gt;
+&lt;/directorio&gt;</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id10">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Declarar atributos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_122_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Esta declaración:</p>
+<p style="text-align: center;"><strong>&lt;!ATTLIST persona nacionalidad CDATA&gt;</strong></p>
+<p>Significa que hemos definido el atributo nacionalidad correspondiente al elemento persona. Que será de tipo CDATA, es decir texto normal. Así en un XML que se valide con el DTD en el que está la instrucción anterior, podremos:</p>
+<p style="text-align: center;"><strong><persona nacionalidad="”española”"></persona></strong></p>
+<p>Para indicar el tipo de valores de un atributo se usa la palabra <strong>CDATA</strong> para indicar que el atributos contiene texto (CDATA es el acrónimo de Character DATA).</p>
+<p>A diferencia de <strong>#PCDATA</strong>, su contenido no es procesado, lo que significa que puede contener cualquier valor, incluidos los caracteres no permitidos en los elementos &lt;, &gt;, &amp;, ' y “.<ejemplo color=""></ejemplo> <ejemplo color="amarillo"></ejemplo> <ejemplo color="azul marino #000080"></ejemplo> <ejemplo></ejemplo> <!-- ERROR: falta el atributo "color", obligatorio debido al #REQUIRED --></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplos [
+&lt;!ELEMENT ejemplo EMPTY&gt;
+&lt;!ATTLIST ejemplo color CDATA #REQUIRED&gt;
+]&gt;
+&lt;ejemplos&gt;
+   &lt;ejemplo color=""&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo color="amarillo"&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo color="azul marino #000080"&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: falta el atributo "color", obligatorio debido al #REQUIRED --&gt;
+&lt;/ejemplos&gt;</code></pre>
+</div>
+</div>
+<p>Al declarar un atributo, lo último que se indica es la propiedad relativa al <strong>valor por defecto del atributo</strong>. Se comentan a continuación sus posibilidades:<br><br></p>
+<div class="exe-fx exe-accordion">
+<h2>Valor por defecto concreto</h2>
+<p>Si al final de la declaración de un atributo aparece un valor concreto, se entiende que ese será el valor por defecto. Es decir que se podría no utilizar el atributo en un elemento y entonces dicho atributo tomaría dicho valor.</p>
+<p>Por ejemplo supongamos que éste es el archivo <strong>directorio.dtd</strong>:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!ELEMENT directorio ( persona )+&gt;
+&lt;!ELEMENT persona (#PCDATA)&gt;
+&lt;!ATTLIST persona nacionalidad CDATA "Española"&gt;</code></pre>
+</div>
+</div>
+<p>Se define en él el atributo nacionalidad para el elemento persona como un atributo que contendrá texto de todo tipo, pero que por defecto toma el valor <strong>Española</strong> (nacionalidad por defecto en dicho archivo).</p>
+<p>Entonces este archivo XML será válido:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE directorio SYSTEM "directorio.dtd"&gt;
+&lt;directorio&gt;
+   &lt;persona nacionalidad="Francesa"&gt;Vivian Maret&lt;/persona&gt;
+   &lt;persona&gt;Juan Martín&lt;/persona&gt;
+&lt;/directorio&gt;</code></pre>
+</div>
+</div>
+<p>Entonces para <strong>Vivian Maret</strong> se ha indicado explícitamente la <strong>nacionalidad</strong>, pero no se ha usado el atributo para <strong>Juan Martín</strong>, por lo que tomará la nacionalidad <strong>española</strong>.</p>
+<p>Otro ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE ejemplos [
+&lt;!ELEMENT ejemplo EMPTY&gt;
+&lt;!ATTLIST ejemplo color CDATA "verde"&gt;
+]&gt;
+&lt;ejemplos&gt;
+    &lt;ejemplo&gt;&lt;/ejemplo&gt;
+    &lt;ejemplo color=""&gt;&lt;/ejemplo&gt;
+    &lt;ejemplo color="amarillo"&gt;&lt;/ejemplo&gt;
+    &lt;ejemplo color="verde"&gt;&lt;/ejemplo&gt;
+&lt;/ejemplos&gt;</code></pre>
+</div>
+</div>
+<h2>Valores fijos</h2>
+<p>Se puede utilizar el término <strong>#FIXED</strong> antes de indicar un valor fijo para un atributo. En ese caso en ningún documento XML se podrá modificar dicho atributo. Ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!ELEMENT directorio ( persona )+&gt;
+&lt;!ELEMENT persona (#PCDATA)&gt;
+&lt;!ATTLIST persona nacionalidad CDATA #FIXED "Española"&gt;
+
+</code></pre>
+</div>
+</div>
+<p>El atributo <strong>nacionalidad</strong> no podrá tomar ningún valor que no sea el valor <strong>Española</strong>, impidiendo tomar otra nacionalidad. En la práctica este tipo de atributos no se usa demasiado, sólo se usa en el caso de que la presencia o no de dicho atributo en un elemento sea determinante.</p>
+<p>Otro ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplos [
+&lt;!ELEMENT ejemplo EMPTY&gt;
+&lt;!ATTLIST ejemplo color CDATA #FIXED "verde"&gt;
+]&gt;
+&lt;ejemplos&gt;
+   &lt;ejemplo&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo color="verde"&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo color=""&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: el atributo "color" no tiene el valor "verde" --&gt;
+   &lt;ejemplo color="amarillo"&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: el atributo "color" no tiene el valor "verde" --&gt;
+&lt;/ejemplos&gt;</code></pre>
+</div>
+</div>
+<h2>Valores requeridos</h2>
+<p>En este caso se usa la palabra <strong>#REQUIRED</strong> indicando con ello que siempre hay que dar valor al atributo. Ejemplo:</p>
+<p style="text-align: center;"><strong>&lt;!ATTLIST persona nacionalidad CDATA #REQUIRED&gt;</strong></p>
+<p>Un documento XML que utilice el elemento persona deberá especificar obligatoriamente la nacionalidad. Obviamente usando <strong>#REQUIRED</strong> no se puede indicar un valor por defecto (al no poder dejarse sin especificar el atributo).</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplos [
+&lt;!ELEMENT ejemplo EMPTY&gt;
+&lt;!ATTLIST ejemplo color CDATA #REQUIRED&gt;
+]&gt;
+&lt;ejemplos&gt;
+   &lt;ejemplo color=""&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo color="amarillo"&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo color="azul marino #000080"&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: falta el atributo "color" --&gt;
+&lt;/ejemplos&gt;</code></pre>
+</div>
+</div>
+<h2>Valor opcional</h2>
+<p>La palabra <strong>#IMPLIED</strong> especificada en el atributo indicaría que dicho atributo puede quedarse sin valor; es decir no posee valor por defecto, pero puede quedarse sin especificar (quedaría nulo por tanto).</p>
+<p style="text-align: center;"><strong>&lt;!ATTLIST persona nacionalidad CDATA #IMPLIED&gt;</strong></p>
+<p>En el ejemplo, el atributo <strong>nacionalidad</strong> no es obligatorio especificarlo, puede quedar <strong>sin valor</strong>. Nuevamente en este caso no se puede especificar un valor por defecto (sería absurdo).</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE ejemplos [
+&lt;!ELEMENT ejemplo EMPTY&gt;
+&lt;!ATTLIST ejemplo color CDATA #IMPLIED&gt;
+]&gt;
+&lt;ejemplos&gt;
+   &lt;ejemplo&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo color=""&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo color="amarillo"&gt;&lt;/ejemplo&gt;
+   &lt;ejemplo color="azul marino #000080"&gt;&lt;/ejemplo&gt;
+&lt;/ejemplos&gt;</code></pre>
+</div>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="622_entidades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="624_tipos_de_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

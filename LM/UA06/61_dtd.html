@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.1. DTD | UA06. Definición de esquemas y vocabularios </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA06. Definición de esquemas y vocabularios</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA06. Definición de esquemas y vocabularios en XML</a></li>
+   <li id="active"><a href="61_dtd.html" class="active no-ch">6.1. DTD</a></li>
+   <li><a href="62_construir_una_dtd.html" class="daddy">6.2. Construir una DTD</a>
+   <ul class="other-section">
+      <li><a href="621_elementos.html" class="no-ch">6.2.1. Elementos</a></li>
+      <li><a href="622_entidades.html" class="no-ch">6.2.2. Entidades</a></li>
+      <li><a href="623_atributos.html" class="no-ch">6.2.3. Atributos</a></li>
+      <li><a href="624_tipos_de_atributos.html" class="no-ch">6.2.4. Tipos de atributos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="62_construir_una_dtd.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.1. DTD</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_115_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>DTD (Document Type Definition) es la definición de cómo se construye un documento XML para que se ajuste a las necesidades previamente analizadas. Es decir, establece qué elementos son aceptados y en qué posiciones deben estar dentro de un documento XML.</p>
+<p>Cuando se define una DTD y se referencia dentro de un documento XML, se establece una relación de:</p>
+<ul>
+<li>Qué léxico es el que se espera.</li>
+<li>Qué reglas sintácticas debe cumplir nuestro lenguaje.</li>
+</ul>
+<p>El significado semántico se proporciona en el uso del DTD y del documento XML al generar las aplicaciones que lo utilizan.</p>
+<p>Por tanto, antes de crear un documento XML se deberá analizar qué elementos y etiquetas se van a necesitar para la aplicación que se quiere crear. Para esto sirve una DTD.</p>
+<p>¿Por qué resulta importante la creación de DTD? Principalmente, cuando se analiza un almacenamiento de información en XML es porque esa información es importante compartirla. Pero aunque la compartición de la información pueda resultar interesante, que la información esté sujeta a una serie de reglas para que todos los que lo utilicen (en consultas, inserciones, modificaciones, borrados, etc.); se asegure que esté bien formado y resulte válido para el uso por terceras aplicaciones. Si en el proceso de acceso y modificación del documento XML se incumple su estructura, nos encontraremos con un documento no válido y con un futuro problema en su futura utilización. Por tanto una DTD permitirá asegurar que la información que contiene es válida y cumple los requisitos de intercambio de información entre terceras (personas con la misma DTD).</p>
+<p>La creación de una DTD resulta muy simple y se verá más adelante pero resulta interesante como ubicar estas declaraciones:</p>
+<ol>
+<li>La DTD se puede ubicar dentro del propio documento XML.</li>
+<li>La DTD se ubica fuera del documento XML (en un fichero externo).</li>
+</ol>
+<p>Ambas realizan la misma función pero resulta más cómoda utilizar un fichero externo para almacenar la DTD y realizar un enlace en el documento XML para que la use. Además de la comodidad, existe otra ventaja fundamental: no se almacena en cada documento XML la DTD. Si tuviéramos muchos ficheros XML que se basan en la misma especificación DTD, se tendría que cambiar en todos los fichero la declaración de la DTD, cosa que si estuviera enlazado en un fichero externo, se cambiaría una única vez y todos los documentos XML lo aprovecharían. Además se estaría almacenando la misma información en todos los documentos, lo que aumentaría el tamaño del documento XML.</p>
+<p>Para continuar, establezcamos un ejemplo en el que utilizar una DTD. Se quiere almacenar los mensajes de móviles que se envían a un servidor. Los datos que se guardarán son los siguientes:</p>
+<ul>
+<li>Número de teléfono del usuario.</li>
+<li>Fecha de envío.</li>
+<li>Hora de envío.</li>
+<li>Contenido del mensaje.</li>
+</ul>
+<p>Un ejemplo de documento XML que guarde estos mensajes SMS podría ser el siguiente:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>
+&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;!DOCTYPE BDsms SYSTEM "BDsms.dtd"&gt;
+&lt;BDsms&gt;
+&lt;sms&gt;
+&lt;telefono&gt;955 55 66 55&lt;/telefono&gt;
+&lt;fecha&gt;1/7/2011&lt;/fecha&gt;
+&lt;hora&gt;23:55&lt;/hora&gt;
+&lt;mensaje&gt;Juego1: Tetris&lt;/mensaje&gt;
+&lt;/sms&gt;
+&lt;sms&gt;
+&lt;telefono&gt;745 15 56 11&lt;/telefono&gt;
+&lt;fecha&gt;22/9/2011&lt;/fecha&gt;
+&lt;hora&gt;15:05&lt;/hora&gt;
+&lt;mensaje&gt;Juego2: Arkanoid&lt;/mensaje&gt;
+&lt;/sms&gt;
+&lt;sms&gt;
+&lt;telefono&gt;842 35 22 00&lt;/telefono&gt;
+&lt;fecha&gt;10/11/2011&lt;/fecha&gt;
+&lt;hora&gt;09:22&lt;/bora&gt;
+&lt;mensaje&gt;Juego3: Comecocos&lt;/mensaje&gt;
+&lt;/sms&gt;
+&lt;/BDsms&gt;</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id2">
+<div class="iDevice emphasis0" >
+<div id="ta2_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La DTD que permite establecer el formato de intercambio de estos mensajes SMS en el documento XML, podría ser la siguiente (fichero "BDsms.dtd"):</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!ELEMENT BDsms (sms*)&gt;
+&lt;!ELEMENT sms (telefono, fecha, hora, mensaje)&gt;
+&lt;!ELEMENT telefono (#PCDATA)&gt;
+&lt;!ELEMENT fecha (#PCDATA)&gt;
+&lt;!ELEMENT hora (#PCDATA)&gt;
+&lt;!ELEMENT mensaje (#PCDATA)&gt;</code></pre>
+</div>
+</div>
+<p>Observa que el fichero <strong>BDsms.dtd</strong> está referenciado en el documento XML. Si se quisiera incluir todo en el mismo documento XML, entonces quedaría:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE BDsms
+[
+&lt;!ELEMENT BDsms (sms*)&gt;
+&lt;!ELEMENT sms (telefono, fecha, hora, mensaje)&gt;
+&lt;!ELEMENT telefono (#PCDATA)&gt;
+&lt;!ELEMENT fecha (#PCDATA)&gt;
+&lt;!ELEMENT hora (#PCDATA)&gt;
+&lt;!ELEMENT mensaje (#PCDATA)&gt;
+]&gt;
+&lt;BDsms&gt;
+&lt;sms&gt;
+&lt;telefono&gt;955 55 66 55&lt;/telefono&gt;
+...</code></pre>
+</div>
+</div>
+<p><br><br></p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="62_construir_una_dtd.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

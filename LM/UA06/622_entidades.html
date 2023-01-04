@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.2. Entidades | UA06. Definición de esquemas y vocabularios </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA06. Definición de esquemas y vocabularios</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA06. Definición de esquemas y vocabularios en XML</a></li>
+   <li><a href="61_dtd.html" class="no-ch">6.1. DTD</a></li>
+   <li class="current-page-parent"><a href="62_construir_una_dtd.html" class="current-page-parent daddy">6.2. Construir una DTD</a>
+   <ul>
+      <li><a href="621_elementos.html" class="no-ch">6.2.1. Elementos</a></li>
+      <li id="active"><a href="622_entidades.html" class="active no-ch">6.2.2. Entidades</a></li>
+      <li><a href="623_atributos.html" class="no-ch">6.2.3. Atributos</a></li>
+      <li><a href="624_tipos_de_atributos.html" class="no-ch">6.2.4. Tipos de atributos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="621_elementos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="623_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.2. Entidades</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id5">
+<div class="iDevice emphasis0" >
+<div id="ta5_117_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Las entidades son elementos XML que permiten indicar abreviaturas de texto (o referencias a elementos externos abreviadas) o utilizar caracteres que de otra forma serían inválidos en el documento. En XML están definidas las siguientes entidades:</p>
+<table class="exe-table">
+<thead>
+<tr>
+<td style="text-align: center;">Entidad</td>
+<td>Sustitución</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">&amp;lt;</td>
+<td style="text-align: center;">&lt;</td>
+</tr>
+<tr>
+<td style="text-align: center;">&amp;gt;</td>
+<td style="text-align: center;">&gt;</td>
+</tr>
+<tr>
+<td style="text-align: center;">&amp;amp;</td>
+<td style="text-align: center;">&amp;</td>
+</tr>
+<tr>
+<td style="text-align: center;">&amp;apos;</td>
+<td style="text-align: center;">'</td>
+</tr>
+<tr>
+<td style="text-align: center;">&amp;quot;</td>
+<td style="text-align: center;">"</td>
+</tr>
+<tr>
+<td style="text-align: center;">&amp;nbsp;</td>
+<td style="text-align: center;">(Espacio)</td>
+</tr>
+</tbody>
+</table>
+<p>Estas entidades no hay que declararlas en ningún DTD, todos los analizadores de XML estándar conocen estas entidades. Ejemplo:</p>
+<p style="text-align: center;"><strong>&lt;autor&gt;Leopoldo Alas &amp;apos;Clarín&amp;apos;&lt;/autor&gt;</strong></p>
+<p>El texto PCDATA del autor es <strong>Leopoldo Alas 'Clarín'</strong> (así se visualizará en el navegador).</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Entidades a caracteres especiales</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_118_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La etiqueta inicial &lt;?xml permite indicar (entre otras cosas) el juego de caracteres que utiliza un documento XML (normalmente Unicode, UTF8).</p>
+<p>Si deseamos indicar un carácter especial que no está contenido en nuestro teclado, conociendo su código en el juego de caracteres que utiliza el documento, podemos especificarle con la sintaxis:</p>
+<p style="text-align: center;"><strong>&amp;#número;</strong></p>
+<p>Donde el número es el código del carácter en decimal. Ejemplo:</p>
+<p style="text-align: center;"><strong>&lt;calle&gt;Kantstra&amp;#223;e, Berlín&lt;/calle&gt;</strong></p>
+<p>En el navegador este elemento aparecería como:</p>
+<p style="text-align: center;"><strong>&lt;calle&gt;Kantstraße, Berlín&lt;/calle&gt;</strong></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id7">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Entidades generales</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_119_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Se usan como abreviaturas que aparecerán en el documento XML. La razón de su uso es facilitar la escritura de nombres repetitivos (nombres de la empresa, direcciones muy utilizadas,...). La sintaxis para declarar una entidad de este tipo es:</p>
+<p style="text-align: center;"><strong>&lt;!ENTITY nombre "texto"&gt;</strong></p>
+<p>Para usar en un documento XML la entidad declarada, se usa:</p>
+<p style="text-align: center;"><strong>&amp;nombre;</strong></p>
+<p>Ejemplo de declaración de una entidad:</p>
+<p style="text-align: center;"><strong>&lt;!ENTITY mayor "Calle Mayor Principal" &gt;</strong></p>
+<p>uso en un documento XML:</p>
+<p style="text-align: center;"><strong>&lt;dirección&gt;&amp;mayor; 18&lt;/dirección&gt;</strong></p>
+<p>La dirección indicada es Calle Mayor Principal 18.</p>
+<p>Incluso se pueden indicar símbolos que no son PCDATA al definir entidades:</p>
+<p style="text-align: center;"><strong>&lt;!ENTITY negCursiva "&lt;strong&gt;&lt;em&gt;&lt;/em&gt;&lt;/strong&gt;"&gt;</strong></p>
+<p>El documento XML que utilice dicha entidad incluirá todos los símbolos (y por lo tanto estará especificando etiquetas en el código).</p>
+<p>Un uso muy interesante es usar entidades que hacen referencia a archivos externos (mediante su dirección URL), por ejemplo:</p>
+<p style="text-align: center;"><strong>&lt;!ENTITY direcciónCompleta SYSTEM "direccion.txt" &gt;</strong></p>
+<p>Es la palabra <strong>SYSTEM</strong> la que indica que la entidad no es un texto sino que es el contenido de un archivo. El uso de la entidad <strong>&amp;direcciónCompleta;</strong> en un documento XML provocará que en dicho documento se añada el contenido del archivo <strong>dirección.txt</strong> (en la posición exacta en la que esté colocada la referencia a la entidad).</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id8">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Entidades de parámetros</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_120_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Sólo se pueden utilizar dentro del DTD (no en el documento XML).</p>
+<p>Su uso más habitual es construir DTD utilizando las entidades definidas a fin de ahorrar trabajo al crear el propio DTD.</p>
+<p>Su uso es similar a las entidades generales sólo que utilizan el símbolo<strong> %</strong> en lugar del símbolo <strong>&amp;</strong>. Al igual que las generales deben de ser declaradas antes de poder usarse:</p>
+<p style="text-align: center;"><strong>&lt;!ENTITY % mayor "Calle Mayor Principal" &gt;</strong></p>
+<p>Y su uso (dentro del DTD), por ejemplo:</p>
+<p style="text-align: center;"><strong>&lt;!ATTLIST persona dirección CDATA "%mayor;"&gt;</strong></p>
+<p>En este caso las comillas dobles son obligatorias porque los valores por defecto van entrecomillados (como se ha visto anteriormente).</p>
+<p>Las entidades de parámetros pueden utilizar archivos externos, ejemplo de DTD:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!ENTITY % directorio SYSTEM "directorio.dtd" &gt;
+%directorio;
+&lt;!ELEMENT empresa (razónSocial, dirección) &gt;
+&lt;!ELEMENT razónSocial (#PCDATA) &gt;</code></pre>
+</div>
+</div>
+<p>De esta forma se construye un DTD con el contenido ya especificado en otro DTD. En el ejemplo las empresas constan de elementos <strong>razónSocial</strong> y de <strong>directorio</strong>. El elemento <strong>directorio</strong> no se define, sino que su descripción está especificada en <strong>directorio.dtd</strong>.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="621_elementos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="623_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
