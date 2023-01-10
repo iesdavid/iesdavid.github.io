@@ -197,7 +197,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="168758"></int>
+                  <int value="168764"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -211,7 +211,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_114_2.6"></unicode>
+                <unicode value="0_114_2.10"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="5">
                  <dictionary>
@@ -222,7 +222,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                   <string role="key" value="_storageName"></string>
                   <string value="ORM-object-relational-mapping.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmp2mfnve\\ORM-object-relational-mapping.png"></string>
+                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmpx0zj1y\\ORM-object-relational-mapping.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="b4336d389724d3c40c48bf56837822bd"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -249,7 +249,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="168759"></int>
+                  <int value="168765"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -263,7 +263,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_114_2.7"></unicode>
+                <unicode value="0_114_2.11"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="6">
                  <dictionary>
@@ -274,7 +274,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                   <string role="key" value="_storageName"></string>
                   <string value="ORM-object-relational-mapping.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmp2mfnve\\ORM-object-relational-mapping.png"></string>
+                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmpx0zj1y\\ORM-object-relational-mapping.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="b4336d389724d3c40c48bf56837822bd"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -303,7 +303,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
            <string role="key" value="intlinks_to_anchors"></string>
            <dictionary></dictionary>
            <string role="key" value="nextImageId"></string>
-           <int value="8"></int>
+           <int value="12"></int>
            <string role="key" value="parentNode"></string>
            <reference key="4"></reference>
           </dictionary>
@@ -1258,7 +1258,7 @@ public class Student {
                       <instance class="exe.engine.field.TextField">
                        <dictionary>
                         <string role="key" value="_id"></string>
-                        <int value="168760"></int>
+                        <int value="168766"></int>
                         <string role="key" value="_idevice"></string>
                         <none></none>
                         <string role="key" value="_instruc"></string>
@@ -1272,7 +1272,7 @@ public class Student {
                        </dictionary>
                       </instance>
                       <string role="key" value="_id"></string>
-                      <unicode value="5_119_2.3"></unicode>
+                      <unicode value="5_119_2.5"></unicode>
                       <string role="key" value="_imageResource"></string>
                       <instance class="exe.engine.resource.Resource" reference="23">
                        <dictionary>
@@ -1283,7 +1283,7 @@ public class Student {
                         <string role="key" value="_storageName"></string>
                         <string value="student.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmp2mfnve\\student.png"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpx0zj1y\\student.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="f12f542b1a8a722e0c57ad8350e54615"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1312,7 +1312,7 @@ public class Student {
                  <string role="key" value="intlinks_to_anchors"></string>
                  <dictionary></dictionary>
                  <string role="key" value="nextImageId"></string>
-                 <int value="4"></int>
+                 <int value="6"></int>
                  <string role="key" value="parentNode"></string>
                  <reference key="22"></reference>
                 </dictionary>
@@ -1777,6 +1777,8 @@ private String nombre;
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
@@ -1854,7 +1856,7 @@ public class PersonasEntity implements Serializable {
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="22"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -2318,6 +2320,8 @@ public class PersonasEntity implements Serializable {
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Ya hemos llegado al punto en que tenemos todo preparado para poder trabajar con Hibernate en las operaciones fundamentales de una base de datos, las operaciones CRUD.&lt;/p&gt;
 &lt;ul&gt;
@@ -2349,7 +2353,7 @@ public class PersonasEntity implements Serializable {
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="36"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2448,6 +2452,8 @@ public class PersonasEntity implements Serializable {
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Guardar&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
@@ -2463,7 +2469,126 @@ public class PersonasEntity implements Serializable {
     }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Leer&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Para la lectura existen varios métodos de la clase &lt;strong&gt;Session&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;get(Class,Serializable)&lt;/strong&gt;, al que le deberemos pasar la clase que queremos leer y su clave primaria.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;load(Class, Serializable)&lt;/strong&gt; acepta un objeto Class, y cargará el estado de una nueva instancia de esa clase, inicializada en estado persistente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;private static void leer(int id) throws Exception {
+   session = instancia.abrir();
+   Transaction transaction=session.beginTransaction();
+   PersonasEntity persona = session.load(PersonasEntity.class, id);&lt;br&gt;//   PersonasEntity persona = session.get(PersonasEntity.class, id); // Esta línea también funcionaría como la anterior
+   System.out.println(persona.getNombre());
+   transaction.commit();
+   instancia.cerrar();
+}&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Para sentencias SQL, también se pueden usar varios métodos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;createQuery&lt;/li&gt;
+&lt;li&gt;createNamedQuery&lt;/li&gt;
+&lt;li&gt;createNativeQuery&lt;/li&gt;
+&lt;li&gt;createSQLQuery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;exe-fx exe-tabs&quot;&gt;
+&lt;h2&gt;createQuery&lt;/h2&gt;
+Método usado para crear consultas dinámicas, las cuales están definidas directamente mediante un String. Por ejemplo:&lt;br&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;public List findWithName(String name) {
+    return em.createQuery(
+        &quot;SELECT c FROM Customer c WHERE c.name LIKE :custName&quot;)
+        .setParameter(&quot;custName&quot;, name)
+        .setMaxResults(10)
+        .getResultList();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Este método permite usar lenguaje HQL. Por ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;public List findWithName(String name) {
+    return em.createQuery(
+        &quot;FROM Customer c WHERE c.name LIKE :custName&quot;)
+        .setParameter(&quot;custName&quot;, name)
+        .setMaxResults(10)
+        .getResultList();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;createNamedQuery&lt;/h2&gt;
+&lt;p&gt;Método usado para crear consultas estáticas o consultas que usan&amp;nbsp;anotación &lt;strong&gt;javax.persistence.NamedQuery&lt;/strong&gt;. El elemento&amp;nbsp;&lt;strong&gt;name&lt;/strong&gt; de &lt;strong&gt;@NamedQuery&lt;/strong&gt; especifica el nombre de la consulta que será usada mediante el método &lt;strong&gt;createNamedQuery. &lt;/strong&gt;La consulta en sí de &lt;strong&gt;@NamedQuery&lt;/strong&gt; estára especificada en &lt;strong&gt;query&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;@NamedQuery(
+    name=&quot;findAllCustomersWithName&quot;,
+    query=&quot;SELECT c FROM Customer c WHERE c.name LIKE :custName&quot;
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Para acceder a este método, se realiza una llamada al nombre de la consulta:&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;@PersistenceContext
+public EntityManager em;
+...
+customers = em.createNamedQuery(&quot;findAllCustomersWithName&quot;)
+    .setParameter(&quot;custName&quot;, &quot;Smith&quot;)
+    .getResultList();&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;createNativeQuery y createSQLQuery&lt;/h2&gt;
+&lt;p&gt;Permite ejecutar consultas con código SQL nativo.&lt;/p&gt;
+&lt;p&gt;sesion.createSQLQuery(&quot;SELECT * FROM PersonasEntity WHERE idPersona=6&quot;).iterate();&lt;/p&gt;
+&lt;p&gt;sesion.createNativeQuery(&quot;SELECT * FROM PersonasEntity WHERE idPersona=6&quot;).iterate();&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Los tipos de consulta SQL más básicas para obtener una lista de escalares (valores) son los siguientes:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sess.createNativeQuery(&quot;SELECT * FROM Personas&quot;).list();
+entityManager.createNativeQuery(&quot;SELECT&amp;nbsp;ID,NOMBRE, EDAD FROM PERSONAS FROM Personas&quot; ).getResultList();&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Estas retornarán una lista de objetos arrays (Object[]) con valores escalares para cada columna en la tabla PERSONAS. Hibernate utilizará ResultSetMetadata para deducir el orden real y los tipos de los valores escalares retornados.&lt;/p&gt;
+&lt;p&gt;Otro tipo de consulta más compleja, es la consulta de entidades. Para obtener los objetos entidades desde una consulta sql nativa, se utiliza por medio de addEntity().&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;sess.createNativeQuery(&quot;SELECT * FROM PERSONAS&quot;).addEntity(Persona.class).list;
+entityManager.createNativeQuery(&quot;SELECT * FROM PERSONAS&quot;, Persona.class).getResultList();&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Actualizar&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;    private static void actualizar(int id,String nombre, String tipo) throws Exception {
+        session = instancia.abrir();
+        Transaction transaction = session.beginTransaction();
+        PersonasEntity persona = session.get(PersonasEntity.class,id);
+        persona.setNombre(nombre);
+        persona.setTipo(tipo);
+       // session.saveOrUpdate(persona);&lt;br&gt;&amp;nbsp;      // session.merge(persona);
+        session.update(persona);
+        transaction.commit();
+        instancia.cerrar();
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Para actualizar podemos usar:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;update&lt;/strong&gt;, actualiza un objeto usando su &lt;strong&gt;id&lt;/strong&gt; y seteando los campos que se deseen modificar.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;saveOrUpdate&lt;/strong&gt;, muchas veces resulta cómodo al programar no tener que estar pendiente de si un objeto va a insertarse o actualizarse. Para ello, este método, inserta o actualiza en la base de datos en función de si ya existe o no dicha fila.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;merge&lt;/strong&gt;, copia el estado del objeto dado en el objeto persistente con el mismo identificador.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Borrar&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La mejor forma de eliminar un objeto es cargarlo mediante &lt;strong&gt;get&lt;/strong&gt; o &lt;strong&gt;load &lt;/strong&gt;según algún criterio para luego eliminarlo.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;session.get(Entidad.class, 8);
+session.delete(profesor);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
@@ -2487,7 +2612,7 @@ public class PersonasEntity implements Serializable {
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="36"></reference>
              </dictionary>
             </instance>
            </list>

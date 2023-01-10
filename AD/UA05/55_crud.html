@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
 <link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
@@ -13,6 +14,7 @@
 <meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
 <script type="text/javascript" src="exe_highlighter.js"></script>
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
@@ -78,7 +80,126 @@
     }
 </code></pre>
 </div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Leer</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para la lectura existen varios métodos de la clase <strong>Session</strong>:</p>
+<ul>
+<li><strong>get(Class,Serializable)</strong>, al que le deberemos pasar la clase que queremos leer y su clave primaria.</li>
+<li><strong>load(Class, Serializable)</strong> acepta un objeto Class, y cargará el estado de una nueva instancia de esa clase, inicializada en estado persistente.</li>
+</ul>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>private static void leer(int id) throws Exception {
+   session = instancia.abrir();
+   Transaction transaction=session.beginTransaction();
+   PersonasEntity persona = session.load(PersonasEntity.class, id);<br>//   PersonasEntity persona = session.get(PersonasEntity.class, id); // Esta línea también funcionaría como la anterior
+   System.out.println(persona.getNombre());
+   transaction.commit();
+   instancia.cerrar();
+}</code></pre>
 </div>
+</div>
+<p>Para sentencias SQL, también se pueden usar varios métodos:</p>
+<ul>
+<li>createQuery</li>
+<li>createNamedQuery</li>
+<li>createNativeQuery</li>
+<li>createSQLQuery</li>
+</ul>
+<div class="exe-fx exe-tabs">
+<h2>createQuery</h2>
+Método usado para crear consultas dinámicas, las cuales están definidas directamente mediante un String. Por ejemplo:<br>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public List findWithName(String name) {
+    return em.createQuery(
+        "SELECT c FROM Customer c WHERE c.name LIKE :custName")
+        .setParameter("custName", name)
+        .setMaxResults(10)
+        .getResultList();
+}</code></pre>
+</div>
+</div>
+<p>Este método permite usar lenguaje HQL. Por ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public List findWithName(String name) {
+    return em.createQuery(
+        "FROM Customer c WHERE c.name LIKE :custName")
+        .setParameter("custName", name)
+        .setMaxResults(10)
+        .getResultList();
+}</code></pre>
+</div>
+</div>
+<h2>createNamedQuery</h2>
+<p>Método usado para crear consultas estáticas o consultas que usan&nbsp;anotación <strong>javax.persistence.NamedQuery</strong>. El elemento&nbsp;<strong>name</strong> de <strong>@NamedQuery</strong> especifica el nombre de la consulta que será usada mediante el método <strong>createNamedQuery. </strong>La consulta en sí de <strong>@NamedQuery</strong> estára especificada en <strong>query</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@NamedQuery(
+    name="findAllCustomersWithName",
+    query="SELECT c FROM Customer c WHERE c.name LIKE :custName"
+)</code></pre>
+</div>
+</div>
+<p>Para acceder a este método, se realiza una llamada al nombre de la consulta:<br><br></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@PersistenceContext
+public EntityManager em;
+...
+customers = em.createNamedQuery("findAllCustomersWithName")
+    .setParameter("custName", "Smith")
+    .getResultList();</code></pre>
+</div>
+</div>
+<h2>createNativeQuery y createSQLQuery</h2>
+<p>Permite ejecutar consultas con código SQL nativo.</p>
+<p>sesion.createSQLQuery("SELECT * FROM PersonasEntity WHERE idPersona=6").iterate();</p>
+<p>sesion.createNativeQuery("SELECT * FROM PersonasEntity WHERE idPersona=6").iterate();</p>
+</div>
+<p>Los tipos de consulta SQL más básicas para obtener una lista de escalares (valores) son los siguientes:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>sess.createNativeQuery("SELECT * FROM Personas").list();
+entityManager.createNativeQuery("SELECT&nbsp;ID,NOMBRE, EDAD FROM PERSONAS FROM Personas" ).getResultList();</code></pre>
+</div>
+</div>
+<p>Estas retornarán una lista de objetos arrays (Object[]) con valores escalares para cada columna en la tabla PERSONAS. Hibernate utilizará ResultSetMetadata para deducir el orden real y los tipos de los valores escalares retornados.</p>
+<p>Otro tipo de consulta más compleja, es la consulta de entidades. Para obtener los objetos entidades desde una consulta sql nativa, se utiliza por medio de addEntity().</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>sess.createNativeQuery("SELECT * FROM PERSONAS").addEntity(Persona.class).list;
+entityManager.createNativeQuery("SELECT * FROM PERSONAS", Persona.class).getResultList();</code></pre>
+</div>
+</div>
+<p><br><br></p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Actualizar</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-java">
+<div>
+<pre><code>    private static void actualizar(int id,String nombre, String tipo) throws Exception {
+        session = instancia.abrir();
+        Transaction transaction = session.beginTransaction();
+        PersonasEntity persona = session.get(PersonasEntity.class,id);
+        persona.setNombre(nombre);
+        persona.setTipo(tipo);
+       // session.saveOrUpdate(persona);<br>&nbsp;      // session.merge(persona);
+        session.update(persona);
+        transaction.commit();
+        instancia.cerrar();
+    }
+</code></pre>
+</div>
+</div>
+<p>Para actualizar podemos usar:</p>
+<ul>
+<li><strong>update</strong>, actualiza un objeto usando su <strong>id</strong> y seteando los campos que se deseen modificar.</li>
+<li><strong>saveOrUpdate</strong>, muchas veces resulta cómodo al programar no tener que estar pendiente de si un objeto va a insertarse o actualizarse. Para ello, este método, inserta o actualiza en la base de datos en función de si ya existe o no dicha fila.</li>
+<li><strong>merge</strong>, copia el estado del objeto dado en el objeto persistente con el mismo identificador.</li>
+</ul></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Borrar</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La mejor forma de eliminar un objeto es cargarlo mediante <strong>get</strong> o <strong>load </strong>según algún criterio para luego eliminarlo.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>session.get(Entidad.class, 8);
+session.delete(profesor);</code></pre>
+</div>
+</div>
+
 </div></div></section></div>
 </div>
 </div>
