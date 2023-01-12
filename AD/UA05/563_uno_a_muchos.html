@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.6.3. Uno a muchos | UA05. ORM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA05. ORM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA05. ORM</a></li>
+   <li><a href="51_herramientas.html" class="no-ch">5.1. Herramientas</a></li>
+   <li><a href="52_instalacin_y_configuracin_de_hibernate.html" class="daddy">5.2. Instalación y configuración de Hibernate</a>
+   <ul class="other-section">
+      <li><a href="521_ficheros_de_configuracin_propiedades.html" class="no-ch">5.2.1. Ficheros de configuración. Propiedades</a></li>
+      <li><a href="522_anotaciones_jpa.html" class="no-ch">5.2.2. Anotaciones JPA</a></li>
+   </ul>
+   </li>
+   <li><a href="53_mapeo_de_relaciones.html" class="no-ch">5.3. Mapeo de relaciones</a></li>
+   <li><a href="54_sesiones_estados_de_un_objeto.html" class="no-ch">5.4. Sesiones. Estados de un objeto</a></li>
+   <li><a href="55_crud.html" class="no-ch">5.5. CRUD</a></li>
+   <li class="current-page-parent"><a href="56_relaciones.html" class="current-page-parent daddy">5.6. Relaciones</a>
+   <ul>
+      <li><a href="561_uno_a_uno_unidireccional.html" class="no-ch">5.6.1. Uno a uno (unidireccional)</a></li>
+      <li><a href="562_uno_a_uno_bidireccional.html" class="no-ch">5.6.2. Uno a uno (bidireccional)</a></li>
+      <li id="active"><a href="563_uno_a_muchos.html" class="active no-ch">5.6.3. Uno a muchos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="562_uno_a_uno_bidireccional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.6.3. Uno a muchos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id22">
+<div class="iDevice emphasis0" >
+<div id="ta22_115_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La relación <strong>uno a muchos</strong> consiste simplemente en que un objeto <strong>padre</strong> tenga una lista <strong>Ordenar</strong> de otros objetos <strong>hijo</strong> de forma que al persistirse el objeto principal también se persista la lista de objetos <strong>hijo</strong>. Esta relación también suele llamarse <strong>maestro-detalle</strong> o <strong>padre-hijo</strong>.</p>
+<p>Para el ejemplo vamos a suponer las tablas: <strong>Alumnado</strong> y <strong>Email</strong></p>
+<p>Usaremos el código de Alumnado anterior añadiendo la siguiente variable:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@OneToMany(cascade= CascadeType.ALL)
+@JoinColumn(name="idAlum")
+private List&lt;Email&gt; listaEmails;</code></pre>
+</div>
+</div>
+<p>El código de la clase <strong>Email</strong> será el siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+@Table(name = "Email")
+public class Email implements Serializable {
+    @Id
+    @Column(name = "idEmail")
+    private int idEmail;
+    @Column(name = "email")
+     private String email;
+    @ManyToOne
+    @JoinColumn(name="idAlum")
+    private Alumnado alumnado;</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id23">
+<div class="iDevice emphasis0" >
+<div id="ta23_116_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En la clase <strong>Alumnado</strong>, a la variable <strong>listaEmail</strong> se ha añadido una anotación para indicar la relación <strong>uno a muchos</strong>.</p>
+<ul>
+<li><strong>OneToMany</strong>: Como su nombre indica le dice a Hibernate que esta propiedad contendrá la lista de hijos.</li>
+<li><strong>cascade:</strong> Actualizacion y borrado en cascada.</li>
+<li><strong>JoinColumn:</strong> Indicaremos el nombre de la columna que en la tabla hija contiene la clave ajena a la tabla padre. En nuestro ejemplo es la columna de la base de datos <strong>idAlum</strong> que se encuentra en la tabla <strong>Email</strong> la cual enlaza con la tabla <strong>Alumnado</strong>.</li>
+</ul>
+<p>A la variable <strong>alumnado</strong> se han añadido dos anotaciones para indicar la relación:</p>
+<ul>
+<li><strong>ManyToOne:</strong> Al ser el otro lado de la relación indicamos que desde este lado es una relación mucho a uno.</li>
+<li><strong>JoinColumn:</strong> Indicaremos el nombre de la columna que en la tabla hija contiene la clave ajena a la tabla padre. En nuestro ejemplo es la columna de la base de datos <strong>IdAlum</strong> que se encuentra en la tabla <strong>Email</strong> la cual enlaza con la tabla <strong>Alumnado</strong>.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id24">
+<div class="iDevice emphasis0" >
+<div id="ta24_117_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para realizar una prueba, usaremos el código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Alumnado alumnado=new Alumnado(9, "Rosa", "Díaz", "Del Toro");
+List&lt;CorreoElectronico&gt; email=new ArrayList&lt;&gt;();
+email.add(new CorreoElectronico(3, "rosa@yahoo.com",alumnado));
+email.add(new CorreoElectronico(2, "rosa@hotmail.com",alumnado));
+email.add(new CorreoElectronico(1, "rosa@gmail.com",alumnado));
+
+alumnado.setCorreosElectronicos(email);</code></pre>
+</div>
+</div>
+<ol>
+<li>En la línea 1 se crea el objeto <strong>Alumnado</strong>.</li>
+<li>En la segunda línea se crea el objeto <strong>ArrayList</strong> que implementa el interfaz <strong>List</strong> el cual contendrá la lista de hijos.</li>
+<li>Desde las líneas 3 a la 5 se crean los objetos <strong>Email</strong> y se añaden al <strong>List</strong>.</li>
+<li>En la línea 7 se establece la relación entre la lista de hijos (<strong>Email</strong>) y el padre (<strong>Alumnado</strong>).</li>
+<li>Finalmente, y no mostrado en este código, se guarda el objeto <strong>Alumnado</strong> y, automáticamente, se guardarán también sus hijos.</li>
+</ol></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="562_uno_a_uno_bidireccional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

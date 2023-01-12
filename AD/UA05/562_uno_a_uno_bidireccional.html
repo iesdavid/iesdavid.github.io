@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.6.2. Uno a uno (bidireccional) | UA05. ORM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA05. ORM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA05. ORM</a></li>
+   <li><a href="51_herramientas.html" class="no-ch">5.1. Herramientas</a></li>
+   <li><a href="52_instalacin_y_configuracin_de_hibernate.html" class="daddy">5.2. Instalación y configuración de Hibernate</a>
+   <ul class="other-section">
+      <li><a href="521_ficheros_de_configuracin_propiedades.html" class="no-ch">5.2.1. Ficheros de configuración. Propiedades</a></li>
+      <li><a href="522_anotaciones_jpa.html" class="no-ch">5.2.2. Anotaciones JPA</a></li>
+   </ul>
+   </li>
+   <li><a href="53_mapeo_de_relaciones.html" class="no-ch">5.3. Mapeo de relaciones</a></li>
+   <li><a href="54_sesiones_estados_de_un_objeto.html" class="no-ch">5.4. Sesiones. Estados de un objeto</a></li>
+   <li><a href="55_crud.html" class="no-ch">5.5. CRUD</a></li>
+   <li class="current-page-parent"><a href="56_relaciones.html" class="current-page-parent daddy">5.6. Relaciones</a>
+   <ul>
+      <li><a href="561_uno_a_uno_unidireccional.html" class="no-ch">5.6.1. Uno a uno (unidireccional)</a></li>
+      <li id="active"><a href="562_uno_a_uno_bidireccional.html" class="active no-ch">5.6.2. Uno a uno (bidireccional)</a></li>
+      <li><a href="563_uno_a_muchos.html" class="no-ch">5.6.3. Uno a muchos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="561_uno_a_uno_unidireccional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="563_uno_a_muchos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.6.2. Uno a uno (bidireccional)</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id20">
+<div class="iDevice emphasis0" >
+<div id="ta20_120_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Esta es muy similar a la anterior, pero en éste caso la relación entre las clases <strong>Alumnado</strong> y <strong>Direccion</strong> va a ser bidireccional.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+@Table(name="Alumnado")
+public class Alumnado implements Serializable  {
+    @Id
+    @Column(name="IdAlum")
+    private int idAlum;
+
+    @Column(name="nombre")
+    private String nombre;
+
+    @Column(name="ape1")
+    private String ape1;
+
+    @Column(name="ape2")
+    private String ape2;
+
+    @OneToOne(cascade=CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private Direccion direccion;</code></pre>
+</div>
+</div>
+</div>
+<div class="exe-col exe-col-2">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+@Table(name="Direccion")
+public class Direccion implements Serializable {
+    @Id
+    @Column(name = "idAlum")
+    private int idAlum;
+    
+    @Column(name="calle")
+    private String calle;
+    
+    @Column(name="numero")
+    private int numero;
+    
+    @Column(name="poblacion")
+    private String poblacion;
+    
+    @Column(name="provincia")
+    private String provincia;
+    
+    @OneToOne(cascade=CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private Alumnado alumnado;</code></pre>
+</div>
+</div>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id21">
+<div class="iDevice emphasis0" >
+<div id="ta21_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para realizar una prueba, usaremos el siguiente código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Direccion direccion1=new Direccion(3, "Calle de la sarten", 23, "Manises", "Valencia");
+Alumnado alumnado1=new Alumnado(3, "Sergio", "Mateo", "Ramis");
+alumnado1.setDireccion(direccion1);
+direccion1.setAlumnado(alumnado1);
+Direccion direccion2=new Direccion(4, "Calle Luis lamarca", 45, "Torrente", "Valencia");
+Alumnado alumnado2=new Alumnado(4, "Paco", "Moreno", "Díaz");
+alumnado2.setDireccion(direccion2);
+direccion2.setAlumnado(alumnado2);</code></pre>
+</div>
+</div>
+<p>El ejemplo incluye dos casos:</p>
+<ul>
+<li>Crear un objeto direccion1 y otro alumnado1 , crear las relaciones y finalmente en guardar el objeto alumnado1.</li>
+<li>Crear un objeto direccion2 y otro alumnado2, crear las relaciones y finalmente guardar el objeto direccion2.<br>&nbsp;</li>
+</ul>
+<p>En ambos casos el resultado aparente es el mismo, se guarda tanto el objeto <strong>Direccion</strong> como el objeto <strong>Alumnado</strong> al ser la relación bidireccional aunque realmente los 2 casos no son iguales.</p>
+<p>En el primer caso, si persistimos un objeto <strong>Alumnado</strong> se inserta directamente dicho objeto en la base de datos por lo que no puede existir ya la fila pero sí que se permite que la <strong>Direccion</strong> ya exista, actualizándose en dicho caso.</p>
+<p>Pero en el segundo caso si persistimos el objeto <strong>Direccion</strong> lo que ocurre es lo contrario, no podrá existir la fila de la dirección pero sí podrá existir la fila del <strong>Alumnado</strong>.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="561_uno_a_uno_unidireccional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="563_uno_a_muchos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

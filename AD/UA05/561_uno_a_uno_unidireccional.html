@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.6.1. Uno a uno (unidireccional) | UA05. ORM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA05. ORM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA05. ORM</a></li>
+   <li><a href="51_herramientas.html" class="no-ch">5.1. Herramientas</a></li>
+   <li><a href="52_instalacin_y_configuracin_de_hibernate.html" class="daddy">5.2. Instalación y configuración de Hibernate</a>
+   <ul class="other-section">
+      <li><a href="521_ficheros_de_configuracin_propiedades.html" class="no-ch">5.2.1. Ficheros de configuración. Propiedades</a></li>
+      <li><a href="522_anotaciones_jpa.html" class="no-ch">5.2.2. Anotaciones JPA</a></li>
+   </ul>
+   </li>
+   <li><a href="53_mapeo_de_relaciones.html" class="no-ch">5.3. Mapeo de relaciones</a></li>
+   <li><a href="54_sesiones_estados_de_un_objeto.html" class="no-ch">5.4. Sesiones. Estados de un objeto</a></li>
+   <li><a href="55_crud.html" class="no-ch">5.5. CRUD</a></li>
+   <li class="current-page-parent"><a href="56_relaciones.html" class="current-page-parent daddy">5.6. Relaciones</a>
+   <ul>
+      <li id="active"><a href="561_uno_a_uno_unidireccional.html" class="active no-ch">5.6.1. Uno a uno (unidireccional)</a></li>
+      <li><a href="562_uno_a_uno_bidireccional.html" class="no-ch">5.6.2. Uno a uno (bidireccional)</a></li>
+      <li><a href="563_uno_a_muchos.html" class="no-ch">5.6.3. Uno a muchos</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="56_relaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="562_uno_a_uno_bidireccional.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.6.1. Uno a uno (unidireccional)</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id14">
+<div class="iDevice emphasis0" >
+<div id="ta14_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La relación uno a uno en Hibernate consiste simplemente en que un objeto tenga una referencia a otro objeto de forma que al persistirse el primer objeto también se persista el segundo.</p>
+<p>En este caso, la relación va a ser unidireccional es decir que la relación <strong>uno a uno</strong> va a ser en un único sentido.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id15">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta15_115_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Supongamos dos tablas, <strong>Alumnado</strong> y <strong>Dirección</strong>, donde se recogen los datos del alumnado y sus domicilios.</p>
+<p>Estas dos clases van a tener una relación uno a uno.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Alumnado implements Serializable  {
+     private int idAlum;
+     private String nombre;
+     private String ape1;
+     private String ape2;
+     private Direccion direccion;
+
+     public Alumnado(){
+     }
+
+     public Alumnado(int idAlum, String nombre, String ape1, String ape2) {
+         this.idAlum = idAlum;
+         this.nombre = nombre;
+         this.ape1 = ape1;
+         this.ape2 = ape2;
+     }
+ }</code></pre>
+</div>
+</div>
+</div>
+<div class="exe-col exe-col-2">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Direccion implements Serializable  {
+     private int idAlum;
+     private String calle;
+     private int numero;
+     private String poblacion;
+     private String provincia;
+
+     public Direccion(){
+     }
+
+     public Direccion(int idAlum, String calle, int numero, String poblacion, String provincia) {
+         this.idAlum = idAlum;
+         this.calle = calle;
+         this.numero = numero;
+         this.poblacion = poblacion;
+         this.provincia = provincia;
+     }
+}</code></pre>
+</div>
+</div>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id16">
+<div class="iDevice emphasis0" >
+<div id="ta16_116_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Observa que <strong>Alumnado</strong> tiene una variable de tipo <strong>Dirección</strong> mientras que la clase <strong>Direccion</strong> no posee ninguna referencia a <strong>Alumnado </strong>ya que hemos definido una direccionalidad desde <strong>Alumnado hacia Direccion</strong> pero no al revés.&nbsp;</p>
+</div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id17">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Anotaciones</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta17_117_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Al ser en un único sentido, el código fuente de la clase <strong>Alumnado</strong> quedará así:</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.io.Serializable;
+import javax.persistence.*;
+@Entity
+@Table(name="Alumnado")
+public class Alumnado implements Serializable  {
+    @Id
+    @Column(name="IdAlum")
+    private int idAlum;
+
+    @Column(name="nombre")
+    private String nombre;
+
+    @Column(name="ape1")
+    private String ape1;
+
+    @Column(name="ape2")
+    private String ape2;
+
+    @OneToOne(cascade=CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private Direccion direccion;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="exe-col exe-col-2">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.io.Serializable;<br>import javax.persistence.*;<br>@Entity
+@Table(name="Direccion")
+public class Direccion implements Serializable {
+    @Id
+    @Column(name = "idAlum")
+    private int idAlum;<br>
+    @Column(name="calle")
+    private String calle;
+<br>    @Column(name="numero")
+    private int numero;
+<br>    @Column(name="poblacion")
+    private String poblacion;
+<br>    @Column(name="provincia")
+    private String provincia;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>A la propiedad <strong>direccion</strong> se han añadido dos anotaciones para indicar la relación <strong>uno a uno</strong> y que ésta relación se implemente mediante la clave primaria.</p>
+<ul>
+<li><strong>@OneToOne(cascade=CascadeType.ALL):</strong> Esta anotación indica la relación uno a uno de las 2 tablas. Tambien indicamos el valor de cascade al igual que en el fichero de hibernate.</li>
+<li><strong>@PrimaryKeyJoinColumn:</strong> Indicamos que la relación entre las dos tablas se realiza mediante la clave primaria.</li>
+</ul>
+<p>En el código de <strong>Direccion</strong> no es necesario indicar nada.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id18">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Código necesario</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_118_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Ahora que ya tenemos preparadas las clase Java para que puedan persistirse veamos el código necesario para persistirlas.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Direccion direccion=new Direccion(1, "Plaza del ayuntamiento", 8, "Xativa", "Valencia");
+Profesor profesor=new Profesor(1, "Juan", "Perez", "García");
+profesor.setDireccion(direccion);
+
+Session session=sessionFactory.openSession();
+session.beginTransaction();
+
+session.save(profesor);
+
+session.getTransaction().commit();
+session.close();</code></pre>
+</div>
+</div>
+<p>Como podemos ver no hay nada nuevo en el código Java para persistir una relación <strong>uno a uno</strong>, simplemente creamos las 2 clases (Líneas 1 y 2) y establecemos la relación entre ambas asignando al objeto <strong>Alumnado</strong> la referencia al objeto <strong>Direccion</strong> (Línea 3). Por último, simplemente persistimos la clase <strong>Alumnado</strong> tal y como se ha explicado anteriormente.</p>
+<p>Al ejecutar el ejemplo Hibernate vemos cómo se han creado las filas en las tablas <strong>Alumnado</strong> y <strong>Direccion</strong> mientras que desde Java sólo se ha persistido la clase <strong>Alumnado</strong>.</p>
+<p>Si vemos el <strong>log</strong> que se genera al persistir los 2 objetos, podemos ver que se realiza primero una orden <strong>SELECT</strong> contra la tabla <strong>Direccion</strong> para comprobar si ya existe la dirección en la base de datos. Ésto lo realiza <strong>hibernate</strong> ya que, si ya existe, no es necesario insertar la fila de la dirección pero, si los datos son distintos, hibernate lanzará un <strong>UPDATE</strong> para modificarlos.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id19">
+<div class="iDevice emphasis0" >
+<div id="ta19_119_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Recuerda</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La clave primaria de <strong>Direccion</strong> y <strong>Alumnado</strong> debe ser la misma para que se establezca correctamente la relación.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="56_relaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="562_uno_a_uno_bidireccional.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
