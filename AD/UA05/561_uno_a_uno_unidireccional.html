@@ -210,13 +210,13 @@ public class Direccion implements Serializable {
 <div class="highlighted-code language-java">
 <div>
 <pre><code>Direccion direccion=new Direccion(1, "Plaza del ayuntamiento", 8, "Xativa", "Valencia");
-Profesor profesor=new Profesor(1, "Juan", "Perez", "García");
-profesor.setDireccion(direccion);
+Alumnado alumnado=new Alumnado(1, "Juan", "Perez", "García");
+alumnado.setDireccion(direccion);
 
 Session session=sessionFactory.openSession();
 session.beginTransaction();
 
-session.save(profesor);
+session.save(alumnado);
 
 session.getTransaction().commit();
 session.close();</code></pre>
