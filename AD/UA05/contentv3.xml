@@ -3225,19 +3225,21 @@ public class Alumnado implements Serializable  {
 &lt;div class=&quot;exe-col exe-col-2&quot;&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;import java.io.Serializable;&lt;br&gt;import javax.persistence.*;&lt;br&gt;@Entity
+&lt;pre&gt;&lt;code&gt;import java.io.Serializable;
+import javax.persistence.*;
+@Entity
 @Table(name=&quot;Direccion&quot;)
 public class Direccion implements Serializable {
     @Id
     @Column(name = &quot;idAlum&quot;)
-    private int idAlum;&lt;br&gt;
+    private int idAlum;
     @Column(name=&quot;calle&quot;)
     private String calle;
-&lt;br&gt;    @Column(name=&quot;numero&quot;)
+    @Column(name=&quot;numero&quot;)
     private int numero;
-&lt;br&gt;    @Column(name=&quot;poblacion&quot;)
+    @Column(name=&quot;poblacion&quot;)
     private String poblacion;
-&lt;br&gt;    @Column(name=&quot;provincia&quot;)
+    @Column(name=&quot;provincia&quot;)
     private String provincia;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4426,7 +4428,7 @@ alumnado.setCorreosElectronicos(email);&lt;/code&gt;&lt;/pre&gt;
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="60"></reference>
+  <reference key="41"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>

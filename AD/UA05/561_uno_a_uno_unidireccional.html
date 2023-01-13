@@ -171,19 +171,21 @@ public class Alumnado implements Serializable  {
 <div class="exe-col exe-col-2">
 <div class="highlighted-code language-java">
 <div>
-<pre><code>import java.io.Serializable;<br>import javax.persistence.*;<br>@Entity
+<pre><code>import java.io.Serializable;
+import javax.persistence.*;
+@Entity
 @Table(name="Direccion")
 public class Direccion implements Serializable {
     @Id
     @Column(name = "idAlum")
-    private int idAlum;<br>
+    private int idAlum;
     @Column(name="calle")
     private String calle;
-<br>    @Column(name="numero")
+    @Column(name="numero")
     private int numero;
-<br>    @Column(name="poblacion")
+    @Column(name="poblacion")
     private String poblacion;
-<br>    @Column(name="provincia")
+    @Column(name="provincia")
     private String provincia;</code></pre>
 </div>
 </div>
