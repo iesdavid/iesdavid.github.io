@@ -4304,12 +4304,12 @@ public class Email implements Serializable {
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
 &lt;pre&gt;&lt;code&gt;Alumnado alumnado=new Alumnado(9, &quot;Rosa&quot;, &quot;Díaz&quot;, &quot;Del Toro&quot;);
-List&amp;lt;CorreoElectronico&amp;gt; email=new ArrayList&amp;lt;&amp;gt;();
-email.add(new CorreoElectronico(3, &quot;rosa@yahoo.com&quot;,alumnado));
-email.add(new CorreoElectronico(2, &quot;rosa@hotmail.com&quot;,alumnado));
-email.add(new CorreoElectronico(1, &quot;rosa@gmail.com&quot;,alumnado));
+List&amp;lt;Email&amp;gt; email=new ArrayList&amp;lt;&amp;gt;();
+email.add(new Email(3, &quot;rosa@yahoo.com&quot;,alumnado));
+email.add(new Email(2, &quot;rosa@hotmail.com&quot;,alumnado));
+email.add(new Email(1, &quot;rosa@gmail.com&quot;,alumnado));
 
-alumnado.setCorreosElectronicos(email);&lt;/code&gt;&lt;/pre&gt;
+alumnado.setEmails(email);&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;ol&gt;
@@ -4428,7 +4428,7 @@ alumnado.setCorreosElectronicos(email);&lt;/code&gt;&lt;/pre&gt;
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="41"></reference>
+  <reference key="60"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>

@@ -111,12 +111,12 @@ public class Email implements Serializable {
 <div class="highlighted-code language-java">
 <div>
 <pre><code>Alumnado alumnado=new Alumnado(9, "Rosa", "Díaz", "Del Toro");
-List&lt;CorreoElectronico&gt; email=new ArrayList&lt;&gt;();
-email.add(new CorreoElectronico(3, "rosa@yahoo.com",alumnado));
-email.add(new CorreoElectronico(2, "rosa@hotmail.com",alumnado));
-email.add(new CorreoElectronico(1, "rosa@gmail.com",alumnado));
+List&lt;Email&gt; email=new ArrayList&lt;&gt;();
+email.add(new Email(3, "rosa@yahoo.com",alumnado));
+email.add(new Email(2, "rosa@hotmail.com",alumnado));
+email.add(new Email(1, "rosa@gmail.com",alumnado));
 
-alumnado.setCorreosElectronicos(email);</code></pre>
+alumnado.setEmails(email);</code></pre>
 </div>
 </div>
 <ol>
