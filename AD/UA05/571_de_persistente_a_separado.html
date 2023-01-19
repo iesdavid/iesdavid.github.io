@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>5.3. Mapeo de relaciones | UA05. ORM </title>
+<title>5.7.1. De persistente a separado | UA05. ORM </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
@@ -18,7 +18,7 @@
 <script type="text/javascript" src="udl-content.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">UA05. ORM</div></header>
@@ -32,7 +32,7 @@
       <li><a href="522_anotaciones_jpa.html" class="no-ch">5.2.2. Anotaciones JPA</a></li>
    </ul>
    </li>
-   <li id="active"><a href="53_mapeo_de_relaciones.html" class="active no-ch">5.3. Mapeo de relaciones</a></li>
+   <li><a href="53_mapeo_de_relaciones.html" class="no-ch">5.3. Mapeo de relaciones</a></li>
    <li><a href="54_sesiones_estados_de_un_objeto.html" class="no-ch">5.4. Sesiones. Estados de un objeto</a></li>
    <li><a href="55_crud.html" class="no-ch">5.5. CRUD</a></li>
    <li><a href="56_relaciones.html" class="daddy">5.6. Relaciones</a>
@@ -42,9 +42,9 @@
       <li><a href="563_uno_a_muchos.html" class="no-ch">5.6.3. Uno a muchos</a></li>
    </ul>
    </li>
-   <li><a href="57_sesiones_y_estados_de_los_objetos_persistentes.html" class="daddy">5.7. Sesiones y estados de los objetos persistentes</a>
-   <ul class="other-section">
-      <li><a href="571_de_persistente_a_separado.html" class="no-ch">5.7.1. De persistente a separado</a></li>
+   <li class="current-page-parent"><a href="57_sesiones_y_estados_de_los_objetos_persistentes.html" class="current-page-parent daddy">5.7. Sesiones y estados de los objetos persistentes</a>
+   <ul>
+      <li id="active"><a href="571_de_persistente_a_separado.html" class="active no-ch">5.7.1. De persistente a separado</a></li>
       <li><a href="572_de_separado_a_persistente.html" class="no-ch">5.7.2. De separado a persistente</a></li>
    </ul>
    </li>
@@ -52,21 +52,22 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="522_anotaciones_jpa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="54_sesiones_estados_de_un_objeto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="57_sesiones_y_estados_de_los_objetos_persistentes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="572_de_separado_a_persistente.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">5.3. Mapeo de relaciones</h1></header>
-<article class="iDevice_wrapper UDLcontentIdevice" id="id6">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.7.1. De persistente a separado</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id26">
 <div class="iDevice emphasis0" >
-<div id="ta6_120_2" class="block iDevice_content">
-<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para persistir, las relaciones usan las denominadas <strong>transacciones</strong>, ya que los cambios pueden incluir varias tablas. Una regla general para el mapeo es respetar el <strong>tipo de relación</strong> en el modelo de objetos y en el modelo relacional: así, una relación 1-1 en el modelo de objetos deberá corresponderse a una relación 1-1 en el modelo relacional.</p>
-<p>Para mapear las relaciones, se usan direntes anotaciones dependiendo de la asociación que tienen las entidades. Estas pueden ser:</p>
-<p>@OneToOne</p>
-<p>@ManyToOne</p>
-<p>@OneToMany</p>
-<p>@ManyToMany</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: center;"><a href="https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#associations" target="_blank" rel="noopener">Asociaciones en Hibernate</a></p></div></div></section></div>
+<div id="ta26_117_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Los métodos <strong>evict()</strong>, <strong>close()</strong> y <strong>clear</strong><strong>()</strong>, permiten separar <strong>(detached)</strong> objetos de sesiones.</p>
+<ul>
+<li>Con <strong>evict(Object obj)</strong> se puede separar un objeto.</li>
+<li>Con <strong>close()</strong> se puede separar un objeto asociado a la sesión y <strong>se grabarán</strong> los cambios realizados sobre ellos en la base de datos.</li>
+<li>Con <strong>clear()</strong> se puede separar un objeto asociado a la sesión pero <strong>no se grabarán</strong> los cambios realizados sobre ellos en la base de datos.</li>
+</ul>
+<p>Los objetos en estado separado pueden consultarse y modificarse pero, estos cambios, no se reflejarán en la base de datos a menos que se vuelva a asociar a una sesión.</p></div></div></section></div>
 </div>
 </div>
 </article>
@@ -77,7 +78,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="522_anotaciones_jpa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="54_sesiones_estados_de_un_objeto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="57_sesiones_y_estados_de_los_objetos_persistentes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="572_de_separado_a_persistente.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 </div>

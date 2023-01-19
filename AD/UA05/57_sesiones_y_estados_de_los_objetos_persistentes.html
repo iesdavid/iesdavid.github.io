@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.7. Sesiones y estados de los objetos persistentes | UA05. ORM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA05. ORM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA05. ORM</a></li>
+   <li><a href="51_herramientas.html" class="no-ch">5.1. Herramientas</a></li>
+   <li><a href="52_instalacin_y_configuracin_de_hibernate.html" class="daddy">5.2. Instalación y configuración de Hibernate</a>
+   <ul class="other-section">
+      <li><a href="521_ficheros_de_configuracin_propiedades.html" class="no-ch">5.2.1. Ficheros de configuración. Propiedades</a></li>
+      <li><a href="522_anotaciones_jpa.html" class="no-ch">5.2.2. Anotaciones JPA</a></li>
+   </ul>
+   </li>
+   <li><a href="53_mapeo_de_relaciones.html" class="no-ch">5.3. Mapeo de relaciones</a></li>
+   <li><a href="54_sesiones_estados_de_un_objeto.html" class="no-ch">5.4. Sesiones. Estados de un objeto</a></li>
+   <li><a href="55_crud.html" class="no-ch">5.5. CRUD</a></li>
+   <li><a href="56_relaciones.html" class="daddy">5.6. Relaciones</a>
+   <ul class="other-section">
+      <li><a href="561_uno_a_uno_unidireccional.html" class="no-ch">5.6.1. Uno a uno (unidireccional)</a></li>
+      <li><a href="562_uno_a_uno_bidireccional.html" class="no-ch">5.6.2. Uno a uno (bidireccional)</a></li>
+      <li><a href="563_uno_a_muchos.html" class="no-ch">5.6.3. Uno a muchos</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="57_sesiones_y_estados_de_los_objetos_persistentes.html" class="active daddy">5.7. Sesiones y estados de los objetos persistentes</a>
+   <ul>
+      <li><a href="571_de_persistente_a_separado.html" class="no-ch">5.7.1. De persistente a separado</a></li>
+      <li><a href="572_de_separado_a_persistente.html" class="no-ch">5.7.2. De separado a persistente</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="563_uno_a_muchos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="571_de_persistente_a_separado.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.7. Sesiones y estados de los objetos persistentes</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id25">
+<div class="iDevice emphasis0" >
+<div id="ta25_116_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Hibernate define y soporta los siguientes estados de objeto: </p>
+<p id="yui_3_17_2_1_1674166446576_20"><img src="http://4.bp.blogspot.com/-Liwu1o0nEtA/USJsjd2uBZI/AAAAAAAADcM/4cUO01TuBRg/s1600/hibernateLifecycle.jpg" alt="Diagrama de estados" style="vertical-align: text-bottom; margin: 0 .5em;" class="img-responsive" width="679" height="382"></p>
+<ul id="yui_3_17_2_1_1674166446576_30">
+<li class="level1">
+<div class="li"><strong>Transitorio</strong> (Transient): Un objeto estará en estado Transitorio cuando acaba de ser creado en Java mediante el operador <code>new</code>. Es decir cuando esté recién creado por nosotros. Este estado tiene la característica de que hibernate no sabe nada de nuestro objeto. Quizás el objeto ya este guardado en base de datos o sea nuevo y tengamos que insertarlo.</div>
+</li>
+<li class="level1">
+<div class="li"><strong>Persistente</strong> (Persistent): Un objeto estará en estado Persistente cuando ya está guardado en la base de datos y además Hibernate también es consciente de ello. Fíjese la diferencia con el estado anterior en el que el objeto podía estar persistente pero Hibernate lo desconocía. Hibernate en ese caso guarda el objeto en la cache interna que posee. También es importante destacar que para una misma fila de la base de datos sólo puede haber un único objeto en estado Persistente.</div>
+</li>
+<li class="level1">
+<div class="li"><strong>Separado</strong> (Detached): Este estado es similar al estado Transitorio sólo que se produce cuando cerramos la sesión mediante <a class="javadoc" target="_blank" href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Session.html#close" rel="noopener"><code>Session.close()</code></a> o llamamos al método <a class="javadoc" target="_blank" href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Session.html#evict%28java.lang.Object%29" rel="noopener"><code>Session.evict(Object objeto)</code></a> para el objeto que queremos pasar a este estado. En ese caso Hibernate vuelve a <em>olvidar</em> en qué estado se encontraban los objetos borrándolo de su cache interna.</div>
+</li>
+<li class="level1" id="yui_3_17_2_1_1674166446576_29">
+<div class="li" id="yui_3_17_2_1_1674166446576_28"><strong>Borrado</strong> (Removed): A este estado pasan los objetos que se han borrado de la base de datos mediante el método <code>delete()</code>.</div>
+</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="563_uno_a_muchos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="571_de_persistente_a_separado.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

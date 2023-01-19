@@ -86,9 +86,9 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
   <string role="key" value="_name"></string>
   <unicode value="UA05"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="25"></int>
+  <int value="28"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="12"></int>
+  <int value="15"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -197,7 +197,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="168770"></int>
+                  <int value="168791"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -211,7 +211,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_114_2.14"></unicode>
+                <unicode value="0_114_2.16"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="5">
                  <dictionary>
@@ -222,7 +222,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                   <string role="key" value="_storageName"></string>
                   <string value="ORM-object-relational-mapping.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmpipr19x\\ORM-object-relational-mapping.png"></string>
+                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmp5iehjx\\ORM-object-relational-mapping.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="b4336d389724d3c40c48bf56837822bd"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -249,7 +249,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="168771"></int>
+                  <int value="168792"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -263,7 +263,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_114_2.15"></unicode>
+                <unicode value="0_114_2.17"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="6">
                  <dictionary>
@@ -274,7 +274,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
                   <string role="key" value="_storageName"></string>
                   <string value="ORM-object-relational-mapping.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmpipr19x\\ORM-object-relational-mapping.png"></string>
+                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmp5iehjx\\ORM-object-relational-mapping.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="b4336d389724d3c40c48bf56837822bd"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -303,7 +303,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
            <string role="key" value="intlinks_to_anchors"></string>
            <dictionary></dictionary>
            <string role="key" value="nextImageId"></string>
-           <int value="16"></int>
+           <int value="18"></int>
            <string role="key" value="parentNode"></string>
            <reference key="4"></reference>
           </dictionary>
@@ -1258,7 +1258,7 @@ public class Student {
                       <instance class="exe.engine.field.TextField">
                        <dictionary>
                         <string role="key" value="_id"></string>
-                        <int value="168772"></int>
+                        <int value="168793"></int>
                         <string role="key" value="_idevice"></string>
                         <none></none>
                         <string role="key" value="_instruc"></string>
@@ -1272,7 +1272,7 @@ public class Student {
                        </dictionary>
                       </instance>
                       <string role="key" value="_id"></string>
-                      <unicode value="5_119_2.7"></unicode>
+                      <unicode value="5_119_2.8"></unicode>
                       <string role="key" value="_imageResource"></string>
                       <instance class="exe.engine.resource.Resource" reference="23">
                        <dictionary>
@@ -1283,7 +1283,7 @@ public class Student {
                         <string role="key" value="_storageName"></string>
                         <string value="student.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmpipr19x\\student.png"></string>
+                        <string value="c:\\users\\david\\appdata\\local\\temp\\tmp5iehjx\\student.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="f12f542b1a8a722e0c57ad8350e54615"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1312,7 +1312,7 @@ public class Student {
                  <string role="key" value="intlinks_to_anchors"></string>
                  <dictionary></dictionary>
                  <string role="key" value="nextImageId"></string>
-                 <int value="8"></int>
+                 <int value="9"></int>
                  <string role="key" value="parentNode"></string>
                  <reference key="22"></reference>
                 </dictionary>
@@ -3847,6 +3847,8 @@ public class Direccion implements Serializable {
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Para realizar una prueba, usaremos el siguiente código:&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
@@ -3891,7 +3893,7 @@ direccion2.setAlumnado(alumnado2);&lt;/code&gt;&lt;/pre&gt;
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="55"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4017,6 +4019,8 @@ direccion2.setAlumnado(alumnado2);&lt;/code&gt;&lt;/pre&gt;
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La relación &lt;strong&gt;uno a muchos&lt;/strong&gt; consiste simplemente en que un objeto &lt;strong&gt;padre&lt;/strong&gt; tenga una lista &lt;strong&gt;Ordenar&lt;/strong&gt; de otros objetos &lt;strong&gt;hijo&lt;/strong&gt; de forma que al persistirse el objeto principal también se persista la lista de objetos &lt;strong&gt;hijo&lt;/strong&gt;. Esta relación también suele llamarse &lt;strong&gt;maestro-detalle&lt;/strong&gt; o &lt;strong&gt;padre-hijo&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Para el ejemplo vamos a suponer las tablas: &lt;strong&gt;Alumnado&lt;/strong&gt; y &lt;strong&gt;Email&lt;/strong&gt;&lt;/p&gt;
@@ -4067,7 +4071,7 @@ public class Email implements Serializable {
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="60"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4166,6 +4170,8 @@ public class Email implements Serializable {
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;En la clase &lt;strong&gt;Alumnado&lt;/strong&gt;, a la variable &lt;strong&gt;listaEmail&lt;/strong&gt; se ha añadido una anotación para indicar la relación &lt;strong&gt;uno a muchos&lt;/strong&gt;.&lt;/p&gt;
 &lt;ul&gt;
@@ -4200,7 +4206,7 @@ public class Email implements Serializable {
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="60"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4299,6 +4305,8 @@ public class Email implements Serializable {
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Para realizar una prueba, usaremos el código:&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
@@ -4341,7 +4349,7 @@ alumnado.setEmails(email);&lt;/code&gt;&lt;/pre&gt;
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="60"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4393,6 +4401,480 @@ alumnado.setEmails(email);&lt;/code&gt;&lt;/pre&gt;
         </list>
        </dictionary>
       </instance>
+      <instance class="exe.engine.node.Node" reference="67">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="5.7. Sesiones y estados de los objetos persistentes"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="65">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="udl-content"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="UDLcontent"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="66">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="116_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="65"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Hibernate define y soporta los siguientes estados de objeto: &lt;/p&gt;
+&lt;p id=&quot;yui_3_17_2_1_1674166446576_20&quot;&gt;&lt;img src=&quot;http://4.bp.blogspot.com/-Liwu1o0nEtA/USJsjd2uBZI/AAAAAAAADcM/4cUO01TuBRg/s1600/hibernateLifecycle.jpg&quot; alt=&quot;Diagrama de estados&quot; style=&quot;vertical-align: text-bottom; margin: 0 .5em;&quot; class=&quot;img-responsive&quot; width=&quot;679&quot; height=&quot;382&quot;&gt;&lt;/p&gt;
+&lt;ul id=&quot;yui_3_17_2_1_1674166446576_30&quot;&gt;
+&lt;li class=&quot;level1&quot;&gt;
+&lt;div class=&quot;li&quot;&gt;&lt;strong&gt;Transitorio&lt;/strong&gt; (Transient): Un objeto estará en estado Transitorio cuando acaba de ser creado en Java mediante el operador &lt;code&gt;new&lt;/code&gt;. Es decir cuando esté recién creado por nosotros. Este estado tiene la característica de que hibernate no sabe nada de nuestro objeto. Quizás el objeto ya este guardado en base de datos o sea nuevo y tengamos que insertarlo.&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;level1&quot;&gt;
+&lt;div class=&quot;li&quot;&gt;&lt;strong&gt;Persistente&lt;/strong&gt; (Persistent): Un objeto estará en estado Persistente cuando ya está guardado en la base de datos y además Hibernate también es consciente de ello. Fíjese la diferencia con el estado anterior en el que el objeto podía estar persistente pero Hibernate lo desconocía. Hibernate en ese caso guarda el objeto en la cache interna que posee. También es importante destacar que para una misma fila de la base de datos sólo puede haber un único objeto en estado Persistente.&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;level1&quot;&gt;
+&lt;div class=&quot;li&quot;&gt;&lt;strong&gt;Separado&lt;/strong&gt; (Detached): Este estado es similar al estado Transitorio sólo que se produce cuando cerramos la sesión mediante &lt;a class=&quot;javadoc&quot; target=&quot;_blank&quot; href=&quot;http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Session.html#close&quot; rel=&quot;noopener&quot;&gt;&lt;code&gt;Session.close()&lt;/code&gt;&lt;/a&gt; o llamamos al método &lt;a class=&quot;javadoc&quot; target=&quot;_blank&quot; href=&quot;http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Session.html#evict%28java.lang.Object%29&quot; rel=&quot;noopener&quot;&gt;&lt;code&gt;Session.evict(Object objeto)&lt;/code&gt;&lt;/a&gt; para el objeto que queremos pasar a este estado. En ese caso Hibernate vuelve a &lt;em&gt;olvidar&lt;/em&gt; en qué estado se encontraban los objetos borrándolo de su cache interna.&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;level1&quot; id=&quot;yui_3_17_2_1_1674166446576_29&quot;&gt;
+&lt;div class=&quot;li&quot; id=&quot;yui_3_17_2_1_1674166446576_28&quot;&gt;&lt;strong&gt;Borrado&lt;/strong&gt; (Removed): A este estado pasan los objetos que se han borrado de la base de datos mediante el método &lt;code&gt;delete()&lt;/code&gt;.&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="66"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <none></none>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="25"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="67"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="12"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="2"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:UA05.%20ORM:5.7.%20Sesiones%20y%20estados%20de%20los%20objetos%20persistentes"></string>
+        <string role="key" value="parent"></string>
+        <reference key="4"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list>
+         <instance class="exe.engine.node.Node" reference="70">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="5.7.1. De persistente a separado"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="68">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="69">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="117_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="68"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Los métodos &lt;strong&gt;evict()&lt;/strong&gt;, &lt;strong&gt;close()&lt;/strong&gt; y &lt;strong&gt;clear&lt;/strong&gt;&lt;strong&gt;()&lt;/strong&gt;, permiten separar &lt;strong&gt;(detached)&lt;/strong&gt; objetos de sesiones.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Con &lt;strong&gt;evict(Object obj)&lt;/strong&gt; se puede separar un objeto.&lt;/li&gt;
+&lt;li&gt;Con &lt;strong&gt;close()&lt;/strong&gt; se puede separar un objeto asociado a la sesión y &lt;strong&gt;se grabarán&lt;/strong&gt; los cambios realizados sobre ellos en la base de datos.&lt;/li&gt;
+&lt;li&gt;Con &lt;strong&gt;clear()&lt;/strong&gt; se puede separar un objeto asociado a la sesión pero &lt;strong&gt;no se grabarán&lt;/strong&gt; los cambios realizados sobre ellos en la base de datos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Los objetos en estado separado pueden consultarse y modificarse pero, estos cambios, no se reflejarán en la base de datos a menos que se vuelva a asociar a una sesión.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="69"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="26"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="70"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="13"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA05.%20ORM:5.7.%20Sesiones%20y%20estados%20de%20los%20objetos%20persistentes:5.7.1.%20De%20persistente%20a%20separado"></string>
+           <string role="key" value="parent"></string>
+           <reference key="67"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="73">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="5.7.2. De separado a persistente"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="71">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="72">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="118_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="71"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Un objeto separado puede volver a hacerse persistente con &lt;strong&gt;lock()&lt;/strong&gt; indicando un método de bloqueo.&lt;/p&gt;
+&lt;p&gt;Se puede hacer persistente un objeto separado mediante &lt;strong&gt;update()&lt;/strong&gt; y &lt;strong&gt;saveOrUpdate()&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;También se puede hacer con &lt;strong&gt;merge()&lt;/strong&gt;, que no hace persistente el objeto que se le pasa, sino que actualiza los contenidos de otro objeto persistente con el mismo identificador (&lt;strong&gt;update&lt;/strong&gt;) en la sesión si existe, o crea uno nuevo si no existe (&lt;strong&gt;save&lt;/strong&gt;).&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="72"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="27"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="73"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="14"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA05.%20ORM:5.7.%20Sesiones%20y%20estados%20de%20los%20objetos%20persistentes:5.7.2.%20De%20separado%20a%20persistente"></string>
+           <string role="key" value="parent"></string>
+           <reference key="67"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+        </list>
+       </dictionary>
+      </instance>
      </list>
     </dictionary>
    </instance>
@@ -4402,6 +4884,12 @@ alumnado.setEmails(email);&lt;/code&gt;&lt;/pre&gt;
    <reference key="55"></reference>
    <unicode role="key" value="11"></unicode>
    <reference key="60"></reference>
+   <unicode role="key" value="12"></unicode>
+   <reference key="67"></reference>
+   <unicode role="key" value="13"></unicode>
+   <reference key="70"></reference>
+   <unicode role="key" value="14"></unicode>
+   <reference key="73"></reference>
    <unicode role="key" value="2"></unicode>
    <reference key="14"></reference>
    <unicode role="key" value="3"></unicode>
@@ -4428,7 +4916,7 @@ alumnado.setEmails(email);&lt;/code&gt;&lt;/pre&gt;
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="60"></reference>
+  <reference key="73"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -4766,7 +5254,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
        <instance class="exe.engine.lom.lomsubs.contributeSub">
         <dictionary>
          <string role="key" value="date"></string>
-         <instance class="exe.engine.lom.lomsubs.dateSub" reference="65">
+         <instance class="exe.engine.lom.lomsubs.dateSub" reference="74">
           <dictionary>
            <string role="key" value="dateTime"></string>
            <instance class="exe.engine.lom.lomsubs.DateTimeValueSub">
@@ -4805,7 +5293,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
          </instance>
          <string role="key" value="entity"></string>
          <list>
-          <instance class="exe.engine.lom.lomsubs.entitySub" reference="66">
+          <instance class="exe.engine.lom.lomsubs.entitySub" reference="75">
            <dictionary>
             <string role="key" value="extensiontype_"></string>
             <none></none>
@@ -4820,7 +5308,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
            <string role="key" value="extensiontype_"></string>
            <none></none>
            <string role="key" value="source"></string>
-           <instance class="exe.engine.lom.lomsubs.sourceValueSub" reference="67">
+           <instance class="exe.engine.lom.lomsubs.sourceValueSub" reference="76">
             <dictionary>
              <string role="key" value="extensiontype_"></string>
              <none></none>
@@ -4870,10 +5358,10 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
        <instance class="exe.engine.lom.lomsubs.contributeMetaSub">
         <dictionary>
          <string role="key" value="date"></string>
-         <reference key="65"></reference>
+         <reference key="74"></reference>
          <string role="key" value="entity"></string>
          <list>
-          <reference key="66"></reference>
+          <reference key="75"></reference>
          </list>
          <string role="key" value="role"></string>
          <instance class="exe.engine.lom.lomsubs.roleSub">
@@ -4881,7 +5369,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
            <string role="key" value="extensiontype_"></string>
            <none></none>
            <string role="key" value="source"></string>
-           <reference key="67"></reference>
+           <reference key="76"></reference>
            <string role="key" value="uniqueElementName"></string>
            <string value="role"></string>
            <string role="key" value="value"></string>
@@ -5273,7 +5761,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
        <instance class="exe.engine.lom.lomsubs.contributeSub">
         <dictionary>
          <string role="key" value="date"></string>
-         <instance class="exe.engine.lom.lomsubs.dateSub" reference="68">
+         <instance class="exe.engine.lom.lomsubs.dateSub" reference="77">
           <dictionary>
            <string role="key" value="dateTime"></string>
            <instance class="exe.engine.lom.lomsubs.DateTimeValueSub">
@@ -5312,7 +5800,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
          </instance>
          <string role="key" value="entity"></string>
          <list>
-          <instance class="exe.engine.lom.lomsubs.entitySub" reference="69">
+          <instance class="exe.engine.lom.lomsubs.entitySub" reference="78">
            <dictionary>
             <string role="key" value="extensiontype_"></string>
             <none></none>
@@ -5327,7 +5815,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
            <string role="key" value="extensiontype_"></string>
            <none></none>
            <string role="key" value="source"></string>
-           <instance class="exe.engine.lom.lomsubs.sourceValueSub" reference="70">
+           <instance class="exe.engine.lom.lomsubs.sourceValueSub" reference="79">
             <dictionary>
              <string role="key" value="extensiontype_"></string>
              <none></none>
@@ -5377,10 +5865,10 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
        <instance class="exe.engine.lom.lomsubs.contributeMetaSub">
         <dictionary>
          <string role="key" value="date"></string>
-         <reference key="68"></reference>
+         <reference key="77"></reference>
          <string role="key" value="entity"></string>
          <list>
-          <reference key="69"></reference>
+          <reference key="78"></reference>
          </list>
          <string role="key" value="role"></string>
          <instance class="exe.engine.lom.lomsubs.roleSub">
@@ -5388,7 +5876,7 @@ Unidad de Aprendizaje 5: Mapeo de objeto-relacional"></unicode>
            <string role="key" value="extensiontype_"></string>
            <none></none>
            <string role="key" value="source"></string>
-           <reference key="70"></reference>
+           <reference key="79"></reference>
            <string role="key" value="uniqueElementName"></string>
            <string value="role"></string>
            <string role="key" value="value"></string>
