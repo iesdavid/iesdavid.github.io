@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.1. NamedQueries | UA06. Lenguaje HQL </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA06. Lenguaje HQL</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA06. Lenguaje HQL</a></li>
+   <li id="active"><a href="61_namedqueries.html" class="active no-ch">6.1. NamedQueries</a></li>
+   <li><a href="62_ejemplos.html" class="no-ch">6.2. Ejemplos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="62_ejemplos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.1. NamedQueries</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_115_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Uno de los problemas que nos podemos encontrar cuando construimos las consultas es que varios desarrolladores van a trabajar en el mismo proyecto construyendo consultas. Con lo cual puede que acabemos con <strong>consultas repetidas</strong> en distintas partes del código.</p>
+<p>Para evitar este problema podemos apoyarnos en <strong>JPA NamedQueries</strong> que nos permiten definir las consultas a nivel de clase de dominio evitando las repeticiones.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En el siguiente ejemplo se muestran diferentes consultas para obtener información almacenada en la tabla <strong>tAsignatura</strong> a través de su clase <strong>AsignaturaEntity</strong>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Entity
+@Table(name="tAsignaturas")
+@NamedQueries({
+        @NamedQuery(name="listaAsignaturas", query="select a from AsignaturaEntity a"),
+        @NamedQuery(name="listaAsignaturasNombre", query="select a from AsignaturaEntity a where a.nombre=:nombre"),
+        @NamedQuery(name="listaAsignaturasCurso", query="select a from AsignaturaEntity a where a.curso=:curso"),
+        @NamedQuery(name="listaAsignaturasHoras", query="select a from AsignaturaEntity a where a.horas=:horas"),
+})
+public class AsignaturaEntity{ ... }</code></pre>
+</div>
+</div>
+<p>Luego, estas consultas pueden ser llamadas, por ejemplo, desde un método como el que sigue:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//    Consulta genérica
+public List listar(String namedQuery) {
+        TypedQuery lista = sesion.getNamedQuery(namedQuery);
+        return lista.getResultList();
+    }
+//    Mostrar las asignaturas por curso
+    public List listar(String namedQuery,String param, String valor) {
+        TypedQuery lista = sesion.getNamedQuery(namedQuery).setParameter(param,valor);
+        return lista.getResultList();
+    }</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="62_ejemplos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>

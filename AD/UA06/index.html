@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>UA06. Lenguaje HQL </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<meta name="description" content="Unidad de aprendizaje 6.
+Acceso a Datos. 2º DAM" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA06. Lenguaje HQL</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">UA06. Lenguaje HQL</a></li>
+   <li><a href="61_namedqueries.html" class="no-ch">6.1. NamedQueries</a></li>
+   <li><a href="62_ejemplos.html" class="no-ch">6.2. Ejemplos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="61_namedqueries.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">UA06. Lenguaje HQL</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_114_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="hibernate_query_processing-600x136.png" alt="HQL" title="HQL" style="float: right; margin-right: 10px; margin-left: 10px;" width="401" height="91">Hibernate utiliza un lenguaje de consulta potente (<strong>HQL, Hibernate Query Language</strong>) que se parece a SQL. Sin embargo, <strong>HQL es completamente orientado a objetos</strong> y comprende nociones como herencia, polimorfismo y asociación.</p>
+<p>Las consultas se escriben en <strong>HQL</strong> y <strong>Hibernate se encarga de convertirlas al SQL</strong> usado por la base de datos con la que estemos trabajando y ejecutarla para realizar la operación indicada.</p>
+<p><strong>HQL es case-insensitive,</strong> o sea que sus sentencias pueden escribirse en mayúsculas y minúsculas. Por lo tanto "SeLeCt", "seleCT", "select", y "SELECT" se entienden como la misma cosa. Lo único con lo que debemos tener cuidado es con los nombres de las clases que estamos recuperando y con sus propiedades, ahí si se distinguen mayúsculas y minúsculas. O sea, en este caso "pruebas.Hibernate.Usuario" NO ES LO MISMO que "PrueBAs.Hibernate.UsuArio".</p>
+<p>Entre las características más importantes de HQL:</p>
+<ul>
+<li><strong>Soporte completo para operaciones relacionales</strong>: HQL permite representar consultas SQL en forma de objetos. HQL usa clases y atributos o propiedades en vez de tablas y columnas.</li>
+<li><strong>Regresa sus resultados en forma de objetos</strong>: Las consultas realizadas usando HQL regresan los resultados de las mismas en la forma de objetos o listas de objetos, que son más fáciles de usar.</li>
+<li><strong>Consultas Polimórficas</strong>: Podemos declarar el resultado usando el tipo de la superclase e Hibernate se encargara de crear los objetos adecuados de las subclases correctas de forma automática.</li>
+<li><strong>Soporte para características avanzadas</strong>: HQL contiene muchas características avanzadas que son muy útiles y que no siempre están presentes en todas las bases de datos, o no es fácil usarlas, como paginación, fetch joins con perfiles dinámicos, inner y outer joins, etc. Además soporta proyecciones, funciones de agregación (max, avg), y agrupamientos, ordenamientos, y subconsultas.</li>
+<li><strong>Independiente del manejador de base de datos</strong>: Las consultas escritas en HQL son independientes de la base de datos (siempre que la base de datos soporte la característica que estamos intentando utilizar.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_115_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><ul>
+<li><strong>Clausula from:</strong> La consulta más simple que se puede realizar con Hibernate, es utilizando la cláusula from, la siguientes sería una consulta que mostraría todos los datos de una tabla de nombre Alumnos: <strong>from Alumnos</strong></li>
+<li><strong>Cláusula select:</strong> La cláusula select escoge qué objetos y propiedades devolver en el conjunto de resultados de la consulta. Un ejemplo de consulta podría ser <strong>select alumno.nombre from Alumnos alumno where alumno.nombre like 'A%'</strong></li>
+<li><strong>La cláusula where:</strong> La cláusula where nos permite refinar la lista de instancias retornadas. Si no existe ningún alias, puede referirse a las propiedades por nombre: <strong>from Alumnos where nombre='Francisco'</strong>. Si existe un alias, usaremos un nombre de propiedad calificado: <strong>from Alumnos as alumnos where alumnos.nombre='Francisco'</strong>. Esto retorna instancias de Alumnos llamados "Francisco".</li>
+<li><strong>Funciones de agregación.</strong> Las consultas HQL pueden retornar resultados de funciones de agregación sobre propiedades: <strong>select avg(alumnos.nota)</strong>, <strong>sum(alumnos.nota)</strong>, <strong>max(alumnos.nota)</strong>, <strong>count(alumnos) from Alumnos alumnos</strong>.</li>
+<li><strong>Expresiones.</strong> Las expresiones utilizadas en la cláusula <strong>where</strong> incluyen lo siguiente: operadores matemáticos, operadores de comparación binarios, operadores lógicos , paréntesis ( ) que indican agrupación, funciones Java, etc.</li>
+<li><strong>La cláusula order by.</strong> La lista retornada por una consulta se puede ordenar por cualquier propiedad de una clase retornada o componentes. La palabra <strong>asc</strong> o <strong>desc</strong> opcionales indican ordenamiento ascendente o descendente respectivamente.</li>
+<li><strong>La cláusula group by.</strong> Una consulta que retorna valores agregados se puede agrupar por cualquier propiedad de una clase retornada o componentes.</li>
+<li><strong>Subconsultas.</strong> Para bases de datos que soportan subconsultas, Hibernate soporta subconsultas dentro de consultas. Una subconsulta se debe encerrar entre paréntesis (frecuentemente por una llamada a una función de agregación SQL). Incluso se permiten subconsultas correlacionadas (subconsultas que se refieren a un alias en la consulta exterior).</li>
+</ul>
+<p>El ejemplo más simple de una sentencia HQL es el siguiente:</p>
+<p style="text-align: center;"><strong>session.createQuery("from Person" ).getResultList();</strong></p>
+<p>Su equivalente en JPQL sería el siguiente, donde se requiere la cláusula select:</p>
+<p style="text-align: center;"><strong>entityManager.createQuery("select p from Person p", Person.class ).getResultList();</strong></p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="61_namedqueries.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_cedec_js.js"></script></body></html>
