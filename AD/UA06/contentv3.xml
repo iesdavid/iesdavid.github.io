@@ -524,7 +524,9 @@ Acceso a Datos. 2º DAM"></unicode>
               <list></list>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Uno de los problemas que nos podemos encontrar cuando construimos las consultas es que varios desarrolladores van a trabajar en el mismo proyecto construyendo consultas. Con lo cual puede que acabemos con &lt;strong&gt;consultas repetidas&lt;/strong&gt; en distintas partes del código.&lt;/p&gt;
-&lt;p&gt;Para evitar este problema podemos apoyarnos en &lt;strong&gt;JPA NamedQueries&lt;/strong&gt; que nos permiten definir las consultas a nivel de clase de dominio evitando las repeticiones.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+&lt;p&gt;Para evitar este problema podemos apoyarnos en &lt;strong&gt;JPA NamedQueries&lt;/strong&gt; que nos permiten definir las consultas a nivel de clase de dominio evitando las repeticiones.&lt;/p&gt;
+&lt;p&gt;Los ejemplos a continuación estarán basado en el diagrama siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;resources/diagrama.png&quot; rel=&quot;lightbox&quot;&gt;&lt;img src=&quot;resources/diagrama.png&quot; alt=&quot;Diagrama&quot; title=&quot;Diagrama&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;562&quot; height=&quot;170&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
               <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -537,7 +539,112 @@ Acceso a Datos. 2º DAM"></unicode>
               <instance class="exe.engine.galleryidevice.GalleryImages">
                <dictionary>
                 <string role="key" value=".listitems"></string>
-                <list></list>
+                <list>
+                 <instance class="exe.engine.galleryidevice.GalleryImage">
+                  <dictionary>
+                   <string role="key" value="_caption"></string>
+                   <instance class="exe.engine.field.TextField">
+                    <dictionary>
+                     <string role="key" value="_id"></string>
+                     <int value="168792"></int>
+                     <string role="key" value="_idevice"></string>
+                     <none></none>
+                     <string role="key" value="_instruc"></string>
+                     <string value=""></string>
+                     <string role="key" value="_name"></string>
+                     <string value=""></string>
+                     <string role="key" value="content"></string>
+                     <string value=""></string>
+                     <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                     <int value="4"></int>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_id"></string>
+                   <unicode value="3_115_2.0"></unicode>
+                   <string role="key" value="_imageResource"></string>
+                   <instance class="exe.engine.resource.Resource" reference="11">
+                    <dictionary>
+                     <string role="key" value="_idevice"></string>
+                     <reference key="8"></reference>
+                     <string role="key" value="_package"></string>
+                     <reference key="2"></reference>
+                     <string role="key" value="_storageName"></string>
+                     <string value="diagrama.png"></string>
+                     <string role="key" value="_userName"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmp5igcm3.eXe\\previews\\allyourbase\\diagrama.png"></string>
+                     <string role="key" value="checksum"></string>
+                     <string value="f66cff06952d133cf4589cc88807840f"></string>
+                     <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="warningMsg"></string>
+                     <string value=""></string>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_parent"></string>
+                   <reference key="9"></reference>
+                   <string role="key" value="_thumbnailResource"></string>
+                   <none></none>
+                   <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                   <int value="3"></int>
+                   <string role="key" value="makeThumbnail"></string>
+                   <bool value="0"></bool>
+                  </dictionary>
+                 </instance>
+                 <instance class="exe.engine.galleryidevice.GalleryImage">
+                  <dictionary>
+                   <string role="key" value="_caption"></string>
+                   <instance class="exe.engine.field.TextField">
+                    <dictionary>
+                     <string role="key" value="_id"></string>
+                     <int value="168793"></int>
+                     <string role="key" value="_idevice"></string>
+                     <none></none>
+                     <string role="key" value="_instruc"></string>
+                     <string value=""></string>
+                     <string role="key" value="_name"></string>
+                     <string value=""></string>
+                     <string role="key" value="content"></string>
+                     <string value=""></string>
+                     <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                     <int value="4"></int>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_id"></string>
+                   <unicode value="3_115_2.1"></unicode>
+                   <string role="key" value="_imageResource"></string>
+                   <instance class="exe.engine.resource.Resource" reference="12">
+                    <dictionary>
+                     <string role="key" value="_idevice"></string>
+                     <reference key="8"></reference>
+                     <string role="key" value="_package"></string>
+                     <reference key="2"></reference>
+                     <string role="key" value="_storageName"></string>
+                     <string value="diagrama.png"></string>
+                     <string role="key" value="_userName"></string>
+                     <string value="c:\\users\\david\\appdata\\local\\temp\\tmp5igcm3.eXe\\previews\\allyourbase\\diagrama.png"></string>
+                     <string role="key" value="checksum"></string>
+                     <string value="f66cff06952d133cf4589cc88807840f"></string>
+                     <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="warningMsg"></string>
+                     <string value=""></string>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_parent"></string>
+                   <reference key="9"></reference>
+                   <string role="key" value="_thumbnailResource"></string>
+                   <none></none>
+                   <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                   <int value="3"></int>
+                   <string role="key" value="makeThumbnail"></string>
+                   <bool value="0"></bool>
+                  </dictionary>
+                 </instance>
+                </list>
                 <string role="key" value="idevice"></string>
                 <reference key="9"></reference>
                </dictionary>
@@ -545,9 +652,9 @@ Acceso a Datos. 2º DAM"></unicode>
               <string role="key" value="intlinks_to_anchors"></string>
               <dictionary></dictionary>
               <string role="key" value="nextImageId"></string>
-              <int value="0"></int>
+              <int value="2"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="10"></reference>
              </dictionary>
             </instance>
            </list>
@@ -570,12 +677,15 @@ Acceso a Datos. 2º DAM"></unicode>
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
-           <list></list>
+           <list>
+            <reference key="11"></reference>
+            <reference key="12"></reference>
+           </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="11">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="13">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Ejemplo"></unicode>
@@ -634,12 +744,12 @@ Acceso a Datos. 2º DAM"></unicode>
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="12">
+            <instance class="exe.engine.field.TextAreaField" reference="14">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="114_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="11"></reference>
+              <reference key="13"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -690,7 +800,7 @@ public List listar(String namedQuery) {
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="12"></reference>
+                <reference key="14"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -747,13 +857,13 @@ public List listar(String namedQuery) {
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="15">
+      <instance class="exe.engine.node.Node" reference="17">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="6.2. Ejemplos"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="13">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="15">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -812,12 +922,12 @@ public List listar(String namedQuery) {
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="14">
+            <instance class="exe.engine.field.TextAreaField" reference="16">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="116_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="13"></reference>
+              <reference key="15"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -868,6 +978,30 @@ public long resultado(String namedQuery) {
     }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;h2&gt;JOIN&lt;/h2&gt;
+&lt;p&gt;El siguiente ejemplo muestra cómo mostrar la información del alumnado matriculado:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;@NamedQuery(
+name = &quot;alumnadoMatriculado&quot;,
+query = &quot;select m from AlumnadoEntity a JOIN a.listaAlumnadoMatricula m JOIN m.asignatura asig&quot;
+)
+
+
+ private static void listarMatriculas() throws Exception {
+        instancia.abrir();
+        List&amp;lt;MatriculaEntity&amp;gt; lista = instancia.listar(&quot;alumnadoMatriculado&quot;);
+        for (int i = 0; i &amp;lt; lista.size(); i++) {
+            System.out.println(
+                    lista.get(i).getAlumnado().getNombreCompleto() + &quot; &quot; +
+                    lista.get(i).getAsignatura().getNombre()+&quot; &quot;+
+                    lista.get(i).getAsignatura().getCurso()+&quot;º&quot;
+            );
+        }
+        instancia.cerrar();
+    }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
@@ -883,7 +1017,7 @@ public long resultado(String namedQuery) {
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="14"></reference>
+                <reference key="16"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -908,7 +1042,7 @@ public long resultado(String namedQuery) {
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="15"></reference>
+           <reference key="17"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -946,7 +1080,7 @@ public long resultado(String namedQuery) {
    <unicode role="key" value="1"></unicode>
    <reference key="10"></reference>
    <unicode role="key" value="2"></unicode>
-   <reference key="15"></reference>
+   <reference key="17"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -957,7 +1091,7 @@ public long resultado(String namedQuery) {
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="15"></reference>
+  <reference key="17"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -1992,6 +2126,11 @@ Acceso a Datos. 2º DAM"></unicode>
   <string value="2.7"></string>
   <string role="key" value="resources"></string>
   <dictionary>
+   <string role="key" value="f66cff06952d133cf4589cc88807840f"></string>
+   <list>
+    <reference key="11"></reference>
+    <reference key="12"></reference>
+   </list>
    <string role="key" value="fd1279427b8f0341047f2ed146110713"></string>
    <list>
     <reference key="5"></reference>

@@ -87,6 +87,30 @@ public long resultado(String namedQuery) {
     }</code></pre>
 </div>
 </div>
+<h2>JOIN</h2>
+<p>El siguiente ejemplo muestra cómo mostrar la información del alumnado matriculado:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@NamedQuery(
+name = "alumnadoMatriculado",
+query = "select m from AlumnadoEntity a JOIN a.listaAlumnadoMatricula m JOIN m.asignatura asig"
+)
+
+
+ private static void listarMatriculas() throws Exception {
+        instancia.abrir();
+        List&lt;MatriculaEntity&gt; lista = instancia.listar("alumnadoMatriculado");
+        for (int i = 0; i &lt; lista.size(); i++) {
+            System.out.println(
+                    lista.get(i).getAlumnado().getNombreCompleto() + " " +
+                    lista.get(i).getAsignatura().getNombre()+" "+
+                    lista.get(i).getAsignatura().getCurso()+"º"
+            );
+        }
+        instancia.cerrar();
+    }</code></pre>
+</div>
+</div>
 </div></div></div></section></div>
 </div>
 </div>
