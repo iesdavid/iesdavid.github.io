@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.3.2. Consultar registros | UA07. Bases de datos NoSQL </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA07. Bases de datos NoSQL</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA07: Bases de datos NoSQL</a></li>
+   <li><a href="71_tipos.html" class="no-ch">7.1. Tipos</a></li>
+   <li><a href="72_mongodb.html" class="daddy">7.2. MongoDB</a>
+   <ul class="other-section">
+      <li><a href="721_estructura_json.html" class="no-ch">7.2.1. Estructura JSON</a></li>
+      <li><a href="721_instalacin_de_mongodb.html" class="no-ch">7.2.1. Instalación de MongoDB</a></li>
+      <li><a href="723_operaciones_bsicas.html" class="no-ch">7.2.3. Operaciones básicas</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="73_crud_con_mongodb.html" class="current-page-parent daddy">7.3. CRUD con MongoDB</a>
+   <ul>
+      <li><a href="731_crear_registros.html" class="no-ch">7.3.1. Crear registros</a></li>
+      <li id="active"><a href="732_consultar_registros.html" class="active no-ch">7.3.2. Consultar registros</a></li>
+      <li><a href="733_actualizar_registros.html" class="no-ch">7.3.3. Actualizar registros</a></li>
+      <li><a href="734_borrar_registros.html" class="no-ch">7.3.4. Borrar registros</a></li>
+   </ul>
+   </li>
+   <li><a href="74_mongodb_desde_java.html" class="daddy">7.4. MongoDB desde Java</a>
+   <ul class="other-section">
+      <li><a href="741_conexin_a_la_bd.html" class="no-ch">7.4.1. Conexión a la BD</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="731_crear_registros.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="733_actualizar_registros.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.3.2. Consultar registros</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id8">
+<div class="iDevice emphasis0" >
+<div id="ta8_126_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>MongoDB proporciona los siguientes métodos para leer documentos de una colección:</p>
+<div class="highlighted-code language-json">
+<div>
+<pre><code>db.collection.find()</code></pre>
+</div>
+</div>
+<p>Es posible especificar filtros de consulta o criterios que identifiquen los documentos a devolver.</p>
+<p><img src="crud-annotated-mongodb-find.bakedsvg.svg" alt="Consultar registros" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="93"></p>
+<p>Con el operador <strong>.limit(5)</strong>, limitamos la salida a los primeros 5 elementos.</p>
+<p>Si queremos saber el número de registros que devuelve una consulta pondremos</p>
+<ul>
+<li>db.users.find({filtros}).count();</li>
+</ul>
+<p>Si, por ejemplo, se desea que la salida sea ascendente por uno de los campos, utilizamos el operador .sort. Para obtener los datos de la colección ordenados por nombre escribimos: (El número que acompaña a la orden indica el tipo de ordenación, 1 ascendente y -1 descendente).</p>
+<ul>
+<li>db.users.find().sort({name:1});</li>
+</ul>
+<p>En el <strong>query criteria o filtro</strong> indicamos la condición de búsqueda, podemos añadir los pares nombre valor a buscar. Si omitimos este parámetro devuelve todos los documentos.</p>
+<p>En <strong>projection o campos</strong> se especifican los campos a devolver de los documentos que coinciden con el filtro de la consulta. Para devolver todos los campos de los documentos omitimos este parámetro. Si se desean devolver uno o más campos escribiremos <em>(nombre_campol: 1, nombre_campo2: 1, ...)</em>. Si no se desean que se seleccionen los campos escribimos. <em>{nombre_campol: 0, nombre_campo2: 0, ...}</em> También podemos poner true o false en lugar de 1 o 0.</p>
+<p>En las búsquedas podemos utilizar una gran cantidad de selectores de comparación, lógicos etc.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="731_crear_registros.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="733_actualizar_registros.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_cedec_js.js"></script></body></html>

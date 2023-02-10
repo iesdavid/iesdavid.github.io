@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.4.1. Conexión a la BD | UA07. Bases de datos NoSQL </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA07. Bases de datos NoSQL</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA07: Bases de datos NoSQL</a></li>
+   <li><a href="71_tipos.html" class="no-ch">7.1. Tipos</a></li>
+   <li><a href="72_mongodb.html" class="daddy">7.2. MongoDB</a>
+   <ul class="other-section">
+      <li><a href="721_estructura_json.html" class="no-ch">7.2.1. Estructura JSON</a></li>
+      <li><a href="721_instalacin_de_mongodb.html" class="no-ch">7.2.1. Instalación de MongoDB</a></li>
+      <li><a href="723_operaciones_bsicas.html" class="no-ch">7.2.3. Operaciones básicas</a></li>
+   </ul>
+   </li>
+   <li><a href="73_crud_con_mongodb.html" class="daddy">7.3. CRUD con MongoDB</a>
+   <ul class="other-section">
+      <li><a href="731_crear_registros.html" class="no-ch">7.3.1. Crear registros</a></li>
+      <li><a href="732_consultar_registros.html" class="no-ch">7.3.2. Consultar registros</a></li>
+      <li><a href="733_actualizar_registros.html" class="no-ch">7.3.3. Actualizar registros</a></li>
+      <li><a href="734_borrar_registros.html" class="no-ch">7.3.4. Borrar registros</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="74_mongodb_desde_java.html" class="current-page-parent daddy">7.4. MongoDB desde Java</a>
+   <ul>
+      <li id="active"><a href="741_conexin_a_la_bd.html" class="active no-ch">7.4.1. Conexión a la BD</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="74_mongodb_desde_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.4.1. Conexión a la BD</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id12">
+<div class="iDevice emphasis0" >
+<div id="ta12_130_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Para conectamos a la base de datos creamos una instancia <strong>MongoClient</strong>, por defecto crea una conexión con la base de datos local, y escucha por el puerto <strong>27017</strong>. Todos los métodos relacionados con operaciones CRUD (Create, Read, Update and Delete) en Java se acceden a través de la interfaz <strong>MongoCollection</strong>.</p>
+<p>Las instancias de <strong>MongoCollection</strong> se pueden obtener a partir de una instancia <strong>MongoClient</strong> por medio de una <strong>MongoDatabase</strong>. Así pues para conectarme a la base de datos <strong>mibasedatos</strong> ya la colección amigos escribiré lo siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    String uri = "mongodb://localhost:27017/";
+    try (MongoClient mongoClient = MongoClients.create(uri)) {
+        MongoDatabase database = mongoClient.getDatabase("Prueba");
+        MongoCollection&lt;Document&gt; collection = database.getCollection("Clientes");
+        Document doc = collection.find(eq("nombre", "David")).first();
+        if (doc != null) {
+            System.out.println(doc.toJson());
+        } else {
+            System.out.println("No matching documents found.");
+        }
+    }</code></pre>
+</div>
+</div>
+<p><strong>MongoCollection</strong> es una interfaz genérica: el parámetro de tipo <strong>TDocument</strong> es la clase que los clientes utilizan para insertar o modificar los documentos de una colección, y es el tipo predeterminado para devolver búsquedas (<strong>find</strong>) y agregados (<strong>aggregate</strong>). El método de un solo argumento <strong>getCollection</strong> devuelve una instancia de <strong>MongoCollection &lt; Document&gt;</strong> y así es como podemos trabajar con instancias de la clase de documento.</p>
+<p><strong>CONSULTAR DOCUMENTOS</strong></p>
+<p>El método <strong>find()</strong> devuelve un cursor, devuelve una instancia <strong>FindIterable</strong>. Podemos utilizar el método <strong>iterator()</strong> para recorrer el cursor. En el ejemplo recuperamos todos los documentos de la colección y se visualizan en formato <strong>JSON</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    MongoCursor<document> result = collection.find(filter)
+        .projection(project)
+        .sort(sort).iterator();
+    try {
+        while (result.hasNext()) {
+            System.out.println(result.next().toJson());
+        }
+    } finally {
+        result.close();
+    }</document></code></pre>
+</div>
+</div>
+<p><br><br></p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="74_mongodb_desde_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_cedec_js.js"></script></body></html>
