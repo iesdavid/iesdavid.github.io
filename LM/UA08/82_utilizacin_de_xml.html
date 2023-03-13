@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.2. Utilización de XML | UA08 - Bases de datos en XML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA08 - Bases de datos en XML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA08. Bases de datos en XML</a></li>
+   <li><a href="81_las_bases_de_datos.html" class="daddy">8.1. Las bases de datos</a>
+   <ul class="other-section">
+      <li><a href="811_el_sistema_de_gestin_de_bases_de_datos.html" class="no-ch">8.1.1. El Sistema de Gestión de Bases de Datos</a></li>
+      <li><a href="812_inconvenientes_del_sgbd.html" class="no-ch">8.1.2. Inconvenientes del SGBD</a></li>
+      <li><a href="813_transacciones.html" class="no-ch">8.1.3. Transacciones</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="82_utilizacin_de_xml.html" class="active daddy">8.2. Utilización de XML</a>
+   <ul>
+      <li><a href="821_transformacin.html" class="no-ch">8.2.1. Transformación</a></li>
+   </ul>
+   </li>
+   <li><a href="83_consultas.html" class="no-ch">8.3. Consultas</a></li>
+   <li><a href="84_xpath.html" class="daddy">8.4. XPath</a>
+   <ul class="other-section">
+      <li><a href="841_rutas.html" class="no-ch">8.4.1. Rutas</a></li>
+      <li><a href="842_expresiones.html" class="no-ch">8.4.2. Expresiones</a></li>
+      <li><a href="843_predicado.html" class="no-ch">8.4.3. Predicado</a></li>
+      <li><a href="844_funciones.html" class="no-ch">8.4.4. Funciones</a></li>
+      <li><a href="85_ejercicio.html" class="no-ch">8.5. Ejercicio</a></li>
+   </ul>
+   </li>
+   <li><a href="85_xquery.html" class="no-ch">8.5. XQuery</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="813_transacciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="821_transformacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.2. Utilización de XML</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id6">
+<div class="iDevice emphasis0" >
+<div id="ta6_126_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Tras la llegada de la era Internet, la compartición de la información empezó a resultar crucial para no quedarse desfasado y mejorar las relaciones comerciales. Por ejemplo, una empresa X necesita enviarle a la empresa Y información en relación a sus transacciones comerciales. El envío de esta información beneficia a X y también a Y (reducción de costes económicos, costes burocráticos, tiempo, etc.). Es lo que se denomina <strong>B2B (Business To Business)</strong>. El problema es que X utiliza unos modelos de datos distintos a los de Y. Tampoco es fácil ponerse de acuerdo con el SGBD. Debe haber algo que permita que ambos sistemas puedan comunicarse entre sí, siendo distintos. <strong>La solución es XML</strong>.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div id="ta7_127_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>XML permite definir de manera rápida e intuitiva una representación de la información que ambas empresas desean compartir. La empresa X usará su SGBD para exportar sus datos a XML y se los remitirá a Y. Ambas empresas conocen esa representación de la información por lo que la información fluirá sin problema (independientemente de los campos que tengan sus respectivas BDs o de los SGBD que estén utilizando).</p>
+<p>Los SGBD actuales (sobre todo los que usan modelos relacionales), proporcionan en algunos casos extensiones que permitan trabajar con los modelos y representaciones definidas en documentos XML. Aún así, si el objetivo es utilizar XML desde el principio, se debería analizar las siguientes BD XML nativas:</p>
+<ul>
+<li><a href="http://xml.coverpages.org/ExcelonXIS-Lite.html" target="_blank" rel="noopener">eXcelon XIS Lite</a></li>
+<li><a href="http://www.ixiasoft.com" target="_blank" rel="noopener">TEXTML</a></li>
+<li><a href="http://sourceforge.net/projects/dbxml-core/" target="_blank" rel="noopener">dbXML</a></li>
+<li><a href="http://exist.sourceforge.net/" target="_blank" rel="noopener">eXist</a></li>
+</ul>
+<p>Las dos primeras son comerciales y las dos últimas son del mundo OpenSource. Cuando se habla de BD XML nativas, se ha de dejar claro que existen dos maneras almacenar información dentro de ellas:</p>
+<ul>
+<li><strong>Usando un modelo centrado en el almacenamiento de los datos:</strong> exactamente igual que las BD Relacionales (se guardan tuplas).</li>
+<li><strong>Usando un modelo centrado en el documento:</strong> no hay campos, ni datos, tal y como se conoce en las BD Relacionales. Se guardan documentos XML.</li>
+</ul>
+<p>La primera permite seguir utilizando los modelos relacionales dentro de BD XML. La segunda permite almacenar documentación de diferentes modelos dentro de la BD. Dependiendo de los objetivos de almacenamiento que se planteen quizás se ajuste más un modelo que otro. Ese análisis debe ser meditado concienzudamente.</p>
+<p>Dado que el modelo relacional es el más utilizado hoy en día, se indicarán una serie de pasos para usando XML se pueda utilizar el mismo modelo de datos.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="813_transacciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="821_transformacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_cedec_js.js"></script></body></html>

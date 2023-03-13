@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.3. Consultas | UA08 - Bases de datos en XML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA08 - Bases de datos en XML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA08. Bases de datos en XML</a></li>
+   <li><a href="81_las_bases_de_datos.html" class="daddy">8.1. Las bases de datos</a>
+   <ul class="other-section">
+      <li><a href="811_el_sistema_de_gestin_de_bases_de_datos.html" class="no-ch">8.1.1. El Sistema de Gestión de Bases de Datos</a></li>
+      <li><a href="812_inconvenientes_del_sgbd.html" class="no-ch">8.1.2. Inconvenientes del SGBD</a></li>
+      <li><a href="813_transacciones.html" class="no-ch">8.1.3. Transacciones</a></li>
+   </ul>
+   </li>
+   <li><a href="82_utilizacin_de_xml.html" class="daddy">8.2. Utilización de XML</a>
+   <ul class="other-section">
+      <li><a href="821_transformacin.html" class="no-ch">8.2.1. Transformación</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="83_consultas.html" class="active no-ch">8.3. Consultas</a></li>
+   <li><a href="84_xpath.html" class="daddy">8.4. XPath</a>
+   <ul class="other-section">
+      <li><a href="841_rutas.html" class="no-ch">8.4.1. Rutas</a></li>
+      <li><a href="842_expresiones.html" class="no-ch">8.4.2. Expresiones</a></li>
+      <li><a href="843_predicado.html" class="no-ch">8.4.3. Predicado</a></li>
+      <li><a href="844_funciones.html" class="no-ch">8.4.4. Funciones</a></li>
+      <li><a href="85_ejercicio.html" class="no-ch">8.5. Ejercicio</a></li>
+   </ul>
+   </li>
+   <li><a href="85_xquery.html" class="no-ch">8.5. XQuery</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="821_transformacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="84_xpath.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.3. Consultas</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id9">
+<div class="iDevice emphasis0" >
+<div id="ta9_129_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Tras instalar un SGBD, los usuarios se comunicarán con él mediante algún tipo de lenguaje que permita manipular los datos almacenados. El lenguaje de consulta estructurado más popular es SQL (Structure Query Language). Este lenguaje permite, de forma declarativa, acceder a las BD relacionales y operar con ellas. Operaciones típicas son:</p>
+<ul>
+<li>Creación y borrado de tablas.</li>
+<li>Inserción, modificación y borrado de tuplas.</li>
+<li>Ejecución de búsquedas mediante consultas.</li>
+</ul>
+<p><strong>SQL</strong> es el lenguaje que en la actualidad implementa la mayoría de los SGBD. Existen numeroras revisiones del lenguaje pero la mayoría de los SGBD parten del estándar establecido en 1992.</p>
+<p>Si se va a trabajar con documentos XML para almacenar en su interior información mediante un modelo relacional, se necesitará algún lenguaje que permita extraer y manipular información de igual manera que SQL con las BD relacionales. Este lenguaje se llama <strong>XQuery</strong>.</p>
+<p>XQuery es, por tanto, un lenguaje de consulta similar a SQL que permite recorrer los documentos XML de manera que se pueda extraer y manipular la información contenida en el mismo. Es un lenguaje muy sencillo que no requiere de conocimientos de programación avanzados (no es necesario saber C/C++, Java, Python, Visual Basic Script, etc). Además XQuery es compatible con muchas de las tecnologías que estandariza W3C (como XML, Namespaces, los esquemas, XSLT y XPath). Es por ello, por su facilidad para obtener resultados sin casi programar y por la compatibilidad con muchos de los estándares actuales, que se ha elegido para realizar las consultas dentro de este libro.</p>
+<p>Cuando se va a analizar un documento XML, se crea un árbol de nodos del mismo. Ese árbol tiene un elemento raíz y una serie de hijos. Los hijos del nodo raíz pueden tener más hijos. Si repetimos ese proceso llegará un momento en el que el último nodo no tiene ningún hijo, lo que se denomina nodo hoja.</p>
+<p>Establecido ese árbol de nodos, se recorre esa representación del documento XML buscando la información que se quiere (ya sea algún nodo concreto, algún atributo de un nodo concreto, etc.). ¿Qué tipos de nodos se puede encontrar en ese recorrido? Básicamente los siguientes:</p>
+<ul>
+<li><strong>Nodo raíz o "/":</strong> Es el primer nodo del documento XML. En el ejemplo de la biblioteca de libros explicado anteriormente, sería el elemento "Libros".</li>
+<li><strong>Nodo elemento</strong>: Cualquier elemento de un documento XML es un nodo elemento en el árbol. El nodo raíz es un caso especial de Nodo elemento (no tiene padre). Cada nodo elemento posee un padre y puede o no poseer hijos. En el caso que no tenga hijos, sería un nodo hoja. En el ejemplo de la biblioteca de libros explicado anteriormente.</li>
+<li><strong>Nodo texto</strong>: Cualquier elemento del documento que no esté marcado con una etiqueta de la DTD del documento XML.</li>
+<li><strong>Nodo atributo</strong>: Un nodo elemento puede tener etiquetas que complementen la información de ese elemento. Eso sería un nodo atributo.</li>
+</ul>
+<p>La extracción de la información durante el recorrido del árbol será tan simple como la detección de los nodos a buscar y el procesamiento de la información que se quiere extraer de ese nodo concreto. Esto que parece tan complicado, se realiza fácilmente con una tecnología denominada XPath (XML Path).</p>
+<p>XPath es la herramienta que utiliza XQuery para procesar el árbol de nodos de un documento XML. Funciona en base a una serie de expresiones que permiten identificar qué parte del documento XML se quiere acceder o recorrer. La gran ventaja es que al ser una herramienta bastante genérica, XPath no solo es el motor de acceso en documentos XML para XQuery sino que es la base para otras tecnologías como XPointer, XLink o XSLT (como hemos visto anteriormente). Por tanto XQuery usa a XPath para hacer su trabajo.</p>
+<p>Pero lo realmente interesante es cómo hacer consultas con <strong>XQuery</strong>.</p>
+<p><a href="grafos-documento.svg" rel="lightbox"><img src="grafos-documento.svg" alt="Nodos" title="Nodos" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="422"></a></p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="821_transformacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="84_xpath.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_cedec_js.js"></script></body></html>
