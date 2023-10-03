@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>3.2.4. Enlaces | UA03. HTML </title>
+<title>3.2.4. Enlaces y marcadores | UA03. HTML </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
@@ -33,7 +33,7 @@
       <li><a href="321_elementos_para_dar_formato.html" class="no-ch">3.2.1 Elementos para dar formato</a></li>
       <li><a href="322_listas.html" class="no-ch">3.2.2. Listas</a></li>
       <li><a href="323_tablas.html" class="no-ch">3.2.3. Tablas</a></li>
-      <li id="active"><a href="324_enlaces.html" class="active no-ch">3.2.4. Enlaces</a></li>
+      <li id="active"><a href="324_enlaces_y_marcadores.html" class="active no-ch">3.2.4. Enlaces y marcadores</a></li>
       <li><a href="325_imgenes.html" class="no-ch">3.2.5. Imágenes</a></li>
       <li><a href="326_audio_y_vdeo.html" class="no-ch">3.2.6. Audio y vídeo</a></li>
       <li><a href="327_formularios.html" class="no-ch">3.2.7. Formularios</a></li>
@@ -55,7 +55,7 @@
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">3.2.4. Enlaces</h1></header>
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2.4. Enlaces y marcadores</h1></header>
 <article class="iDevice_wrapper UDLcontentIdevice" id="id18">
 <div class="iDevice emphasis0" >
 <div id="ta18_858_2" class="block iDevice_content">
@@ -75,6 +75,54 @@
 <li>_top - Abre el documento vinculado en todo el cuerpo de la ventana</li>
 <li>framename - Abre el documento vinculado en un marco con nombre</li>
 </ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id29">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Marcadores</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta29_124_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Al crear una página web con un contenido extenso, existen ciertos enlaces que permiten saltar directamente a una parte concreta de la página. Este tipo de enlaces o hipervínculos se llaman <strong>marcadores</strong> o <strong>enlaces locales</strong>.</p>
+<p>Un ejemplo claro se puede visualizar en la web <a href="http://www.wikipedia.es">www.wikipedia.es</a> en cualquiera de sus artículos (por ejemplo, <a href="https://es.wikipedia.org/wiki/Marillion" target="_blank" title="Marillion en Wikipedia" rel="noopener"><strong>aquí</strong></a>) donde se utiliza en el menú para acceder a los diferentes apartados.</p>
+<p>Para crear marcadores se debe contar con <strong>una etiqueta</strong> de tipo enlace <strong>&lt; a &gt;</strong> para el origen y otra, de cualquier tipo, para el destino (el marcador).</p>
+<ul>
+<li>En el origen se declara como referencia <strong>href</strong> un nombre utilizado como marcador, precedido por el símbolo <strong>#</strong> (almohadilla).</li>
+<li>En el destino, se debe declarar el atributo <strong>id</strong> o el atributo <strong>name</strong> con dicho nombre de marcador pero <strong>sin</strong> la almohadilla. Esta etiqueta puede contener en su interior un texto, una imagen o incluso podemos crear una en blanco. Lo importante es el <strong>id</strong>.<code></code></li>
+</ul>
+<p><code></code></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;a href="#nombre_marcador"&gt;Soy el origen que se pulsa&lt;/a&gt;
+
+...
+
+&lt;etiqueta id="nombre_marcador"&gt;Soy el marcador que se mostrará al pulsar en el origen&lt;/etiqueta&gt;</code></pre>
+</div>
+</div>
+<p><code>&nbsp;</code></p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2>¿Podría usarse para acceder a marcadores de otras páginas?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La respuesta es sí. Simplemente se declara como referencia el nombre del marcador en la etiqueta enlace.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;a href="sierradepinares.html#quinto_pino"&gt;Pulsa para acceder al quinto pino&lt;/a&gt;</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_assignment_white" id="id30">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_assignment_white.png)"><h1 class="iDeviceTitle">Ejercicio</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta30_125_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Descarga <a href="marcadores.html" target="_blank" title="Ejercicio de marcadores [html - 5122 B]" rel="noopener">este archivo</a><span class="exe-link-data file-size"> (html - 5122 <abbr title="Bytes" lang="en">B</abbr>)</span> y modifícalo para poder acceder a los diferentes apartados así como poder regresar al Inicio cuando se acabe de leer cada uno de ellos.</p>
+<p>Guarda el ejemplo como <strong>ej4.html</strong></p></div></div></section></div>
+</div>
+</div>
 </div>
 </div>
 </article>

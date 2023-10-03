@@ -35,7 +35,7 @@
       <li><a href="321_elementos_para_dar_formato.html" class="no-ch">3.2.1 Elementos para dar formato</a></li>
       <li><a href="322_listas.html" class="no-ch">3.2.2. Listas</a></li>
       <li><a href="323_tablas.html" class="no-ch">3.2.3. Tablas</a></li>
-      <li><a href="324_enlaces.html" class="no-ch">3.2.4. Enlaces</a></li>
+      <li><a href="324_enlaces_y_marcadores.html" class="no-ch">3.2.4. Enlaces y marcadores</a></li>
       <li><a href="325_imgenes.html" class="no-ch">3.2.5. Imágenes</a></li>
       <li><a href="326_audio_y_vdeo.html" class="no-ch">3.2.6. Audio y vídeo</a></li>
       <li><a href="327_formularios.html" class="no-ch">3.2.7. Formularios</a></li>
@@ -62,12 +62,12 @@
 <div class="iDevice emphasis0" >
 <div id="ta6_846_2" class="block iDevice_content">
 <div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="htmlEstructura.png" alt="Estructura HTML" style="display: block; margin-left: auto; margin-right: auto;" width="560" height="376"></p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="exe-fx exe-accordion">
-<h2>Etiqueta &lt;html&gt;</h2>
-<p>Un documento HTML contiene marcas (etiquetas), las cuales se escriben empleando los caracteres menor que “&lt;”, mayor que “&gt;” y barra inclinada “/”.</p>
-<p>Por ejemplo, las etiquetas de inicio (&lt;html&gt;) y fin (&lt;/html&gt;) representan al elemento raíz (“html”) que en todo documento HTML hay que escribir <strong>&lt;html&gt;&lt;/html&gt;</strong></p>
-<h2>Etiqueta &lt;head&gt;</h2>
-<p>Dentro del elemento “html”, es decir, entre &lt;html&gt; y &lt;/html&gt;, se debe escribir el elemento “head” que, como iremos viendo a lo largo del tutorial, puede contener diversa información sobre el documento:</p>
-<div class="highlighted-code language-markup line-numbers">
+<h2>Etiqueta</h2>
+<p>Representa la raíz de un documento HTML y sirve como contenedor para los demás elementos HTML.</p>
+<strong></strong>
+<h2>Etiqueta head</h2>
+<p>Dentro del elemento “html”, es decir, entre &lt;html&gt; y &lt;/html&gt;, se debe escribir el elemento “head” que, como iremos viendo a lo largo del tutorial, puede contener diversa información sobre la configuración del documento. En su interior se incluye la colección de metadatos sobre el documento, los enlaces a scripts y hojas de estilo.</p>
+<div class="highlighted-code language-markup">
 <div>
 <pre><code>&lt;html&gt;
     &lt;head&gt;
@@ -77,46 +77,81 @@
 </div>
 </div>
 <h2>Etiqueta &lt;title&gt;</h2>
-<p>Entre &lt;head&gt; y &lt;/head&gt; se pueden escribir otros elementos. Por ejemplo, el elemento “title”, el cual sirve para indicar el título del documento.</p>
-<div class="highlighted-code language-markup line-numbers">
+<p>Entre &lt;head&gt; y &lt;/head&gt; se pueden escribir otros elementos. Por ejemplo, el elemento “title”, el cual sirve para indicar el título del documento. Se muestra en la barra superior del navegador o en las pestañas de página.</p>
+<div class="highlighted-code language-markup">
 <div>
 <pre><code>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Ejemplo de 2 párrafos&lt;/title&gt;
-&lt;/head&gt;
+   &lt;head&gt;
+      &lt;title&gt;Ejemplo de 2 párrafos&lt;/title&gt;
+   &lt;/head&gt;
 &lt;/html&gt;</code></pre>
+</div>
+</div>
+<h2>Etiqueta &lt;link&gt;</h2>
+<p>Enlaza documentos externos, por ejemplo CSS.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;link rel="stylesheet" href="mystyle.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;Esto es un encabezado&lt;/h1&gt;
+   &lt;p&gt;Esto es un párrafo.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<h2>Etiqueta &lt;meta&gt;</h2>
+<p>Define los metadatos que no pueden ser definidos usando otro elemento HTML: set de caracteres, descripción de la página, autor, palabras clave, ...</p>
+<p>Estos datos no se muestran por pantalla pero son usados por el navegador, por motores de búsqueda y por otros servicios web.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="description" content="Free Web tutorials"&gt;
+&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+&lt;meta name="author" content="John Doe"&gt;</code></pre>
+</div>
+</div>
+<h2>Etiqueta &lt;style&gt;</h2>
+<p>Usada para escribir código CSS interno sin necesitar un documento aparte. Es usado si el estilo es propio de esa página (no del site) y contiene pocas líneas o modificaciones.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code> &lt;style&gt;
+  body {background-color: powderblue;}
+  h1 {color: red;}
+  p {color: blue;}
+&lt;/style&gt; </code></pre>
+</div>
+</div>
+<h2>Etiqueta &lt;script&gt;</h2>
+<p>Define un script interno o un enlace hacia un script externo de JavaScript.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code> &lt;script&gt;
+   function myFunction() {
+     document.getElementById("demo").innerHTML = "Hello JavaScript!";
+   }
+&lt;/script&gt; </code></pre>
 </div>
 </div>
 <h2>Etiqueta &lt;body&gt;</h2>
-<p>En un documento HTML, después del “head”, hay que escribir el elemento “body” y alberga todo el contenido (párrafos, imágenes, vídeos...) del documento, los cuales se mostrarán en el navegador.</p>
-<div class="highlighted-code language-markup line-numbers">
+<p>En un documento HTML, después del “head”, hay que escribir el elemento “body” y alberga todo el contenido (párrafos, imágenes, vídeos...) del documento, los cuales se mostrarán en el navegador. Sólo puede existir un elemento &lt;body&gt; en el documento.</p>
+<div class="highlighted-code language-markup">
 <div>
 <pre><code>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Ejemplo de 2 párrafos&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
+   &lt;head&gt;
+      &lt;title&gt;Ejemplo de 2 párrafos&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      ...
+   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 </div>
 </div>
-<h2>Etiqueta &lt;p&gt;</h2>
-<p>En este caso, entre &lt;body&gt; y &lt;/body&gt; se incluyen dos elementos “p” delimitados por la etiqueta de inicio &lt;p&gt; y la de cierre &lt;/p&gt;:</p>
-<div class="highlighted-code language-markup line-numbers">
-<div>
-<pre><code>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Ejemplo de 2 párrafos&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;p&gt;Esto es un párrafo.&lt;/p&gt;
-&lt;p&gt;Esto es otro párrafo.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</div>
-</div>
-</div>
-</div></div></section></div>
+</div></div></div></section></div>
 </div>
 </div>
 </article>
