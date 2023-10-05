@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2.4. Tareas | UA03. Programando... </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez Alcántara" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA03. Programando...</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA03. Programando...</a></li>
+   <li><a href="31_herramientas.html" class="no-ch">3.1. Herramientas</a></li>
+   <li class="current-page-parent"><a href="32_interfaces_de_usuario.html" class="current-page-parent daddy">3.2. Interfaces de usuario</a>
+   <ul>
+      <li><a href="321_activity_y_layout.html" class="no-ch">3.2.1. Activity y Layout</a></li>
+      <li><a href="322_context.html" class="no-ch">3.2.2. Context</a></li>
+      <li><a href="323_intent.html" class="no-ch">3.2.3. Intent</a></li>
+      <li id="active"><a href="324_tareas.html" class="active no-ch">3.2.4. Tareas</a></li>
+      <li><a href="325_fragment.html" class="no-ch">3.2.5. Fragment</a></li>
+   </ul>
+   </li>
+   <li><a href="33_otras_ventanas.html" class="no-ch">3.3. Otras ventanas</a></li>
+   <li><a href="34_imgenes.html" class="daddy">3.4. Imágenes</a>
+   <ul class="other-section">
+      <li><a href="341_drawables.html" class="no-ch">3.4.1. Drawables</a></li>
+   </ul>
+   </li>
+   <li><a href="35_eventos_de_teclado.html" class="no-ch">3.5. Eventos de teclado</a></li>
+   <li><a href="36_sonidos.html" class="no-ch">3.6. Sonidos</a></li>
+   <li><a href="ejercicio_1.html" class="no-ch">Ejercicio 1</a></li>
+   <li><a href="ejercicio_2.html" class="no-ch">Ejercicio 2</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="323_intent.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="325_fragment.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2.4. Tareas</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id15">
+<div class="iDevice emphasis0" >
+<div id="ta15_843_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Android maneja las pilas de actividades asociadas a lo que se conoce como <strong>tareas</strong>. Una tarea es un conjunto de actividades con las que interactúa el usuario mientras realiza una función. Normalmente, una aplicación tendrá una tarea con una pila de actividades, aunque no tiene por qué ser siempre así.</p>
+<p>El orden de las actividades en la pila no puede modificarse una vez introducidas. Sin embargo, sí puede configurarse de antemano, mediante el uso de parámetros en la etiqueta <strong><activity></activity></strong> del <strong>manifest</strong> o mediante parámetros en la función <strong>startActivity</strong>. Los parámetros de la función tendrán prioridad sobre los del <strong>manifest</strong> en caso de que existan ambos y sean incompatibles.</p>
+<p>En el manifest, tenemos la opción de especificar el atributo <strong>launchMode</strong>, que especifica cómo la actividad encajará en la tarea, por ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>&lt;activity android:name=".MainActivity" android:launchMode="standard"/&gt;</code></pre>
+</div>
+</div>
+<p>Hay cuatro modos diferentes, veamos qué hace cada uno:</p>
+<ul>
+<li><strong>standard</strong>: es el modo por defecto. El sistema creará una nueva instancia de la actividad en la tarea. La actividad podrá crearse más de una vez, y cada instancia puede pertenecer a una tarea diferente.</li>
+<li><strong>singleTop</strong>: si ya existe una instancia de la actividad en la tarea actual, el sistema enrutará el <strong>intent</strong> a esa instancia. Como la actividad ya existe, no se llamará a <strong>onCreate</strong>, sino a <strong>onNewIntent</strong>.</li>
+<li><strong>singleTask</strong>: el sistema crea una nueva tarea para instanciarla como la actividad principal de la tarea. Sin embargo, si ya existe una instancia de la actividad en una tarea separada, el sistema enrutará el <strong>intent</strong> a la actividad existente mediante <strong>onNewIntent</strong>.</li>
+<li><strong>singleInstance</strong>: Sería lo mismo que <strong>singleTask</strong>, excepto que el sistema no lanzará ninguna otra actividad en la tarea que tiene la instancia. La instancia de la actividad será siempre la única que tenga la tarea. Cualquier actividad que se lance de este modo creará una nueva tarea.</li>
+</ul>
+<p><img src="clear_top3.webp" alt="Clear on top" title="Clear on top" style="float: right; margin-left: 10px; margin-right: 10px;" width="240" height="210">Algunos parámetros que podemos utilizar en la función <strong>onStartActivity</strong> serán:</p>
+<ul>
+<li><strong>FLAG_ACTIVITY_NEW_TASK</strong>: comienza la actividad en una nueva tarea. Si ya existe una tarea con esa actividad, la tarea se traerá al primer plano y la actividad ya existente recibirá la llamada de la función <strong>onNewIntent</strong>. El resultado sería el mismo que utilizar <strong>singleTask</strong> en el <strong>manifest</strong>.</li>
+<li><strong>FLAG_ACTIVITY_SINGLE_TOP</strong>: si la actividad que se quiere lanzar es la actividad actual, la situada en lo alto de la pila, recibirá una llamada a <strong>onNewIntent</strong> en lugar de crearse una nueva. Sería lo mismo que usar <strong>singleTop</strong> en el <strong>manifest</strong>.</li>
+<li><strong>FLAG_ACTIVITY_CLEAR_TOP</strong>: si la actividad que quiere lanzarse está ya en la tarea actual, en lugar de lanzarse una nueva instancia, todas las demás actividades que están sobre ella en la pila se destruirán y la actividad que ya existía, ahora en primer plano, recibirá la llamada a <strong>onNewIntent</strong>. Normalmente, este flag se utiliza junto con <strong>FLAG_ACTIVITY_NEW_TASK</strong>.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_info" id="id16">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Enlaces</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_844_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><a href="https://developer.android.com/guide/components/activities/tasks-and-back-stack?hl=es-419" target="_blank" rel="noopener">Tareas y pila</a></p>
+<p><a href="https://developer.android.com/guide/topics/manifest/activity-element?hl=es-419#lmode" target="_blank" rel="noopener">Modos de lanzamiento de actividades</a></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_think" id="id17">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta17_845_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Paso 1</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Crea un nuevo proyecto, con Actividad vacía, denominado <strong>Llamada a Contacto</strong>.</p>
+<p>Edita el layout para que tenga seis campos <strong>TextView</strong>, unos servirán de etiquetas y otros de valores. Además, inserta dos botones <strong>Button</strong>.</p>
+<p>Disponlo todo como en la siguiente imagen:</p>
+<p><img src="ejemploContactos.png" alt="Ejemplo contactos" style="display: block; margin-left: auto; margin-right: auto;" width="261" height="343"></p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Paso 2</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Edita el código de <strong>MainActivity</strong> para dar utilidad a los dos botones:</p>
+<ol>
+<li>El primer botón deberá llamar a la función <strong>obtenerContacto</strong>.</li>
+<li>El segundo botón deberá llamará a la función <strong>llamar</strong> (valga la redundancia).</li>
+</ol></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Paso 3</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La función <strong>obtenerContacto</strong>, tendrá el siguiente código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if(tenemosPermiso()) {
+    val intent = Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)
+    startActivityForResult(intent, REQUEST_CONTACTO)
+}else {
+    pidePermiso()
+}</code></pre>
+</div>
+</div>
+</div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="323_intent.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="325_fragment.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
