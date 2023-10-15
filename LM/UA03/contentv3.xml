@@ -85,7 +85,7 @@
   <string role="key" value="_name"></string>
   <unicode value="UA03"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="37"></int>
+  <int value="39"></int>
   <string role="key" value="_nextNodeId"></string>
   <int value="16"></int>
   <string role="key" value="_nodeIdDict"></string>
@@ -3793,12 +3793,186 @@ Elementos del formulario
                         <dictionary></dictionary>
                         <string role="key" value="content_w_resourcePaths"></string>
                         <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
-&lt;h2&gt;input&lt;/h2&gt;
-&lt;p&gt;Escriba su contenido...&lt;/p&gt;
+&lt;h2&gt;fieldset&lt;/h2&gt;
+&lt;p&gt;Las etiquetas &amp;lt;&lt;strong&gt;fieldset&lt;/strong&gt;&amp;gt; y &amp;lt;&lt;strong&gt;legend&lt;/strong&gt;&amp;gt; se utilizan para agrupar elementos de formulario relacionados y proporcionar un título o leyenda descriptiva para el grupo.&lt;/p&gt;
+&lt;p&gt;La etiqueta &amp;lt;&lt;strong&gt;fieldset&lt;/strong&gt;&amp;gt; actúa como un contenedor que agrupa campos del formulario. Ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;fieldset&amp;gt;
+&amp;lt;legend&amp;gt;Información de contacto&amp;lt;/legend&amp;gt;
+&amp;lt;label for=&quot;name&quot;&amp;gt;Nombre:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&quot;text&quot; id=&quot;name&quot;&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;label for=&quot;email&quot;&amp;gt;Email:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&quot;email&quot; id=&quot;email&quot;&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;label for=&quot;message&quot;&amp;gt;Mensaje:&amp;lt;/label&amp;gt;
+&amp;lt;textarea id=&quot;message&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+&amp;lt;/fieldset&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En este ejemplo, la etiqueta &amp;lt;fieldset&amp;gt; envuelve el grupo de elementos de formulario relacionados con la información de contacto. La etiqueta &amp;lt;&lt;strong&gt;legend&lt;/strong&gt;&amp;gt; se utiliza como una leyenda o título para el &lt;strong&gt;fieldset&lt;/strong&gt;, proporcionando una descripción del grupo.&lt;/p&gt;
+&lt;p&gt;El uso de las etiquetas &amp;lt;&lt;strong&gt;fieldset&lt;/strong&gt;&amp;gt; y &amp;lt;&lt;strong&gt;legend&lt;/strong&gt;&amp;gt; ayuda a mejorar la accesibilidad y usabilidad de los formularios al proporcionar una estructura clara y agrupación visual de campos relacionados. También mejora el estilo general y la organización del formulario.&lt;/p&gt;
 &lt;h2&gt;label&lt;/h2&gt;
-&lt;p&gt;Escriba su contenido...&lt;/p&gt;
+&lt;p&gt;La etiqueta &amp;lt;&lt;strong&gt;label&lt;/strong&gt;&amp;gt; ayuda a asociar una descripción de texto con un campo de entrada de formulario, lo que lo hace más accesible y fácil de usar. Ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&quot;username&quot;&amp;gt;Nombre de usuario:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&quot;text&quot; id=&quot;username&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En este ejemplo, la etiqueta &amp;lt;&lt;strong&gt;label&lt;/strong&gt;&amp;gt; se utiliza para crear una etiqueta para el campo de entrada de nombre de usuario. El atributo &lt;strong&gt;for&lt;/strong&gt; de la etiqueta &amp;lt;&lt;strong&gt;label&lt;/strong&gt;&amp;gt; especifica con qué elemento de entrada está asociado. En este caso, el valor del atributo &lt;strong&gt;for&lt;/strong&gt; coincide con el atributo id del campo de entrada.&lt;/p&gt;
+&lt;p&gt;Cuando un usuario hace clic en la etiqueta, el campo de entrada correspondiente se enfoca o activa. Esto mejora la usabilidad y accesibilidad, ya que los usuarios pueden hacer clic en el texto de la etiqueta en lugar de hacer clic directamente en el campo de entrada.&lt;/p&gt;
+&lt;h2&gt;input&lt;/h2&gt;
+&lt;p&gt;La etiqueta &amp;lt;&lt;strong&gt;input&lt;/strong&gt;&amp;gt; en HTML se utiliza para crear campos de entrada en un formulario que permiten a los usuarios ingresar datos. El tipo de dato que se ingresa depende del valor del atributo &lt;strong&gt;type&lt;/strong&gt; de la etiqueta &amp;lt;&lt;strong&gt;input&lt;/strong&gt;&amp;gt;. Veamos algunos ejemplos comunes de cómo se utiliza la etiqueta &amp;lt;&lt;strong&gt;input&lt;/strong&gt;&amp;gt; en un formulario:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Campo de Texto:&lt;/strong&gt; Permite a los usuarios ingresar texto, como su nombre o dirección de correo electrónico.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;text&quot; id=&quot;nombre&quot; name=&quot;nombre&quot; placeholder=&quot;Tu nombre&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Campo de Contraseña:&lt;/strong&gt; Similar al campo de texto, pero los caracteres ingresados se ocultan por asteriscos o puntos para proteger la privacidad de la contraseña.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;password&quot; id=&quot;contrasena&quot; name=&quot;contrasena&quot; placeholder=&quot;Contraseña&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Casilla de Verificación (Checkbox):&lt;/strong&gt; Permite a los usuarios seleccionar o deseleccionar una opción.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;checkbox&quot; id=&quot;suscripcion&quot; name=&quot;suscripcion&quot; value=&quot;aceptar&quot;&amp;gt;
+&amp;lt;label for=&quot;suscripcion&quot;&amp;gt;Acepto los términos y condiciones&amp;lt;/label&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Botón de Radio (Radio Button):&lt;/strong&gt; Permite a los usuarios seleccionar una opción de un conjunto de opciones mutuamente excluyentes.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;radio&quot; id=&quot;opcion1&quot; name=&quot;opcion&quot; value=&quot;opcion1&quot;&amp;gt;
+&amp;lt;label for=&quot;opcion1&quot;&amp;gt;Opción 1&amp;lt;/label&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;input type=&quot;radio&quot; id=&quot;opcion2&quot; name=&quot;opcion&quot; value=&quot;opcion2&quot;&amp;gt;
+&amp;lt;label for=&quot;opcion2&quot;&amp;gt;Opción 2&amp;lt;/label&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Botón (Button):&lt;/strong&gt; Crea un botón que puede utilizarse para enviar un formulario o realizar otras acciones mediante JavaScript.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;button&quot; value=&quot;Enviar&quot; onclick=&quot;enviarFormulario()&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Campo de Correo Electrónico:&lt;/strong&gt; Ayuda a validar que se ingrese una dirección de correo electrónico válida.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;email&quot; id=&quot;correo&quot; name=&quot;correo&quot; placeholder=&quot;Correo electrónico&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Campo de Número:&lt;/strong&gt; Permite ingresar valores numéricos y puede incluir restricciones como mínimo y máximo.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;number&quot; id=&quot;edad&quot; name=&quot;edad&quot; min=&quot;18&quot; max=&quot;99&quot; placeholder=&quot;Edad&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Estos son solo algunos ejemplos de cómo se puede utilizar la etiqueta &amp;lt;&lt;strong&gt;input&lt;/strong&gt;&amp;gt; en un formulario HTML.&lt;/p&gt;
+&lt;h2&gt;button&lt;/h2&gt;
+&lt;p&gt;La etiqueta &amp;lt;&lt;strong&gt;button&lt;/strong&gt;&amp;gt; en HTML se utiliza para crear un botón. Puede ser utilizado para activar una acción o comportamiento específico al ser pulsado.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;button&amp;gt;Haz clic&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;También puedes utilizar el atributo &lt;strong&gt;type&lt;/strong&gt; para definir el tipo de botón. Algunos valores comunes para el atributo &lt;strong&gt;type&lt;/strong&gt; son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;submit&lt;/strong&gt;: Un botón que envía un formulario.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;reset&lt;/strong&gt;: Un botón que reinicia los valores iniciales de los campos de un formulario.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;button type=&quot;submit&quot;&amp;gt;Enviar&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;h2&gt;select&lt;/h2&gt;
-
+&lt;p&gt;La etiqueta &amp;lt;&lt;strong&gt;select&lt;/strong&gt;&amp;gt; en HTML se utiliza para crear un menú desplegable o una lista de opciones seleccionables. Permite al usuario elegir una opción de entre varias disponibles.&lt;/p&gt;
+&lt;p&gt;Ejemplo básico de cómo utilizar la etiqueta &amp;lt;&lt;strong&gt;select&lt;/strong&gt;&amp;gt; junto con la etiqueta &amp;lt;&lt;strong&gt;option&lt;/strong&gt;&amp;gt; para crear un menú desplegable:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;select&amp;gt;
+   &amp;lt;option value=&quot;option1&quot;&amp;gt;Opción 1&amp;lt;/option&amp;gt;
+   &amp;lt;option value=&quot;option2&quot;&amp;gt;Opción 2&amp;lt;/option&amp;gt;
+   &amp;lt;option value=&quot;option3&quot;&amp;gt;Opción 3&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Cada &amp;lt;&lt;strong&gt;option&lt;/strong&gt;&amp;gt; dentro de la etiqueta &amp;lt;&lt;strong&gt;select&lt;/strong&gt;&amp;gt; representa una opción en el menú desplegable. El atributo value se utiliza para especificar el valor asociado a cada opción, que se enviará al servidor cuando se envíe el formulario.&lt;/p&gt;
+&lt;p&gt;También puedes agregar el atributo selected a una opción específica para que se seleccione automáticamente cuando se muestre el menú desplegable:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;select&amp;gt;
+    &amp;lt;option value=&quot;option1&quot;&amp;gt;Opción 1&amp;lt;/option&amp;gt;
+    &amp;lt;option value=&quot;option2&quot; selected&amp;gt;Opción 2&amp;lt;/option&amp;gt;
+    &amp;lt;option value=&quot;option3&quot;&amp;gt;Opción 3&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En este ejemplo, &lt;strong&gt;la opción «Opción 2» estará seleccionada&lt;/strong&gt; de forma predeterminada cuando se muestre el menú desplegable.&lt;/p&gt;
+&lt;p&gt;La etiqueta &amp;lt;&lt;strong&gt;select&lt;/strong&gt;&amp;gt; en HTML también admite el atributo multiple, que permite al usuario seleccionar múltiples opciones del menú desplegable.&lt;/p&gt;
+&lt;p&gt;Al agregar el atributo &lt;strong&gt;multiple&lt;/strong&gt; a la etiqueta &amp;lt;&lt;strong&gt;select&lt;/strong&gt;&amp;gt;, se permite la selección de varias opciones manteniendo presionada la tecla Ctrl (en Windows) o Cmd (en Mac) mientras se hacen clic en las opciones deseadas. Ejemplo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;select multiple&amp;gt;
+    &amp;lt;option value=&quot;option1&quot;&amp;gt;Opción 1&amp;lt;/option&amp;gt;
+    &amp;lt;option value=&quot;option2&quot;&amp;gt;Opción 2&amp;lt;/option&amp;gt;
+    &amp;lt;option value=&quot;option3&quot;&amp;gt;Opción 3&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;La etiqueta &amp;lt;&lt;strong&gt;optgroup&lt;/strong&gt;&amp;gt; se utiliza dentro de un elemento &amp;lt;&lt;strong&gt;select&lt;/strong&gt;&amp;gt; para agrupar varias opciones relacionadas en una categoría o conjunto. Esto proporciona una organización visual a las opciones dentro de la lista desplegable. La etiqueta &amp;lt;optgroup&amp;gt; debe contener una o más etiquetas &amp;lt;option&amp;gt; que representan las opciones dentro de ese grupo.&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;select&amp;gt;
+    &amp;lt;optgroup label=&quot;Frutas&quot;&amp;gt;
+        &amp;lt;option value=&quot;manzana&quot;&amp;gt;Manzana&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;naranja&quot;&amp;gt;Naranja&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;platano&quot;&amp;gt;Plátano&amp;lt;/option&amp;gt;
+    &amp;lt;/optgroup&amp;gt;
+    &amp;lt;optgroup label=&quot;Verduras&quot;&amp;gt;
+        &amp;lt;option value=&quot;zanahoria&quot;&amp;gt;Zanahoria&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;brocoli&quot;&amp;gt;Brócoli&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;espinaca&quot;&amp;gt;Espinaca&amp;lt;/option&amp;gt;
+    &amp;lt;/optgroup&amp;gt;
+&amp;lt;/select&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En este ejemplo, hemos creado una lista desplegable con dos grupos: «Frutas» y «Verduras». Cada grupo está definido por la etiqueta &amp;lt;&lt;strong&gt;optgroup&lt;/strong&gt;&amp;gt;, que tiene un atributo label que especifica el nombre del grupo. Dentro de cada grupo, hemos incluido etiquetas &amp;lt;&lt;strong&gt;option&lt;/strong&gt;&amp;gt; que representan las opciones individuales, como «Manzana», «Naranja», «Zanahoria», etc.&lt;/p&gt;
+&lt;p&gt;Cuando se renderiza en un navegador, esto creará una lista desplegable con las opciones agrupadas visualmente bajo las etiquetas de grupo. Esto facilita que los usuarios encuentren y seleccionen las opciones que desean de manera más organizada.&lt;/p&gt;
+&lt;h2&gt;datalist&lt;/h2&gt;
+&lt;p&gt;La etiqueta &amp;lt;&lt;strong&gt;datalist&lt;/strong&gt;&amp;gt; se utiliza junto con la etiqueta &amp;lt;&lt;strong&gt;input&lt;/strong&gt;&amp;gt; para proporcionar una lista de opciones predefinidas que ayudan a los usuarios a seleccionar un valor mientras escriben en un campo de entrada &amp;lt;&lt;strong&gt;input&lt;/strong&gt;&amp;gt;. Esta etiqueta crea una lista desplegable de sugerencias basadas en las opciones que defines, lo que facilita la entrada de datos y mejora la experiencia del usuario.&lt;/p&gt;
+&lt;p&gt;A continuación se puede ver un ejemplo de cómo se utiliza la etiqueta &amp;lt;&lt;strong&gt;datalist&lt;/strong&gt;&amp;gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&quot;frutas&quot;&amp;gt;Selecciona una fruta:&amp;lt;/label&amp;gt;
+&amp;lt;input list=&quot;frutas&quot; id=&quot;fruta&quot; name=&quot;fruta&quot; /&amp;gt;
+ 
+&amp;lt;datalist id=&quot;frutas&quot;&amp;gt;
+    &amp;lt;option value=&quot;Manzana&quot;&amp;gt;&amp;lt;/option&amp;gt;
+    &amp;lt;option value=&quot;Banana&quot;&amp;gt;&amp;lt;/option&amp;gt;
+    &amp;lt;option value=&quot;Naranja&quot;&amp;gt;&amp;lt;/option&amp;gt;
+    &amp;lt;option value=&quot;Uva&quot;&amp;gt;&amp;lt;/option&amp;gt;
+    &amp;lt;option value=&quot;Pera&quot;&amp;gt;&amp;lt;/option&amp;gt;
+&amp;lt;/datalist&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En este ejemplo, hemos creado un campo de entrada de texto con la etiqueta &amp;lt;&lt;strong&gt;input&lt;/strong&gt;&amp;gt; y le hemos asignado un atributo list que corresponde al id de la etiqueta &amp;lt;&lt;strong&gt;datalist&lt;/strong&gt;&amp;gt;. El &amp;lt;&lt;strong&gt;datalist&lt;/strong&gt;&amp;gt; contiene opciones (&amp;lt;&lt;strong&gt;option&lt;/strong&gt;&amp;gt;) que representan las sugerencias disponibles para el campo de entrada.&lt;/p&gt;
+&lt;p&gt;Cuando un usuario comienza a escribir en el campo de entrada, verá una lista desplegable con las opciones del &amp;lt;&lt;strong&gt;datalist&lt;/strong&gt;&amp;gt;. Puede seleccionar una de las opciones o seguir escribiendo. Esto es especialmente útil para formularios en los que los usuarios deben elegir una opción de una lista predefinida, como una lista de países o productos.&lt;/p&gt;
+&lt;p&gt;El uso de &amp;lt;&lt;strong&gt;datalist&lt;/strong&gt;&amp;gt; mejora la usabilidad y facilita a los usuarios la entrada de datos, especialmente en dispositivos móviles y pantallas táctiles.&lt;/p&gt;
+&lt;h2&gt;textarea&lt;/h2&gt;
+&lt;p&gt;La etiqueta &amp;lt;&lt;strong&gt;textarea&lt;/strong&gt;&amp;gt; en HTML se utiliza para crear un área de entrada de texto de varias líneas. Permite a los usuarios ingresar y editar texto más largo que un solo campo de entrada de texto.&lt;/p&gt;
+&lt;p&gt;Ejemplo básico de cómo utilizar la etiqueta &amp;lt;&lt;strong&gt;textarea&lt;/strong&gt;&amp;gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;textarea rows=&quot;4&quot; cols=&quot;40&quot;&amp;gt;
+Esto es un textarea con 4 fulas y 40 columnas.
+&amp;lt;/textarea&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En este ejemplo, el atributo &lt;strong&gt;rows&lt;/strong&gt; define el número de filas visibles del área de texto, mientras que el atributo &lt;strong&gt;cols&lt;/strong&gt; establece el número de columnas visibles.&lt;/p&gt;
+&lt;p&gt;El texto dentro de la etiqueta &amp;lt;&lt;strong&gt;textarea&lt;/strong&gt;&amp;gt; se mostrará inicialmente dentro del área de texto y los usuarios podrán editarlo y seleccionarlo.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/html/html_form_elements.asp&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.w3schools.com/html/html_form_elements.asp&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
                         <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
@@ -3831,6 +4005,425 @@ Elementos del formulario
                      <unicode value=""></unicode>
                      <string role="key" value="id"></string>
                      <unicode value="25"></unicode>
+                     <string role="key" value="ideviceCategory"></string>
+                     <unicode value="Text and Tasks"></unicode>
+                     <string role="key" value="lastIdevice"></string>
+                     <bool value="0"></bool>
+                     <string role="key" value="nextFieldId"></string>
+                     <int value="3"></int>
+                     <string role="key" value="originalicon"></string>
+                     <string value=""></string>
+                     <string role="key" value="parentNode"></string>
+                     <reference key="56"></reference>
+                     <string role="key" value="systemResources"></string>
+                     <list></list>
+                     <string role="key" value="undo"></string>
+                     <bool value="1"></bool>
+                     <string role="key" value="userResources"></string>
+                     <list></list>
+                     <string role="key" value="version"></string>
+                     <int value="0"></int>
+                    </dictionary>
+                   </instance>
+                   <instance class="exe.engine.jsidevice.JsIdevice" reference="62">
+                    <dictionary>
+                     <string role="key" value="_title"></string>
+                     <unicode value="Ejemplo"></unicode>
+                     <string role="key" value="_attributes"></string>
+                     <list>
+                      <tuple>
+                       <string value="title"></string>
+                       <list>
+                        <string value="Title"></string>
+                        <int value="0"></int>
+                        <int value="0"></int>
+                       </list>
+                      </tuple>
+                      <tuple>
+                       <string value="category"></string>
+                       <list>
+                        <string value="Category"></string>
+                        <int value="0"></int>
+                        <int value="1"></int>
+                       </list>
+                      </tuple>
+                      <tuple>
+                       <string value="css-class"></string>
+                       <list>
+                        <string value="CSS class"></string>
+                        <int value="0"></int>
+                        <int value="2"></int>
+                       </list>
+                      </tuple>
+                      <tuple>
+                       <string value="icon"></string>
+                       <list>
+                        <string value="Icon"></string>
+                        <int value="0"></int>
+                        <int value="3"></int>
+                       </list>
+                      </tuple>
+                     </list>
+                     <string role="key" value="_author"></string>
+                     <string value=""></string>
+                     <string role="key" value="_iDeviceDir"></string>
+                     <string value="udl-content"></string>
+                     <string role="key" value="_purpose"></string>
+                     <string value=""></string>
+                     <string role="key" value="_tip"></string>
+                     <string value=""></string>
+                     <string role="key" value="_typeName"></string>
+                     <unicode value="UDL Content"></unicode>
+                     <string role="key" value="_valid"></string>
+                     <bool value="1"></bool>
+                     <string role="key" value="class_"></string>
+                     <unicode value="UDLcontent"></unicode>
+                     <string role="key" value="edit"></string>
+                     <bool value="0"></bool>
+                     <string role="key" value="emphasis"></string>
+                     <int value="1"></int>
+                     <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+                     <int value="1"></int>
+                     <string role="key" value="fields"></string>
+                     <list>
+                      <instance class="exe.engine.field.TextAreaField" reference="63">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <unicode value="122_2"></unicode>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="62"></reference>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="anchor_names"></string>
+                        <list></list>
+                        <string role="key" value="content_w_resourcePaths"></string>
+                        <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;form action=&quot;https://www.w3schools.com/action_page.php&quot; method=&quot;post&quot;&amp;gt;
+    &amp;lt;fieldset&amp;gt;
+        &amp;lt;legend&amp;gt;Datos personales&amp;lt;/legend&amp;gt;
+        &amp;lt;label for=&quot;nombre&quot;&amp;gt;Nombre y apellidos: &amp;lt;/label&amp;gt;
+        &amp;lt;input name=&quot;nombre&quot; id=&quot;nombre&quot; type=&quot;text&quot;&amp;gt;&amp;lt;br&amp;gt;
+        &amp;lt;label for=&quot;socio&quot;&amp;gt;Socio:&amp;lt;/label&amp;gt;
+        &amp;lt;select name=&quot;socio&quot; id=&quot;socio&quot;&amp;gt;
+            &amp;lt;!--Etiqueta option--&amp;gt;
+            &amp;lt;option value=&quot;value1&quot;&amp;gt;Sí&amp;lt;option&amp;gt;
+            &amp;lt;option value=&quot;value2&quot; selected&amp;gt;No&amp;lt;option&amp;gt;
+        &amp;lt;/select&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+        &amp;lt;label&amp;gt;Edad: &amp;lt;/label&amp;gt;
+        &amp;lt;input name=&quot;edad&quot; type=&quot;checkbox&quot; value=&quot;20-39&quot;&amp;gt; 20-39
+        &amp;lt;input name=&quot;edad&quot; type=&quot;checkbox&quot; value=&quot;40-59&quot;&amp;gt; 40-59
+        &amp;lt;input name=&quot;edad&quot; type=&quot;checkbox&quot; value=&quot;60-79&quot;&amp;gt; 60-79&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+        &amp;lt;label for=&quot;email&quot;&amp;gt;Email: &amp;lt;/label&amp;gt;
+        &amp;lt;input id=&quot;email&quot; name=&quot;email&quot; type=&quot;email&quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+        &amp;lt;label for=&quot;estudios&quot;&amp;gt;Estudios: &amp;lt;/label&amp;gt;
+        &amp;lt;select name=&quot;estudios&quot; id=&quot;estudios&quot;&amp;gt;
+            &amp;lt;optgroup label=&quot;Estudios Universitarios&quot;&amp;gt;
+                &amp;lt;option&amp;gt;Doctorado&amp;lt;/option&amp;gt;
+                &amp;lt;option&amp;gt;Máster&amp;lt;/option&amp;gt;
+                &amp;lt;option&amp;gt;Grado&amp;lt;/option&amp;gt;
+            &amp;lt;/optgroup&amp;gt;
+            &amp;lt;optgroup label=&quot;Ciclo Formativo&quot;&amp;gt;
+                &amp;lt;option&amp;gt;Grado Superior&amp;lt;/option&amp;gt;
+                &amp;lt;option&amp;gt;Grado Medio&amp;lt;/option&amp;gt;
+            &amp;lt;/optgroup&amp;gt;
+        &amp;lt;/select&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+        &amp;lt;label for=&quot;navegador&quot;&amp;gt;Elige tu navegador favorito: &amp;lt;/label&amp;gt;
+        &amp;lt;input name=&quot;navegador&quot; id=&quot;navegador&quot; list=&quot;browsers&quot;&amp;gt;
+        &amp;lt;datalist name=&quot;browsers&quot; id=&quot;browsers&quot;&amp;gt;
+            &amp;lt;option value=&quot;Chrome&quot;&amp;gt;
+            &amp;lt;option value=&quot;Firefox&quot;&amp;gt;
+            &amp;lt;option value=&quot;Internet Explorer&quot;&amp;gt;
+            &amp;lt;option value=&quot;Opera&quot;&amp;gt;
+            &amp;lt;option value=&quot;Safari&quot;&amp;gt;
+            &amp;lt;option value=&quot;Microsoft Edge&quot;&amp;gt;
+        &amp;lt;/datalist&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+        &amp;lt;label for=&quot;mensaje&quot;&amp;gt;Escribe tu mensaje: &amp;lt;/label&amp;gt;
+        &amp;lt;textarea rows=&quot;10&quot; cols=&quot;50&quot; placeholder=&quot;Mensaje&quot; id=&quot;mensaje&quot; name=&quot;mensaje&quot; &amp;gt;&amp;lt;/textarea&amp;gt;
+    &amp;lt;/fieldset&amp;gt;
+    &amp;lt;input type=&quot;submit&quot; name=&quot;enviar&quot; value=&quot;Enviar&quot;&amp;gt;
+&amp;lt;/form&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En el navegador se mostrará un formulario que se podrá rellenar como en el ejemplo siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;img src=&quot;resources/formulario.png&quot; alt=&quot;Formulario&quot; title=&quot;Formulario&quot; width=&quot;500&quot; height=&quot;290&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;La página &lt;a href=&quot;http://www.w3schools.com/action_page.php&quot;&gt;www.w3schools.com/action_page.php&lt;/a&gt; recibirá todos los datos y podrá tratarlos como el programador desee. En este caso, mostrando los datos enviados:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;resources/formulario_resultado.png&quot; alt=&quot;Formulario resultado&quot; title=&quot;Formulario resultado&quot; width=&quot;500&quot; height=&quot;233&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot;&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                        <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                        <int value="3"></int>
+                        <string role="key" value="htmlTag"></string>
+                        <string value="div"></string>
+                        <string role="key" value="images"></string>
+                        <instance class="exe.engine.galleryidevice.GalleryImages">
+                         <dictionary>
+                          <string role="key" value=".listitems"></string>
+                          <list>
+                           <instance class="exe.engine.galleryidevice.GalleryImage">
+                            <dictionary>
+                             <string role="key" value="_caption"></string>
+                             <instance class="exe.engine.field.TextField">
+                              <dictionary>
+                               <string role="key" value="_id"></string>
+                               <int value="140671"></int>
+                               <string role="key" value="_idevice"></string>
+                               <none></none>
+                               <string role="key" value="_instruc"></string>
+                               <string value=""></string>
+                               <string role="key" value="_name"></string>
+                               <string value=""></string>
+                               <string role="key" value="content"></string>
+                               <string value=""></string>
+                               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                               <int value="4"></int>
+                              </dictionary>
+                             </instance>
+                             <string role="key" value="_id"></string>
+                             <unicode value="37_122_2.0"></unicode>
+                             <string role="key" value="_imageResource"></string>
+                             <instance class="exe.engine.resource.Resource" reference="64">
+                              <dictionary>
+                               <string role="key" value="_idevice"></string>
+                               <reference key="62"></reference>
+                               <string role="key" value="_package"></string>
+                               <reference key="4"></reference>
+                               <string role="key" value="_storageName"></string>
+                               <string value="formulario.png"></string>
+                               <string role="key" value="_userName"></string>
+                               <string value="c:\\users\\david\\appdata\\local\\temp\\tmpuszffa.eXe\\previews\\allyourbase\\formulario.png"></string>
+                               <string role="key" value="checksum"></string>
+                               <string value="bbf71c07bd4b3178c663ce0bb9f18636"></string>
+                               <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                               <int value="2"></int>
+                               <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                               <int value="2"></int>
+                               <string role="key" value="warningMsg"></string>
+                               <string value=""></string>
+                              </dictionary>
+                             </instance>
+                             <string role="key" value="_parent"></string>
+                             <reference key="63"></reference>
+                             <string role="key" value="_thumbnailResource"></string>
+                             <none></none>
+                             <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                             <int value="3"></int>
+                             <string role="key" value="makeThumbnail"></string>
+                             <bool value="0"></bool>
+                            </dictionary>
+                           </instance>
+                           <instance class="exe.engine.galleryidevice.GalleryImage">
+                            <dictionary>
+                             <string role="key" value="_caption"></string>
+                             <instance class="exe.engine.field.TextField">
+                              <dictionary>
+                               <string role="key" value="_id"></string>
+                               <int value="140672"></int>
+                               <string role="key" value="_idevice"></string>
+                               <none></none>
+                               <string role="key" value="_instruc"></string>
+                               <string value=""></string>
+                               <string role="key" value="_name"></string>
+                               <string value=""></string>
+                               <string role="key" value="content"></string>
+                               <string value=""></string>
+                               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                               <int value="4"></int>
+                              </dictionary>
+                             </instance>
+                             <string role="key" value="_id"></string>
+                             <unicode value="37_122_2.1"></unicode>
+                             <string role="key" value="_imageResource"></string>
+                             <instance class="exe.engine.resource.Resource" reference="65">
+                              <dictionary>
+                               <string role="key" value="_idevice"></string>
+                               <reference key="62"></reference>
+                               <string role="key" value="_package"></string>
+                               <reference key="4"></reference>
+                               <string role="key" value="_storageName"></string>
+                               <string value="formulario_resultado.png"></string>
+                               <string role="key" value="_userName"></string>
+                               <string value="c:\\users\\david\\appdata\\local\\temp\\tmpuszffa.eXe\\previews\\allyourbase\\formulario_resultado.png"></string>
+                               <string role="key" value="checksum"></string>
+                               <string value="dcfc44662f98f3325832e66a56b717ce"></string>
+                               <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                               <int value="2"></int>
+                               <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                               <int value="2"></int>
+                               <string role="key" value="warningMsg"></string>
+                               <string value=""></string>
+                              </dictionary>
+                             </instance>
+                             <string role="key" value="_parent"></string>
+                             <reference key="63"></reference>
+                             <string role="key" value="_thumbnailResource"></string>
+                             <none></none>
+                             <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                             <int value="3"></int>
+                             <string role="key" value="makeThumbnail"></string>
+                             <bool value="0"></bool>
+                            </dictionary>
+                           </instance>
+                          </list>
+                          <string role="key" value="idevice"></string>
+                          <reference key="63"></reference>
+                         </dictionary>
+                        </instance>
+                        <string role="key" value="intlinks_to_anchors"></string>
+                        <dictionary></dictionary>
+                        <string role="key" value="nextImageId"></string>
+                        <int value="2"></int>
+                        <string role="key" value="parentNode"></string>
+                        <reference key="56"></reference>
+                       </dictionary>
+                      </instance>
+                     </list>
+                     <string role="key" value="icon"></string>
+                     <unicode value="announcement_white"></unicode>
+                     <string role="key" value="id"></string>
+                     <unicode value="37"></unicode>
+                     <string role="key" value="ideviceCategory"></string>
+                     <unicode value="Text and Tasks"></unicode>
+                     <string role="key" value="lastIdevice"></string>
+                     <bool value="0"></bool>
+                     <string role="key" value="nextFieldId"></string>
+                     <int value="3"></int>
+                     <string role="key" value="originalicon"></string>
+                     <string value=""></string>
+                     <string role="key" value="parentNode"></string>
+                     <reference key="56"></reference>
+                     <string role="key" value="systemResources"></string>
+                     <list></list>
+                     <string role="key" value="undo"></string>
+                     <bool value="1"></bool>
+                     <string role="key" value="userResources"></string>
+                     <list>
+                      <reference key="64"></reference>
+                      <reference key="65"></reference>
+                     </list>
+                     <string role="key" value="version"></string>
+                     <int value="0"></int>
+                    </dictionary>
+                   </instance>
+                   <instance class="exe.engine.jsidevice.JsIdevice" reference="66">
+                    <dictionary>
+                     <string role="key" value="_title"></string>
+                     <unicode value="Ejercicio"></unicode>
+                     <string role="key" value="_attributes"></string>
+                     <list>
+                      <tuple>
+                       <string value="title"></string>
+                       <list>
+                        <string value="Title"></string>
+                        <int value="0"></int>
+                        <int value="0"></int>
+                       </list>
+                      </tuple>
+                      <tuple>
+                       <string value="category"></string>
+                       <list>
+                        <string value="Category"></string>
+                        <int value="0"></int>
+                        <int value="1"></int>
+                       </list>
+                      </tuple>
+                      <tuple>
+                       <string value="css-class"></string>
+                       <list>
+                        <string value="CSS class"></string>
+                        <int value="0"></int>
+                        <int value="2"></int>
+                       </list>
+                      </tuple>
+                      <tuple>
+                       <string value="icon"></string>
+                       <list>
+                        <string value="Icon"></string>
+                        <int value="0"></int>
+                        <int value="3"></int>
+                       </list>
+                      </tuple>
+                     </list>
+                     <string role="key" value="_author"></string>
+                     <string value=""></string>
+                     <string role="key" value="_iDeviceDir"></string>
+                     <string value="udl-content"></string>
+                     <string role="key" value="_purpose"></string>
+                     <string value=""></string>
+                     <string role="key" value="_tip"></string>
+                     <string value=""></string>
+                     <string role="key" value="_typeName"></string>
+                     <unicode value="UDL Content"></unicode>
+                     <string role="key" value="_valid"></string>
+                     <bool value="1"></bool>
+                     <string role="key" value="class_"></string>
+                     <unicode value="UDLcontent"></unicode>
+                     <string role="key" value="edit"></string>
+                     <bool value="0"></bool>
+                     <string role="key" value="emphasis"></string>
+                     <int value="1"></int>
+                     <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+                     <int value="1"></int>
+                     <string role="key" value="fields"></string>
+                     <list>
+                      <instance class="exe.engine.field.TextAreaField" reference="67">
+                       <dictionary>
+                        <string role="key" value="_id"></string>
+                        <unicode value="123_2"></unicode>
+                        <string role="key" value="_idevice"></string>
+                        <reference key="66"></reference>
+                        <string role="key" value="_instruc"></string>
+                        <string value=""></string>
+                        <string role="key" value="_name"></string>
+                        <string value=""></string>
+                        <string role="key" value="anchor_names"></string>
+                        <list></list>
+                        <string role="key" value="content_w_resourcePaths"></string>
+                        <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;La Web &lt;strong&gt;juanpalomotuloguisasyolocomo.es&lt;/strong&gt; tiene un formulario en el que, los visitantes a la página, rellenan una información inicial que luego en una segunda página se pide el resto para confeccionar así una receta. El formulario inicial pide la siguiente información:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nombre de la receta (llámala &lt;strong&gt;nombre&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Correo del autor (llámala &lt;strong&gt;correo&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Momento para comer: desayuno, almuerzo, merienda, cena, postre, ... Usa checkboxes para que se puedan elegir varios. (llámalo &lt;strong&gt;momento&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Ingredientes necesarios escogidos de una lista entre carne, pescado, verdura y fruta. Se debe poder elegir varios. (llámalo &lt;strong&gt;ingredientes&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Tiempo de preparación aproximado elegido de dos radios: uno para las horas de 0 a 2; y otro para los minutos en franjas de 15 minutos. (llámalos &lt;strong&gt;horas&lt;/strong&gt; y &lt;strong&gt;minutos&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Crea un diseño usando fieldset, label, optgroup, etc.&lt;/p&gt;
+&lt;p&gt;Para probar la información que se envía, usa la página &lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;a href=&quot;https://www.w3schools.com/action_page.php&quot;&gt;https://www.w3schools.com/action_page.php&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Para ver cómo se trataría la información en otra página con formulario, usa &lt;a href=&quot;https://lm.ciclo.iesnervion.es/&quot;&gt;https://lm.ciclo.iesnervion.es/&lt;/a&gt; &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                        <int value="4"></int>
+                        <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                        <int value="2"></int>
+                        <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                        <int value="3"></int>
+                        <string role="key" value="htmlTag"></string>
+                        <string value="div"></string>
+                        <string role="key" value="images"></string>
+                        <instance class="exe.engine.galleryidevice.GalleryImages">
+                         <dictionary>
+                          <string role="key" value=".listitems"></string>
+                          <list></list>
+                          <string role="key" value="idevice"></string>
+                          <reference key="67"></reference>
+                         </dictionary>
+                        </instance>
+                        <string role="key" value="intlinks_to_anchors"></string>
+                        <dictionary></dictionary>
+                        <string role="key" value="nextImageId"></string>
+                        <int value="0"></int>
+                        <string role="key" value="parentNode"></string>
+                        <none></none>
+                       </dictionary>
+                      </instance>
+                     </list>
+                     <string role="key" value="icon"></string>
+                     <unicode value="assignment_white"></unicode>
+                     <string role="key" value="id"></string>
+                     <unicode value="38"></unicode>
                      <string role="key" value="ideviceCategory"></string>
                      <unicode value="Text and Tasks"></unicode>
                      <string role="key" value="lastIdevice"></string>
@@ -3935,13 +4528,13 @@ Elementos del formulario
            <list></list>
           </dictionary>
          </instance>
-         <instance class="exe.engine.node.Node" reference="64">
+         <instance class="exe.engine.node.Node" reference="70">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="3.2.5. Imágenes"></unicode>
            <string role="key" value="idevices"></string>
            <list>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="62">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="68">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value=""></unicode>
@@ -4000,12 +4593,12 @@ Elementos del formulario
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="63">
+               <instance class="exe.engine.field.TextAreaField" reference="69">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="859_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="62"></reference>
+                 <reference key="68"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -4038,7 +4631,7 @@ Elementos del formulario
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="63"></reference>
+                   <reference key="69"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -4046,7 +4639,7 @@ Elementos del formulario
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="64"></reference>
+                 <reference key="70"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4063,7 +4656,7 @@ Elementos del formulario
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="64"></reference>
+              <reference key="70"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -4074,7 +4667,7 @@ Elementos del formulario
               <int value="0"></int>
              </dictionary>
             </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="65">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="71">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value="Figure"></unicode>
@@ -4133,12 +4726,12 @@ Elementos del formulario
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="66">
+               <instance class="exe.engine.field.TextAreaField" reference="72">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="114_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="65"></reference>
+                 <reference key="71"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -4165,7 +4758,7 @@ Elementos del formulario
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="66"></reference>
+                   <reference key="72"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -4173,7 +4766,7 @@ Elementos del formulario
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="64"></reference>
+                 <reference key="70"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4190,7 +4783,7 @@ Elementos del formulario
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="64"></reference>
+              <reference key="70"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -4201,7 +4794,7 @@ Elementos del formulario
               <int value="0"></int>
              </dictionary>
             </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="67">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="73">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value="Ejercicio"></unicode>
@@ -4262,12 +4855,12 @@ Elementos del formulario
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="68">
+               <instance class="exe.engine.field.TextAreaField" reference="74">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="126_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="67"></reference>
+                 <reference key="73"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -4296,7 +4889,7 @@ Elementos del formulario
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="68"></reference>
+                   <reference key="74"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -4304,7 +4897,7 @@ Elementos del formulario
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="64"></reference>
+                 <reference key="70"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4321,7 +4914,7 @@ Elementos del formulario
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="64"></reference>
+              <reference key="70"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -4353,13 +4946,13 @@ Elementos del formulario
            <list></list>
           </dictionary>
          </instance>
-         <instance class="exe.engine.node.Node" reference="71">
+         <instance class="exe.engine.node.Node" reference="77">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="3.2.6. Audio y vídeo"></unicode>
            <string role="key" value="idevices"></string>
            <list>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="69">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="75">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value="Incrustado (embedded)"></unicode>
@@ -4420,12 +5013,12 @@ Elementos del formulario
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="70">
+               <instance class="exe.engine.field.TextAreaField" reference="76">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="128_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="69"></reference>
+                 <reference key="75"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -4461,7 +5054,7 @@ Elementos del formulario
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="70"></reference>
+                   <reference key="76"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -4469,7 +5062,7 @@ Elementos del formulario
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="71"></reference>
+                 <reference key="77"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4486,7 +5079,7 @@ Elementos del formulario
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="71"></reference>
+              <reference key="77"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -4497,7 +5090,7 @@ Elementos del formulario
               <int value="0"></int>
              </dictionary>
             </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="72">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="78">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value=""></unicode>
@@ -4556,12 +5149,12 @@ Elementos del formulario
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="73">
+               <instance class="exe.engine.field.TextAreaField" reference="79">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="835_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="72"></reference>
+                 <reference key="78"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -4641,7 +5234,7 @@ Elementos del formulario
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="73"></reference>
+                   <reference key="79"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -4649,7 +5242,7 @@ Elementos del formulario
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="71"></reference>
+                 <reference key="77"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4666,7 +5259,7 @@ Elementos del formulario
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="71"></reference>
+              <reference key="77"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -4677,7 +5270,7 @@ Elementos del formulario
               <int value="0"></int>
              </dictionary>
             </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="74">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="80">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value="Ejercicio"></unicode>
@@ -4738,12 +5331,12 @@ Elementos del formulario
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="75">
+               <instance class="exe.engine.field.TextAreaField" reference="81">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="127_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="74"></reference>
+                 <reference key="80"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -4771,7 +5364,7 @@ Elementos del formulario
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="75"></reference>
+                   <reference key="81"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -4779,7 +5372,7 @@ Elementos del formulario
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="71"></reference>
+                 <reference key="77"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4796,7 +5389,7 @@ Elementos del formulario
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="71"></reference>
+              <reference key="77"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -4829,13 +5422,13 @@ Elementos del formulario
           </dictionary>
          </instance>
          <reference key="56"></reference>
-         <instance class="exe.engine.node.Node" reference="78">
+         <instance class="exe.engine.node.Node" reference="84">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="3.2.8. Comentarios"></unicode>
            <string role="key" value="idevices"></string>
            <list>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="76">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="82">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value=""></unicode>
@@ -4894,12 +5487,12 @@ Elementos del formulario
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="77">
+               <instance class="exe.engine.field.TextAreaField" reference="83">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="848_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="76"></reference>
+                 <reference key="82"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -4925,7 +5518,7 @@ Elementos del formulario
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="77"></reference>
+                   <reference key="83"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -4933,7 +5526,7 @@ Elementos del formulario
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="78"></reference>
+                 <reference key="84"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -4950,7 +5543,7 @@ Elementos del formulario
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="78"></reference>
+              <reference key="84"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -4985,13 +5578,13 @@ Elementos del formulario
         </list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="81">
+      <instance class="exe.engine.node.Node" reference="87">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="3.3. Atributos"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="79">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="85">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -5050,12 +5643,12 @@ Elementos del formulario
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="80">
+            <instance class="exe.engine.field.TextAreaField" reference="86">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="857_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="79"></reference>
+              <reference key="85"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -5125,7 +5718,7 @@ Texto con tooltip.
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="80"></reference>
+                <reference key="86"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -5133,7 +5726,7 @@ Texto con tooltip.
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="81"></reference>
+              <reference key="87"></reference>
              </dictionary>
             </instance>
            </list>
@@ -5150,7 +5743,7 @@ Texto con tooltip.
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="81"></reference>
+           <reference key="87"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -5182,13 +5775,13 @@ Texto con tooltip.
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="84">
+      <instance class="exe.engine.node.Node" reference="90">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="3.4. Contenedores"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="82">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="88">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -5247,12 +5840,12 @@ Texto con tooltip.
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="83">
+            <instance class="exe.engine.field.TextAreaField" reference="89">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="844_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="82"></reference>
+              <reference key="88"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -5293,7 +5886,7 @@ Texto con tooltip.
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="83"></reference>
+                <reference key="89"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -5301,7 +5894,7 @@ Texto con tooltip.
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="84"></reference>
+              <reference key="90"></reference>
              </dictionary>
             </instance>
            </list>
@@ -5318,7 +5911,7 @@ Texto con tooltip.
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="84"></reference>
+           <reference key="90"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -5329,7 +5922,7 @@ Texto con tooltip.
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="85">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="91">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Etiquetas span y div"></unicode>
@@ -5388,12 +5981,12 @@ Texto con tooltip.
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="86">
+            <instance class="exe.engine.field.TextAreaField" reference="92">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="845_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="85"></reference>
+              <reference key="91"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -5419,7 +6012,7 @@ Texto con tooltip.
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="86"></reference>
+                <reference key="92"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -5427,7 +6020,7 @@ Texto con tooltip.
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="84"></reference>
+              <reference key="90"></reference>
              </dictionary>
             </instance>
            </list>
@@ -5444,7 +6037,7 @@ Texto con tooltip.
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="84"></reference>
+           <reference key="90"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -5474,13 +6067,13 @@ Texto con tooltip.
         <list></list>
         <string role="key" value="children"></string>
         <list>
-         <instance class="exe.engine.node.Node" reference="89">
+         <instance class="exe.engine.node.Node" reference="95">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="3.4.1. Texto simple"></unicode>
            <string role="key" value="idevices"></string>
            <list>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="87">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="93">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value=""></unicode>
@@ -5539,12 +6132,12 @@ Texto con tooltip.
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="88">
+               <instance class="exe.engine.field.TextAreaField" reference="94">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="850_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="87"></reference>
+                 <reference key="93"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -5590,7 +6183,7 @@ Esta frase se verá afectada &amp;lt;b&amp;gt;en su totalidad&amp;lt;/b&amp;gt; 
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="88"></reference>
+                   <reference key="94"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -5598,7 +6191,7 @@ Esta frase se verá afectada &amp;lt;b&amp;gt;en su totalidad&amp;lt;/b&amp;gt; 
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="89"></reference>
+                 <reference key="95"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -5615,7 +6208,7 @@ Esta frase se verá afectada &amp;lt;b&amp;gt;en su totalidad&amp;lt;/b&amp;gt; 
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="89"></reference>
+              <reference key="95"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -5640,7 +6233,7 @@ Esta frase se verá afectada &amp;lt;b&amp;gt;en su totalidad&amp;lt;/b&amp;gt; 
            <string role="key" value="last_full_node_path"></string>
            <string value="exe-node:UA03.%20HTML:3.4.%20Contenedores:3.4.1.%20Texto%20simple"></string>
            <string role="key" value="parent"></string>
-           <reference key="84"></reference>
+           <reference key="90"></reference>
            <string role="key" value="top_anchors_linked_from_fields"></string>
            <list></list>
            <string role="key" value="children"></string>
@@ -5658,23 +6251,23 @@ Esta frase se verá afectada &amp;lt;b&amp;gt;en su totalidad&amp;lt;/b&amp;gt; 
    <unicode role="key" value="10"></unicode>
    <reference key="41"></reference>
    <unicode role="key" value="11"></unicode>
-   <reference key="81"></reference>
+   <reference key="87"></reference>
    <unicode role="key" value="12"></unicode>
    <reference key="47"></reference>
    <unicode role="key" value="13"></unicode>
-   <reference key="64"></reference>
+   <reference key="70"></reference>
    <unicode role="key" value="14"></unicode>
-   <reference key="71"></reference>
+   <reference key="77"></reference>
    <unicode role="key" value="15"></unicode>
    <reference key="56"></reference>
    <unicode role="key" value="2"></unicode>
-   <reference key="84"></reference>
+   <reference key="90"></reference>
    <unicode role="key" value="3"></unicode>
    <reference key="7"></reference>
    <unicode role="key" value="4"></unicode>
-   <reference key="78"></reference>
+   <reference key="84"></reference>
    <unicode role="key" value="6"></unicode>
-   <reference key="89"></reference>
+   <reference key="95"></reference>
    <unicode role="key" value="8"></unicode>
    <reference key="24"></reference>
    <unicode role="key" value="9"></unicode>
@@ -5695,7 +6288,7 @@ Esta frase se verá afectada &amp;lt;b&amp;gt;en su totalidad&amp;lt;/b&amp;gt; 
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="64"></reference>
+  <reference key="56"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -6746,9 +7339,17 @@ Esta frase se verá afectada &amp;lt;b&amp;gt;en su totalidad&amp;lt;/b&amp;gt; 
     <reference key="27"></reference>
     <reference key="28"></reference>
    </list>
+   <string role="key" value="bbf71c07bd4b3178c663ce0bb9f18636"></string>
+   <list>
+    <reference key="64"></reference>
+   </list>
    <string role="key" value="cf2794c1b7c3fe74f33869a4e9cafb96"></string>
    <list>
     <reference key="8"></reference>
+   </list>
+   <string role="key" value="dcfc44662f98f3325832e66a56b717ce"></string>
+   <list>
+    <reference key="65"></reference>
    </list>
   </dictionary>
   <string role="key" value="root"></string>

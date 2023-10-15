@@ -128,14 +128,273 @@ Elementos del formulario
 <div class="iDevice_content_wrapper">
 <div id="ta25_839_2" class="block iDevice_content">
 <div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="exe-fx exe-accordion">
-<h2>input</h2>
-<p>Escriba su contenido...</p>
+<h2>fieldset</h2>
+<p>Las etiquetas &lt;<strong>fieldset</strong>&gt; y &lt;<strong>legend</strong>&gt; se utilizan para agrupar elementos de formulario relacionados y proporcionar un título o leyenda descriptiva para el grupo.</p>
+<p>La etiqueta &lt;<strong>fieldset</strong>&gt; actúa como un contenedor que agrupa campos del formulario. Ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;fieldset&gt;
+&lt;legend&gt;Información de contacto&lt;/legend&gt;
+&lt;label for="name"&gt;Nombre:&lt;/label&gt;
+&lt;input type="text" id="name"&gt;&lt;br&gt;
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email"&gt;&lt;br&gt;
+&lt;label for="message"&gt;Mensaje:&lt;/label&gt;
+&lt;textarea id="message"&gt;&lt;/textarea&gt;
+&lt;/fieldset&gt;</code></pre>
+</div>
+</div>
+<p>En este ejemplo, la etiqueta &lt;fieldset&gt; envuelve el grupo de elementos de formulario relacionados con la información de contacto. La etiqueta &lt;<strong>legend</strong>&gt; se utiliza como una leyenda o título para el <strong>fieldset</strong>, proporcionando una descripción del grupo.</p>
+<p>El uso de las etiquetas &lt;<strong>fieldset</strong>&gt; y &lt;<strong>legend</strong>&gt; ayuda a mejorar la accesibilidad y usabilidad de los formularios al proporcionar una estructura clara y agrupación visual de campos relacionados. También mejora el estilo general y la organización del formulario.</p>
 <h2>label</h2>
-<p>Escriba su contenido...</p>
+<p>La etiqueta &lt;<strong>label</strong>&gt; ayuda a asociar una descripción de texto con un campo de entrada de formulario, lo que lo hace más accesible y fácil de usar. Ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;label for="username"&gt;Nombre de usuario:&lt;/label&gt;
+&lt;input type="text" id="username"&gt;</code></pre>
+</div>
+</div>
+<p>En este ejemplo, la etiqueta &lt;<strong>label</strong>&gt; se utiliza para crear una etiqueta para el campo de entrada de nombre de usuario. El atributo <strong>for</strong> de la etiqueta &lt;<strong>label</strong>&gt; especifica con qué elemento de entrada está asociado. En este caso, el valor del atributo <strong>for</strong> coincide con el atributo id del campo de entrada.</p>
+<p>Cuando un usuario hace clic en la etiqueta, el campo de entrada correspondiente se enfoca o activa. Esto mejora la usabilidad y accesibilidad, ya que los usuarios pueden hacer clic en el texto de la etiqueta en lugar de hacer clic directamente en el campo de entrada.</p>
+<h2>input</h2>
+<p>La etiqueta &lt;<strong>input</strong>&gt; en HTML se utiliza para crear campos de entrada en un formulario que permiten a los usuarios ingresar datos. El tipo de dato que se ingresa depende del valor del atributo <strong>type</strong> de la etiqueta &lt;<strong>input</strong>&gt;. Veamos algunos ejemplos comunes de cómo se utiliza la etiqueta &lt;<strong>input</strong>&gt; en un formulario:</p>
+<p><strong>Campo de Texto:</strong> Permite a los usuarios ingresar texto, como su nombre o dirección de correo electrónico.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;input type="text" id="nombre" name="nombre" placeholder="Tu nombre"&gt;</code></pre>
+</div>
+</div>
+<p><strong>Campo de Contraseña:</strong> Similar al campo de texto, pero los caracteres ingresados se ocultan por asteriscos o puntos para proteger la privacidad de la contraseña.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;input type="password" id="contrasena" name="contrasena" placeholder="Contraseña"&gt;</code></pre>
+</div>
+</div>
+<p><strong>Casilla de Verificación (Checkbox):</strong> Permite a los usuarios seleccionar o deseleccionar una opción.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;input type="checkbox" id="suscripcion" name="suscripcion" value="aceptar"&gt;
+&lt;label for="suscripcion"&gt;Acepto los términos y condiciones&lt;/label&gt;</code></pre>
+</div>
+</div>
+<p><strong>Botón de Radio (Radio Button):</strong> Permite a los usuarios seleccionar una opción de un conjunto de opciones mutuamente excluyentes.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;input type="radio" id="opcion1" name="opcion" value="opcion1"&gt;
+&lt;label for="opcion1"&gt;Opción 1&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" id="opcion2" name="opcion" value="opcion2"&gt;
+&lt;label for="opcion2"&gt;Opción 2&lt;/label&gt;</code></pre>
+</div>
+</div>
+<p><strong>Botón (Button):</strong> Crea un botón que puede utilizarse para enviar un formulario o realizar otras acciones mediante JavaScript.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;input type="button" value="Enviar" onclick="enviarFormulario()"&gt;</code></pre>
+</div>
+</div>
+<p><strong>Campo de Correo Electrónico:</strong> Ayuda a validar que se ingrese una dirección de correo electrónico válida.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;input type="email" id="correo" name="correo" placeholder="Correo electrónico"&gt;</code></pre>
+</div>
+</div>
+<p><strong>Campo de Número:</strong> Permite ingresar valores numéricos y puede incluir restricciones como mínimo y máximo.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;input type="number" id="edad" name="edad" min="18" max="99" placeholder="Edad"&gt;</code></pre>
+</div>
+</div>
+<p>Estos son solo algunos ejemplos de cómo se puede utilizar la etiqueta &lt;<strong>input</strong>&gt; en un formulario HTML.</p>
+<h2>button</h2>
+<p>La etiqueta &lt;<strong>button</strong>&gt; en HTML se utiliza para crear un botón. Puede ser utilizado para activar una acción o comportamiento específico al ser pulsado.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;button&gt;Haz clic&lt;/button&gt;</code></pre>
+</div>
+</div>
+<p>También puedes utilizar el atributo <strong>type</strong> para definir el tipo de botón. Algunos valores comunes para el atributo <strong>type</strong> son:</p>
+<ul>
+<li><strong>submit</strong>: Un botón que envía un formulario.</li>
+<li><strong>reset</strong>: Un botón que reinicia los valores iniciales de los campos de un formulario.</li>
+</ul>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code></pre>
+</div>
+</div>
 <h2>select</h2>
-
+<p>La etiqueta &lt;<strong>select</strong>&gt; en HTML se utiliza para crear un menú desplegable o una lista de opciones seleccionables. Permite al usuario elegir una opción de entre varias disponibles.</p>
+<p>Ejemplo básico de cómo utilizar la etiqueta &lt;<strong>select</strong>&gt; junto con la etiqueta &lt;<strong>option</strong>&gt; para crear un menú desplegable:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;select&gt;
+   &lt;option value="option1"&gt;Opción 1&lt;/option&gt;
+   &lt;option value="option2"&gt;Opción 2&lt;/option&gt;
+   &lt;option value="option3"&gt;Opción 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+</div>
+</div>
+<p>Cada &lt;<strong>option</strong>&gt; dentro de la etiqueta &lt;<strong>select</strong>&gt; representa una opción en el menú desplegable. El atributo value se utiliza para especificar el valor asociado a cada opción, que se enviará al servidor cuando se envíe el formulario.</p>
+<p>También puedes agregar el atributo selected a una opción específica para que se seleccione automáticamente cuando se muestre el menú desplegable:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;select&gt;
+    &lt;option value="option1"&gt;Opción 1&lt;/option&gt;
+    &lt;option value="option2" selected&gt;Opción 2&lt;/option&gt;
+    &lt;option value="option3"&gt;Opción 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+</div>
+</div>
+<p>En este ejemplo, <strong>la opción «Opción 2» estará seleccionada</strong> de forma predeterminada cuando se muestre el menú desplegable.</p>
+<p>La etiqueta &lt;<strong>select</strong>&gt; en HTML también admite el atributo multiple, que permite al usuario seleccionar múltiples opciones del menú desplegable.</p>
+<p>Al agregar el atributo <strong>multiple</strong> a la etiqueta &lt;<strong>select</strong>&gt;, se permite la selección de varias opciones manteniendo presionada la tecla Ctrl (en Windows) o Cmd (en Mac) mientras se hacen clic en las opciones deseadas. Ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;select multiple&gt;
+    &lt;option value="option1"&gt;Opción 1&lt;/option&gt;
+    &lt;option value="option2"&gt;Opción 2&lt;/option&gt;
+    &lt;option value="option3"&gt;Opción 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+</div>
+</div>
+<p>La etiqueta &lt;<strong>optgroup</strong>&gt; se utiliza dentro de un elemento &lt;<strong>select</strong>&gt; para agrupar varias opciones relacionadas en una categoría o conjunto. Esto proporciona una organización visual a las opciones dentro de la lista desplegable. La etiqueta &lt;optgroup&gt; debe contener una o más etiquetas &lt;option&gt; que representan las opciones dentro de ese grupo.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;select&gt;
+    &lt;optgroup label="Frutas"&gt;
+        &lt;option value="manzana"&gt;Manzana&lt;/option&gt;
+        &lt;option value="naranja"&gt;Naranja&lt;/option&gt;
+        &lt;option value="platano"&gt;Plátano&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label="Verduras"&gt;
+        &lt;option value="zanahoria"&gt;Zanahoria&lt;/option&gt;
+        &lt;option value="brocoli"&gt;Brócoli&lt;/option&gt;
+        &lt;option value="espinaca"&gt;Espinaca&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+</div>
+</div>
+<p>En este ejemplo, hemos creado una lista desplegable con dos grupos: «Frutas» y «Verduras». Cada grupo está definido por la etiqueta &lt;<strong>optgroup</strong>&gt;, que tiene un atributo label que especifica el nombre del grupo. Dentro de cada grupo, hemos incluido etiquetas &lt;<strong>option</strong>&gt; que representan las opciones individuales, como «Manzana», «Naranja», «Zanahoria», etc.</p>
+<p>Cuando se renderiza en un navegador, esto creará una lista desplegable con las opciones agrupadas visualmente bajo las etiquetas de grupo. Esto facilita que los usuarios encuentren y seleccionen las opciones que desean de manera más organizada.</p>
+<h2>datalist</h2>
+<p>La etiqueta &lt;<strong>datalist</strong>&gt; se utiliza junto con la etiqueta &lt;<strong>input</strong>&gt; para proporcionar una lista de opciones predefinidas que ayudan a los usuarios a seleccionar un valor mientras escriben en un campo de entrada &lt;<strong>input</strong>&gt;. Esta etiqueta crea una lista desplegable de sugerencias basadas en las opciones que defines, lo que facilita la entrada de datos y mejora la experiencia del usuario.</p>
+<p>A continuación se puede ver un ejemplo de cómo se utiliza la etiqueta &lt;<strong>datalist</strong>&gt;:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;label for="frutas"&gt;Selecciona una fruta:&lt;/label&gt;
+&lt;input list="frutas" id="fruta" name="fruta" /&gt;
+ 
+&lt;datalist id="frutas"&gt;
+    &lt;option value="Manzana"&gt;&lt;/option&gt;
+    &lt;option value="Banana"&gt;&lt;/option&gt;
+    &lt;option value="Naranja"&gt;&lt;/option&gt;
+    &lt;option value="Uva"&gt;&lt;/option&gt;
+    &lt;option value="Pera"&gt;&lt;/option&gt;
+&lt;/datalist&gt;</code></pre>
+</div>
+</div>
+<p>En este ejemplo, hemos creado un campo de entrada de texto con la etiqueta &lt;<strong>input</strong>&gt; y le hemos asignado un atributo list que corresponde al id de la etiqueta &lt;<strong>datalist</strong>&gt;. El &lt;<strong>datalist</strong>&gt; contiene opciones (&lt;<strong>option</strong>&gt;) que representan las sugerencias disponibles para el campo de entrada.</p>
+<p>Cuando un usuario comienza a escribir en el campo de entrada, verá una lista desplegable con las opciones del &lt;<strong>datalist</strong>&gt;. Puede seleccionar una de las opciones o seguir escribiendo. Esto es especialmente útil para formularios en los que los usuarios deben elegir una opción de una lista predefinida, como una lista de países o productos.</p>
+<p>El uso de &lt;<strong>datalist</strong>&gt; mejora la usabilidad y facilita a los usuarios la entrada de datos, especialmente en dispositivos móviles y pantallas táctiles.</p>
+<h2>textarea</h2>
+<p>La etiqueta &lt;<strong>textarea</strong>&gt; en HTML se utiliza para crear un área de entrada de texto de varias líneas. Permite a los usuarios ingresar y editar texto más largo que un solo campo de entrada de texto.</p>
+<p>Ejemplo básico de cómo utilizar la etiqueta &lt;<strong>textarea</strong>&gt;:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;textarea rows="4" cols="40"&gt;
+Esto es un textarea con 4 fulas y 40 columnas.
+&lt;/textarea&gt;</code></pre>
+</div>
+</div>
+<p>En este ejemplo, el atributo <strong>rows</strong> define el número de filas visibles del área de texto, mientras que el atributo <strong>cols</strong> establece el número de columnas visibles.</p>
+<p>El texto dentro de la etiqueta &lt;<strong>textarea</strong>&gt; se mostrará inicialmente dentro del área de texto y los usuarios podrán editarlo y seleccionarlo.</p>
 </div>
 <p><a href="https://www.w3schools.com/html/html_form_elements.asp" target="_blank" rel="noopener">https://www.w3schools.com/html/html_form_elements.asp</a></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_announcement_white" id="id37">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_announcement_white.png)"><h1 class="iDeviceTitle">Ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta37_122_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;form action="https://www.w3schools.com/action_page.php" method="post"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Datos personales&lt;/legend&gt;
+        &lt;label for="nombre"&gt;Nombre y apellidos: &lt;/label&gt;
+        &lt;input name="nombre" id="nombre" type="text"&gt;&lt;br&gt;
+        &lt;label for="socio"&gt;Socio:&lt;/label&gt;
+        &lt;select name="socio" id="socio"&gt;
+            &lt;!--Etiqueta option--&gt;
+            &lt;option value="value1"&gt;Sí&lt;option&gt;
+            &lt;option value="value2" selected&gt;No&lt;option&gt;
+        &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+        &lt;label&gt;Edad: &lt;/label&gt;
+        &lt;input name="edad" type="checkbox" value="20-39"&gt; 20-39
+        &lt;input name="edad" type="checkbox" value="40-59"&gt; 40-59
+        &lt;input name="edad" type="checkbox" value="60-79"&gt; 60-79&lt;br&gt;&lt;br&gt;
+        &lt;label for="email"&gt;Email: &lt;/label&gt;
+        &lt;input id="email" name="email" type="email"&gt;&lt;br&gt;&lt;br&gt;
+        &lt;label for="estudios"&gt;Estudios: &lt;/label&gt;
+        &lt;select name="estudios" id="estudios"&gt;
+            &lt;optgroup label="Estudios Universitarios"&gt;
+                &lt;option&gt;Doctorado&lt;/option&gt;
+                &lt;option&gt;Máster&lt;/option&gt;
+                &lt;option&gt;Grado&lt;/option&gt;
+            &lt;/optgroup&gt;
+            &lt;optgroup label="Ciclo Formativo"&gt;
+                &lt;option&gt;Grado Superior&lt;/option&gt;
+                &lt;option&gt;Grado Medio&lt;/option&gt;
+            &lt;/optgroup&gt;
+        &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+        &lt;label for="navegador"&gt;Elige tu navegador favorito: &lt;/label&gt;
+        &lt;input name="navegador" id="navegador" list="browsers"&gt;
+        &lt;datalist name="browsers" id="browsers"&gt;
+            &lt;option value="Chrome"&gt;
+            &lt;option value="Firefox"&gt;
+            &lt;option value="Internet Explorer"&gt;
+            &lt;option value="Opera"&gt;
+            &lt;option value="Safari"&gt;
+            &lt;option value="Microsoft Edge"&gt;
+        &lt;/datalist&gt;&lt;br&gt;&lt;br&gt;
+        &lt;label for="mensaje"&gt;Escribe tu mensaje: &lt;/label&gt;
+        &lt;textarea rows="10" cols="50" placeholder="Mensaje" id="mensaje" name="mensaje" &gt;&lt;/textarea&gt;
+    &lt;/fieldset&gt;
+    &lt;input type="submit" name="enviar" value="Enviar"&gt;
+&lt;/form&gt;</code></pre>
+</div>
+</div>
+<p>En el navegador se mostrará un formulario que se podrá rellenar como en el ejemplo siguiente:</p>
+<p><br><img src="formulario.png" alt="Formulario" title="Formulario" width="500" height="290" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>La página <a href="http://www.w3schools.com/action_page.php">www.w3schools.com/action_page.php</a> recibirá todos los datos y podrá tratarlos como el programador desee. En este caso, mostrando los datos enviados:</p>
+<p><img src="formulario_resultado.png" alt="Formulario resultado" title="Formulario resultado" width="500" height="233" style="display: block; margin-left: auto; margin-right: auto;"></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_assignment_white" id="id38">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_assignment_white.png)"><h1 class="iDeviceTitle">Ejercicio</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta38_123_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La Web <strong>juanpalomotuloguisasyolocomo.es</strong> tiene un formulario en el que, los visitantes a la página, rellenan una información inicial que luego en una segunda página se pide el resto para confeccionar así una receta. El formulario inicial pide la siguiente información:</p>
+<ul>
+<li>Nombre de la receta (llámala <strong>nombre</strong>)</li>
+<li>Correo del autor (llámala <strong>correo</strong>)</li>
+<li>Momento para comer: desayuno, almuerzo, merienda, cena, postre, ... Usa checkboxes para que se puedan elegir varios. (llámalo <strong>momento</strong>)</li>
+<li>Ingredientes necesarios escogidos de una lista entre carne, pescado, verdura y fruta. Se debe poder elegir varios. (llámalo <strong>ingredientes</strong>)</li>
+<li>Tiempo de preparación aproximado elegido de dos radios: uno para las horas de 0 a 2; y otro para los minutos en franjas de 15 minutos. (llámalos <strong>horas</strong> y <strong>minutos</strong>)</li>
+</ul>
+<p>Crea un diseño usando fieldset, label, optgroup, etc.</p>
+<p>Para probar la información que se envía, usa la página <span style="text-decoration: underline;"><a href="https://www.w3schools.com/action_page.php">https://www.w3schools.com/action_page.php</a></span></p>
+<p>Para ver cómo se trataría la información en otra página con formulario, usa <a href="https://lm.ciclo.iesnervion.es/">https://lm.ciclo.iesnervion.es/</a> </p></div></div></section></div>
 </div>
 </div>
 </div>
