@@ -45,7 +45,8 @@
    <li><a href="33_atributos.html" class="no-ch">3.3. Atributos</a></li>
    <li><a href="34_contenedores.html" class="daddy">3.4. Contenedores</a>
    <ul class="other-section">
-      <li><a href="341_texto_simple.html" class="no-ch">3.4.1. Texto simple</a></li>
+      <li><a href="341_la_etiqueta_div.html" class="no-ch">3.4.1. La etiqueta DIV</a></li>
+      <li><a href="342_div_y_css.html" class="no-ch">3.4.2. DIV y CSS</a></li>
    </ul>
    </li>
 </ul>
@@ -373,6 +374,69 @@ Esto es un textarea con 4 fulas y 40 columnas.
 <p><br><img src="formulario.png" alt="Formulario" title="Formulario" width="500" height="290" style="display: block; margin-left: auto; margin-right: auto;"></p>
 <p>La página <a href="http://www.w3schools.com/action_page.php">www.w3schools.com/action_page.php</a> recibirá todos los datos y podrá tratarlos como el programador desee. En este caso, mostrando los datos enviados:</p>
 <p><img src="formulario_resultado.png" alt="Formulario resultado" title="Formulario resultado" width="500" height="233" style="display: block; margin-left: auto; margin-right: auto;"></p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id41">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Atributos usados en formularios</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta41_122_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Cada etiqueta tiene una serie de atributos propios aunque coinciden un muchos de ellos. Puedes consultar los atributos de INPUT <a href="https://oregoom.com/html/input/" target="_blank" title="Etiqueta INPUT" rel="noopener"><strong>aquí</strong></a>.</p>
+<p>Los más comunes son:</p>
+<div class="exe-fx exe-accordion">
+<h2 class="wp-block-heading">name</h2>
+<p data-amp-original-style="line-height: 1.5; margin-bottom: 1.5rem; font-size: 1.125rem; color: #333;" class="amp-wp-7d7bb6c">El atributo <code>name</code> se utiliza para identificar un campo de entrada en particular. Es especialmente útil cuando se procesan los datos del formulario en el servidor, ya que actúa como clave para los valores ingresados.</p>
+<pre class="wp-block-code" aria-describedby="shcb-language-14" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><span><code class="hljs language-xml shcb-code-table shcb-line-numbers shcb-wrap-lines"><span class="shcb-loc">
+</span><span class="shcb-loc"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nombre_usuario"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Ingrese su nombre"</span>&gt;</span>
+</span><span class="shcb-loc">
+</span></code></span></pre>
+<h2 class="wp-block-heading">value</h2>
+<p data-amp-original-style="line-height: 1.5; margin-bottom: 1.5rem; font-size: 1.125rem; color: #333;" class="amp-wp-7d7bb6c">El atributo <code>value</code> define el valor predeterminado de un campo de entrada. Este valor se envía al servidor cuando se envía el formulario.</p>
+<pre class="wp-block-code" aria-describedby="shcb-language-15" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><span><code class="hljs language-xml shcb-code-table shcb-line-numbers shcb-wrap-lines"><span class="shcb-loc">
+</span><span class="shcb-loc"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nombre"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"John Doe"</span>&gt;</span>
+</span><span class="shcb-loc">
+</span></code></span><small class="shcb-language" id="shcb-language-15"><span class="shcb-language__label"> </span></small></pre>
+<h2 class="wp-block-heading">placeholder</h2>
+<p data-amp-original-style="line-height: 1.5; margin-bottom: 1.5rem; font-size: 1.125rem; color: #333;" class="amp-wp-7d7bb6c">El atributo <code>placeholder</code> muestra un texto de sugerencia en el campo de entrada cuando está vacío. Este texto desaparece cuando el usuario comienza a escribir en el campo.</p>
+<pre class="wp-block-code" aria-describedby="shcb-language-16" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><span><code class="hljs language-xml shcb-code-table shcb-line-numbers shcb-wrap-lines"><span class="shcb-loc">
+</span><span class="shcb-loc"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"correo"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Ingrese su correo electrónico"</span>&gt;</span>
+</span><span class="shcb-loc">
+</span></code></span><small class="shcb-language" id="shcb-language-16"><span class="shcb-language__label"> </span></small></pre>
+<h2 class="wp-block-heading">required</h2>
+<p data-amp-original-style="line-height: 1.5; margin-bottom: 1.5rem; font-size: 1.125rem; color: #333;" class="amp-wp-7d7bb6c">El atributo <code>required</code> indica que un campo de entrada es obligatorio y debe completarse antes de enviar el formulario.</p>
+<pre class="wp-block-code" aria-describedby="shcb-language-17" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><span><code class="hljs language-xml shcb-code-table shcb-line-numbers shcb-wrap-lines"><span class="shcb-loc">
+</span><span class="shcb-loc"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nombre"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Ingrese su nombre"</span> <span class="hljs-attr">required</span>&gt;</span>
+</span><span class="shcb-loc">
+</span></code></span><small class="shcb-language" id="shcb-language-17"><span class="shcb-language__label"> </span></small></pre>
+<h2 class="wp-block-heading">disabled</h2>
+<p data-amp-original-style="line-height: 1.5; margin-bottom: 1.5rem; font-size: 1.125rem; color: #333;" class="amp-wp-7d7bb6c">El atributo <code>disabled</code> desactiva un campo de entrada, lo que significa que los usuarios no pueden interactuar con él ni modificar su valor. Los campos desactivados no se envían con el formulario.</p>
+<pre class="wp-block-code" aria-describedby="shcb-language-18" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><span><code class="hljs language-xml shcb-code-table shcb-line-numbers shcb-wrap-lines"><span class="shcb-loc">
+</span><span class="shcb-loc"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nombre"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"John Doe"</span> <span class="hljs-attr">disabled</span>&gt;</span>
+</span><span class="shcb-loc">
+</span></code></span><small class="shcb-language" id="shcb-language-18"><span class="shcb-language__label"> </span></small></pre>
+<h2 class="wp-block-heading">readonly</h2>
+<p data-amp-original-style="line-height: 1.5; margin-bottom: 1.5rem; font-size: 1.125rem; color: #333;" class="amp-wp-7d7bb6c">El atributo <code>readonly</code> hace que un campo de entrada sea de solo lectura. A diferencia de los campos desactivados, los campos de solo lectura sí se envían con el formulario, pero los usuarios no pueden modificar su valor.</p>
+<pre class="wp-block-code" aria-describedby="shcb-language-19" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><span><code class="hljs language-xml shcb-code-table shcb-line-numbers shcb-wrap-lines"><span class="shcb-loc">
+</span><span class="shcb-loc"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"id_usuario"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"12345"</span> <span class="hljs-attr">readonly</span>&gt;</span>
+</span></code></span><span><code class="hljs language-xml shcb-code-table shcb-line-numbers shcb-wrap-lines"><span class="shcb-loc">
+</span></code></span><small class="shcb-language" id="shcb-language-20"><span class="shcb-language__label"> </span></small></pre>
+<h2 class="wp-block-heading">id</h2>
+<p data-amp-original-style="line-height: 1.5; margin-bottom: 1.5rem; font-size: 1.125rem; color: #333;" class="amp-wp-7d7bb6c">El atributo <code>id</code> asigna un identificador único al elemento <strong><input type="text"></strong>. Este identificador se puede utilizar para seleccionar y manipular el elemento mediante JavaScript y para aplicar estilos específicos mediante CSS. Los valores de los atributos <code>id</code> deben ser únicos en todo el documento.</p>
+<pre class="wp-block-code" aria-describedby="shcb-language-21" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><span><code class="hljs language-xml shcb-code-table shcb-line-numbers shcb-wrap-lines"><span class="shcb-loc">
+</span><span class="shcb-loc"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nombre_usuario"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nombre_usuario"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Ingrese su nombre de usuario"</span>&gt;</span>
+</span><span class="shcb-loc">
+</span></code></span><small class="shcb-language" id="shcb-language-21"><span class="shcb-language__label"> </span></small></pre>
+<h2 class="wp-block-heading">class</h2>
+<p data-amp-original-style="line-height: 1.5; margin-bottom: 1.5rem; font-size: 1.125rem; color: #333;" class="amp-wp-7d7bb6c">El atributo <code>class</code> permite asignar una o varias clases al elemento <strong><input type="text"></strong>. Las clases son útiles para aplicar estilos CSS y manipular elementos que comparten características comunes mediante JavaScript. Puedes asignar múltiples clases separándolas con espacios.</p>
+<pre class="wp-block-code" aria-describedby="shcb-language-22" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><span><code class="hljs language-xml shcb-code-table shcb-line-numbers shcb-wrap-lines"><span class="shcb-loc">
+</span><span class="shcb-loc"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"formulario-entrada entrada-nombre"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nombre"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Ingrese su nombre"</span>&gt;</span>
+</span><span class="shcb-loc">
+</span></code></span><small class="shcb-language" id="shcb-language-22"><span class="shcb-language__label"> </span></small></pre>
+</div></div></div></section></div>
 </div>
 </div>
 </div>

@@ -2,25 +2,23 @@
 <html lang="es">
 <head>
 <link rel="stylesheet" type="text/css" href="base.css" />
-<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>3.4.1. Texto simple | UA03. HTML </title>
+<title>3.4.2. DIV y CSS | UA03. HTML </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
 <meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
-<script type="text/javascript" src="exe_highlighter.js"></script>
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <link rel="stylesheet" type="text/css" href="udl-content.css" />
 <script type="text/javascript" src="udl-content.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
-<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-17"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">UA03. HTML</div></header>
@@ -43,44 +41,29 @@
    <li><a href="33_atributos.html" class="no-ch">3.3. Atributos</a></li>
    <li class="current-page-parent"><a href="34_contenedores.html" class="current-page-parent daddy">3.4. Contenedores</a>
    <ul>
-      <li id="active"><a href="341_texto_simple.html" class="active no-ch">3.4.1. Texto simple</a></li>
+      <li><a href="341_la_etiqueta_div.html" class="no-ch">3.4.1. La etiqueta DIV</a></li>
+      <li id="active"><a href="342_div_y_css.html" class="active no-ch">3.4.2. DIV y CSS</a></li>
    </ul>
    </li>
 </ul>
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="34_contenedores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="341_la_etiqueta_div.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
-<header id="nodeDecoration"><h1 id="nodeTitle">3.4.1. Texto simple</h1></header>
-<article class="iDevice_wrapper UDLcontentIdevice" id="id10">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.4.2. DIV y CSS</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id45">
 <div class="iDevice emphasis0" >
-<div id="ta10_850_2" class="block iDevice_content">
-<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Todo el contenido de su página Web se sitúa en el cuerpo del documento Html5, es decir entre las etiquetas <strong>...</strong> se considera texto simple sin ningún formato por defecto.</p>
-<p>No es recomendable escribir texto simple sin estar contenido en alguna etiqueta, ya sea de línea o de bloque. En caso contrario, para poder acceder a su formato tendríamos que actuar sobre la etiqueta <strong>body</strong> afectando a todo el documento.</p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Ejemplo</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Crea una página HTMl con la siguiente frase:</p>
-<div class="highlighted-code language-markup line-numbers">
-<div>
-<pre><code>&lt;body&gt;
-Esta frase se verá afectada &lt;b&gt;en su totalidad&lt;/b&gt; debido a que no está dentro de un contenedor.<br>&lt;p&gt;Pero esta frase sí lo está&lt;/p&gt;
-&lt;/body&gt;</code></pre>
-</div>
-</div>
-<p>Observa cómo resulta. Verás que hay un fragmento en negrita.</p>
-<p>Ahora inserta en el <strong>head</strong> el siguiente código:</p>
-<div class="highlighted-code language-markup line-numbers">
-<div>
-<pre><code>&lt;style&gt;
-        b{
-            color: red;
-            text-decoration: underline;
-        }<br>&nbsp;       body{<br>            color: blue;<br>        }
-&lt;/style&gt;</code></pre>
-</div>
-</div>
-<p>Comprueba cómo todo el texto se pone de color azul excepto el fragmento dentro de <strong>b</strong>.</p></div></div></section></div>
+<div id="ta45_126_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Una vez que tienes una página web realizada con una composición por bloques mediante etiquetas &lt;div&gt;, hay varias cosas que puedes hacer para mejorar y ampliar la funcionalidad de tu sitio web:</p>
+<ul>
+<li><strong>Añadir contenido y secciones:</strong> Puedes seguir añadiendo más contenido y secciones a tu página web utilizando etiquetas &lt;div&gt;. Crea secciones adicionales para otros temas, servicios o información que desees presentar en tu sitio.</li>
+<li><strong>Mejorar el diseño y la estética:</strong> Aplica estilos CSS para mejorar el diseño y la estética de tu página. Asegúrate de que el diseño sea coherente y atractivo, y utiliza colores, fuentes y elementos visuales que se alineen con la identidad de tu sitio.</li>
+<li><strong>Hacer que la página sea receptiva (responsive):</strong> Asegúrate de que tu página sea compatible con dispositivos móviles y se ajuste adecuadamente a pantallas de diferentes tamaños. Utiliza CSS para crear un diseño adaptable.</li>
+</ul></div></div></section></div>
 </div>
 </div>
 </article>
@@ -91,7 +74,7 @@ Esta frase se verá afectada &lt;b&gt;en su totalidad&lt;/b&gt; debido a que no 
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="34_contenedores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="341_la_etiqueta_div.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
 </nav>
 </div>
 </div>
