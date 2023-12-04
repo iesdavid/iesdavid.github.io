@@ -69,7 +69,7 @@
   <string role="key" value="_intendedEndUserRoleType"></string>
   <unicode value=""></unicode>
   <string role="key" value="_isChanged"></string>
-  <bool value="1"></bool>
+  <bool value="0"></bool>
   <string role="key" value="_isTemplate"></string>
   <bool value="0"></bool>
   <string role="key" value="_lang"></string>
@@ -85,9 +85,9 @@
   <string role="key" value="_name"></string>
   <unicode value="UA05"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="8"></int>
+  <int value="10"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="5"></int>
+  <int value="6"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -621,6 +621,8 @@
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://www.jtech.ua.es/dadm/restringido/multimedia/sesion03-apuntes.html#Reproducir+v%C3%ADdeo+mediante+VideoView&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.jtech.ua.es/dadm/restringido/multimedia/sesion03-apuntes.html#Reproducir+v%C3%ADdeo+mediante+VideoView&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
@@ -645,7 +647,7 @@
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <none></none>
+              <reference key="10"></reference>
              </dictionary>
             </instance>
            </list>
@@ -1045,7 +1047,7 @@ class MainActivity : AppCompatActivity(),OnClickListener  {
               <string role="key" value="ideviceCategory"></string>
               <unicode value="Text and Tasks"></unicode>
               <string role="key" value="lastIdevice"></string>
-              <bool value="0"></bool>
+              <bool value="1"></bool>
               <string role="key" value="nextFieldId"></string>
               <int value="3"></int>
               <string role="key" value="originalicon"></string>
@@ -1160,6 +1162,8 @@ class MainActivity : AppCompatActivity(),OnClickListener  {
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Una app que muestre vídeos será en principio más sencilla, ya que no tendrá sentido separar los controles del propio reproductor. Normalmente, el reproductor estará enlazado a una ventana en la que volcará las imágenes del vídeo. No obstante, también deberíamos diferenciar en el código qué parte es la &lt;strong&gt;interfaz gráfica&lt;/strong&gt; y qué otra parte se dedica al &lt;strong&gt;control del media,&lt;/strong&gt; como la carga, la codificación, etcétera.&lt;/p&gt;
 &lt;p&gt;En el caso de una app reproductora de vídeo, además, la parte gráfica tiene diferentes posibilidades para enlazar la salida del reproductor hacia la interfaz gráfica. Podríamos, por ejemplo, utilizar un elemento &lt;strong&gt;VideoView&lt;/strong&gt; en nuestro layout y cargar en él los vídeos directamente, utilizando un &lt;strong&gt;MediaController&lt;/strong&gt; para permitir que el usuario pueda controlar la reproducción a su gusto.&lt;/p&gt;
@@ -1193,7 +1197,7 @@ android:layout_height=&quot;match_parent&quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="20"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -1292,29 +1296,46 @@ android:layout_height=&quot;match_parent&quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;El código para cargar los vídeos en &lt;a href=&quot;https://www.geeksforgeeks.org/videoview-in-kotlin/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;VideoView&lt;/strong&gt; &lt;/a&gt;sería:&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-java&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;val videoView = findViewById&amp;lt;VideoView&amp;gt;(R.id.videoView)
+&lt;pre&gt;&lt;code&gt;class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val videoView1 = findViewById&lt;videoview&gt;(R.id.videoView1)
 // Opción 1: Archivo en disco (Nota: android.permission.WRITE_EXTERNAL_STORAGE)
-val clip = File(Environment.getExternalStorageDirectory(), &quot;test.mp4&quot;)
-videoView.setVideoPath(clip.path);
+        val clip = File(Environment.getExternalStorageDirectory(), &quot;libro.mp4&quot;)
+        videoView1.setVideoPath(clip.path);
+        reproducir(videoView1)
 // Opción 2: Archivo en directorio res/raw (Nota: no debemos escribir la extensión)
-videoView.setVideoURI(Uri.parse(&quot;android.resource://$packageName/raw/test&quot;))
+        val videoView2 = findViewById&lt;videoview&gt;(R.id.videoView2)
+        videoView2.setVideoURI(Uri.parse(&quot;android.resource://$packageName/raw/libro&quot;))
+        reproducir(videoView2)
 // Opción 3: Archivo en Internet (Nota: android.permission.INTERNET)
-videoView.setVideoPath(&quot;http://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4&quot;)
-val mediaController = MediaController(this)
-mediaController.setMediaPlayer(videoView)
-videoView.setMediaController(mediaController)
-videoView.requestFocus()
-videoView.start()&lt;/code&gt;&lt;/pre&gt;
+        val videoView3 = findViewById&lt;videoview&gt;(R.id.videoView3)
+        videoView3.setVideoPath(&quot;https://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4&quot;)
+        reproducir(videoView3)
+    }
+
+    private fun reproducir(videoView: VideoView) {
+        val mediaController = MediaController(this)
+        mediaController.setMediaPlayer(videoView)
+        videoView.setMediaController(mediaController)
+        videoView.requestFocus()
+        videoView.start()
+    }
+}&lt;/videoview&gt;&lt;/videoview&gt;&lt;/videoview&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;En el caso de acceder a archivos de vídeo en el disco o a vídeos en internet, no debemos olvidarnos de añadir los permisos correspondientes en el &lt;strong&gt;manifest&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-markup&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&amp;gt;&lt;br&gt;&amp;lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;&amp;gt;&amp;lt;/uses-permission&amp;gt;
+&amp;lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;&amp;gt;&amp;lt;/uses-permission&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Esta sería la opción más sencilla, pero no permitiría tanto control como utilizando directamente los objetos &lt;a href=&quot;https://developer.android.com/guide/topics/media/mediaplayer&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;MediaPlayer&lt;/strong&gt; &lt;/a&gt;o &lt;a href=&quot;https://developer.android.com/guide/topics/media/exoplayer&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;ExoPlayer&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
@@ -1340,7 +1361,7 @@ videoView.start()&lt;/code&gt;&lt;/pre&gt;
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="20"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -1389,6 +1410,355 @@ videoView.start()&lt;/code&gt;&lt;/pre&gt;
            <list></list>
           </dictionary>
          </instance>
+         <instance class="exe.engine.node.Node" reference="25">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="5.2.3. Captura"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="23">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="24">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="850_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="23"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Si nuestra app no tiene como objetivo la reproducción sino la captación de imagen o sonido, su arquitectura no tendrá por qué guardar relación directa con las arquitecturas vistas hasta ahora.&lt;/p&gt;
+&lt;p&gt;Deberemos tener en cuenta, sin embargo, otros factores, por ejemplo, si nuestra app utilizará otras aplicaciones como interfaz hacia el hardware o si, por el contrario, accederá directamente a la cámara o al micro.&lt;/p&gt;
+&lt;p&gt;Si nuestra app no pretende ser lo último en grabación, quizá sea conveniente llamar directamente a la grabadora instalada por defecto en nuestro móvil, con lo que ahorraremos esfuerzo y tiempo de desarrollo. Este podría ser el caso de una app que gestione tareas y permita además grabar notas de voz o vídeo. Quizá resultaría innecesario para una tarea tan sencilla meternos a programar el hardware de la cámara y el sonido.&lt;/p&gt;
+&lt;p&gt;No obstante, si realmente nuestra app se basa en la captación de media, querremos tener total control sobre el proceso y tendremos que estar al tanto de las interfaces y arquitectura de la cámara o el micro.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="24"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="25"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="8"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="25"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="26">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="udl-content"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="UDLcontent"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="0"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="27">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="851_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="26"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Vamos a comenzar utilizando una app preinstalada en el sistema que se anuncie como grabadora de vídeo y le solicitaremos que grabe uno para nosotros. Lo primero que necesitaremos es un &lt;strong&gt;FileProvider&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Por motivos de &lt;strong&gt;seguridad&lt;/strong&gt;, Android no nos permite pasar rutas de una app a otra de forma directa; de ser así, la otra app&lt;strong&gt; podría escribir o borrar&lt;/strong&gt; lo que quisiera dentro de nuestro directorio de aplicación. Mediante un FileProvider podremos compartir archivos de forma segura entre diferentes apps. En el &lt;strong&gt;manifest&lt;/strong&gt;, dentro de la etiqueta &lt;strong&gt;application&lt;/strong&gt;, definiremos nuestro provider de la siguiente manera:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;provider
+android:name=&quot;androidx.core.content.FileProvider&quot;
+android:authorities=&quot;${applicationId}.provider&quot;
+android:exported=&quot;false&quot;
+android:grantUriPermissions=&quot;true&quot;&amp;gt;
+&amp;lt;meta-data
+android:name=&quot;android.support.FILE_PROVIDER_PATHS&quot;
+android:resource=&quot;@xml/provider_paths&quot;/&amp;gt;
+&amp;lt;/provider&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;El FileProvider hace referencia a un documento XML que definirá nuestras rutas. Crearemos una carpeta &quot;xml&quot; dentro de la carpeta &quot;res&quot; y añadiremos el archivo provider_paths.xml con el siguiente código:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-markup&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
+&amp;lt;paths&amp;gt;
+&amp;lt;files-path name=&quot;v&quot; path=&quot;videos&quot; /&amp;gt;
+&amp;lt;/paths&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Ahora podremos llamar a una aplicación que permita la grabación de vídeo, es decir, a una aplicación preinstalada que responda a una acción &lt;strong&gt;MediaStore.ACTION_VIDEO_CAPTURE&lt;/strong&gt;. Nuestro código sería:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;import android.content.Intent
+import android.net.Uri
+import android.provider.MediaStore
+import androidx.core.content.FileProvider
+import java.io.File
+class Actividad: Activity() {
+private val AUTHORITY = BuildConfig.APPLICATION_ID + &quot;.provider&quot;
+private val VIDEOS = &quot;videos&quot;
+private val FILENAME = &quot;grabacion.mp4&quot;
+private val REQUEST_ID = 6969
+private var outputUri: Uri? = null
+override fun onCreate(savedInstanceState: Bundle?) {
+super.onCreate(savedInstanceState)
+setContentView(R.layout.activity_main)
+grabar()
+}
+private fun grabar() {
+val output = File(File(filesDir, VIDEOS), FILENAME)
+if(output.exists())
+output.delete()
+else
+output.parentFile?.mkdirs()
+outputUri = FileProvider.getUriForFile(this, AUTHORITY, output)
+val intent = Intent(MediaStore.ACTION_VIDEO_CAPTURE)
+intent.putExtra(MediaStore.EXTRA_OUTPUT, outputUri)
+intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1)
+intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+or Intent.FLAG_GRANT_READ_URI_PERMISSION)
+startActivityForResult(intent, REQUEST_ID)
+}
+override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+if (requestCode == REQUEST_ID &amp;amp;&amp;amp; resultCode == RESULT_OK) {
+val view = Intent(Intent.ACTION_VIEW)
+.setDataAndType(outputUri, &quot;video/mp4&quot;)
+.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+startActivity(view)
+finish()
+}
+}
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="27"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <reference key="25"></reference>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value=""></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="9"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <string value=""></string>
+              <string role="key" value="parentNode"></string>
+              <reference key="25"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="5"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="4"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:UA05.%20Uso%20de%20multimedia:5.2.%20Arquitectura:5.2.3.%20Captura"></string>
+           <string role="key" value="parent"></string>
+           <reference key="10"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
         </list>
        </dictionary>
       </instance>
@@ -1403,6 +1773,8 @@ videoView.start()&lt;/code&gt;&lt;/pre&gt;
    <reference key="15"></reference>
    <unicode role="key" value="4"></unicode>
    <reference key="20"></reference>
+   <unicode role="key" value="5"></unicode>
+   <reference key="25"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -1413,7 +1785,7 @@ videoView.start()&lt;/code&gt;&lt;/pre&gt;
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="10"></reference>
+  <reference key="25"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -2444,7 +2816,7 @@ videoView.start()&lt;/code&gt;&lt;/pre&gt;
   <string role="key" value="mxmlwidth"></string>
   <string value=""></string>
   <string role="key" value="release"></string>
-  <string value="2.7"></string>
+  <string value="2.8.1"></string>
   <string role="key" value="resources"></string>
   <dictionary></dictionary>
   <string role="key" value="root"></string>
@@ -2456,7 +2828,7 @@ videoView.start()&lt;/code&gt;&lt;/pre&gt;
   <string role="key" value="scowwebsite"></string>
   <bool value="0"></bool>
   <string role="key" value="style"></string>
-  <unicode value="nervion"></unicode>
+  <unicode value="prueba"></unicode>
   <string role="key" value="sugaractivityname"></string>
   <string value=""></string>
   <string role="key" value="sugarservicename"></string>

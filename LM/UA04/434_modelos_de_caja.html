@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
@@ -9,15 +10,16 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
-<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <link rel="stylesheet" type="text/css" href="udl-content.css" />
 <script type="text/javascript" src="udl-content.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-	</head>
+    </head>
 <body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
@@ -42,10 +44,12 @@
       <li><a href="435_enlaces.html" class="no-ch">4.3.5. Enlaces</a></li>
       <li><a href="436_listas.html" class="no-ch">4.3.6. Listas</a></li>
       <li><a href="437_tablas.html" class="no-ch">4.3.7. Tablas</a></li>
+      <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
    </ul>
    </li>
    <li><a href="44_definicin_y_uso_de_clases.html" class="no-ch">4.4. Definición y uso de clases</a></li>
-   <li><a href="45_div_y_span.html" class="no-ch">4.5. div y span</a></li>
+   <li><a href="45_el_atributo_id_y_la_etiqueta_span.html" class="no-ch">4.5. El atributo ID y la etiqueta SPAN</a></li>
+   <li><a href="46_el_modelo_de_cajas.html" class="no-ch">4.6. El modelo de cajas</a></li>
    <li><a href="46_mejoras_de_css3.html" class="no-ch">4.6. Mejoras de CSS3</a></li>
 </ul>
 </nav>
@@ -163,9 +167,7 @@
 </td>
 </tr>
 <tr>
-<td colspan="3">
-
-</td>
+<td colspan="3"></td>
 </tr>
 <tr>
 <td>border-left-color</td>
@@ -180,7 +182,6 @@
 }</code></pre>
 </div>
 </div>
-
 </td>
 </tr>
 <tr>
@@ -211,7 +212,7 @@
 </tr>
 <tr>
 <td>border-style</td>
-<td><strong>Establece el estilo del borde</strong>, los valores significan: none=ningun borde, dotted=punteado (no funciona siempre), solid=solido, double=doble borde, los valores groove, ridge, inset y outset son bordes con varios efectos 3D.</td>
+<td><strong>Establece el estilo del borde</strong>, los valores significan: <strong>none</strong>=ningún borde, <strong>dotted</strong>=punteado (no funciona siempre), <strong>solid</strong>=sólido, <strong>double</strong>=doble borde, los valores <strong>groove</strong>, <strong>ridge</strong>, <strong>inset</strong> y <strong>outset</strong> son bordes con varios efectos 3D.</td>
 <td>
 <div class="pre-code">
 <div>
@@ -237,7 +238,6 @@ h1 {
 }</code></pre>
 </div>
 </div>
-
 </td>
 </tr>
 <tr>
@@ -262,6 +262,36 @@ h1 {
 <td>height</td>
 <td><strong>Establece la altura del contenido del elemento</strong>. El valor es un porcentaje o un tamaño.</td>
 </tr>
+<tr>
+<td>
+<p>min-width</p>
+<p>max-width</p>
+</td>
+<td><strong>Establece el ancho mínimo/máximo del contenido del elemento</strong>. El valor es un porcentaje o un tamaño.</td>
+<td rowspan="2">
+<div class="pre-code">
+<div>
+<pre><code>div {
+    min-height: 100px;
+    max-width: 50%;
+    background-color: darkpink;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p>min-height</p>
+<p>max-height</p>
+</td>
+<td><strong>Establece la altura mínima/máxima del contenido del elemento</strong>. El valor es un porcentaje o un tamaño.</td>
+</tr>
+<tr>
+<td>display</td>
+<td><strong>Establece la manera en que se muestra el elemento</strong>. El valor puede ser <strong>block</strong>, <strong>inline</strong> o <strong>inline-block</strong>.</td>
+<td><a href="b-i-ib.png" rel="lightbox"><img src="b-i-ib.png" alt="Block, Inline, Inline-block" title="Block, Inline, Inline-block" width="300" height="507"></a></td>
+</tr>
 </tbody>
 </table></div></div></section></div>
 </div>
@@ -278,4 +308,4 @@ h1 {
 </nav>
 </div>
 </div>
-<script type="text/javascript" src="_cedec_js.js"></script></body></html>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
