@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head><title>Tabla a DIVS</title></head>
+<style>
+    #t2 {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #t2, #t2 tr, #t2 td {
+        border: 1px solid;
+    }
+
+    #t2 td {
+        padding: 10px;
+    }
+
+    .tabla {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+    }
+
+    .tabla {
+        border: 1px solid;
+        padding: 1px;
+    }
+
+    .fila {
+        display: table-row;
+    }
+    .columna {
+        display: block;
+    }
+
+    .celda {
+        display: inline-block;
+        width: 28.9%;
+        padding: 10px;
+        border: 1px solid;
+        margin: 1px;
+    }
+
+    .caja {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+        background-color: lightsalmon;
+        max-width: 500px;
+    }
+
+    .caja {
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    .caja:hover {
+        background-color: #ffcccb;
+    }
+
+    .columna {
+        display: inline-flex;
+        width: 30%;
+        margin: 10px;
+        border: 1px solid #000;
+        background-color: lightblue;
+    }
+
+    @keyframes mover {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(100px);
+        }
+    }
+
+    .caja {
+        animation: mover 2s infinite alternate;
+    }
+
+    @media screen and (max-width: 600px) {
+        .caja {
+            width: 100%;
+            background-color: hotpink;
+        }
+    }
+</style>
+<body>
+    <table id="t1" border="1" width="50%" align="center" cellpadding="10px">
+        <tr>
+            <td>Tutoriales En Linea 1</td>
+            <td>Tutoriales En Linea 2</td>
+            <td>Tutoriales En Linea 3</td>
+        </tr>
+        <tr>
+            <td>Tutoriales En Linea 1</td>
+            <td>Tutoriales En Linea 2</td>
+            <td>Tutoriales En Linea 3</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <table id="t2">
+        <tr>
+            <td>Tutoriales En Linea 1</td>
+            <td>Tutoriales En Linea 2</td>
+            <td>Tutoriales En Linea 3</td>
+        </tr>
+        <tr>
+            <td>Tutoriales En Linea 1</td>
+            <td>Tutoriales En Linea 2</td>
+            <td>Tutoriales En Linea 3</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <div class="tabla">
+        <div class="fila">
+            <div class="celda">Tutoriales En Linea 1</div>
+            <div class="celda">Tutoriales En Linea 2</div>
+            <div class="celda">Tutoriales En Linea 3</div>
+        </div>
+        <div class="fila">
+            <div class="celda">Tutoriales En Linea 1</div>
+            <div class="celda">Tutoriales En Linea 2</div>
+            <div class="celda">Tutoriales En Linea 3</div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="tabla">
+        <div class="columna">
+            <div class="celda">Tutoriales En Linea 1</div>
+            <div class="celda">Tutoriales En Linea 1</div>
+        </div>
+        <div class="columna">
+            <div class="celda">Tutoriales En Linea 2</div>
+            <div class="celda">Tutoriales En Linea 2</div>
+        </div>
+        <div class="columna">
+            <div class="celda">Tutoriales En Linea 3</div>
+            <div class="celda">Tutoriales En Linea 3</div>
+        </div>
+    </div>
+
+</body>
+</html>

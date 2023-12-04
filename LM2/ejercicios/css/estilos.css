@@ -1,0 +1,38 @@
+h1, h2 {
+	color: white;
+}
+h1 {
+	background-color: royalblue;
+}
+h2{
+	background-color: red;
+}
+p {
+	font-family: Verdana;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+}
+ul {
+	font-style: italic;
+	text-shadow: 4px 4px 2px darkred;
+}
+ol {
+	text-shadow: -4px 4px 2px darkblue;	
+}
+div {
+	height: 200px;
+	width: 200px;
+	box-shadow: 5px 5px 20px 3px grey;
+	margin: 20px;
+}
+#div1 {
+	border-left: solid blue 2px;
+	border-top: dashed green 2px;
+	border-right: dotted red 2px;
+	border-bottom: solid black 2px;
+}
+#div2 {
+	border: solid teal 2px;
+	border-radius: 10px;
+}
