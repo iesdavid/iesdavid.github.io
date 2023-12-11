@@ -1,0 +1,64 @@
+#p1{
+	font-style: italic;
+	text-align: right;
+}
+#p2{
+	text-transform: uppercase;
+	text-decoration: line-through;
+}
+#p3{
+	font-size: 1.2em;
+	font-family: Helvetica, Verdana;
+}
+#p4{
+	font-weight: bold;
+	text-shadow: -3px 3px 2px darkgreen;
+}
+
+
+a{
+	color: white;
+	width: 100px;
+	height: 50px;
+}
+div{
+	width: 400px;
+	height: 200px;
+}
+a,div{
+	display: table-cell;
+}
+div p{
+	font-weight: bold;
+}
+
+#redes a{
+	display: block;
+}
+
+#buscadores{
+	background-color: lightyellow;
+}
+#redes{
+	background-color: lightblue;
+}
+#noticias{
+	background-color: mediumpurple;
+	background-image: url('../6.jpg');
+	background-position: bottom right;
+	background-size: 100px 100px;
+	background-repeat: no-repeat;
+}
+.fondorojo{
+	background-color: darkred;
+}
+.fondoverde{
+	background-color: darkgreen;
+}
+.fondoazul{
+	background-color: darkblue;
+}
+.borderedondeado{
+	border-radius: 25px;
+	padding: 15px;
+}
