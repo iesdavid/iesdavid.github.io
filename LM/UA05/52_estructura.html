@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.2. Estructura | UD05. Sindicación de contenidos RSS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UD05. Sindicación de contenidos RSS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA05. Sindicación de contenidos RSS</a></li>
+   <li><a href="51_introduccin.html" class="no-ch">5.1. Introducción</a></li>
+   <li id="active"><a href="52_estructura.html" class="active no-ch">5.2. Estructura</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="51_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.2. Estructura</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_120_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Un documento RSS (Really Simple Syndication) es un archivo de texto en formato XML (Extensible Markup Language) que sigue una estructura específica para facilitar la sindicación y distribución de contenido web.</p>
+<p>El siguiente ejemplo muestra un documento RSS por dentro:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rss version="2.0"&gt;
+  &lt;channel&gt;
+    &lt;title&gt;Nombre del Canal&lt;/title&gt;
+    &lt;link&gt;Enlace al Canal&lt;/link&gt;
+    &lt;description&gt;Descripción del Canal&lt;/description&gt;
+    &lt;language&gt;Idioma del Canal&lt;/language&gt;
+
+    &lt;item&gt;
+      &lt;title&gt;Título de la Entrada 1&lt;/title&gt;
+      &lt;link&gt;Enlace de la Entrada 1&lt;/link&gt;
+      &lt;description&gt;Descripción de la Entrada 1&lt;/description&gt;
+      &lt;pubDate&gt;Fecha de Publicación de la Entrada 1&lt;/pubDate&gt;
+    &lt;/item&gt;
+
+    &lt;item&gt;
+      &lt;title&gt;Título de la Entrada 2&lt;/title&gt;
+      &lt;link&gt;Enlace de la Entrada 2&lt;/link&gt;
+      &lt;description&gt;Descripción de la Entrada 2&lt;/description&gt;
+      &lt;pubDate&gt;Fecha de Publicación de la Entrada 2&lt;/pubDate&gt;
+    &lt;/item&gt;
+
+    &lt;!-- Pueden haber más elementos 'item' para representar más entradas --&gt;
+
+  &lt;/channel&gt;
+&lt;/rss&gt;
+</code></pre>
+</div>
+</div>
+<ul>
+<li>&lt;?xml version="1.0" encoding="UTF-8"?&gt;: Declaración XML que especifica la versión de XML y la codificación de caracteres utilizada.</li>
+<li>&lt;rss version="2.0"&gt;: Elemento raíz que indica que es un documento RSS versión 2.0.</li>
+<li>&lt;channel&gt;: Contenedor principal que incluye información sobre el canal y sus elementos (entradas).</li>
+<li>&lt;title&gt;: Título del canal.</li>
+<li>&lt;link&gt;: Enlace al canal.</li>
+<li>&lt;description&gt;: Descripción del canal.</li>
+<li>&lt;language&gt;: Idioma del canal.</li>
+<li>&lt;item&gt;: Representa una entrada individual en el canal.</li>
+<li>&lt;title&gt;: Título de la entrada.</li>
+<li>&lt;link&gt;: Enlace a la entrada.</li>
+<li>&lt;description&gt;: Descripción de la entrada.</li>
+<li>&lt;pubDate&gt;: Fecha de publicación de la entrada.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_121_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Este es un ejemplo básico y los feeds RSS pueden contener más elementos para información adicional, como categorías, imágenes, autores, etc. Además, hay que tener en cuenta que existen diferentes versiones de especificaciones RSS, como RSS 0.91, RSS 1.0, RSS 2.0, y también formatos alternativos como <strong>Atom</strong>. La estructura exacta puede variar según la versión y el estándar utilizado.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="51_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
