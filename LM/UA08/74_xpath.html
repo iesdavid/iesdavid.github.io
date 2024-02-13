@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.4. XPath | UA08 - Bases de datos en XML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA08 - Bases de datos en XML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA07. Bases de datos en XML</a></li>
+   <li><a href="71_las_bases_de_datos.html" class="daddy">7.1. Las bases de datos</a>
+   <ul class="other-section">
+      <li><a href="711_el_sistema_de_gestin_de_bases_de_datos.html" class="no-ch">7.1.1. El Sistema de Gestión de Bases de Datos</a></li>
+      <li><a href="712_inconvenientes_del_sgbd.html" class="no-ch">7.1.2. Inconvenientes del SGBD</a></li>
+      <li><a href="713_transacciones.html" class="no-ch">7.1.3. Transacciones</a></li>
+   </ul>
+   </li>
+   <li><a href="72_utilizacin_de_xml.html" class="daddy">7.2. Utilización de XML</a>
+   <ul class="other-section">
+      <li><a href="721_transformacin.html" class="no-ch">7.2.1. Transformación</a></li>
+   </ul>
+   </li>
+   <li><a href="73_consultas.html" class="no-ch">7.3. Consultas</a></li>
+   <li id="active"><a href="74_xpath.html" class="active daddy">7.4. XPath</a>
+   <ul>
+      <li><a href="741_rutas.html" class="no-ch">7.4.1. Rutas</a></li>
+      <li><a href="742_expresiones.html" class="no-ch">7.4.2. Expresiones</a></li>
+      <li><a href="743_predicado.html" class="no-ch">7.4.3. Predicado</a></li>
+      <li><a href="744_funciones.html" class="no-ch">7.4.4. Funciones</a></li>
+      <li><a href="745_ejercicio.html" class="no-ch">7.4.5. Ejercicio</a></li>
+   </ul>
+   </li>
+   <li><a href="75_xquery.html" class="no-ch">7.5. XQuery</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="73_consultas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="741_rutas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.4. XPath</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div id="ta10_130_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>¿De qué modo se puede separar la información de los documentos XML de las etiquetas de los mismos? Para eso existe un lenguaje llamado <strong>XPath</strong>, cuya sintaxis es muy semejante a la que se usa para desplazarse a través de un árbol de directorios en modo comando.</p>
+<p>La base del funcionamiento de <strong>XPath</strong> es la evaluación de expresiones. Una expresión <strong>XPath</strong> se aplica sobre una estructura de árbol de un documento <strong>XML</strong>, y&nbsp;podemos obtener cuatro tipos de resultados diferentes:</p>
+<ul>
+<li>Un conjunto de elementos (nodos),&nbsp;<strong>node-set </strong></li>
+<li><strong>Booleano</strong></li>
+<li><strong>Número</strong></li>
+<li><strong>Cadena</strong></li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id11">
+<div class="iDevice emphasis0" >
+<div id="ta11_131_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>XPath opera sobre un documento XML considerándolo como un árbol.&nbsp; El árbol contiene nodos y hay siete tipos de nodos:</p>
+<ul>
+<li><strong>Nodo raíz,</strong> El nodo raíz es la raíz del árbol.&nbsp;&nbsp;No debe confundirse con el elemento raíz del documento, ya que éste último está por debajo de él. <br>Se identifica por <strong>“/”</strong>.</li>
+<li><strong>Nodos elemento</strong>, son cada uno de los elementos del documento XML. Todos ellos tienen un elemento padre, el padre del elemento raíz, es el nodo raíz del documento.Pueden tener identificadores únicos, para ello es necesario que un atributo esté definido de ese modo en un DTD o un fichero XSD asociado, esto nos permite referenciar dicho elemento de forma mucho más directa.</li>
+<li><strong>Nodos texto,</strong> son aquellos caracteres del documento que no están marcados con ninguna etiqueta. Este tipo de nodos no tienen hijos.</li>
+<li><strong>Nodos atributo,</strong> no se consideran hijos del elemento al que están asociados sino etiquetas añadidas al nodo elemento. Aquellos atributos que tengan un valor asignado en el esquema asociado, se tratarán como si ese valor se le hubiese dado al escribir el documento XML. Para las definiciones de los espacios de nombre y para aquellos atributos que se han definido con la propiedad <strong>#IMPLIED</strong> en su <strong>DTD</strong> no se crean nodos.</li>
+<li><strong>Nodos de comentario y de instrucciones de proceso</strong>, son los nodos que se generan para los elementos con comentarios e instrucciones de proceso.</li>
+<li><strong>Nodo actual,</strong> es aquél al que nos referimos cuando se evalúa una expresión en Xpath.</li>
+<li><strong>Nodo contexto,</strong> cada expresión está formada por subexpresiones que se van evaluando antes de resolver la siguiente. El conjunto de nodos obtenido tras evaluar una expresión y que se utiliza para evaluar la siguiente es el nuevo contexto.</li>
+<li><strong>Tamaño del contexto,</strong> es el número de nodos que se están evaluando en un momento dado en una expresión XPath.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="73_consultas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="741_rutas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
