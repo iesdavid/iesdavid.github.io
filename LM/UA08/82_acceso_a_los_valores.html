@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.2. Acceso a los valores | UA08 - Bases de datos en XML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA08 - Bases de datos en XML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA08. JSON</a></li>
+   <li><a href="81_sintaxis.html" class="no-ch">8.1. Sintaxis</a></li>
+   <li id="active"><a href="82_acceso_a_los_valores.html" class="active no-ch">8.2. Acceso a los valores</a></li>
+   <li><a href="83_conversin.html" class="no-ch">8.3. Conversión</a></li>
+   <li><a href="84_ajax.html" class="no-ch">8.4. AJAX</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="81_sintaxis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="83_conversin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.2. Acceso a los valores</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id30">
+<div class="iDevice emphasis0" >
+<div id="ta30_122_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Puedes crear objetos JSON en tu código directamente utilizando la sintaxis de objetos en el lenguaje de programación que estés utilizando. En la mayoría de los lenguajes de programación modernos, los objetos se pueden representar utilizando estructuras de datos que son similares a los objetos en JavaScript.</p>
+<div class="highlighted-code code-style-2 language-js">
+<div>
+<pre><code>// Crear un objeto JSON manualmente en JavaScript
+let persona = {
+  "nombre": "Juan",
+  "edad": 30,
+  "ciudad": "Madrid"
+};
+</code></pre>
+</div>
+</div>
+<p>Los objetos JSON pueden contener otros objetos o arreglos como valores de sus propiedades, permitiendo la creación de estructuras de datos complejas. Esto se conoce como anidamiento de objetos y arreglos.</p>
+<div class="highlighted-code code-style-2 language-js">
+<div>
+<pre><code>let persona = {
+  "nombre": "Juan",
+  "edad": 30,
+  "direccion": {
+    "calle": "Calle Mayor",
+    "numero": 123,
+    "codigo_postal": "28001"
+  },
+  "amigos": [
+    {"nombre": "María", "edad": 28},
+    {"nombre": "Pedro", "edad": 32}
+  ]
+}
+</code></pre>
+</div>
+</div>
+<p>Para acceder a los valores de un objeto JSON, se utiliza la notación de punto . o la notación de corchetes [], dependiendo del lenguaje de programación que estés utilizando. Para acceder a valores en objetos anidados, simplemente encadena las propiedades utilizando la notación de punto o corchetes.</p>
+<div class="highlighted-code code-style-2 language-js">
+<div>
+<pre><code>// Acceder a los valores del objeto JSON
+console.log(persona.nombre); // Salida: Juan
+console.log(persona.edad); // Salida: 30
+console.log(persona.direccion.calle); // Salida: Calle Mayor
+console.log(persona.amigos[0].nombre); // Salida: María
+</code></pre>
+</div>
+</div>
+<p>La creación y manipulación de objetos JSON es fundamental para trabajar con datos estructurados en aplicaciones web y servicios web, ya que JSON es el formato de intercambio de datos más comúnmente utilizado en estos entornos.</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="81_sintaxis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="83_conversin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
