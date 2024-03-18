@@ -20,7 +20,7 @@
 <script type="text/javascript" src="udl-content.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
-<body class="exe-web-site" id="exe-node-17"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-20"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">UA08 - Bases de datos en XML</div></header>
@@ -30,21 +30,38 @@
    <li><a href="81_sintaxis.html" class="no-ch">8.1. Sintaxis</a></li>
    <li><a href="82_acceso_a_los_valores.html" class="no-ch">8.2. Acceso a los valores</a></li>
    <li><a href="83_conversin.html" class="no-ch">8.3. Conversión</a></li>
-   <li id="active"><a href="84_ajax.html" class="active no-ch">8.4. AJAX</a></li>
+   <li id="active"><a href="84_ajax.html" class="active daddy">8.4. AJAX</a>
+   <ul>
+      <li><a href="841_ejemplo.html" class="no-ch">8.4.1. Ejemplo</a></li>
+      <li><a href="842_ejercicios.html" class="no-ch">8.4.2. Ejercicios</a></li>
+      <li><a href="843_scroll_infinito.html" class="no-ch">8.4.3. Scroll Infinito</a></li>
+   </ul>
+   </li>
 </ul>
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="83_conversin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="83_conversin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="841_ejemplo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
 <section id="main">
 <header id="nodeDecoration"><h1 id="nodeTitle">8.4. AJAX</h1></header>
-<article class="iDevice_wrapper UDLcontentIdevice" id="id34">
-<div class="iDevice emphasis0" >
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id34">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">AJAX</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
 <div id="ta34_123_2" class="block iDevice_content">
 <div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>JSON</strong> se utiliza ampliamente en el intercambio de datos entre aplicaciones <strong>cliente y servidor</strong> en aplicaciones web, especialmente en el contexto de tecnologías como <strong>AJAX</strong> y <strong>RESTful APIs</strong>.<br>También se usa en el almacenamiento y transferencia de configuraciones de aplicaciones, datos de configuración, datos de formularios y más.</p>
+<p><strong>Ajax</strong> (Asynchronous JavaScript and XML) es una técnica de desarrollo web que permite realizar <strong>solicitudes asíncronas</strong> al servidor desde el navegador web,<strong> sin necesidad de recargar toda la página</strong>. Esto permite crear aplicaciones web más interactivas, rápidas y dinámicas, ya que los usuarios pueden realizar acciones sin interrumpir la experiencia de navegación.</p>
+<p>La característica principal de Ajax es su capacidad para enviar y recibir datos en <strong>segundo plano</strong>, utilizando el objeto <strong>XMLHttpRequest</strong> en JavaScript. Esto permite que una página web solicite datos al servidor y los reciba sin tener que cargar la página nuevamente. Los datos pueden ser en formato <strong>XML</strong>, aunque en la práctica, se utilizan más comúnmente formatos como <strong>JSON</strong> o <strong>HTML</strong>.</p>
+<p>Algunos de los casos de uso más comunes de Ajax incluyen:</p>
+<ol>
+<li><strong>Carga dinámica de contenido</strong>: Puedes cargar partes específicas de una página web sin tener que recargar toda la página. Por ejemplo, cuando estás en una red social y desplazas hacia abajo para ver más publicaciones, es probable que el contenido se cargue mediante Ajax.</li>
+<li><strong>Formularios dinámicos</strong>: Puedes enviar datos de un formulario al servidor y recibir una respuesta sin tener que recargar la página. Esto se utiliza comúnmente en formularios de contacto o en sistemas de comentarios en blogs.</li>
+<li><strong>Actualización de datos en tiempo real</strong>: Puedes mostrar actualizaciones en una página web sin tener que recargarla. Por ejemplo, en una aplicación de chat, los nuevos mensajes pueden aparecer automáticamente en la conversación sin necesidad de recargar la página.</li>
+</ol>
 <p>Ejemplo de uso de JSON en una solicitud AJAX en JavaScript:</p>
 <div class="highlighted-code code-style-2 language-js">
 <div>
@@ -53,100 +70,7 @@
   .then(data =&gt; console.log(data))
   .catch(error =&gt; console.error('Error:', error));</code></pre>
 </div>
-</div>
-</div></div></section></div>
-</div>
-</div>
-</article>
-<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id35">
-<div class="iDevice emphasis1" >
-<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejemplo funcional</h1></header>
-<div class="iDevice_inner">
-<div class="iDevice_content_wrapper">
-<div id="ta35_124_2" class="block iDevice_content">
-<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>La Web&nbsp;<a href="https://jsonplaceholder.typicode.com/">JSONPlaceholder - Free Fake REST API (typicode.com)</a>&nbsp; es una API (<strong>Application Programming Interface</strong>) para realizar pruebas.</p>
-<p>El siguiente código HTML mostrará una página con un título y un botón. Al pulsar el botón, se mostrará una información obtenida de la web dentro de un div.</p>
-<div class="highlighted-code code-style-2 language-markup">
-<div>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="es"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Ejemplo de AJAX&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Consulta de Usuarios&lt;/h1&gt;
-    &lt;button onclick="obtenerUsuarios()"&gt;Obtener Usuarios&lt;/button&gt;
-    &lt;div id="resultado"&gt;&lt;/div&gt;
-
-    &lt;script src="script.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-</div>
-</div>
-<p>Código JavaScript necesario para la conexión a la API:</p>
-<div class="highlighted-code code-style-2 language-js">
-<div>
-<pre><code>function obtenerUsuarios() {
-    var xhr = new XMLHttpRequest();
-
-    // Configurar la solicitud
-    xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
-
-    // Manejar la respuesta
-    xhr.onload = function() {
-        if (xhr.status == 200) {
-            // Convertir la respuesta JSON a un objeto JavaScript
-            var usuarios = JSON.parse(xhr.responseText);
-
-            // Manejar los datos obtenidos
-            mostrarUsuarios(usuarios);
-        } else {
-            console.error("Error al realizar la solicitud. Código de estado: " + xhr.status);
-        }
-    };
-
-    // Manejar errores de red
-    xhr.onerror = function() {
-        console.error("Error de red al realizar la solicitud");
-    };
-
-    // Enviar la solicitud
-    xhr.send();
-}
-
-function mostrarUsuarios(usuarios) {
-    var resultado = document.getElementById("resultado");
-    resultado.innerHTML = "&lt;h2&gt;Usuarios&lt;/h2&gt;";
-
-    // Crear una lista de usuarios
-    var listaUsuarios = "&lt;ul&gt;";
-    usuarios.forEach(function(usuario) {
-        listaUsuarios += "&lt;li&gt;&lt;strong&gt;ID:&lt;/strong&gt; " + usuario.id + ", &lt;strong&gt;Nombre:&lt;/strong&gt; " + usuario.name + ", &lt;strong&gt;Email:&lt;/strong&gt; " + usuario.email + "&lt;/li&gt;";
-    });
-    listaUsuarios += "&lt;/ul&gt;";
-
-    resultado.innerHTML += listaUsuarios;
-}
-</code></pre>
-</div>
-</div>
-<p>Este último código se guardará en <strong>script.js</strong> para que el botón tenga funcionalidad. Observa que no ha sido necesario un formulario ni una recarga web para adquirir la información.</p></div></div></section></div>
-</div>
-</div>
-</div>
-</div>
-</article>
-<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id36">
-<div class="iDevice emphasis1" >
-<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">APIs gratuitas para practicar</h1></header>
-<div class="iDevice_inner">
-<div class="iDevice_content_wrapper">
-<div id="ta36_125_2" class="block iDevice_content">
-<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En <a href="https://ed.team/blog/las-mejores-apis-publicas-para-practicar" target="_blank" rel="noopener">esta web</a> se muestran 6 APIs públicas para practicar.</p>
-<p>Echa un vistazo y crea una web que muestre sus datos.</p></div></div></section></div>
+</div></div></div></section></div>
 </div>
 </div>
 </div>
@@ -159,7 +83,7 @@ function mostrarUsuarios(usuarios) {
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="83_conversin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="83_conversin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="841_ejemplo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 </div>

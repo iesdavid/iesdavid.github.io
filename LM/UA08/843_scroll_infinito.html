@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.4.3. Scroll Infinito | UA08 - Bases de datos en XML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-17"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA08 - Bases de datos en XML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA08. JSON</a></li>
+   <li><a href="81_sintaxis.html" class="no-ch">8.1. Sintaxis</a></li>
+   <li><a href="82_acceso_a_los_valores.html" class="no-ch">8.2. Acceso a los valores</a></li>
+   <li><a href="83_conversin.html" class="no-ch">8.3. Conversión</a></li>
+   <li class="current-page-parent"><a href="84_ajax.html" class="current-page-parent daddy">8.4. AJAX</a>
+   <ul>
+      <li><a href="841_ejemplo.html" class="no-ch">8.4.1. Ejemplo</a></li>
+      <li><a href="842_ejercicios.html" class="no-ch">8.4.2. Ejercicios</a></li>
+      <li id="active"><a href="843_scroll_infinito.html" class="active no-ch">8.4.3. Scroll Infinito</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="842_ejercicios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.4.3. Scroll Infinito</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id40">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejemplo: Scroll Infinito</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta40_120_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Un ejemplo del uso de AJAX en una página web puede ser el conocido como <strong>Scroll infinito</strong> (y <a href="https://www.newtral.es/analisis-scroll-redes-informacion/20210629/" target="_blank" rel="noopener">lo que ello conlleva</a>) que permite visualizar de forma interminable una serie de elementos: imágenes, vídeos, mensajes, ...</p>
+<p>Para ello necesitamos JavaScript y el control de la posición donde se encuentre el usuario para "actualizar" los contenidos con más información.</p>
+<p>Observa el siguiente ejemplo:</p>
+<div class="exe-fx exe-paginated">
+<h2>La carga inicial</h2>
+<p>Construyamos primero la estructura donde se localizará y mostrará la información. En este caso, al ser una información dinámica, no queremos que muestre información inicialmente. Deberá hacerlo sólo cuando cargue la página por primera vez (<a href="https://es.javascript.info/onload-ondomcontentloaded" target="_blank" rel="noopener">DOMContentLoaded</a>):</p>
+<table border="1" class="exe-table">
+<tbody>
+<tr>
+<th>HTML</th>
+<td>
+<div class="highlighted-code code-style-2 language-js">
+<div>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Scroll Infinito&lt;/title&gt;
+    &lt;style&gt;
+        #numbers-container {
+            padding:5px;        /* Espacio alrededor del contenido */
+            text-align: center; /* Contenido centrado */
+            margin:auto;    /* Centrado respecto a la ventana */
+            width:fit-content;  /* Ancho de contenido ajustado */
+            line-height: 25px; /* Espacio entre cada div */
+            height: 100vh; /* Tamaño de la ventana de visualización: 100vh = 100% pantalla vertical */
+            overflow-y: scroll; /* Activar el desplazamiento vertical */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- DIV que mostrará información del Scroll --&gt;
+&lt;div id="info" style="display: flex;position: sticky;top:0;right:0;"&gt;GATOS: &lt;span id="posicion"&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;!-- DIV que contendrá los números --&gt;
+&lt;div id="numbers-container"&gt;&lt;/div&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<th>JavaScript</th>
+<td>
+<div class="highlighted-code code-style-2 language-js">
+<div>
+<pre><code>document.addEventListener('DOMContentLoaded', function () {
+    // Inicialmente cargamos los primeros 10 números
+    cargaBloques(1, 10);
+});
+
+function cargaBloques(inicio, fin) {
+    // Creo el contenedor de la página
+    let contenedor = document.getElementById('contenedor');
+    for (let i = inicio; i &lt;= fin; i++) {
+        let div = document.createElement('div');    // Creo DIV
+        div.id = i;                   // indico id
+        div.textContent = i;          // Muestro el número de imagen
+        contenedor.appendChild(div);   // Adjunto el DIV al contenedor de la página
+        div.appendChild(document.createElement('br'));  // Adjunto un salto de línea
+        let img = document.createElement('img'); // Creo una imagen
+        img.src = "https://loremflickr.com/320/240?random=" + i;    // Extraigo una imagen aleatoria
+        div.appendChild(img);   // Adjunto la imagen al div
+    }
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>El desplazamiento</h2>
+<p>Para comprobar que se ha desplazado la pantalla, usaremos el <em>"listener"</em> del Scroll.</p>
+<div class="highlighted-code code-style-2 language-js">
+<div>
+<pre><code>    // Cuando el usuario se desplace, cargamos más números si es necesario
+    document.getElementById('contenedor').addEventListener('scroll', function () {
+        document.getElementById("posicion").innerText = (this.scrollTop + this.clientHeight) + "&gt;=" + this.scrollHeight;
+        if (this.scrollTop + this.clientHeight &gt;= this.scrollHeight) {
+            // El usuario ha llegado al final de la página, cargamos más números
+            let ultimo = parseInt(this.children[this.children.length - 1].id) + 1;
+            cargaBloques(ultimo, ultimo + 9); // Cargamos 10 números más
+        }
+    });</code></pre>
+</div>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="842_ejercicios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
