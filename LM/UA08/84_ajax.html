@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.4. AJAX | UA08 - Bases de datos en XML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-20"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA08 - Bases de datos en XML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA08. JSON</a></li>
+   <li><a href="81_sintaxis.html" class="no-ch">8.1. Sintaxis</a></li>
+   <li><a href="82_acceso_a_los_valores.html" class="no-ch">8.2. Acceso a los valores</a></li>
+   <li><a href="83_conversin.html" class="no-ch">8.3. Conversión</a></li>
+   <li id="active"><a href="84_ajax.html" class="active daddy">8.4. AJAX</a>
+   <ul>
+      <li><a href="841_ejemplo.html" class="no-ch">8.4.1. Ejemplo</a></li>
+      <li><a href="842_ejercicios.html" class="no-ch">8.4.2. Ejercicios</a></li>
+      <li><a href="843_scroll_infinito.html" class="no-ch">8.4.3. Scroll Infinito</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="83_conversin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="841_ejemplo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.4. AJAX</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice" id="id34">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">AJAX</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta34_123_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>JSON</strong> se utiliza ampliamente en el intercambio de datos entre aplicaciones <strong>cliente y servidor</strong> en aplicaciones web, especialmente en el contexto de tecnologías como <strong>AJAX</strong> y <strong>RESTful APIs</strong>.<br>También se usa en el almacenamiento y transferencia de configuraciones de aplicaciones, datos de configuración, datos de formularios y más.</p>
+<p><strong>Ajax</strong> (Asynchronous JavaScript and XML) es una técnica de desarrollo web que permite realizar <strong>solicitudes asíncronas</strong> al servidor desde el navegador web,<strong> sin necesidad de recargar toda la página</strong>. Esto permite crear aplicaciones web más interactivas, rápidas y dinámicas, ya que los usuarios pueden realizar acciones sin interrumpir la experiencia de navegación.</p>
+<p>La característica principal de Ajax es su capacidad para enviar y recibir datos en <strong>segundo plano</strong>, utilizando el objeto <strong>XMLHttpRequest</strong> en JavaScript. Esto permite que una página web solicite datos al servidor y los reciba sin tener que cargar la página nuevamente. Los datos pueden ser en formato <strong>XML</strong>, aunque en la práctica, se utilizan más comúnmente formatos como <strong>JSON</strong> o <strong>HTML</strong>.</p>
+<p>Algunos de los casos de uso más comunes de Ajax incluyen:</p>
+<ol>
+<li><strong>Carga dinámica de contenido</strong>: Puedes cargar partes específicas de una página web sin tener que recargar toda la página. Por ejemplo, cuando estás en una red social y desplazas hacia abajo para ver más publicaciones, es probable que el contenido se cargue mediante Ajax.</li>
+<li><strong>Formularios dinámicos</strong>: Puedes enviar datos de un formulario al servidor y recibir una respuesta sin tener que recargar la página. Esto se utiliza comúnmente en formularios de contacto o en sistemas de comentarios en blogs.</li>
+<li><strong>Actualización de datos en tiempo real</strong>: Puedes mostrar actualizaciones en una página web sin tener que recargarla. Por ejemplo, en una aplicación de chat, los nuevos mensajes pueden aparecer automáticamente en la conversación sin necesidad de recargar la página.</li>
+</ol>
+<p>Ejemplo de uso de JSON en una solicitud AJAX en JavaScript:</p>
+<div class="highlighted-code code-style-2 language-js">
+<div>
+<pre><code>fetch('https://api.example.com/data')
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error('Error:', error));</code></pre>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="83_conversin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="841_ejemplo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

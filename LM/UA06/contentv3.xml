@@ -193,7 +193,7 @@
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="230"></int>
+                  <int value="234"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -207,7 +207,7 @@
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_114_2.3"></unicode>
+                <unicode value="0_114_2.4"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="5">
                  <dictionary>
@@ -218,7 +218,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="Introduccion_seguridad_html_m5e559c5b.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmpsv2doe\\Introduccion_seguridad_html_m5e559c5b.png"></string>
+                  <string value="c:\\users\\david\\appdata\\local\\temp\\tmphbam5w\\Introduccion_seguridad_html_m5e559c5b.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="1ff7bfc66e68dd44c0c908fb1632f674"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -247,7 +247,7 @@
            <string role="key" value="intlinks_to_anchors"></string>
            <dictionary></dictionary>
            <string role="key" value="nextImageId"></string>
-           <int value="4"></int>
+           <int value="5"></int>
            <string role="key" value="parentNode"></string>
            <reference key="4"></reference>
           </dictionary>
@@ -2054,12 +2054,18 @@
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;p&gt;Esta declaración:&lt;/p&gt;
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&amp;lt;!ATTLIST persona nacionalidad CDATA&amp;gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Significa que hemos definido el atributo nacionalidad correspondiente al elemento persona. Que será de tipo CDATA, es decir texto normal. Así en un XML que se valide con el DTD en el que está la instrucción anterior, podremos:&lt;/p&gt;
-&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&lt;persona nacionalidad=&quot;”española”&quot;&gt;&lt;/persona&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Para indicar el tipo de valores de un atributo se usa la palabra &lt;strong&gt;CDATA&lt;/strong&gt; para indicar que el atributos contiene texto (CDATA es el acrónimo de Character DATA).&lt;/p&gt;
+						  &lt;div class=&quot;highlighted-code language-markup&quot;&gt;&lt;div&gt;
+						  &lt;pre&gt;&lt;code&gt;&amp;lt;persona nacionalidad=&quot;española&quot;&amp;gt;&amp;lt;/persona&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+						  &lt;p&gt;Para indicar el tipo de valores de un atributo se usa la palabra &lt;strong&gt;CDATA&lt;/strong&gt; para indicar que el atributos contiene texto (CDATA es el acrónimo de Character DATA).&lt;/p&gt;
 &lt;p&gt;A diferencia de &lt;strong&gt;#PCDATA&lt;/strong&gt;, su contenido no es procesado, lo que significa que puede contener cualquier valor, incluidos los caracteres no permitidos en los elementos &amp;lt;, &amp;gt;, &amp;amp;, ' y “.&lt;ejemplo color=&quot;&quot;&gt;&lt;/ejemplo&gt; &lt;ejemplo color=&quot;amarillo&quot;&gt;&lt;/ejemplo&gt; &lt;ejemplo color=&quot;azul marino #000080&quot;&gt;&lt;/ejemplo&gt; &lt;ejemplo&gt;&lt;/ejemplo&gt; &lt;!-- ERROR: falta el atributo &quot;color&quot;, obligatorio debido al #REQUIRED --&gt;&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-markup&quot;&gt;
 &lt;div&gt;
@@ -2202,7 +2208,7 @@
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="28"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -2328,6 +2334,8 @@
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block&quot;&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;exe-fx exe-accordion&quot;&gt;
 &lt;h2&gt;ID&lt;/h2&gt;
@@ -2513,7 +2521,7 @@
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="33"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -2612,14 +2620,16 @@
                  <string value=""></string>
                  <string role="key" value="anchor_names"></string>
                  <list></list>
+                 <string role="key" value="anchors_linked_from_fields"></string>
+                 <dictionary></dictionary>
                  <string role="key" value="content_w_resourcePaths"></string>
                  <unicode content="true" value="&lt;div class=&quot;exe-udlContent exe-udlContent-engagement&quot;&gt;&lt;section class=&quot;exe-udlContent-block js-hidden&quot;&gt;&lt;header class=&quot;exe-udlContent-header&quot;&gt;&lt;h2&gt;Ejemplo XML y DTD asociada&lt;/h2&gt;&lt;/header&gt;&lt;div class=&quot;exe-udlContent-content&quot;&gt;&lt;div class=&quot;exe-udlContent-content-main&quot;&gt;&lt;div class=&quot;exe-layout-2-cols exe-layout-2-50-50 exe-clear&quot;&gt;
 &lt;div class=&quot;exe-col exe-col-1&quot;&gt;
 &lt;p&gt;&lt;strong&gt;agenda.xml&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;highlighted-code language-markup&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
-&amp;lt;!DOCTYPE agenda SYSTEM &quot;agenda.dtd&quot;&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!--?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?--&amp;gt;
+
 &amp;lt;agenda&amp;gt;
    &amp;lt;contacto codigo=&quot;c001&quot;&amp;gt;
       &amp;lt;nombre&amp;gt;Juan&amp;lt;/nombre&amp;gt;
@@ -2630,7 +2640,7 @@
       &amp;lt;movil&amp;gt;609398271&amp;lt;/movil&amp;gt;
       &amp;lt;email tipo=&quot;trabajo&quot;&amp;gt;juan@ticarte.com&amp;lt;/email&amp;gt;
       &amp;lt;sexo&amp;gt;
-         &amp;lt;hombre/&amp;gt;
+         &amp;lt;hombre&amp;gt;&amp;lt;/hombre&amp;gt;
       &amp;lt;/sexo&amp;gt;
       &amp;lt;comentarios&amp;gt;&amp;lt;/comentarios&amp;gt;
    &amp;lt;/contacto&amp;gt;
@@ -2642,7 +2652,7 @@
       &amp;lt;fijo&amp;gt;923430675&amp;lt;/fijo&amp;gt;
       &amp;lt;email tipo=&quot;personal&quot;&amp;gt;maria@ticarte.com&amp;lt;/email&amp;gt;
       &amp;lt;sexo&amp;gt;
-         &amp;lt;mujer/&amp;gt;
+         &amp;lt;mujer&amp;gt;&amp;lt;/mujer&amp;gt;
       &amp;lt;/sexo&amp;gt;
       &amp;lt;pareja codigo=&quot;c001&quot;&amp;gt;Juan&amp;lt;/pareja&amp;gt;
       &amp;lt;comentarios&amp;gt;Llamar solo por la mañana.&amp;lt;/comentarios&amp;gt;
@@ -2656,7 +2666,18 @@
 &lt;div class=&quot;highlighted-code language-markup&quot;&gt;
 &lt;div&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT agenda (contacto*)&amp;gt;
-&amp;lt;!ELEMENT contacto (nombre, apellidos, (movil|fijo)*, email?, sexo?, pareja?, comentarios? )&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT nombre (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT apellidos (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT fijo (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT movil (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ATTLIST movil empresa CDATA #IMPLIED&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT email (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ATTLIST email tipo (personal|trabajo) #REQUIRED&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT sexo (hombre|mujer)&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT hombre EMPTY&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT mujer EMPTY&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT pareja (#PCDATA)&amp;gt;&lt;br&gt;&amp;lt;!ATTLIST pareja codigo IDREF #IMPLIED&amp;gt;&lt;br&gt;&amp;lt;!ELEMENT comentarios ANY&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&amp;lt;!ELEMENT contacto (nombre, apellidos, (movil|fijo)*, email?, sexo?, pareja?, comentarios? )&amp;gt;
+&amp;lt;!ELEMENT nombre (#PCDATA)&amp;gt;&amp;lt;br&amp;gt;&amp;lt;!ELEMENT apellidos (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT fijo (#PCDATA)&amp;gt;&amp;lt;br&amp;gt;&amp;lt;!ELEMENT movil (#PCDATA)&amp;gt;
+&amp;lt;!ATTLIST movil empresa CDATA #IMPLIED&amp;gt;
+&amp;lt;!ELEMENT email (#PCDATA)&amp;gt;
+&amp;lt;!ATTLIST email tipo (personal|trabajo) #REQUIRED&amp;gt;
+&amp;lt;!ELEMENT sexo (hombre|mujer)&amp;gt;
+&amp;lt;!ELEMENT hombre EMPTY&amp;gt;
+&amp;lt;!ELEMENT mujer EMPTY&amp;gt;
+&amp;lt;!ELEMENT pareja (#PCDATA)&amp;gt;
+&amp;lt;!ATTLIST pareja codigo IDREF #IMPLIED&amp;gt;
+&amp;lt;!ELEMENT comentarios ANY&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
@@ -2684,7 +2705,7 @@
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <none></none>
+                 <reference key="33"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -3792,7 +3813,7 @@
   <string role="key" value="mxmlwidth"></string>
   <string value=""></string>
   <string role="key" value="release"></string>
-  <string value="2.7"></string>
+  <string value="2.8.1"></string>
   <string role="key" value="resources"></string>
   <dictionary>
    <string role="key" value="1ff7bfc66e68dd44c0c908fb1632f674"></string>
@@ -3809,7 +3830,7 @@
   <string role="key" value="scowwebsite"></string>
   <bool value="0"></bool>
   <string role="key" value="style"></string>
-  <unicode value="nervion"></unicode>
+  <unicode value="prueba"></unicode>
   <string role="key" value="sugaractivityname"></string>
   <string value=""></string>
   <string role="key" value="sugarservicename"></string>

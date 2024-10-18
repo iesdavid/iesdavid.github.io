@@ -11,7 +11,7 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="David Bermúdez" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
-<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
 <script type="text/javascript" src="exe_effects.js"></script>
@@ -21,7 +21,7 @@
 <link rel="stylesheet" type="text/css" href="udl-content.css" />
 <script type="text/javascript" src="udl-content.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-	</head>
+    </head>
 <body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
@@ -103,8 +103,12 @@
 <div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Esta declaración:</p>
 <p style="text-align: center;"><strong>&lt;!ATTLIST persona nacionalidad CDATA&gt;</strong></p>
 <p>Significa que hemos definido el atributo nacionalidad correspondiente al elemento persona. Que será de tipo CDATA, es decir texto normal. Así en un XML que se valide con el DTD en el que está la instrucción anterior, podremos:</p>
-<p style="text-align: center;"><strong><persona nacionalidad="”española”"></persona></strong></p>
-<p>Para indicar el tipo de valores de un atributo se usa la palabra <strong>CDATA</strong> para indicar que el atributos contiene texto (CDATA es el acrónimo de Character DATA).</p>
+						  <div class="highlighted-code language-markup"><div>
+						  <pre><code>&lt;persona nacionalidad="española"&gt;&lt;/persona&gt;
+</code></pre>
+</div>
+</div>
+						  <p>Para indicar el tipo de valores de un atributo se usa la palabra <strong>CDATA</strong> para indicar que el atributos contiene texto (CDATA es el acrónimo de Character DATA).</p>
 <p>A diferencia de <strong>#PCDATA</strong>, su contenido no es procesado, lo que significa que puede contener cualquier valor, incluidos los caracteres no permitidos en los elementos &lt;, &gt;, &amp;, ' y “.<ejemplo color=""></ejemplo> <ejemplo color="amarillo"></ejemplo> <ejemplo color="azul marino #000080"></ejemplo> <ejemplo></ejemplo> <!-- ERROR: falta el atributo "color", obligatorio debido al #REQUIRED --></p>
 <div class="highlighted-code language-markup">
 <div>
@@ -241,4 +245,4 @@
 </nav>
 </div>
 </div>
-<script type="text/javascript" src="_cedec_js.js"></script></body></html>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

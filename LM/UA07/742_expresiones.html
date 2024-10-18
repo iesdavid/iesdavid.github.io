@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.4.2. Expresiones | UA08 - Bases de datos en XML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="David Bermúdez" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UA08 - Bases de datos en XML</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UA07. Bases de datos en XML</a></li>
+   <li><a href="71_las_bases_de_datos.html" class="daddy">7.1. Las bases de datos</a>
+   <ul class="other-section">
+      <li><a href="711_el_sistema_de_gestin_de_bases_de_datos.html" class="no-ch">7.1.1. El Sistema de Gestión de Bases de Datos</a></li>
+      <li><a href="712_inconvenientes_del_sgbd.html" class="no-ch">7.1.2. Inconvenientes del SGBD</a></li>
+      <li><a href="713_transacciones.html" class="no-ch">7.1.3. Transacciones</a></li>
+   </ul>
+   </li>
+   <li><a href="72_utilizacin_de_xml.html" class="daddy">7.2. Utilización de XML</a>
+   <ul class="other-section">
+      <li><a href="721_transformacin.html" class="no-ch">7.2.1. Transformación</a></li>
+      <li><a href="722_ejercicio.html" class="no-ch">7.2.2. Ejercicio</a></li>
+   </ul>
+   </li>
+   <li><a href="73_consultas.html" class="no-ch">7.3. Consultas</a></li>
+   <li class="current-page-parent"><a href="74_xpath.html" class="current-page-parent daddy">7.4. XPath</a>
+   <ul>
+      <li><a href="741_rutas.html" class="no-ch">7.4.1. Rutas</a></li>
+      <li id="active"><a href="742_expresiones.html" class="active no-ch">7.4.2. Expresiones</a></li>
+      <li><a href="743_predicado.html" class="no-ch">7.4.3. Predicado</a></li>
+      <li><a href="744_funciones.html" class="no-ch">7.4.4. Funciones</a></li>
+      <li><a href="745_ejercicio.html" class="no-ch">7.4.5. Ejercicio</a></li>
+   </ul>
+   </li>
+   <li><a href="75_xquery.html" class="no-ch">7.5. XQuery</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="741_rutas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="743_predicado.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.4.2. Expresiones</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id14">
+<div class="iDevice emphasis0" >
+<div id="ta14_134_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>¿Cuáles son las expresiones que podemos utilizar en una expresión XPath?</p>
+<ul>
+<li><strong>Paréntesis</strong>, “()”; llaves , “{}” y corchetes, “[ ]”.</li>
+<li><strong>Atributo</strong>, “@”.</li>
+<li>El <strong>nombre</strong> de un elemento</li>
+<li><strong>Tipo de nodo</strong>. Puede haber varios tipos pero el que representa el contenido textual de un elemento o atributo, text() es el más utilizado.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id16">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejemplo con corchetes &quot;[ ]&quot;</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_136_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><span><span>Si se sabe que una expresión devolverá varios resultados pero sólo se quiere uno específico se puede usar un número rodeado por corchetes cuadrados "[]" para indicar qué es lo que se quiere conseguir. </span><span>Para devolver sólo el primer alumno puede hacer lo siguiente:</span></span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>/clase/alumnos/alumno[1]</code></pre>
+</div>
+</div>
+<div class="exe-fx exe-accordion">
+<h2 class="js-sr-av">Solución</h2>
+<p>Devolverá:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt; alumno&gt;
+&lt; nombre&gt;Felipe&lt; /nombre&gt;
+&lt; apellidos&gt;Aranburu&lt; /apellidos&gt;
+&lt; /alumno&gt;</code></pre>
+</div>
+</div>
+<p><span>Se pueden usar los corchetes en cualquier lugar de la expresión para hacer determinar cuál de las ramas se elegirá. </span><span>Por ejemplo, se puede obtener sólo el segundo alumno con una expresión como esta:</span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>/clase/alumnos/alumno[2]/nombre</code></pre>
+</div>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id17">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejemplo atributos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta17_137_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Los valores de los atributos se pueden conseguir especificando el símbolo <code><strong>@ </strong></code>delante del nombre una vez se haya alcanzado el elemento que lo contiene:</p>
+<div class="highlighted-code language-markup">
+<pre><code>/clase/profesor/@especialidad</code></pre>
+</div>
+<div class="exe-fx exe-accordion">
+<h2 class="js-sr-av">Solución</h2>
+<p>Hay que tener en cuenta que a diferencia de lo que ocurre con los elementos, al obtener un atributo no tendremos un elemento sino sólo su valor:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>especialidad="507"</code></pre>
+</div>
+</div>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_diary" id="id18">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejemplo text()</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_138_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><span>Para cuando sólo queramos el contenido de un elemento, podemos utilizar la función </span><strong><span>text()</span></strong><span><span> para obtener el contenido:</span><span><br></span></span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>/clase/profesor/nombre/text()</code></pre>
+</div>
+</div>
+<div class="exe-fx exe-accordion">
+<h2>Solución</h2>
+<p><span>... devolverá el contenido del nodo sin las etiquetas.</span></p>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id19">
+<div class="iDevice emphasis0" >
+<div id="ta19_139_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Otra expresiones que también nos podemos encontrar:</p>
+<ul>
+<li>Elemento, “*”. Por ejemplo, si queremos obtener todos los elementos dentro del nodo profesor:</li>
+</ul>
+<div class="highlighted-code language-markup">
+<pre><code>/clase/profesor/*</code></pre>
+</div>
+<ul>
+<li>Las dobles barras "/ /" indican que cuadrará con cualquier cosa desde el nodo en el que estamos. Puede ser un solo elemento o un árbol de nodos. Por ejemplo, si queremos obtener todos los elementos nombre del archivo independientemente del lugar donde estén dentro del documento XML:</li>
+</ul>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>//nombre</code></pre>
+</div>
+</div>
+<pre></pre>
+<ul>
+<li>Se pueden poner las dobles barras en cualquier lugar dentro de la expresión para indicar que puede haber cualquier cosa en medio a partir del lugar donde aparezcan. <span>Aunque facilita la creación de expresiones no es muy recomendable abusar del comodín // por motivos de eficiencia.Las expresiones con este comodín requerirán muchos más cálculos para ser evaluadas, y por lo tanto las expresiones tardarán más en dar resultados. </span></li>
+</ul>
+<div class="highlighted-code language-markup">
+<pre><code>/clase/alumnos//nombre</code></pre>
+</div>
+<ul>
+<li>Operadores: and, or, mod, div, *, /, //, |, +, -, =, !=, &lt;, &gt;, &lt;=, &gt;=.</li>
+<li>Separador “::”.</li>
+<li>Elemento actual "." y elemento padre ".."</li>
+<li>Coma, “,”.</li>
+<li><b>Ejes</b>, son una serie de elementos que permiten hacer referencia a partes del árbol:
+<ul>
+<li><b>child ::</b>, selecciona el hijo del elemento actual. Su forma habitual es la barra, “/”, aunque también puede ponerse: /child::</li>
+<li><b>attribute::</b>, permite seleccionar los atributos del elemento actual.</li>
+<li><b>descendant::</b>, permite seleccionar todos los nodos que descienden del nodo actual. Se corresponde con la doble barra, //, aunque se puede usar: descendant::</li>
+<li><b>self::</b>, se refiere al nodo contexto y se corresponde con el punto ”.”.</li>
+<li><b>parent::</b>, selecciona los nodos padre, para referirnos a él usamos los dos puntos, “..”.</li>
+<li>
+<p>Por ejemplo la siguiente expresión:</p>
+<div class="highlighted-code language-markup">
+<pre><code>/clase/profesor/nombre</code></pre>
+</div>
+<p><span>la podríamos escribir utilizando ejes como:</span></p>
+<div class="highlighted-code language-markup">
+<pre><code>/child::clase/child::profesor/child::nombre</code></pre>
+</div>
+</li>
+</ul>
+</li>
+<li>Nombres de función. (los veremos en el punto 1.5)</li>
+<li>Literales, se ponen entre comillas dobles o simples. Pueden anidarse alternando el tipo de comillas.</li>
+<li>Números.</li>
+<li>Referencias a variables, para lo que se utiliza la sintaxis: <b>$nombreVariable</b></li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="741_rutas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="743_predicado.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
