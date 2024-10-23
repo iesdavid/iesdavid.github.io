@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1>Hola Mundo <?= $_GET['password']?></h1>
+<h1>Hola Mundo <?php echo $_GET['password']?></h1>
 <form action="" method="GET">
 	<input type="password" name="password">
 	<button>Enviar</button>
