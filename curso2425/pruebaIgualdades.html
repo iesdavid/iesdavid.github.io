@@ -1,0 +1,21 @@
+<!-- Este documento demuestra el efecto del doble igual == y el triple igual === -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prueba igualdades</title>
+</head>
+<body>
+<h1 id="respuesta1"></h1>
+<h1 id="respuesta2"></h1>
+<input type="text" id="texto" value="5">
+  <script>
+    let a = 5;
+    let b = "5";
+    document.getElementById("respuesta1").innerHTML = "a == b: " + (a == b);
+    document.getElementById("respuesta2").innerHTML = "a === b: " + (a === b);
+    console.log(a == b); // Devuelve true
+    console.log(a === b); // Devuelve false
+  </script>
+</body>
+</html>

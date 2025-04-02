@@ -3,13 +3,77 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Mi primera pághina Web</title>
+	<title>Mi primera página Web</title>
+	<style>
+		.color-rojo{
+			color: red;
+			background-color: cyan;
+		}
+	</style>
 </head>
 <body>
-<h1>Hola Mundo</h1>
-<form action="" method="GET">
-	<input type="password" name="password">
-	<button>Enviar</button>
-</form>
-</body>
-</html>
+	<h1 class="color-rojo">Hola Mundo</h1>
+	<p title="Title se muestra como un tooltip">Texto con tooltip.</p>
+	<br>
+	<form action="https://lm.ciclo.iesnervion.es" method="post">
+		<fieldset>
+			<legend>Datos personales</legend>
+			<label for="nombre">Nombre de la receta: </label>
+			<input name="nombre" id="nombre" type="text" value="" placeholder="Pon nombre a tu receta" required><br>
+			<label for="correo">Email del autor: </label>
+			<input id="email" name="correo" type="email" placeholder="correo@delautor.es"><br><br>
+			<input name="momento[]" type="checkbox" value="Desayuno">
+			<label for="momento">Desayuno</label>
+			<input name="momento[]" type="checkbox" value="Almuerzo">
+			<label for="momento">Almuerzo</label>
+			<input name="momento[]" type="checkbox" value="Merienda">
+			<label for="momento">Merienda</label>
+			<input name="momento[]" type="checkbox" value="Cena">
+			<label for="momento">Cena</label>
+			<br><br>
+			<select name="ingredientes[]" id="ingrediente" multiple>
+				<optgroup label="Carne">
+					<!--Etiqueta option-->
+					<option>Vaca</option>
+					<option>Ternera</option>
+					<option>Pollo</option>
+					<option>Cerdo</option>
+				</optgroup>
+				<optgroup label="Pescado">
+					<!--Etiqueta option-->
+					<option>Merluza</option>
+					<option>Salmón</option>
+					<option>Caballa</option>
+				</optgroup>
+				<optgroup label="Verdura">
+					<!--Etiqueta option-->
+					<option>Pimiento</option>
+					<option>Cebolla</option>
+					<option>Ajo</option>
+				</optgroup>
+				<optgroup label="Fruta">
+					<!--Etiqueta option-->
+					<option>Manzana</option>
+					<option>Naranja</option>
+					<option>Pera</option>
+				</optgroup>
+			</select><br><br>
+			<input type="radio" name="horas" value="0">
+			<label for="horas">0</label>
+			<input type="radio" name="horas" value="1">
+			<label for="horas">1</label>
+			<input type="radio" name="horas" value="2">
+			<label for="horas">2</label>
+			<br><br>
+			<input type="radio" name="minutos" value="0">
+			<label for="horas">0</label>
+			<input type="radio" name="minutos" value="15">
+			<label for="horas">15</label>
+			<input type="radio" name="minutos" value="30">
+			<label for="horas">30</label>
+			<input type="radio" name="minutos" value="45">
+			<label for="horas">45</label>
+			<input type="submit" name="enviar" value="Enviar">
+		</form>
+	</body>
+	</html>

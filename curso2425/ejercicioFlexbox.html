@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FlexBox</title>
+	<style>
+		.contenedor{
+			display: flex;
+			background-color: lightcyan;
+			height: 200px;
+			margin: auto;
+			border: 1px solid black;
+		}
+		div {
+			padding: 10px;
+		}
+		#c1{
+			align-items: flex-start;
+		}
+		#c2{
+			align-items: flex-end;
+		}
+		#c3{
+			align-items: center;
+		}
+		#c4{
+			align-items: baseline;
+		}
+		#c5{
+			align-items: stretch;
+		}
+		#c6{
+			visibility: hidden;
+		}
+		#c1 div,#c2 div,#c3 div,#c4 div,#c5 div{
+			background-color: lightpink;
+		}
+	</style>
+</head>
+<body>
+	<div id="c1" class="contenedor">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div id="c2" class="contenedor">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div id="c3" class="contenedor">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div id="c4" class="contenedor">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div id="c5" class="contenedor">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div id="c6" class="contenedor">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+</body>
+</html>

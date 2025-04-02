@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejemplo de Composiciones con Etiquetas DIV</title>
+  <meta charset="utf-8">
+</head>
+<body>
+<h2>Mira la consola</h2>
+<p>
+  <button onclick="ej1()">Ejercicio 1</button>
+</p>
+<p>
+  <button onclick="ej2()">Ejercicio 2</button>
+</p>
+<p>
+  <button onclick="ej3()">Ejercicio 3</button>
+</p>
+<p>
+  <button onclick="ej4()">Ejercicio 4</button>
+</p>
+<script>
+  function ej1() {
+    let nombre = "David";
+    let edad = 25;
+    let a = 64;
+    let b = 4;
+    console.log("Mi nombre es " + nombre + " y tengo " + edad + " años");
+    console.log("Suma: " + (a + b));
+    console.log("Resta: " + (a - b));
+    console.log("División: " + (a / b));
+    console.log("Multiplicación: " + (a * b));
+  }
+
+  function ej2() {
+    // Escribe un programa que indique si es par o impar un número asignado a una variable.
+    let num = 17;
+    let resp = "";
+    if (num % 2 != 0) {
+      resp = "no";
+    }
+    console.log("El número " + num + resp + " es par")
+    // Escribe un programa que tome la edad de una persona y diga si puede votar (mayores de 18 años) o no.
+    let edad = num;
+    let sino = (edad > 18) ? "" : "no";
+    console.log("Esta persona " + sino + " puede votar")
+    // Escribe un bucle que imprima los números del 1 al 10.
+    let flecha;
+    for (i = 0; i < 100; i++) {
+      flecha = "";
+      if (num === i + 1) flecha = "<--";
+      console.log((i + 1) + flecha);
+    }
+    // Crea un programa que sume los números del 1 al 100 y muestre el resultado.
+    let suma = 0;
+    for (i = 1; i < 101; i++) {
+      suma += i;
+    }
+    console.log("Total = " + suma)
+  }
+
+  function ej3() {
+    //Crea una función llamada saludar que reciba un nombre como parámetro y devuelva el mensaje: "Hola, [nombre]".
+    console.log(saludar("David"));
+//Escribe una función que reciba dos números como parámetros y devuelva su promedio.
+    console.log(promedio(12, 18));
+    /*Crea una función que reciba un número como parámetro y devuelva:
+    "Positivo" si es mayor que 0.
+    "Negativo" si es menor que 0.
+    "Cero" si es 0.*/
+    console.log(esPositivo(-15))
+//Escribe una función que reciba un año como parámetro y devuelva si es un año bisiesto.
+    console.log(bisiesto(2024) ? "El año es bisiesto" : "El año no es bisiesto");
+
+  }
+
+  function saludar(nombre) {
+    return "Hola " + nombre;
+  }
+
+  function promedio(n1, n2) {
+    return (n1 + n2) / 2;
+  }
+
+  function esPositivo(num) {
+    return num > 0 ? "Positivo" : (num < 0) ? "Negativo" : "Cero";
+  }
+
+  function bisiesto(year) {
+    return year % 4 === 0;
+  }
+
+  function ej4() {
+    //Declara un array con los números del 1 al 5.
+    let numeros = [1, 2, 3, 4, 5];
+    // Añade un número al final.
+    numeros.push(6);
+    // Elimina el primer número.
+    numeros.shift()
+    // Imprime todos los números usando un bucle.
+    for (i = 0; i < numeros.length; i++) {
+      console.log(numeros[i]);
+    }
+    // Escribe una función que reciba un array de números y devuelva el mayor.
+    console.log(mayor(numeros));
+    // Crea un objeto llamado persona con las propiedades: nombre, edad y ciudad.
+    let persona={
+      "nombre": "David",
+      "edad": 25,
+      "ciudad": "Sevilla"
+    }
+    // Muestra las propiedades en consola.
+    console.log(persona);
+    // Añade una propiedad llamada ocupacion.
+    persona["ocupacion"]="Programador";
+    // Elimina la propiedad ciudad.
+    delete persona.ciudad
+    // Escribe una función que reciba un objeto como parámetro y devuelva un string con sus claves y valores.
+    console.log(objeto(persona));
+  }
+
+  function mayor(numeros) {
+    let mayor = 0;
+    for (i = 0; i < numeros.length; i++) {
+      if (numeros[i] > mayor) {
+        mayor = numeros[i];
+      }
+    }
+    return mayor;
+  }
+  function objeto(persona){
+    return "Te llamas " + persona["nombre"] + " y tienes " + persona["edad"] + " anos y eres " + persona["ocupacion"] + " en " + persona["ciudad"] + ".";
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.h1{
+			font-weight: bold;
+			font-size: 2.0em;
+		}
+		.cursivaRight{
+			font-style: italic;
+			text-align: right;
+		}
+		.mayusculaTachado{
+			text-transform: uppercase;
+			text-decoration: line-through;
+		}
+		.letraSize{
+			font-family: "Courier New";
+			font-size: 1.2em;
+		}
+		.negritaVerde{
+			font-weight: bold;
+			text-shadow: 3px 3px 3px green;
+		}
+		.divGrande {
+			width: 400px;
+			height: 200px;
+			display: inline-block;
+			border-radius: 15px;
+		}
+		#div1{
+			background-color: lightgreen;
+		}
+		#div2{
+			background-color: lightcyan;
+		}
+		#div3{
+			background-color: lightpink;
+		}
+		.rojo{
+			background-color: red;
+		}
+		.azul{
+			background-color: blue;
+		}
+		.verde{
+			background-color: green;
+		}
+		a {
+			color: white;
+			font-weight: bold;
+			height: 50px;
+			width: 100px;
+		}
+		#div1 a{
+			display: inline-block;			
+		}
+		#div2 a{
+			display: block;
+		}
+		#contenedor{
+			display: flex;
+		}

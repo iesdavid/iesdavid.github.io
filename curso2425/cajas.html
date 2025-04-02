@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo de Composiciones con Etiquetas DIV</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        h2 {
+            color: green;
+        }
+        .colorAzul {
+            color: darkblue;
+        }
+        #contenido {
+            background-color: lightcyan;
+        }
+        p{
+            text-shadow: -4px 3px 2px darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Hola, DOM</h1>
+    <button id="boton">Cambiar texto</button>
+
+    <script>
+        document.getElementById("boton").addEventListener("click", () => {
+            const titulo = document.getElementById("titulo");
+            titulo.textContent = "Texto cambiado dinámicamente";
+        });
+    </script>
+</body>
+</html>

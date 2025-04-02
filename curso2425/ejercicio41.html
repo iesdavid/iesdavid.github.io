@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cajas 2</title>
+	<style>
+		.h1{
+			font-weight: bold;
+			font-size: 2.0em;
+		}
+		.cursivaRight{
+			font-style: italic;
+			text-align: right;
+		}
+		.mayusculaTachado{
+			text-transform: uppercase;
+			text-decoration: line-through;
+		}
+		.letraSize{
+			font-family: "Courier New";
+			font-size: 1.2em;
+		}
+		.negritaVerde{
+			font-weight: bold;
+			text-shadow: 3px 3px 3px green;
+		}
+		.divGrande {
+			width: 400px;
+			height: 200px;
+			border-radius: 15px;
+			margin: 2px;
+		}
+		#div1{
+			background-color: lightgreen;
+		}
+		#div2{
+			background-color: lightcyan;
+		}
+		#div3{
+			background-color: lightpink;
+		}		
+		.rojo{
+			background-color: red;
+		}
+		.azul{
+			background-color: blue;
+		}
+		.verde{
+			background-color: green;
+		}
+		a {
+			color: white;
+			font-weight: bold;
+			height: 50px;
+			width: 100px;
+		}
+		#div1 a{
+			display: inline-block;			
+		}
+		#div2 a{
+			display: block;
+		}
+		#contenedor{
+			display: flex;
+		}
+	</style>
+</head>
+<body>
+	<div class="h1">CSS: Ejercicio 1</div>
+	<div class="cursivaRight">Este es el párrafo número 1 en cursiva y alineado a la derecha.</div>
+	<div class="mayusculaTachado">este también es un párrafo en minúsculas pero convertido en mayúsculas y tachado.</div>
+	<div class="letraSize">Como no hay dos sin tres, este será el tercero con un tipo de letra diferente y un 20% más grande.</div>
+	<div class="negritaVerde">Y por último, un texto en negrita y con sombrita en verde.</div>
+	<hr>
+	<div id="contenedor">
+		<div id="div1" class="divGrande">
+			<p>Buscadores:</p>
+			<a class="rojo" href="#">DuckDuckGo</a>
+			<a class="verde" href="#">Ecosia</a>
+			<a class="azul" href="#">Google</a>
+		</div>
+		<div id="div2" class="divGrande">
+			<p>Redes Sociales:</p>
+			<a class="rojo" href="#">Facebook</a>
+			<a class="verde" href="#">X</a>
+			<a class="azul" href="#">Instagram</a>
+		</div>
+		<div id="div3" class="divGrande">
+			<p>Noticias:</p>
+			<a href="#">El Pais</a>
+			<a href="#">El Diario</a>
+			<a href="#">El Mundo</a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+h1 {
+	background: blue;
+	height:100px;
+	width:50%;	
+	min-width: 250px;
+	border: 2px solid black;
+	border-radius: 5px 10px 15px 20px;
+	border-top: 5px dotted green;
+	box-shadow: -5px 5px 0px 2px grey;
+	padding: 20px;
+	margin:20px;
+}
+h2 {
+	background: red;
+	color: rgba(0,0,0,0.4);
+	width:50%;
+	max-width: 200px;
+}
+p {
+	font-family: Verdana Helvetica sans-serif;
+	font-size: 1.15em;
+	font-weight: bold;
+	text-align: center;
+}
+ul {
+	font-style: italic;
+	text-shadow: 2px 2px 4px grey;
+}
+ol {
+	text-shadow: 2px 2px 5px darkblue;
+}
