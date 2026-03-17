@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ej. JSON</title>
+</head>
+<body>
+<div id="contenedor">Hola</div>
+  <input type="text" id="inputNombre" placeholder="Nombre">
+  <input type="text" id="inputApellidos" placeholder="Apellidos">
+  <input type="number" id="inputEdad" placeholder="Edad">
+  <input type="text" id="inputCiudad" placeholder="Ciudad">
+  <button type="button" id="btnEnvio">Enviar</button>
+<br>
+<table border="1">
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellidos</th>
+    <th>Edad</th>
+    <th>Ciudad</th>
+  </tr>
+  </thead>
+  <tbody id="tr2">
+  </tbody>
+</table>
+<script
+  src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    $("#btnEnvio").click(function () {
+      inputDatos();
+    });
+  });
+
+</script>
+<script src="ejJSON.js"></script>
+</body>
+</html>

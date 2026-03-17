@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicios DOM</title>
+</head>
+<body>
+<div id="titulo">Hola</div>
+
+<script>
+  const titulo = document.getElementById('titulo');
+  let cabeceras = "";
+  let i = 1;
+  // for(let i=1; i<=6;i++){
+  cabeceras = cabeceras + '<h' + i + '>Cabecera H' + i + '</h' + i + '>';
+  // }
+  titulo.innerHTML = cabeceras;
+
+
+  // Resto de botones
+  creaBoton("Azul", "blue", "white");
+  creaBoton("Verde", "green", "white");
+  creaBoton("Rojo", "red", "white");
+  creaBoton("Amarillo", "yellow", "black");
+
+
+  // Eventos
+  document.querySelector(".azul").addEventListener("click", function () {
+    titulo.style.color = "blue";
+  });
+
+  function creaBoton(textoBoton, colorBackground, colorText) {
+    // Creo boton
+    let boton = document.createElement('button');
+    boton.className = "cl_" + colorBackground;
+    boton.textContent = textoBoton
+    boton.style.backgroundColor = colorBackground;
+    boton.style.color = colorText;
+    boton.addEventListener('click', function () {
+      titulo.style.color = colorBackground;
+    });
+    document.body.appendChild(boton);
+  }
+</script>
+</body>
+</html>

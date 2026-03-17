@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Caja simple</title>
+  <style>
+    .caja {
+      background-color: salmon;
+      margin: 20px;
+      padding: 10px;
+      border: 1px double darkred;
+      max-width: 500px;
+      text-align: justify;
+    }
+
+    .container {
+      width: 80%;
+      height: 500px;
+      margin: auto;
+      padding: 20px;
+      background-color: lightgreen;
+      border: 5px double darkred;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .item {
+      background-color: lightyellow;
+      width: 100px;
+      height: 100px;
+      border: 1px solid blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 20px;
+    }
+
+    .card {
+      flex: 30%;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+    }
+
+    .container18 {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .item18 {
+      background-color: lightyellow;
+      width: 32%;
+      margin: 5px;
+      height: 100px;
+      border: 1px solid blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+<!--<div class="caja">-->
+<!--  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+<!--</div>-->
+<div class="container">
+  <div class="item">Elemento 1</div>
+  <div class="item">Elemento 2</div>
+  <div class="item">Elemento 3</div>
+</div>
+<div class="card-container">
+  <div class="card">Tarjeta 1</div>
+  <div class="card">Tarjeta 2</div>
+  <div class="card">Tarjeta 3</div>
+</div>
+<div class="container18">
+  <div class="item18">Elemento 1</div>
+  <div class="item18">Elemento 2</div>
+  <div class="item18">Elemento 3</div>
+  <div class="item18">Elemento 4</div>
+  <div class="item18">Elemento 5</div>
+  <div class="item18">Elemento 6</div>
+</div>
+</body>
+</html>

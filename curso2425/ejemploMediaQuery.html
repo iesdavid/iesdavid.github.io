@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Media Queries</title>
+  <!-- Pega el código <link> de Google Fonts aquí -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    /* Estilos generales (se aplican a todos los dispositivos) */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .box {
+      background: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: change-color 1s;
+
+    }
+
+    @keyframes change-color {
+      from {
+        background: red;
+      }
+      to {
+        background: green;
+      }
+    }
+
+    /* Estilos para MÓVIL (pantallas de menos de 600px) */
+    @media (max-width: 600px) {
+      .box {
+        background: #2196F3; /* Azul en móvil */
+        font-size: 18px;
+      }
+    }
+
+    /* Estilos para PC (pantallas de más de 600px) */
+    @media (min-width: 601px) {
+      .box {
+        background: #4CAF50; /* Verde en PC */
+        font-size: 24px;
+        width: 50%;
+        margin: auto;
+        transition: 2s;
+      }
+    }
+
+    .box {
+      transition: 2s;
+
+    }
+
+    .box:hover {
+      background: red;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  Caja que cambia de tamaño
+</div>
+</body>
+</html>

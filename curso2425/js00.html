@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicios básicos JS</title>
+</head>
+<body>
+<script>
+  // Vivo en Sevilla, España
+  let ciudad = "Sevilla";
+  const pais = "España";
+  console.log(`Vivo en ${ciudad}, ${pais}`);
+
+  // El valor + IVA de 18.24 es 22.07
+  let precio = 18.24;
+  const iva = 0.21;
+  let total = Math.round(precio * (1 + iva) * 100) / 100;
+  console.log(`El valor + IVA de ${precio} es ${total}`);
+
+  // Has vivido aprox. 286160 días
+  let edad = 28;
+  let mul = edad * 365;
+  const vida = edad * mul;
+  console.log("Has vivido aprox. " + vida + " días");
+
+  // Saludo personalizado
+  let nombre = prompt("Dime tu nombre:");
+  console.log(`¡Bienvenido al curso de JS, ${nombre}`);
+
+  // Suma rápìda
+  let num1 = prompt("Dame un número:");
+  let num2 = prompt("Dame otro número:");
+  let suma = Number(num1) + Number(num2);
+  console.log(`La suma es ${suma}`);
+
+  // Mayoría de edad
+  let miEdad = prompt("¿Cuál es tu edad?")
+  const mayoriaEdad = miEdad >= 18;
+  if (mayoriaEdad) {
+    console.log("Eres mayor de edad");
+  } else {
+    console.log("No eres mayor de edad");
+  }
+
+  // Invitados
+  let nomnbreInvitado = prompt("Usuario:");
+  if (nomnbreInvitado == "Admin") {
+    console.log("Acceso total");
+  } else {
+    console.log("Acceso limitado");
+  }
+
+  // Números impares
+  do {
+    let numero = Number(prompt("Dame un número para averiguar los impares desde el 1 (mín 1):"));
+    if (numero < 1) {
+      alert("Número erróneo");
+    }
+  } while (numero < 1)
+
+  for (let i = 1; i < numero; i++) {
+    if (i % 2 === 1) {
+      console.log(i);
+    }
+  }
+
+</script>
+</body>
+</html>

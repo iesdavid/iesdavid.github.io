@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edad</title>
+</head>
+<body>
+<input type="number" id="nacimiento" min="1" max="100" name="nacimiento">
+<button type="button" id="enviar" onclick="">Calcular</button>
+<h2 id="edad"></h2>
+<h3 id="error"></h3>
+<script>
+  let nacimiento = document.getElementById("nacimiento");
+  let enviar = document.getElementById("enviar");
+  let ano = new Date().getFullYear();
+  enviar.addEventListener("click", function () {
+    let edad = ano - parseInt(nacimiento.value);
+    if (edad > 120 || edad < 0) {
+      document.getElementById("error").textContent = "Error en la introducción de año de nacimiento";
+    } else {
+      document.getElementById("edad").textContent = edad.toString();
+    }
+  });
+  nacimiento.addEventListener("focusin", function () {
+    document.getElementById("edad").textContent = "";
+    document.getElementById("error").textContent = "";
+  });
+</script>
+</body>
+</html>

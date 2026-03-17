@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1</title>
+</head>
+<body>
+<h1>Ejercicio 1</h1>
+<div id="mensaje"></div>
+<input type="text" id="nombre">
+<input type="number" id="edad" min="0" max="120">
+<button id="boton">Enviar</button>
+<br>
+<hr>
+<br>
+<input type="number" id="numero1" placeholder="Dame un número">
+<input type="number" id="numero2" placeholder="Dame otro numero">
+<span style="margin:13px" id="resultado"></span>
+<button id="suma">+</button>
+<button id="resta">-</button>
+<button id="multiplicacion">x</button>
+<button id="division">/</button>
+<script>
+  let nombre = document.getElementById("nombre");
+  let edad = document.getElementById("edad");
+  let mensaje = document.getElementById("mensaje");
+  let boton = document.getElementById("boton");
+  boton.addEventListener("click", function () {
+    mensaje.innerHTML = `Hola, soy ${nombre.value} y tengo ${edad.value} años.`;
+  });
+  let num1 = document.getElementById("numero1");
+  let num2 = document.getElementById("numero2");
+  let resultado = document.getElementById("resultado");
+
+  let suma = document.getElementById("suma");
+  suma.addEventListener("click", function () {
+    resultado.textContent = parseFloat(num1.value) + parseFloat(num2.value);
+  });
+
+  let resta = document.getElementById("resta");
+  resta.addEventListener("click", function () {
+    resultado.textContent = parseFloat(num1.value)-parseFloat(num2.value);
+  });
+
+  let multiplicacion = document.getElementById("multiplicacion");
+  multiplicacion.addEventListener("click", function () {
+    resultado.textContent = parseFloat(num1.value)*parseFloat(num2.value);
+  });
+
+  let division = document.getElementById("division");
+  division.addEventListener("click", function () {
+    resultado.textContent = parseFloat(num1.value)/parseFloat(num2.value);
+  });
+
+</script>
+</body>
+</html>

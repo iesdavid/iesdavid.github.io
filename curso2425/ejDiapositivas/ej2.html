@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+</head>
+<body>
+<h1>Ejercicio 2</h1>
+<script>
+  function espaciado(){
+    let salto=document.createElement('br');
+    let linea=document.createElement('hr');
+    document.body.appendChild(salto);
+    document.body.appendChild(salto);
+    document.body.appendChild(linea);
+    document.body.appendChild(salto);
+  }
+  function tituloApartado(texto){
+    let h3=document.createElement('h3');
+    h3.textContent= texto;
+    document.body.appendChild(h3);
+  }
+  // Apartado 1
+  tituloApartado("Par o impar");
+  let num1 = document.createElement('input');
+  num1.setAttribute('type','number');
+  num1.placeholder="Dame un número";
+  num1.addEventListener("keyup", function () {
+    compruebaPar();
+  });
+  document.body.appendChild(num1);
+  let h3=document.createElement("h3");
+  num1.appendChild(h3);
+
+  function compruebaPar() {
+    if (num1.value % 2 === 0) {
+      h3.innerHTML = "Par";
+    } else {
+      h3.innerHTML = "Impar";
+    }
+  }
+
+  espaciado();
+  // Apartado 2
+  let inputEdad = document.createElement('input');
+  inputEdad.placeholder = "Dime tu edad";
+  inputEdad.setAttribute("type", "number");
+  inputEdad.setAttribute("id", "inputEdad");
+  document.body.appendChild(inputEdad);
+  let h2Votacion=document.createElement("h2");
+  document.body.appendChild(h2Votacion);
+
+  inputEdad=document.getElementById('inputEdad');
+  inputEdad.addEventListener("keyup", function () {
+    if (inputEdad.value >= 18) {
+      h2Votacion.textContent="Sí puedes votar"
+    }else{
+      h2Votacion.textContent="No puedes votar aún";
+    }
+  });
+
+  // Apartado 3
+
+</script>
+</body>
+</html>
